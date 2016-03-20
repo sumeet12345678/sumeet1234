@@ -6,18 +6,31 @@
     <title>Digital - Reimagined</title>
     
      <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+     <link href="/styles/profiles/profile.css" rel="stylesheet" />
      
       <style type="text/css">
         #divReimaginers{
-        	background-color: #e0e0eb;
+        	/* background-color: #e0e0eb; */ 
         	padding: 15px;
         	
         }
-       
+        
+       .thumbnail {
+        	border: 1px solid #77933c;
+        	 
+        	 
+        }
+        .caption {
+        	font-size: 10px;
+        	padding: 0px;
+        	 
+        }
+        
         img {
-			height: 50px;
-			widthll: 50px;
-			border: 0px;
+			/* max-height: 80%; */
+			 
+			
+			
 		}
         .panel,.panel-body,.panel-footer  {
         	border: 0px;
@@ -27,125 +40,174 @@
         }
         .panel {
         	padding: 10px;
-        	background-color: #e0e0eb;
+        	background-color: #e0e0eb; 
         	height999: 200px;
         }
               
+        
       </style>
       
 </head>
 
 <body> 
+		
+		 <% include ../partials/top_menu_bar.ejs %>
+		
+		<div>
+		</div>
+		
 		 <div id="divReimaginers" class="container"> <!-- People with Pic  -->
 		        		             
 		            <div class="row img-preview">
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                    	<div class="panel-body">
-		                        	<img class="img-responsive center-block" src="media/images/profile_images/AbhijitPrusty.jpg" />
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    	<div class="thumbnail">
+		                        	<a href="#">
+		                        		<img class="img-responsive" src="media/images/profile_images/AbhijitPrusty.jpg" />
+		                        	</a>
+		                        	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung</p>
+    								</div>
+		                        	
 		                        </div>
-		                        <div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                        
 		                    </div> <!-- col-ends -->
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                    	<div class="panel-body">
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    	<div class="thumbnail">
 		                       	 	<a href="/profile/view/mahika"><img class="img-responsive center-block" src="media/images/profile_images/Mihika_JustDial.jpg" /></a>
+		                       	 	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung</p>
+    								</div>
 		                       	</div>
-		                       	<div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                       	 
 		                    </div><!-- col-ends -->
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                       <div class="panel-body">
-		                       	 <img class="img-responsive center-block" src="media/images/profile_images/monty_2012.jpg" />
+		                    
+		                    <div class="clearfix visible-xs-block"></div>
+		                    	 
+		                    
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                       <div class="thumbnail">
+		                      	 	<a href="#">
+		                       			 <img class="img-responsive center-block" src="media/images/profile_images/monty_2012.jpg" />
+		                       		</a>
+		                       	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung</p>
+    								</div>
 		                       </div>
-		                       <div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>		                        
+		                       	                        
 		                    </div><!-- col-ends -->
 		                    
-		              		 <div class="clearfix visible-xs-block"></div>
+		              		
 		             
 		             
 		             
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                    	<div class="panel-body">
-		                        	<img class="img-responsive center-block" src="media/images/profile_images/amar.jpg" />
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    	<div class="thumbnail">
+		                    		<a href="#">
+		                        		<img class="img-responsive center-block" src="media/images/profile_images/amar.jpg" />
+		                        	</a>
+		                        	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung</p>
+    								</div>
 		                        </div>
-		                        <div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                        
 		                    </div> <!-- col-ends -->
-
-		                    <div class="clearfix visible-sm-block"></div>
+							
+							<div class="clearfix visible-xs-block"></div>
+							<div class="clearfix visible-sm-block"></div>
+							<div class="clearfix visible-md-block"></div>
+							<div class="clearfix visible-lg-block"></div>
+							
 		                    
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                    	<div class="panel-body">
-		                       		 <img class="img-responsive center-block" src="media/images/profile_images/Anjali_Arora_gurgaon_VLSI.jpg" />
+		                    
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    	<div class="thumbnail">
+		                    		 <a href="#">
+		                       		 	<img class="img-responsive center-block" src="media/images/profile_images/Anjali_Arora_gurgaon_VLSI.jpg" />
+		                       		 </a>
+		                       		 <div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung</p>
+    								</div>
 		                    	</div>
-		                    	<div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                    	 
 		                    </div><!-- col-ends -->
 		                    
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                    	<div class="panel-body">
-		                        	<img class="img-responsive center-block" src="media/images/profile_images/Capt_Ajay.jpg" />
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    	<div class="thumbnail">
+		                    		<a href="#">
+		                        		<img class="img-responsive center-block" src="media/images/profile_images/Capt_Ajay.jpg" />
+		                        	</a>
+		                        	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung</p>
+    								</div>
 		                        </div>
-		                        <div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                        
 		                    </div><!-- col-ends -->
 		              
-		             		 <div class="clearfix visible-xs-block"></div>
-		             		 <div class="clearfix visible-md-block"></div>
-							 <div class="clearfix visible-lg-block"></div>
+		             	    <div class="clearfix visible-xs-block"></div>    		
 		               
 		             
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                    	<div class="panel-body">
-		                        	<img class="img-responsive center-block" height="100" src="media/images/profile_images/Navin_Meshram.jpg" />
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    	<div class="thumbnail">
+		                        	<a href="#">
+		                        		<img class="img-responsive center-block"  src="media/images/profile_images/Navin_Meshram.jpg" />
+		                        	</a>
+		                        	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung<p>
+    								</div>
 		                        </div>
-		                        <div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                        
 		                    </div><!-- col-ends -->
 		                    
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default">
-		                  	  <div class="panel-body">
-		                        	<img class="img-responsive center-block" src="media/images/profile_images/santosh.jpg" />
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                  	  <div class="thumbnail">
+		                  	  		<a href="#">
+		                        		<img class="img-responsive center-block" src="media/images/profile_images/santosh.jpg" />
+		                        	</a>
+		                        	<div class="caption">
+								        <b>Abhijit Prusty</b>
+								        <p>Senior Software Engineer at Samsung<p>
+    								</div>
 		                      </div>
-		                      <div class="panel-footer">
-							        <b>Abhijit Prusty</b><br>
-							        Senior Software Engineer at Samsung
-    							</div>
+		                      
 		                    </div><!-- col-ends -->
 		                    
-		                    <div class="clearfix visible-sm-block"></div>
+		                    <div class="clearfix visible-xs-block"></div>		                    
+		                     <div class="clearfix visible-md-block"></div>
+							 <div class="clearfix visible-lg-block"></div>
+		                     <div class="clearfix visible-sm-block"></div>
 		                    
-		                    <div class="col-xs-4 col-sm-3 col-md-2 panel panel-default"> 
-		                    	<div class="panel-body">
-		                        	<img class="img-responsive center-block" src="media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" />
+		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"> 
+		                    	<div class="thumbnail">
+		                        	<a href="#">
+		                        		<img class="img-responsive center-block" src="media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" />
+		                        	</a>
+		                        	<div class="caption">
+								        <b>Abhijit Prusty<b>
+								        <p>Senior Software Engineer at Samsung<p>
+    								</div>
 		                    	</div>
-		                    	<div class="panel-footer">
+		                    	<!-- <div class="panel-footer">
 							        <b>Abhijit Prusty</b><br>
 							        Senior Software Engineer at Samsung
-    							</div>
+    							</div> -->
 		                    </div><!-- col-ends -->
 		                   
 		       </div><!-- row ends -->        
 		
-		
+		<!-- footer file included  here -->
+			<%	include ../partials/footer_bar.ejs	%>
+			
 		</div> <!-- container ends -->
 		
-				
+		
+		
 		
 		<script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
         <script src="/lib/bootstrap/js/bootstrap.min.js"></script>

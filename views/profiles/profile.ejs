@@ -12,115 +12,76 @@
     <div class="container-fluid">
         
         
-<div class="profile-page">
-    <div class="row top-menubar">
-        <div class="col-xs-2  text-center">
-            <span class="glyphicon glyphicon-menu-hamburger menubar-btn"></span>
-        </div>
-        <div class="col-xs-8 text-center">
-            <input type="text" class="form-control" placeholder="Search" />
-        </div>
-        <div class="col-xs-2  text-center">
-             <span class="glyphicon glyphicon glyphicon-user text-white"></span>
-        </div>
-    </div>
-    
-    <div class="row profile-header">
-        <div class="col-xs-8">
-            <span id="spnProfileText">Worrying is misuse of imagination..</span>
-        </div>
-        <div class="col-xs-4">
-            <img id="imgProfilePhoto" class="img-responsive img-rounded pull-right" width="100" src="/media/images/profile_images/Mihika_JustDial.jpg" />
-            <img id="imgProfileEdit" data-toggle="modal" data-target="#divProfileEdit" class="btn-profile-edit" src="/media/images/icons/options.png" width="25" height="25" />
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            
-            <div class="profile-content">
-                <h4>Mihi [Mihika Mishra]</h4>
-                Software Developer at Ajooba Tech Ltd, Bangalore
-                <h4>Summary</h4>
-                Software Developer with a zeal to solve challenging problems that makes a difference in Life. TDD advocate!
-                <h4>Key Skills</h4>
-                <ul class="list">
-                    <li>Large Scale Computing</li>
-                    <li>Java</li>
-                    <li>Spark</li>
-                </ul>
-            </div>
-            <div class="profile-footer"></div>
-        </div>
-    </div>
-   
-</div>
-
-<div id="divProfileEdit" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Edit Profile</h4>
-            </div>
-            <div class="modal-body">
-               <div class="row profile-header">
-        <div class="col-xs-8">
-            <span id="spnProfileEditText" contenteditable>Worrying is misuse of imagination..</span>
-        </div>
-        <div class="col-xs-4">
-            <img id="imgPreview" class="img-responsive img-rounded pull-right" width="100" src="/media/images/profile_images/Mihika_JustDial.jpg" />
-        </div>
-
-    </div>
-               
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="btnSaveProfile" class="btn btn-success">Save</button> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
+			<div class="profile-page">
+			<!-- include top_menu_bar.ejs here -->
+			    <% include ../partials/top_menu_bar.ejs %>
+			    
+			    <div class="row profile-header">
+			        <div class="col-xs-8">
+			            <span id="spnProfileText">Worrying is misuse of imagination..</span>
+			        </div>
+			        <div class="col-xs-4">
+			            <img id="imgProfilePhoto" class="img-responsive img-rounded pull-right" width="100" src="/media/images/profile_images/Mihika_JustDial.jpg" />
+			            <img id="imgProfileEdit" data-toggle="modal" data-target="#divProfileEdit" class="btn-profile-edit" src="/media/images/icons/options.png" width="25" height="25" />
+			        </div>
+			
+			    </div>
+			    <div class="row">
+			        <div class="col-xs-12">
+			            
+			            <div class="profile-content">
+			                <h4>Mihi [Mihika Mishra]</h4>
+			                Software Developer at Ajooba Tech Ltd, Bangalore
+			                <h4>Summary</h4>
+			                Software Developer with a zeal to solve challenging problems that makes a difference in Life. TDD advocate!
+			                <h4>Key Skills</h4>
+			                <ul class="list">
+			                    <li>Large Scale Computing</li>
+			                    <li>Java</li>
+			                    <li>Spark</li>
+			                </ul>
+			            </div>
+			            <div class="profile-footer"></div>
+			        </div>
+			    </div>
+			   
+			</div>
+			
+			<div id="divProfileEdit" class="modal fade" role="dialog">
+			    <div class="modal-dialog modal-lg">
+			        <div class="modal-content">
+			            <div class="modal-header">
+			                <button type="button" class="close" data-dismiss="modal">&times;</button>
+			                <h4 class="modal-title">Edit Profile</h4>
+			            </div>
+			            <div class="modal-body">
+			               <div class="row profile-header">
+			        <div class="col-xs-8">
+			            <span id="spnProfileEditText" contenteditable>Worrying is misuse of imagination..</span>
+			        </div>
+			        <div class="col-xs-4">
+			            <img id="imgPreview" class="img-responsive img-rounded pull-right" width="100" src="/media/images/profile_images/Mihika_JustDial.jpg" />
+			        </div>
+			
+			    </div>
+			               
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" id="btnSaveProfile" class="btn btn-success">Save</button> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			            </div>
+			        </div>
+			
+			    </div>
+			</div>
+			
+						
+			
+			
+			
+			<!-- footer file included  here -->
+			<%	include ../partials/footer_bar.ejs	%>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="footer navbar-fixed-bottom">
- <div class="row menubar">
-        <div class="col-xs-5">
-            <span class="glyphicon glyphicon-circle-arrow-left"></span>
-        </div>
-        <div class="col-xs-5">
-            <img width="32" height="32" src="/media/images/icons/ib_org.png" />
-        </div>
-        <div class="col-xs-1">
-            <span class="glyphicon glyphicon-plus-sign pull-right"></span>
-        </div>
-        <div class="col-xs-1">
-            <span class="glyphicon glyphicon-home pull-right"></span>
-        </div>
-    </div>
-</div>
     </div>
     <script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
