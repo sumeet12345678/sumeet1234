@@ -8,12 +8,12 @@
 	font-size:32px;
 	}
 .menubar-footer .col-xs-2 img{
-	margin: 3px 0px 3px 0px;
+	margin: 4px 0px 4px 0px;
 	vertical-align: center;
 }
 
 .menubar-footer .col-xs-5 img{
-	margin: 5px 0px 5px 0px;
+	margin: 6px 5px 6px 5px;
 	vertical-align: center;
 }
 .top-menubar{
@@ -21,14 +21,22 @@
 	background: linear-gradient(#8e963e,#818a34 ); 
 
 }
-.top-menubar span.glyphicon{font-size:32px;}
+.top-menubar span.glyphicon{
+	font-size:32px;
+	
+}
 .menubar-btn{color:#fff;}
-.profile-header{background:#77933C;color:#fff;font-size:20px;border-radius:3px;} 
-.btn-profile-edit{position:absolute;bottom:0;right:0;margin-right:20px;cursor:pointer}
+.profile-header{background:#95b3d7;color:#fff;font-size:20px;border-radius:3px;} 
+.btn-profile-edit{position:absolute;bottom:-7px;right:0;margin-right:15px;cursor:pointer}
 #imgPreview{cursor:pointer}
 .profile-content{margin-bottom:50px}
 .text-white{color:#fff}
 .brand-earth{color:#595959}  
+
+.top-push-zone{
+	background: linear-gradient(#696969,#3f3f3f );  
+	
+}
 
 
 
