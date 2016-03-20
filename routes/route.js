@@ -19,4 +19,11 @@ router.get('/profile/view/mahika', function(req, res, next) {
 	});
 
 
+//Trial below
+router.get('/trial.ejs', function(req, res, next) {
+	  res.render('profiles/trial.ejs'); 
+	});
+
+
+
 module.exports = router
