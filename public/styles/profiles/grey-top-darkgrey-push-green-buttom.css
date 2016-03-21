@@ -20,6 +20,7 @@
 	background-color: #3f3f3f;
 	background-image: linear-gradient(#696969,#3f3f3f);
     background-image: -webkit-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+    margin-bottom: 22px;
 }
 .top-menubar span.glyphicon{
 	font-size:32px;
@@ -27,9 +28,12 @@
 }
 
 .menubar-btn{color:#fff;}
-.profile-header{background:#215968;color:#fff;font-size:20px;border-radius:3px;} 
+.profile-header{background:#215968;color:#fff;font-size:20px;} 
 .btn-profile-edit{position:absolute;bottom:-7px;right:0;margin-right:15px;cursor:pointer}
-#imgPreview{cursor:pointer}
+#imgPreview{
+	cursor:pointer;
+}
+
 .profile-content{margin-bottom:50px}
 .text-white{color:#fff}
 .brand-earth{color:#595959}  
@@ -39,13 +43,17 @@
 
 .top-push-zone{
 	background-image: linear-gradient(#1A1A1A,#303030 );
-	margin-top: 22px;
-	   
+	margin-top:35px;
 	
 }
 
+
 .arrow-link{
 	font-size: 16px;
+}
+
+.img-preview {
+	margin-top: 20px;	
 }
 
 
