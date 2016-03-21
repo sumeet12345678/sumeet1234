@@ -17,6 +17,10 @@
         	padding: 15px;
         	
         }
+        .img-preview{
+        	margin-left: 10px;
+        	margin-right: 10px;
+        }
         
        .thumbnail {
         	border: 1px solid #77933c;
@@ -62,14 +66,16 @@
 
 <body> 
 		
-		 <% include ../partials/top_menu_bar.ejs %>
+		 
 		
 		<div>
 		<!-- <a href="trial.ejs">Click Here</a> -->
 		</div>
 		
-		 <div id="divReimaginers" class="container"> <!-- People with Pic  -->
-		        		             
+		 <div id="divReimaginers" class="container-fluid"> <!-- People with Pic  -->
+		 
+		       <% include ../partials/top_menu_bar.ejs %> 		
+		                    
 		            <div class="row img-preview">
 		                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col1">
 		                    	<div class="thumbnail">
@@ -203,8 +209,8 @@
 		       </div><!-- row ends -->        
 		
 		<!-- footer file included  here -->
-			<%	include ../partials/footer_bar.ejs	%>
 			
+			<%	include ../partials/footer_bar.ejs	%>
 		</div> <!-- container ends -->
 		
 		
