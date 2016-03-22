@@ -20,7 +20,7 @@
 	background-color: #3f3f3f;
 	background-image: linear-gradient(#696969,#3f3f3f);
     background-image: -webkit-linear-gradient(top, #696969 0%,#3f3f3f 100%);
-    margin-bottom: 22px;
+    margin-bottom: 22px;  
 }
 .top-menubar span.glyphicon{
 	font-size:32px;
@@ -42,14 +42,14 @@
 }
 
 .top-push-zone{
-	background-image: linear-gradient(#1A1A1A,#303030 );
+	background: linear-gradient(#3f3f3f, #595959); 
 	margin-top:35px;
 	
 }
 
-
 .arrow-link{
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .profile { 
@@ -57,10 +57,27 @@
 }
 
 
+.thumbnail img {
+  		width: 140px;
+  		height: 140px;
+  	}
+  	
+.thumbnail {
+	margin: 0px;
+	padding: 0px;	
+	border: 1px solid #77933c;
+}
 
+/*	for thumbnails	*/
+.col1{
+	margin: 0px;
+	padding: 6px;
+}
 
-
-
+div{
+	margin:0px;
+	padding:0px;
+}
 
 
 

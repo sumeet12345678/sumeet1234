@@ -1,6 +1,5 @@
-/* .menubar{background:#e1e1e1;} */ /*Commented By-- Amar Chhetri .menubar changed to .menubar-footer */
-.menubar-footer{	 /*Added By-- Amar Chhetri*/
-	/* background:#7f7f7f; */
+/* .menubar{background:#e1e1e1;} */ 
+.menubar-footer{	
 	background: linear-gradient(#3f3f3f, #595959); 
 }
 /* .menubar span.glyphicon{font-size:32px;} */
