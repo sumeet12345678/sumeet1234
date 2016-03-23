@@ -54,7 +54,7 @@
 }
 
 .profile { 
-	margin-top: 64px;
+	margin-top: 68px;
 }
 
 
@@ -83,8 +83,26 @@ div{
 	padding:0px;
 }
 
+.searchBox {
+	border-radius: 0px;
+	height: 30px;
+}
 .searchBox:focus {
 	border: 2px solid #77933C;
+	border-radius: 0px;
+}
+
+.profile_111 {
+	margin-left: 10%;
+	margin-right: 10%;
+	
+}
+
+.top-menu-container {
+	padding-top: 7px;
+	padding-bottom: 1px;
+	padding-left:14px;
+	padding-right: 14px;
 }
 
 
