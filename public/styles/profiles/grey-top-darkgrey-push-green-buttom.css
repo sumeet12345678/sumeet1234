@@ -65,6 +65,10 @@ a:hover{
 	border: 1px solid #77933c;
 }
 
+.img-preview {
+	padding-bottom: 6px;	
+}
+
 .img-preview .thumbnail img {
   		width: 140px;
   		height: 140px;
@@ -77,7 +81,7 @@ a:hover{
 
 #divReimaginers{
 	margin-top: 71px;
-	margin-bottom: 42px;
+	margin-bottom: 37px;
 }
 
 /*	for thumbnails	*/
