@@ -77,6 +77,7 @@ a:hover{
 
 #divReimaginers{
 	margin-top: 71px;
+	margin-bottom: 42px;
 }
 
 /*	for thumbnails	*/
@@ -152,6 +153,14 @@ div{
   		margin-bottom: 0px; 
 }
 
+.title-bar {
+	
+		padding-top: 12px;
+}
+
+#profileDescription{
+	margin-bottom: 36px;  
+}
 
 /* -------- MEDIA SCREEN -------- */
 @media screen and (min-width: 993px) {
@@ -169,8 +178,6 @@ div{
   		background-color: #fff;
   		padding: 10px;
   		margin-top: 0px;
-  		margin-bottom: 58px;  
-  		 
   		
   	}
   	
