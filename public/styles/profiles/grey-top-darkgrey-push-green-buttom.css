@@ -44,11 +44,10 @@ a:hover{
 }
 
 .top-push-zone{
-	 /*background: linear-gradient(#3f3f3f, #595959);*/
-	background: rgba(63, 63, 63, .3); 
+	background-color: #262626;
+	/* background: linear-gradient(#3f3f3f, #595959); */
+	/*background: rgba(63, 63, 63, .3);*/ 
 	height: 25px;
-	/* margin-top:35px; */
-	/*box-shadow: 0px 0px 1px px black; */
 }
 
 .arrow-link{
@@ -60,19 +59,24 @@ a:hover{
 	margin-top: 68px;
 }
 
-
-.thumbnail img {
-  		width: 140px;
-  		height: 140px;
-  	}
-  	
 .thumbnail {
 	margin: 0px;
 	padding: 0px;	
 	border: 1px solid #77933c;
 }
+
+.img-preview .thumbnail img {
+  		width: 140px;
+  		height: 140px;
+  	}
+ .img-preview .thumbnail .caption {
+ 	width: 140px;
+  		height: 140px;
+ }
+  	
+
 #divReimaginers{
-	margin-top: 80px;
+	margin-top: 71px;
 }
 
 /*	for thumbnails	*/
@@ -137,7 +141,19 @@ div{
 	font-size: 15px;
 }
 
+.title-bar111{
+		margin-bottom: 10px;
+		padding-top: 10px;
+		padding-bottom:10px;
+		padding-left: 10px;	
+}
 
+.title-bar111 p {
+  		margin-bottom: 0px; 
+}
+
+
+/* -------- MEDIA SCREEN -------- */
 @media screen and (min-width: 993px) {
 	
 	.profile-header1{
@@ -152,7 +168,7 @@ div{
   		margin-right: auto;
   		background-color: #fff;
   		padding: 10px;
-  		margin-top: 20px;
+  		margin-top: 0px;
   		margin-bottom: 58px;  
   		 
   		
@@ -175,8 +191,8 @@ div{
   		margin-left:8px;
   		
   	}
-  	.top-menu-content #settingsImage{
-  		margin-right: 8px;
+  	.top-menu-content #settingsImage{  
+  		margin-right: 8px;  
   	}
   	
   	.profile-header #imgProfilePhoto {
@@ -187,7 +203,28 @@ div{
   		margin-right: 190px;
   	}
   	
+  	.title-bar {
+  		width: 71%;
+		margin-left: auto;
+		margin-right: auto; 
+		
+		background-color: #ffffff; 		
+  	}
+  
+  	
+  	/* people_with_pic */
+  	.img-preview{
+  		width: 71%;
+  		margin-left:auto;
+  		margin-right: auto;
+  		background-color: #ffffff;
+  	}
+  	
+  	.title-bar {
+			
+  	}
+  	
   	body{
-  		background-color: #C1C1C1;
+  		background-color: #f2f2f2;
   	}
   }
