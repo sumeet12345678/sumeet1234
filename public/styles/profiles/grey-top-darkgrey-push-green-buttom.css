@@ -159,7 +159,7 @@ div{
 
 .title-bar {
 	
-		padding-top: 12px;
+		padding-top: 14px;
 		padding-left: 5px;
 }
 
@@ -168,7 +168,7 @@ div{
 }
 
 /* -------- MEDIA SCREEN -------- */
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 993px) { 
 	
 	.profile-header1{
 		width: 70%;
@@ -199,7 +199,7 @@ div{
   		margin-left:auto;
   		margin-right: auto;
   	}
-  	.top-menu-content #micro-pic{
+  	.top-menu-content #micro-pic{  
   		margin-left:8px;
   		
   	}
@@ -207,11 +207,17 @@ div{
   		margin-right: 8px;  
   	}
   	
-  	.profile-header #imgProfilePhoto {
+  	.profile-header12345 #imgProfilePhoto {
   		margin-right: 177px;
   	}
   	
-  	.profile-header #imgProfileEdit {
+  	.profile-header-content { 
+  		width: 70%;
+  		margin-right: auto;
+  		margin-left: auto;
+  	}
+  	
+  	.profile-header1212 #imgProfileEdit {
   		margin-right: 190px;
   	}
   	
@@ -220,7 +226,7 @@ div{
 		margin-left: auto;
 		margin-right: auto; 
 		
-		background-color: #ffffff; 		
+		background-color: #ffffff;  		
   	}
   
   	
@@ -233,10 +239,18 @@ div{
   	}
   	
   	.title-bar {
-			
+		
+  	}
+  	
+  	.footer-container {
+  		width: 70%;
+  		margin-left: auto;
+  		margin-right: auto;
   	}
   	
   	body{
   		background-color: #f2f2f2;
   	}
   }
+  
+  @media screen and (max-width: 767px) { 
