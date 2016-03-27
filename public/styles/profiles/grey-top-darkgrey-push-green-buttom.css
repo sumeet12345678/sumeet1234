@@ -68,16 +68,29 @@ a:hover{
 .img-preview {
 	padding-bottom: 6px;	
 }
-
-.img-preview .thumbnail img {
-  		width: 140px;
-  		height: 140px;
-  	}
+ 
  .img-preview .thumbnail .caption {
  	width: 140px;
   		height: 140px;
  }
-  	
+/* for people_with_pic */
+.profilePic .pic {
+	width: 140px;
+	height:140px;
+	
+}	
+  .btn-profile-options {
+	position: absolute;
+	margin: 0px;
+	top:59%;
+	right: 18px;
+}
+
+.profileCaption {
+	width: 140px;
+}
+
+/* people_with_pic ends */
 
 #divReimaginers{
 	margin-top: 71px;
@@ -85,7 +98,7 @@ a:hover{
 }
 
 /*	for thumbnails	*/
-.col1{
+.col1_123{
 	margin: 0px;
 	padding: 6px;
 }
@@ -110,13 +123,11 @@ div{
 	border-radius: 0px;
 }
 /* Displays search button on focus only */
-.input-group-btn{
-	visibility: hidden;	
+#searchBtnId{
+	background-color: #3f3f3f;
+	color: #D7D7D7;
 }
 
-.searchBox:focus + .input-group-btn {
-		visibility: visible;
-}
 
 .profile_111 {
 	margin-left: 10%;
@@ -174,6 +185,16 @@ div{
 	padding-right: 0px;
 }
 
+#d360{
+	visibility: hidden;
+}
+
+.pushContainer{
+	padding-top:2px;	
+}
+
+
+
 /* -------- MEDIA SCREEN -------- */
 @media screen and (min-width: 993px) { 
 	
@@ -229,7 +250,7 @@ div{
   	}
   	
   	.title-bar {
-  		width: 71%;
+  		width: 70%;
 		margin-left: auto;
 		margin-right: auto; 
 		
@@ -239,7 +260,7 @@ div{
   	
   	/* people_with_pic */
   	.img-preview{
-  		width: 71%;
+  		width: 70%;
   		margin-left:auto;
   		margin-right: auto;
   		background-color: #ffffff;
@@ -250,10 +271,16 @@ div{
   	}
   	
   	.footer-container {
-  		width: 70%;
+  		width: 69%;
   		margin-left: auto;
   		margin-right: auto;
   	}
+  	
+  	.pushContainer{
+		width: 65%;
+		margin-left: auto;
+		margin-right: auto;
+	}
   	
   	body{
   		background-color: #f2f2f2;
