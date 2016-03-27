@@ -59,20 +59,12 @@ a:hover{
 	margin-top: 68px;
 }
 
-.thumbnail {
-	margin: 0px;
-	padding: 0px;	
-	border: 1px solid #77933c;
-}
 
 .img-preview {
 	padding-bottom: 6px;	
 }
  
- .img-preview .thumbnail .caption {
- 	width: 140px;
-  		height: 140px;
- }
+
 /* for people_with_pic */
 .profilePic .pic {
 	width: 140px;
@@ -157,16 +149,6 @@ div{
 	font-size: 15px;
 }
 
-.title-bar111{
-		margin-bottom: 10px;
-		padding-top: 10px;
-		padding-bottom:10px;
-		padding-left: 10px;	
-}
-
-.title-bar111 p {
-  		margin-bottom: 0px; 
-}
 
 .title-bar {
 	
@@ -287,4 +269,9 @@ div{
   	}
   }
   
-  
+  @media screen and (max-width: 767px) { 
+  	.pushContainer{
+  		margin-left: 7.5%;
+  		margin-right: 7.5%;
+  	}
+  }
