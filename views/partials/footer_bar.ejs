@@ -1,4 +1,9 @@
-<div class="row footer menubar-footer navbar-fixed-bottom container-fluid">
+		<script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
+        <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+         
+<% include ../modal/mPopUp.ejs %> 
+
+<div class="row footer menubar-footer navbar-fixed-bottom container-fluid" id="footerBarId">
 	  <div class="footer-container">
 	        <div class="col-xs-5" id="left-block"> 
 	            <img width="25" height="25" src="/media/images/icons/whte-bck.jpg" />
@@ -6,16 +11,21 @@
 	            <img width="25" height="25" src="/media/images/icons/wht_wllt.png" />
 	         </div>
 	        <div class="col-xs-2 text-center" id="d360" >
-	            <img width="29" height="29" src="/media/images/icons/whte-sun.png"/>
+	            <img width="29" height="29" src="/media/images/icons/whte-sun.png"  data-toggle="modal" data-target="#myModal"/>
 	        </div>
 	        <div class="col-xs-5 text-right" id="right-block">
 	            <!-- <img width="25" height="25" src="/media/images/icons/grey_evnts.png"/> -->
 	            <img width="25" height="25" src="/media/images/icons/wht_inbx.png" /> 
 	            <img width="25" height="25" src="/media/images/icons/wht-plus.png" />
-	            <img width="25" height="25" src="/media/images/icons/wht_up_arrow.png"/>
+	            <img width="25" height="25" src="/media/images/icons/wht_up_arrow.png"/> 
 	        </div>
 	 	</div>
+	 	
  </div>
+
+<script src="/script/modal/mDialog.js"></script>
+
+
 
 
 <!-- <div class="footer navbar-fixed-bottom">
