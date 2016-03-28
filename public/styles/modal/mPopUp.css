@@ -18,6 +18,7 @@
 .modal-content {
 	background-color: #262626;
 	text-align: center;
+	border-radius: 0px;
 	
 }
 
@@ -37,6 +38,8 @@
 	padding-bottom: 2px;
 	
 }
+
+.modal-backdrop {background: none;}
 
 @media screen and (max-width: 767px) { 
   	#myModal123 {
