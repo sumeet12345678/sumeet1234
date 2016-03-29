@@ -14,7 +14,7 @@ var mDialogJson = [
           {
         	  "key":"key5", "icon":"iconLink", "label":"Certificates, Awards, Recognitions", "action": "someUrl", "callback":""
           },
-          {
+         /* {
         	  "key":"key5", "icon":"iconLink", "label":"Research, Papers, Patents, Indigenous Work", "action": "someUrl", "callback":""
           },
           {
@@ -25,7 +25,7 @@ var mDialogJson = [
           },
           {
         	  "key":"key5", "icon":"iconLink", "label":"Causes, Voluntary Work", "action": "someUrl", "callback":""
-          }
+          } */
 ]; 
 
 $(function(){
