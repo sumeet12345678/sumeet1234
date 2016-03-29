@@ -25,13 +25,13 @@
 	padding-bottom: 0px;
 } 
 .modal-body div {
-	background-color: #558ED5  ;
+	background-color: #404040  ;
 	margin-bottom: 3px;
 	text-align: center;
 	width: 100%;
-	color: #ffffff;
+	color: #95b3d7;
 	font-family: 'Arial Narrow';
-	
+	font-weight: 400;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	
