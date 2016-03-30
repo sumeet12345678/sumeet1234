@@ -32,6 +32,7 @@ $(function(){
 	
 	mDialogJson.forEach(function(item) {   
 		var el = $('<div>'+ item.label + '<div>');
+		el.attr('data-dismiss','modal'); 
 		el.on('click', eval(item.callback));  				
 		$('.modal-body').append(el);		 
 	}); //Main function ends
@@ -48,14 +49,14 @@ $(function(){
 			if(xhr.status === 200){
 				console.log("Status  == 200");
 				$('.summary').html(xhr.responseText);
-				// $('#myModal').toggle();
+				$('#myModal').modal('hide');
 			}
 			else {
 				console.log("Status == " + xhr.status);
 			}
 		}
 		
-		 xhr.open('GET','/data/skills_mihika.html', true);
+		 xhr.open('GET','/data/skills_mihika.html', true);   
 		 xhr.send(null);
 		 
 	}
