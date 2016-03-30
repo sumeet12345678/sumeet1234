@@ -175,6 +175,9 @@ div{
 	padding-top:2px;	
 }
 
+.top-push-zone .pushContainer #leftBlock {	 
+	display: inline-block;
+}
 
 
 /* -------- MEDIA SCREEN -------- */

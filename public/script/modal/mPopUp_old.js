@@ -32,7 +32,7 @@ $(function(){
 	
 	mDialogJson.forEach(function(item) {   
 		var el = $('<div>'+ item.label + '<div>');
-		el.attr('data-dismiss','modal'); 
+		el.attr('data-dismiss','modal');  //Create seperate function later for closing modal box by passing modal id
 		el.on('click', eval(item.callback));  				
 		$('.modal-body').append(el);		 
 	}); //Main function ends
@@ -49,7 +49,7 @@ $(function(){
 			if(xhr.status === 200){
 				console.log("Status  == 200");
 				$('.summary').html(xhr.responseText);
-				$('#myModal').modal('hide');
+			//	$('#myModal').modal('hide');
 			}
 			else {
 				console.log("Status == " + xhr.status);
