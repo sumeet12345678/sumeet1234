@@ -62,7 +62,7 @@ $(function(){
 			}
 		}
 		
-		 xhr.open('GET','http://localhost:3000/data/skills_mihika.html', true);
+		 xhr.open('GET','/data/skills_mihika.html', true);
 		 xhr.send(null);
 		 
 	}
@@ -80,7 +80,8 @@ $(function(){
 			 
 		}
 		
-		 xhr.open('GET','http://localhost:3000/data/education_mihika.html', true);
+		 //xhr.open('GET','http://localhost:3000/data/education_mihika.html', true);
+		xhr.open('GET','/data/education_mihika.html', true);
 		 xhr.send(null);
 	}
 	
@@ -98,7 +99,7 @@ $(function(){
 			}
 		}
 		
-		 xhr.open('GET','http://localhost:3000/data/experience_mihika.html', true);
+		 xhr.open('GET','/data/experience_mihika.html', true);
 		 xhr.send(null);
 		 
 		// $('.modal-dialog').css('display','none');
