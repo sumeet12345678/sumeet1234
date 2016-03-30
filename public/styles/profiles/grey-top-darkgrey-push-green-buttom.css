@@ -269,9 +269,13 @@ div{
   	}
   }
   
+  /* Mobile specific style   */
   @media screen and (max-width: 767px) { 
   	.pushContainer{
   		margin-left: 7.5%;
   		margin-right: 7.5%;
   	}
+  	.top-push-zone{
+		height: 27px;
+}
   }

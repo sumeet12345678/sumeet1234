@@ -11,10 +11,10 @@ var mDialogJson = [
           {
         	  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":"showRecommendations"
           },
-          {
+         /* {
         	  "key":"key5", "icon":"iconLink", "label":"Certificates, Awards, Recognitions", "action": "someUrl", "callback":"showCertAwardRecog"
           }
-         /* {
+          {
         	  "key":"key5", "icon":"iconLink", "label":"Research, Papers, Patents, Indigenous Work", "action": "someUrl", "callback":""
           },
           {
@@ -29,19 +29,11 @@ var mDialogJson = [
 ]; 
 
 $(function(){
-	//$('.modal-body').append('<p>BLa blab bla<p>');  
-//	var indexMin =0 ;
-	//var indexMax;
-	mDialogJson.forEach(function(item) { 
-		 
+	
+	mDialogJson.forEach(function(item) {   
 		var el = $('<div>'+ item.label + '<div>');
-		
-		el.on('click', eval(item.callback));  
-				
-				
-		 $('.modal-body').append(el);
-		 //indexMax++;
-		 
+		el.on('click', eval(item.callback));  				
+		$('.modal-body').append(el);		 
 	}); //Main function ends
 	
 	
@@ -56,9 +48,10 @@ $(function(){
 			if(xhr.status === 200){
 				console.log("Status  == 200");
 				$('.summary').html(xhr.responseText);
+				// $('#myModal').toggle();
 			}
 			else {
-				console.log("Stauts == " + xhr.status);
+				console.log("Status == " + xhr.status);
 			}
 		}
 		
@@ -99,26 +92,12 @@ $(function(){
 			}
 		}
 		
-		 xhr.open('GET','/data/experience_mihika.html', true);
+		 xhr.open('GET','/data/experience_mihika.html', true);  
 		 xhr.send(null);
 		 
 		// $('.modal-dialog').css('display','none');
 	}
 	
 	function showRecommendations(event){
-		 	}
-	function showCertAwardRecog(event){
-		 
-	}
-	
- 
-	$('#upArrow').on('click', function(){
-		alert('up');
-	});
-
-	$('#downArrow').on('click', function(){
-		alert('down');
-	});
-	
-	
+		 	}	
 });
