@@ -49,6 +49,8 @@ $(function(){
 			if(xhr.status === 200){
 				console.log("Status  == 200");
 				$('.summary').html(xhr.responseText);
+				
+				$('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/offers.png');  
 			//	$('#myModal').modal('hide');
 			}
 			else {
@@ -58,6 +60,9 @@ $(function(){
 		
 		 xhr.open('GET','/data/skills_mihika.html', true);   
 		 xhr.send(null);
+		 // loads the content of the push zone
+		 $('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/loading.gif');
+		 
 		 
 	}
 	
@@ -101,4 +106,8 @@ $(function(){
 	
 	function showRecommendations(event){
 		 	}	
+	
+	function loadPushZoneContents(){
+		
+	}
 });
