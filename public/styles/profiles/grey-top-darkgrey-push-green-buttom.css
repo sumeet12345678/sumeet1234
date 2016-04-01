@@ -3,7 +3,8 @@ a:hover{
 }
 
 .menubar-footer{	  
-	background: linear-gradient(#344C15,#698A25 ); 
+	background: linear-gradient(#344C15,#698A25 );
+	position: relative; 
 }
  
 .menubar-footer span.glyphicon{ /* Not Used */
@@ -48,6 +49,7 @@ a:hover{
 	/* background: linear-gradient(#3f3f3f, #595959); */
 	/*background: rgba(63, 63, 63, .3);*/ 
 	height: 25px;
+	line-height: 25px;
 }
 
 .arrow-link{
@@ -172,21 +174,34 @@ div{
 }
 
 .pushContainer{
-	padding-top:2px;	
+	padding-top:0px; //	
+	text-align1: center;
 }
 
 .top-push-zone .pushContainer #leftBlock {	 
 	display: inline-block;
+	line-height123: 100%;
 }
 
+/*pushZoneActionMessage added programatically in mPopUp_old.js */
+.top-push-zone  .pushZoneActionMessage{
+	text-align: center;
+	 
+}
+#leftBlock #offersIcon{
+	margin-top: 5px;
+}
 
+#notificationIcon{
+	margin-top: 3px;
+}
 /* -------- MEDIA SCREEN -------- */
 @media screen and (min-width: 993px) { 
 	
 	.profile-header1{
 		width: 70%;
   		margin-left: auto;
-  		margin-right: auto;
+  		margin-right: auto;  
 	}
 		
   	#profileDescription {
@@ -280,5 +295,6 @@ div{
   	}
   	.top-push-zone{
 		height: 27px;
+		line-height: 27px;
 }
   }

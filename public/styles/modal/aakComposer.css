@@ -1,0 +1,72 @@
+/* ------- Common Section --------- */
+
+
+/* ------- Top Wrapper Section ------- */
+.composerWrapper{
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0px;
+				right: 0px;
+				
+				background-color: #F2F2F2;
+				height: 70%;
+				width: 50%;
+}
+.visible {
+	display: block;
+}
+
+
+
+/* ------- Header Section ------- */			
+#headerRow{
+				background-color: #77933C;
+				padding-top: 1%;
+				padding-bottom: 1%;
+				height: 10%; */
+}
+			   
+.composerWrapper #headerRow [class^="col"] {
+  
+}
+	
+.dropdown123 {
+				display: inline-block;  
+				height: 50%; 
+				 
+}
+
+
+
+/* ------- Main Body Section ------- */
+.composerWrapper #mainBody {
+	padding-top: 1%;
+	height: 80%;
+	
+}
+.composerWrapper #mainBody div {
+	margin-bottom: 1%;
+}
+
+.composerWrapper #mainBody #textEditorToolbar {
+	position123: absolute;
+	
+}
+
+/* ------- Footer Section ------- */
+.composerWrapper #footer {
+	height: 10%;
+}
+
+
+/* ------- Mobile Device Section*/
+@media screen and (max-width: 993px) {
+	 .composerWrapper {
+	 	width: 96%;
+	 	left: 0px;
+	 	right: 0px;
+	 	
+	 }
+	
+}
