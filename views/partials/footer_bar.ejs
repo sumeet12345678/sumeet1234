@@ -1,27 +1,50 @@
 		<script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
         <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
          
+ <% include ../modal/mPopUp_old.ejs %> 
+ <% include ../modal/aakComposer.ejs %>  
+<!-- <% include ../modal/mPopUp.ejs %> --> 
 
-
-<div class="row menubar-footer navbar-fixed-bottom container-fluid" id="footerBarId">
+<div class="row footer menubar-footer navbar-fixed-bottom container-fluid" id="footerBarId">
 	  <div class="footer-container">
-	        <div class="col-xs-5" id="left-block">    
+	        <div class="col-xs-5" id="left-block"> 
+	           <!--  <img width="28" height="28" src="/media/images/icons/whte-bck.jpg" /> -->
 	            <a href="/"><img width="28" height="28" src="/media/images/icons/whte-hme.png" /></a>
 	            <img width="28" height="28" src="/media/images/icons/wht_wllt.png" />
 	         </div>
 	        <div class="col-xs-2 text-center" id="d360" >
-	            <img width="30" height="30" src="/media/images/icons/whte-sun.png"/>
+	            <img width="30" height="30" src="/media/images/icons/whte-sun.png"  data-toggle="modal" data-target="#myModal"/>
 	        </div>
-	        <div class="col-xs-5 text-right" id="right-block">	 
+	        <div class="col-xs-5 text-right" id="right-block">
+	            <!-- <img width="25" height="25" src="/media/images/icons/grey_evnts.png"/> -->
+	           <!--  <img width="28" height="28" src="/media/images/icons/wht_inbx.png" /> -->  
 	            <img id="plus" width="28" height="28" src="/media/images/icons/wht-plus.png" />
-	            <img  width="28" height="28" src="/media/images/icons/wht_up_arrow.png"/>	  
+	            <img width="28" height="28" src="/media/images/icons/wht_up_arrow.png"/>	  
 	        </div>  
-	        	        
 	 	</div>
 	 	
-	 	       	 	
  </div>
- 
- 
   
  <script src="/script/modal/mPopUp_old.js"></script>  
+<!-- <script src="/script/modal/mPopUp.js"></script> -->
+
+
+
+
+<!-- <div class="footer navbar-fixed-bottom">
+ <div class="row menubar-footer">
+        <div class="col-xs-5">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+        </div>
+        <div class="col-xs-5">
+            <img width="32" height="32" src="/media/images/icons/ib_org.png" />
+        </div>
+        <div class="col-xs-1">
+            <span class="glyphicon glyphicon-plus-sign pull-right"></span>
+        </div>
+        <div class="col-xs-1">
+            <span class="glyphicon glyphicon-home pull-right"></span>
+        </div>
+    </div>
+</div>
+-->
