@@ -11,7 +11,7 @@ $(function(){
 		 
 		
 		$composerWrapper.toggleClass('visible');
-		$composerWrapper.css('bottom', $footerBarHeight); 
+		//$composerWrapper.css('bottom', $footerBarHeight); 
 		$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);
 				
 		//$composerWrapper.css('height',$footerBarHeight);  
