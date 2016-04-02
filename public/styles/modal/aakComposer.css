@@ -21,8 +21,8 @@
 
 /* ------- Header Section ------- */			
 #headerRow{
-				/*background: linear-gradient(#344C15,#698A25);*/
-				background: linear-gradient(#696969,#3f3f3f);				 
+				background: linear-gradient(#344C15,#698A25);
+				/*background: linear-gradient(#696969,#3f3f3f);	*/			 
 				height: 40px;  
 }
 			   
