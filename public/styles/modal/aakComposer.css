@@ -12,6 +12,7 @@
 				background-color: #F2F2F2;
 				height: 70%;
 				width: 50%;
+				
 }
 .visible {
 	display: block;
@@ -24,7 +25,7 @@
 				background: linear-gradient(#344C15,#698A25);
 				padding-top: 1%;
 				padding-bottom: 1%;
-				height: 7%; */
+				height: 14%; */
 }
 			   
 .composerWrapper #headerRow [class^="col"] {
@@ -42,7 +43,7 @@
 /* ------- Main Body Section ------- */
 .composerWrapper #mainBody {
 	padding-top: 1%;
-	height: 86%;
+	height: 72%;
 	
 }
 .composerWrapper #mainBody div {
@@ -52,7 +53,7 @@
 
 /* ------- Footer Section ------- */
 .composerWrapper #footer {
-	height: 10%;
+	height: 14%;
 }
 
 
@@ -61,7 +62,7 @@
 	 .composerWrapper {
 	 	width: 96%;
 	 	
-	 	left: 0px;
+	 	left: 0px;  
 	 	right: 0px;
 	 	
 	 }
