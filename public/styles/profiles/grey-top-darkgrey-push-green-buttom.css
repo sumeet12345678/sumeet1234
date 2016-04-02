@@ -168,13 +168,23 @@ div{
 }
 
 #d360{
-	visibility: hidden;
+	visibility: hidden;  
 }
 
 .pushContainer{
-	padding-top:2px;	
+		line-height: 25px;
 }
 
+.top-push-zone .pushContainer #leftBlock {	 
+	display: inline-block;
+	line-height: 100%;
+}
+
+/*pushZoneActionMessage added programatically in mPopUp_old.js */
+.top-push-zone  .pushZoneActionMessage{
+	text-align: center;
+	 
+}
 
 
 /* -------- MEDIA SCREEN -------- */
