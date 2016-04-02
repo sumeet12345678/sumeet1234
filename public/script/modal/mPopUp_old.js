@@ -162,7 +162,7 @@ $(function(){
 			$('.top-push-zone .pushContainer #leftBlock').html(pushContent);
 			 $('.top-push-zone .pushContainer').removeClass("pushZoneActionMessage");
 				
-			},10000);
+			},1000);
 		 
 	}
 	

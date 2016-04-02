@@ -21,14 +21,14 @@
 
 /* ------- Header Section ------- */			
 #headerRow{
-				background: linear-gradient(#344C15,#698A25);
-				padding-top: 1%;
-				padding-bottom: 1%;
-				height: 7%; */
+				background: linear-gradient(#344C15,#698A25);				 
+				height: 40px;  
 }
 			   
-.composerWrapper #headerRow [class^="col"] {
-  
+.composerWrapper  .row [class^="col"] {
+ 	padding-left: 4px;
+ 	padding-right: 4px;
+ 	margin-top: 4px;
 }
 	
 .dropdown123 {
@@ -59,8 +59,8 @@
 /* ------- Mobile Device Section*/
 @media screen and (max-width: 993px) {
 	 .composerWrapper {
-	 	width: 96%;
-	 	
+	 	width: 94%;
+	 	 
 	 	left: 0px;
 	 	right: 0px;
 	 	
