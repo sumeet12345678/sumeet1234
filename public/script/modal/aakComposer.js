@@ -9,7 +9,8 @@ $(function(){
 		//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
 		//alert("window height == " + $viewPortHeight);
 		 
-		$composerWrapper.css('bottom', $footerBarHeight);  
+		$composerWrapper.css('bottom', $footerBarHeight);
+		//$composerWrapper.css('top', $footerBarHeight); 
 		$composerWrapper.toggleClass('visible');
 		 
 		//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);
