@@ -9,8 +9,8 @@
 				left: 0px;
 				right: 0px;				 
 				background-color: #F2F2F2;
+				 border: 1px solid #696969;
 				 
-				/*height: 70%;*/
 				width: 50%; 
 }
 .visible {
@@ -21,14 +21,15 @@
 
 /* ------- Header Section ------- */			
 #headerRow{
-				background: linear-gradient(#344C15,#698A25);				 
+				/*background: linear-gradient(#344C15,#698A25);*/
+				background: linear-gradient(#696969,#3f3f3f);				 
 				height: 40px;  
 }
 			   
 .composerWrapper  .row [class^="col"] {
- 	padding-left: 4px;
- 	padding-right: 4px;
- 	margin-top: 4px;
+ 	padding-left: 6px;
+ 	padding-right: 6px;
+ 	margin-top: 6px;
 }
 	
 
