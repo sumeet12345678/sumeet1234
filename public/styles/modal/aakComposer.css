@@ -9,7 +9,7 @@
 				left: 0px;
 				right: 0px;				 
 				background-color: #fff;
-				 border: 1px solid #696969;
+				 border: 1px inset #696969;
 				 
 				width: 50%; 
 }
@@ -25,6 +25,11 @@
 				background: linear-gradient(#EBE6E6,#524D4D );
 				/*background: linear-gradient(#696969,#3f3f3f);	*/			 
 				height: 40px;  
+}
+
+.composerWrapper #selectGroup select {
+	border: 1px solid #77933C;
+	border-radius: 5px;
 }
 			   
 .composerWrapper  .row [class^="col"] {
@@ -47,7 +52,7 @@
 /* ------- Mobile Device Section*/
 @media screen and (max-width: 993px) {
 	 .composerWrapper {
-	 	width: 94%;
+	 	width: 100%;
 	 	 
 	 	left: 0px;
 	 	right: 0px;
