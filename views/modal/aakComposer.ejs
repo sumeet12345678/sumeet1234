@@ -1,7 +1,17 @@
 <!doctype>
 <html>
 	<head>		 
-		<link rel="stylesheet" href="/styles/modal/aakComposer.css">		
+		<link rel="stylesheet" href="/styles/modal/aakComposer.css">
+		<script>
+			function cui_msgType() {
+				var msgTypeSelElmnt = document.getElementById("MSG_COMPOSER_STANDALONE_MSG_TYPE");						
+				if(msgTypeSelElmnt.options[msgTypeSelElmnt.selectedIndex].value == "S") {
+					$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','none');	
+				} else {
+					$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','block');	
+				}							
+			}
+		</script>		
 	</head>	
 	<body>		
 		  <div class="container composerWrapper">		 
@@ -16,10 +26,10 @@
 								  
 								</select>
 								&nbsp;
-								<select style="height:27px;" class="greenborder">  
+								<select id= MSG_COMPOSER_STANDALONE_MSG_TYPE style="height:27px;" class="greenborder" onChange = "javascript: cui_msgType();">  
 								  
-								  <option value="volvo">Size: Medium</option>
-								  <option value="volvo">Size: Short</option>
+								  <option value="M">Size: Medium</option>
+								  <option value="S">Size: Short</option>
 								  
 								  
 								</select>
@@ -59,9 +69,10 @@
 			  			<textarea class="greenborder" style="width:100%; height:88px;"></textarea>
 			  		</div>
 			  		<div class="col-xs-1" style="height:88px; position: relative; padding-left: 0px;">
-			  			<img class="pull-left" style="margin-top:-3px;" src="/media/images/icons/rtf-temp.PNG" height="28" width="28">
+			  			<img style="display:block; margin-top:-2px;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28"> 
+			  			<img class="pull-left" id = MSG_COMPOSER_STANDALONE_RTF_ICON style="display: block;margin-top:36px;" src="/media/images/icons/rtf-temp.PNG" height="28" width="28">
 			  			<!-- <img style="display:block; margin-top:4px;" class="pull-left" src="/media/images/icons/emo.png" height="28" width="28"> -->
-			  			<img style="display:block; margin-top:36px;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28"> 
+			  			
 			  		</div>
 			  	</div> 
 			
