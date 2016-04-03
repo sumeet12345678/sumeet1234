@@ -3,7 +3,7 @@
 	<head>		 
 		<link rel="stylesheet" href="/styles/modal/aakComposer.css">
 		<script>
-		  alert("Height == " + $(window).height()); 
+		  //alert("Height == " + $(window).height()); 
 		  
 			function cui_msgType() {
 				var msgTypeSelElmnt = document.getElementById("MSG_COMPOSER_STANDALONE_MSG_TYPE");						
@@ -98,7 +98,7 @@
 			   -->
 			   <div class="row">
 			  		<div class="col-xs-11" style="padding-right:1px;">
-			  			<textarea class="greenborder" style="width:100%; height:88px;"></textarea>
+			  			<textarea id=MSG_COMPOSER_TEXTAREA class="greenborder" style="width:100%; height:88px;"></textarea>
 			  		</div>
 			  		<div class="col-xs-1" style="height:88px; position: relative; padding-left: 0px;">
 			  			<img style="display:block; margin-top:-2px;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
@@ -112,8 +112,15 @@
 		<script src="/script/modal/aakComposer.js"></script>
 		<script>
 			$(function(){
-				$('textarea').on('keypress', function(){
-					alert("New Height == " + $(window).height());
+				var oldViewPortHeight = $(window).height();
+				$('textarea').on('focus', function(){
+					var newViewPortHeight =  $(window).height();
+					
+					//alert("New== " + newViewPortHeight);
+					$('.composerWrapper').css('height', newViewPortHeight-20);
+					alert("Top menu == " + $('.top-menu-container').outerHeight());
+					
+					//calculate new height of composer
 				});
 			});
 		</script>
