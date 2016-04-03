@@ -114,13 +114,21 @@
 			$(function(){
 				var oldViewPortHeight = $(window).height();
 				$('textarea').on('focus', function(){
+					var composerWrapper = $('.composerWrapper'); 
 					var newViewPortHeight =  $(window).height();
+					var footerBarHeight = $('#footerBarId').height();
+					var topMenuContainerHeight = $('.top-menu-container').outerHeight();
+					
 					
 					//alert("New== " + newViewPortHeight);
-					$('.composerWrapper').css('height', newViewPortHeight-20);
-					alert("Top menu == " + $('.top-menu-container').outerHeight());
+					//$('.composerWrapper').css('height', newViewPortHeight-20);
+					//alert("Top menu == " + $('.top-menu-container').outerHeight());
 					
-					//calculate new height of composer
+					//calculate new height of composerWrapper
+					var composerNewHeight = newViewPortHeight - (footerBarHeight + topMenuContainerHeight);
+					//alert("composer new height == " + composerNewHeight);
+					composerWrapper.css('height',composerNewHeight);
+					 					
 				});
 			});
 		</script>
