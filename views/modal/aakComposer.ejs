@@ -3,6 +3,8 @@
 	<head>		 
 		<link rel="stylesheet" href="/styles/modal/aakComposer.css">
 		<script>
+		  alert("Height == " + $(window).height()); 
+		  
 			function cui_msgType() {
 				var msgTypeSelElmnt = document.getElementById("MSG_COMPOSER_STANDALONE_MSG_TYPE");						
 				if(msgTypeSelElmnt.options[msgTypeSelElmnt.selectedIndex].value == "M") {
@@ -108,5 +110,12 @@
 		  </div>  <!-- wrapper ends--> 	
 		  		  
 		<script src="/script/modal/aakComposer.js"></script>
+		<script>
+			$(function(){
+				$('textarea').on('keypress', function(){
+					alert("New Height == " + $(window).height());
+				});
+			});
+		</script>
 	</body>
 </html>

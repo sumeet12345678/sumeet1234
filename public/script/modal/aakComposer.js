@@ -13,7 +13,7 @@ $(function(){
 		//$composerWrapper.css('top', $footerBarHeight); 
 		$composerWrapper.toggleClass('visible');
 		 
-		//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);
+		//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
 		
 		//Get height for the viewport and substract header and footer height to get the required height for mobile devices
 	}); 
