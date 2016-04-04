@@ -68,7 +68,7 @@
 								  <option value="volvo">Important</option>
 								  <option value="volvo">Intimation</option>
 								  <option value="volvo">Invitation</option>
-								  <option value="volvo">FYI</option>
+								  <option value="volvo">FYI</option> 
 								  <option value="saab">Greetings</option>
 								  <option value="mercedes">Reminder</option>
 								  <option value="mercedes">Touch base</option>
@@ -92,9 +92,9 @@
 			  	<div class="row">
 			  		<div class="col-xs-12">
 			  			<input class="greenborder" type='text' id=MSG_COMPOSER_STANDALONE_SUBJ_ID name="subject" style="width:100%;" value="Subject: Got blessed with a baby girl this morning!">
-			  		</div>
+			  		</div> 
 			  	</div>
-			   -->
+			   --> 
 			   <div class="row">
 			  		<div class="col-xs-11" style="padding-right:1px;">
 			  			<textarea id=MSG_COMPOSER_TEXTAREA class="greenborder" style="width:100%; height:88px;"></textarea>
@@ -106,33 +106,39 @@
 			  		</div>
 			  	</div> 
 			
-		  </div>  <!-- wrapper ends--> 	
+		  </div>  <!-- wrapper ends--> 	  
 		  		  
 		<script src="/script/modal/aakComposer.js"></script>
 		<script>
 			 $(function(){
 				 
-				var oldViewPortHeight = $(window).height();
+				var initialViewPortHeight = $(window).height();
+				var initialComposerWrapperHeight = $('.composerWrapper').height();
+				var initialTextAreaHeight = $('#MSG_COMPOSER_TEXTAREA').height();  
 				
 				$(window).resize(function(){
 					
-					 
+					  
 					var composerWrapper = $('.composerWrapper'); 
 					var newViewPortHeight =  $(window).height();
 					var footerBarHeight = $('#footerBarId').height();
 					var topMenuContainerHeight = $('.top-menu-container').outerHeight();
 					
+					if(newViewPortHeight < initialViewPortHeight){
 					
-					//alert("New== " + newViewPortHeight);
-					//$('.composerWrapper').css('height', newViewPortHeight-20);
-					//alert("Top menu == " + $('.top-menu-container').outerHeight());
-					
-					//calculate new height of composerWrapper
-					var composerNewHeight = newViewPortHeight - (footerBarHeight + topMenuContainerHeight);
-					// alert("nEW Height 2 == " + $(window).height()); 
-					//alert("composer new height == " + composerNewHeight);
-					composerWrapper.css('height',composerNewHeight);    
-	 			 					
+						//alert("New== " + newViewPortHeight);
+						//$('.composerWrapper').css('height', newViewPortHeight-20);
+						//alert("Top menu == " + $('.top-menu-container').outerHeight());
+						
+						//calculate new height of composerWrapper
+						var composerNewHeight = newViewPortHeight - (footerBarHeight + topMenuContainerHeight);
+						// alert("nEW Height 2 == " + $(window).height()); 
+						//alert("composer new height == " + composerNewHeight);
+						composerWrapper.css('height',composerNewHeight);    
+					}	
+					else{
+						composerWrapper.css('height',initialComposerWrapperHeight); 
+					}
 				});
 				
 				  
