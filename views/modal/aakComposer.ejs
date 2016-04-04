@@ -119,12 +119,12 @@
 				$(window).resize(function(){
 					
 					  
-					var composerWrapper = $('.composerWrapper'); 
+					var composerWrapper = $('.composerWrapper');  
 					var newViewPortHeight =  $(window).height();
-					var footerBarHeight = $('#footerBarId').height();
+					var footerBarHeight = $('#footerBarId').height(); 
 					var topMenuContainerHeight = $('.top-menu-container').outerHeight();
 					
-					if(newViewPortHeight < initialViewPortHeight){
+					if(newViewPortHeight < initialViewPortHeight){   
 					
 						//alert("New== " + newViewPortHeight);
 						//$('.composerWrapper').css('height', newViewPortHeight-20);
@@ -135,6 +135,7 @@
 						// alert("nEW Height 2 == " + $(window).height()); 
 						//alert("composer new height == " + composerNewHeight);
 						composerWrapper.css('height',composerNewHeight);    
+						$('#MSG_COMPOSER_TEXTAREA').css('height', initialTextAreaHeight + (composerNewHeight-initialComposerWrapperHeight) );  
 					}	
 					else{
 						composerWrapper.css('height',initialComposerWrapperHeight); 
