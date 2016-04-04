@@ -26,6 +26,7 @@
 				/*background: linear-gradient(#696969,#3f3f3f);	*/		
 				background-color: #404040;
 				height: 40px;  
+				padding-top: 6px;
 }
 
 .composerWrapper .greenborder:focus {  
@@ -33,7 +34,7 @@
 	border-radius: 5px;
 }
 			   
-.composerWrapper  .row [class^="col"] {  
+.composerWrapper11111  .row [class^="col"] {  
  	padding-left: 6px;
  	padding-right: 6px;
  	margin-top: 6px;
@@ -44,8 +45,13 @@
 
 
 /* ------- Main Body Section ------- */
-
-
+#MSG_COMPOSER_MAIN_CONTENT {
+	padding:0px;
+}
+.composerToolbar{
+	padding: 0px;
+	background-color: #404040;
+}
 
 /* ------- Footer Section ------- */
 
