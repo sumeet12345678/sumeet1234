@@ -13,14 +13,29 @@
 					$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','none');
 					$("#MSG_COMPOSER_STANDALONE_SUBJ_ID").css('display','block');
 					
+					//$('.composerToolbar').css('height',$('#MSG_COMPOSER_TEXTAREA').outerHeight() + $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight());
+					$('.composerToolbar').css('height',$('#MSG_COMPOSER_MAIN_CONTENT').outerHeight());  
+					//$('.composerToolbar').css('height',$('.composerWrapper').height()- $('.composerWrapper headerRow').height());
+					
 					/*document.getElementById("MSG_COMPOSER_STANDALONE_SUBJ_ID").value = "";
 					document.getElementById("MSG_COMPOSER_STANDALONE_TO_ID").value = "979 797 9797";*/
+					
+					
+					
+					//var initialMainContentHeight =  $('#MSG_COMPOSER_MAIN_CONTENT').outerHeight(); //issue:- displays 0
+					//alert(initialMainContentHeight);
+					
+					
 				} else {
 					$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','none');	
 					$("#MSG_COMPOSER_STANDALONE_EMO_ICON_ID").css('display','block');
 					$("#MSG_COMPOSER_STANDALONE_PRVW_ICON_ID").css('display','none');
-					$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','block');
+					$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','block');  
 					$("#MSG_COMPOSER_STANDALONE_SUBJ_ID").css('display','none');
+					
+					//$('.composerToolbar').css('height',$('.composerWrapper').height()- $('.composerWrapper headerRow').height());
+					//$('.composerToolbar').css('height',$('#MSG_COMPOSER_TEXTAREA').outerHeight() + $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight());
+					$('.composerToolbar').css('height',$('#MSG_COMPOSER_MAIN_CONTENT').outerHeight());  
 					
 					
 				}							
@@ -83,8 +98,8 @@
 			  		</div> <!-- col-xs-11 ends -->
 			  			
 			  		<div class="col-xs-1">
-			  			<img id = MSG_COMPOSER_STANDALONE_RTF_ICON  class="pull-right" style="display:none;" src="/media/images/icons/rtf-temp.PNG" height="24" width="24">
-			  			<img id = MSG_COMPOSER_STANDALONE_EMO_ICON_ID class="pull-right"  style="display:block; margin-right: -4px;;" src="/media/images/icons/emo1.png" height="30" width="30">
+			  			<img id = MSG_COMPOSER_STANDALONE_RTF_ICON  class="pull-right img-responsive" style="display:none;" src="/media/images/icons/rtf-temp.PNG" height="24" width="24">
+			  			<img id = MSG_COMPOSER_STANDALONE_EMO_ICON_ID class="pull-right img-responsive"  style="display:block; margin-right: -4px;;" src="/media/images/icons/emo1.png" height="30" width="30">
 			  		  
 			  		</div>
 			  </div>  <!-- row headerRow ends -->  
@@ -92,24 +107,24 @@
 			  <!-- row for composer body --> 
 			  <div class="row" >
 			  		<div class="col-xs-1 composerToolbar"> <!--  set height to col-xs-10 below --> 
-			  			<img style="display:block; position: absolute; top:0px;left:24%; " class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
-			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID_123 class="pull-left" style="display:block;position: absolute; bottom:0px; right:24%;" src="/media/images/icons/short_links.png"  width="32" height="32">	
-			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID_123 class="pull-left" style="display:none; position: absolute; bottom:0px;right:24%;" src="/media/images/icons/preview3.png"  width="28" height="26">	
+			  			<img style="display:block; position: absolute; top:0px;left:24%; " class="pull-left img-responsive" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
+			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID_123 class="pull-left img-responsive" style="display:block;position: absolute; bottom:0px; right:24%;" src="/media/images/icons/short_links.png"  width="32" height="32">	
+			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID_123 class="pull-left img-responsive" style="display:none; position: absolute; bottom:0px;right:24%;" src="/media/images/icons/preview3.png"  width="28" height="26">	
 			  		</div>
-			  		<div class="col-xs-10" id = MSG_COMPOSER_MAIN_CONTENT> 
+			  		<div class="col-xs-10" id=MSG_COMPOSER_MAIN_CONTENT> 
 			  			<div class="row">
 			  				<div class="col-xs-12" >
 			  					<input class="greenborder" type='text' id=MSG_COMPOSER_STANDALONE_SUBJ_ID name="subject" style="display:none; width:100%; margin-top:4px; margin-bottom:4px;">
-			  					<textarea id=MSG_COMPOSER_TEXTAREA class="greenborder" style="width:100%; height:88px; margin-top: 2px; margin-bottom:2px;"></textarea>
+			  					<textarea id=MSG_COMPOSER_TEXTAREA class="greenborder" style="width:100%; height:88px; margin-top: 2px; margin-bottom:0px;"></textarea>
 			  				</div>
 			  			</div>
 			  		</div>
 			  		<div class="col-xs-1 composerToolbar" style="position: relative; text-align: center;">
 			  			<img style="display:block; position: absolute; top:0px;left:24%; " class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
-			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID class="pull-left" style="display:block;position: absolute; bottom:0px; left:24%;" src="/media/images/icons/aLyps.png"  width="32" height="32">	
-			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID class="pull-left" style="display:none; position: absolute; bottom:0px; left:24%;" src="/media/images/icons/preview3.png"  width="28" height="26">	
+			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID class="pull-left img-responsive" style="display:block;position: absolute; bottom:0px; left:24%;" src="/media/images/icons/aLyps.png"  width="32" height="32">	
+			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID class="pull-left img-responsive" style="display:none; position: absolute; bottom:0px; left:24%;" src="/media/images/icons/preview3.png"  width="28" height="26">	
 			  		</div>
-			  		<div class="clearfix visible-xs-block"></div>
+			  		<!-- <div class="clearfix visible-xs-block"></div> -->
 			  </div>
 			
 		  </div>  <!-- wrapper ends--> 	    
@@ -122,9 +137,14 @@
 				 
 				var initialViewPortHeight = $(window).height();
 				var initialComposerWrapperHeight = $('.composerWrapper').height();
-				var initialTextAreaHeight = $('#MSG_COMPOSER_TEXTAREA').height();  
+				//var initialTextAreaHeight = $('#MSG_COMPOSER_TEXTAREA').height();
+				var initialTextAreaHeight = $('#MSG_COMPOSER_TEXTAREA').outerHeight();
+				var initialSubjIdHeight = $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight();
+				  //  var initialMainContentHeight =  $('#MSG_COMPOSER_MAIN_CONTENT').outerHeight(); //issue:- displays 0
+				//alert(initialMainContentHeight);
 				
-				$('.composerToolbar').css('height',initialComposerWrapperHeight- $('.composerWrapper headerRow').height());
+			//	$('.composerToolbar').css('height',initialComposerWrapperHeight- $('.composerWrapper headerRow').height());
+				$('.composerToolbar').css('height',initialTextAreaHeight);
 				
 				$(window).resize(function(){
 					
@@ -144,10 +164,10 @@
 						$('#MSG_COMPOSER_TEXTAREA').css('height', initialTextAreaHeight + (composerNewHeight-initialComposerWrapperHeight) );  
 					}	
 					else{
-						composerWrapper.css('height',initialComposerWrapperHeight); 
-						$('#MSG_COMPOSER_TEXTAREA').css('height',initialTextAreaHeight);  
+						composerWrapper.css('height',initialComposerWrapperHeight);    
+						$('#MSG_COMPOSER_TEXTAREA').css('height',initialTextAreaHeight);       
 					}
-					$('.composerToolbar').css('height', $('#MSG_COMPOSER_MAIN_CONTENT').height());
+					//$('.composerToolbar').css('height', $('#MSG_COMPOSER_MAIN_CONTENT').height());
 				});
 				
 				//alert("Body height == " + $('#MSG_COMPOSER_MAIN_CONTENT').height());
