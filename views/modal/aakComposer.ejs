@@ -3,7 +3,6 @@
 	<head>		 
 		<link rel="stylesheet" href="/styles/modal/aakComposer.css">
 		<script>
-		  //alert("Height == " + $(window).height()); 
 		  
 			function cui_msgType() {
 				var msgTypeSelElmnt = document.getElementById("MSG_COMPOSER_STANDALONE_MSG_TYPE");						
@@ -112,8 +111,12 @@
 		<script src="/script/modal/aakComposer.js"></script>
 		<script>
 			 $(function(){
+				 
 				var oldViewPortHeight = $(window).height();
-				$('textarea').on('focus', function(){
+				
+				$(window).resize(function(){
+					
+					 
 					var composerWrapper = $('.composerWrapper'); 
 					var newViewPortHeight =  $(window).height();
 					var footerBarHeight = $('#footerBarId').height();
@@ -126,10 +129,13 @@
 					
 					//calculate new height of composerWrapper
 					var composerNewHeight = newViewPortHeight - (footerBarHeight + topMenuContainerHeight);
+					// alert("nEW Height 2 == " + $(window).height()); 
 					//alert("composer new height == " + composerNewHeight);
-					composerWrapper.css('height',composerNewHeight);
-					 					
+					composerWrapper.css('height',composerNewHeight);    
+	 			 					
 				});
+				
+				  
 			}); 
 		</script>
 	</body>
