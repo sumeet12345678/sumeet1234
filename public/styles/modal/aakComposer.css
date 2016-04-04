@@ -29,6 +29,10 @@
 				padding-top: 6px;
 }
 
+.composerWrapper #headerRow .col-xs-11{
+	padding-left: 11px;
+}
+
 .composerWrapper .greenborder:focus {  
 	border: 1px solid #77933C;
 	border-radius: 5px;
@@ -53,6 +57,15 @@
 	background-color: #404040;
 }
 
+/* Sidebar Section */
+ .composerToolbarLeft img {
+	 	right:24%;
+	 }
+	 
+	 .composerToolbarRight  img{
+	 	left:24%;
+	 }
+	  
 /* ------- Footer Section ------- */
 
 
@@ -64,6 +77,18 @@
 	 	left: 0px;
 	 	right: 0px;
 	 	
+	 }
+	 
+	 .composerWrapper #headerRow .col-xs-11{
+		padding-left: 3px;
+		}
+	 
+	 .composerToolbarLeft img {
+	 	left:8%;
+	 }
+	 
+	 .composerToolbarRight  img{
+	 	left: 9%;
 	 }
 	
 }
