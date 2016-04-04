@@ -82,13 +82,17 @@
 	 .composerWrapper #headerRow .col-xs-11{
 		padding-left: 3px;
 		}
+		
+	 .composerWrapper #headerRow #MSG_COMPOSER_STANDALONE_EMO_ICON_ID11111111111111 {
+	 	margin-right: -11px;
+	 }
 	 
 	 .composerToolbarLeft img {
 	 	left:8%;
 	 }
 	 
 	 .composerToolbarRight  img{
-	 	left: 9%;
+	 	left: 26%;
 	 }
 	
 }
