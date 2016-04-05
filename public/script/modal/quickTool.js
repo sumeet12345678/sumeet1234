@@ -23,8 +23,8 @@ $(function(){
 		var topBarHeight = $('#QUK_TOOL_TOP_BAR').outerHeight();
 		
 		$('.quk_tool').css('height', $viewPortHeight - $footerBarHeight);
-		$('#QUK_TOOL_LEFT_BAR').css('width', topBarHeight);
-		$('#QUK_TOOL_RIGHT_BAR').css('width', topBarHeight);  
+		$('#QUK_TOOL_LEFT_BAR').css('width', topBarHeight + (.1 * topBarHeight));
+		$('#QUK_TOOL_RIGHT_BAR').css('width', topBarHeight + (.1 * topBarHeight));  
 		
 		
 	}
