@@ -1,0 +1,14 @@
+
+
+.quk_tool {
+		display:none;
+		width:100%; 
+		height:94%;
+		position: fixed; 
+		top:0px;
+		left:0px; 
+		z-index:99999; 
+		background-color: transparent;
+}
+
+ 
