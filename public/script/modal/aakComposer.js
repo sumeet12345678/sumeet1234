@@ -4,7 +4,7 @@ $(function(){
 	$('#plus').on('click', function(){
 		var $composerWrapper = $('.composerWrapper');     
 		//var $topMenubarHeight = $('.top-menubar').height();
-		var $footerBarHeight = $('#footerBarId').height()
+		var $footerBarHeight = $('#footerBarId').height();
 		//var $viewPortHeight = $(window).height(); // height of browser viewport 
 		//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
 		//alert("window height == " + $viewPortHeight);

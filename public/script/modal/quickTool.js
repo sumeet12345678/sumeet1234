@@ -17,8 +17,12 @@ $(function(){
 	});   
 	
 	function setWidthOfLeftandRightBar(){
-		//retrieve height of top bar
-		topBarHeight = $('#QUK_TOOL_TOP_BAR').outerHeight();
+		//Set height of quk_tool,  and set left and right bar's width equal to top bar
+		var $viewPortHeight = $(window).height();
+		var $footerBarHeight = $('#footerBarId').height(); 
+		var topBarHeight = $('#QUK_TOOL_TOP_BAR').outerHeight();
+		
+		$('.quk_tool').css('height', $viewPortHeight - $footerBarHeight);
 		$('#QUK_TOOL_LEFT_BAR').css('width', topBarHeight);
 		$('#QUK_TOOL_RIGHT_BAR').css('width', topBarHeight);  
 		
