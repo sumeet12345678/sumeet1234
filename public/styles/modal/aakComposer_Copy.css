@@ -1,0 +1,98 @@
+/* ------- Common Section --------- */
+
+
+/* ------- Top Wrapper Section ------- */
+.composerWrapper{
+				display: none;
+				position: fixed;
+				z-index: 1051;
+				left: 0px;
+				right: 0px;				 
+				background-color: #f2f2f2;
+			    border: 1px solid #696969;
+				 
+				width: 50%; 
+}
+.visible {
+	display: block;
+}
+
+
+
+/* ------- Header Section ------- */			
+#headerRow{
+				/*background: linear-gradient(#344C15,#698A25);   f2f2f2 EBE6E6 #BAB6B6 918C8C 706E6E*/
+				/*background: linear-gradient(#918C8C,#524D4D );*/
+				/*background: linear-gradient(#696969,#3f3f3f);	*/		
+				background-color: #404040;
+				height: 40px;  
+				padding-top: 6px;
+}
+
+.composerWrapper #headerRow .col-xs-11{
+	padding-left: 11px;
+}
+
+.composerWrapper .greenborder:focus {  
+	border: 1px solid #77933C;
+	border-radius: 5px;
+}
+			   
+.composerWrapper11111  .row [class^="col"] {  
+ 	padding-left: 6px;
+ 	padding-right: 6px;
+ 	margin-top: 6px;
+}
+	
+
+
+
+
+/* ------- Main Body Section ------- */
+#MSG_COMPOSER_MAIN_CONTENT {
+	padding:0px;
+}
+.composerToolbar{
+	padding: 0px;
+	background-color: #404040;
+}
+
+/* Sidebar Section */
+ .composerToolbarLeft img {
+	 	right:24%;
+	 }
+	 
+	 .composerToolbarRight  img{
+	 	left:24%;
+	 }
+	  
+/* ------- Footer Section ------- */
+
+
+/* ------- Mobile Device Section*/
+@media screen and (max-width: 993px) {
+	 .composerWrapper {
+	 	width: 99%;
+	 	 
+	 	left: 0px;
+	 	right: 0px;
+	 	
+	 }
+	 
+	 .composerWrapper #headerRow .col-xs-11{
+		padding-left: 3px;
+		}
+		
+	 .composerWrapper #headerRow #MSG_COMPOSER_STANDALONE_EMO_ICON_ID11111111111111 {
+	 	margin-right: -11px;
+	 }
+	 
+	 .composerToolbarLeft img {
+	 	left:8%;
+	 }
+	 
+	 .composerToolbarRight  img{
+	 	left: 26%;
+	 }
+	
+}

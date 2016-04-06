@@ -3,51 +3,52 @@
 	<head>		 
 		<link rel="stylesheet" href="/styles/modal/aakComposer.css">
 		<script> 
-		  
-			function cui_msgType() {
-				var msgTypeSelElmnt = document.getElementById("MSG_COMPOSER_STANDALONE_MSG_TYPE");						
-				if(msgTypeSelElmnt.options[msgTypeSelElmnt.selectedIndex].value == "M") {
-					$("#MSG_COMPOSER_STANDALONE_EMO_ICON_ID").css('display','none');
-					$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','block');	
-					$("#MSG_COMPOSER_STANDALONE_PRVW_ICON_ID").css('display','block');
-					$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','none');
-					$("#MSG_COMPOSER_STANDALONE_SUBJ_ID").css('display','block');
-					
-					//$('.composerToolbar').css('height',$('#MSG_COMPOSER_TEXTAREA').outerHeight() + $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight());
-					$('.composerToolbar').css('height',$('#MSG_COMPOSER_MAIN_CONTENT').outerHeight());  
-					//$('.composerToolbar').css('height',$('.composerWrapper').height()- $('.composerWrapper headerRow').height());
-					
-					/*document.getElementById("MSG_COMPOSER_STANDALONE_SUBJ_ID").value = "";
-					document.getElementById("MSG_COMPOSER_STANDALONE_TO_ID").value = "979 797 9797";*/
-					
-					
-					
-					//var initialMainContentHeight =  $('#MSG_COMPOSER_MAIN_CONTENT').outerHeight(); //issue:- displays 0
-					//alert(initialMainContentHeight);
-					
-					
-				} else {
-					$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','none');	
-					$("#MSG_COMPOSER_STANDALONE_EMO_ICON_ID").css('display','block');
-					$("#MSG_COMPOSER_STANDALONE_PRVW_ICON_ID").css('display','none');
-					$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','block');  
-					$("#MSG_COMPOSER_STANDALONE_SUBJ_ID").css('display','none');
-					
-					//$('.composerToolbar').css('height',$('.composerWrapper').height()- $('.composerWrapper headerRow').height());
-					//$('.composerToolbar').css('height',$('#MSG_COMPOSER_TEXTAREA').outerHeight() + $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight());
-					$('.composerToolbar').css('height',$('#MSG_COMPOSER_MAIN_CONTENT').outerHeight());  
-					
-					
-				}							
-			}
+		function cui_msgType() {
+			var msgTypeSelElmnt = document.getElementById("MSG_COMPOSER_STANDALONE_MSG_TYPE");						
+			if(msgTypeSelElmnt.options[msgTypeSelElmnt.selectedIndex].value == "M") {
+				$("#MSG_COMPOSER_STANDALONE_EMO_ICON_ID").css('display','none');
+				$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','block');	
+				$("#MSG_COMPOSER_STANDALONE_PRVW_ICON_ID").css('display','block');
+				$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','none');
+				$("#MSG_COMPOSER_STANDALONE_SUBJ_ID").css('display','block');
+							
+				
+				/*document.getElementById("MSG_COMPOSER_STANDALONE_SUBJ_ID").value = "";
+				document.getElementById("MSG_COMPOSER_STANDALONE_TO_ID").value = "979 797 9797";*/
+			 	
+				//Change css setting for the whole wrapper and its components;
+				$('.composerWrapper').css('height','180px');
+				$('#MSG_COMPOSER_BODY').css('height','140px');
+				$('#MSG_COMPOSER_TEXTAREA').css('height','80%'); //text box height set to 20% on html code
+				
+				
+			} else {
+				$("#MSG_COMPOSER_STANDALONE_RTF_ICON").css('display','none');	
+				$("#MSG_COMPOSER_STANDALONE_EMO_ICON_ID").css('display','block');
+				$("#MSG_COMPOSER_STANDALONE_PRVW_ICON_ID").css('display','none');
+				$("#MSG_COMPOSER_STANDALONE_SND_ICON_ID").css('display','block');   
+				$("#MSG_COMPOSER_STANDALONE_SUBJ_ID").css('display','none');
+				
+				//$('.composerToolbar').css('height',$('.composerWrapper').height()- $('.composerWrapper headerRow').height());
+				//$('.composerToolbar').css('height',$('#MSG_COMPOSER_TEXTAREA').outerHeight() + $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight());
+				//$('.composerToolbar').css('height',$('#MSG_COMPOSER_MAIN_CONTENT').outerHeight());  
+				
+			////	$('#MSG_COMPOSER_BODY').css('height', $('#MSG_COMPOSER_CONTENT_AREA').height()); //
+			
+				$('.composerWrapper').css('height','120px');
+				$('#MSG_COMPOSER_BODY').css('height','80px');
+				$('#MSG_COMPOSER_TEXTAREA').css('height','100%');
+				
+			}							
+		}
+			
 		</script>		
 	</head>	
 	<body>		
-		  <div class="container composerWrapper">		 
-			  	<div class="row" id="headerRow">
-			  		<div class="col-xs-11">
-			  		
-			  			<div id="selectGroup" style="display: inline-block;padding-top: 0px;">	
+		 
+		 <div class="composerWrapper" style="height: 120px;">
+		 	<div id=MSG_COMPOSER_TOP_BAR style="height:40px; background-color:#404040;padding-top:6px;">     
+		 		<div id="selectGroup" style="display: inline-block; margin-left: 5px;">	
 						  	<!-- 	<select style="height:27px; width:65px;" class="greenborder">
 								  <option value="volvo">41041/Deep</option>
 								  <option value="saab">Deepika/979</option>
@@ -69,9 +70,9 @@
 								  <option value="volvo">Sub: Blah Blah</option>
 								  <option value="saab">Sub: Urgent! Call at the earliest!</option>
 								  
-								</select> -->
+								</select> -->  
 								
-								<select id= MSG_COMPOSER_STANDALONE_MSG_TYPE style="height:27px;" class="greenborder" onChange = "javascript: cui_msgType();">  
+								<select id= MSG_COMPOSER_STANDALONE_MSG_TYPE style="height:27px;" class="" onChange = "javascript: cui_msgType();">  
 								  
 								  
 								  <option value="S" selected>Message ('S')</option>
@@ -93,92 +94,42 @@
 								  <option value="audi">Urgent</option>
 								</select -->
 						</div>
-			  			<!-- <img class="pull-right" src="/media/images/icons/send_message.png" width="28" height="28"> -->
-			  			
-			  			
-			  		</div> <!-- col-xs-11 ends -->
-			  			
-			  		<div class="col-xs-1">
-			  			<img id = MSG_COMPOSER_STANDALONE_RTF_ICON  class="pull-right" style="display:none; margin-right:8px;" src="/media/images/icons/rtf-temp.PNG" height="24" width="24">
+						
+						<img id = MSG_COMPOSER_STANDALONE_RTF_ICON  class="pull-right" style="display:none; margin-right:8px;" src="/media/images/icons/rtf-temp.PNG" height="24" width="24">
 			  			<img id = MSG_COMPOSER_STANDALONE_EMO_ICON_ID class="pull-right"  style="display:block; margin-right: 7px;" src="/media/images/icons/emo1.png" height="30" width="30">
-			  		  
-			  		</div>
-			  </div>  <!-- row headerRow ends -->  
-			 	
-			  <!-- row for composer body --> 
-			  <div class="row" >
-			  		<div class="col-xs-2 composerToolbar composerToolbarLeft"> <!--  set height to col-xs-10 below --> 
-			  		<!-- 	<img id = MSG_COMPOSER_STANDALONE_PLUS_123 style="display:block; position: absolute; top:0px;" class="pull-left img-responsive" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
-			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID_123 class="pull-left img-responsive" style="display:block;position: absolute; bottom:0px;" src="/media/images/icons/short_links.png"  width="28" height="28">	
-			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID_123 class="pull-left img-responsive" style="display:none; position: absolute; bottom:0px;" src="/media/images/icons/preview3.png"  width="28" height="26">
-			  		-->	
-			  		</div>
-			  		<div class="col-xs-8" id=MSG_COMPOSER_MAIN_CONTENT style="padding-left:5px;padding-right: 5px;"> 
-			  			<div class="row">
-			  				<div class="col-xs-12" >
-			  					<input class="greenborder" type='text' id=MSG_COMPOSER_STANDALONE_SUBJ_ID name="subject" style="display:none; width:100%; margin-top:5px;">
-			  					<textarea id=MSG_COMPOSER_TEXTAREA class="greenborder" style="width:100%; height:88px; margin-top: 5px;margin-right:5px; margin-bottom:0px;"></textarea>
-			  				</div>
-			  			</div>
-			  		</div>
-			  		<div class="col-xs-2 composerToolbar composerToolbarRight" style="position: relative; text-align: center;">
-			  			<img id = MSG_COMPOSER_STANDALONE_PLUS style="display:block; position: absolute; top:2px;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
-			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID class="pull-left img-responsive" style="display:block;position: absolute; bottom:2px;" src="/media/images/icons/post-out.png"  width="30" height="28">	
-			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID class="pull-left img-responsive" style="display:none; position: absolute; bottom:4px;" src="/media/images/icons/preview3.png"  width="28" height="26">	
-			  		</div>
-			  		<!-- <div class="clearfix visible-xs-block"></div> -->
-			  </div>
-			
-		  </div>  <!-- wrapper ends--> 	    
-		  		  
+		 	</div><!-- MSG_COMPOSER_TOP_BAR ends -->
+		 	
+		 	<!-- Programatically set height the of msg_composer_body equal to msg_composer_content_area -->
+		 	<div id="MSG_COMPOSER_BODY" style="width: 100%; height:80px;">   
+		 			<div id="MSG_COMPOSER_LEFT_BAR" style="width: 10%; background-color: #404040; height:100%; float:left; position:relative;">
+		 				<img id = MSG_COMPOSER_STANDALONE_PLUS_123 style="display:block; position: absolute; top:1px;margin-left:auto;margin-right:auto;left:0;right:0;" class="pull-left img-responsive" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
+			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID_123 class="pull-left img-responsive" style="display:block;position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/short_links.png"  width="28" height="28">
+		 			</div>
+		 			
+		 			<div id="MSG_COMPOSER_CONTENT_AREA" style="width: 80%;height:100%;float:left;padding:10px;">
+		 				<input class="" type='text' id=MSG_COMPOSER_STANDALONE_SUBJ_ID name="subject" style="display:none; width:100%; height:20%; margin-bottom:5px">
+			  			<textarea id=MSG_COMPOSER_TEXTAREA class="" style="width:100%; height:100%;"></textarea>
+		 			
+		 			</div>
+		 			
+		 			<div id="MSG_COMPOSER_RIGHT_BAR" style="width: 10%; background-color: #404040; height:100%;float:right; position:relative;">
+		 				<img id = MSG_COMPOSER_STANDALONE_PLUS style="display:block; position: absolute; top:1px;margin-left:auto;margin-right:auto;left:0;right:0;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
+			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID class="pull-left img-responsive" style="display:block;position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/post-out.png"  width="30" height="28">	
+			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID class="pull-left img-responsive" style="display:none; position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/preview3.png"  width="28" height="26">	
+		 			</div> 
+		 			
+		 	</div>  
+		 </div>
+		  
+		  
+		  	    
+		  		   
 		<script src="/script/modal/aakComposer.js"></script>
+			
 		<script>  
-			 $(function(){
-				 //alert('helo');
+		 	
+			//$('#MSG_COMPOSER_BODY').css('height', $('#MSG_COMPOSER_CONTENT_AREA').height());
 				
-				 
-				var initialViewPortHeight = $(window).height();
-				var initialComposerWrapperHeight = $('.composerWrapper').height();
-				//var initialTextAreaHeight = $('#MSG_COMPOSER_TEXTAREA').height();
-				var initialTextAreaHeight = $('#MSG_COMPOSER_TEXTAREA').outerHeight();
-				var initialSubjIdHeight = $('#MSG_COMPOSER_STANDALONE_SUBJ_ID').outerHeight();
-				  //  var initialMainContentHeight =  $('#MSG_COMPOSER_MAIN_CONTENT').outerHeight(); //issue:- displays 0
-				//alert(initialMainContentHeight);
-				
-			//	$('.composerToolbar').css('height',initialComposerWrapperHeight- $('.composerWrapper headerRow').height());
-				$('.composerToolbar').css('height',initialTextAreaHeight);
-				
-				$(window).resize(function(){
-					
-					  
-					var composerWrapper = $('.composerWrapper');  
-					var newViewPortHeight =  $(window).height();
-					var footerBarHeight = $('#footerBarId').height(); 
-					var topMenuContainerHeight = $('.top-menu-container').outerHeight();
-					
-					if(newViewPortHeight < initialViewPortHeight){     
-								
-						//calculate new height of composerWrapper
-						var composerNewHeight = newViewPortHeight - (footerBarHeight + topMenuContainerHeight);
-						// alert("nEW Height 2 == " + $(window).height()); 
-						//alert("composer new height == " + composerNewHeight);
-						composerWrapper.css('height',composerNewHeight);    
-						$('#MSG_COMPOSER_TEXTAREA').css('height', initialTextAreaHeight + (composerNewHeight-initialComposerWrapperHeight) );  
-					}	
-					else{
-						composerWrapper.css('height',initialComposerWrapperHeight);    
-						$('#MSG_COMPOSER_TEXTAREA').css('height',initialTextAreaHeight);       
-					}
-					//$('.composerToolbar').css('height', $('#MSG_COMPOSER_MAIN_CONTENT').height());
-				});
-				
-				//alert("Body height == " + $('#MSG_COMPOSER_MAIN_CONTENT').height());
-				//alert("Toolbar height == " + $('.composerToolbar').height());  
-				//Set height of composer's side toolbars to mainContent's height
-				
-				
-				  
-			}); 
 		</script>
 	</body>
 </html>
