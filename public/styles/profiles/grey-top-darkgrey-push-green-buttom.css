@@ -34,9 +34,17 @@ a:hover{
 
 .menubar-btn{color:#fff;}
 .profile-header{background:#215968;color:#fff;font-size:20px;} 
-.btn-profile-edit{position:absolute;bottom:-7px;right:0;margin-right:15px;cursor:pointer}
+/* .btn-profile-edit{position:absolute;bottom:-7px;right:0;margin-right:15px;cursor: pointer;} */
+.btn-profile-edit {position:absolute;bottom:-7px;right:0;margin-right:15px;cursor: pointer;}    
+
+.btn-profile-edit:hover .popUpMenu {
+		display:block;
+		 right:0;
+}
+
+
 #imgPreview{
-	cursor:pointer;
+	cursor:pointer;  
 }
 
 .profile-content{margin-bottom:50px}
@@ -235,10 +243,6 @@ div{
   		width: 70%;
   		margin-right: auto;
   		margin-left: auto;
-  	}
-  	
-  	.profile-header1212 #imgProfileEdit {
-  		margin-right: 190px;
   	}
   	
   	.title-bar {

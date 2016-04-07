@@ -45,8 +45,15 @@
 	 	left: 0px;
 	 	right: 0px;
 	 	
-	 }
-	 
-	 
-	
+	 }	
+}
+
+
+/* ------- Larger Device Section*/
+@media screen and (min-width: 994px) {
+	  #MSG_COMPOSER_STANDALONE_RTF_ICON {
+	  	margin-right: 16px;
+	  	display:none;
+	  	border: 2px solid green;
+	  }
 }
