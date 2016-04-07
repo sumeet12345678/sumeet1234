@@ -54,7 +54,7 @@ var popUpMenuJson = [
 			 
 			var rightSpaceWidth = $(document).width() - dAtX;
 			
-			$('.popUpMenu').css('display','block'); 
+			$('.popUpMenu').css('display','block');   
 						
 			//logic for x positioning
 			if(rightSpaceWidth > $('.popUpMenu').width()){  
