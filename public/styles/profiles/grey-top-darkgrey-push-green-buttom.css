@@ -58,7 +58,7 @@ a:hover{
 	background-color: #262626;
 	/* background: linear-gradient(#3f3f3f, #595959); */
 	/*background: rgba(63, 63, 63, .3);*/ 
-	height: 25px;
+	height: 29px;
 }
 
 .arrow-link{
@@ -180,7 +180,7 @@ div{
 }
 
 .pushContainer{
-		line-height: 28px;
+		line-height: 29px;
 }
 
 .top-push-zone .pushContainer #leftBlock {	 
