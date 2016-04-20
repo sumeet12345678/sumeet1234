@@ -1,19 +1,19 @@
 var mDialogJson = [
           {
-        	  "key":"key1", "icon":"iconLink", "label":"Skills","action":"someUrl", "callback":""
+        	  "key":"key1", "icon":"iconLink", "label":"Skills","action":"someUrl", "callback":"showSkillProfile"
           }, 
           {
-        	  "key":"key2", "icon":"iconLink", "label":"Education","action":"someUrl", "callback":""
+        	  "key":"key2", "icon":"iconLink", "label":"Education","action":"someUrl", "callback":"showEducationalProfile"
           },
           {
-        	  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":""
+        	  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":"showExperience"
           },
           {
-        	  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":""
-          },
-          {
-        	  "key":"key5", "icon":"iconLink", "label":"Certificates, Awards, Recognitions", "action": "someUrl", "callback":""
-          },
+        	  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":"showRecommendations"
+          }
+         /* {
+        	  "key":"key5", "icon":"iconLink", "label":"Certificates, Awards, Recognitions", "action": "someUrl", "callback":"showCertAwardRecog"
+          }
           {
         	  "key":"key5", "icon":"iconLink", "label":"Research, Papers, Patents, Indigenous Work", "action": "someUrl", "callback":""
           },
@@ -25,27 +25,145 @@ var mDialogJson = [
           },
           {
         	  "key":"key5", "icon":"iconLink", "label":"Causes, Voluntary Work", "action": "someUrl", "callback":""
-          }
+          } */
 ]; 
 
 $(function(){
-	//$('.modal-body').append('<p>BLa blab bla<p>');
 	
-	mDialogJson.forEach(function(element){  
-		$('#mPopUp #optionsContainer').append('<div>'+element.label + '<div>');
-		//$('.modal-body').append('<p>BLa blab bla<p>');
-		//console.log(element.label);
-	});
+	mDialogJson.forEach(function(item) {   
+		var el = $('<div>'+ item.label + '<div>');
+		el.attr('data-dismiss','modal');  //Create seperate function later for closing modal box by passing modal id
+		el.on('click', eval(item.callback));  				
+		$('.modal-body').append(el);		 
+	}); //Main function ends
 	
-	$('#mPopUp').css('bottom', $('#footerBarId').height());    
-	
-//	$('#d360').on('click', function(){
-//		var height = $(window).height() - ($('#footerBarId').height() + $('.modal-dialog').height()); 
-//		alert("Window == "+ $(window).height());
-	//alert("Footer ==" + $('#footerBarId').height());
-//		alert("Dialog ==" + $('.modal-content').height());
-//	});
+	  
+	$('.modal-dialog').css('bottom', $('#footerBarId').height());
+	//$('.modal-dialog').css('max-width', $('#profileDescription').width());
 	
 	
+	/* callBack functions implemented */
+	
+	function showSkillProfile(event){
+		console.log("Experience");
+		var xhr = new XMLHttpRequest();
+		
+		xhr.onload = function(){
+			if(xhr.status === 200){
+				console.log("Status  == 200");
+				$('.summary').html(xhr.responseText);
+				
+				updatePushZone();
+			}
+			else {
+				console.log("Status == " + xhr.status);  
+			}
+		}
+		
+		 xhr.open('GET','/data/skills_mihika.html', true);       
+		 xhr.send(null);
+		 // loads the content of the push zone
+		 loadPushZone();
+		
+	}
+	
+	
+	
+	function showEducationalProfile(event){
+		var xhr = new XMLHttpRequest();
+		  
+		xhr.onload = function(){
+			if(xhr.status === 200){
+				console.log("Status  == 200");
+				$('.summary').html(xhr.responseText);
+				updatePushZone();
+			}
+			else {
+				console.log("Status == " + xhr.status);  
+			}
+			 
+		}
+		
+		 //xhr.open('GET','http://localhost:3000/data/education_mihika.html', true);
+		xhr.open('GET','/data/education_mihika.html', true);
+		 xhr.send(null);
+		 loadPushZone();
+	}
+	
+	function showExperience(event){
+		console.log("Experience");
+		var xhr = new XMLHttpRequest();
+		
+		xhr.onload = function(){
+			if(xhr.status === 200){
+				console.log("Status  == 200");
+				$('.summary').html(xhr.responseText);
+				updatePushZone();
+			}
+			else {
+				console.log("Stauts == " + xhr.status);
+			}
+		}
+		
+		 xhr.open('GET','/data/experience_mihika.html', true);  
+		 xhr.send(null);
+		 loadPushZone();
+		 
+		// $('.modal-dialog').css('display','none');
+	}
+	
+	function showRecommendations(event) {   
+		console.log("Experience");
+		var xhr = new XMLHttpRequest();
+		
+		xhr.onload = function(){
+			if(xhr.status === 200){
+				console.log("Status  == 200");
+				//$('.summary').html(xhr.responseText);
+				
+				updatePushZone();
+			}
+			else {
+				console.log("Status == " + xhr.status);  
+			}
+		}
+		
+		 xhr.open('GET','/data/skills_mihika.html', true);       
+		 xhr.send(null);
+		 // loads the content of the push zone
+		 loadPushZone();
+		
+	}	
+	
+
+	/*updates push zone*/
+	
+	function loadPushZone(){
+		
+		var content = '<img id="offersIcon" height="17" width="17" class="pull-left" style="margin-right: 10px; margin-top: -2px" src="/media/images/icons/loading.gif" />' +
+				'<div style="display:inline-block; color: #77933C;"> Working on your action.. </div>';
+		
+		// $('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/loading.gif');  
+		 //$('.top-push-zone .pushContainer #leftBlock').append("Working on your action..");
+			//
+		   $('.top-push-zone .pushContainer').addClass("pushZoneActionMessage");
+		   $('.top-push-zone .pushContainer #leftBlock').html(content);
+		
+	}
+	
+	function updatePushZone(){    
+		/*delay inserted for test purpose only */  
+		setTimeout(function(){
+			var pushContent = '<img id="offersIcon" height="17" width="17" class="pull-left" style="margin-right: 10px; margin-top:-2px" src="/media/images/icons/offers.png" />' + 
+				'<div style="display:inline-block;"> 3578/- of referrals, 29317/- of discounts.. <span class="blue-on-top-of-earth-color arrow-link">&gt;&gt;</span></div>';
+			
+				//$('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/offers.png');
+				//$('.top-push-zone .pushContainer #leftBlock').append($pushContent);
+			$('.top-push-zone .pushContainer #leftBlock').html(pushContent);
+			 $('.top-push-zone .pushContainer').removeClass("pushZoneActionMessage");
+				
+			},1000);
+		 
+	}
 	
 });

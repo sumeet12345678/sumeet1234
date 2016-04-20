@@ -28,10 +28,11 @@ var popUpMenuJson = [
  
  
 
-		
+		var iconClicked;
 		
 		
 		function displayPopUpMenu(event){
+			iconClicked = event.target;
 			 
 			//var dAtX = event.source.x;
 			//var dAtY = event.source.x;
@@ -73,19 +74,21 @@ var popUpMenuJson = [
 			 else{
 				 $('.popUpMenu').css('bottom', yPosition);
 			 }
-			
-			 
-			 // alert("Viewport height== " +  $(window).height() + " dAtY== " + dAtY + "  yCoordinatePosition== " + yCoordinatePosition);
+	
 			 
 		}
 		
-		
-		function hidePopUpMenu(event){
-			//alert('hiding');
-			$('.popUpMenu').css('display', 'none'); 
-		}
 	
 
-
+		var modal12335 = document.getElementById('POPUP_MENU_WRAPPER_ID');
+		 window.onclick = function(event) {  
+	
+			 console.log("TARGET === " + $.contains(modal12335, event.target));
+			
+			    if (!((event.target == modal12335) || ( $.contains(modal12335, event.target)) || (event.target == iconClicked))) {      
+			    	modal12335.style.display = "none";
+			    }
+			    
+			}
 
 

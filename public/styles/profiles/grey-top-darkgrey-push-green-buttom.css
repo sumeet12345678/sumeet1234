@@ -11,9 +11,9 @@ a:hover{
  
 .menubar-footer span.glyphicon{ /* Not Used */
 	font-size:32px;
-	}
+	} 
 	
-.menubar-footer .col-xs-2 img{
+.menubar-footer .col-xs-2 img { 
 	margin: 4px 0px 4px 0px;
 	vertical-align: center;
 }
@@ -67,7 +67,7 @@ a:hover{
 }
 
 .profile { 
-	margin-top: 68px;
+	margin-top: 71px;
 }
 
 
@@ -133,8 +133,8 @@ div{
 
 
 .top-menu-container {
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	padding-left:14px;
 	padding-right: 14px; 
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
@@ -180,7 +180,7 @@ div{
 }
 
 .pushContainer{
-		line-height: 25px;
+		line-height: 28px;
 }
 
 .top-push-zone .pushContainer #leftBlock {	 
@@ -196,7 +196,7 @@ div{
 
 
 /* -------- MEDIA SCREEN -------- */
-@media screen and (min-width: 993px) { 
+@media screen and (min-width: 768px) { 
 	
 	.profile-header1{
 		width: 70%;
@@ -290,6 +290,9 @@ div{
   		margin-right: 7.5%;
   	}
   	.top-push-zone{
-		height: 27px;
+		height: 28px;
+	}
+	.profile { 
+	margin-top: 68px;
 }
   }

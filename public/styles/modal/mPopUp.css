@@ -1,51 +1,46 @@
-#myModal123 {
-	margin-top: 167px;
-	overflow: hidden;
-	
-}
 
-.modal-dialog{
+.modal-dialog {
 	margin-top: 0px;
-	margin-bottom: 0px;	
-	position: fixed;
+	margin-bottom: 0px;	 
+	position: fixed; 
 	width: 70%;
-	left:13%;
+	/* left:13%; */
+	left : 50%;   
+	margin-left: -35%;
 	
-	 
-	 
 }
 
 .modal-content {
-	background-color: #262626;
+	background-color: #F2F2F2;
 	text-align: center;
 	border-radius: 0px;
-	
 }
 
-.modal-body{
-	padding-top: 0px;
-	padding-bottom: 0px;
+.modal-body {
+	padding-top: 0px; 
+	padding-bottom: 0px; 
 } 
+
 .modal-body div {
-	background-color: #558ED5  ;
+	background-color: #404040  ;
 	margin-bottom: 3px;
 	text-align: center;
 	width: 100%;
-	color: #ffffff;
+	color: #95b3d7;
 	font-family: 'Arial Narrow';
-	
+	font-weight: 400;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	
+	cursor: pointer;	
+}
+
+#upArrow, #downArrow {
+	cursor: pointer;
 }
 
 .modal-backdrop {background: none;}
 
 @media screen and (max-width: 767px) { 
-  	#myModal123 {
-		margin-top: 216px;
-		overflow: hidden;
-	
-}
+   
   }
 
