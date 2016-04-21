@@ -9,7 +9,7 @@ a:hover{
 	background: linear-gradient(#344C15,#698A25 ); 
 }
  
-.menubar-footer span.glyphicon{ /* Not Used */
+.menubar-footer span.glyphicon { /* Not Used */
 	font-size:32px;
 	} 
 	
@@ -35,7 +35,7 @@ a:hover{
 .menubar-btn{color:#fff;}
 .profile-header{background:#215968;color:#fff;font-size:20px;} 
 /* .btn-profile-edit{position:absolute;bottom:-7px;right:0;margin-right:15px;cursor: pointer;} */
-.btn-profile-edit {position:absolute;bottom:-7px;right:0;margin-right:15px;cursor: pointer;}    
+.btn-profile-edit {position:absolute;bottom:-7px;right:-3px;margin-right:15px;cursor: pointer;}    
 
 .btn-profile-edit:hover .popUpMenu {
 		display:block;
@@ -194,6 +194,10 @@ div{
 	 
 }
 
+ #imgProfilePhoto {
+  	  	 	margin-right: -3px;
+  }
+
 
 /* -------- MEDIA SCREEN (Desktop style)  -------- */
 @media screen and (min-width: 1100px) {  
@@ -290,9 +294,20 @@ div{
   		margin-right: 7.5%;
   	}
   	.top-push-zone{
-		height: 28px;
+		height: 28px; 
 	}
 	.profile { 
 	margin-top: 68px;
-}
+	}
   }
+  
+  @media screen and (min-width: 1300px) {
+  	  	 #offersIcon { 
+  	  	 	margin-left: -15px;
+  	  	 }
+  	  	 
+  	  	 #notificationIcon {
+  	  	 	margin-right: -15px;
+  	  	 }
+  	  	 
+	}
