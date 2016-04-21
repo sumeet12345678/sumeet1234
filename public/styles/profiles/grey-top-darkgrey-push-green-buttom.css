@@ -195,8 +195,8 @@ div{
 }
 
 
-/* -------- MEDIA SCREEN -------- */
-@media screen and (min-width: 768px) { 
+/* -------- MEDIA SCREEN (Desktop style)  -------- */
+@media screen and (min-width: 992px) { 
 	
 	.profile-header1{
 		width: 70%;
@@ -221,8 +221,8 @@ div{
 	padding-right: 14px; 
 	background: linear-gradient(#696969,#3f3f3f);
 }
-  	
-  	.top-menu-content{
+  	 
+  	.top-menu-content { 
   		width: 70%;
   		margin-left:auto;
   		margin-right: auto;
@@ -284,7 +284,7 @@ div{
   }
   
   /* Mobile specific style   */  
-  @media screen and (max-width: 767px) { 
+  @media screen and (max-width: 991px) { 
   	.pushContainer{
   		margin-left: 7.5%;
   		margin-right: 7.5%;
