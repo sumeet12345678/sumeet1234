@@ -287,6 +287,10 @@ div{
   	}
   }
   
+  #no-of-notification {
+  	 right:15px;
+  }
+  
   /* Mobile specific style   */  
   @media screen and (max-width: 1100px) { 
   	.pushContainer{
