@@ -228,7 +228,7 @@ div {
   }
 
 /* -------- MEDIA SCREEN (Desktop style)  -------- */
-@media screen and (min-width: 1025px) and (max-width: 1299px) {  
+@media screen and (min-width: 1025px)  {  
 	 
 	.profile-header1{
 		width: 70%;
@@ -321,8 +321,17 @@ div {
   
 
  
- /* Large Desktops */   
+ /* Large Desktops   
   @media screen and (min-width: 1300px) { 
+  	#profileDescription {
+  		width: 70%;
+  		margin-left: auto;
+  		margin-right: auto;
+  		background-color: #fff;
+  		padding: 10px;
+  		margin-top: 0px;
+  		
+  	}
   	  	 #offersIcon { 
   	  	 	margin-left: -15px;
   	  	 }
@@ -334,4 +343,4 @@ div {
   	  	 #no-of-notification {
   	  	 	right: 0px;
   	  	 }
-	}
+	}*/ 

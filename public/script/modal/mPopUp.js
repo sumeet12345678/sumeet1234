@@ -34,18 +34,18 @@ $(function(){
 		var el = $('<div>'+ item.label + '<div>');
 		el.attr('data-dismiss','modal');  //Create seperate function later for closing modal box by passing modal id
 		el.on('click', eval(item.callback));  				
-		$('.modal-body').append(el);		 
+		$('.mPopUpBody').append(el);		 
 	}); //Main function ends
 	
 	  
-	$('.modal-dialog').css('bottom', $('#footerBarId').height());
+	$('.mPopUpWrapper').css('bottom', $('#footerBarId').height());
 	//$('.modal-dialog').css('max-width', $('#profileDescription').width());
 	
 	
 	/* callBack functions implemented */
 	
-	function showSkillProfile(event){
-		console.log("Experience");
+	function showSkillProfile(event) {
+		console.log("Experience"); 
 		var xhr = new XMLHttpRequest();
 		
 		xhr.onload = function(){
@@ -101,7 +101,7 @@ $(function(){
 				updatePushZone();
 			}
 			else {
-				console.log("Stauts == " + xhr.status);
+				console.log("Stauts == " + xhr.status);  
 			}
 		}
 		
@@ -164,6 +164,28 @@ $(function(){
 				
 			},1000);
 		 
-	}
+	}  
+	
+	
+	//	
+	$('#sunIcon').on('click', function(){
+			
+		
+			
+			var $mPopUpWrapper = $('.mPopUpWrapper');     
+			//var $topMenubarHeight = $('.top-menubar').height();  
+			var $footerBarHeight = $('#footerBarId').height();
+			//var $viewPortHeight = $(window).height(); // height of browser viewport 
+			//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
+			//alert("window height == " + $viewPortHeight);
+			 
+			$mPopUpWrapper.css('bottom', $footerBarHeight);
+			//$composerWrapper.css('top', $footerBarHeight); 
+			$mPopUpWrapper.toggleClass('visible');
+			 
+			//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
+			
+			//Get height for the viewport and substract header and footer height to get the required height for mobile devices
+		}); 
 	
 });
