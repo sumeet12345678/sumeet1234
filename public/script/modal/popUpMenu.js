@@ -1,12 +1,12 @@
 var popUpMenuJson = [
           {
-        	  "key":"key1", "icon":"iconLink", "label":"Skills","action":"someUrl", "callback":""
+        	  "key":"key1", "icon":"iconLink", "label":"Skills","action":"someUrl", "callback":"showSkillProfile"
           }, 
           {
-        	  "key":"key2", "icon":"iconLink", "label":"Education","action":"someUrl", "callback":""
+        	  "key":"key2", "icon":"iconLink", "label":"Education","action":"someUrl", "callback":"showEducationalProfile"
           },
           {
-        	  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":""
+        	  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":"showExperience"
           },
           {
         	  "key":"key4", "icon":"iconLink", "label":"Like", "action":"someUrl", "callback":""
@@ -32,7 +32,7 @@ var popUpMenuJson = [
 		
 		
 		function displayPopUpMenu(event){
-			iconClicked = event.target;
+			iconClicked = event.target;  
 			 
 			//var dAtX = event.source.x;
 			//var dAtY = event.source.x;
@@ -46,8 +46,9 @@ var popUpMenuJson = [
 			//$('.popUpMenu').css('display','none'); 
 			
 			popUpMenuJson.forEach(function(element){	 	 		
-				
-			$('.popUpMenu #POPUP_MENU_CONTAINER_ID').append('<div class="popUpMenuItems">'+element.label + '<div>');
+				var el = $('<div class="popUpMenuItems">'+element.label + '<div>');
+				el.on('click', eval(element.callback)); 
+				$('.popUpMenu #POPUP_MENU_CONTAINER_ID').append(el);
 						  
 			}); 
 			
