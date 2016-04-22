@@ -27,8 +27,8 @@ var popUpMenuJson = [
 ]; 
  
  
-
-		var iconClicked;
+  
+		var iconClicked;    
 		
 		
 		function displayPopUpMenu(event){
@@ -43,11 +43,11 @@ var popUpMenuJson = [
 						
 			//Clear and recreate the popup menu
 			$('.popUpMenu #POPUP_MENU_CONTAINER_ID').empty();
-			//$('.popUpMenu').css('display','none'); 
+			//$('.popUpMenu').css('display','none');  
 			
-			popUpMenuJson.forEach(function(element){	 	 		
+			popUpMenuJson.forEach(function(element) {	 	 		
 				var el = $('<div class="popUpMenuItems">'+element.label + '<div>');
-				el.on('click', eval(element.callback)); 
+				el.on('click', closeDialog); 
 				$('.popUpMenu #POPUP_MENU_CONTAINER_ID').append(el);
 						  
 			}); 
@@ -63,32 +63,49 @@ var popUpMenuJson = [
 				$('.popUpMenu').css('left', dAtX);
 			}
 			else{
-				$('.popUpMenu').css('right', rightSpaceWidth);
+				$('.popUpMenu').css('right', rightSpaceWidth); 
 			}
 			
 			//logic for y positioning
-			 var yPosition = $(window).height() - dAtY;  
+			 var yPosition = $(window).height() - dAtY;    
 			 
-			 if(yPosition >= $('.popUpMenu').height()){
+			 if(yPosition >= $('.popUpMenu').height()) {  
 					$('.popUpMenu').css('top', dAtY);
 			 }
-			 else{
-				 $('.popUpMenu').css('bottom', yPosition);
+			 else{  
+				 $('.popUpMenu').css('bottom', yPosition);      
 			 }
 	
 			 
 		}
-		
+  		
+		//close the Dialog box  
+		function closeDialog()  {
+			$('.popUpMenu').css('display','none');        
+		}
 	
 
-		var modal12335 = document.getElementById('POPUP_MENU_WRAPPER_ID');
-		 window.onclick = function(event) {  
-	
-			 console.log("TARGET === " + $.contains(modal12335, event.target));
+		var modal12335 = document.getElementById('POPUP_MENU_WRAPPER_ID');       
+		window.onclick = function(event) {  
+			 	
+			 
+			 console.log("Id === "  + event.target.id);
+			 var mPopUp = document.getElementById('M_POPUP_WRAPPER_ID'); 
+			 console.log("modal123 TARGET === " + $.contains(modal12335, event.target));   
+			 console.log("mPopUp TARGET === " +  $.contains(mPopUp, event.target)); 
+			// alert("Contains === " +  $.contains(mPopUp, event.target));
+			//alert("Event.target === " +  (event.target == mPopUp));
 			
-			    if (!((event.target == modal12335) || ( $.contains(modal12335, event.target)) || (event.target == iconClicked))) {      
+			    if (!((event.target == modal12335) || ( $.contains(modal12335, event.target)) || (event.target.id == 'imgProfileEdit'))) {          
 			    	modal12335.style.display = "none";
 			    }
+			    
+//			    if (!((event.target == mPopUp) || ( $.contains(mPopUp, event.target)) || (event.target.id == 'sunIcon'))) {  
+////			    	//alert("Inside...")  
+////			    	//closeMpopUp();      
+//			    	//mPopUp.style.display = "none";
+//			    	$('.mPopUpWrapper').removeClass('visible'); 
+// 			    }  
 			    
 			}
 
