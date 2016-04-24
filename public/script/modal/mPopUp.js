@@ -63,8 +63,7 @@ $(function(){
 		 xhr.open('GET','/data/skills_mihika.html', true);       
 		 xhr.send(null);
 		 // loads the content of the push zone
-		 loadPushZone();
-		
+		 loadPushZone();    
 	}
 	
 	
@@ -181,7 +180,7 @@ $(function(){
 			//alert("window height == " + $viewPortHeight);
 			 
 			$mPopUpWrapper.css('bottom', $footerBarHeight);   
-			//$composerWrapper.css('top', $footerBarHeight);   
+			//$composerWrapper.css('top', $footerBarHeight);     
 			$mPopUpWrapper.toggleClass('visible');  
 			 
 			//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
@@ -206,7 +205,7 @@ $(function(){
 //		    if (!((event.target == mPopUp) || ( $.contains(mPopUp, event.target)) || (event.target == iconClicked123))) {  
 //		    	//alert("Inside...")
 //		    	//closeMpopUp();
-//		    	$('.mPopUpWrapper').removeClass('visible');  
+//		    	$('.mPopUpWrapper').removeClass('visible');      
 //		    }  
 //		    
 //	}

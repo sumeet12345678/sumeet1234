@@ -1,5 +1,5 @@
  
-.popUpMenu {
+.inboxPopUp {
 	display:none;
 	position: fixed; /*absolute*/
     background-color: #F2F2F2;
@@ -8,14 +8,14 @@
     padding-top: 10px;
     padding-bottom: 7px; 
     z-index:9999;
-    right1:0; /* caller will set the left or right of popUpMenu */
+    right1:0; /* caller will set the left or right of inboxPopUp */
     width: 66%;
     padding-left: 1%;
     padding-right: 2px;
     
 }
 
-.popUpMenuItems{
+.inboxPopUpItems{
 	display: inline-block;  
 	background-color: #404040;
 	text-align: center;
