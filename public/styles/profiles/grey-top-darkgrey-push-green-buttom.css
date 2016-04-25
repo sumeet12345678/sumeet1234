@@ -1,8 +1,8 @@
-a:hover{
-	text-decoration: none;	
+a:hover {
+	text-decoration: none;	  
 }
 
-.menubar-footer{	  
+.menubar-footer{	   
 	background: -webkit-linear-gradient(#344C15,#698A25 ); 
 	background: -o-linear-gradient(#344C15,#698A25 ); 
 	background: -moz-linear-gradient(#344C15,#698A25 ); 
@@ -18,7 +18,7 @@ a:hover{
 	vertical-align: center;
 } 
 
-.menubar-footer .col-xs-5 img{ 
+.menubar-footer .col-xs-5 img { 
 	margin: 6px 8px 6px 5px; 
 	vertical-align: center;
 } 
@@ -28,7 +28,7 @@ a:hover{
      
    /* margin-bottom: 22px;*/  
 }
-.top-menubar .menubar-btn{ 
+.top-menubar .menubar-btn { 
 	
 }
 
@@ -37,7 +37,7 @@ a:hover{
 /* .btn-profile-edit{position:absolute;bottom:-7px;right:0;margin-right:15px;cursor: pointer;} */
 .btn-profile-edit {position:absolute;bottom:-7px;right:-3px;margin-right:15px;cursor: pointer;}    
 
-.btn-profile-edit:hover .popUpMenu {
+.btn-profile-edit:hover .popUpMenu {  
 		display:block;
 		 right:0;
 }
@@ -47,7 +47,7 @@ a:hover{
 	cursor:pointer;  
 }
 
-.profile-content {margin-bottom:50px}
+.profile-content { margin-bottom:50px}
 .text-white {color:#fff}
 .brand-earth {color:#595959}  
 .blue-on-top-of-earth-color {
