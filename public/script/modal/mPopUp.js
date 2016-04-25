@@ -1,29 +1,18 @@
 var mDialogJson = [
           
-          {
-               "title": "Deals, Promotions",
-        	   "subCategories":[{"title": "Grocery"},
-        		 			    {"title":"Electronics"},
-        		 			    {"title" : "Travel, Leisure"}
-        		 			   ]  
-          },
+			{
+				  "key":"key1", "icon":"iconLink", "label":"Skills","action":"someUrl", "callback":"showSkillProfile"
+			}, 
+			{
+				  "key":"key2", "icon":"iconLink", "label":"Education","action":"someUrl", "callback":"showEducationalProfile"
+			},
+			{
+				  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":"showExperience"
+			},
+			{
+				  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":"showRecommendations"
+			}
           
-          {
-           "title": "Deals, Promotions",
-       	   "subCategories":[{"title": "Grocery"},
-       		 			    {"title":"Electronics"},
-       		 			    {"title" : "Travel, Leisure"}
-       		 			   ]  
-         },
-         
-         {
-           "title": "Deals, Promotions",
-      	   "subCategories":[{"title": "Grocery"},
-      		 			    {"title":"Electronics"},
-      		 			    {"title" : "Travel, Leisure"}
-      		 			   ]  
-         } 
-        
          /* {
         	  "key":"key5", "icon":"iconLink", "label":"Certificates, Awards, Recognitions", "action": "someUrl", "callback":"showCertAwardRecog"
           }
