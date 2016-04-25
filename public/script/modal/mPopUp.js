@@ -1,16 +1,29 @@
 var mDialogJson = [
+          
           {
-        	  "key":"key1", "icon":"iconLink", "label":"Skills","action":"someUrl", "callback":"showSkillProfile"
-          }, 
-          {
-        	  "key":"key2", "icon":"iconLink", "label":"Education","action":"someUrl", "callback":"showEducationalProfile"
+               "title": "Deals, Promotions",
+        	   "subCategories":[{"title": "Grocery"},
+        		 			    {"title":"Electronics"},
+        		 			    {"title" : "Travel, Leisure"}
+        		 			   ]  
           },
+          
           {
-        	  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":"showExperience"
-          },
-          {
-        	  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":"showRecommendations"
-          }
+           "title": "Deals, Promotions",
+       	   "subCategories":[{"title": "Grocery"},
+       		 			    {"title":"Electronics"},
+       		 			    {"title" : "Travel, Leisure"}
+       		 			   ]  
+         },
+         
+         {
+           "title": "Deals, Promotions",
+      	   "subCategories":[{"title": "Grocery"},
+      		 			    {"title":"Electronics"},
+      		 			    {"title" : "Travel, Leisure"}
+      		 			   ]  
+         } 
+        
          /* {
         	  "key":"key5", "icon":"iconLink", "label":"Certificates, Awards, Recognitions", "action": "someUrl", "callback":"showCertAwardRecog"
           }
@@ -21,10 +34,10 @@ var mDialogJson = [
         	  "key":"key5", "icon":"iconLink", "label":"Projects", "action": "someUrl", "callback":""
           },
           {
-        	  "key":"key5", "icon":"iconLink", "label":"Interests", "action": "someUrl", "callback":""
+        	  "key":"key5", "icon":"iconLink", "label":"Interests", "action": "someUrl", "callback":"" 
           },
           {
-        	  "key":"key5", "icon":"iconLink", "label":"Causes, Voluntary Work", "action": "someUrl", "callback":""
+        	  "key":"key5", "icon":"iconLink", "label":"Causes, Voluntary Work", "action": "someUrl", "callback":""  
           } */
 ]; 
 
@@ -34,7 +47,7 @@ $(function(){
 		var el = $('<div>'+ item.label + '<div>');
 		//el.attr('data-dismiss','modal');  //Create seperate function later for closing modal box by passing modal id
 		el.on('click', eval(item.callback));  				
-		$('.mPopUpBody').append(el);		 
+		$('.mPopUpBody').append(el);	  	 
 	});   
 	
 	  
@@ -163,7 +176,7 @@ $(function(){
 				
 			},1000);
 		
-		closeMpopUp();  
+		closeMpopUp();    
 			
 	}
 	 
@@ -174,12 +187,12 @@ $(function(){
 		    iconClicked123 = event.target;  
 			var $mPopUpWrapper = $('.mPopUpWrapper');     
 			//var $topMenubarHeight = $('.top-menubar').height();  
-			var $footerBarHeight = $('#footerBarId').height();
+			var $footerBarHeight = $('#footerBarId').height();    
 			//var $viewPortHeight = $(window).height(); // height of browser viewport 
 			//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
 			//alert("window height == " + $viewPortHeight);
 			 
-			$mPopUpWrapper.css('bottom', $footerBarHeight);   
+			$mPopUpWrapper.css('bottom', $footerBarHeight);     
 			//$composerWrapper.css('top', $footerBarHeight);     
 			$mPopUpWrapper.toggleClass('visible');  
 			 
@@ -195,7 +208,7 @@ $(function(){
 	}  
 	
 //	 
-	
+	 
 	
 //	var mPopUp = document.getElementById('M_POPUP_WRAPPER_ID');        
 //	window.onclick = function(event) {  

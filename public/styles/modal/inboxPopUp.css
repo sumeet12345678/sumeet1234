@@ -2,20 +2,22 @@
 .inboxPopUp {
 	display:none;
 	position: fixed; /*absolute*/
-    background-color: #F2F2F2;
+    background-color: #F0EDED;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding-top: 10px;
     padding-bottom: 7px; 
     z-index:9999;
-    right1:0; /* caller will set the left or right of inboxPopUp */
-    width: 66%;
+    left: 16%;
+    width: 30%;
     padding-left: 1%;
-    padding-right: 2px;
+    padding-right: 2px;  
+    
+    height: 100%;
     
 }
 
-.inboxPopUpItems{
+.inboxPopUpItems {
 	display: inline-block;  
 	background-color: #404040;
 	text-align: center;
@@ -35,4 +37,20 @@
 
 .visible {
 	display: block;
+	
 }
+
+
+/* ------- Mobile Device Section*/
+@media screen and (max-width: 993px) {
+	 .inboxPopUp {
+	 	right
+	 	 
+	 	left: 0px;
+	 	right: 0px;
+	 	
+	 }	
+}  
+
+
+
