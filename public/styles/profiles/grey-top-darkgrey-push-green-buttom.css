@@ -13,12 +13,12 @@ a:hover {
 	font-size:32px;
 	} 
 	
-.menubar-footer .col-xs-2 img { 
+.menubar-footer .col-xs-2 img123 { 
 	margin: 4px 0px 4px 0px;
 	vertical-align: center;
 } 
 
-.menubar-footer .col-xs-5 img { 
+.menubar-footer .col-xs-7 img { 
 	margin: 6px 8px 6px 5px; 
 	vertical-align: center;
 } 
@@ -121,7 +121,7 @@ div {
 }
 
 
-.searchBox:focus {
+.searchBox:focus {  
 	border: 2px solid #77933C;
 	border-radius: 0px;
 }
