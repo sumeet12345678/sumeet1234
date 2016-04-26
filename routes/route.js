@@ -17,6 +17,10 @@ router.get('/people_with_pic', function(req, res, next) {
 router.get('/profile/view/mahika', function(req, res, next) {
 	  res.render('profiles/profile.ejs'); 
 	});
+
+router.get('/aakInbox', function(req, res, next) {
+	  res.render('aakInbox/aakInbox.ejs'); 
+	}); 
 /*
 router.get('/profile/view/mahika/experience', function(req, res, next) {
 	  res.render('profiles/summary/experience_mihika.ejs'); 
@@ -25,9 +29,9 @@ router.get('/profile/view/mahika/experience', function(req, res, next) {
 
 //Trial below
 router.get('/trial', function(req, res, next) {
-	  res.render('profiles/trial.ejs'); 
+	  res.render('profiles/trial.ejs');   
 	});
 
 
 
-module.exports = router
+module.exports = router   

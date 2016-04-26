@@ -2,14 +2,14 @@ a:hover{
 	text-decoration: none;	
 }
 
-.menubar-footer{	  
+.menubar-footer {	  
 	background: -webkit-linear-gradient(#344C15,#698A25 ); 
 	background: -o-linear-gradient(#344C15,#698A25 ); 
-	background: -moz-linear-gradient(#344C15,#698A25 ); 
+	background: -moz-linear-gradient(#344C15,#698A25 );   
 	background: linear-gradient(#344C15,#698A25 ); 
 }
  
-.menubar-footer span.glyphicon { /* Not Used */
+.menubar-footer span.glyphicon { /* Not Used */  
 	font-size:32px;
 	} 
 	
@@ -18,9 +18,9 @@ a:hover{
 	vertical-align: center;
 } 
 
-.menubar-footer .col-xs-5 img{ 
+.menubar-footer .col-xs-5 img { 
 	margin: 6px 8px 6px 5px; 
-	vertical-align: center;
+	vertical-align: center;    
 } 
 .top-menubar { 
 	 
@@ -28,7 +28,7 @@ a:hover{
      
    /* margin-bottom: 22px;*/  
 }
-.top-menubar .menubar-btn{ 
+.top-menubar .menubar-btn { 
 	
 }
 
