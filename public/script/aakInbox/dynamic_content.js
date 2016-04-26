@@ -23,10 +23,10 @@ var obj = JSON.parse(text);
 			horizontalLine = document.createElement('hr');
   
 		outerDiv.className = 'row';
-		innerDiv1.className = 'col-sm-2';
-		innerDiv2.className = 'col-sm-9';
-		innerDiv3.className = 'col-sm-1';
-		paragraph.className = 'message';
+		innerDiv1.className = 'col-xs-2';
+		innerDiv2.className = 'col-xs-7';
+		innerDiv3.className = 'col-xs-3';
+		paragraph.className = 'message';  
 		name.className = 'page-header';
 		date.className = 'label label-default';
 		image.className = 'images';
