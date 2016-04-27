@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+      
     <title>Aak-Box</title>
 
    
@@ -15,18 +15,11 @@
 
   </head>  
   <body>     
-    
-  	 <% include ../partials/top_menu_bar.ejs %>  
+    <div id="aakBoxCategory"><%= aakBoxCategory %></div>
+  	 <% include ../partials/top_menu_bar.ejs %>     
       
    	  <div id="aakBoxContainer" style="margin-top:100px; width:70%; margin-right:auto; margin-left:auto;">      
-				   					 
-				 	<select id="mySelect" onchange="myFunction()">    
-					  <option value="Category_1">Category 1
-					  <option value="Category_2">Category 2
-					  <option value="Category_3">Category 3  
-					  <option value="Category_4">Category 4        
-					</select>
-				  
+				   	 		 
 				  	<div class="navDisplay">  
 				      <div class="container">
 				        <p>Communiques<span id="categoryDisplay"></span></p>
@@ -35,7 +28,7 @@
 					     
 					<div id="page-content">  
 				      <div class="container" id="message-block">            
-				      </div>
+				      </div>  
 				    </div>
 		</div>
 	
@@ -51,11 +44,8 @@
      <script src="/script/aakBox/dynamic_content.js"></script>       
       
     <script>  
-	    function myFunction() {
-	        var selectedCategory = document.getElementById("mySelect").value;
-	         
-	        viewUpdateList(selectedCategory);  
-	    }
+	      // alert("pppppppppppp=====  " + $('#aakBoxCategory').text());
+	        viewUpdateList($('#aakBoxCategory').text()); 
     </script>
   </body>
 </html>

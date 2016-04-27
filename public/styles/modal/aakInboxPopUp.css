@@ -1,5 +1,5 @@
  
-.inboxPopUp {
+.aakInboxPopUp {
 	display:none;
 	position: fixed; /*absolute*/
     background-color: #F0EDED;
@@ -17,7 +17,7 @@
     
 }
 
-.inboxPopUpItems {
+.aakInboxPopUpItems {
 	display: inline-block;  
 	background-color: #404040;
 	text-align: center;
@@ -35,6 +35,19 @@
 	
 }
 
+.categoryTitle {
+ 	font-weight: 800;
+	
+}
+.categoryTitle .subCategoryTitle {
+	 border-bottom: 1px solid #E2E2E2;
+}
+
+.subCategoryTitle {
+	font-weight: 400;	
+	margin-left: 30px;
+}
+
 .visible {
 	display: block;
 	
@@ -43,11 +56,9 @@
 
 /* ------- Mobile Device Section*/
 @media screen and (max-width: 993px) {
-	 .inboxPopUp {
-	 	right
-	 	 
+	 .aakInboxPopUp {
 	 	left: 0px;
-	 	right: 0px;
+	 	width: 50%;
 	 	
 	 }	
 }  

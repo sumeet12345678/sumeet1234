@@ -19,8 +19,8 @@ function viewUpdateList(string) {
 	ul.innerHTML = '';
 	ul1.innerHTML = " > " + str;
 	for(var i=0; i<length; i++) {
-		var outerDiv = doc.createElement('div'),
-			innerDiv1 = doc.createElement('div'),
+		var outerDiv = doc.createElement('div'), 
+			innerDiv1 = doc.createElement('div'), 
 			innerDiv2 = doc.createElement('div'),
 			innerDiv3 = doc.createElement('div'),
 			image= doc.createElement('img'),

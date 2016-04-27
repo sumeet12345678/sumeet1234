@@ -10,7 +10,7 @@ var mDialogJson = [
 				  "key":"key3", "icon":"iconLink", "label":"Experience", "action":"someUrl", "callback":"showExperience"
 			},
 			{
-				  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":"showRecommendations"
+				  "key":"key4", "icon":"iconLink", "label":"Recommendations", "action":"someUrl", "callback":"showRecommendations"  
 			}
           
          /* {
@@ -36,7 +36,7 @@ $(function(){
 		var el = $('<div>'+ item.label + '<div>');
 		//el.attr('data-dismiss','modal');  //Create seperate function later for closing modal box by passing modal id
 		el.on('click', eval(item.callback));  				
-		$('.mPopUpBody').append(el);	  	 
+		$('.mPopUpBody').append(el);	    	 
 	});   
 	
 	  
