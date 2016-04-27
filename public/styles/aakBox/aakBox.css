@@ -1,4 +1,8 @@
 /* adjust body when menu is open */
+body {
+	font-family: Arial, sans-serif;
+}
+
 body.slide-active {
     overflow-x: hidden
 }
@@ -58,9 +62,9 @@ body.slide-active {
 	    margin: 0;
 	    padding: 0!important;
 	}
-	#slide-nav .navbar-header {  
-	    margin: 0 auto; 
-	    padding: 0 15px; 
+	#slide-nav .navbar-header {
+	    margin: 0 auto;
+	    padding: 0 15px;
 	}
 	#slide-nav .navbar.slide-active {
 	    position: absolute;
@@ -79,7 +83,7 @@ body.slide-active {
 	    top: -8px;
 	    margin: 0;
 	}
-	#slide-nav #slidemenu .navbar-nav {     
+	#slide-nav #slidemenu .navbar-nav {
 	    min-width: 0;
 	    width: 100%;
 	    margin: 0;
@@ -95,7 +99,7 @@ body.slide-active {
 		color: #FFFFFF;
 	}
 
-	#slide-nav #slidemenu .navbar-nav li a:hover {  
+	#slide-nav #slidemenu .navbar-nav li a:hover {
 		color:#18BC9C;
 	}
 
@@ -135,26 +139,54 @@ body.slide-active {
 		color: #FFFFFF;
 	}
 
-	.page-header {   
+	.page-header { 
 		border-bottom:none;
-		padding: 5px 0 0 0;
+		padding: 0;
 		margin: 0 auto; 
-	}
-
-	.images {
-		width: 20%;
-		height: 30%;
 	}
 
 	.message {
 		margin: 0 auto;
-		margin-top: 5px;  
+		margin-top: 5px;
 		padding: 0;
 	}
-	
-	#aakBoxContainer {
-		max-width: 100%;
+
+	.img-responsive {
+		min-width: 60%;
 	}
+
+	.col-xs-2 {
+		/*margin-right: 5px;*/
+		padding: 0;
+		margin: 0 auto;
+	}
+
+	.label {
+		float: right;
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	.navDisplay {
+		margin: 0 auto;
+		padding: 0;
+		background-color: #EEEEEE; 
+		color: #000000;
+		margin-bottom: 20px;
+	}
+
+	.navDisplay p {
+		margin: 0;
+		padding: 5px 0;
+		font-size: 14px;
+	}
+
+	.page-content {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
 }
 @media (min-width:768px) { 
 	#page-content {
@@ -167,7 +199,7 @@ body.slide-active {
 	    left: 0!important
 	}
 
-	.navbar-default {  
+	.navbar-default {
 	 	background-color: #2C3E50;
 		border-color: #FFFFFF;
 		color: #FFFFFF;
@@ -198,14 +230,9 @@ body.slide-active {
 	}
 
 	.page-header { 
-		border-bottom:none;   
+		border-bottom:none;
 		padding: 5px 0 0 0;
 		margin: 0 auto; 
-	}
-
-	.images {
-		width: 60%;
-		height: 70%;
 	}
 
 	.message {
@@ -216,6 +243,35 @@ body.slide-active {
 
 	.col-sm-9 {
 		padding-left: 0;
+	}
+	.img-responsive {
+		max-width: 60%;
+	}
+
+	.navDisplay {
+		margin: 0 auto;
+		padding: 0;
+		background-color: #EEEEEE; 
+		color: #000000;
+		margin-bottom: 20px;
+	}
+
+	.navDisplay p {
+		margin: 0;
+		padding: 5px 0;
+		font-size: 14px;
+	}
+
+	.label {
+		float: right;
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	.page-content {
+		width: 100%;
+		padding: 0;
+		margin: 0;
 	}
 
 }

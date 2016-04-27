@@ -18,8 +18,8 @@ router.get('/profile/view/mahika', function(req, res, next) {
 	  res.render('profiles/profile.ejs'); 
 	});
 
-router.get('/aakInbox', function(req, res, next) {
-	  res.render('aakInbox/aakInbox.ejs'); 
+router.get('/aakBox', function(req, res, next) {
+	  res.render('aakBox/aakBox.ejs'); 
 	}); 
 /*
 router.get('/profile/view/mahika/experience', function(req, res, next) {

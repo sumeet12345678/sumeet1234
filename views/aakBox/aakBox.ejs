@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Aak-Box</title>
+
+   
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />  
+    <link href="/styles/aakBox/aakBox.css" rel="stylesheet"/>        
+    
+
+  </head>  
+  <body>     
+    
+  	 <% include ../partials/top_menu_bar.ejs %>  
+      
+   	  <div id="aakBoxContainer" style="margin-top:100px; width:70%; margin-right:auto; margin-left:auto;">      
+				   					 
+				 	<select id="mySelect" onchange="myFunction()">    
+					  <option value="Category_1">Category 1
+					  <option value="Category_2">Category 2
+					  <option value="Category_3">Category 3  
+					  <option value="Category_4">Category 4        
+					</select>
+				  
+				  	<div class="navDisplay">  
+				      <div class="container">
+				        <p>Communiques<span id="categoryDisplay"></span></p>
+				      </div>
+				    </div>
+					     
+					<div id="page-content">  
+				      <div class="container" id="message-block">            
+				      </div>
+				    </div>
+		</div>
+	
+<% include ../partials/footer_bar.ejs %>       
+
+     
+     
+    <!--  <script src="/lib/JQuery/jquery.1.9.1-min.js"></script> -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>    
+      
+     <script src="/script/aakBox/menu.js"></script>
+     <script src="/script/aakBox/dynamic_content.js"></script>       
+      
+    <script>  
+	    function myFunction() {
+	        var selectedCategory = document.getElementById("mySelect").value;
+	         
+	        viewUpdateList(selectedCategory);  
+	    }
+    </script>
+  </body>
+</html>

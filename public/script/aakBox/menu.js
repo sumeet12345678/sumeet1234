@@ -22,11 +22,11 @@ $(document).ready(function () {
             left: selected ? menuneg : '0px'
         });
 
-        $('#navbar-height-col').stop().animate({
+        $('#navbar-height-col').stop().animate({ 
             left: selected ? slideneg : '0px'
         });
 
-        $(pagewrapper).stop().animate({
+        $(pagewrapper).stop().animate({ 
             left: selected ? '0px' : slidewidth
         });
 
@@ -39,7 +39,7 @@ $(document).ready(function () {
         $('#slidemenu').toggleClass('slide-active');
 
 
-        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');  
 
 
     });
