@@ -10,7 +10,7 @@ var router = express.Router()
 
 /* GET people_with_pic.ejs file. */
 router.get('/people_with_pic', function(req, res, next) {
-  res.render('profiles/people_with_pic'); 
+  res.render('profiles/people_with_pic');   
 });
 
 

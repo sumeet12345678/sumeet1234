@@ -57,6 +57,11 @@ body.slide-active {
     position: relative;
 }
 
+#message-block img {
+	width: 60px;
+	height: 60px;
+}
+
 @media (max-width:767px) { 
 	#slide-nav .container {
 	    margin: 0;
@@ -173,6 +178,8 @@ body.slide-active {
 		background-color: #EEEEEE; 
 		color: #000000;
 		margin-bottom: 20px;
+		font-family: Arial, sans-serif;
+		 
 	}
 
 	.navDisplay p {
@@ -259,6 +266,7 @@ body.slide-active {
 		background-color: #EEEEEE; 
 		color: #000000;
 		margin-bottom: 20px;
+		 
 	}
 
 	.navDisplay p {
@@ -288,7 +296,7 @@ body.slide-active {
 	}
 }
 
-.navDisplay {
+.navDisplay {  
 	margin-bottom: 0px;
 }
 

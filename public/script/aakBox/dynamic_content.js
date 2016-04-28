@@ -58,15 +58,15 @@ function viewUpdateList(string) {
 		
 		innerDiv2.appendChild( name );
 		innerDiv2.appendChild( paragraph );
-		innerDiv3.appendChild( date );  
+		innerDiv3.appendChild( date );    
 	}
 }
   
 $('#footerBarId').height()
   
 $(function() {
-	var topMenuBarHeight = 	$('.top-menubar').height();
-	$('#aakBoxContainer').css('margin-top', topMenuBarHeight);
+	var topMenuBarHeight = 	$('.top-menubar').height(); 
+	$('#aakBoxContainer').css('margin-top', topMenuBarHeight); 
 	
 });
 
