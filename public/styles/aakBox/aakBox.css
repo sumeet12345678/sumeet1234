@@ -186,8 +186,12 @@ body.slide-active {
 		padding: 0;
 		margin: 0;
 	}
-
-}
+	
+	#aakBoxContainer{
+	 	width:100%;
+	 	 
+	}
+} /* @media (max-width:767px)  ends */
 @media (min-width:768px) { 
 	#page-content {
 	    left: 0!important
@@ -274,5 +278,9 @@ body.slide-active {
 		margin: 0;
 	}
 
+	#aakBoxContainer{
+	 	width:70%;
+	 
+	}
 }
 
