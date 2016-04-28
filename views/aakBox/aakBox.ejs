@@ -17,19 +17,19 @@
   <body>     
     <div id="aakBoxCategory" style="display:none;"><%= aakBoxCategory %></div>
     
-  	 <% include ../partials/top_menu_bar.ejs %>     
+  	 <% include ../partials/top_menu_bar.ejs %>       
       
    	  <div id="aakBoxContainer" class="" style=" bakground-color: green;">        
-				   	 		  
-				  	<div class="navDisplay" style="width: 100%;">    
+				   	 	 <img style="float:right; margin-right: 3px;" width="32" height="30" src="/media/images/icons/Search-icon.png"/>	  
+				  	<div class="navDisplay">    
 				      <div class="container" style=" padding-right:3px; padding-left:3px;">   
-				       <img style="float:right" width="28" height="28" src="/media/images/icons/Search-icon.png"/>
+				        
 				        <p><b>Communiques<span id="categoryDisplay"></span></b></p>
 				      </div>
 				    </div>
 					       
 					<div id="page-content">  
-				      <div class="container-fluid" id="message-block">                  
+				      <div class="container-fluid" id="message-block">                      
 				      </div>  
 				    </div>
 		</div>
@@ -43,11 +43,13 @@
      <script src="/lib/bootstrap/js/bootstrap.min.js"></script>    
       
      <script src="/script/aakBox/menu.js"></script>
-     <script src="/script/aakBox/dynamic_content.js"></script>       
+     <script src="/script/aakBox/dynamic_content.js"></script>    
+     <script src="/script/common.js"></script>  
       
     <script>  
 	      // alert("pppppppppppp=====  " + $('#aakBoxCategory').text());
 	        viewUpdateList($('#aakBoxCategory').text());   
+	        
     </script>
   </body>
 </html>
