@@ -15,7 +15,7 @@ body.slide-active {
 /*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
 #page-content {
     position: relative;
-    padding-top: 70px;
+    padding-top: 0px;
     left: 0;
 }
 
@@ -192,6 +192,7 @@ body.slide-active {
 	 	 
 	}
 } /* @media (max-width:767px)  ends */
+
 @media (min-width:768px) { 
 	#page-content {
 	    left: 0!important

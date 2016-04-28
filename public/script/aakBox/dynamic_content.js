@@ -27,12 +27,15 @@ function viewUpdateList(string) {
 			name = doc.createElement('h4'),
 			paragraph = doc.createElement('p'),
 			date = doc.createElement('span'),
-			horizontalLine = doc.createElement('hr');
-
+			horizontalLine = doc.createElement('hr'),        
+			hyperLink = doc.createElement('a');        //Amar  
+		
+		hyperLink.setAttribute("href", "/profile/view/mahika");   //Amar
+		
 		outerDiv.className = 'row';
-		innerDiv1.className = 'col-xs-3';
-		innerDiv2.className = 'col-xs-6';
-		innerDiv3.className = 'col-xs-3';
+		innerDiv1.className = 'col-xs-3'; 
+		innerDiv2.className = 'col-xs-6'; innerDiv2.style.padding="0px 15px 0px 0px";
+		innerDiv3.className = 'col-xs-3'; innerDiv3.style.padding="0px 15px 0px 0px";
 		paragraph.className = 'message';
 		name.className = 'page-header';
 		date.className = 'label label-default';
@@ -40,14 +43,19 @@ function viewUpdateList(string) {
 		image.src = data.messages[i].url;
 		name.textContent = data.messages[i].name;
 		paragraph.textContent = data.messages[i].message;
-		date.textContent = data.messages[i].date;
+		date.textContent = data.messages[i].date;  
 
 		ul.appendChild(outerDiv);
 		ul.appendChild(horizontalLine);
 		outerDiv.appendChild( innerDiv1);
 		outerDiv.appendChild( innerDiv2);
 		outerDiv.appendChild( innerDiv3);
-		innerDiv1.appendChild(image);
+		
+		//innerDiv1.appendChild(image); 
+		
+		hyperLink.appendChild(image);//Amar  
+		innerDiv1.appendChild(hyperLink); //Amar
+		
 		innerDiv2.appendChild( name );
 		innerDiv2.appendChild( paragraph );
 		innerDiv3.appendChild( date );
