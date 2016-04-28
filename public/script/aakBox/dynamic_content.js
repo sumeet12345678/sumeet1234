@@ -34,7 +34,7 @@ function viewUpdateList(string) {
 		
 		outerDiv.className = 'row';
 		
-		outerDiv.style.margin = "10px 0px 10px 0px";
+		outerDiv.style.margin = "7px 0px 7px 0px";
 		//outerDiv.style.bottom = "5px;";
 		
 		innerDiv1.className = 'col-xs-2';  innerDiv1.style.padding="0px 3px 0px 3px";  
