@@ -1,3 +1,6 @@
+
+
+
 var mDialogJson = [
           
 			{
@@ -40,7 +43,7 @@ $(function(){
 	});   
 	
 	  
-	$('.mPopUpWrapper').css('bottom', $('#footerBarId').height());
+	$('.mPopUpWrapper').css('bottom', $('#footerBarId').height());  
 	//$('.modal-dialog').css('max-width', $('#profileDescription').width());
 	
 	
@@ -173,17 +176,25 @@ $(function(){
 	var iconClicked123;
 	
 	$('#sunIcon').on('click', function(event){
+		
+		if($("#sunIcon").attr("class") == "profileContext") {
+			alert("yoooo");
 		    iconClicked123 = event.target;  
-			var $mPopUpWrapper = $('.mPopUpWrapper');     
+			//var $mPopUpWrapper = $('.mPopUpWrapper');   
+		    var $popUpWrapper = $('.mPopUpWrapper');  
+		}
+	else{ alert("nooo");
+		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');           
+		}
 			//var $topMenubarHeight = $('.top-menubar').height();  
 			var $footerBarHeight = $('#footerBarId').height();    
 			//var $viewPortHeight = $(window).height(); // height of browser viewport 
 			//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
 			//alert("window height == " + $viewPortHeight);
 			 
-			$mPopUpWrapper.css('bottom', $footerBarHeight);     
+			$popUpWrapper.css('bottom', $footerBarHeight);     
 			//$composerWrapper.css('top', $footerBarHeight);     
-			$mPopUpWrapper.toggleClass('visible');  
+			$popUpWrapper.toggleClass('visible');    
 			 
 			//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
 			
@@ -191,7 +202,7 @@ $(function(){
 		}); 
 	  
 	
-	//Closes the dialog box after upadation of push zone
+	//Closes the dialog box after upadation of push zone  
 	function closeMpopUp(){
 		$('.mPopUpWrapper').removeClass('visible');      
 	}  

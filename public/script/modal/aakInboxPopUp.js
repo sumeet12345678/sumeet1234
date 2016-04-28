@@ -94,7 +94,7 @@ var aakInboxPopUpJson = [
 				   console.log("Sub category title == " + subElement.title);      
 				});
 			
-				aakPopUpMenuContainer.append(categoryDiv);
+				aakPopUpMenuContainer.append(categoryDiv);  
 			  
  					  
 			});   
@@ -108,14 +108,15 @@ var aakInboxPopUpJson = [
 			//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
 			//alert("window height == " + $viewPortHeight);
 			 
-			$aakInboxPopUp.css('bottom', $footerBarHeight);
+			$aakInboxPopUp.css('bottom', $footerBarHeight);  
 			//$composerWrapper.css('top', $footerBarHeight);   
 			 $aakInboxPopUp.toggleClass('visible');
 			 
 			//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
 			
 			//Get height for the viewport and substract header and footer height to get the required height for mobile devices
-			 
+			 globalSunModalContext = "aakBox";
+			 alert(globalSunModalContext);
 		}); 
 	});
 

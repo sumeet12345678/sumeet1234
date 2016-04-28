@@ -46,7 +46,7 @@ function viewUpdateList(string) {
 		image.className = 'img-responsive';
 		image.src = data.messages[i].url;
 		name.textContent = data.messages[i].name;
-		paragraph.textContent = data.messages[i].message;
+		paragraph.textContent = data.messages[i].message;  
 		date.textContent = data.messages[i].date;  
 
 		ul.appendChild(outerDiv);
