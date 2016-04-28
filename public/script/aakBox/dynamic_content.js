@@ -33,9 +33,9 @@ function viewUpdateList(string) {
 		hyperLink.setAttribute("href", "/profile/view/mahika");   //Amar
 		
 		outerDiv.className = 'row';
-		innerDiv1.className = 'col-xs-3'; 
-		innerDiv2.className = 'col-xs-6'; innerDiv2.style.padding="0px 15px 0px 0px";
-		innerDiv3.className = 'col-xs-3'; innerDiv3.style.padding="0px 15px 0px 0px";
+		innerDiv1.className = 'col-xs-3';  innerDiv1.style.padding="3px";
+		innerDiv2.className = 'col-xs-6'; innerDiv2.style.padding="0px 3px 0px 0px";
+		innerDiv3.className = 'col-xs-3'; innerDiv3.style.padding="3px 3px 0px 0px";
 		paragraph.className = 'message';
 		name.className = 'page-header';
 		date.className = 'label label-default';
@@ -58,6 +58,17 @@ function viewUpdateList(string) {
 		
 		innerDiv2.appendChild( name );
 		innerDiv2.appendChild( paragraph );
-		innerDiv3.appendChild( date );
+		innerDiv3.appendChild( date );  
 	}
 }
+  
+$('#footerBarId').height()
+  
+$(function() {
+	var topMenuBarHeight = 	$('.top-menubar').height();
+	$('#aakBoxContainer').css('margin-top', topMenuBarHeight);
+	
+});
+
+
+

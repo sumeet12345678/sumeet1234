@@ -66,7 +66,7 @@ var aakInboxPopUpJson = [
 		$('#AAK_INBOX_POPUP_ID').on('click', function() {
 			//Clear and recreate the popup menu
 			var aakPopUpMenuContainer = $('.aakInboxPopUp #AAK_POPUP_MENU_CONTAINER_ID');
-			aakPopUpMenuContainer.empty();      
+			aakPopUpMenuContainer.empty();        
 			//$('.aakInboxPopUp').css('display','none');  
 			
  	

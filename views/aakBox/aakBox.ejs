@@ -19,16 +19,17 @@
     
   	 <% include ../partials/top_menu_bar.ejs %>     
       
-   	  <div id="aakBoxContainer" style="margin-top:78px; margin-right:auto; margin-left:auto;">      
+   	  <div id="aakBoxContainer" class="container">        
 				   	 		  
 				  	<div class="navDisplay">    
-				      <div class="container"> 
+				      <div class="container-fluid" style=" padding-right:3px; padding-left:3px;">   
+				       <img style="float:right" width="28" height="28" src="/media/images/icons/Search-icon.png"/>
 				        <p>Communiques<span id="categoryDisplay"></span></p>
 				      </div>
 				    </div>
 					       
 					<div id="page-content">  
-				      <div class="container" id="message-block">            
+				      <div class="" id="message-block">                
 				      </div>  
 				    </div>
 		</div>
@@ -46,7 +47,7 @@
       
     <script>  
 	      // alert("pppppppppppp=====  " + $('#aakBoxCategory').text());
-	        viewUpdateList($('#aakBoxCategory').text()); 
+	        viewUpdateList($('#aakBoxCategory').text());   
     </script>
   </body>
 </html>

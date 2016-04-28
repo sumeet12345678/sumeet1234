@@ -135,7 +135,7 @@ body.slide-active {
 
 	.navbar-default {
 	 	background-color: #2C3E50;
-		border-color: #FFFFFF;
+		border-color: #FFFFFF;  
 		color: #FFFFFF;
 	}
 
@@ -279,9 +279,24 @@ body.slide-active {
 		margin: 0;
 	}
 
-	#aakBoxContainer{
+	#aakBoxContainer {
 	 	width:70%;
-	 
+	 	margin-right:auto; 
+	 	margin-left:auto;
+	 	background-color111: red;
+	 	
 	}
 }
 
+.navDisplay {
+	margin-bottom: 0px;
+}
+
+#aakBoxContainer111{
+	padding-left: 0px;
+}
+
+#aakBoxContainer hr {
+	margin: 0px;
+	
+}
