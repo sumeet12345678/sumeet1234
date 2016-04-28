@@ -95,7 +95,7 @@ var aakInboxPopUpJson = [
 				});
 			
 				aakPopUpMenuContainer.append(categoryDiv);  
-			  
+			    
  					  
 			});   
 		
@@ -110,7 +110,7 @@ var aakInboxPopUpJson = [
 			 
 			$aakInboxPopUp.css('bottom', $footerBarHeight);  
 			//$composerWrapper.css('top', $footerBarHeight);   
-			 $aakInboxPopUp.toggleClass('visible');
+			 $aakInboxPopUp.toggleClass('visible');  
 			 
 			//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
 			

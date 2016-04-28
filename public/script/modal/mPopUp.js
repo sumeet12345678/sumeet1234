@@ -125,7 +125,7 @@ $(function(){
 				console.log("Status  == 200");
 				//$('.summary').html(xhr.responseText);
 				
-				updatePushZone();
+				updatePushZone();  
 			}
 			else {
 				console.log("Status == " + xhr.status);  
@@ -184,7 +184,7 @@ $(function(){
 		    var $popUpWrapper = $('.mPopUpWrapper');  
 		}
 	else{ alert("nooo");
-		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');           
+		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');               
 		}
 			//var $topMenubarHeight = $('.top-menubar').height();  
 			var $footerBarHeight = $('#footerBarId').height();    
