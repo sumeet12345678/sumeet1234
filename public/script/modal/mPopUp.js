@@ -183,14 +183,14 @@ $(function(){
 			//$("#sunIcon").attr("class", "aakBoxContext");
 			
 			
-		    iconClicked123 = event.target;  
+		    iconClicked123 = event.target;    
 			//var $mPopUpWrapper = $('.mPopUpWrapper');   
 		    var $popUpWrapper = $('.mPopUpWrapper');  
 		}
-	else if(globalSunModalContext == "aakBox"){
-			//alert("in mpopUp.js == " +  globalSunModalContext);  
-		    var $popUpWrapper = $('.aakBoxContainer');                
-		}
+		else if(globalSunModalContext == "aakBox"){
+			generateAakInboxPop();
+			    
+			}
 			//var $topMenubarHeight = $('.top-menubar').height();    
 			var $footerBarHeight = $('#footerBarId').height();      
 			//var $viewPortHeight = $(window).height(); // height of browser viewport 

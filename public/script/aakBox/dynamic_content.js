@@ -52,7 +52,7 @@ function viewUpdateList(string) {
 		ul.appendChild(outerDiv);
 		ul.appendChild(horizontalLine);
 		outerDiv.appendChild( innerDiv1);
-		outerDiv.appendChild( innerDiv2);
+		outerDiv.appendChild( innerDiv2);  
 		outerDiv.appendChild( innerDiv3);
 		
 		//innerDiv1.appendChild(image); 
