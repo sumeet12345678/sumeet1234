@@ -116,7 +116,7 @@ var aakInboxPopUpJson = [
 			
 			//Get height for the viewport and substract header and footer height to get the required height for mobile devices
 			 globalSunModalContext = "aakBox";
-			 alert(globalSunModalContext);
+			// alert(globalSunModalContext);
 		}); 
 	});
 

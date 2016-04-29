@@ -188,7 +188,7 @@ $(function(){
 		    var $popUpWrapper = $('.mPopUpWrapper');  
 		}
 	else if(globalSunModalContext == "aakBox"){
-			alert("in mpopUp.js == " +  globalSunModalContext);  
+			//alert("in mpopUp.js == " +  globalSunModalContext);  
 		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');               
 		}
 			//var $topMenubarHeight = $('.top-menubar').height();  
