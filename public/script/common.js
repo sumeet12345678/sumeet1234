@@ -6,3 +6,4 @@ function showHideD360Icon(d360) {
     	   $('#d360').css({'visibility':'visible'});  
        }
 }
+

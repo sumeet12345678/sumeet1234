@@ -177,13 +177,18 @@ $(function(){
 	
 	$('#sunIcon').on('click', function(event){
 		
-		if($("#sunIcon").attr("class") == "profileContext") {
-			alert("yoooo");
+		if(globalSunModalContext == "profile") {
+			alert("in mpopUp.js == " +  globalSunModalContext);  
+			   
+			//$("#sunIcon").attr("class", "aakBoxContext");
+			
+			
 		    iconClicked123 = event.target;  
 			//var $mPopUpWrapper = $('.mPopUpWrapper');   
 		    var $popUpWrapper = $('.mPopUpWrapper');  
 		}
-	else{ alert("nooo");
+	else if(globalSunModalContext == "aakBox"){
+			alert("in mpopUp.js == " +  globalSunModalContext);  
 		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');               
 		}
 			//var $topMenubarHeight = $('.top-menubar').height();  

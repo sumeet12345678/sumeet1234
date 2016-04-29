@@ -37,9 +37,9 @@ function viewUpdateList(string) {
 		outerDiv.style.margin = "7px 0px 7px 0px";
 		//outerDiv.style.bottom = "5px;";
 		
-		innerDiv1.className = 'col-xs-2';  innerDiv1.style.padding="0px 3px 0px 3px";  
-		innerDiv2.className = 'col-xs-7'; innerDiv2.style.padding="0px 3px 0px 0px";
-		innerDiv3.className = 'col-xs-3'; innerDiv3.style.padding="3px 3px 0px 0px";
+		innerDiv1.className = 'col-xs-2';  innerDiv1.style.padding="0px 3px 0px 3px";   
+		innerDiv2.className = 'col-xs-7'; innerDiv2.style.padding="0px 3px 0px 0px";  
+		innerDiv3.className = 'col-xs-3'; innerDiv3.style.padding="3px 3px 0px 0px"; 
 		paragraph.className = 'message';
 		name.className = 'page-header';
 		date.className = 'label label-default';
@@ -69,7 +69,8 @@ function viewUpdateList(string) {
 }
 
 function manageFooterButtonDisplay(){
-	//alert('lalldfdf');
+	alert('Inside dynamic_content');
+	globalSunModalContext = "aakBox";
 	$('#AAK_INBOX_POPUP_ID').css({'visibility':'hidden'});
 	showHideD360Icon($('#sunIcon'));
 }
