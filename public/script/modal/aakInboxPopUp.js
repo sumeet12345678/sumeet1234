@@ -77,21 +77,13 @@ var aakInboxPopUpJson = [
 		
 
 		aakInboxPopUpJson.forEach(function(element) {	 	 		  
-//			var el = $('<div class="aakInboxPopUpItems">'+element.label + '<div>');  
-//			el.on('click', closeDialog); 
-//			$('.aakInboxPopUp #POPUP_MENU_CONTAINER_ID').append(el);      
-		 
+ 	 
 			var category = element;  
 			var subCategory = category.subCategory;   
-			   
-			//alert(element.title);
-			
+ 	
 			var categoryDiv = $('<div class="categoryTitle">'+ category.title +'</div>');
-			//alert("Category div== :" + categoryDiv);
-			
-			//console.log("Value == " + element.title);
-		  
-			subCategory.forEach(function(subElement) {  	
+	 
+			subCategory.forEach(function(subElement) {    	
 			    					
 			   var subCategoryDiv = $('<a href="/aakBox?categoryId=' + subElement.id + '"><div class="subCategoryTitle">'+ subElement.title +'</div></a>'); 
 			   //subCategoryDiv.on('click', );
@@ -110,18 +102,13 @@ var aakInboxPopUpJson = [
 		var $aakInboxPopUp = $('.aakInboxPopUp');      
 		//var $topMenubarHeight = $('.top-menubar').height();  
 		var $footerBarHeight = $('#footerBarId').height();    
-		//var $viewPortHeight = $(window).height(); // height of browser viewport   
-		//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
-		//alert("window height == " + $viewPortHeight);
-		 
+	  
 		$aakInboxPopUp.css('bottom', $footerBarHeight);  
 		//$composerWrapper.css('top', $footerBarHeight);   
 		 $aakInboxPopUp.toggleClass('visible');  
 		 
-		//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
-		
 		//Get height for the viewport and substract header and footer height to get the required height for mobile devices
-		 globalSunModalContext = "aakBox";
+		// globalSunModalContext = "aakBox";
 		// alert(globalSunModalContext);
  }
  
