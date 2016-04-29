@@ -1,0 +1,67 @@
+ 
+.aakOptionsPopUp {
+	display:none;
+	position: fixed; /*absolute*/
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding-top: 10px;
+    padding-bottom: 7px; 
+    z-index:9999;
+    left: 16%;
+    width: 68%;
+    padding-left: 1%;
+    padding-right: 2px;  
+    
+    height: 77%;
+    
+}
+
+.aakInboxPopUpItems {
+	display: inline-block;  
+	background-color: #404040;
+	text-align: center;
+	color: #95b3d7;
+    font-family: 'Arial Narrow';
+    font-weight: 400;
+    font-size: 14px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    width: 49%;
+    margin-right: 1%;
+    margin-bottom: 3px;  
+
+   cursor: pointer;  
+	
+}
+
+.categoryTitle {
+ 	font-weight: 800;
+	
+}
+.categoryTitle .subCategoryTitle {
+	 border-bottom: 1px solid #E2E2E2;
+}
+
+.subCategoryTitle {
+	font-weight: 400;	
+	margin-left: 30px;  
+}
+
+.visible {
+	display: block;
+	
+}
+
+
+/* ------- Mobile Device Section*/
+@media screen and (max-width: 993px) {
+	 .aakOptionsPopUp {
+	 	left: 0px;
+	 	width: 100%;  
+	 	
+	 }	
+}  
+
+
+

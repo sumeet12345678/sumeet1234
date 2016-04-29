@@ -150,8 +150,8 @@ $(function(){
 		// $('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/loading.gif');  
 		 //$('.top-push-zone .pushContainer #leftBlock').append("Working on your action..");
 			//
-		   $('.top-push-zone .pushContainer').addClass("pushZoneActionMessage");  
-		   $('.top-push-zone .pushContainer #leftBlock').html(content);
+		   $('.top-push-zone .pushContainer').addClass("pushZoneActionMessage");   
+		   $('.top-push-zone .pushContainer #leftBlock').html(content); 
 		
 	}
 	
