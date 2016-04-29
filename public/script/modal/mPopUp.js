@@ -189,7 +189,7 @@ $(function(){
 		}
 	else if(globalSunModalContext == "aakBox"){
 			//alert("in mpopUp.js == " +  globalSunModalContext);  
-		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');               
+		    var $popUpWrapper = $('.AAK_POPUP_MENU_WRAPPER_ID');                
 		}
 			//var $topMenubarHeight = $('.top-menubar').height();  
 			var $footerBarHeight = $('#footerBarId').height();    
