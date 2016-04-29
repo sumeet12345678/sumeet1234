@@ -37,7 +37,7 @@
 			
 				$('.composerWrapper').css('height','120px');
 				$('#MSG_COMPOSER_BODY').css('height','80px');
-				$('#MSG_COMPOSER_TEXTAREA').css('height','100%');
+				$('#MSG_COMPOSER_TEXTAREA').css('height','100%');  
 				
 			}							
 		}
@@ -46,81 +46,78 @@
 	</head>	
 	<body>		
 		 
-		 <div class="composerWrapper" style="height: 120px;">
-		 	<div id=MSG_COMPOSER_TOP_BAR style="height:40px; background-color:#404040;padding-top:6px;">     
-		 		<div id="selectGroup" style="display: inline-block; margin-left: 5px;">	
-						  	<!-- 	<select style="height:27px; width:65px;" class="greenborder">
-								  <option value="volvo">41041/Deep</option>
-								  <option value="saab">Deepika/979</option>
-								  <option value="volvo">Roxy/041</option>
-								  <option value="saab">Roxy/979</option>
-								  
-								</select>
-								
-								<select style="height:27px; width:80px;" class="greenborder">
-								  <option value="volvo">To: Ajooba Man</option>
-								  <option value="saab">To: Inner Circle</option>					  
-								  <option value="saab">To: Bangalore Startup Group</option>
-								  <option value="volvo">CC: 8888888888</option>
-								</select>
-								
-								<select style="height:27px; width:80px;" class="greenborder">
-								  <option value="volvo">Sub: Reminder of Bill Pay!</option>
-								  <option value="saab">Sub: FYI</option>
-								  <option value="volvo">Sub: Blah Blah</option>
-								  <option value="saab">Sub: Urgent! Call at the earliest!</option>
-								  
-								</select> -->  
-								
-								<select id= MSG_COMPOSER_STANDALONE_MSG_TYPE style="height:27px;" class="" onChange = "javascript: cui_msgType();">  
-								  
-								  
-								  <option value="S" selected>Message ('S')</option>
-								  <option value="M">Message ('M')</option>
-								  
-								  
-								</select>
-								
-								<!-- select>
-								  <option value="volvo">Good News!</option>
-								  <option value="volvo">Call back</option>
-								  <option value="volvo">Important</option>
-								  <option value="volvo">Intimation</option>
-								  <option value="volvo">Invitation</option>
-								  <option value="volvo">FYI</option>    
-								  <option value="saab">Greetings</option>
-								  <option value="mercedes">Reminder</option>
-								  <option value="mercedes">Touch base</option>  
-								  <option value="audi">Urgent</option>
-								</select -->
-						</div>
-						
-						<img id = MSG_COMPOSER_STANDALONE_RTF_ICON  class="pull-right" style="display:none; margin-right:8px;" src="/media/images/icons/rtf-temp.PNG" height="24" width="24">
-			  			<img id = MSG_COMPOSER_STANDALONE_EMO_ICON_ID class="pull-right"  style="display:block; margin-right: 7px;" src="/media/images/icons/emo1.png" height="30" width="30">
-		 	</div><!-- MSG_COMPOSER_TOP_BAR ends -->
+		  <div class="composerWrapper" style="height: 90px;">      
+		  		<div id="MSG_COMPOSER_LEFT_BAR" style="width: 10%; padding-top: 6px; background-color: #404040; height:100%; float:left; position:relative;">
+		  			<img  id = MSG_COMPOSER_MSG_TYPE   style="display:block; position1:absolute; lef1t:0; right1:0;margin-left:auto;margin-right:auto;" src="/media/images/icons/Messages.png" height="28" width="28">	
+		  			<img id = MSG_COMPOSER_CATEGORY style="display:block;margin-left:auto;margin-right:auto;margin-top:2px;" class="" src="/media/images/icons/icon-question.png" height="28" width="28"> 	  
+		  			<img  id = MSG_COMPOSER_RTF style="display:block;margin-left:auto;margin-right:auto;margin-top:6px;" src="/media/images/icons/rtf-temp.PNG" height="25" width="25">	    
+		  		
+		  		</div>      
+		  
+		  		<div id="MSG_COMPOSER_RIGHT_BAR" style="width: 10%; background-color: #404040; height:100%;float:right; position:relative; padding-top:6px;">  
+		  			<img  id = MSG_COMPOSER_TO style="display:block;margin-left:auto;margin-right:auto;" src="/media/images/icons/icon-white-portals-500px.PNG" height="28" width="28">
+		  			<img  id = MSG_COMPOSER_ADD_STUFF style="display:block;margin-left:auto;margin-right:auto; margin-top:6px;" src="/media/images/icons/wht-plus.PNG" height="28" width="28">	
+		  			<img  id =  MSG_COMPOSER_STANDALONE_SND_ICON style="display:block;margin-left:auto;margin-right:auto;margin-top:6px;" src="/media/images/icons/send_icon.png" height="28" width="28"> 	    
+		  		</div>
+		  		
+		  		<div id=MSG_COMPOSER_TOP_BAR style="height:40px; width: 80%; background-color:#404040; margin-left:auto; margin-right: auto; padding-top:6px;">
+		  			<input type="text" name="MSG_COMPOSER_TO_TEXT"  value="To:InnerCircle;GossipGang;9740141014" style="width: 100%; height: 28px;">
+		  		</div> 
+		  		  
+		  		<textarea id=MSG_COMPOSER_TEXTAREA class="" style="width:80%; height:65%; border: 0px;"></textarea> 
+		  		
+		  </div>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		<!-- 
+		 <div class="composerWrapper" style="height: 120px;">    
+		 
+		 	<div id="MSG_COMPOSER_LEFT_BAR" style="width: 10%; background-color: #404040; height:100%; float:left; position:relative;">
+		 				<img id = MSG_COMPOSER_STANDALONE_PLUS_1231 style="display:block; position: absolute; top:1px;margin-left:auto;margin-right:auto;left:0;right:0;" class="pull-left img-responsive" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
+			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID_1231 class="pull-left img-responsive" style="display:block;position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/short_links.png"  width="28" height="28">
+		 	</div>
 		 	
-		 	<!-- Programatically set height the of msg_composer_body equal to msg_composer_content_area -->
-		 	<div id="MSG_COMPOSER_BODY" style="width: 100%; height:80px;">   
-		 			<div id="MSG_COMPOSER_LEFT_BAR" style="width: 10%; background-color: #404040; height:100%; float:left; position:relative;">
-		 				<img id = MSG_COMPOSER_STANDALONE_PLUS_123 style="display:block; position: absolute; top:1px;margin-left:auto;margin-right:auto;left:0;right:0;" class="pull-left img-responsive" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
-			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID_123 class="pull-left img-responsive" style="display:block;position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/short_links.png"  width="28" height="28">
-		 			</div>
-		 			
-		 			<div id="MSG_COMPOSER_CONTENT_AREA" style="width: 80%;height:100%;float:left;padding:5px;">
-		 				<input class="" type='text' id=MSG_COMPOSER_STANDALONE_SUBJ_ID name="subject" style="display:none; width:100%; height:20%; margin-bottom:5px">
+		 	<div id="MSG_COMPOSER_RIGHT_BAR" style="width: 10%; background-color: #404040; height:100%;float:right; position:relative;">
+		 				<img id = MSG_COMPOSER_STANDALONE_PLUS1 style="display:block; position: absolute; top:1px;margin-left:auto;margin-right:auto;left:0;right:0;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
+			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID1 class="pull-left img-responsive" style="display:block;position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/post-out.png"  width="30" height="28">	
+			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID12 class="pull-left img-responsive" style="display:none; position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/preview3.png"  width="28" height="26">	
+		 	</div>
+		 	
+		 	<div id=MSG_COMPOSER_TOP_BAR style="height:40px; width: 80%; background-color:#404040;padding-top:6px;">   		 		 
+		 		 <img   class="pull-right1" style="" src="/media/images/icons/Messages.png" height="24" width="24">
+			  	 <img  class="pull-right"  style="" src="/media/images/icons/icon-white-portals-500px.png" height="30" width="30">
+			</div> 
+		 	
+		 	<div id="MSG_COMPOSER_CONTENT_AREA" style="width: 80%;height:100%;float:left;padding:0px;">
+		 				 
 			  			<textarea id=MSG_COMPOSER_TEXTAREA class="" style="width:100%; height:100%;"></textarea>
 		 			
-		 			</div>
-		 			
-		 			<div id="MSG_COMPOSER_RIGHT_BAR" style="width: 10%; background-color: #404040; height:100%;float:right; position:relative;">
-		 				<img id = MSG_COMPOSER_STANDALONE_PLUS style="display:block; position: absolute; top:1px;margin-left:auto;margin-right:auto;left:0;right:0;" class="pull-left" src="/media/images/icons/plus-5-xxl.png" height="28" width="28">			  			
-			  			<img id = MSG_COMPOSER_STANDALONE_SND_ICON_ID class="pull-left img-responsive" style="display:block;position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/post-out.png"  width="30" height="28">	
-			  			<img id = MSG_COMPOSER_STANDALONE_PRVW_ICON_ID class="pull-left img-responsive" style="display:none; position: absolute; bottom:1px;margin-left:auto;margin-right:auto;left:0;right:0;" src="/media/images/icons/preview3.png"  width="28" height="26">	
-		 			</div> 
-		 			
-		 	</div>  
+		 	</div>
 		 </div>
-		  
+		
+		
+		-->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		  
 		  	    
 		  		   
