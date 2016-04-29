@@ -6,7 +6,15 @@
 			generateAakOptionsInboxPop();
 		}); 
 	});
-
+ 
+	 $('#AAK_FILTER').on('click', function() {
+			  $('#AAK_OPTIONS_FILTER_MENU').toggle();
+		}); 
+	 
+	 $('#AAK_FOLDER').on('click', function() {
+		  $('#AAK_OPTIONS_FOLDER_MENU').toggle();
+	}); 
+	 AAK_OPTIONS_FOLDER
   		
  function generateAakOptionsInboxPop(){
 	//Clear and recreate the popup menu

@@ -6,22 +6,56 @@
 	</head>  
 	
 	<body>
-		<div class="aakOptionsPopUp" id=AAK_OPTIONS_POPUP_MENU_WRAPPER_ID>      
+		<div class="aakOptionsPopUp" id=AAK_OPTIONS_POPUP_MENU_WRAPPER_ID style="overflow: auto;">      
 	 
-			 <div id = AAK_OPTIONS_POPUP_HEADER>
+			<!--  <div id = AAK_OPTIONS_POPUP_HEADER>
 			 	Dating > Deshi
-			 	<img style="float:right; margin-right: 3px; margin-top: -2px;" width="24" height="24" src="/media/images/icons/search-grey.png"/>    
+			 	<img style="float:right; margin-right: 3px; margin-top: -2px;" width="24" height="24" src="/media/images/icons/search-grey.png"/>     
 			 </div>
-  		  	<div  id = AAK_OPTIONS_POPUP_MENU_CONTAINER_ID> 
-  		  	    <div>    
-					<div style="background-color: #EEEEEE; width: 100%; margin-bottom: 3px;">
-							<img style="float1:right; margin-right1: 3px; margin-top1: -2px;" width="24" height="24" src="/media/images/icons/filter.png"/>  
+			 -->
+  		  	<div  id = AAK_OPTIONS_POPUP_MENU_CONTAINER_ID style="padding-left: 3px; padding-right: 3px;"> 
+  		  	   
+  		  	     
+  		  	    <div id = "AAK_OPTIONS_FILTER">          
+					<div id = AAK_FILTER style="background-color: #EEEEEE; width: 100%; margin-bottom: 0px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">
+							<img style=" " width="24" height="24" src="/media/images/icons/filter.png"/>   
+					</div> 
+					
+					<div id = "AAK_OPTIONS_FILTER_MENU" style="display:none; width: 90%;margin-left:10%;" >  
+						<select style="width: 100%;">
+							<option>debdas.sinha@gmail.com</option>
+							<option>amar@gmail.com</option>							
+						</select>
+						<select style="width: 100%;">  
+							<option>Size: M</option>
+							<option>Size: S</option>							
+						</select>
+						
+						<div>Expiry, Received </div>
+						
+						<div>Read/Unread/Blocked/Irrelevant/Urgent</div>
+						<div>Attachments/Media </div>
+						<div>Appointments/Meeting </div>
+						 
 					</div>
-				</div>
+				</div>  
+				
+				<div id = "AAK_OPTIONS_FOLDER">          
+					<div id="AAK_FOLDER" style="background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">
+						<img style="float1:right; margin-right1: 3px; margin-top1: -2px;" width="24" height="24" src="/media/images/icons/folder.png"/>  
+					</div>
+						  
+					<div id = "AAK_OPTIONS_FOLDER_MENU" style="display:none; width: 90%;margin-left:10%;" >    
+						 <div>Sent </div>
+						 <div>Conversations</div>
+						 <div>Drafts</div>
+						 <div>Clutter</div>
+						 <div>Deleted</div>  
+					 
+					</div>
+				</div>  
 			 
-				<div style="background-color: #EEEEEE; width: 100%;s">
-					<img style="float1:right; margin-right1: 3px; margin-top1: -2px;" width="24" height="24" src="/media/images/icons/folder.png"/>  
-				</div>
+				
 				 
 			</div>
 		    
