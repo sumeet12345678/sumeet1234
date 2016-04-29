@@ -186,17 +186,18 @@ $(function(){
 		    iconClicked123 = event.target;    
 			//var $mPopUpWrapper = $('.mPopUpWrapper');   
 		    var $popUpWrapper = $('.mPopUpWrapper');  
-		}
-		else if(globalSunModalContext == "aakBox"){
-			generateAakInboxPop();
-			    
-			}
-			//var $topMenubarHeight = $('.top-menubar').height();    
+		  //var $topMenubarHeight = $('.top-menubar').height();    
 			var $footerBarHeight = $('#footerBarId').height();      			 
 			$popUpWrapper.css('bottom', $footerBarHeight);          
 			$popUpWrapper.toggleClass('visible');    
 						
 			//Get height for the viewport and substract header and footer height to get the required height for mobile devices
+		}
+		else if(globalSunModalContext == "aakBox"){
+			generateAakInboxPop();
+			    
+			}
+			
 		}); 
 	  
 	
