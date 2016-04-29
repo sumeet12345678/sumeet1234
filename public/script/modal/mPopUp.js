@@ -191,8 +191,8 @@ $(function(){
 			//alert("in mpopUp.js == " +  globalSunModalContext);  
 		    var $popUpWrapper = $('.aakBoxContainer');                
 		}
-			//var $topMenubarHeight = $('.top-menubar').height();  
-			var $footerBarHeight = $('#footerBarId').height();    
+			//var $topMenubarHeight = $('.top-menubar').height();    
+			var $footerBarHeight = $('#footerBarId').height();      
 			//var $viewPortHeight = $(window).height(); // height of browser viewport 
 			//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
 			//alert("window height == " + $viewPortHeight);

@@ -71,7 +71,7 @@ function viewUpdateList(string) {
 function manageFooterButtonDisplay(){
 	//alert('Inside dynamic_content');
 	globalSunModalContext = "aakBox";
-	$('#AAK_INBOX_POPUP_ID').css({'visibility':'hidden'});
+	//$('#AAK_INBOX_POPUP_ID').css({'visibility':'hidden'});
 	showHideD360Icon($('#sunIcon'));
 }
   
