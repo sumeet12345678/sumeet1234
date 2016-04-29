@@ -209,7 +209,7 @@ $(function(){
 	
 	//Closes the dialog box after upadation of push zone  
 	function closeMpopUp(){
-		$('.mPopUpWrapper').removeClass('visible');      
+		$('.mPopUpWrapper').removeClass('visible');        
 	}  
 	
 //	 
