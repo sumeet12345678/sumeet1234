@@ -2,7 +2,7 @@ $(function(){
 	  var qukToolVisible=false;
 	  
 	$('#QUK_TOOL_ICON_ID').on('click', function(){
-		//alert('jjjjrr');
+	/*	alert('jjjjrr');
 		var qukTool = $('.quk_tool');
 		if(qukToolVisible){
 			qukTool.css('display','none');
@@ -26,6 +26,6 @@ $(function(){
 		$('#QUK_TOOL_LEFT_BAR').css('width', topBarHeight + (.1 * topBarHeight));
 		$('#QUK_TOOL_RIGHT_BAR').css('width', topBarHeight + (.1 * topBarHeight));  
 		
-		
-	}
+		*/
+	});
 });  

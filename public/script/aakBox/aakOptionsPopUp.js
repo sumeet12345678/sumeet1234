@@ -14,8 +14,12 @@
 	 $('#AAK_FOLDER').on('click', function() {
 		  $('#AAK_OPTIONS_FOLDER_MENU').toggle();
 	}); 
-	 AAK_OPTIONS_FOLDER
-  		
+	 
+	$('#AAK_EXPIRED').on('click', function() {
+		  $('#AAK_OPTIONS_EXIT_MENU').toggle();
+	}); 
+	 
+	 
  function generateAakOptionsInboxPop(){
 	//Clear and recreate the popup menu
 		var aakOptionsPopUpMenuContainer = $('.aakOptionsPopUp #AAK_OPTIONS_POPUP_MENU_WRAPPER_ID');  

@@ -35,7 +35,7 @@
 	margin-top: 20px;
 }
 
-#AAK_OPTIONS_FILTER_MENU div, #AAK_OPTIONS_FOLDER_MENU div, #AAK_OPTIONS_FILTER_MENU select, #AAK_OPTIONS_FOLDER_MENU select {
+#AAK_OPTIONS_FILTER_MENU div, #AAK_OPTIONS_FOLDER_MENU div,#AAK_OPTIONS_EXIT_MENU div, #AAK_OPTIONS_FILTER_MENU select, #AAK_OPTIONS_FOLDER_MENU select {
 	border: 1px solid #EEEEEE;
 	margin-bottom:3px;
 	padding:3px;
