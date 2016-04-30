@@ -1,17 +1,48 @@
 
 
-.quk_tool {
-		display:none;
-		width:100%; 
-		height:94%;
+#QUK_TOOL_TOP_BAR{
+		display: none;
+		width: 100%; 
+		height: 10%;
 		position: fixed; 
 		top:0px;
-		left:0px; 
-		z-index:99999; 
-		background-color: transparent;
+		left: 0px; 
+		z-index: 99999; 
+		background-color: #404040;  
 }
 
-#QUK_TOOL_BOTTOM_BAR_ID {
-	
+#QUK_TOOL_BOTTOM_BAR {
+		display: none;
+		width: 100%; 
+		height: 10%;
+		position: fixed; 
+		bottom123:0px;
+		left	: 0px; 
+		z-index: 99999; 
+		background-color: #404040;  
+}
+
+#QUK_TOOL_LEFT_BAR {
+		display: none;
+		width1: 10%; 
+		height: 80%;
+		position: fixed; 
+		bottom1:0px;
+		left	: 0px;
+		top1:0px; 
+		z-index: 99999; 
+		background-color: #404040;
+}
+
+#QUK_TOOL_RIGHT_BAR {
+		display: none;
+		width1: 10%; 
+		height: 80%;
+		position: fixed; 
+		bottom:0px;
+		right	: 0px;
+		top1:0px; 
+		z-index: 99999; 
+		background-color: #404040;
 }
  
