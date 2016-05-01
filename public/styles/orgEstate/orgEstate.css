@@ -1,4 +1,24 @@
 
+#ORG_ESTATE_BRAND_LOGO {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 40%;
+	
+}
+
+#ORG-ESTATE_SEARCH_BOX {
+	position: absolute;
+	top: 60%;
+	width: 300px;
+	
+	align: center;
+	
+	left111: 30%;
+	margin-left11: auto;
+	margin-right11: auto;
+}
+
 #ORG_ESTATE_MENU {
     background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
@@ -15,7 +35,7 @@
 	 display: inline-block;
 	 color: white;	
 	 width11: 20.33%;
-	 margin-right: 10px;
+	 margin-right: 12px;
 	 text-align: center;	
 	 border1: 1px solid grey;
 	 font-size: 14px;
@@ -24,7 +44,6 @@
 }
 
 .ORG_ESTATE_MENU_ITEM:hover {
-	color: #95B3D7;	
 	cursor: pointer;
 }
 
@@ -37,4 +56,8 @@
 	left:0;
 	right:0;
 	top:37px;
+}
+
+#ORG_ESTATE_SLIDING_MENU_ICON {
+	  
 }

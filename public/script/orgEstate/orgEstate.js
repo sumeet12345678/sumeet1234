@@ -4,7 +4,7 @@ $(function(){
 	var centerScreenHeight  = getCenterScreenLayoutHeight();
 	var topMenuBarHeight = getTopMenuBarHeight();
 	
-	$('#ORG-ESTATE-BANNER').height(.30*centerScreenHeight);
+	$('#ORG-ESTATE-BANNER').height(.45*centerScreenHeight);
 	$('#profileDescription').css('margin-top', getTopMenuBarHeight());
 	
 	$('.ORG_ESTATE_MENU_ITEM').on('click', displayOrgEstateMstrMenu);
@@ -22,6 +22,12 @@ $(function(){
 	$('#ORG_EST_MSTR_EXPIRED').on('click', function() {
 		  $('#ORG_EST_MSTR_MENU_EXIT_MENU').toggle();
 	}); 
+	
+	var SCREEN_WIDTH = screen.width;
+	
+	//$('#ORG-ESTATE_SEARCH_BOX').css('left', ((SCREEN_WIDTH - SCREEN_WIDTH * .30) - 300)/2);
+	$('#ORG-ESTATE_SEARCH_BOX').css('left', "50%");
+	$('#ORG-ESTATE_SEARCH_BOX').css('left', "-=150");
 	
 	function displayOrgEstateMstrMenu(){
 		var orgEstMstrMenuSingleTon = $('#ORG_EST_MSTR_MENU_SINGLETON');

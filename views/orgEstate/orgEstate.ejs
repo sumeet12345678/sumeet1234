@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />  
-    <title>Cafe Coffe Day</title>
+    <title>Online Grocery Shopping</title>
     <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />   
     <link href="/styles/orgEstate/orgEstate.css" rel="stylesheet" />
@@ -15,26 +15,37 @@
 
 
  
-<% include ../modal/popUpMenu.ejs %>                         
-					  
+<% include ../modal/popUpMenu.ejs %>                           
+					    
          
     <% include ../partials/top_menu_bar.ejs %>            
 
 	<div id="profileDescription" class="centerLayoutContainer" style="height: 100%; padding: 0px; background-color: white;"> 
-		<div id = ORG-ESTATE-BANNER style = "padding-top: 0px;" > 
-			<img class="img-responsive" src="/media/images/business/banners/bigbasket-banner.jpg"  style="height:100%; width:100%;">           
-		</div> 
+		<div id = ORG-ESTATE-BANNER style = "padding-top: 0px; position: relative;" > 
+			<img class="img-responsive" src="/media/images/business/banners/bigbasket-banner.jpg"  style="height:100%; width:100%;">   
+			
+			<center>
+				<div id= ORG-ESTATE_SEARCH_BOX class="input-group">    
+				       <input type="text" class="form-control searchBox" placeholder="Search for more than 18,000 products..." />
+				           <span class="input-group-btn">
+								<button class="btn" type="button" id="searchBtnId" style="background-color: green;"><span class="glyphicon glyphicon-search searchIcon"></span></button>
+							</span>
+				 </div><!-- input-group ends -->
+			 </center>  
+			<!-- <img id= ORG_ESTATE_BRAND_LOGO   class="img-responsive" src="/media/images/business/logos/bigbasket.png"> -->       
+		</div>  
 		
 		<div id= ORG_ESTATE_MENU style="width: 100%; height: 34px;  position: relative; ">
-			<div class="ORG_ESTATE_MENU_ITEM" style="color: fff; width1: 30%;"><b>About</b> 
+			<div class="ORG_ESTATE_MENU_ITEM" style="color: fff; width1: 30%;"><b>Shop</b> 
 				<img style= "margin-top: -2px" width="18" height="18" src="/media/images/icons/down-arrow.png"/>
-			</div>
-			<div class="ORG_ESTATE_MENU_ITEM" style= "width1: 40%;">Products/Services
-				<img style= "margin-top: -2px" width="20" height="20" src="/media/images/icons/down-arrow.png"/>
 			</div>
 			<div class="ORG_ESTATE_MENU_ITEM"  style= "width1: 30%;">Offers
 				<img style= "margin-top: -2px" width="20" height="20" src="/media/images/icons/down-arrow.png"/>
-			</div> 
+			</div>
+			<div class="ORG_ESTATE_MENU_ITEM" style= "width1: 40%;">About
+				<img style= "margin-top: -2px" width="20" height="20" src="/media/images/icons/down-arrow.png"/>
+			</div>
+			 
 			<!-- <div class="ORG_ESTATE_MENU_ITEM">Reviews</div> -->    
 			
 			<!-- MSTR MENU contents--> 
@@ -43,56 +54,47 @@
 	  		  	    <div id = "ORG_EST_MSTR_MENU_FILTER">            
 						<div id = ORG_EST_MSTR_FILTER style="background-color: #EEEEEE; width: 100%; margin-bottom: 0px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">
 								<img style=" " width="24" height="24" src="/media/images/icons/filter.png"/>   
-								<b>Filters</b>  
+								<b>Shop By Category</b>  
 						</div> 
-						
+						   
 						<div id = "ORG_EST_MSTR_MENU_FILTER_MENU" style="display1:none; width: 90%;margin-left:10%;" >  
-							<select style="width: 100%;">
-								<option>debdas.sinha@gmail.com</option>
-								<option>amar@gmail.com</option>							
-							</select>
-							<select style="width: 100%;">  
-								<option>Size: M</option>
-								<option>Size: S</option>							
-							</select>
-							
-							<div>Expiry, Received </div>
-							
-							<div>Read/Unread/Blocked/Irrelevant/Urgent</div>
-							<div>Attachments/Media </div>
-							<div>Appointments/Meeting </div>
-							 
+							<div>Fruits and Vegetables</div>
+							<div>Grocery and Staples</div>
+							<div>Bread Diary and Eggs</div>
+							<div>Beverages</div>
+							<div>Branded Foods</div>							 
 						</div>
+						
 					</div>  
 				
 					<div id = "ORG_EST_MSTR_MENU_FOLDER">          
 						<div id="ORG_EST_MSTR_FOLDER" style="background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">
 							<img style="float1:right; margin-right1: 3px; margin-top1: -2px;" width="24" height="24" src="/media/images/icons/folder.png"/> 
-							<b>Folders</b> 
+							<b>Shops</b> 
 						</div>
 							  
 						<div id = "ORG_EST_MSTR_MENU_FOLDER_MENU" style="display1:none; width: 90%;margin-left:10%;" >    
-							 <div>Sent </div>
-							 <div>Conversations</div>
-							 <div>Drafts</div>
-							 <div>Clutter</div>
-							 <div>Deleted</div>  
-						 
+							 <div>Breakfast Store </div>
+							 <div>Party Time</div>
+							 <div>Summer Store</div>
+							 <div>BB Exclusives</div>						
 						</div>
 					</div>  
 				
 					<div id = "ORG_EST_MSTR_MENU_EXPIRED">            
 						<div id="ORG_EST_MSTR_EXPIRED" style="background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">
 							<img style="float1:right; margin-right1: 3px; margin-top1: -2px;" width="24" height="24" src="/media/images/icons/expired.png"/> 
-							<b>Expired</b>  
+							<b>Shop by List</b>  
 						</div>
 							  
 						<div id = "ORG_EST_MSTR_MENU_EXIT_MENU" style="display1:none; width: 90%;margin-left:10%;" >    
-							 <div>Deals, Promotions </div>
-							 <div>Reminders</div>
-							 <div>Alert, Notifications</div>  
+							 <div>Create new scratch list </div>
+							 <div>bigbasket Lists</div>
+							 <div>View All</div>  
 						</div>
 					</div>  
+					
+					 
 			 
 				
 				 
@@ -127,6 +129,15 @@
 			
 		<!--  <%	include ./orgEstateMasterMenu/orgEstateMasterMenuSingleton.ejs	%> -->  
 		
+		
+		<!-- ORG_ESTATE_SLIDING_MENU_BAR-->
+		<div id= ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER>
+			<div id= ORG_ESTATE_SLIDING_MENU_BAR>
+				 <div></div>
+			</div>
+			<img id= ORG_ESTATE_SLIDING_MENU_ICON style= "margin-top: -2px" width="20" height="20" src="/media/images/icons/down-arrow.png"/>
+			
+		</div>  
 		
 			
 	</div>    
