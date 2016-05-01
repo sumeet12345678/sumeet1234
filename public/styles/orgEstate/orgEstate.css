@@ -1,0 +1,35 @@
+
+#ORG_ESTATE_MENU {
+    background: -webkit-linear-gradient(#696969,#3f3f3f);
+	background: -o-linear-gradient(#696969,#3f3f3f);
+	background: -moz-linear-gradient(#696969,#3f3f3f);
+	background: linear-gradient(#696969,#3f3f3f);  
+	
+	padding-top: 6px; /* for middle-alignment */
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+
+.ORG_ESTATE_MENU_ITEM {
+	 display: inline-block;
+	 color: white;	
+	 width: 32%;
+	 text-align: center;	
+	 
+}
+
+.ORG_ESTATE_MENU_ITEM:hover {
+	color: #95B3D7;	
+	cursor: pointer;
+}
+
+#ORG_EST_MSTR_MENU_SINGLETON {
+	width: 100%;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	left:0;
+	right:0;
+	top:37px;
+}

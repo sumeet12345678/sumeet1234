@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />  
+    <title>Cafe Coffe Day</title>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />   
+    <link href="/styles/orgEstate/orgEstate.css" rel="stylesheet" />
+</head>
+<body>
+  
+ 
+
+
+ 
+<% include ../modal/popUpMenu.ejs %>                         
+					  
+         
+    <% include ../partials/top_menu_bar.ejs %>            
+
+	<div id="profileDescription" class="centerLayoutContainer" style="height: 100%; padding: 0px; background-color: white;"> 
+		<div id = ORG-ESTATE-BANNER style = "padding-top: 0px;" > 
+			<img class="img-responsive" src="/media/images/business/banners/bigbasket-banner.jpg"  style="height:100%; width:100%;">           
+		</div> 
+		
+		<div id= ORG_ESTATE_MENU style="width: 100%; height: 34px;  position: relative; ">
+			<div class="ORG_ESTATE_MENU_ITEM" style="color: #95B3D7;"><b>About</b> </div>
+			<div class="ORG_ESTATE_MENU_ITEM">Products/Services</div>
+			<div class="ORG_ESTATE_MENU_ITEM">Offers</div> 
+			<!-- <div class="ORG_ESTATE_MENU_ITEM">Reviews</div> -->  
+			
+			<!-- MSTR MENU -->
+			 <div id = ORG_EST_MSTR_MENU_SINGLETON> 
+
+			</div> 
+		</div>   
+		
+		<div style="padding: 7px 2px 2px 7px;">
+			<p>
+				At bigbasket.com we believe in being smart, quick and efficient, making your life as leisurely as possible. 
+			</p>
+			<p align=justified>
+				We understand that in this fast-paced world, time is always of the essence and hence want to 
+				make your grocery shopping easy and convenient so that no time is wasted in this process.
+			</p>
+			<p align=justified> 
+				So, no more hassle of going down to the grocery store and long queues for billing etc. 
+				You can browse through our varied range of products at bigbasket.com, order them 
+				and get them to be delivered at your own convenient time slot.
+			</p>
+			<p align=justified>
+				We specially hand pick each and every product for you, putting it through a safety 
+				packaging process and finding your home, no matter how bad the wind is or how cold 
+				the weather is. Our ''No questions asked refund' and ''10% off for a delayed 
+				delivery'' policy makes us a customer friendly online food and grocery store. 
+			</P>  
+			<p>
+				Just follow three simple steps and get your order delivered - simply Browse, Add to cart & Choose delivery slot!
+				
+			</p>
+		</div>
+			
+		<!--  <%	include ./orgEstateMasterMenu/orgEstateMasterMenuSingleton.ejs	%> -->  
+		
+		
+			
+	</div>    
+	
+	
+	
+	
+	<%	include ../partials/footer_bar.ejs	%>
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+      
+    <script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>    
+    <script src="/script/common.js"></script>  
+    <script src="/script/orgEstate/orgEstate.js"></script>
+    
+    <script>
+        	$(function(){
+        		var d360 = true;
+        		showHideD360Icon(d360);
+         	});
+    </script>
+</body>
+</html>
+
+
+

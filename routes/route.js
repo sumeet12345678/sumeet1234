@@ -27,7 +27,7 @@ router.get('/aakBox', function(req, res, next) {
 
 router.get('/estate', function(req, res, next) {
 	  var categoryId = req.param('categoryId');
-	  res.render('business/estate.ejs');
+	  res.render('orgEstate/orgEstate.ejs');
 	  
 	}); 
 /*

@@ -11,9 +11,14 @@ function showHideD360Icon(d360) {
 function getCenterScreenLayoutHeight() {
 	var $viewPortHeight = $(window).height();     
 	var $footerBarHeight = $('#footerBarId').height();
-	var $topMenuBarHeight = $('top-menubar').height();      
+	var $topMenuBarHeight = getTopMenuBarHeight();      
 	 
 	var $centerScreenSize =  $viewPortHeight - ($footerBarHeight + $topMenuBarHeight);   
 	
 	return $centerScreenSize;
-}    
+} 
+
+function getTopMenuBarHeight() {
+	var $topMenuBarHeight = $('.top-menubar').outerHeight(); 
+	return $topMenuBarHeight;
+}
