@@ -9,7 +9,7 @@
 
 #ORG-ESTATE_SEARCH_BOX {
 	position: absolute;
-	top: 60%;
+	top: 42%;
 	width: 300px;
 	
 	align: center;
@@ -58,6 +58,31 @@
 	top:37px;
 }
 
-#ORG_ESTATE_SLIDING_MENU_ICON {
-	  
+#ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER {
+	width: 70%;
+	position: fixed;
+	left: 15%;
+	right: 15%;
+	bottom:50px;
+	
+	background-color111: grey;
 }
+
+#ORG_ESTATE_SLIDING_MENU_BAR {
+	display: inline-block;
+	width: 80%;
+	background-color: green; 
+}
+
+
+
+
+/*  MEDIA SCREEN (Mobile style)   */  
+  @media screen and (max-width: 767px) { 
+  	#ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER {
+		width: 100%;
+		background-color1: grey;
+		left: 0px;
+	    right: 0px;
+	}  
+  }
