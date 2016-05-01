@@ -15,7 +15,8 @@ $(function(){
 		var orgEstMstrMenuSingleTon = $('#ORG_EST_MSTR_MENU_SINGLETON');
 		orgEstMstrMenuSingleTon.toggle();
 		
-		var height = getCenterScreenLayoutHeight() -  
+		var menuHeight = getCenterScreenLayoutHeight() -  ( $('#ORG-ESTATE-BANNER').height() + $('#ORG_ESTATE_MENU').height()+4) ;
+		orgEstMstrMenuSingleTon.css('height',menuHeight);
 		
 	}
 });
