@@ -19,16 +19,13 @@
 		  $('#AAK_OPTIONS_EXIT_MENU').toggle();
 	}); 
 	 
-	 
+	   
  function generateAakOptionsInboxPop(){
 	//Clear and recreate the popup menu
 		var aakOptionsPopUpMenuContainer = $('.aakOptionsPopUp #AAK_OPTIONS_POPUP_MENU_WRAPPER_ID');  
 		aakOptionsPopUpMenuContainer.empty();        
 		//$('.aakInboxPopUp').css('display','none');  
-		
-
-	 
-	 
+    
 		var $aakOptionsPopUp = $('.aakOptionsPopUp');      
 		//var $topMenubarHeight = $('.top-menubar').height();  
 		var $footerBarHeight = $('#footerBarId').height();    

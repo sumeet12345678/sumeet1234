@@ -14,10 +14,13 @@
 .ORG_ESTATE_MENU_ITEM {
 	 display: inline-block;
 	 color: white;	
-	 width: 32.33%;
+	 width11: 20.33%;
+	 margin-right: 10px;
 	 text-align: center;	
 	 border1: 1px solid grey;
-	 font-size: 15px;
+	 font-size: 14px;
+	 padding-left: 0px;
+	 padding-right: 0px;
 }
 
 .ORG_ESTATE_MENU_ITEM:hover {
