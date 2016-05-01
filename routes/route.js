@@ -21,7 +21,13 @@ router.get('/profile/view/mahika', function(req, res, next) {
 router.get('/aakBox', function(req, res, next) {
 	  var categoryId = req.param('categoryId');
 	      console.log("Category from req ===  " + categoryId);
-	  res.render('aakBox/aakBox.ejs', { aakBoxCategory : categoryId });
+	  res.render('aakBox/aakBox.ejs', { aakBoxCategory : categoryId });  
+	  
+	}); 
+
+router.get('/estate', function(req, res, next) {
+	  var categoryId = req.param('categoryId');
+	  res.render('business/estate.ejs');
 	  
 	}); 
 /*

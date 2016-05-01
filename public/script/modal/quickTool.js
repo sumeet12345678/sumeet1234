@@ -14,27 +14,46 @@ $(function(){
 			 qukToolVisible=true;
 		}
 	*/
-		setWidthOfLeftandRightBar();		 
+		
+		// Listen for orientation changes      
+		window.addEventListener("orientationchange", function() {
+		    // Announce the new orientation number
+		   // alert(window.orientation);
+		}, false);
+		
+		
+		setWidthOfLeftandRightBar();		
+		 
 	});   
 	
 	function setWidthOfLeftandRightBar(){
 		//Set height of quk_tool,  and set left and right bar's width equal to top bar
-		var $viewPortHeight = $(window).height();  
-		var $footerBarHeight = $('#footerBarId').height(); 
-		var topBarHeight = $('#QUK_TOOL_TOP_BAR').outerHeight();
+		var $viewPortHeight = $(window).height();     
+		var $footerBarHeight = $('#footerBarId').height();     
+		
+		var $topBar = $('#QUK_TOOL_TOP_BAR');
+		var $bottomBar = $('#QUK_TOOL_BOTTOM_BAR'); 
+		var $leftBar = $('#QUK_TOOL_LEFT_BAR');
+		var $rightBar = $('#QUK_TOOL_RIGHT_BAR');             
+		  
+		  
+		//var topBarHeight = $('#QUK_TOOL_TOP_BAR').outerHeight();
 		//alert(topBarHeight);
 		
-		$('#QUK_TOOL_LEFT_BAR').css('width', topBarHeight);
-		$('#QUK_TOOL_LEFT_BAR').css('top',  topBarHeight);
-		$('#QUK_TOOL_RIGHT_BAR').css('width', topBarHeight);
-		$('#QUK_TOOL_RIGHT_BAR').css('top', topBarHeight);
+		//$('#QUK_TOOL_LEFT_BAR').css('width', topBarHeight);
+		//$('#QUK_TOOL_LEFT_BAR').css('top',  topBarHeight); 
+		//$('#QUK_TOOL_RIGHT_BAR').css('width', topBarHeight);
+		//$('#QUK_TOOL_RIGHT_BAR').css('top', topBarHeight);
 		
-		$('#QUK_TOOL_BOTTOM_BAR').css('bottom',  $footerBarHeight);
+		$leftBar.css('height', $viewPortHeight - (90 + $footerBarHeight)); // 90 = 45 + 45 for top bar and left bar
+		$rightBar.css('height', $viewPortHeight - (90 + $footerBarHeight)); // 90 = 45 + 45 for top bar and left bar
+		$bottomBar.css('bottom',  $footerBarHeight);
 		
-		$('#QUK_TOOL_LEFT_BAR').toggle();    
-		$('#QUK_TOOL_RIGHT_BAR').toggle();
-		$('#QUK_TOOL_BOTTOM_BAR').toggle();
-		 $('#QUK_TOOL_TOP_BAR').toggle();
+		//hide or show bars  
+		$leftBar.toggle();    
+		$rightBar.toggle();
+		$bottomBar.toggle();
+		$topBar.toggle();  
 		
 		
 		//$('#QUK_TOOL_BOTTOM_BAR').css('height', $viewPortHeight - $footerBarHeight);

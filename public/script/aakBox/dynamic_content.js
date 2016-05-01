@@ -30,7 +30,13 @@ function viewUpdateList(string) {
 			horizontalLine = doc.createElement('hr'),        
 			hyperLink = doc.createElement('a');        //Amar  
 		
-		hyperLink.setAttribute("href", "/profile/view/mahika");   //Amar
+		if(i%2==0) {
+			hyperLink.setAttribute("href", "/profile/view/mahika");   //Amar
+		}
+		else {
+			hyperLink.setAttribute("href", "/estate");   //Amar
+		}
+			
 		
 		outerDiv.className = 'row';
 		

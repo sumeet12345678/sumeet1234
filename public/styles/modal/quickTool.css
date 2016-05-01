@@ -3,7 +3,7 @@
 #QUK_TOOL_TOP_BAR{
 		display: none;
 		width: 100%; 
-		height: 10%;
+		height: 45px;
 		position: fixed; 
 		top:0px;
 		left: 0px; 
@@ -14,34 +14,35 @@
 #QUK_TOOL_BOTTOM_BAR {
 		display: none;
 		width: 100%; 
-		height: 10%;
+		height: 45px;
 		position: fixed; 
 		bottom123:0px;
 		left	: 0px; 
 		z-index: 99999; 
-		background-color: #404040;  
+		background-color: #404040;
+		background-color123: blue;  
 }
 
 #QUK_TOOL_LEFT_BAR {
 		display: none;
-		width1: 10%; 
-		height: 80%;
+		width: 45px; 
+		height11: 75%;
 		position: fixed; 
 		bottom1:0px;
 		left	: 0px;
-		top1:0px; 
+		top:45px; 
 		z-index: 99999; 
 		background-color: #404040;
+		background-color123: silver;
 }
 
 #QUK_TOOL_RIGHT_BAR {
 		display: none;
-		width1: 10%; 
-		height: 80%;
+		width: 45px; 
 		position: fixed; 
-		bottom:0px;
+		bottom1:0px;
 		right	: 0px;
-		top1:0px; 
+		top:45px; 
 		z-index: 99999; 
 		background-color: #404040;
 }
