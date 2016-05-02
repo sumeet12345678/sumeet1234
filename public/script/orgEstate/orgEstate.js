@@ -29,19 +29,16 @@ $(function(){
 	$('#ORG-ESTATE_SEARCH_BOX').css('left', "50%");
 	$('#ORG-ESTATE_SEARCH_BOX').css('left', "-=150");
 	
-	$('#ORG_ESTATE_SLIDING_MENU_ICON').on('click', function(){
-		//alert('dfdfdfdfdfdf');
-		//$('#ORG_ESTATE_SLIDING_MENU_BAR').toggle();  
-		var element = document.getElementById('ORG_ESTATE_SLIDING_MENU_BAR'); 
-		//alert("dfdfd == " + element.style.display=="inline-block");	
-		if(element.style.display == "none"){
-			element.style.display = "inline-block";
-		}
-		else {
-			element.style.display = none;
-		}
-		
-	});
+	$('#ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER').css('bottom', getFooterBarHeight() + 10)	;
+	
+	
+	$('#ORG_ESTATE_SLIDING_MENU_ICON').on('click', showHideOrgEstaateSlidingMenu);
+	
+
+
+	
+	
+	
 	
 	function displayOrgEstateMstrMenu(){
 		var orgEstMstrMenuSingleTon = $('#ORG_EST_MSTR_MENU_SINGLETON');
@@ -51,4 +48,27 @@ $(function(){
 		orgEstMstrMenuSingleTon.css('height',menuHeight);
 		
 	}
+	
+	function showHideOrgEstaateSlidingMenu() {
+			var element = $('#ORG_ESTATE_SLIDING_MENU_BAR'); 
+			element.fadeToggle(500);    
+			
+			var $sliderIcon = $('#ORG_ESTATE_SLIDING_MENU_ICON');
+			
+			if($sliderIcon.hasClass('leftArrow')){
+				$sliderIcon.attr('src', "/media/images/icons/arrow-right-xxl.png");
+				$sliderIcon.removeClass('leftArrow');
+				$sliderIcon.addClass('rightArrow');
+			}
+			else {
+				$sliderIcon.attr('src', "/media/images/icons/arrow-left-xxl.png");
+				$sliderIcon.removeClass('rightArrow');
+				$sliderIcon.addClass('leftArrow');
+			}
+	}
 });
+
+
+
+
+

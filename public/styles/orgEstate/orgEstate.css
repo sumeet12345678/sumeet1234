@@ -63,26 +63,52 @@
 	position: fixed;
 	left: 15%;
 	right: 15%;
-	bottom:50px;
+	bottom123:50px;
 	
-	background-color111: grey;
+	
 }
 
 #ORG_ESTATE_SLIDING_MENU_BAR {
-	display: inline-block;
-	width: 80%;
-	background-color: green; 
+	display: none;
+	width: 90%;
+	padding-top: 6px;  
+	padding-left: 5px;
+	height: 34px;
+	float: left;
+	background: -webkit-linear-gradient(#696969,#3f3f3f);
+	background: -o-linear-gradient(#696969,#3f3f3f);
+	background: -moz-linear-gradient(#696969,#3f3f3f);
+	background: linear-gradient(#696969,#3f3f3f);     
+}
+
+#ORG_ESTATE_SLIDING_MENU_ICON { 
+	
+	background: -webkit-linear-gradient(#696969,#3f3f3f);
+	background: -o-linear-gradient(#696969,#3f3f3f);
+	background: -moz-linear-gradient(#696969,#3f3f3f);
+	background: linear-gradient(#696969,#3f3f3f);    
+	width: 10%;
+	
 }
 
 
 
-
-/*  MEDIA SCREEN (Mobile style)   */  
-  @media screen and (max-width: 767px) { 
+/*  MEDIA SCREEN (Phone styles)   */  
+  @media screen and (max-width: 767px) {   
   	#ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER {
 		width: 100%;
-		background-color1: grey;
+		background-color123: grey;  
 		left: 0px;
 	    right: 0px;
 	}  
+  }
+  
+  @media screen and (min-width: 992px)  { 
+  	
+  		#ORG_ESTATE_SLIDING_MENU_BAR {
+			width: 95%;
+  		}  
+  		#ORG_ESTATE_SLIDING_MENU_ICON { 
+  			width: 5%;
+  		}
   }
