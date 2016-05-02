@@ -43,6 +43,18 @@
 	 padding-right: 0px;
 }
 
+.ORG_ESTATE_SLIDER_ITEM {
+	 display: inline-block;
+	 width11: 20.33%;
+	 margin-right: 12px;
+	 text-align: center;	
+	 border1: 1px solid grey;
+	 font-size: 14px;
+	 padding-left: 0px;
+	 padding-right: 0px;
+	color: #95B3D7;
+}
+
 .ORG_ESTATE_MENU_ITEM:hover {
 	cursor: pointer;
 }
@@ -75,18 +87,16 @@
 	padding-left: 5px;
 	height: 34px;
 	float: left;
-	background: -webkit-linear-gradient(#696969,#3f3f3f);
+background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
 	background: -moz-linear-gradient(#696969,#3f3f3f);
-	background: linear-gradient(#696969,#3f3f3f);     
+	background: linear-gradient(#696969,#3f3f3f);
+
+      
 }
 
 #ORG_ESTATE_SLIDING_MENU_ICON { 
 	
-	background: -webkit-linear-gradient(#696969,#3f3f3f);
-	background: -o-linear-gradient(#696969,#3f3f3f);
-	background: -moz-linear-gradient(#696969,#3f3f3f);
-	background: linear-gradient(#696969,#3f3f3f);    
 	width: 10%;
 	
 }

@@ -27,3 +27,8 @@ function getFooterBarHeight() {
 	return  $('#footerBarId').outerHeight();    
 }
 
+
+function getScreenWindowTotalHeight(){
+	return screen.height;
+}
+
