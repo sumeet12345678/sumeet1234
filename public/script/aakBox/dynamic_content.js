@@ -36,7 +36,10 @@ function viewUpdateList(string) {
 		else {
 			hyperLink.setAttribute("href", "/estate");   //Amar
 		}
-			
+		
+		if(i==2){
+			hyperLink.setAttribute("href", "/view-aak");   //Amar
+		}
 		
 		outerDiv.className = 'row';
 		

@@ -32,7 +32,7 @@ $(function(){
 	$('#ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER').css('bottom', getFooterBarHeight())	;
 	
 	
-	$('#ORG_ESTATE_SLIDING_MENU_ICON').on('click', showHideOrgEstaateSlidingMenu);
+	$('#ORG_ESTATE_SLIDING_MENU_ICON').on('click', showHideOrgEstaateSlidingMenu);  
 	
 
 
@@ -40,7 +40,7 @@ $(function(){
 	
 	
 	
-	function displayOrgEstateMstrMenu(){
+	function displayOrgEstateMstrMenu() {
 		var orgEstMstrMenuSingleTon = $('#ORG_EST_MSTR_MENU_SINGLETON');
 		orgEstMstrMenuSingleTon.toggle();
 		

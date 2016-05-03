@@ -1,4 +1,6 @@
-var globalSunModalContext = "profile";    
+var globalSunModalContext = "profile";  
+
+var CENTER_REGION_HEIGHT = getCenterScreenLayoutHeight();
 
 /* hides or displays sun icon */
 function showHideD360Icon(d360) {

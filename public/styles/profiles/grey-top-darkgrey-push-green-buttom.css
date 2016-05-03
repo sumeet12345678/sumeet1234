@@ -196,6 +196,21 @@ div {
   }
 
 
+.grey-title-bar {
+	width: 100%;
+	background-color: #F2F2F2; 
+}
+
+ .commonScreenSetting {
+  		width: 70%;
+  		margin-left: auto;
+  		margin-right: auto;
+  		background-color: #fff;
+  		margin-top: 0px;
+  		
+  	}
+
+
   /*  MEDIA SCREEN (Mobile style)   */  
   @media screen and (max-width: 767px) { 
   	.pushContainer{
@@ -207,6 +222,9 @@ div {
 	}
 	.profile {  
 	margin-top: 68px;
+	}
+	.commonScreenSetting {
+		width: 100%;
 	}
   }
   
@@ -222,6 +240,11 @@ div {
 	.profile {  
 	margin-top: 68px;
 	}
+	
+	.commonScreenSetting {
+		width: 100%;
+	}
+	
   }
 
 /* -------- MEDIA SCREEN (Desktop style)  -------- */
@@ -308,7 +331,7 @@ div {
 	}
   	
   	body{
-  		background-color: #f2f2f2;
+  		background-color: #E7E9EC;
   	}
   }
   

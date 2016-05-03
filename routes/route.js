@@ -30,6 +30,10 @@ router.get('/estate', function(req, res, next) {
 	  res.render('orgEstate/orgEstate.ejs');
 	  
 	}); 
+
+router.get('/view-aak', function(req, res, next) {
+	  res.render('viewAak/viewAak.ejs');	    
+	});   
 /*
 router.get('/profile/view/mahika/experience', function(req, res, next) {
 	  res.render('profiles/summary/experience_mihika.ejs'); 
