@@ -29,11 +29,14 @@ $(function(){
 		var $composerWrapper = $('.composerWrapper');
 		var $ccTextArea = $('#MSG_COMPOSER_CC_TEXTAREA');
 		var $ccTextAreaReadOnly = $('#MSG_COMPOSER_READ_ONLY_TEXTAREA');
-		var $ccTextAreaReadOnly = $('#MSG_COMPOSER_READ_ONLY_TEXTAREA');
+		var $composerBottomBar = $('#MSG_COMPOSER_BOTTOM_BAR');
+		
 		$composerWrapper.css('height', '100%');  
 		$composerWrapper.css('bottom','0');  
 		$ccTextArea.css('display', 'block');///////
 		$ccTextAreaReadOnly.css('display', 'block');///////
+		$composerBottomBar.css('display', 'block');
+		$composerBottomBar.css('width', '-=80');
 		
 		
 	});
