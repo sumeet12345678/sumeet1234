@@ -15,7 +15,7 @@ $(function(){
 		 
 		var $composerWrapper = $('.composerWrapper');     
 		 
-		$composerWrapper.css('bottom', FOOTER_BAR_HEIGHT);
+		$composerWrapper.css('bottom', FOOTER_BAR_HEIGHT); 
 		//$composerWrapper.css('top', $footerBarHeight); 
 		$composerWrapper.toggleClass('visible');
 		 
@@ -38,6 +38,14 @@ $(function(){
 	 
 	});
 	
+    $('#MSG_COMPOSER_MESSAGE_TEXTAREA').on('focus', function() {
+    	//alert("Total Screen =  " + screen.height);
+    });
+	
+    $($chatTextArea).on('keypress', function() {
+    	//alert("Total Screen =  " + screen.height);
+    });  
+    
 	function maximizeComposer(){
 		
 		$composerWrapper.css('height', '100%');  

@@ -201,6 +201,21 @@ div {
 	background-color: #F2F2F2; 
 }
 
+.common-dark-grey-btn {
+	background-color: #fff;
+	margin-bottom: 3px;
+	text-align: center;
+	width: 100%;
+	color: #808080;
+	font-family: 'Arial Narrow';
+	font-weight: bold;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	cursor: pointer;	
+	font-weight: bold;
+	 
+}
+
  .commonScreenSetting {
   		width: 70%;
   		margin-left: auto;
@@ -283,7 +298,7 @@ div {
   		margin-left:8px;
   		
   	}
-  	.top-menu-content #settingsImage {  
+  	.top-menu-content #PEOPLE_FINDER_ICON {  
   		margin-right: 8px;  
   	}
   	

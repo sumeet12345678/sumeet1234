@@ -1,0 +1,30 @@
+#PEOPLE_FINDER {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left:0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	height: 100%; 
+	background-color: white;
+	z-index: 99999;
+
+	padding: 5px 5px 5px 5px;
+	
+}
+
+#PEOPLE_FINDER_CONTENT1 {
+	overflow-y: scroll;
+	height: 80%;
+	width: 80%;
+	background-color: orange;
+}
+
+#PEOPLE_FINDER_SRCH_BUTTON {
+	background: -webkit-linear-gradient(#344C15,#698A25 ); 
+	background: -o-linear-gradient(#344C15,#698A25 ); 
+	background: -moz-linear-gradient(#344C15,#698A25 );   
+	background: linear-gradient(#344C15,#698A25 ); 
+}
