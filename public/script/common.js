@@ -11,7 +11,8 @@ function showHideD360Icon(d360) {
  
 
 function getCenterScreenLayoutHeight() {
-	var $viewPortHeight = $(window).height();     
+	//var $viewPortHeight = $(window).height();screen.height;     
+	var $viewPortHeight = screen.height;     
 	var $footerBarHeight = getFooterBarHeight();
 	var $topMenuBarHeight = getTopMenuBarHeight();      
 	 
