@@ -1,47 +1,73 @@
 
+
 $(function(){
 	
-	$('#plus').on('click', function(){
-		
+	var composerCurrentSize = "MINIMIZED";    
 	
-		
-		var $composerWrapper = $('.composerWrapper');     
-		//var $topMenubarHeight = $('.top-menubar').height();  
-		var $footerBarHeight = $('#footerBarId').height();
-		//var $viewPortHeight = $(window).height(); // height of browser viewport 
-		//alert($viewPortHeight - ($topMenubarHeight + $footerBarHeight));
-		//alert("window height == " + $viewPortHeight);
+	var $composerWrapper = $('.composerWrapper');
+	var $ccTextArea = $('#MSG_COMPOSER_CC_TEXTAREA');
+	var $chatTextArea = $('#MSG_COMPOSER_CHAT_TEXTAREA');
+	var $composerBottomBar = $('#MSG_COMPOSER_BOTTOM_BAR');
+	
+//	$composerBottomBar.css('width', '-=80');  //Intial width during loading
+	
+	$('#plus').on('click', function(){
 		 
-		$composerWrapper.css('bottom', $footerBarHeight);
+		var $composerWrapper = $('.composerWrapper');     
+		 
+		$composerWrapper.css('bottom', FOOTER_BAR_HEIGHT);
 		//$composerWrapper.css('top', $footerBarHeight); 
 		$composerWrapper.toggleClass('visible');
 		 
-		//$composerWrapper.css('height', $viewPortHeight - ($topMenubarHeight+$footerBarHeight) - 309);  
-		
-		//Get height for the viewport and substract header and footer height to get the required height for mobile devices
 	}); 
 	
 	
 	
 	/* EXPAND AAK COMPOSER */
+	 
+	$('#MSG_COMPOSER_MAX_MIN').on('click', function(){
+		
+		if(composerCurrentSize == "MINIMIZED"){
+			 
+			maximizeComposer();
+		}	
+		else if(composerCurrentSize == "MAXIMIZED"){
+			 
+			minimizeComposer();  
+		}		 
+	 
+	});
 	
-	$('#MSG_COMPOSER_MAXIMIZE').on('click', function(){
-		var $composerWrapper = $('.composerWrapper');
-		var $ccTextArea = $('#MSG_COMPOSER_CC_TEXTAREA');
-		var $ccTextAreaReadOnly = $('#MSG_COMPOSER_READ_ONLY_TEXTAREA');
-		var $composerBottomBar = $('#MSG_COMPOSER_BOTTOM_BAR');
+	function maximizeComposer(){
 		
 		$composerWrapper.css('height', '100%');  
 		$composerWrapper.css('bottom','0');  
 		$ccTextArea.css('display', 'block');///////
-		$ccTextAreaReadOnly.css('display', 'block');///////
+		$chatTextArea.css('display', 'block');///////
 		$composerBottomBar.css('display', 'block');
-		$composerBottomBar.css('width', '-=80');
+		 
 		
+		composerCurrentSize = "MAXIMIZED";    
+
+	}
+	
+	function minimizeComposer() {
 		
-	});
+		$composerWrapper.css('height', '120px');  
+		$composerWrapper.css('bottom', FOOTER_BAR_HEIGHT);  
+		$ccTextArea.css('display', 'none');///////
+		$chatTextArea.css('display', 'none');///////
+		$composerBottomBar.css('display', 'none');
+		  
+		
+		composerCurrentSize = "MINIMIZED";  
+		
+	}
 	
 	
+	function changeChatTextArea() {
+		
+	}
 	
 	function maximizeComposerWrapper() {
 		
