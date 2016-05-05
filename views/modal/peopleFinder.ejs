@@ -2,40 +2,74 @@
 	<link href="/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
 	<link rel="stylesheet" href="/styles/modal/peopleFinder.css">
 	
-	<div id = PEOPLE_FINDER>
+	<div id = PEOPLE_FINDER>  
+	
+		 <div class="grey-title-bar" style="height: 43px; padding: 0px 3px 0px 3px;">
+			 <div style="margin-top: 10px; font-size: 14px; font-weight: bold; display: inline-block;"> 
+			 	<b>People Finder</b>
+			 </div>
+			 
+			 <div style= "float: right; display: inline-block; margin-top: 5px; ">
+			 	<span><img  style=" margin-right: 5px;" width="30" height="30" src="/media/images/icons/minimize.png" /></span>
+			 	<span><img  style="" width="30" height="30" src="/media/images/icons/close_icon.png" /></span>
+			 </div>
+		 </div>
 		 
-		 <div style="font-size: 14px; font-weight: bold;"> <b>People Finder</b></div>
-		 <div id= PEOPLE_FINDER_SRCH_BOX style="margin: 5px 0px 5px 0px;">
-		        <div class="input-group">    
+		 <div id= PEOPLE_FINDER_SRCH_BOX style="margin: 5px 0px 5px 0px;">    
+		       <!--  <div class="input-group"> -->    
 			            	<input type="text" class="form-control searchBox" placeholder="Keywords" />
-			            	<span class="input-group-btn">
+			            <!-- 	<span class="input-group-btn">
 								<button class="btn" type="button" id="searchBtnId"><span class="glyphicon glyphicon-search searchIcon"></span></button>
 							</span>
-			    </div><!-- input-group ends -->      
+					   -->
+			 <!--   </div> --> <!-- input-group ends -->       
 		</div>
 		 
-		<div id= PEOPLE_FINDER_CONTENT style="height:80%; overflow: auto; box-shadow: 0px 0px 5px #888888;">
-			<!--  	<div style="width: 100%; text-align: center; ">Location</div>
-			 	<input style="display: inline-block; width: 45%; text-align: center; " type="text"  placeholder="First Name" />
-			 	<input style="display: inline-block;  width: 45%; text-align: center;  " type="text"  placeholder="Last Name" />
-			 	
-			 	<input style="display: inline-block;  width: 45%; text-align: center;  " type="text"  placeholder="Age Group" />
-				<select>
-				  <option value="volvo">Gender</option>
-				  <option value="saab">Male</option>
-				  <option value="mercedes">Female</option>
-				</select>
-				<input style="display: inline-block;  width: 45%; text-align: center; " type="text"  placeholder="Religion" />
-				<input style="display: inline-block;  width: 45%; text-align: center;  " type="text"  placeholder="Ethnicity" />
-			 	
-			 	<div class="	common-dark-grey-btn111" style="text-align: center; background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">Education(+)</div>
-			 	<div class="	common-dark-grey-btn111" style="text-align: center;  background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">Professional(+)</div>
-			 	<div class="	common-dark-grey-btn111" style="text-align: center;  background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">Shop, Business, Company, Organization</div>
-		  	--> 
+		<div id= PEOPLE_FINDER_CONTENT style="height:80%; overflow: auto; padding: 5px 3px 5px 3px; box-shadow: 0px 0px 5px #888888;">  
+				<!-- 
+				<div style="width: 100%; text-align: center; background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px; ">
+					Location  
+				</div>
+				
+				<div class="row" style= "margin-top: 5px; width: 100%; margin-left: 0px; margin-right: 0px;">
+					<div class="col-xs-6" style= "padding:0px 2px 0px 0px;" >
+			 			<input style="display: inline-block; width: 100%; text-align: center; " type="text"  placeholder="First Name" />
+			 		</div>
+			 		<div class="col-xs-6" style= "padding:0px 0px 0px 2px;">
+			 			<input style="display: inline-block;  width: 100%; text-align: center;  " type="text"  placeholder="Last Name" />
+			 		</div>
+			 	</div>
+			 	 
+			 	<div class="row">
+			 		<div class="col-xs-3">
+				 		<input style="display: inline-block;  width: 45%; text-align: center;  " type="text"  placeholder="Age Group" />
+				 	</div>
+				 	
+				 	<div class="col-xs-3">
+						<select>
+						  <option value="volvo">Gender</option>
+						  <option value="saab">Male</option>
+						  <option value="mercedes">Female</option>
+						</select>
+					</div>
+					
+					<div class="col-xs-3">
+						<input style="display: inline-block;   text-align: center; " type="text"  placeholder="Religion" />
+					</div>
+					
+					<div>
+						<input style="display: inline-block;  text-align: center;  " type="text"  placeholder="Ethnicity" />
+					</div>
+				 	
+				 	<div class="	common-dark-grey-btn111" style="text-align: center; background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">Education(+)</div>
+				 	<div class="	common-dark-grey-btn111" style="text-align: center;  background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">Professional(+)</div>
+				 	<div class="	common-dark-grey-btn111" style="text-align: center;  background-color: #EEEEEE; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">Shop, Business, Company, Organization</div>
+		  	 	</div>
+		  	 -->
 		</div>  
 		 
 		<div id= PEOPLE_FINDER_SRCH_BUTTON style="position: fixed; bottom: 10px; text-align: center;  background-color: green; width: 100%; margin-top: 5px; padding-top:5px; padding-bottom: 5px; padding-left: 3px;">  
-		 	<div style="width: 100%; text-align: center;">Search</div>  
+		 	<div style="width: 100%; text-align: center; font-size: 14px; font-weight: bold;">Search</div>  
 		</div>
 		
 	</div>	
