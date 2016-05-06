@@ -1,0 +1,27 @@
+#MASTER_MENU {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left:0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	height: 100%; 
+	background-color: white;
+	z-index: 99999;
+
+	padding: 0px 0px 10px 0px;
+	
+	border-left111: 3px solid #558ED5;
+	border-right11: 3px solid #558ED5;
+	border: 1px solid #558ED5;
+	
+}
+
+#MASTER_MENU_TITLE_BAR {
+	background: -webkit-linear-gradient(#696969,#3f3f3f);
+	background: -o-linear-gradient(#696969,#3f3f3f);
+	background: -moz-linear-gradient(#696969,#3f3f3f);
+	background: linear-gradient(#696969,#3f3f3f);
+}

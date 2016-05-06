@@ -242,7 +242,7 @@ div {
 		width: 100%;
 	}
 	
-	#micro-pic {
+	#MASTER_MENU_ICON {
 		margin-left: 2px;
 	}
 	
@@ -306,7 +306,7 @@ div {
   		margin-left:auto;
   		margin-right: auto;
   	}
-  	.top-menu-content #micro-pic {  
+  	.top-menu-content #MASTER_MENU_ICON {  
   		margin-left:8px;
   		
   	}
@@ -316,7 +316,7 @@ div {
   	
   	.profile-header12345 #imgProfilePhoto {
   		margin-right: 177px;   
-  	}
+  	}    
   	  
   	.profile-header-content { 
   		width: 70%;
