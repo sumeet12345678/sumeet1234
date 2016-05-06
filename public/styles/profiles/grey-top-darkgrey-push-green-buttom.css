@@ -251,6 +251,10 @@ div {
 	}
   }
   
+ .footer-container div {
+ 	display: inline-block;
+ }
+  
   /* MEDIA SCREEN (tab and Ipad) */  
    @media screen and (min-width: 768px) and (max-width: 1024px) { 
 	 .pushContainer {
