@@ -11,21 +11,19 @@ $(function(){
 	
 //	$composerBottomBar.css('width', '-=80');  //Intial width during loading
 	
-	$('#plus').on('click', function(){
+	$('#plus').on('click', function() {
 		 
 		var $composerWrapper = $('.composerWrapper');     
 		 
-		$composerWrapper.css('bottom', FOOTER_BAR_HEIGHT); 
+		$composerWrapper.css('bottom', '77px'); 
 		//$composerWrapper.css('top', $footerBarHeight); 
 		$composerWrapper.toggleClass('visible');
 		 
 	}); 
-	
-	
-	
+	 
 	/* EXPAND AAK COMPOSER */
 	 
-	$('#MSG_COMPOSER_MAX_MIN').on('click', function(){
+	$('#MSG_COMPOSER_MAX_MIN').on('click', function() {
 		
 		if(composerCurrentSize == "MINIMIZED"){
 			 
@@ -36,7 +34,7 @@ $(function(){
 			minimizeComposer();  
 		}		 
 	 
-	});
+	}); 
 	
     $('#MSG_COMPOSER_MESSAGE_TEXTAREA').on('focus', function() {
     	//alert("Total Screen =  " + screen.height);
@@ -62,7 +60,7 @@ $(function(){
 	function minimizeComposer() {
 		
 		$composerWrapper.css('height', '120px');  
-		$composerWrapper.css('bottom', FOOTER_BAR_HEIGHT);  
+		$composerWrapper.css('bottom', '77px');  
 		$ccTextArea.css('display', 'none');///////
 		$chatTextArea.css('display', 'none');///////
 		$composerBottomBar.css('display', 'none');
