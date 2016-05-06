@@ -241,6 +241,14 @@ div {
 	.commonScreenSetting {
 		width: 100%;
 	}
+	
+	#micro-pic {
+		margin-left: 2px;
+	}
+	
+	#offersIcon {
+		margin-left: 2px;
+	}
   }
   
   /* MEDIA SCREEN (tab and Ipad) */  

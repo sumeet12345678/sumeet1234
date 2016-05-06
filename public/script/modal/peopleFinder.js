@@ -9,7 +9,7 @@ $(function() {
 	
 	
 	peopleFinderMinIcon.on('click', function(){
-		peopleFinder.toggle();
+		peopleFinder.toggle(); //remove duplicacy  
 	});
 	
 	
