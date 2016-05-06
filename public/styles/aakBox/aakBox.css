@@ -169,7 +169,7 @@ body.slide-active {
 		min-width: 60%;
 	}
 
-	.col-xs-2 {
+	.colXs2Custom {
 		/*margin-right: 5px;*/
 		padding: 0;
 		margin: 0 auto;

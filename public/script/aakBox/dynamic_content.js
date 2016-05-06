@@ -46,7 +46,7 @@ function viewUpdateList(string) {
 		outerDiv.style.margin = "7px 0px 7px 0px";
 		//outerDiv.style.bottom = "5px;";
 		
-		innerDiv1.className = 'col-xs-2';  innerDiv1.style.padding="0px 3px 0px 3px";   
+		innerDiv1.className = 'col-xs-2 colXs2Custom';  innerDiv1.style.padding="0px 3px 0px 3px";   
 		innerDiv2.className = 'col-xs-7'; innerDiv2.style.padding="0px 3px 0px 0px";  
 		innerDiv3.className = 'col-xs-3'; innerDiv3.style.padding="3px 3px 0px 0px"; 
 		paragraph.className = 'message';
