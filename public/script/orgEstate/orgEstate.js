@@ -5,7 +5,7 @@ $(function(){
 	var topMenuBarHeight = getTopMenuBarHeight();
 	
 	$('#ORG-ESTATE-BANNER').height(.45*centerScreenHeight);
-	$('#profileDescription').css('margin-top', getTopMenuBarHeight());
+	$('#profileDescription').css('margin-top', getTopMenuBarHeight()); 
 	
 	$('.ORG_ESTATE_MENU_ITEM').on('click', displayOrgEstateMstrMenu);
 	
