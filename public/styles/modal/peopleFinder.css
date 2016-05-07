@@ -40,6 +40,11 @@
 	 
 }
 
+.peopleFinderOptionsCloseBtn {
+	float: right;
+	margin-right: 3px;
+}
+
 .toggleBar {
 	background-color: #95B3D7;
 	padding-top: 10px;
