@@ -43,6 +43,7 @@
 .peopleFinderOptionsCloseBtn {
 	float: right;
 	margin-right: 3px;
+	cursor: pointer;
 }
 
 .toggleBar {
