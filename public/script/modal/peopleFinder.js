@@ -19,14 +19,21 @@
 								  ];
 
 */
-var peopleFinderOptionsId = ['PEOPLE_FINDER_EDUCATION','PEOPLE_FINDER_OCCUPATION','PEOPLE_FINDER_COMMUNITY','PEOPLE_FINDER_LIFESTYLE','PEOPLE_FINDER_HEALTH','PEOPLE_FINDER_SOCIAL'];
+var peopleFinderOptionsId = ['PEOPLE_FINDER_EDUCATION','PEOPLE_FINDER_OCCUPATION','PEOPLE_FINDER_COMMUNITY',
+                             'PEOPLE_FINDER_LIFESTYLE','PEOPLE_FINDER_HEALTH','PEOPLE_FINDER_SOCIAL', 'PEOPLE_FINDER_OUTLOOK', 'PEOPLE_FINDER_FINANCE', 'PEOPLE_FINDER_CAUSES'                                            
+                            ];
+
 var peopleFinderOptionsTitle = ["Education, School, Institute etc.",
                                 "Occupational, Professional ",
                                 "Community, Ethnicity, Spiritual, Faith etc.",
                                 "Life Style, Interests, Activities",
                                 "Health, Physical attributes ",
-                                "Social, Family"
+                                "Social, Family",
+                                "Outlook, Personality Type, World Views",
+                                "Financial",
+                                'Causes, Charity etc.'
                                 ];  
+
 var peopleFinderOptionsDeleted = []; //contains the index of deleted(removed from DOM) item from peopleFinderOptionsId array(peopleFinderOptionsId array will still contain the element
 
 var $peopleFinderContentDiv = $('#PEOPLE_FINDER_CONTENT');
