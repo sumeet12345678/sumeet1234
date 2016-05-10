@@ -49,6 +49,8 @@
 	text-align: right;
 	line-height: 3;
 	margin-top: 5px;
+	max-height: 300px; 
+	overflow: auto;
 }
 
 #MASTER_MENU_CONTENT {
