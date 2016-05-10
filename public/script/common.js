@@ -7,9 +7,14 @@ var SCREEN_HEIGHT_GLOBAL = screen.height;
 function showHideD360Icon(d360) {
        if(d360) {
     	   $('#d360').css({'visibility':'visible'});    
-       }
+       } 
 }
  
+function showHideFooterSearch(display) {
+	if(!display) {
+		 $('#FOOTER_SEARCH').hide();    
+	}
+}
 
 function getCenterScreenLayoutHeight() {
 	//var $viewPortHeight = $(window).height();screen.height;     
