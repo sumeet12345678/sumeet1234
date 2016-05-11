@@ -105,7 +105,9 @@ var aakInboxPopUpJson = [
 	  
 		$aakInboxPopUp.css('bottom', $footerBarHeight);  
 		//$composerWrapper.css('top', $footerBarHeight);   
-		 $aakInboxPopUp.toggleClass('visible');  
+		
+		// $aakInboxPopUp.toggleClass('visible');
+		hideAllPopUpMenus($aakInboxPopUp);
 		 
 		//Get height for the viewport and substract header and footer height to get the required height for mobile devices
 		// globalSunModalContext = "aakBox";

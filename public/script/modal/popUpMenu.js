@@ -93,7 +93,7 @@ var popUpMenuJson = [
 		var modal12335 = document.getElementById('POPUP_MENU_WRAPPER_ID');       
 		window.onclick = function(event) {  
 			 	
-			 
+			 //alert("hello");
 			 console.log("Id === "  + event.target.id);
 			 var mPopUp = document.getElementById('M_POPUP_WRAPPER_ID'); 
 			 console.log("modal123 TARGET === " + $.contains(modal12335, event.target));   

@@ -3,6 +3,8 @@ var CENTER_REGION_HEIGHT = getCenterScreenLayoutHeight();
 var FOOTER_BAR_HEIGHT = getFooterBarHeight();  
 var SCREEN_HEIGHT_GLOBAL = screen.height;
 
+var GLOBAL_POP_UP_ARRAY_LIST = ["plus", "AKK_OPTIONS_POPUP_ID", "sunIcon"," QUK_TOOL_ICON_ID", "imgProfilePhoto"];
+
 /* hides or displays sun icon */
 function showHideD360Icon(d360) {
        if(d360) {
@@ -10,7 +12,7 @@ function showHideD360Icon(d360) {
        } 
 }
  
-function showHideFooterSearch(display) {
+function showHideFooterSearch(display) {  
 	if(!display) {
 		 $('#FOOTER_SEARCH').hide();    
 	}
@@ -41,3 +43,26 @@ function getScreenWindowTotalHeight(){
 	return screen.height;
 }
 
+
+/* ALL POPUP'S ARRAY */
+function hideAllPopUpMenus(displayPopUp){
+	 
+	displayPopUp.removeClass('popUp');
+	$('.popUp').hide();
+	displayPopUp.toggle();
+	displayPopUp.addClass('popUp');
+}
+
+//window.onclick = function(event) {
+//////	alert("Event target Id ===   " + event.target.id);
+////	GLOBAL_POP_UP_ARRAY_LIST.forEach(function(menuId) {
+////		if(event.target.id === menuId){
+////			$("#" + menuId).toggle();
+////		}
+////		else {
+////			$("#" + menuId).hide();
+//	alert("inside window onClick");
+//	//$('.popUp').hide();
+// 	}
+////	});
+////}

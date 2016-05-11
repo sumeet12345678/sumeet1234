@@ -161,21 +161,21 @@ $(function(){
 			var pushContent = '<img id="offersIcon" height="17" width="17" class="pull-left" style="margin-right: 10px; margin-top:-2px" src="/media/images/icons/offers.png" />' + 
 				'<div style="display:inline-block;"> 3578/- of referrals, 29317/- of discounts.. <span class="blue-on-top-of-earth-color arrow-link">&gt;&gt;</span></div>';
 			
-				//$('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/offers.png');
-				//$('.top-push-zone .pushContainer #leftBlock').append($pushContent);
 			$('.top-push-zone .pushContainer #leftBlock').html(pushContent);
-			 $('.top-push-zone .pushContainer').removeClass("pushZoneActionMessage");
+			$('.top-push-zone .pushContainer').removeClass("pushZoneActionMessage");
 				
 			},1000);
 		
-		closeMpopUp();    
+		closeMpopUp();      
 			
 	}
 	 
 	//	
 	var iconClicked123;
 	
-	$('#sunIcon').on('click', function(event){
+	$('#sunIcon').on('click', function(event) {
+		
+		//hideAllPopUpMenus(); //common function for hiding all popups
 		
 		if(globalSunModalContext == "profile") {
 			//alert("in mpopUp.js == " +  globalSunModalContext);  
@@ -184,15 +184,23 @@ $(function(){
 			
 			
 		    iconClicked123 = event.target;    
-			//var $mPopUpWrapper = $('.mPopUpWrapper');   
 		    var $popUpWrapper = $('.mPopUpWrapper');  
-		  //var $topMenubarHeight = $('.top-menubar').height();    
 			var $footerBarHeight = $('#footerBarId').height();      			 
 			$popUpWrapper.css('bottom', $footerBarHeight);          
-			$popUpWrapper.toggleClass('visible');    
-						
+			//$popUpWrapper.toggleClass('visible');
+			 
+			//$popUpWrapper.toggle();
+			
+			
+			
+			
+			//$popUpWrapper.removeClass('popUp');
+			hideAllPopUpMenus($popUpWrapper);///////////////////////////////////////
+			
+			 
+			
 			//Get height for the viewport and substract header and footer height to get the required height for mobile devices
-		}
+		}  
 		else if(globalSunModalContext == "aakBox"){
 			generateAakInboxPop();
 			    
@@ -210,8 +218,8 @@ $(function(){
 	 
 	
 //	var mPopUp = document.getElementById('M_POPUP_WRAPPER_ID');        
-//	window.onclick = function(event) {  
-//		//alert("Name ===  " + event.target.id);
+	//window.onclick = function(event) {  
+	//	alert("Name ===  ytrrrrr" + event.target.id);
 //		 console.log("TARGET === " + $.contains(mPopUp, event.target));          
 //		
 //		    if (!((event.target == mPopUp) || ( $.contains(mPopUp, event.target)) || (event.target == iconClicked123))) {  
@@ -220,6 +228,6 @@ $(function(){
 //		    	$('.mPopUpWrapper').removeClass('visible');      
 //		    }  
 //		    
-//	}
+	//}
 	 
 });

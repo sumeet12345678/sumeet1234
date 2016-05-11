@@ -32,7 +32,10 @@
 	  
 		$aakOptionsPopUp.css('bottom', $footerBarHeight);  
 		//$composerWrapper.css('top', $footerBarHeight);   
-		$aakOptionsPopUp.toggleClass('visible');  
+		
+		//$aakOptionsPopUp.toggleClass('visible');  
+		
+		hideAllPopUpMenus($aakOptionsPopUp);
 		 		 
  }
  

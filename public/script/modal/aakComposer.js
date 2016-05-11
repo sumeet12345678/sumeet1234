@@ -7,7 +7,7 @@ $(function(){
 	var $composerWrapper = $('.composerWrapper');
 	var $ccTextArea = $('#MSG_COMPOSER_CC_TEXTAREA');
 	var $chatTextArea = $('#MSG_COMPOSER_CHAT_TEXTAREA');
-	var $composerBottomBar = $('#MSG_COMPOSER_BOTTOM_BAR');
+	var $composerBottomBar = $('#MSG_COMPOSER_BOTTOM_BAR');  
 	
 //	$composerBottomBar.css('width', '-=80');  //Intial width during loading
 	
@@ -17,7 +17,8 @@ $(function(){
 		 
 		$composerWrapper.css('bottom', '77px'); 
 		//$composerWrapper.css('top', $footerBarHeight); 
-		$composerWrapper.toggleClass('visible');
+		//$composerWrapper.toggleClass('visible');
+		hideAllPopUpMenus($composerWrapper);
 		 
 	}); 
 	 

@@ -49,11 +49,16 @@ $(function(){
 		$rightBar.css('height', $viewPortHeight - (90 + $footerBarHeight)); // 90 = 45 + 45 for top bar and left bar
 		$bottomBar.css('bottom',  $footerBarHeight);
 		
-		//hide or show bars  
+		  
 		$leftBar.toggle();    
 		$rightBar.toggle();
 		$bottomBar.toggle();
 		$topBar.toggle();  
+		
+		//hideAllPopUpMenus([$leftBar,$rightBar,$bottomBar, $topBar]);  
+//		hideAllPopUpMenus($rightBar);
+//		hideAllPopUpMenus($bottomBar);
+//		hideAllPopUpMenus($topBar);
 		
 		
 		//$('#QUK_TOOL_BOTTOM_BAR').css('height', $viewPortHeight - $footerBarHeight);

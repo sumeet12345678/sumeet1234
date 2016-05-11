@@ -32,7 +32,7 @@ $(function(){
 	$('#ORG_ESTATE_SLIDING_MENU_BAR_CONTAINER').css('bottom', getFooterBarHeight())	;
 	
 	
-	$('#ORG_ESTATE_SLIDING_MENU_ICON').on('click', showHideOrgEstaateSlidingMenu);  
+	$('.ORG_ESTATE_SLIDING_MENU_ICON').on('click', showHideOrgEstateSlidingMenu);  
 	
 
 
@@ -49,13 +49,25 @@ $(function(){
 		
 	}
 	
-	function showHideOrgEstaateSlidingMenu() {
+	 function showHideOrgEstateSlidingMenu() {
+
+		var element = $('#ORG_ESTATE_SLIDING_MENU_BAR'); 
+		element.fadeToggle(500);
+		 $(this).toggle();
+		 $(this).siblings().toggle();
+	 }
+	
+	
+	/*
+	  function showHideOrgEstateSlidingMenu() {
+		  	
+		  
 			var element = $('#ORG_ESTATE_SLIDING_MENU_BAR'); 
 			element.fadeToggle(500);    
 			
 			var $sliderIcon = $('#ORG_ESTATE_SLIDING_MENU_ICON');
 			
-			if($sliderIcon.hasClass('leftArrow')){
+			if($sliderIcon.hasClass('leftArrow')) {
 				//$sliderIcon.css('background', '#000');
 				$sliderIcon.css('background', 'linear-gradient(#696969,#3f3f3f)');
 				$sliderIcon.attr('src', "/media/images/icons/arrow-right-xxl.png");
@@ -69,7 +81,7 @@ $(function(){
 				$sliderIcon.removeClass('rightArrow');
 				$sliderIcon.addClass('leftArrow');
 			}
-	}
+	}  */
 });
 
 
