@@ -136,8 +136,8 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 	});
 	
 	
-	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD style= "border-radius: 5px; width: 50px; height: 40px; float: right; margin-top: 8px; background-color: grey;">' +
-							'<img style="margin-left: 10px; margin-top: 5px;"  width="30" height="30" src="/media/images/icons/add.png" /></div>');
+	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD class="earth-gradient-bg" style= "border-radius: 5px; width: 50px; height: 40px; float: right; margin-top: 8px; background-color: #fff;">' +
+							'<img style="margin-left: 10px; margin-top: 5px;"  width="30" height="30" src="/media/images/icons/green-add-search-criteria.png" /></div>');
 	
 	
 	

@@ -11,7 +11,7 @@
 	background-color: white;
 	z-index: 99999;
 
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0px 8px 0px;
 	
 	border-left111: 3px solid #558ED5;
 	border-right11: 3px solid #558ED5;
@@ -38,9 +38,11 @@
 	font-weight: bold;
 	cursor: pointer;
 	text-align11: right;
+	
+	border-radius: 3px;
 }  
 
-.masterMenuToggleBar:hover {
+.masterMenuToggleBar:hover11111111 {
 	background-color12345: #91B535;
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
@@ -49,8 +51,25 @@
 	color: #fff;
 }
 
+.masterMenuToggleBar:hover  {
+	background: -webkit-linear-gradient(#696969,#3f3f3f);
+	background: -o-linear-gradient(#696969,#3f3f3f);
+	background: -moz-linear-gradient(#696969,#3f3f3f);
+	background: linear-gradient(#696969,#3f3f3f);
+	color: #fff;
+}
+
+
+
+}
+
 .white-text {
 	color: #fff;  
+}
+
+.green-text {
+	color:  #AAD147;
+	
 }
 
 .green-toggle-bar{
@@ -85,7 +104,11 @@
 #MASTER_MENU_CONTENT {
 	padding-left: 3px;
 	padding-right: 3px;	
-	padding-bottom: 100px;
+	padding-bottom: 8px;
+}
+
+.masterMenuTabContent {
+	display: none;
 }
 
 input {

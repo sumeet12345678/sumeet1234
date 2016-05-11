@@ -25,14 +25,21 @@ $(function() {
 		element.siblings('.masterMenuOptions').toggle();
 		element.children('.expandIcon').toggle();
 		//$(this).css('color', '#fff');
-		element.toggleClass('white-text');
-		element.toggleClass('green-toggle-bar');
+		element.toggleClass('green-text');
+		//element.toggleClass('green-toggle-bar');
+		element.toggleClass('earth-gradient-bg')
 		//element.css('background-color', '#91B535');
 	});
 	
+	$('#MASTER_MENU_PROFILE_ICON').on('click', function() {
+		$('#MASTER_MENU_BANNER').css('display','block');
+		$('#MASTER_MENU_CONTENT').css('display','none');
+	});
 	
-	
-	
+	$('#MASTER_MENU_QUESTION_ICON').on('click', function() {
+		$('#MASTER_MENU_BANNER').css('display','none');
+		$('#MASTER_MENU_CONTENT').css('display','block');
+	});
 	
 	
 	
