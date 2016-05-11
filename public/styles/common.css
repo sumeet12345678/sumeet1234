@@ -1,6 +1,9 @@
-.earth-gradient-bg {
+.earth-gradient-bg11 {
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
 	background: -moz-linear-gradient(#696969,#3f3f3f);
 	background: linear-gradient(#696969,#3f3f3f);
+	color: #fff;
 }
+
+ 
