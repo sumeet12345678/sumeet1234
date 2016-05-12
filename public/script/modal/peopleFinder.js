@@ -23,6 +23,10 @@ var peopleFinderOptionsId = ['PEOPLE_FINDER_EDUCATION','PEOPLE_FINDER_OCCUPATION
                              'PEOPLE_FINDER_LIFESTYLE','PEOPLE_FINDER_HEALTH','PEOPLE_FINDER_SOCIAL', 'PEOPLE_FINDER_OUTLOOK', 'PEOPLE_FINDER_FINANCE', 'PEOPLE_FINDER_CAUSES'                                            
                             ];
 
+var peopleFinderOptionsIcon = ['<img style="" width="28" height="28" src="/media/images/icons/school-white.png"/>&nbsp;&nbsp;','<img style="" width="28" height="28" src="/media/images/icons/resume-circle-white.png"/>&nbsp;&nbsp;','<img style="" width="28" height="28" src="/media/images/icons/community-group-white.png"/>&nbsp;&nbsp;',
+                             '<img style="" width="28" height="28" src="/media/images/icons/interests-white.png"/>&nbsp;&nbsp;','<img style="" width="28" height="28" src="/media/images/icons/wellness-white.png"/>&nbsp;&nbsp;','<img style="" width="28" height="28" src="/media/images/icons/relationships_white.png"/>&nbsp;&nbsp;', '<img style="" width="28" height="28" src="/media/images/icons/thumbs-up-white.png"/>&nbsp;&nbsp;', '<img style="" width="28" height="28" src="/media/images/icons/banknotes-white.png"/>&nbsp;&nbsp;', '<img style="" width="28" height="28" src="/media/images/icons/bulb-enlightenment-white.png"/>&nbsp;&nbsp;'                                            
+                            ];
+
 var peopleFinderOptionsTitle = ["Education, School, Institute etc.",
                                 "Occupational, Professional ",
                                 "Community, Ethnicity, Spiritual, Faith etc.",
@@ -128,7 +132,7 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 //	var $peopleFinderContentDiv = $('#PEOPLE_FINDER_CONTENT');
 	
 	peopleFinderOptionsId.forEach( function(item, index) {    
-		var el = $('<div id='+ item + ' class= "toggle-bar-menu"><span class="expandIcon">+</span>'+
+		var el = $('<div id='+ item + ' class= "toggle-bar-menu">'+ peopleFinderOptionsIcon[index] +
 				peopleFinderOptionsTitle[index] + '<span class="peopleFinderOptionsCloseBtn">X</span></div>');  
 		
 		$peopleFinderContentDiv.append(el);
