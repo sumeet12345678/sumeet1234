@@ -4,7 +4,7 @@ $(function() {
 	var masterMenuIcon = $('#MASTER_MENU_ICON');
 	var masterMenuMinIcon = $('#MASTER_MENU_MIN_ICON');
 	//var expandIcon = $('.expandIcon');
-	var masterMenuToggleBar = $('.masterMenuToggleBar');
+	var masterMenuToggleBar = $('.master-menu-content-toggleBar');
 	
 	masterMenu.css('height', SCREEN_HEIGHT_GLOBAL);
 	
@@ -25,7 +25,7 @@ $(function() {
 		element.siblings('.masterMenuOptions').toggle();
 		element.children('.expandIcon').toggle();
 		//$(this).css('color', '#fff');
-		element.toggleClass('green-text');
+		element.children('.barTitle').toggleClass('green-text');
 		//element.toggleClass('green-toggle-bar');
 		element.toggleClass('earth-gradient-bg')
 		//element.css('background-color', '#91B535');

@@ -80,12 +80,17 @@ var aakInboxPopUpJson = [
  	 
 			var category = element;  
 			var subCategory = category.subCategory;   
- 	
-			var categoryDiv = $('<div class="categoryTitle">'+ category.title +'</div>');
-	 
+			
+			var menuWrapperDiv = $('<div></div>');
+			var categoryDiv = $('<div class="categoryTitle toggle-bar-menu">'+ category.title +'</div>');
+			
+			menuWrapperDiv.append(categoryDiv);
+			
+			
+			
 			subCategory.forEach(function(subElement) {    	
 			    					
-			   var subCategoryDiv = $('<a href="/aakBox?categoryId=' + subElement.id + '"><div class="subCategoryTitle">'+ subElement.title +'</div></a>'); 
+			var subCategoryDiv = $('<a href="/aakBox?categoryId=' + subElement.id + '"><div class="subCategoryTitle">'+ subElement.title +'</div></a>'); 
 			   //subCategoryDiv.on('click', );
 			   categoryDiv.append(subCategoryDiv);
 			   

@@ -19,14 +19,14 @@
 	
 }
 
-#MASTER_MENU_TITLE_BAR {
+#MASTER_MENU_TITLE_BAR111 {
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
 	background: -moz-linear-gradient(#696969,#3f3f3f);
 	background: linear-gradient(#696969,#3f3f3f);
 }
 
-.masterMenuToggleBar {
+.masterMenuToggleBar111555 {
 	background-color: #95B3D7;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -51,7 +51,7 @@
 	color: #fff;
 }
 
-.masterMenuToggleBar:hover  {
+.masterMenuToggleBar:hover5555  {
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
 	background: -moz-linear-gradient(#696969,#3f3f3f);
@@ -61,23 +61,14 @@
 
 
 
- .earth-gradient-bg {
-	background: -webkit-linear-gradient(#696969,#3f3f3f);
-	background: -o-linear-gradient(#696969,#3f3f3f);
-	background: -moz-linear-gradient(#696969,#3f3f3f);
-	background: linear-gradient(#696969,#3f3f3f);
-	color: #fff;
-}
+
  
 
 .white-text {
 	color: #fff;  
 }
 
-.green-text {
-	color:  #AAD147;
-	
-}
+
 
 .green-toggle-bar{
 	background-color: #91B535;

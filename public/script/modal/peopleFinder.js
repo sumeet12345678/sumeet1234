@@ -128,7 +128,7 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 //	var $peopleFinderContentDiv = $('#PEOPLE_FINDER_CONTENT');
 	
 	peopleFinderOptionsId.forEach( function(item, index) {    
-		var el = $('<div id='+ item + ' class= "toggleBar"><span class="expandIcon">+</span>'+
+		var el = $('<div id='+ item + ' class= "toggle-bar-menu"><span class="expandIcon">+</span>'+
 				peopleFinderOptionsTitle[index] + '<span class="peopleFinderOptionsCloseBtn">X</span></div>');  
 		
 		$peopleFinderContentDiv.append(el);
