@@ -20,30 +20,31 @@
 	}); 
 	 
 	   
- function generateAakOptionsInboxPop(){
-	//Clear and recreate the popup menu
-		var aakOptionsPopUpMenuContainer = $('.aakOptionsPopUp #AAK_OPTIONS_POPUP_MENU_WRAPPER_ID');  
-		aakOptionsPopUpMenuContainer.empty();        
-		//$('.aakInboxPopUp').css('display','none');  
+ function generateAakOptionsInboxPop() {
+	 	$('#AAK_OPTIONS_POPUP_WRAPPER').toggle();
     
-		var $aakOptionsPopUp = $('.aakOptionsPopUp');      
-		//var $topMenubarHeight = $('.top-menubar').height();  
-		var $footerBarHeight = $('#footerBarId').height();    
+		var $aakOptionsPopUp = $('#AAK_OPTIONS_POPUP_MENU_WRAPPER_ID');      
 	  
-		$aakOptionsPopUp.css('bottom', $footerBarHeight);  
-		//$composerWrapper.css('top', $footerBarHeight);   
+		$aakOptionsPopUp.css('bottom', FOOTER_BAR_HEIGHT);  
+		 
+		$aakOptionsPopUp.css('height', .7 * CENTER_REGION_HEIGHT);      //BUG HERE 70% 0F..
 		
-		//$aakOptionsPopUp.toggleClass('visible');  
+		
+		
+		//$aakOptionsPopUp.height(CENTER_REGION_HEIGHT);
+		
+		console.log("Full Screen == " + SCREEN_HEIGHT_GLOBAL);
+		console.log("Center == " + CENTER_REGION_HEIGHT);
+		console.log("Top Menu == " + TOP_MENU_BAR_HEIGHT );
+		console.log("Footer == " + FOOTER_BAR_HEIGHT);
+		
+		
+		
 		
 		hideAllPopUpMenus($aakOptionsPopUp);
 		 		 
  }
  
- 
-		//close the Dialog box  
-//		function closeDialog()  {
-//			$('.inboxPopUp').css('display','none');        
-//		}
-	
+  
 
 		 

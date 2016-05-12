@@ -1,12 +1,52 @@
-		<script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
-        <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-         
+<script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+var treeMenuDepth1Data = [ 
+                          {
+                     		"label": 'Deals, Promos',
+                     		"id": '',
+                     		"icon": '.png',
+                     		"items": [{
+                     			"label" : 'Groceries',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		},
+                     		{
+                     			"label" : 'Electronics',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		}
+                     		]	 
+                     	 },
+                     	 {
+                     		"label" : 'Alerts',
+                     		"id" : '',
+                     		"icon" : '.png',
+                     		"items" : [{
+                     			"label" : 'Banking',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		},
+                     		{
+                     			"label" : 'Jobs',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		}
+                     		]	 
+                     	 }
+                     	 ];
+</script>
+
+
+
+       
  <% include ../modal/mPopUp.ejs %> 
  <% include ../modal/aakComposer.ejs %>
  <% include ../modal/quickTool.ejs %> 
  <% include ../modal/aakInboxPopUp.ejs %>   
  <% include ../aakBox/aakOptionsPopUp.ejs %>           
- 
+ <% include ../common/treeMenuDepth1.ejs %>
 
 <div class="row footer menubar-footer navbar-fixed-bottom container-fluid" id="footerBarId" style="">       
 
@@ -18,6 +58,7 @@
       			<tr>      				
       				<td width="16.66666667" valign = middle align = left>      					
       						  <img id=AKK_OPTIONS_POPUP_ID width="28" height="28" src="/media/images/icons/3dots_vert_white.png" /> 
+      						  <img id=AKK_OPTIONS_TRIAL_ICON width="28" height="28" src="/media/images/icons/lifestyle_illustration.png" />
       						 					
       				</td>
       				 
@@ -26,7 +67,7 @@
       					 	<img  id="sunIcon" class="profileContext" width="30" height="30" src="/media/images/icons/folders-white.png"/>   
       					</div>					      						
       				</td>
-      				
+      			 
       				<td width="16.66666667" valign = middle align = left>      					
       						
       						<img id= "FOOTER_SEARCH" style="" width="30" height="30" src="/media/images/icons/search-gls-white.png" /> 

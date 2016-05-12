@@ -61,12 +61,12 @@ var aakInboxPopUpJson = [
 
 
 
- $(function(){
-		
-		$('#AAK_INBOX_POPUP_ID').on('click', function() {
-			generateAakInboxPop();
-		}); 
-	});
+// $(function(){
+//		
+//		$('#AAK_INBOX_POPUP_ID').on('click', function() {
+//			generateAakInboxPop();
+//		}); 
+//	});
 
   		
  function generateAakInboxPop(){

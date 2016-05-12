@@ -1,3 +1,38 @@
+treeMenuDepth1Data = [ 
+                          {
+                     		"label": '1111111111111111111111',
+                     		"id": '',
+                     		"icon": '.png',
+                     		"items": [{
+                     			"label" : 'Groceries',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		},
+                     		{
+                     			"label" : 'Electronics',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		}
+                     		]	 
+                     	 },
+                     	 {
+                     		"label" : 'Alerts',
+                     		"id" : '',
+                     		"icon" : '.png',
+                     		"items" : [{
+                     			"label" : 'Banking',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		},
+                     		{
+                     			"label" : 'Jobs',
+                     			"id" : '',
+                     			"icon" : '.png'
+                     		}
+                     		]	 
+                     	 }
+                     	 ];
+
 
 
 
@@ -173,7 +208,12 @@ $(function(){
 	//	
 	var iconClicked123;
 	
-	$('#sunIcon').on('click', function(event) {
+	
+	$('#sunIcon').on('click', treeMenuDepth1);
+	
+	
+	
+	/**$('#sunIcon').on('click', function(event) {
 		
 		//hideAllPopUpMenus(); //common function for hiding all popups
 		
@@ -206,7 +246,7 @@ $(function(){
 			    
 			}
 			
-		}); 
+		}); */
 	  
 	
 	//Closes the dialog box after upadation of push zone  
