@@ -77,23 +77,6 @@ $(function() {
 			$('#' + peopleFinderOptionsId[indexToDisplay]).show();
 		}
 		
-		
-//		var indexToDisplay = peopleFinderOptionsDeleted.pop();
-//		
-//		if(indexToDisplay != undefined) {
-			//var closeBtnSpan = $('<span class="peopleFinderOptionsCloseBtn">X</span>');  
-//			closeBtnSpan.on('click', function(){
-//				closeOptions($(this));
-//			});
-//			
-//			var el = $('<div id='+ peopleFinderOptionsId[indexToDisplay] + ' class= "toggleBar"><span class="expandIcon">+</span>'+
-//					peopleFinderOptionsTitle[indexToDisplay] + '<div>');  
-//			el.append(closeBtnSpan);
-			
-		//	$peopleFinderContentDiv.append(el);
-			//el.insertBefore($('#PEOPLE_FINDER_ADD'));
-		//}
-		
 	});
 	
 	function findPeople() {  
@@ -115,21 +98,6 @@ $(function() {
 
 function populatePeopleFinderOptions(peopFinderOptionsArray) {
 	
-//	var $peopleFinderContentDiv = $('#PEOPLE_FINDER_CONTENT');
-//	
-//	peopFinderOptionsArray.forEach( function(item) {
-//		var el = $('<div id='+ item.id + ' class= "toggleBar"><span class="expandIcon">+</span>'+
-//					item.title + '<span class="peopleFinderOptionsCloseBtn">X</span></div>');  
-//		
-//		$peopleFinderContentDiv.append(el);
-//	
-//	});
-//	
-//	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD style= "border-radius: 5px; width: 50px; height: 40px; float: right; margin-top: 8px; background-color: grey;">' +
-//							'<img style="margin-left: 10px; margin-top: 5px;"  width="30" height="30" src="/media/images/icons/add.png" /></div>');
-//	
-	
-//	var $peopleFinderContentDiv = $('#PEOPLE_FINDER_CONTENT');
 	
 	peopleFinderOptionsId.forEach( function(item, index) {    
 		var el = $('<div id='+ item + ' class= "toggle-bar-menu">'+ peopleFinderOptionsIcon[index] +
@@ -146,4 +114,20 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 	
 	
 }
+
+
+
+
+$('#FIND_PEOPLE_BUTTON').on('click', function() {
+	$('#PEOPLE_NOTIFICATION').css('display', 'none');
+	$('#FIND_PEOPLE').css('display', 'block');
+	$('#FIND_PEOPLE_BUTTON').text('People Finder');
+});
+
+
+$('#STATS_FROM_PEOPLE').on('click', function() {
+	$('#PEOPLE_NOTIFICATION').css('display', 'block');
+	$('#FIND_PEOPLE').css('display', 'none');
+	$('#FIND_PEOPLE_BUTTON').text('Find People');
+});
 
