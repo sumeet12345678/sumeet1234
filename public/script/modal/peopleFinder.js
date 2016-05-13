@@ -27,15 +27,15 @@ var peopleFinderOptionsIcon = ['<img style="" width="28" height="28" src="/media
                              '<img style="" width="28" height="28" src="/media/images/icons/interests-white.png"/>&nbsp;&nbsp;','<img style="" width="28" height="28" src="/media/images/icons/wellness-white.png"/>&nbsp;&nbsp;','<img style="" width="28" height="28" src="/media/images/icons/relationships_white.png"/>&nbsp;&nbsp;', '<img style="" width="28" height="28" src="/media/images/icons/thumbs-up-white.png"/>&nbsp;&nbsp;', '<img style="" width="28" height="28" src="/media/images/icons/banknotes-white.png"/>&nbsp;&nbsp;', '<img style="" width="28" height="28" src="/media/images/icons/bulb-enlightenment-white.png"/>&nbsp;&nbsp;'                                            
                             ];
 
-var peopleFinderOptionsTitle = ["Education, School, Institute etc.",
-                                "Occupational, Professional ",
-                                "Community, Ethnicity, Spiritual, Faith etc.",
-                                "Life Style, Interests, Activities",
-                                "Health, Physical attributes ",
-                                "Social, Family",
-                                "Outlook, Personality Type, World Views",
+var peopleFinderOptionsTitle = ["Education, School, Institute",
+                                "Professional, Occupational",
+                                "Community, Ethnicity, Faith",
+                                "Activities, Interests",
+                                "Physique, Appearance, Health,  ",
+                                "Family, Lifestyle, Social ",
+                                "Personality, Outlook",
                                 "Financial",
-                                'Causes, Charity etc.'
+                                'Projects, Initiatives, Causes'
                                 ];  
 
 var peopleFinderOptionsDeleted = []; //contains the index of deleted(removed from DOM) item from peopleFinderOptionsId array(peopleFinderOptionsId array will still contain the element
@@ -100,28 +100,55 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 	
 	
 	peopleFinderOptionsId.forEach( function(item, index) {    
+		var outerDiv = $('<div></div>');
 		var el = $('<div id='+ item + ' class= "toggle-bar-menu">'+ peopleFinderOptionsIcon[index] +
-				peopleFinderOptionsTitle[index] + '<span class="peopleFinderOptionsCloseBtn">X</span></div>');  
-		
-		$peopleFinderContentDiv.append(el);
+				  peopleFinderOptionsTitle[index] + '<div style = "display: inline-block; width: 50px; height: 100%;" class="peopleFinderOptionsCloseBtn"><img  style="float: right; margin-top: 5px;" width="15" height="15" src="/media/images/icons/x-mark-white.png"/></div></div>'); 
+		outerDiv.append(el);
+		$peopleFinderContentDiv.append(outerDiv);
 	
 	});
 	
 	
-	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD class="earth-gradient-bg" style= "border-radius: 5px; width: 50px; height: 40px; float: right; margin-top: 8px; background-color: #fff;">' +
-							'<img style="margin-left: 10px; margin-top: 5px;"  width="30" height="30" src="/media/images/icons/green-add-search-criteria.png" /></div>');
+	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD  style= "float: right; margin-top: 3px;">' +
+							'<img style="margin-left: 10px;"  width="30" height="30" src="/media/images/icons/add-black.png" /></div>');
 	
 	
 	
 }
 
 
+$('#FIND_PEOPLE_BUTTON').on('click', function() {  
+	$('#PEOPLE_NOTIFICATION').css('display', 'none');
+	$('#FIND_PEOPLE').css('display', 'block');
+	$('#PEOPLE_FIND_SUBMIT').css('display', 'inline-block');
+	$('#FIND_PEOPLE_REFRESH_ICON').css('display', 'inline-block');
+	//$('#FIND_PEOPLE_BUTTON').text('Find');
+	 
+	
+	$(this).css('display', 'none');
+});
 
 
+$('#STATS_FROM_PEOPLE').on('click', function() {
+	 
+	$('#PEOPLE_NOTIFICATION').css('display', 'block');
+	$('#FIND_PEOPLE').css('display', 'none');
+	//('#FIND_PEOPLE_BUTTON').text('Find People');
+	 
+	$('#FIND_PEOPLE_BUTTON').css('display', 'inline-block');
+	$('#PEOPLE_FIND_SUBMIT').css('display', 'none');
+	$('#FIND_PEOPLE_REFRESH_ICON').css('display', 'none');
+	
+});
+
+
+
+/*
 $('#FIND_PEOPLE_BUTTON').on('click', function() {
 	$('#PEOPLE_NOTIFICATION').css('display', 'none');
 	$('#FIND_PEOPLE').css('display', 'block');
-	$('#FIND_PEOPLE_BUTTON').text('People Finder');
+	$('#FIND_PEOPLE_BUTTON').text('Find');
+	$('#FIND_PEOPLE_BUTTON').css('background-color', '#91B535');
 });
 
 
@@ -129,5 +156,15 @@ $('#STATS_FROM_PEOPLE').on('click', function() {
 	$('#PEOPLE_NOTIFICATION').css('display', 'block');
 	$('#FIND_PEOPLE').css('display', 'none');
 	$('#FIND_PEOPLE_BUTTON').text('Find People');
+	$('#FIND_PEOPLE_BUTTON').css('background-color', '#91B535');
 });
+*/
+$('.toggle-bar-menu'). on('click', function() { 
+	$(this).siblings().toggle();
+});
+
+
+
+
+
 

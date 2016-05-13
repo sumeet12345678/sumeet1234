@@ -69,17 +69,34 @@
 	background: linear-gradient(#696969,#3f3f3f); 
 }
 
-#PEOPLE_FINDER_BOTTOM_BAR {
-	width: 100%;
+ 
+
+#PEOPLE_FINDER_DEMOGRAPHY_FORM tr {
+	margin-top5555: 55px;	
 }
+
+#PEOPLE_FINDER_DEMOGRAPHY_FORM input {
+	height: 30px;
+	min-width: 80px;
+}
+
+
+
+#PEOPLE_FINDER_DEMOGRAPHY_FORM select {
+	height: 30px;
+	max-width: 80px;
+}
+ 
+ #PEOPLE_FINDER_DEMOGRAPHY_FORM td {
+ 	padding: 5px;
+ }
+ 
+ 
 
  /* MEDIA SCREEN (tab and Ipad) */  
    @media screen and (min-width: 768px) { 
 	#PEOPLE_TOPBAR_TABLE {
 		width111: 70%;
 	}
-	#PEOPLE_FINDER_BOTTOM_BAR {
-		width: 70%;
-	}
-	
+	 
   }
