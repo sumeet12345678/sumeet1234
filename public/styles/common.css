@@ -1,3 +1,47 @@
+ body, html {
+ 	margin: 0px;
+ 	padding: 0px;  
+ }
+ 
+ .website-screen-width_dt {
+ 	width: 70%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ 
+ /* ---------------------- COMMON TOP MENU BAR STYLE --------------------------- */
+	
+ #COMMON_TOP_BAR {
+ 	height: 66px;
+ 	position: fixed;
+ 	top: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	right: 0;  
+ 	background-color: blue;
+ }
+ 
+ #COMMON_TOP_BAR_MENU {
+ 	height: 44px;
+ 	background-color11: orange;
+ }
+ 
+ 
+ /* ---------------------- COMMON TOP MENU BAR STYLE --------------------------- */
+ 
+ #COMMON_FOOTER_BAR {
+ 	background-color: yellow;
+ 	height: 42px;
+ 	position: fixed;
+ 	bottom: 0;
+ 	left: 0;
+ 	right: 0;  
+ }
+ 
+ 
+ 
+ /*    ---------------------        */
  .earth-gradient-bg {
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);

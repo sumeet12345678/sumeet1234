@@ -1,49 +1,176 @@
-<!doctype>
-<html>
-	<head>	  	 
-		<link rel="stylesheet" href="/styles/modal/quickTool.css">
-		 	
-	</head>	
-	
-	<body>	
-	<!--  width of left and right bar should be set equal to height of top bar -->
-		  
-			<div id=QUK_TOOL_TOP_BAR class= "" style=""></div>  
-			
-		
-		 	<div id=QUK_TOOL_LEFT_BAR class= "" style=''></div>
-			<div id=QUK_TOOL_RIGHT_BAR class= "" style=''></div>
-			
+<!-- <html>
+<head>
+    <style type="text/css">
 		 
-			<div id="QUK_TOOL_BOTTOM_BAR" class= "" style="">  
-					<!-- <img   src="/media/images/icons/left-round-xxl.png" style="float:left;" height="28" width="28">
-					<img   src="/media/images/icons/right-round-xxl.png" style="float:right;" height="28" width="28">
-					--> 
-			</div>      
+    </style>
+
+</head>
+<link rel="stylesheet" href="styles/div.css">
+    <body>
+
+        
+
+        <div id="QUK_TOOL_TOP_BAR" align="center">2
+            
+        </div>
+        
+
+        <div id="QUK_TOOL_LEFT_BAR">3
+            
+        </div>
+
+        <div id="QUK_TOOL_RIGHT_BAR">1
+           
+        </div>
+
+        <div id="QUK_TOOL_BOTTOM_BAR">
+        
+            <img src="image/arrowLeft.png" id="left_Arrow" alt="left arrow" height="50px" width="30px" style="margin-right: 30px; margin-top: 10px;">
+            <img src="image/arrowRight.png" id="right_Arrow" alt="right arrow" height="50px" width="30px" style="margin-left: 30px; margin-top: 10px;">
+            
+        </div>
+         
+
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+         
+         
+         
+         
+         
+         
+         
+         
+    
+         <script type="text/javascript">
+         /*  var images = ['image/e.jpg','image/f1-2012.png', 'image/sdogs.png', 'image/play.png', 'image/view.png','image/essentials.png','image/drivers.png','image/delete.png','image/install.png','image/gtrailers.png','image/walls.png','image/mtrailers.png','image/lecture.png','image/1.jpg','image/2.jpg','image/4.jpg','image/5.jpg','image/1.jpg','image/c.jpg','image/d.jpg']; */
+         
+          var images = ['image/e.jpg','image/f1-2012.png', 'image/sdogs.png', 'image/play.png', 'image/view.png',
+                        'image/essentials.png','image/drivers.png','image/delete.png','image/install.png','image/gtrailers.png',
+                        'image/walls.png','image/mtrailers.png','image/lecture.png','image/1.jpg','image/2.jpg','image/4.jpg','image/5.jpg',
+                        'image/1.jpg','image/c.jpg','image/d.jpg'];
+         
+            $(document).ready(function() 
+            {
  
- <!-- 
- 		 <div class="quk_tool">  
-			<div id=QUK_TOOL_TOP_BAR style='height:10%; background-color: #404040;'></div>  
-			
-			
-			<div id=QUK_TOOL_LEFTBAR_RIGHTBAR_CONTAINER style="position1:relative; height: 80%; background-color: transparent;">
-				 <div id=QUK_TOOL_LEFT_BAR style='height:100%;background-color: #404040;float:left;'></div>
-				 <div id=QUK_TOOL_RIGHT_BAR style='height:100%; background-color: #404040; float:right;'></div>  
-			</div>
-			
-			<div id=QUK_TOOL_BOTTOM_BAR_ID style='height:10%; background-color: #404040; text-align:center;'>
-				<div id="QUK_TOOL_BOTTOM_BAR_ICONS_DIV" style="display:inline-block; width:40%; margin-top:15px;">  
-					<img   src="/media/images/icons/left-round-xxl.png" style="float:left;" height="28" width="28">
-					<img   src="/media/images/icons/right-round-xxl.png" style="float:right;" height="28" width="28"> 
-				</div>      
-			</div>  
-		</div>
+                       $('#left_Arrow').on('click',function() 
+                        {
+                            clearAllBars();
+                            leftArrow();
+                            image();
+                        });
+
+                        $('#right_Arrow').on('click', function() 
+                        { 
+                            clearAllBars();
+                            rightArrow();
+                            image();
+                            
+                        });
+                  
+                    function clearAllBars()
+                        {
+                            $('#QUK_TOOL_LEFT_BAR').html("");
+                            $('#QUK_TOOL_RIGHT_BAR').html("");
+                            $('#QUK_TOOL_TOP_BAR').html("");
+                        }
+
+                    function currentImage() 
+                                    {
+                                        i = jQuery.inArray($('#slideshow').attr('src'), images);
+                                        return i;
+                
+                                    }
+                    
+                                           rightbarStart=1;
+                                           rightbarEnd=3;
+                                           topbarStart=4;
+                                           topbarEnd=9;
+                                           leftbarStart=10;
+                                           leftbarEnd=12;
+                                           image();
+                                           
+                    function image()
+                            {
+
+                  
+
+                               
+                                    for (var i =leftbarStart; i <= leftbarEnd; i++) 
+                                    {
+                                        var f1_2012_image = document.createElement("IMG");
+                                        f1_2012_image.setAttribute("src", images[i]);
+
+                                        f1_2012_image.setAttribute("height", "50");
+                                        f1_2012_image.setAttribute("width", "50");
+
+                                        $('#QUK_TOOL_LEFT_BAR').append(f1_2012_image);
+                                        
+                                       
+                                    }
+                                    for (var i = topbarEnd; i >=  topbarStart; i--) 
+                                    {
+                                        var f1_2012_image = document.createElement("IMG");
+                                        f1_2012_image.setAttribute("src", images[i]);
+
+                                        f1_2012_image.setAttribute("height", "50");
+                                        f1_2012_image.setAttribute("width", "50");
+
+                                        $('#QUK_TOOL_TOP_BAR').append(f1_2012_image);
+
+                                    }
+                                    for (var i = rightbarEnd; i >=rightbarStart ; i--) 
+                                    {
+                                        var f1_2012_image = document.createElement("IMG");
+                                        f1_2012_image.setAttribute("src", images[i]);
+
+                                        f1_2012_image.setAttribute("height", "50");
+                                        f1_2012_image.setAttribute("width", "50");
+
+                                        $('#QUK_TOOL_RIGHT_BAR').append(f1_2012_image);
+
+                                        
+                                    }
+
+                                }
+                                     
+                    function leftArrow()
+                          {
+                                   if (rightbarStart == 0 ) 
+                                   {
+                                    
+                                   }
+                                   else
+                                   {
+                                    rightbarStart--;
+                                    rightbarEnd--;
+                                    topbarStart--;
+                                    topbarEnd--;
+                                    leftbarStart--;
+                                    leftbarEnd--;
+                                   }
+                                   }
+                       
+                    function rightArrow() 
+                        { 
+                                if (leftbarEnd < images.length - 1) 
+                                {
+                                rightbarStart++;
+                                rightbarEnd++;
+                                topbarStart++;
+                                topbarEnd++;
+                                leftbarStart++;
+                                leftbarEnd++;
+                                }
+                                else
+                                {
+
+                                }
+                      
+                    }
  
-  -->
-	
-		<script src="/script/modal/quickTool.js"></script>  
-	
-	</body>
-	 
-	
+              
+        });
+</script>
+    </body>
 </html>
+-->

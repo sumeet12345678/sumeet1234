@@ -146,12 +146,8 @@ $(function(){
 		var content = '<img id="offersIcon" height="17" width="17" class="pull-left" style="margin-right: 10px; margin-top: -2px" src="/media/images/icons/loading.gif" />' +
 				'<div style="display:inline-block; color: #77933C;"> Working on your action.. </div>';
 		
-		// $('.top-push-zone .pushContainer #leftBlock #offersIcon').attr('src','/media/images/icons/loading.gif');  
-		 //$('.top-push-zone .pushContainer #leftBlock').append("Working on your action..");
-			//
 		   $('.top-push-zone .pushContainer').addClass("pushZoneActionMessage");   
-		   $('.top-push-zone .pushContainer #leftBlock').html(content); 
-		
+		   $('.top-push-zone .pushContainer #leftBlock').html(content); 		
 	}
 	
 	function updatePushZone(){      
@@ -169,12 +165,8 @@ $(function(){
 			
 	}
 	 
-	//	
-	var iconClicked123;
-	
-	
-	 
-	
+	//	 
+	var iconClicked123;  
 	
 	
 	$('#sunIcon').on('click', function(event) {
@@ -182,10 +174,7 @@ $(function(){
 		//hideAllPopUpMenus(); //common function for hiding all popups
 		
 		if(globalSunModalContext == "profile") {
-			//alert("in mpopUp.js == " +  globalSunModalContext);  
-			   
-			//$("#sunIcon").attr("class", "aakBoxContext");
-			
+		
 			
 		    iconClicked123 = event.target;    
 		    var $popUpWrapper = $('.mPopUpWrapper');  
