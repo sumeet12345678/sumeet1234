@@ -285,17 +285,20 @@ div {
 @media screen and (min-width: 1025px)  {  
 	
 	.profile {
-		width: 70%;
+		width: 67%;
+	 
 	}
 	 
 	 
 	.top-menubar { 
-		width: 67.6%;
+		/*width: 67.6%; */
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.menubar-footer {
-		width: 67.6%;
+		/* width: 67.6%; */
+		width: 100%; 
 		margin-left: auto;
 		margin-right: auto;
 	} 
@@ -391,7 +394,7 @@ div {
 	}
   	
   	body{
-  		background-color: #E7E9EC;
+  		background-color: #fff;
   	}
   }
   
