@@ -13,6 +13,7 @@ div {
 	background-color: #4A4A38;
 	padding-top: 0px;
 	color: #dcdcdc;
+	position: relative;
 }
 
 #PROFILE_ACTION_BAR {
@@ -20,7 +21,8 @@ div {
 	height: 32px;
 	color: #95B3D7;
 	padding-top: 5px;	
-	 
+	
+	position: relative;
 }
 
 #PROFILE_TITLE {

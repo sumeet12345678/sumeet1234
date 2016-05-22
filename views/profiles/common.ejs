@@ -47,9 +47,15 @@
 		 
 		
 		<div id = MAIN_CONTENT_CONTAINER>
-			 
-			 <% include ./uni_profile.ejs %>
+			<% if(page === "peopleSearchResult") { %>
+				  <% include  ./peopleSearchResults.ejs %>  
+			<% } %>
 			
+			<% if(page === "uniprofile") { %>
+				<% include ./uni_profile.ejs %>
+			<% } %>
+			
+		 	
 		</div>
 		
 		

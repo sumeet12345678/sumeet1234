@@ -1,0 +1,14 @@
+* {
+	
+	box-sizing: border-box;
+}
+
+
+#PROFILE_MODEL_ACTION_BAR {
+	background-color: #250f29;
+	height: 40px;
+	color: #fff;
+	padding-top: 5px;	
+	position: relative;
+	padding-top: 8px;
+}

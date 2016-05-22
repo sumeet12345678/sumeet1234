@@ -20,9 +20,18 @@ router.get('/profile/view/mahika', function(req, res, next) {
 	});
 
 router.get('/profile/view/lawyer', function(req, res, next) {
-	  res.render('profiles/common.ejs'); 
+	  res.render('profiles/common.ejs', {page: "uniprofile", profile_context: "uniprofile_lawyer"}); 
 		//res.render('profile/profile.ejs');
 	});
+
+router.get('/profile/view/model', function(req, res, next) {      
+	  res.render('profiles/common.ejs', {page: "uniprofile", profile_context: "uniprofile_model"});	    
+	}); 
+ 
+router.get('/people/search/result', function(req, res, next) {
+	  res.render('profiles/common.ejs', {page: "peopleSearchResult"});	    
+	});  
+
 
 router.get('/aakBox', function(req, res, next) {
 	  var categoryId = req.param('categoryId');
@@ -40,6 +49,11 @@ router.get('/estate', function(req, res, next) {
 router.get('/view-aak', function(req, res, next) {
 	  res.render('viewAak/viewAak.ejs');	    
 	});  
+
+
+//router.get('/people/search/result', function(req, res, next) {
+	//  res.render('profiles/peopleSearchResults.ejs');	    
+	//});  
 
 
 /*
