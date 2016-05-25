@@ -31,13 +31,10 @@ body,html
 	width: 65%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 45px;
+	height: 40px;
 	border: 1px solid grey;
 	
 }
-
-
-
 
 
 
@@ -278,9 +275,20 @@ body,html
     {
         width:100%; 
     }
+    
     #PEOPLE_TOP_ACTIONBAR
     {
     	width: 100%;
+    }
+    
+    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER {
+    	width: 100%;
+    }
+    
+  
+    
+    #99999955PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER div {
+    	width: 25%;
     }
    
 }
@@ -290,5 +298,14 @@ body,html
     {
       width5555: 65%;
       width: 100%;
+    }
+    
+    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER {
+    	width: 160px;
+    	float: right;
+    }
+    
+    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER td {
+    	width: 40px;
     }
 }

@@ -132,8 +132,7 @@ div {
 .top-menu-container {
 	padding-top: 4px;
 	padding-bottom: 4px;
-	padding-left:14px;
-	padding-right: 14px; 
+	 
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
 	background: -moz-linear-gradient(#696969,#3f3f3f);
@@ -180,7 +179,7 @@ div {
 		line-height: 29px;
 }
 
-.top-push-zone .pushContainer #leftBlock {	 
+.top-push-zone . #leftBlock {	 
 	display: inline-block;
 	line-height: 100%;
 }
@@ -229,31 +228,44 @@ div {
   /*  MEDIA SCREEN (Mobile style)   */  
   @media screen and (max-width: 767px) { 
   
+  .top-menu-content {
+   		padding-left: 3px;
+   		padding-right: 3px;
+   	}
+   	
+   	.pushContainer {
+   	
+   	}
+   	
+   	.footer-container {
+  		padding-left: 3px;
+  		padding-right: 3px;
+  	}
+  	
   .profile-header{
 		 height: 30%;
 	}
-	
-  	.pushContainer{
-  		margin-left: 7.5%;
-  		margin-right: 7.5%;
-  	}
+	 
   	.top-push-zone {
 		height: 28px; 
 	}
 	.profile {  
-	margin-top: 68px;
+	 margin-top: 68px;
 	}
 	.commonScreenSetting {
 		width: 100%;
 	}
 	
-	#MASTER_MENU_ICON {
+	#MASTER_MENU_ICON55555 {
 		margin-left: 2px;
 	}
 	
-	#offersIcon {
-		margin-left: 2px;
+	.pushContainer {
+		padding-left: 3px;
+		padding-right: 3px;
 	}
+	
+	 
 	
   }
   
@@ -263,10 +275,8 @@ div {
   
   /* MEDIA SCREEN (tab and Ipad) */  
    @media screen and (min-width: 768px) and (max-width: 1024px) { 
-	 .pushContainer {
-		    margin-left: 4%;
-		    margin-right: 4%;
-	}
+   
+  
   	.top-push-zone {
 		height: 28px; 
 	}
@@ -332,22 +342,24 @@ div {
   	.top-menu-container {
 	padding-top: 7px;
 	padding-bottom: 7px;
-	padding-left:14px;
-	padding-right: 14px; 
+	 
 	background: linear-gradient(#696969,#3f3f3f);  
 }
   	 
-  	.top-menu-content { 
+ /* 	.top-menu-content { 
   		width: 70%;
   		margin-left:auto;
   		margin-right: auto;
   	}
+ */
+ 
+ 
   	.top-menu-content #MASTER_MENU_ICON {  
-  		margin-left:8px;
+  		margin-left:0px;
   		
   	}
   	.top-menu-content #PEOPLE_FINDER_ICON {  
-  		margin-right: 8px;  
+  		margin-right: 0px;  
   	}
   	
   	.profile-header12345 #imgProfilePhoto {
@@ -381,18 +393,8 @@ div {
 		
   	}
   	
-  	.footer-container {
-  		width: 69%;
-  		margin-left: auto;
-  		margin-right: auto;
-  	}
   	
-  	.pushContainer{
-		width: 65%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-  	
+  
   	body{
   		background-color: #fff;
   	}

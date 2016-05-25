@@ -20,25 +20,38 @@ router.get('/profile/view/mahika', function(req, res, next) {
 	});
 
 router.get('/profile/view/lawyer', function(req, res, next) {
-	  res.render('profiles/common.ejs', {page: "uniprofile", profile_context: "uniprofile_lawyer"}); 
+	  res.render('profiles/common_with_bg.ejs', {page: "uniprofile", profile_context: "uniprofile_lawyer"}); 
 		//res.render('profile/profile.ejs');
 	});
 
 router.get('/profile/view/model', function(req, res, next) {      
-	  res.render('profiles/common.ejs', {page: "uniprofile", profile_context: "uniprofile_model"});	    
+	  res.render('profiles/common_with_bg.ejs', {page: "uniprofile", profile_context: "uniprofile_model"});	    
 	}); 
- 
+
+router.get('/profile/view/abhijeet', function(req, res, next) {      
+	  res.render('profiles/common_with_bg.ejs', {page: "uniprofile", profile_context: "uniprofile_abhijeet"});	    
+	}); 
+
+
+router.get('/profile/view/uniprofile_bg_img', function(req, res, next) {      
+	  res.render('profiles/common_bg_img.ejs', {page: "uniprofile", profile_context: "uniprofile_bg_img"});	    
+	}); 
+
 router.get('/people/search/result', function(req, res, next) {
 	  res.render('profiles/common.ejs', {page: "peopleSearchResult"});	    
-	});  
-
-
+	});    
+  
 router.get('/aakBox', function(req, res, next) {
+	  var categoryId = req.param('categoryId');
+	  res.render('profiles/common.ejs', {page: "aakBox",  aakBoxCategory : categoryId});	    
+	}); 
+ 
+/* router.get('/aakBox', function(req, res, next) {
 	  var categoryId = req.param('categoryId');
 	     // console.log("Category from req ===  " + categoryId);
 	  res.render('aakBox/aakBox.ejs', { aakBoxCategory : categoryId });  
 	  
-	}); 
+	}); */
 
 router.get('/estate', function(req, res, next) {
 	  var categoryId = req.param('categoryId');

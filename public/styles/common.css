@@ -3,11 +3,7 @@
  	padding: 0px;  
  }
  
- .website-screen-width_dt {
- 	width: 70%;
- 	margin-left: auto;
- 	margin-right: auto;
- }
+ 
  
  
  /* ---------------------- COMMON TOP MENU BAR STYLE --------------------------- */
@@ -89,6 +85,17 @@
 
 .green-text {
 	color:  #AAD147;
+	
+}
+
+
+@media screen and (min-width: 1025px)  {  
+  .website-screen-width_dt {
+ 	width: 70%;
+ 	margin-left: auto;  
+ 	margin-right: auto;
+ }
+	
 	
 }
  

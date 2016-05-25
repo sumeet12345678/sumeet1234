@@ -12,13 +12,21 @@
         <!--action bar -->
 	    <div id="PEOPLE_CONTENT_CONTAINER">
 	        <div id="PEOPLE_TOP_ACTIONBAR">
-    			<div>
-                    <a id="single_column_one_row_mobile" href="#single_column_one_row_mobile"><img src="/media/images/icons/single_column_one_row_mobile.png" width="35px" height="35px" align="right" style="margin-left:5px; padding-right:5px;"/></a> 
-    				<a id="grid-view" href="#grid-view"><img src="/media/images/icons/grid-view.png"  width="35px" height="35px" align="right" style="margin-left:5px;" /></a> 
-                   <a id="ppl-list-view-bigger-rows" href="#ppl-list-view-bigger-rows"><img src="/media/images/icons/ppl-list-view-bigger-rows.png" width="35px" height="35px" align="right" style="margin-left:5px;"/>
-                     <a id="list-view" href="#list-view"><img src="/media/images/icons/list-view.png" width="35px" height="35px" align="right" style="margin-left:5px;"/></a> 
-
-                </div>
+    			<table id="PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER">
+    			  <td>
+    			 	<div  style = "display:inline-block; text-align:left;"><a id="list-view" href="#">  <img src="/media/images/icons/list-view.png" width="28px" height="28px" align="right"/></a></div>
+    			 </td>
+    			  <td> 	
+    			  	<div  style = "display: inline-block;"><a id="ppl-list-view-bigger-rows" href="#"><img src="/media/images/icons/ppl-list-view-bigger-rows.png" width="28px" height="28px" align="right"/></a></div>
+    			  </td>
+    			  <td>	
+    			  	<div style = "display: inline-block; text-align: center;"><a id="grid-view" href="#"><img src="/media/images/icons/grid-view.png"  width="28px" height="28px" align="right" /></a></div>
+    			  </td>
+    			  <td>
+                    <div style = "display: inline-block; text-align: right;"><a id="single_column_one_row_mobile" href="#"><img src="/media/images/icons/single_column_one_row_mobile.png" width="28px" height="28px" align="right"/></a></div>
+                  </td>
+                   
+                </table>
             </div>
 
 
@@ -81,14 +89,7 @@
 
         </div>
 
-
-
-
-
-
-
-
-
+  
           <!--people list view -->
 
          <div id="PEOPLE_LIST_VIEW_BIGGER_ROWS">
@@ -243,91 +244,55 @@
                 $(function() 
                 {
                        
-                        $("#list-view").on('click', function()
-                             {
-                               
-                                peopleListView();
-                                
-                             });
-
-                 });    
+                     $("#list-view").on('click', peopleListView);
+                                               
+                     $("#ppl-list-view-bigger-rows").on('click',peopleListViewBigger);
+                            
+                     $("#grid-view").on('click',peopleGridView);
+                          
+                     $("#single_column_one_row_mobile").on('click',peopleSingleColumnMobileView);
+                            
+                });    
                 
 
-                function peopleListView()
-                {
-                        $("#PEOPLE_LIST_VIEW").show();
-                        $("#PEOPLE_PPL_LIST_VIEW_BIGGER_ROWS").hide();
-                         $("#PEOPLE_GRID_VIEW").hide();
-                         $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").hide();
+                function peopleListView() {
+                	
+                   $("#PEOPLE_LIST_VIEW").show();  
+                   $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").hide();
+                   $("#PEOPLE_GRID_VIEW").hide();
+                   $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").hide();
+                     
                 }
 
-
-
-                 $(function() 
-                    {
-                       
-                        $("#ppl-list-view-bigger-rows").on('click',function()
-                             {
-                                peopleListViewBigger();
-                             });
-
-                    });
-
-
-                function peopleListViewBigger()
-                {
-                        $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").show();
-                        $("#PEOPLE_LIST_VIEW").hide();
-                        $("#PEOPLE_GRID_VIEW").hide();
-                        $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").hide();
+ 
+                function peopleListViewBigger() { 
+                	
+                   $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").show();
+                   $("#PEOPLE_LIST_VIEW").hide();
+                   $("#PEOPLE_GRID_VIEW").hide();
+                   $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").hide();
+                                         
                 }
-
 
             
-
-                /*ppl-list-view-bigger-rows*/
-                $(function() 
-                    {
-                       
-                        $("#grid-view").on('click',function()
-                             {
-                                peopleGridView();
-                                
-                                
-                             });
-
-                        
-
-                    });
-
-                     function peopleGridView()
-                {
-                        $("#PEOPLE_GRID_VIEW").show();
-                        $("#PEOPLE_LIST_VIEW").hide();
-                        $("#PEOPLE_PPL_LIST_VIEW_BIGGER_ROWS").hide();
-                       $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").hide();
+ 
+                function peopleGridView() {
+                
+                   $("#PEOPLE_GRID_VIEW").show();
+                   $("#PEOPLE_LIST_VIEW").hide();
+                   $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").hide();
+                   $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").hide();
+                      
                 }
 
-                     $(function() 
-                    {
-                       
-                        $("#single_column_one_row_mobile").on('click',function()
-                             {
-                               peopleSingleColumnMobileView()
-                                
-                            });
-
-                       
-
-                    });
-
-
-                     function peopleSingleColumnMobileView()
-                {
-                         $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").show();
-                         $("#PEOPLE_LIST_VIEW").hide();
-                        $("#PEOPLE_GRID_VIEW").hide();
-                       $("#PEOPLE_PPL_LIST_VIEW_BIGGER_ROWS").hide();
+             
+                function peopleSingleColumnMobileView() {
+             
+                  $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").show();
+                  $("#PEOPLE_LIST_VIEW").hide();
+                  $("#PEOPLE_GRID_VIEW").hide();
+                  $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").hide();
+                     
                 }
 
             </script>

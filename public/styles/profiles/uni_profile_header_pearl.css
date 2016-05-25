@@ -10,10 +10,10 @@ div {
 }
 
 #PROFILE_HEADER {
-	background-color: #4A4A38;  
-	
+	 /* background-color: #4A4A38; */
+	background-color:#f2f2f2;
 	padding-top: 0px;
-	color: #dcdcdc;
+	color: #000;
 	position: relative;
 }
 
