@@ -22,7 +22,7 @@
   	 			 #MAIN_CONTENT_CONTAINER {
   	 				width : 100%;
   	 				height: 100%;
-  	 				margin-top: 65px;
+  	 				margin-top999999: 65px;
   	 			 }
   		
   			}
@@ -60,11 +60,7 @@
 			<% if(page === "peopleSearchResult") { %>
 				  <% include  ./peopleSearchResults.ejs %>  
 			<% } %>
-			
-			<% if(page === "uniprofile") { %>
-				<% include ./uni_profile.ejs %>
-			<% } %>
-			
+			 
 			 <% if(page === "aakBox") { %>
 			 
 				<% include ../aakBox/aakBox.ejs %>  
@@ -84,6 +80,8 @@
 		
 		<script>
 			$('#PROFILE_BG_CONTAINER').height(screen.height * .35);
+			
+			$('#MAIN_CONTENT_CONTAINER').css('margin-top', 73);
 		</script>
 		
 		

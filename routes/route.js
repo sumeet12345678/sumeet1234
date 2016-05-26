@@ -1,10 +1,12 @@
 var express = require('express')
 var router = express.Router()
 
-  //GET home.ejs
-  router.get('/', function(req, res) {
+var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
+
+//GET home.ejs
+router.get('/', function(req, res) {
 	  res.render('home');
-})
+});
 
 
 
@@ -20,30 +22,34 @@ router.get('/profile/view/mahika', function(req, res, next) {
 	});
 
 router.get('/profile/view/lawyer', function(req, res, next) {
-	  res.render('profiles/common_with_bg.ejs', {page: "uniprofile", profile_context: "uniprofile_lawyer"}); 
+	  res.render('profiles/common_with_bg.ejs', {	page: "uniprofile",
+		  											profile_context: "uniprofile_lawyer",
+		  											lawyerData123 : lawyerData
+		  										}
+	  ); 
 		//res.render('profile/profile.ejs');
 	});
 
 router.get('/profile/view/model', function(req, res, next) {      
-	  res.render('profiles/common_with_bg.ejs', {page: "uniprofile", profile_context: "uniprofile_model"});	    
+	  res.render('profiles/common_with_bg.ejs', { page: "uniprofile", profile_context: "uniprofile_model"});	    
 	}); 
 
 router.get('/profile/view/abhijeet', function(req, res, next) {      
-	  res.render('profiles/common_with_bg.ejs', {page: "uniprofile", profile_context: "uniprofile_abhijeet"});	    
+	  res.render('profiles/common_with_bg.ejs', { page: "uniprofile", profile_context: "uniprofile_abhijeet"});	    
 	}); 
 
 
 router.get('/profile/view/uniprofile_bg_img', function(req, res, next) {      
-	  res.render('profiles/common_bg_img.ejs', {page: "uniprofile", profile_context: "uniprofile_bg_img"});	    
+	  res.render('profiles/common_bg_img.ejs', { page: "uniprofile", profile_context: "uniprofile_bg_img"});	    
 	}); 
 
 router.get('/people/search/result', function(req, res, next) {
-	  res.render('profiles/common.ejs', {page: "peopleSearchResult"});	    
+	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});    
   
 router.get('/aakBox', function(req, res, next) {
 	  var categoryId = req.param('categoryId');
-	  res.render('profiles/common.ejs', {page: "aakBox",  aakBoxCategory : categoryId});	    
+	  res.render('profiles/common.ejs', { page: "aakBox",  aakBoxCategory : categoryId});	    
 	}); 
  
 /* router.get('/aakBox', function(req, res, next) {

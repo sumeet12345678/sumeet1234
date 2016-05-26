@@ -2,39 +2,45 @@
 
 <html>
 
-	<head>
-		<link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>
-		<title></title>
-	</head>
-	<body>
+    <head>
+        <link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=2">  
+        <title></title>
+    </head>
+    <body>
 
 
         <!--action bar -->
-	    <div id="PEOPLE_CONTENT_CONTAINER">
-	        <div id="PEOPLE_TOP_ACTIONBAR">
-    			<table id="PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER">
-    			  <td>
-    			 	<div  style = "display:inline-block; text-align:left;"><a id="list-view" href="#">  <img src="/media/images/icons/list-view.png" width="28px" height="28px" align="right"/></a></div>
-    			 </td>
-    			  <td> 	
-    			  	<div  style = "display: inline-block;"><a id="ppl-list-view-bigger-rows" href="#"><img src="/media/images/icons/ppl-list-view-bigger-rows.png" width="28px" height="28px" align="right"/></a></div>
-    			  </td>
-    			  <td>	
-    			  	<div style = "display: inline-block; text-align: center;"><a id="grid-view" href="#"><img src="/media/images/icons/grid-view.png"  width="28px" height="28px" align="right" /></a></div>
-    			  </td>
-    			  <td>
+          <div id="PEOPLE_CONTENT_CONTAINER">
+           <div id="PEOPLE_TOP_ACTIONBAR">
+                <table id="PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER">
+                <td align="left">
+                    <div  style = "display:inline-block; text-align:left;"><a id="list-view" href="#">  <img src="/media/images/icons/list-view.png" width="28px" height="28px" align="right"/></a></div>
+                </td>
+                <td align="center">   
+                    <div  style = "display: inline-block; text-align:center;"><a id="ppl-list-view-bigger-rows" href="#"><img src="/media/images/icons/ppl-list-view-bigger-rows.png" width="28px" height="28px" align="right"/></a></div>
+                </td>
+                <td align="center">   
+                    <div style = "display: inline-block; text-align: center;"><a id="grid-view" href="#"><img src="/media/images/icons/grid-view.png"  width="28px" height="28px" align="right" /></a></div>
+                </td>
+                <td align="right">
                     <div style = "display: inline-block; text-align: right;"><a id="single_column_one_row_mobile" href="#"><img src="/media/images/icons/single_column_one_row_mobile.png" width="28px" height="28px" align="right"/></a></div>
-                  </td>
+                </td>
                    
                 </table>
             </div>
 
 
-
-
+      
             <!--list view -->
             
         <div id="PEOPLE_LIST_VIEW">
+          <div id="TITLEBAR">
+            
+        </div>
+
             <div id="PEOPLE_FACES1">
                 <div style="display:inline-block;">
                     <img src="/media/images/profile_images/DebojitSaikia.jpg" width="80" height="80" style="margin-left:5px;">
@@ -68,7 +74,7 @@
                 <div id="PAGE_TEXT3">
                     <table> 
                         <tr><td><font color="blue">Sanat Jain</font></td></tr>
-                        <tr><td>Business Analyst at Axtria-Ingenious Insights</font></td></tr>                        
+                        <tr><td>Business Analyst at Axtria-Ingenious <br>Insights</font></td></tr>                        
                         <tr><td><font color="grey">India</td></tr>
                     </table>
                 </div>
@@ -93,6 +99,9 @@
           <!--people list view -->
 
          <div id="PEOPLE_LIST_VIEW_BIGGER_ROWS">
+           <div id="TITLEBAR">
+            
+        </div>
             <div id="PEOPLE_FACES5">
                 <div style="display:inline-block;">
                     <img src="/media/images/profile_images/DebojitSaikia.jpg" width="130" height="130" style="margin-left:5px;">
@@ -100,7 +109,7 @@
                 <div id="PAGE_TEXT5">
                     <table>
                         <tr><td><font color="blue">Anurag Tiwari</font></td></tr>
-                        <tr><td>COO & Co-Founder at wedealnow.com</td></tr>
+                        <tr><td>COO & Co-Founder at <br>wedealnow.com</td></tr>
                         <tr><td><font color="grey">Bengaluru,Karnataka,India</font></td></tr>
                     </table>
                 </div>
@@ -126,7 +135,7 @@
                 <div id="PAGE_TEXT7">
                     <table> 
                         <tr><td><font color="blue">Sanat Jain</font></td></tr>
-                        <tr><td>Business Analyst at Axtria-Ingenious Insights</font></td></tr>                        
+                        <tr><td>Business Analyst at<br> Axtria-Ingenious Insights</font></td></tr>                        
                         <tr><td><font color="grey">India</td></tr>
                     </table>
                 </div>
@@ -139,7 +148,7 @@
                 <div id="PAGE_TEXT8">
                     <table> 
                         <tr><td><font color="blue">Deepak Dubey</font></td></tr>
-                        <tr><td>Software Development Engineer at Voonik</td></tr>
+                        <tr><td>Software Development <br>Engineer at Voonik</td></tr>
                         <tr><td><font color="grey">Bengaluru,Karnataka,India</font></td></tr>
                     </table>
                 </div>
@@ -150,100 +159,103 @@
 
         <!-- grid view -->
         <div id="PEOPLE_GRID_VIEW">
-                <table>
-                <tr><td>
-                    <div id="PEOPLE_FACES5">
+          <div id="TITLEBAR">
+            
+        </div>
+            <div id="PEOPLE_GRID_VIEW_ROW1">  
+
+                    <div class="PEOPLE_FACES9_COLUMN1">
                         <div style="display:inline-block;">
-                            <table>
-                                <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
-                            </table>    
+                            <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" max-width="200" max-height="200" style="margin-left:5px;">
                         </div>
-                    <div id="PAGE_TEXT5">
-                        <table>
-                            <tr><td>Anurag Tiwari</td></tr>
-                            <tr><td>COO & Co-Founder at wedealnow.com</td></tr>
+                        <div id="PAGE_TEXT9">
+                            <table>
+                                <tr><td>Anurag Tiwari</td></tr>
+                                <tr><td>COO & Co-Founder <br>at wedealnow.com</td></tr>
+                                <tr><td>Bengaluru,Karnataka,India</td></tr>
+                            </table>
+                        </div>
+                    </div><!--
+
+                    --><div class="PEOPLE_FACES10_COLUMN2">
+                        
+                        <div style="display:inline-block;">
+                            <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" max-width="200" max-height="200" style="margin-left:5px;">
+                        </div>
+                        <div id="PAGE_TEXT10">
+                            <table>
+                                <tr><td>Vipin Chand</td></tr>
+                                <tr><td>Software Engineer at Langoor</td></tr>
+                                <tr><td>Bengaluru,Karnataka,India</td></tr>
+                            </table>
+                        </div>
+
+                    </div>
+            </div>
+
+            <div id="PEOPLE_GRID_VIEW_ROW2">
+
+                <div class="PEOPLE_FACES11_COLUMN3">
+                    <div style="display:inline-block;">
+                        <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" max-width="200" max-height="200" style="margin-left:5px;">
+                    </div>
+                    <div id="PAGE_TEXT11">
+                        <table> 
+                            <tr><td>Sanat Jain</td></tr>
+                            <tr><td>Business Analyst at<br> Axtria-Ingenious Insights</td></tr>                        
+                            <tr><td>India</td></tr>
+                        </table>
+                    </div>
+                </div><!--
+
+                --><div class="PEOPLE_FACES12_COLUMN4">
+               
+                    <div style="display:inline-block;">
+                        <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" max-width="200" max-height="200" style="margin-left:5px;">
+                    </div>
+                    <div id="PAGE_TEXT12">
+                        <table> 
+                            <tr><td>Deepak Dubey</td></tr>
+                            <tr><td>Software Development Engineer<br> at Voonik</td></tr>
                             <tr><td>Bengaluru,Karnataka,India</td></tr>
                         </table>
                     </div>
-                </div></td>
-
-            <td><div id="PEOPLE_FACES6">
-                
-                 <div id="PAGE_TEXT6" style="float:right; margin-left:50px;">
-                    <table>
-                        <tr><td>Vipin Chand</td></tr>
-                        <tr><td>Software Engineer at Langoor</td></tr>
-                        <tr><td>Bengaluru,Karnataka,India</td></tr>
-                    </table>
-                </div>
-
-                <div style="display:inline-block; float:right; bottom:0px; margin-left:50px;">
-                    <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
+                  
                 </div>
                
-                </div></td></tr>
-            </table>
-
-
-            <table>
-            <tr><td>
-            <div id="PEOPLE_FACES7">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
-                </div>
-                <div id="PAGE_TEXT7">
-                    <table> 
-                        <tr><td>Sanat Jain</td></tr>
-                        <tr><td>Business Analyst at Axtria-Ingenious Insights</td></tr>                        
-                        <tr><td>India</td></tr>
-                    </table>
-                </div>
-            </div></td>
-            <td>
-            <div id="PEOPLE_FACES8">
-               
-               
-                 <div id="PAGE_TEXT8" style="float:right; top:0; margin-left:50px;">
-                    <table> 
-                        <tr><td>Deepak Dubey</td></tr>
-                        <tr><td>Software Development Engineer at Voonik</td></tr>
-                        <tr><td>Bengaluru,Karnataka,India</td></tr>
-                    </table>
-                </div>
-                   <div style="float:right;">
-                    <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
-                </div>
             </div>
-               
-            </td>
-             </tr>
-            </table>
             
        </div>
 
 
 
         <div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE">
-        
+          
             <div id="PEOPLE_FACES13">
-                <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" style="width:100%; height:65%">
+                <img src="/media/images/profile_images/santosh.jpg">
+                <div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_TEXTBOX">
+               
+                </div>
             </div>
-            
+           
             <div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON">
                 
             </div>
             
         </div> 
-       
-</div> <!-- PEOPLE_CONTENT_CONTAINER ends -->
+     </div>  
+ 
+
+<!-- PEOPLE_CONTENT_CONTAINER ends -->
         <!-- javascript-->
-      <!--   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
-		    <script type="text/javascript">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+           <script type="text/javascript">
 
             /*list-view icon*/
                 $(function() 
                 {
-                       
+                	 
+                	
                      $("#list-view").on('click', peopleListView);
                                                
                      $("#ppl-list-view-bigger-rows").on('click',peopleListViewBigger);
@@ -255,8 +267,9 @@
                 });    
                 
 
-                function peopleListView() {
-                	
+                function peopleListView() 
+                {
+                	 
                    $("#PEOPLE_LIST_VIEW").show();  
                    $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").hide();
                    $("#PEOPLE_GRID_VIEW").hide();
@@ -265,8 +278,9 @@
                 }
 
  
-                function peopleListViewBigger() { 
-                	
+                function peopleListViewBigger() 
+                { 
+                    
                    $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").show();
                    $("#PEOPLE_LIST_VIEW").hide();
                    $("#PEOPLE_GRID_VIEW").hide();
@@ -276,7 +290,8 @@
 
             
  
-                function peopleGridView() {
+                function peopleGridView() 
+                {
                 
                    $("#PEOPLE_GRID_VIEW").show();
                    $("#PEOPLE_LIST_VIEW").hide();
@@ -286,7 +301,8 @@
                 }
 
              
-                function peopleSingleColumnMobileView() {
+                function peopleSingleColumnMobileView() 
+                {
              
                   $("#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE").show();
                   $("#PEOPLE_LIST_VIEW").hide();
@@ -297,5 +313,5 @@
 
             </script>
 
-	</body>
+    </body>
 </html>

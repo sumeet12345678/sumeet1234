@@ -4,7 +4,7 @@ var FOOTER_BAR_HEIGHT = getFooterBarHeight();
 var SCREEN_HEIGHT_GLOBAL = screen.height;
 var TOP_MENU_BAR_HEIGHT = getTopMenuBarHeight();
 
-
+ 
 var GLOBAL_POP_UP_ARRAY_LIST = ["plus", "AKK_OPTIONS_POPUP_ID", "sunIcon"," QUK_TOOL_ICON_ID", "imgProfilePhoto"]; //not necessary
 
 /* hides or displays sun icon */
