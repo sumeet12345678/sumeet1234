@@ -13,11 +13,12 @@
 	     	html, body {
 	     		height: 100%;
 	     		width: 100%;
-	     		background-color: silver; /* #fff */
+	     		background-color8888888: silver; /* #fff */
 	     	}
 	     	
 	     	body {
-	     		min-height: 100%;
+	     		min-height11: 100%;
+	     		background-color: red;
 	     	}
 
 	    	
@@ -28,6 +29,10 @@
   	 				height: 100%;
   	 				margin-top: 65px;
   	 				background-color: #fff;
+  	 			 }
+  	 			 
+  	 			 #PROFILE_BG_CONTAINER {
+  	 			 	display: none;
   	 			 }
   		
   			}
@@ -55,26 +60,19 @@
 	<body> 
 		
 	  <% include ../partials/top_menu_bar.ejs %> 
-		 
+		  
 		<div id = PROFILE_BG_CONTAINER class = "earth-gradient-bg" style = "font-family: Bradley Hand ITC; color: #95B3D7; font-size: 25px; text-align:center; padding-top: 15px; position: absolute; left: 0; right: 0; top: 70px; width: 100%;   ">
   			<b>Worrying is misuse of Imagination...</b>
   		</div>
 		
 		<div id = MAIN_CONTENT_CONTAINER class = "website-screen-width_dt" >
-		
-			 
-  			 
+		   
 			
 			<% if(page === "uniprofile") { %>
 				<% include ./uni_profile.ejs %>
 			<% } %>
 			
-			  
-			
-			
-			
-			
-		 	
+		  
 		</div>
 		
 		

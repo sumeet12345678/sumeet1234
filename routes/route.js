@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 
-var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
+//var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
 
 //GET home.ejs
 router.get('/', function(req, res) {
@@ -23,8 +23,8 @@ router.get('/profile/view/mahika', function(req, res, next) {
 
 router.get('/profile/view/lawyer', function(req, res, next) {
 	  res.render('profiles/common_with_bg.ejs', {	page: "uniprofile",
-		  											profile_context: "uniprofile_lawyer",
-		  											lawyerData123 : lawyerData
+		  											profile_context: "uniprofile_lawyer"
+		  											//lawyerData123 : lawyerData
 		  										}
 	  ); 
 		//res.render('profile/profile.ejs');

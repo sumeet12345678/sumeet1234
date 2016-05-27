@@ -1,12 +1,23 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+}
+
+body,html
+{
+	width: 100%;
+	height: 100%;
+}
 
 
-
-#PEOPLE_CONTENT_CONTAINER 
+#PEOPLE_CONTENT_CONTAINER
 {
 	height: 100%;
-    border444: 1px solid orange;
-	background-color4444444: blue;
-	width: 70%;
+    border: 1px solid orange;
+	background-color: blue;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -18,11 +29,9 @@
 	background-color:#F2F2F2;
 	padding-top: 5px;
 	position: fixed;
-	width: 70%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	left: 0px;
-	right: 0px;
 	height: 40px;
 	border: 1px solid grey;
 	
@@ -34,23 +43,22 @@
 {
 	background-color: #D8D8D8;
 	height: 90%;
-    width: 100%;
+    width: 99%;
     
     position5555: absolute;
     margin-top: 60PX;
     overflow-y: auto;
     overflow-x: hidden;
-   
+    margin-left: 5px;
     
 }
 #TITLEBAR
 {
 	width: 100%;
-	height: 5%;
+	height: 30px;
 	background-color: grey;
-	border: 1px solid grey;
-	margin-top: 45px;
-} 
+	
+}
 #PEOPLE_FACES1
 {
 	background-color: white;
@@ -119,20 +127,20 @@
 {
 	background-color: #D8D8D8;
 	height: 90%;
-    width: 100%;
+    width: 99%;
     
     position55555555: absolute;
     margin-top: 60PX;
     overflow-y: auto;
     overflow-x: hidden;
-    
+    margin-left: 5px;
     display: none;
     
 }
 #TITLEBAR
 {
 	width: 100%;
-	height: 5%;
+	height: 30px;
 	background-color: grey;
 	border: 1px solid grey;
 }
@@ -217,7 +225,7 @@
 #TITLEBAR
 {
 	width: 100%;
-	height: 5%;
+	height: 30px;
 	background-color: grey;
 	border: 1px solid grey;
 }
@@ -312,9 +320,11 @@
 #PEOPLE_FACES13
 {
 	width: 100%;
-	height: 65%;
+	height: 100%;
+	vertical-align: top;
 	
 }
+
 #PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_TEXTBOX
 {
 	z-index: 1;
@@ -326,172 +336,107 @@
     bottom: 0;
     margin-bottom: 200px;
 }
+
 #PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON
 {
 	width: 100%;
-	height: 35%;
+	height: 30%;
 	bottom: 0px;
 	background-color: red;
-	position: absolute;
+	position: fixed;
 
 }
 
 
 @media screen and (max-width: 991px) 
 {
-#PEOPLE_CONTENT_CONTAINER
-    {
-        width:100%; 
+
+		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER 
+		{
+		    	width: 100%;
+		}
+
+		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #list-view
+		{
+		        padding-right: 5px;
+		}
+
+		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #ppl-list-view-bigger-rows
+		{
+		    	margin-left:30px;
+		}
+
+		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #grid-view
+		{
+		    	margin-right: 30px;
+		}
+
+		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #single_column_one_row_mobile
+		{
+		     	padding-left: 5px;
+		}
+
+		#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_TEXTBOX
+		{
+			
+			width: 100%;
+			margin-bottom: 200px;
+		    
+		}
+
+		#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON
+		{
+				height: 25%;
+			
+		}
+
+		#PEOPLE_FACES13
+		{
+				position: fixed;
+		}
+
+}
+
+
+
+@media screen and (min-width: 992px)
+{
+
+	#PEOPLE_TOP_ACTIONBAR
+	{
+			width: 70%;
+	}
+
+	#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER 
+	{
+    		width: 135px;
+    		float: right;
+
     }
-    
-#PEOPLE_TOP_ACTIONBAR
+	
+	#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER td 
     {
-    	width: 100%;
+    	width: 40px;
     }
-    
-#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER 
+
+    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #single_column_one_row_mobile
     {
-    	width: 100%;
+     	display: none;
     }
-#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #list-view
+
+    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #grid-view
+    {
+    	margin-right: 40px;
+    }
+
+    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #list-view
     {
         padding-right: 5px;
     }
-#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #ppl-list-view-bigger-rows
+
+	#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #ppl-list-view-bigger-rows
     {
-    	margin-left:30px;
-    }
-#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #grid-view
-    {
-    	margin-right: 30px;
+    	margin-left:40px;
     }
 
-#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #single_column_one_row_mobile
-     {
-     	padding-left: 5px;
-     }
-#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE
-    {
-	height: 100%;
-	}
- #PEOPLE_FACES13
-    {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	
-    }
-#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON
-	{
-	
-	position: fixed;
-
-	}
-#PAGE_TEXT1
-    {
-	margin-bottom: 25px;
-	font-size: 12px;
-	word-wrap: break-word;
-    }
-#PAGE_TEXT2
-    {
-	margin-bottom: 25px;
-	font-size: 12px;
-	word-wrap: break-word;
-    }
-#PAGE_TEXT3
-    { 
-	margin-bottom: 15px;
-	font-size: 12px;
-	word-wrap: break-word;
-    }
-#PAGE_TEXT4
-    {
-	margin-bottom: 25px;
-	font-size: 12px;
-	word-wrap: break-word;
-    }
-    #PAGE_TEXT5
-{
-	margin-bottom: 60px;
-	word-wrap: break-word;
-	font-size: 12px;
-}
-#PAGE_TEXT6
-{
-	margin-bottom: 75px;
-	word-wrap: break-word;
-	font-size: 12px;
-}
-#PAGE_TEXT7
-{
-	margin-bottom: 60px;
-	word-wrap: break-word;
-	font-size: 12px;
-}
-#PAGE_TEXT8
-{
-	margin-bottom: 60px;
-	word-wrap: break-word;
-	font-size: 12px;
-}
-#PAGE_TEXT9
-{
-	word-wrap: break-word;
-	font-size: 8px;
-}
-#PAGE_TEXT10
-{
-	word-wrap: break-word;
-	font-size: 8px;
-}
-#PAGE_TEXT11
-{
-	word-wrap: break-word;
-	font-size: 8px;
-}
-#PAGE_TEXT12
-{
-	word-wrap: break-word;
-	font-size: 8px;
-}
-    #99999955PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER div {
-    	width: 25%;
-    }
-
-
-}
-@media screen and (min-width: 992px)
-{
-	 #PEOPLE_TOP_ACTIONBAR
-    {
-    	width: 70%;
-    }
-	#PEOPLE_CONTENT_CONTAINER
-    {
-      width: 65%;
-      width: 100%;
-    }
-    
-    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER {
-    	width: 180px;
-    	float: right;
-    }
-    
-    #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER td {
-    	width: 40px;
-    }
-    #PEOPLE_FACES13
-    {
-	width: 65%;
-	height: 100%;
-	position: fixed;
-	
-    }
-    #PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON
-{
-	width: 65%;
-	position: fixed;
-
-}
 }
