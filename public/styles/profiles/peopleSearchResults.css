@@ -2,6 +2,7 @@
 {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body,html
@@ -10,48 +11,61 @@ body,html
 	height: 100%;
 }
 
+hr {
+	margin-left: 80px;
+}
+
+.normal-text-black {
+	font-size: 16px;
+	 
+}
 
 #PEOPLE_CONTENT_CONTAINER
 {
 	height: 100%;
-    border: 1px solid orange;
-	background-color: blue;
+  	padding-left: 5px;
+  	padding-right: 5px;
 	margin-left: auto;
 	margin-right: auto;
 }
+ 
 
 
-
-
-#PEOPLE_TOP_ACTIONBAR
+#PEOPLE_TOP_ACTIONBAR 
 {
-	
-	background-color:#F2F2F2;
+    
+	background-color: #ebebeb;
 	padding-top: 5px;
-	position: fixed;
+	 
+	 
+	 
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	height: 40px;
-	border: 1px solid grey;
-	
+	margin-bottom: 10px;
+	 
 }
-
-
+ 
 
 #PEOPLE_LIST_VIEW
 {
-	background-color: #D8D8D8;
+	 
 	height: 90%;
-    width: 99%;
+    width: 100%;
     
     position5555: absolute;
-    margin-top: 60PX;
+    margin-top77777: 60PX;
     overflow-y: auto;
     overflow-x: hidden;
-    margin-left: 5px;
-    
+   
+} 
+
+#PEOPLE_LIST_VIEW img {
+		border-radius: 50%;
+	
 }
+
 #TITLEBAR
 {
 	width: 100%;
@@ -59,126 +73,125 @@ body,html
 	background-color: grey;
 	
 }
+
 #PEOPLE_FACES1
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 20px;
-	border: 0.5px solid grey;
+	 
 }
+
 #PEOPLE_FACES2
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 0px;
-	border-bottom: 0.5px solid grey;
+ 
 }
+
 #PEOPLE_FACES3
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 0px;
-	border: 0.5px solid grey;
+	 
 }
+
 #PEOPLE_FACES4
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 0px;
-	border: 0.5px solid grey;
+	 
 }
 #PAGE_TEXT1
 {
-	margin-left: 20px;
-	margin-bottom: 20px; 
+	margin-left: 10px;
 	display: inline-block;
-	font-size: 18px;
-	word-wrap: break-word;
+ 
+	
 }
 #PAGE_TEXT2
 {
-	margin-left: 20px;
-	margin-bottom:20px; 
-	display: inline-block;
-	font-size: 18px;
-	word-wrap: break-word;
+	margin-left: 10px;
+  
 }
 #PAGE_TEXT3
 {
-	margin-left: 20px;
-	margin-bottom: 10px; 
+	margin-left: 10px;
+	 
 	display: inline-block;
-	font-size: 18px;
-	word-wrap: break-word;
+	 
+	
 }
 #PAGE_TEXT4
 {
-	margin-left: 20px;
-	margin-bottom: 20px; 
+	margin-left: 10px;
+	 
 	display: inline-block;
-	font-size: 18px;
-	word-wrap: break-word;
+	
+	
 }
 
-
-
-
+ 
 #PEOPLE_LIST_VIEW_BIGGER_ROWS
 {
-	background-color: #D8D8D8;
+	 
 	height: 90%;
-    width: 99%;
+    width: 100%;
     
     position55555555: absolute;
-    margin-top: 60PX;
-    overflow-y: auto;
-    overflow-x: hidden;
+    margin-to7777p: 60PX;
+    
     margin-left: 5px;
     display: none;
     
 }
+
 #TITLEBAR
 {
 	width: 100%;
 	height: 30px;
 	background-color: grey;
-	border: 1px solid grey;
+ 
 }
 #PEOPLE_FACES5
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 20px;
-	border: 0.5px solid grey;
+	 
 }
 #PEOPLE_FACES6
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 0px;
-	border-bottom: 0.5px solid grey;
+	 
 }
 #PEOPLE_FACES7
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 0px;
-	border: 0.5px solid grey;
+	 
 }
 #PEOPLE_FACES8
 {
 	background-color: white;
 	width: 100%;
 	margin-top: 0px;
-	border: 0.5px solid grey;
+	 
 }
+
 #PAGE_TEXT5
 {
 	margin-left: 20px;
 	margin-bottom: 50px; 
 	display: inline-block;
 	font-size: 18px;
-	word-wrap: break-word;
+	
 }
 #PAGE_TEXT6
 {
@@ -194,7 +207,7 @@ body,html
 	margin-bottom: 50px; 
 	display: inline-block;
 	font-size: 18px;
-	word-wrap: break-word;
+	
 }
 #PAGE_TEXT8
 {
@@ -202,7 +215,7 @@ body,html
 	margin-bottom: 50px; 
 	display: inline-block;
 	font-size: 18px;
-	word-wrap: break-word;
+	
 }
 
 
@@ -214,9 +227,9 @@ body,html
 {
 	height: 90%;
     width: 100%;
-    background-color: #D8D8D8;
+     
     position3434: absolute;
-    margin-top: 60PX;
+    margin-top9999: 60PX;
     overflow-y: auto;
     overflow-x: hidden;
     display: none;
@@ -227,7 +240,7 @@ body,html
 	width: 100%;
 	height: 30px;
 	background-color: grey;
-	border: 1px solid grey;
+	 
 }
 #PEOPLE_GRID_VIEW_ROW1
 {
@@ -279,7 +292,7 @@ body,html
 	margin-bottom: 125px; 
 	display: inline-block;
 	font-size: 14px;
-	word-wrap: break-word;
+	
 }
 #PAGE_TEXT10
 {
@@ -288,7 +301,7 @@ body,html
 	margin-bottom: 135px; 
 	display: inline-block;
 	font-size: 14px;
-	word-wrap: break-word;
+	
 }
 #PAGE_TEXT11
 {
@@ -296,7 +309,7 @@ body,html
 	margin-bottom: 125px; 
 	display: inline-block;
 	font-size: 14px;
-	word-wrap: break-word;
+	
 }
 #PAGE_TEXT12
 {
@@ -304,16 +317,18 @@ body,html
 	margin-bottom: 125px; 
 	display: inline-block;
 	font-size: 14px;
-	word-wrap: break-word;
+	
 }
+
+
 
 #PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE
 {
 	width: 100%;
 	height: 100%;
 	position: relative;
-    margin-top: 60PX;
     display: none;
+    padding-top: 40px;
     
 }
 
@@ -321,7 +336,6 @@ body,html
 {
 	width: 100%;
 	height: 100%;
-	vertical-align: top;
 	
 }
 
@@ -331,7 +345,7 @@ body,html
 	background-color: grey;
 	opacity: 0.7;
 	width: 100%;
-    height:200px;
+    height:250px;
     position: absolute;
     bottom: 0;
     margin-bottom: 200px;
@@ -340,41 +354,49 @@ body,html
 #PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON
 {
 	width: 100%;
-	height: 30%;
+	height: 100%;
 	bottom: 0px;
 	background-color: red;
-	position: fixed;
+	
 
 }
 
 
 @media screen and (max-width: 991px) 
 {
+	#PEOPLE_CONTENT_CONTAINER
+		{
+			width: 100%;
+			padding-right1113333: 5px;
+		}
 
 		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER 
 		{
-		    	width: 100%;
+		    	width: 40%;
+		    	float: right;
 		}
+
 
 		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #list-view
 		{
-		        padding-right: 5px;
+		        padding-left: 5px;
 		}
 
 		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #ppl-list-view-bigger-rows
 		{
-		    	margin-left:30px;
+		    	margin-left: 10px;
 		}
 
 		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #grid-view
 		{
-		    	margin-right: 30px;
+		    	margin-right: 10px;
 		}
 
 		#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #single_column_one_row_mobile
 		{
 		     	padding-left: 5px;
 		}
+
 
 		#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_TEXTBOX
 		{
@@ -386,14 +408,20 @@ body,html
 
 		#PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON
 		{
+			width: 100%;
 				height: 25%;
 			
 		}
-
-		#PEOPLE_FACES13
+		#PEOPLE_CONTENT_CONTAINER #PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE
 		{
-				position: fixed;
+			width:100%;
+			height: 100%;
 		}
+
+		#PEOPLE_RECORD_XTRA_CNT {
+			display: none;
+		}
+		
 
 }
 
@@ -404,7 +432,8 @@ body,html
 
 	#PEOPLE_TOP_ACTIONBAR
 	{
-			width: 70%;
+			width: 100%;
+			
 	}
 
 	#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER 
@@ -416,7 +445,7 @@ body,html
 	
 	#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER td 
     {
-    	width: 40px;
+    	width: 10px;
     }
 
     #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #single_column_one_row_mobile
@@ -426,17 +455,21 @@ body,html
 
     #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #grid-view
     {
-    	margin-right: 40px;
+    	margin-right: 0px;
     }
 
     #PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #list-view
     {
-        padding-right: 5px;
+        padding-right: 0px;
     }
 
 	#PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER #ppl-list-view-bigger-rows
     {
-    	margin-left:40px;
+    	margin-left:0px;
+    }
+    
+    #PEOPLE_RECORD_XTRA_CNT {
+    	display: inline-block;
     }
 
 }

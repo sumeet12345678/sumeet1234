@@ -1,19 +1,28 @@
 
- 
-
-
- 
-		
+     
+		 
+   	
 	 <link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>  
+  		
+  		<div class = "text-title" style = "padding-left: 5px; padding-top:10px; padding-bottom: 10px; font-size:18px;"><b>5000</b> People found <img src="/media/images/icons/options-tune-black.png" style = "margin-left: 10px;" width="22px" height="22px" /></div>
   			
-			   
-        <!--action bar -->
+	     <!--action bar -->
        <div id="PEOPLE_CONTENT_CONTAINER">
            <div id="PEOPLE_TOP_ACTIONBAR">
                 <table id="PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER">
-                <td align="left">
-                    <div  style = "display:inline-block; text-align:left;"><a id="list-view" href="#">  <img src="/media/images/icons/list-view.png" width="28px" height="28px" align="right"/></a></div>
+                
+                 <td align="center" valign = middle>   
+                    <div  style = "display: inline-block; text-align:center;"><a id="ppl-list-view-bigger-rows" href="#"><img src="/media/images/icons/fiunnel-black.png" width="25px" height="25px" align="right"/></a></div>
                 </td>
+                <td align="center" valign = middle>   
+                    <div style = "display: inline-block; text-align: center;"><a id="grid-view" href="#"><img src="/media/images/icons/sort-black.png"  width="44px" height="28px" align="right" /></a></div>
+                </td>
+                
+                <td align="right" valign = middle>
+                    <div  style = "display:inline-block; text-align: left;  margin-right: 5px;"><a id="list-view" href="#">  <img src="/media/images/icons/list-view.png" width="24px" height="22px" align="right"/></a></div>
+                </td>
+                
+                <!-- 
                 <td align="center">   
                     <div  style = "display: inline-block; text-align:center;"><a id="ppl-list-view-bigger-rows" href="#"><img src="/media/images/icons/ppl-list-view-bigger-rows.png" width="28px" height="28px" align="right"/></a></div>
                 </td>
@@ -23,6 +32,7 @@
                 <td align="right">
                     <div style = "display: inline-block; text-align: right;"><a id="single_column_one_row_mobile" href="#"><img src="/media/images/icons/single_column_one_row_mobile.png" width="28px" height="28px" align="right"/></a></div>
                 </td>
+                  -->
                    
                 </table>
             </div>
@@ -32,93 +42,93 @@
             <!--list view -->
             
         <div id="PEOPLE_LIST_VIEW">
-            <div id="TITLEBAR">
-            	<div>
-                   <!-- <img src="/media/images/icons/filter.png" width="28px" height="28px" align="left"> -->
-                        <select>
-                            <option value="filter by contacts">filter by contacts</option>
-                            <option value="filter by alphabetical order">filter by alphabetical order</option>
-                        </select>   
-                         <div align="middle" style="display:inline-block; float:right;">
-                    <!--<img src="/media/images/icons/search-gls-white.png" width="28px" height="28px" style="margin-right:0px;" align="middle">--><input type="text" name="search" value="search" style="display:inline-block; text-align:center">
-                </div> 
-                </div>
-               
-            </div>
-
-            <div id="PEOPLE_FACES1">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/DebojitSaikia.jpg" width="80" height="80" style="margin-left:5px;">
-                </div>
-                <div id="PAGE_TEXT1">
-                    <table>
-                        <tr><td><font color="blue">Anurag Tiwari</font></td></tr>
-                        <tr><td>COO & Co-Founder at <br>wedealnow.com</td></tr>
-                        <tr><td><font color="grey">Bengaluru,Karnataka,India</font></td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <div id="PEOPLE_FACES2">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Mihika_JustDial.jpg" width="80" height="80" style="margin-left:5px;">
-                </div>
-                <div id="PAGE_TEXT2">
-                    <table>
-                        <tr><td><font color="blue">Vipin Chand</font></td></tr>
-                        <tr><td>Software Engineer<br> at Langoor</td></tr>
-                        <tr><td><font color="grey">Bengaluru,Karnataka,India</font></td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <div id="PEOPLE_FACES3">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Mihika_JustDial.jpg" width="80" height="80" style="margin-left:5px;">
-                </div>
-                <div id="PAGE_TEXT3">
-                    <table> 
-                        <tr><td><font color="blue">Sanat Jain</font></td></tr>
-                        <tr><td>Business Analyst at<br> Axtria-Ingenious Insights</font></td></tr>                        
-                        <tr><td><font color="grey">India</td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <div id="PEOPLE_FACES4">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg"  width="80" height="80" style="margin-left:5px;">
-                </div>
-                <div id="PAGE_TEXT4">
-                    <table> 
-                        <tr><td><font color="blue">Deepak Dubey</font></td></tr>
-                        <tr><td>Software Development<br> Engineer at Voonik</td></tr>
-                        <tr><td><font color="grey">Bengaluru,Karnataka,India</font></td></tr>
-                    </table>
-                </div>
-            </div>
-
+          	 <table width = "100%" border = 0>          	 
+			 <% 
+			 for(var i= 0; i < 15; i++) 
+			 {  
+			 %>  
+			 	 <tr>                
+            		<td style = "width: 75px; position: relative;" valign = top >   
+            		 
+            			<img src="/media/images/profile_images/Mihika_JustDial.jpg" width="70" height="70">
+            		  
+            			<img style = "position: absolute;  margin-left: auto; margin-right: auto;  right: 3px; top: 57px;" src="/media/images/icons/options.png" width="38" height="38">					            		
+            		</td>            		
+            		<td id = PAGE_TEXT2 valign = top >
+            			<div style = "display: inline-block;">
+	            			<span style= "font-size: 18px;"><a href = "#"><font color="#008CC9">Mihika Mishra</font></a></span><br/>
+	                        
+	                        <span class = "normal-text-black">Software Engineer<br> at Langoor</span><br/>
+	                        <span class = "normal-text-black">Bengaluru, Karnataka, India</span>
+                        </div>
+                        
+                        <div id = PEOPLE_RECORD_XTRA_CNT >
+                        	<span style= "font-size: 18px;"><a href = "#"><font color="#008CC9">Mihika Mishra</font></a></span><br/>
+	                        
+	                        <span class = "normal-text-black">Software Engineer<br> at Langoor</span><br/>
+	                        <span class = "normal-text-black">Bengaluru, Karnataka, India</span>
+                        </div>
+            		</td>            		
+            		<td style = "width: 35px;" align = center valign = middle>		            			 
+		                <table>
+		                
+		                	<tr>
+		                		<td align = center valign = top height = 45><img src="/media/images/icons/tag-black.png" width= 30 height= 30></td>
+		                	</tr>
+		                	
+		                	<% if( i % 3 != 0) { %>
+		                	<tr>
+		                		
+		                		<td align = center valign = bottom height = 45>
+		                			<img  src="/media/images/icons/plus-blue.png" width = 30 height = 30>
+		                		</td>
+		                	</tr>
+		                <% } %>
+		                	
+		                	
+		                	   
+		                </table>
+            		</td>
+            	</tr>   
+            	<tr>                
+            		<td>&nbsp;</td>            		
+            		<td valign = top align=left>
+            			<div style ="background-color: #f2f2f2; text-align:center; border: 1px solid #dcdcdc; width: 200px; height: 25px; margin-bottom: 5px; margin-top: 5px;">Contextual Action</div>
+            			</td>            		
+            		<td></td>
+            	</tr>   
+              <% 
+              } 
+              %>
+             	
+			 </table>
+			 
+			<center>
+				 <div style ="background-color: #558ED5; text-align:center; border: 1px solid #dcdcdc; width: 300px; height: 25px; margin-bottom: 5px; margin-top: 5px;">Show more..</div>
+			</center>
+			 
+			 <br/>
+			 <br/>
+			 <br/>
+            
         </div>
+ 
+
+
+
+
+
+
 
   
           <!--people list view -->
 
          <div id="PEOPLE_LIST_VIEW_BIGGER_ROWS">
-            <div id="TITLEBAR">
-            	<div>
-                   <!-- <img src="/media/images/icons/filter.png" width="28px" height="28px" align="left">-->
-                        <select>
-                            <option value="filter by contacts">filter by contacts</option>
-                            <option value="filter by alphabetical order">filter by alphabetical order</option>
-                        </select>   
-                         <div align="middle" style="display:inline-block; float:right;">
-                    <!--<img src="/media/images/icons/search-gls-white.png" width="28px" height="28px" style="margin-right:15px;" align="middle">--><input img type="text" name="search" value="search" width="28px" height="28px" style="display:inline-block; text-align:center">
-                </div> 
-                </div>
-        	</div>
+           
+        	
             <div id="PEOPLE_FACES5">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/DebojitSaikia.jpg" width="130" height="130" style="margin-left:5px;">
+                <div style="display:inline-block; vertical-align:top;">
+                    <img src="/media/images/profile_images/DebojitSaikia.jpg" width="130" height="130">
                 </div>
                 <div id="PAGE_TEXT5">
                     <table>
@@ -130,8 +140,8 @@
             </div>
 
             <div id="PEOPLE_FACES6">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Mihika_JustDial.jpg" width="130" height="130" style="margin-left:5px;">
+                <div style="display:inline-block; vertical-align:top;">
+                    <img src="/media/images/profile_images/Mihika_JustDial.jpg" width="130" height="130">
                 </div>
                 <div id="PAGE_TEXT6">
                     <table>
@@ -143,21 +153,21 @@
             </div>
 
             <div id="PEOPLE_FACES7">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Mihika_JustDial.jpg" width="130" height="130" style="margin-left:5px;">
+                <div style="display:inline-block; vertical-align:top;">
+                    <img src="/media/images/profile_images/Mihika_JustDial.jpg" width="130" height="130">
                 </div>
                 <div id="PAGE_TEXT7">
                     <table> 
                         <tr><td><font color="blue">Sanat Jain</font></td></tr>
-                        <tr><td>Business Analyst at<br> Axtria-Ingenious Insights</font></td></tr>                        
+                        <tr><td>Business Analyst at<br> Axtria-Ingenious<br> Insights</font></td></tr>                        
                         <tr><td><font color="grey">India</td></tr>
                     </table>
                 </div>
             </div>
 
             <div id="PEOPLE_FACES8">
-                <div style="display:inline-block;">
-                    <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="130" height="130" style="margin-left:5px;">
+                <div style="display:inline-block; vertical-align:top;">
+                    <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="130" height="130">
                 </div>
                 <div id="PAGE_TEXT8">
                     <table> 
@@ -173,22 +183,13 @@
 
         <!-- grid view -->
         <div id="PEOPLE_GRID_VIEW">
-        	<div id="TITLEBAR">
-            	<div>
-                   <!-- <img src="/media/images/icons/filter.png" width="28px" height="28px" align="left">-->
-                        <select>
-                            <option value="filter by contacts">filter by contacts</option>
-                            <option value="filter by alphabetical order">filter by alphabetical order</option>
-                        </select>   
-                         <div align="middle" style="display:inline-block; float:right;">
-                   <!-- <img src="/media/images/icons/search-gls-white.png" width="28px" height="28px" style="margin-right:15px;" align="middle">--><input img type="text" name="search" value="search" width="28px" height="28px" style="display:inline-block; text-align:center">
-                </div> 
-                </div>
-        	</div>
+        	
+         
+        	
             <div id="PEOPLE_GRID_VIEW_ROW1">  
 
                     <div class="PEOPLE_FACES9_COLUMN1">
-                        <div style="display:inline-block;">
+                        <div style="display:inline-block; vertical-align:top; margin-top:5px;">
                             <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
                         </div>
                         <div id="PAGE_TEXT9">
@@ -202,7 +203,7 @@
 
                     --><div class="PEOPLE_FACES10_COLUMN2">
                         
-                        <div style="display:inline-block;">
+                        <div style="display:inline-block; vertical-align:top; margin-top:5px;">
                             <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
                         </div>
                         <div id="PAGE_TEXT10">
@@ -219,7 +220,7 @@
             <div id="PEOPLE_GRID_VIEW_ROW2">
 
                 <div class="PEOPLE_FACES11_COLUMN3">
-                    <div style="display:inline-block;">
+                    <div style="display:inline-block; vertical-align:top; margin-top:5px;">
                         <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
                     </div>
                     <div id="PAGE_TEXT11">
@@ -233,7 +234,7 @@
 
                 --><div class="PEOPLE_FACES12_COLUMN4">
                
-                    <div style="display:inline-block;">
+                    <div style="display:inline-block; vertical-align:top; margin-top:5px;">
                         <img src="/media/images/profile_images/Prabal_Atreya_Sales_Advisor-IBM.jpg" width="200" height="200" style="margin-left:5px;">
                     </div>
                     <div id="PAGE_TEXT12">
@@ -248,18 +249,66 @@
                
             </div>
             
-       </div>
+       </div> 
 
 
 
         <div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE">
           
             <div id="PEOPLE_FACES13">
+                
                 <img src="/media/images/profile_images/santosh.jpg">
-                <div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_TEXTBOX">
-               
+
+            <!--<div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_TEXTBOX">
+               	<table>
+               	<tr>
+               		<td>
+							<font color=white>Focus:</font><br/>
+								<font color=white>Patent,</font><br/>
+								<font color=white>Licensing,</font><br/>
+								<font color=white>Copyright,</font><br/>
+								<font color=white>Trademark</font><br/>
+               		</td>
+               		<td width=6>
+									&nbsp;
+								</td>							
+								<td valign = bottom align=right>
+								
+									<table>
+				  						<tr>
+				  							<td valign = top>
+				  								<img id="" style = "padding: 0px 5px 10px 0px;"  width = "26" height = "28"  src="/media/location_white.png" />
+				  							</td>
+				  							<td valign=top>
+				  								<font color=white>Saket, Delhi</font>
+				  							</td>				  							
+				  						</tr>
+				  						<tr>
+				  							<td valign = top>
+				  								<img id="" style = "padding: 0px 5px 10px 0px;" width = "27" height = "30"  src="/media/certification_white.png" /> 
+				  							</td>
+				  							<td valign=top>
+				  								<font color=white>License: 20 years</font>
+				  							</td>				  							
+				  						</tr>
+				  					</table>
+								</td>
+							</tr>	
+							<td valign = top>
+  					<table>
+  						<tr>
+  							<td valign=top width=28>
+  								<img id="" style = "padding: 0px 0px 0px 0px;" width = "14" height = "14"  src="/media/org_white.png" /> &nbsp;
+  							</td>
+  							<td align=left><p><font color=white>Family Court &amp; High Court, Bangalore.Supreme Court, India</font></p></td>
+  						</tr>
+  					</table>	
+				</td>				
+               	
+               	
+             </table>
                 </div>
-            </div>
+            </div>-->
            
             <div id="PEOPLE_SINGLE_COLUMN_ONE_ROW_MOBILE_ICON">
                 
@@ -267,10 +316,11 @@
             
         </div> 
        
-</div> 
+</div>
 
-
- 		   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+<!-- PEOPLE_CONTENT_CONTAINER ends -->
+        <!-- javascript-->
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
            <script type="text/javascript">
 
             /*list-view icon*/
@@ -333,3 +383,4 @@
                 }
 
             </script>
+	

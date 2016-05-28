@@ -12,3 +12,37 @@
 	position: relative;
 	padding-top: 8px;
 }
+
+
+
+
+
+ @media screen and (max-width: 760px) { 
+  	#PROFILE_HEADER_MODEL_LEFT_BLOCK1 {
+		width: 40%;
+  	}
+  
+  #PROFILE_HEADER_MODEL_RIGHT_BLOCK1  {
+  	 width: 60%;
+  }
+  
+  #PROFILE_MODEL_PORTFOLIO_CONTAINER1 img {
+  	width: 90%;
+  }
+  
+}
+
+ @media screen and (min-width: 761px) { 
+  	#PROFILE_HEADER_MODEL_LEFT_BLOCK1 {
+		width: 50%;
+  	}
+  
+  #PROFILE_HEADER_MODEL_RIGHT_BLOCK1  {
+  	 width: 50%;
+  }
+  
+    #PROFILE_MODEL_PORTFOLIO_CONTAINER1 img {
+  	width: 70%;
+  }
+  
+}

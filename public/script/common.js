@@ -1,8 +1,19 @@
-var globalSunModalContext = "profile";  
-var CENTER_REGION_HEIGHT = getCenterScreenLayoutHeight();
-var FOOTER_BAR_HEIGHT = getFooterBarHeight();  
-var SCREEN_HEIGHT_GLOBAL = screen.height;
-var TOP_MENU_BAR_HEIGHT = getTopMenuBarHeight();
+
+ 
+
+
+ 
+
+	var globalSunModalContext = "profile";  
+	var CENTER_REGION_HEIGHT = getCenterScreenLayoutHeight();
+	var FOOTER_BAR_HEIGHT = getFooterBarHeight();  
+	var SCREEN_HEIGHT_GLOBAL = screen.height;
+	var TOP_MENU_BAR_HEIGHT = getTopMenuBarHeight();
+	
+	//alert(" -----"  + CENTER_REGION_HEIGHT);  
+	//alert(" ----ttt-"  + TOP_MENU_BAR_HEIGHT);
+	
+   
 
  
 var GLOBAL_POP_UP_ARRAY_LIST = ["plus", "AKK_OPTIONS_POPUP_ID", "sunIcon"," QUK_TOOL_ICON_ID", "imgProfilePhoto"]; //not necessary

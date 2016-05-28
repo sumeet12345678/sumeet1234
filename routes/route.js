@@ -4,9 +4,12 @@ var router = express.Router()
 //var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
 
 //GET home.ejs
-router.get('/', function(req, res) {
+
+/* router.get('/', function(req, res) {
 	  res.render('home');
 });
+
+*/
 
 
 
@@ -43,10 +46,14 @@ router.get('/profile/view/uniprofile_bg_img', function(req, res, next) {
 	  res.render('profiles/common_bg_img.ejs', { page: "uniprofile", profile_context: "uniprofile_bg_img"});	    
 	}); 
 
-router.get('/people/search/result', function(req, res, next) {
+ /*router.get('/people/search/result', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});    
-  
+  */
+router.get('/', function(req, res, next) {
+	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
+	});  
+
 router.get('/aakBox', function(req, res, next) {
 	  var categoryId = req.param('categoryId');
 	  res.render('profiles/common.ejs', { page: "aakBox",  aakBoxCategory : categoryId});	    
