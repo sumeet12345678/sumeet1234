@@ -2,27 +2,19 @@
   	 
   
   </script>
-  
-  
   <style>
-  
   	h4 {
   			margin: 0px;
   	}
-  	
   </style>
   
-  
-  
-  
-    
   <link href="/styles/profiles/uniProfileModel.css" rel="stylesheet" />  
         
-  <div id = PROFILE_HEADER_MODEL style = "height: 60%; background-color: #5a445e; position: relative;">    
+  <div id = PROFILE_HEADER_MODEL style = "height: 60%; background-color: #5a445e; position: relative;">  
   
-	  	<div id = PROFILE_HEADER_MODEL_LEFT_BLOCK style = "vertical-align:top ;   height: 100%;  color: #fff;">
+	  	<div id = PROFILE_HEADER_MODEL_LEFT_BLOCK style = "width: 100%; height: 100%;  color: #fff;">
 	  	
-	  		<div  style = "display:inline-block; width: 40%; height: 100%;  padding-left: 5px;">
+	  		<div  style = "display:inline-block; width: 40%; height: 100%; vertical-align:top ; padding-left: 5px;">
 	  		 	<span><h3>Deb Aryan</h3></span>
 	  		 	 
 	  		 	<img id="" style = "padding: 0px 0px 0px 0px;"  width = "24" height = "24"  src="/media/location_white.png" />Bangalore<br/>
@@ -39,40 +31,39 @@
 	  		 		</tr>
 	  		 	
 	  		 	</table>
-	  		 	   
-	  		</div>  
-	  	</div>  
+	  		 	 
+	  		</div><!-- 
+	  		
+	  	--><div id = PROFILE_HEADER_MODEL_RIGHT_BLOCK style = "display:inline-block; width: 60%;  height: 100%; vertical-align:top; padding: 10px 3px 3px 0px;">
+	  		 	<img id="" style = "border: 1px solid #fff" width = "100%"  height= "100%"  src="/media/images/profile_images/DebDasSinha.jpg" />
+	  		</div>
+	  	</div>
  
-  		<div id="PROFILE_MODEL_BG_HIDE_ICON" style = "display: inline-block; width: 60%; position: absolute; bottom: 0; left:0; right:0; margin-right: auto; margin-left: auto; width: 28px;">   
+  		<div id="PROFILE_MODEL_BG_HIDE_ICON" style = "display: inline-block; position: absolute; bottom: 0; left:0; right:0; margin-right: auto; margin-left: auto; width: 28px;">   
 	  		<img   width = "32" height = "28"  src="/media/images/icons/arrow-up-plain-white.png" />	  		 
   		</div>
-  		
   </div>
-   
+  
    <div id = PROFILE_MODEL_ACTION_BAR>  	
-	  	<nobr>
-		  	<div id = PROFILE_MODEL_PORTFOLIO style = "cursor: pointer; text-align: center; display: inline-block; width: 33.333333%;">Portfolio</div>
-		  	<div style = "text-align: center; display: inline-block; width: 33.333333%;">Snapshot</div>
-		  	<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Experience</div>
-	  	</nobr>  
-	  	
-	  	<div id="PROFILE_MODEL_BG_DISPLAY_ICON" style = "display: none; position: absolute; bottom: -28px; left:0; right:0; margin-right: auto; margin-left: auto; width: 34px;">   
-		  		<img   width = "34" height = "28"  src="/media/images/icons/arrow-down-plain-black.png" />	  		 
-	  	</div>
-  	 
+  	<nobr>
+	  	<div id = PROFILE_MODEL_PORTFOLIO style = "cursor: pointer; text-align: center; display: inline-block; width: 33.333333%;">Portfolio</div>
+	  	<div style = "text-align: center; display: inline-block; width: 33.333333%;">Snapshot</div>
+	  	<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Experience</div>
+  	</nobr>  
+  	
+  	<div id="PROFILE_MODEL_BG_DISPLAY_ICON" style = "display: none; position: absolute; bottom: -28px; left:0; right:0; margin-right: auto; margin-left: auto; width: 34px;">   
+	  		<img   width = "34" height = "28"  src="/media/images/icons/arrow-down-plain-black.png" />	  		 
+  	</div>
+  	
   </div>
-  
-  
   
   <div id = PROFILE_ASPECT_SUMMARY_MODEL style = "padding: 5px;">
-	  	<h5><b>About</b></h5>   
+	  	<h5><b>About</b></h5> 
 	  	<p align = justify>
 		  	Experienced Model, Actress and Presenter. I also enjoy and teach painting, sculpting and pottery. used to fly the world as a VVIP cabin crew for 9 years.
-		  	I like skydiving, swimming, piano, horseback and bicycle riding. Open for new experiences, opportunities and learnings to elevate my career.
+		  	I like skydiving, swimming, piano, horseback and b icycle riding. Open for new experiences, opportunities and learnings to elevate my career.
 	  	</p>
   </div>
-  
-  
   
   <div id = PROFILE_MODEL_PORTFOLIO_IMGS style = "display: none;"> 
   
@@ -116,8 +107,6 @@
 					if(xhr.status === 200){
 						console.log("Status  == 200");
 						$('#PROFILE_MODEL_PORTFOLIO_IMGS').html(xhr.responseText);
-						
-						 $('#PROFILE_MODEL_PORTFOLIO_CONTAINER img').css('height', getCenterScreenLayoutHeight());
 						 
 					}
 					else {
@@ -130,9 +119,7 @@
 				xhr.open('GET','/data/profile-model-portfolio_m.html', true);
 				 xhr.send(null);
 				 
-				 $('#PROFILE_MODEL_PORTFOLIO_IMGS').toggle();
-				// alert("model == " + getCenterScreenLayoutHeight());
-				 //$('#PROFILE_MODEL_PORTFOLIO_CONTAINER').css('width', '30px');
+				 $('#PROFILE_MODEL_PORTFOLIO_IMGS').toggle();	
 			}
 			
 			/*$('#PROFILE_HEADER').height(screen.height * .45);*/
