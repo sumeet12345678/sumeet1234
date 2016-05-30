@@ -33,6 +33,12 @@ router.get('/profile/view/lawyer', function(req, res, next) {
 		//res.render('profile/profile.ejs');
 	});
 
+
+router.get('/profile/view/professional', function(req, res, next) {      
+	  res.render('profiles/common_with_bg.ejs', { page: "uniprofile", profile_context: "uniprofile_professional"});	    
+	}); 
+
+
 router.get('/profile/view/model', function(req, res, next) {      
 	  res.render('profiles/common_with_bg.ejs', { page: "uniprofile", profile_context: "uniprofile_model"});	    
 	}); 
@@ -76,6 +82,12 @@ router.get('/view-aak', function(req, res, next) {
 	  res.render('viewAak/viewAak.ejs');	    
 	});  
 
+
+ 
+router.get('/experience', function(req, res, next) {
+	  res.render('experience.ejs');	    
+	}); 
+ 
 
 //router.get('/people/search/result', function(req, res, next) {
 	//  res.render('profiles/peopleSearchResults.ejs');	    

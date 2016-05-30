@@ -93,11 +93,11 @@ $(function(){
 		 loadPushZone();
 	}
 	
-	function showExperience(event){
+	function showExperience(event) {
 		console.log("Experience");
 		var xhr = new XMLHttpRequest();
 		
-		xhr.onload = function(){
+		xhr.onload = function() {
 			if(xhr.status === 200){
 				console.log("Status  == 200");
 				$('.summary').html(xhr.responseText);

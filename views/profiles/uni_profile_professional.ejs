@@ -1,0 +1,274 @@
+  <script>
+  	 
+  
+  </script>
+  
+  <% 
+  	 var profileJsonData = {
+  	 	
+  	 	"rating" 			: "500",
+  	 	"star" 			 	: "",
+  	 	"summary" 			: "",
+  	 	"cntxtSummary" 		: "",
+  	 	"viewableAspect"	: {
+  	 								"Experience" : "showExperience",
+  	 								"Skills"	 : "",
+  	 								"Interests"	 : "",
+  	 								"Causes"	 : "" 
+  	 						}
+  	 	
+  	 };
+  
+  
+  %>
+  
+  
+  
+  <style>
+  
+  	h4 {
+  			margin: 0px;
+  	}
+  	
+  </style>
+  
+  <link href="/styles/profiles/uniProfileLawyer.css" rel="stylesheet" />  
+  
+   
+     
+  <div id = PROFILE_HEADER>    
+  
+  
+  		<table width =100% border = 0 height = 100% cellpadding = 0 cellspacing = 0>
+  			<tr>
+  				<td width=6>
+					&nbsp;
+				</td>
+  				<td>  
+  											
+						<table border = 0>						
+							<tr>
+								<td>
+									<font color=#C4C435>Focus:</font><br/>
+									Patent,<br/>
+									Licensing,<br/>
+									Copyright,<br/>
+									Trademark<br/>
+									 
+								</td>	
+								<td width=6>
+									&nbsp;
+								</td>							
+								<td valign = bottom align=right>
+								
+									<table>
+				  						<tr>
+				  							<td valign = top>
+				  								<img id="" style = "padding: 0px 5px 10px 0px;"  width = "26" height = "28"  src="/media/location_white.png" />
+				  							</td>
+				  							<td valign=top>
+				  								Saket, Delhi
+				  							</td>				  							
+				  						</tr>
+				  						<tr>
+				  							<td valign = top>
+				  								<img id="" style = "padding: 0px 5px 10px 0px;" width = "27" height = "30"  src="/media/certification_white.png" /> 
+				  							</td>
+				  							<td valign=top>
+				  								License: 20 years
+				  							</td>				  							
+				  						</tr>
+				  					</table>
+								</td>
+							</tr>						
+						</table>				
+  				</td>
+  				<td width = 121 height=130 valign=top>
+  						 <div style = "padding: 15px 7px 0px 0px;">
+  						 	<img id="" style = "border: 1px solid #fff" width = "120"  height= "120"  src="/media/images/profile_images/DebDasSinha.jpg" />
+  						 </div>
+						 
+						 
+  				</td>	
+  			</tr>
+  			<tr>
+  				<td width=6>
+					&nbsp;
+				</td>
+  				<td valign = top>
+  					<table>
+  						<tr>
+  							<td valign=top width=28>
+  								<img id="" style = "padding: 0px 0px 0px 0px;" width = "14" height = "14"  src="/media/org_white.png" /> &nbsp;
+  							</td>
+  							<td align=left><p>Family Court &amp; High Court, Bangalore. Supreme Court, India</p></td>
+  						</tr>
+  					</table>	
+				</td>
+				<td valign = top align=center width=121>
+  					<table width=100%>
+  						<tr>
+  							<td  align=center><div style = "background-color: #1899C4; font-size: 24px; height: 28px; width: 55px;">***</div></td>
+  							<td align=center valign=bottom><div style = "background-color: #000; color: #fff; font-size: 19px; height: 28px; width: 55px;">7.0</div></td>
+  						</tr>
+  					</table>
+  				</td>
+			</tr>
+  			
+  		</table>
+  		   
+  	<div id="PROFILE_BACKGROUND_HIDE_ICON" style = "display: inline-block; position: absolute; bottom: -61px; left:0; right:0; margin-right: auto; margin-left: auto; width: 28px;">   
+	  		<img   width = "32" height = "28"  src="/media/images/icons/arrow-head-up-black.png" />	  		 
+  		</div>
+  
+  	 
+  </div>
+  
+
+  
+  <div id = PROFILE_ACTION_BAR style = "overflow-x: auto;">  	
+  	<nobr>
+  		   
+  		 <%	 var obj = profileJsonData.viewableAspect;
+  		 
+  		 	 for (var param in obj) {	%>
+		  	
+			  	<div id = <%= param %> onclick = get<%= param %>()      style = "text-align: center; display: inline-block; width: 33.333333%;"><a> <%= param %> </a></div>
+			  	  
+			  	<!-- <div style = "text-align: center; display: inline-block; width: 33.333333%;">Reviews</div>
+			  		<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Fees, Payment</div>
+			     -->
+		 <% } %>
+  	</nobr>  
+  	
+  	<div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = "display: none; position: absolute; bottom: -25px; left:0; right:0; margin-right: auto; margin-left: auto; width: 34px;">   
+	  		<img   width = "34" height = "28"  src="/media/images/icons/arrow-head-down-black.png" />	  		 
+  	</div>
+  	
+  	
+  </div>
+  
+  <div id = PROFILE_TITLE>
+  		<h4><b>Anjali Arora</b></h4>
+  		Advocate, <b>High Court of Karnataka</b><br>
+  		 
+  </div>
+  
+  <div id = PROFILE_MENU_OPTIONS_DETAILS style = "padding-left: 5px; padding-right: 5px; padding-bottom: 5px; text-align: justify;">
+  		 
+  </div>
+  
+  
+  
+  <div id = PROFILE_ASPECT_SUMMARY>
+  	<h5><b>About</b></h5>
+  	Anjali Arora focuses her practice on the procurement and enforcement of domestic and international patents, trademarks and copyrights. <br><br>
+  	Her experience includes various technical areas such as aerospace, hybrid and electrical engines, architecture and construction, medical devices, agriculture, food, and energy systems.
+  </div>
+  
+
+  <div id = PROFILE_ASPECT_ABC_SECTION  style = "padding-left: 5px; padding-right: 5px;">
+  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
+  		<img id=""  width = "24" height = "24"  src="/media/edit_black.png" />
+  		<div  style = " margin-top: 7px; display: inline-block;"> Practice Areas </div>
+  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">-</span>
+  		</div>
+  	</div>
+  	<div>
+  		<img id=""  width = "100%" height= "100%" src="/media/practice_areas.PNG" />
+  	</div>
+   
+    
+ </div>
+ 
+  <div id = PROFILE_ASPECT_XYZ_SECTION style = "padding-left: 5px; padding-right: 5px;">
+  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
+  		<img id=""  width = "22" height = "22"  src="/media/schedule_black.png" />
+  		<div  style = " margin-top: 7px; display: inline-block;"> Consultation Schedule </div>
+  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">+</span>
+  		</div>
+  	</div>
+  </div>
+  
+ <p>
+ 	&nbsp;
+ </p>
+ <p>
+ 	&nbsp;
+ </p>
+ 
+  
+	  
+	<script>
+	
+			$('#PROFILE_BACKGROUND_HIDE_ICON').on('click', function() {
+				$('#PROFILE_HEADER').hide();
+				$('#PROFILE_BACKGROUND_DISPLAY_ICON').show();
+			});	
+			
+			
+			$('#PROFILE_BACKGROUND_DISPLAY_ICON').on('click', function() {
+				$('#PROFILE_HEADER').show();
+				$('#PROFILE_BACKGROUND_DISPLAY_ICON').hide();
+			});
+			
+			
+			
+			
+			
+			
+			function getExperience() {
+				 
+				var xhr = new XMLHttpRequest();
+				
+				xhr.onload = function(){
+					if(xhr.status === 200){
+						console.log("Status  == 200");
+						$('#PROFILE_MENU_OPTIONS_DETAILS').html(xhr.responseText);
+						
+						//updatePushZone();
+					}
+					else {
+						console.log("Status == " + xhr.status);  
+					}
+				}
+				
+				 xhr.open('GET','/experience', true);         
+				 xhr.send(null);
+			};
+			
+			
+			
+			function getSkills() {
+				//alert("skillss");
+			}
+			 
+
+			function getInterests() {
+				//alert("Interests");
+			}
+			
+			/*$('#PROFILE_HEADER').height(screen.height * .45);*/
+				/*
+				  var profileJsonData = [{
+						                       "profile_header" : [{ "text" : "Worrying is misuse of imagination...",
+						                                           	"font-size" : "20px",
+						                                           "background-color" : "333",
+						                                           "pic" : "444",
+						                                           "profile_pic_position" : "left"  		//left, center or right
+						                       						}
+						                                          ],
+						                       
+						                       "profile_title" : "Software Developer.... :) ",
+						                       
+						                       "profile_summary" : "SummarySummary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary" ,
+						                       
+						                       "profile_sections" : [{
+						                    	   	
+						                    	   
+						                       					}]
+				 					 } ];
+				
+				 */
+		 
+	</script>     

@@ -1,0 +1,63 @@
+<%
+	var experienceService = {
+	 		"deb" : {
+	 					"experience1" : {
+								"title": "Value Adder, Inspirer (Engineer, Design & Development)",
+								"description" : "Contributed actively to 3 application development (Java, J2EE, Web Technologies, Perl, ASP, Linux) projects wearing different roles (Developer & Quality Controller, Module Lead) successfully meeting delivery quality & schedule targets. Did technical feasibility analysis for few prospective projects (in Salesforce Automation, Handheld/Mobile, eCommerce) and contributed in solution proposals (unusual of a resource of my cadre)." 
+												
+				
+								},
+						 "experience2" : {
+									"title" : "Savior, Heavy-Lifter, 'Making-Things-Happen'-er (Technical Consultant)",
+									"description" : "Single mindedly & handedly (with 1 contributor) brought a J2EE based Web Application (UI, Server-side Presentation Layer, Web Services Integration, few EJB Components) of 5-6 months size to Customer Acceptance, otherwise needing 'a Project Manager', 'a Business Analyst', 'a Development Lead cum Solution Architect', 'QA Personnel(s)', '4-6 able developers needing training on technology stack including myself', 'Application Runtime/Container (software CD was shipped from US just a week/less before the delivery date and till then i could only write full back-end code and compile on command prompt)', 'IBM's Effective Tech Support For well-recognized WebSphere 4.0's craziness', 'a minimum acceptable work environment (e.g. an uninterrupted Power Supply, comfortable seating, calm ambiance..."
+				
+								}
+	 					},
+	 		  
+	 		
+	 		"abhi" : {} 
+
+		};
+ 
+ 
+%>
+
+
+<div>
+	  
+			 <div style = "font-size: 20px; margin-top: 10px;">
+			 	<b>Experience</b>
+			 </div>
+			  
+				<% 
+					var obj = experienceService.deb;
+				 	
+					for( var param in obj) {
+						var title1;
+						if(obj.hasOwnProperty(param))	
+						{
+						  title1 = obj[param].title;
+						  console.log("BBBBBBBBBBBV======= " + title1);
+						  					 
+				%>				  
+			 <div> 
+			 	<b><%=  obj[param].title  %></b>			 
+			 </div>
+			 
+			 <div style = "margin-bottom: 10px;"> 
+			 	 <%= obj[param].description %>			 
+			 </div>
+			 
+			 <% } }  %>
+
+</div>
+
+
+
+
+
+
+
+
+
+
