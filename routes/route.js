@@ -34,9 +34,14 @@ router.get('/profile/view/lawyer', function(req, res, next) {
 	});
 
 
-router.get('/profile/view/professional', function(req, res, next) {      
+
+
+router.get('/profile/view/professional', function(req, res, next) {    
 	  res.render('profiles/common_with_bg.ejs', { page: "uniprofile", profile_context: "uniprofile_professional"});	    
 	}); 
+
+
+
 
 
 router.get('/profile/view/model', function(req, res, next) {      
@@ -85,7 +90,9 @@ router.get('/view-aak', function(req, res, next) {
 
  
 router.get('/experience', function(req, res, next) {
-	  res.render('experience.ejs');	    
+	 var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('experience.ejs', {profileId: 'deb'});	    
 	}); 
  
 

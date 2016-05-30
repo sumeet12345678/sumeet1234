@@ -30,15 +30,15 @@
 			 </div>
 			  
 				<% 
-					var obj = experienceService.deb;
+				 
+					var obj = experienceService.deb; 
 				 	
 					for( var param in obj) {
 						var title1;
 						if(obj.hasOwnProperty(param))	
 						{
 						  title1 = obj[param].title;
-						  console.log("BBBBBBBBBBBV======= " + title1);
-						  					 
+				  					 
 				%>				  
 			 <div> 
 			 	<b><%=  obj[param].title  %></b>			 

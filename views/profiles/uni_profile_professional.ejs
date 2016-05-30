@@ -11,10 +11,33 @@
   	 	"summary" 			: "",
   	 	"cntxtSummary" 		: "",
   	 	"viewableAspect"	: {
-  	 								"Experience" : "showExperience",
-  	 								"Skills"	 : "",
-  	 								"Interests"	 : "",
-  	 								"Causes"	 : "" 
+  	 								"Experience" : {	"id"	: "PROFILE_EXP", 
+			  	 										"label" : "Experience",
+			  	 										"url" : "/experience",
+			  	 										 
+			  	 									},
+  	 								
+  	 								"Skills"	: {
+		  	 											"id" : "PROFILE_SKILLS",
+		  	 											"label" : "Skills",
+		  	 											"url" : "/skills",
+		  	 											 
+		  	 								},
+  	 								
+  	 								 
+  	 								"Interests"	 : {
+	  	 											"id" : "PROFILE_INTERESTS",
+	  	 											"label" : "Interests",
+	  	 											"url" : "/interests",
+	  	 										 
+  	 									 },
+  	 								 
+  	 								"Causes"	: { 
+	  	 											"id" : "PROFILE_CAUSES",
+	  	 											"label" : "Causes",
+	  	 											"url" : "/skills",
+	  	 											 
+	  	 								} 
   	 						}
   	 	
   	 };
@@ -126,70 +149,87 @@
   
 
   
-  <div id = PROFILE_ACTION_BAR style = "overflow-x: auto;">  	
-  	<nobr>
-  		   
-  		 <%	 var obj = profileJsonData.viewableAspect;
-  		 
-  		 	 for (var param in obj) {	%>
-		  	
-			  	<div id = <%= param %> onclick = get<%= param %>()      style = "text-align: center; display: inline-block; width: 33.333333%;"><a> <%= param %> </a></div>
-			  	  
-			  	<!-- <div style = "text-align: center; display: inline-block; width: 33.333333%;">Reviews</div>
-			  		<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Fees, Payment</div>
-			     -->
-		 <% } %>
-  	</nobr>  
+  <div id = PROFILE_ACTION_BAR style = "overflow-x: hidden;">  	
   	
-  	<div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = "display: none; position: absolute; bottom: -25px; left:0; right:0; margin-right: auto; margin-left: auto; width: 34px;">   
-	  		<img   width = "34" height = "28"  src="/media/images/icons/arrow-head-down-black.png" />	  		 
-  	</div>
-  	
-  	
+	  	 <nobr>  
+	  		   
+	  		 <%	 var viewableAspectObj = profileJsonData.viewableAspect;
+	  		 
+	  		  	 for (var param in viewableAspectObj) {	
+	  		 	 
+	  		 	 	if(viewableAspectObj.hasOwnProperty(param))
+	  		 	 	{
+	  		 	 	  var id = viewableAspectObj[param].id;
+	  		 	 	  var label = viewableAspectObj[param].label;
+	  		 	 	  var url = viewableAspectObj[param].url;
+	  		 	 	
+	  		 	 		
+	  		 	 %>
+			  	 
+				    <div id = <%= id %> onclick = getProfileAspectInfo("<%=url%>")		style = " cursor: pointer; text-align: center; display: inline-block; width: 33.333333%;"><%= label %> </div>  
+				  	  
+				  	<!-- <div style = "text-align: center; display: inline-block; width: 33.333333%;">Reviews</div>
+				  		<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Fees, Payment</div>
+				     -->
+			 <% } } %>
+	  	</nobr>  
+	  	
+	  	
+	  	
+	  	<div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = " display: none; position: absolute; bottom: -25px; left:0; right:0; margin-right: auto; margin-left: auto; width: 34px;">   
+		  		<img   width = "34" height = "28"  src="/media/images/icons/arrow-head-down-black.png" />	  		 
+	  	</div>
+	  	
+	  	
   </div>
   
   <div id = PROFILE_TITLE>
-  		<h4><b>Anjali Arora</b></h4>
-  		Advocate, <b>High Court of Karnataka</b><br>
+  		<h4><b>Debdas Sinha</b></h4>
+  		Architect, <b>Bangalore</b><br>
   		 
-  </div>
-  
-  <div id = PROFILE_MENU_OPTIONS_DETAILS style = "padding-left: 5px; padding-right: 5px; padding-bottom: 5px; text-align: justify;">
-  		 
-  </div>
-  
-  
-  
-  <div id = PROFILE_ASPECT_SUMMARY>
-  	<h5><b>About</b></h5>
-  	Anjali Arora focuses her practice on the procurement and enforcement of domestic and international patents, trademarks and copyrights. <br><br>
-  	Her experience includes various technical areas such as aerospace, hybrid and electrical engines, architecture and construction, medical devices, agriculture, food, and energy systems.
   </div>
   
 
-  <div id = PROFILE_ASPECT_ABC_SECTION  style = "padding-left: 5px; padding-right: 5px;">
-  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
-  		<img id=""  width = "24" height = "24"  src="/media/edit_black.png" />
-  		<div  style = " margin-top: 7px; display: inline-block;"> Practice Areas </div>
-  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">-</span>
-  		</div>
-  	</div>
-  	<div>
-  		<img id=""  width = "100%" height= "100%" src="/media/practice_areas.PNG" />
-  	</div>
-   
-    
+ <div id = PROFILE_ASPECT_CONTAINER>
+  
+			  <div id = PROFILE_MENU_OPTIONS_DETAILS style = "padding-left: 5px; padding-right: 5px; padding-bottom: 5px; text-align: justify;">
+			  		 
+			  </div>
+			  
+			  
+			  
+			  <div id = PROFILE_ASPECT_SUMMARY style = "text-align: justify; ">
+				  	<h5><b>About</b></h5>
+				  	Anjali Arora focuses her practice on the procurement and enforcement of domestic and international patents, trademarks and copyrights. <br><br>
+				  	Her experience includes various technical areas such as aerospace, hybrid and electrical engines, architecture and construction, medical devices, agriculture, food, and energy systems.
+			  </div>
+			  
+			
+			  <div id = PROFILE_ASPECT_ABC_SECTION  style = "padding-left: 5px; padding-right: 5px;">
+				  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
+				  		<img id=""  width = "24" height = "24"  src="/media/edit_black.png" />
+				  		<div  style = " margin-top: 7px; display: inline-block;"> Practice Areas </div>
+				  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">-</span>
+				  		</div>
+				  	</div>
+				  	<div>
+				  		<img id=""  width = "100%" height= "100%" src="/media/practice_areas.PNG" />
+				  	</div>
+			   
+			    
+			 </div>
+			 
+			  <div id = PROFILE_ASPECT_XYZ_SECTION style = "padding-left: 5px; padding-right: 5px;">
+			  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
+			  		<img id=""  width = "22" height = "22"  src="/media/schedule_black.png" />
+			  		<div  style = " margin-top: 7px; display: inline-block;"> Consultation Schedule </div>
+			  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">+</span>
+			  		</div>
+			  	</div>
+			  </div>
+			  
  </div>
  
-  <div id = PROFILE_ASPECT_XYZ_SECTION style = "padding-left: 5px; padding-right: 5px;">
-  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
-  		<img id=""  width = "22" height = "22"  src="/media/schedule_black.png" />
-  		<div  style = " margin-top: 7px; display: inline-block;"> Consultation Schedule </div>
-  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">+</span>
-  		</div>
-  	</div>
-  </div>
-  
  <p>
  	&nbsp;
  </p>
@@ -217,14 +257,14 @@
 			
 			
 			
-			function getExperience() {
-				 
+			function getProfileAspectInfo(url) {
+				  
 				var xhr = new XMLHttpRequest();
 				
-				xhr.onload = function(){
+				xhr.onload = function() {
 					if(xhr.status === 200){
 						console.log("Status  == 200");
-						$('#PROFILE_MENU_OPTIONS_DETAILS').html(xhr.responseText);
+						$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
 						
 						//updatePushZone();
 					}
@@ -233,20 +273,11 @@
 					}
 				}
 				
-				 xhr.open('GET','/experience', true);         
+				 xhr.open('GET',url, true);         
 				 xhr.send(null);
 			};
 			
-			
-			
-			function getSkills() {
-				//alert("skillss");
-			}
-			 
-
-			function getInterests() {
-				//alert("Interests");
-			}
+		 
 			
 			/*$('#PROFILE_HEADER').height(screen.height * .45);*/
 				/*
