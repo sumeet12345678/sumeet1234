@@ -3,14 +3,26 @@
      
 		 
    	
-	 <link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>  
+	<link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>
+	
+	
+
+	
+	
+	
+	<!-- <div id = CONTAXONOMY style="height: 300px; background-color: red;">
+	
+	
+    </div>
+	-->
+	  
   	<div style = "padding-left: 5px; padding-right: 5px; padding-top: 10px;">
   		<div class = "text-title" style = " display: inline-block; font-size:18px;"><b>5000</b> People found</div>
   		
   		<div style = "display: inline-block; float: right;">
-	  		 <div  style = "display: inline-block; margin-right: 15px;  "><a id="ppl-list-view-bigger-rows" href="#"><img src="/media/images/icons/options-tune-black.png" width="25px" height="25px" /></a></div>	  		
-	  		 <div style = "display: inline-block; margin-right: 13px;  "><a id="grid-view" href="#"><img src="/media/images/icons/sort-black.png"  width="28px" height="28px"  /></a></div>
-	  		 <div  style = "display:inline-block; "><a id="list-view" href="#"><img src="/media/images/icons/list-view.png" width="24px" height="22px"  /></a></div>
+	  		 <div  style = "display: inline-block; margin-right: 15px;  "><a id="" href="#"><img src="media/images/icons/options-tune-black.png" width="25px" height="25px" /></a></div>	  		
+	  		 <div style = "display: inline-block; margin-right: 13px;  "><a id="" href="#"><img src="media/images/icons/sort-black.png"  width="28px" height="28px"  /></a></div>
+	  		 <div  style = "display:inline-block; "><a id="list-view" href="#"><img src="media/images/icons/list-view.png" width="24px" height="22px"  /></a></div>
   		</div>
   		 <hr />
   	</div>	
@@ -74,9 +86,9 @@
 			 	 <tr>                
             		<td style = "width: 75px; position: relative;" valign = top >   
             		 
-            			<img style= "border-radius : 50%;" src="/media/images/profile_images/Mihika_JustDial.jpg" width="70" height="70">
+            			<img style= "border-radius : 50%;" src="media/images/profile_images/Mihika_JustDial.jpg" width="70" height="70">
             		  
-            			<img style = "position: absolute;  margin-left: auto; margin-right: auto;  right: 3px; top: 57px;" src="/media/images/icons/options.png" width="38" height="38">					            		
+            			<img style = "position: absolute;  margin-left: auto; margin-right: auto;  right: 3px; top: 57px;" src="media/images/icons/options.png" width="38" height="38">					            		
             		</td>            		
             		<td id = PAGE_TEXT2 valign = top >
             			<div style = "display: inline-block;">
@@ -101,7 +113,7 @@
 		                	<tr>
 		                		
 		                		<td align = center valign = bottom height = 45>
-		                			<img  src="/media/images/icons/add-2-contaxonomy-blk.png" width = 30 height = 30>
+		                			<img  id = PEOPLE_CONTAXONOMY src="/media/images/icons/add-2-contaxonomy-blk.png" width = 30 height = 30>
 		                		</td>
 		                	</tr>
 		                <% } %>
@@ -114,7 +126,9 @@
             	<tr>                
             		<td>&nbsp;</td>            		
             		<td valign = top align=left>
-            			<div style ="background-color: #f2f2f2; color: #696969; padding-top: 3px; text-align:center; border: 1px solid #dcdcdc; border-radius: 3px; width: 150px; height: 28px; margin-bottom: 10px; margin-top: 5px;"><b>Message</b></div>
+            			<div style ="background-color: #f2f2f2; color: #696969; text-align:center; border: 1px solid #dcdcdc; border-radius: 3px; width: 150px; height: 28px; margin-bottom: 10px; margin-top: 5px;">
+            				<span style ="padding-top: 3px;"><b>Aak</b></span>&nbsp;<img src="/media/images/icons/plus-aak-blk.png" width= 26 height= 26>
+            			</div>
             			</td>            		
             		<td></td>
             	</tr>   
@@ -350,6 +364,16 @@
                      $("#grid-view").on('click',peopleGridView);
                           
                      $("#single_column_one_row_mobile").on('click',peopleSingleColumnMobileView);
+                     
+                     
+                     //CONTAXONOMY
+                     $('#PEOPLE_CONTAXONOMY').on('click', function() {
+                    	 alert("oepoepeoepoeoo");
+                    	 
+                    		$('#CONTAXONOMY').show();
+                    	 
+                     });
+                     
                             
                 });    
                 
@@ -397,6 +421,26 @@
                   $("#PEOPLE_LIST_VIEW_BIGGER_ROWS").hide();
                      
                 }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 
             </script>
 	
