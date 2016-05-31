@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>
 	
 	
-
+	<% include ./contaxonomy.ejs %>  
 	
 	
 	
@@ -113,7 +113,7 @@
 		                	<tr>
 		                		
 		                		<td align = center valign = bottom height = 45>
-		                			<img  id = PEOPLE_CONTAXONOMY src="/media/images/icons/add-2-contaxonomy-blk.png" width = 30 height = 30>
+		                			<img  class = PEOPLE_CONTAXONOMY src="/media/images/icons/add-2-contaxonomy-blk.png" width = 30 height = 30>
 		                		</td>
 		                	</tr>
 		                <% } %>
@@ -367,10 +367,11 @@
                      
                      
                      //CONTAXONOMY
-                     $('#PEOPLE_CONTAXONOMY').on('click', function() {
-                    	 alert("oepoepeoepoeoo");
+                     $('.PEOPLE_CONTAXONOMY').on('click', function() {
+                    	 	 
                     	 
-                    		$('#CONTAXONOMY').show();
+                    		$('#CONTAXONOMY_MODAL').show();
+                    		populateContaxonomy();
                     	 
                      });
                      
@@ -425,7 +426,11 @@
                 
                 
                 
-                
+                function populateContaxonomy() {
+                	
+                	 
+                	
+                }
                 
                 
                 
