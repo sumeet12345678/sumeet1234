@@ -60,69 +60,17 @@
 
 
 <div id = CONTAXONOMY_MODAL style = "background-color: rgba(0,0,0,0.6);">	 	 
-	 	 
-		<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #f2f2f2; height: 100%;" >
-			 
-			  <div  class="contagxonmy-title-bar">  
-			      <div style = "position:absolute; top:10px; padding-left: 2px; font-family: Arial; font-size: 22px; color: #95B3D7;">
-  						<b>my</b><span style = "font-family: Sans Serif; color: #dcdcdc;">Contagxonomy&nbsp;</span><img style = "margin-bottom: 10px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> 
-  					</div>
-				</div>
-				
-					<div id = CONTAXONOMY  style = "background-color: #f2f2f2; border-left:  2px dashed #95B3D7 ; height: 100%; margin-left: 10px; ">
-				 			
-					 		 
-					 		 <br/>
-					 		 <table width = "100%" >
-					 		 
-					 		 	<tr> 
-					 		 		<td width = 15>
-					 		 			&nbsp;
-					 		 		</td>
-					 		 		<td align=right><div style = "display: inline-block; width: 35px; text-align: center;  font-size: 25px; color: #fff; background-color: #77933C; float: left; "> <span><b>+</b></span> </div></td>
-					 		 		<td align=left><input type="text" style="display: inline-block;  width: 50%; margin-left: auto; margin-right: auto; left: 0; right: 0;  height: 30px; border: 2px solid #91B535; border-radius: 3px;" placeholder="keywords" /></td>
-					 		 		
-					 		 		<td width = 150>
-					 		 			<div style = "float: right;">
-									 	 	<img width="28" height="28" src="/media/images/icons/crowd-black.png" />  My Groups 
-									 	 </div>
-					 		 		</td>
-					 		 	
-					 		 	</tr>
-					 		 </table>  
-					 		 
-					 	<!-- <div style = "height: 40px; background-color: grey;">
-					 		<div style = "display: inline-block; width: 40px; text-align: center;  font-size: 25px; color: #fff; background-color: green; float: left; "> <span><b>+</b></span> </div>
-					 		<input type="text" style="display: inline-block;  width: 50%; margin-left: auto; margin-right: auto; left: 0; right: 0;  height: 30px; border: 2px solid #91B535; border-radius: 3px;" placeholder="keywords" />
-					 		
-					 	</div>	 
-					  -->		 
-					 	 
-					 	<!--   
-					 	 <div style = "width: 100%; height: 40px;"> 
-							 	 <div style = "background-color: #558ED5; width: 150px; float: right;">
-							 	 	 Groups <img width="30" height="30" src="/media/images/icons/white-portals.png" /> 
-							 	 </div>
-					 	 </div>
-					 	 
-					 	 
-					   	<div  style = "width: 100%;">
-						 	 <input type="text" style="display: inline-block;  width: 80%; height: 30px; border: 2px solid #91B535; border-radius: 3px;" placeholder="keywords" />
-						 	 
-						 	 <div style = "display: inline-block; width: 10%; vertical-align: top; font-size: 25px; color: #fff; background-color: green; float: right; "><b>+</b></div>
-					 	 </div>
-					   
-					 -->	 
-					 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 50px; width:100%">
-					 	 	
-					 	 	
-					 	 	
-					 	 </div>
-			</div>
-			 		 
-			 		 
-		</div>
-		 
+	<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #f2f2f2; height: 100%;" >		 
+		  <div  class="contagxonmy-title-bar">  
+		      <div style = "display: inline-block; font-size: 22px; margin-top: 8px; padding-left: 2px; "><span style = "font-family: Arial; color: #95B3D7;"><b>my</b></span></div><div style = "display: inline-block; font-size: 22px; vertical-align: top; margin-top: 2px; font-family: Sans Serif; color: #dcdcdc;">Contagxonomy<img style = "margin-bottom: 8px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> </div>  				  
+		  </div>				
+		  <div id = CONTAXONOMY  style = "background-color: #f2f2f2; border-left:  2px dashed #95B3D7 ; height: 100%; margin-left: 10px; ">
+		  	 &nbsp;
+		 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 50px; width:100%">
+		 	 	 
+		 	 </div>
+		  </div>
+    </div>		 
 </div> <!--  CONTAXONOMY_MODAL ends -->
  
  
@@ -161,8 +109,7 @@
 	var contaxonomyTagOptions = [  
 	                               {"title" : "Close Friends"
 	                            	   
-	                               }/*,
-	                               
+	                               },	                               
 	                               {
 	                            	     "title" : "Friends"
 	                               },
@@ -181,7 +128,7 @@
 				                   
 				                   {
 				                       "title" : "Service"
-				                   },*/
+				                   },
 	                             
 	                             
 	                             ];
@@ -190,6 +137,77 @@
 	//vat tempElementObj = null;
 	contaxonomyTagOptions.forEach(function(element) {
 		
+		tempElementString = "<div width = '100%' >";
+		
+		tempElementString = "<span style='display: inline-block; color: #B8B4B4;'><b>- - </b></span>";
+		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; background-color: #4D4949; width: 98%; margin-bottom: 2px; height: 35px; color: #dcdcdc; '>";
+		tempElementString = tempElementString + element.title ;
+		tempElementString = tempElementString + "</span>"; 
+		tempElementString = tempElementString + "</div>";
+		
+		//tempElementString = tempElementString + "</div>";
+		
+		
+		 
+		
+	/*	tempElementString = "<div>";
+		tempElementString = "<span style='display: inline-block; color: #B8B4B4; width: 2%;'><b>- - </b></span>";
+		tempElementString = tempElementString + "<span style = 'display: inline-block; vertical-align: middle; background-color: #4D4949; width: 90%; height: 35px; color: #dcdcdc; margin-top:  3px; margin-bottom: 10px;'>";
+		tempElementString = tempElementString + element.title ;
+		tempElementString = tempElementString + "</span>"; 
+		tempElementString = tempElementString + "</div>";
+		 
+	*/
+		  
+		
+		$('#CONTAXONOMY_OPTIONS').append($(tempElementString));
+		$('#CONTAXONOMY_OPTIONS').append($("<br/>"));
+		
+		
+		
+		
+		
+		
+		
+//		tempElementString = tempElementString + "<table width=100%><tr>";
+		//tempElementString = "<td valign=middle><span style='color: #95B3D7; font-size: 15px;'><b>- - </b></span></td>";
+		//tempElementString = tempElementString + "<td width=620 valign=middle><span style = 'display: inline-block; vertical-align: middle; background-color: #4D4949; width: 60%; height: 35px; color: #dcdcdc;'>";
+		//tempElementString = tempElementString + element.title ;
+		//tempElementString = tempElementString + "</span></td>";
+		//tempElementString = tempElementString + "</tr></table>";
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//
+	$('#CONTAXONOMY_MIN_ICON').on('click', function() {
+		$('#CONTAXONOMY_MODAL').hide();
+		
+	});
+	
+	 
+	
+	function firstWithDivAndTablePlusTriangle() {
+		var tempElementString = "";
 		//tempElementString = "<div>";
 		
 		tempElementString = tempElementString + "<table width=100%><tr>";
@@ -260,21 +278,7 @@
 		//tempElementString = tempElementString + "</div><br/>";
 		
 		$('#CONTAXONOMY_OPTIONS').append($("<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>"));
-		
-		
-		
-		
-	});
-	
-
-	$('#CONTAXONOMY_MIN_ICON').on('click', function() {
-		$('#CONTAXONOMY_MODAL').hide();
-		
-	});
-	
-	 
-	
-	
+	}
   
 	 
 			
