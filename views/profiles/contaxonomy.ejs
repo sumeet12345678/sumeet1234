@@ -53,6 +53,14 @@
 	  border-right:18px solid #8c8585;
 	  
 	}
+	
+	.float-left {
+		float: left;
+	}
+	
+	.float-right {
+		float: right;
+	}
 		
 
    
@@ -68,14 +76,14 @@
 		  
 		  
 		  <div style = "background-color: #fff; height: 35px; position: relative; "> 		&nbsp;
-		  	  <div style = "vertical-align: top; display: inline-block; text-align: center; float: left; ">
-		  		<img  id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
-		  		<span style = "display: block; color:green; line-height:.5;">Connections</span> 
-		  	  </div>
+		  	  <div id = CONTAXONOMY_CONNECTIONS class = "float-left" style = "vertical-align: top; display: inline-block; text-align: center; ">
+		  		<img   width="24" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
+		  		<span style = "display: block; color: #77933C; line-height:.5;">Connections</span> 
+		  	  </div>  
 		  	  
-		  	  <div style = "vertical-align: top; display: inline-block; text-align: center; float: right;"> 
-		  		<img  id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/crowd-black.png" />
-		  		<span style = "display: block; color:green; line-height:.5;">Groups</span>
+		  	  <div id = CONTAXONOMY_GROUPS class = "float-right" style = "vertical-align: top; display: inline-block; text-align: center;"> 
+		  		<img   width="24" height="24" src="/media/images/icons/crowd-black.png" />
+		  		<span style = "display: block; line-height:.5;">Groups</span>
 		  	  </div>
 		  	  
 		  	  
@@ -109,7 +117,7 @@
 		  </div>
     </div>		 
     
-    /media/images/icons/add-2-contaxonomy-blk.png
+ 
     
 </div> <!--  CONTAXONOMY_MODAL ends -->
  
@@ -145,6 +153,9 @@
 			
 	}
 	*/
+	
+	
+ function contaxonomyConnections() {	
 	
 	var contaxonomyTagOptions = [  
 	                               {
@@ -267,6 +278,9 @@
 		//tempElementString = tempElementString + "</tr></table>";
 	});
 	
+}
+	
+	contaxonomyConnections();
 	
 	
 	
@@ -280,13 +294,25 @@
 	
 	
 	
+	/* ---------        Toogles between Connections and Groups ---------- */
+	$('#CONTAXONOMY_CONNECTIONS').on('click', function() {
+		toggleContaxonomyConsGroups();
+		contaxonomyConnections();
+		 
+	});
 	
+	$('#CONTAXONOMY_GROUPS').on('click', function(){
+		toggleContaxonomyConsGroups();
+		$('#CONTAXONOMY_OPTIONS').html("");
+		 
+	});
 	
-	
-	
-	
-	
-	
+	function toggleContaxonomyConsGroups() {
+		//alert("Connections");
+		$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
+		$('#CONTAXONOMY_GROUPS').toggleClass('float-right','float-left');
+	}
+	/* ------------------------------------------------   */
 	
 	//
 	$('#CONTAXONOMY_MIN_ICON').on('click', function() {
