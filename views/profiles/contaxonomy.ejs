@@ -1,6 +1,6 @@
 <style>
 	#CONTAXONOMY_MODAL {
-		display: block;
+		display: none;
 		position: fixed;
 		top: 0;
 		z-index: 99999;
@@ -23,7 +23,7 @@
 		background: linear-gradient(#696969,#3f3f3f); 
 		height: 35px; 
 		color: #FFF;
-		border-top: 4px solid #95B3D7;
+		
 	}
 	
 	.arow-lft-tagxonmy-lvl1-grey{
@@ -61,40 +61,49 @@
 	.float-right {
 		float: right;
 	}
-		
+	
+	.text-green {
+		color: #91CC18;
+	}
+	
+	.text-blue {
+		color: #008CC9;
+	}	
 
    
 </style>
 
 
 <div id = CONTAXONOMY_MODAL style = "background-color: rgba(0,0,0,0.6);">	 	 
-	<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #f2f2f2; height: 100%;" >		 
+	<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%;" >		 
 		  <div  class="contagxonmy-title-bar">  
-		      <div style = "display: inline-block; font-size: 22px; margin-top: 8px; padding-left: 2px; "><span style = "font-family: Arial; color: #95B3D7;"><b>my</b></span></div><div style = "display: inline-block; font-size: 22px; vertical-align: top; margin-top: 2px; font-family: Sans Serif; color: #dcdcdc;">Contagxonomy<img style = "margin-bottom: 8px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> </div>  				  
+		      <div style = "display: inline-block; font-size: 22px; margin-top: 4px; padding-left: 2px; "><span style = "font-family: Arial; color: #98BF49;"><b>my</b></span></div><div style = "display: inline-block; font-size: 20px; vertical-align: top; margin-top: 2px; font-family: Sans Serif; color: #dcdcdc;">Contagxonomy<img style = "margin-bottom: 8px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> </div>
+		      
+		      <div style = "float: right; margin-right: 3px; color: #95B3D7; margin-top: 5px; "><b>+ New</b></div>  				  
 		  </div>	
 		  
 		  
 		  
-		  <div style = "background-color: #fff; height: 35px; position: relative; "> 		&nbsp;
-		  	  <div id = CONTAXONOMY_CONNECTIONS class = "float-left" style = "vertical-align: top; display: inline-block; text-align: center; ">
+		  <div style = "background-color: #fff; height: 50px; position: relative; padding-left: 3px; padding-right: 3px; border-bottom: 0px solid #f2f2f2;"> 		&nbsp;
+		  	  <div id = CONTAXONOMY_CONNECTIONS class = "float-left text-green" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px; ">
 		  		<img   width="24" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
-		  		<span style = "display: block; color: #77933C; line-height:.5;">Connections</span> 
+		  		<span style = "display: block;  line-height:.5; font-size: 12px;"><b>Contacts</b></span> 
 		  	  </div>  
 		  	  
-		  	  <div id = CONTAXONOMY_GROUPS class = "float-right" style = "vertical-align: top; display: inline-block; text-align: center;"> 
+		  	  <div id = CONTAXONOMY_GROUPS class = "float-right text-blue" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px;"> 
 		  		<img   width="24" height="24" src="/media/images/icons/crowd-black.png" />
-		  		<span style = "display: block; line-height:.5;">Groups</span>
+		  		<span style = "display: block; line-height:.5; font-size: 12px;"><b>Groups</b></span>
 		  	  </div>
 		  	  
 		  	  
 	   
-		  	  <div style = "position: absolute; left: 50%; transform: translateX(-50%); display: inline-block;  top: 2px;;   height: 50px; ">
+		  	  <div style = "position: absolute; left: 50%; transform: translateX(-50%); display: inline-block;  top: 7px;   height: 50px; ">
 				 
 				   		 
-						<div id= CONTAXONOMY_SEARCH_BOX class="input-group" style = "vertical-align: top; width: 180px;" >      
-						       <input style="border: 1px solid green;" type="text" class="form-control searchBox" placeholder="Search for more than 18,000 products..." />
+						<div id= CONTAXONOMY_SEARCH_BOX class="input-group" style = "width: 160px;" >      
+						       <input style="border: 1px solid #ADAAAA;" type="text" class="form-control searchBox" placeholder="" />
 						           <span class="input-group-btn">
-										<button class="btn" type="button" id="searchBtnId" style="background-color: green;"><span class="glyphicon glyphicon-search searchIcon"></span></button>
+										<button class="btn" type="button" id="searchBtnId" style="background-color: #ADAAAA;"><span class="glyphicon glyphicon-search searchIcon"></span></button>
 									</span>
 						 </div><!-- input-group ends -->
 					  
@@ -109,9 +118,15 @@
 		   
 		  
 		  			
-		  <div id = CONTAXONOMY  style = "background-color: #f2f2f2; border-left:  2px dashed #95B3D7 ; height: 100%; margin-left: 10px; ">
-		  	 &nbsp;
-		 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 50px; width:100%; padding-right: 2px;">
+		  <div id = CONTAXONOMY  style = "background-color: #fff;  height: 100%;">
+		  
+		  	 <!--  <div style = "background-color: #3f3f3f; color: #D1B4A5; font-size: 15px; text-align: center; padding: 4px 0px 0px 0px; border-radius: 3px; margin-top: 12px; height: 30px; width: 250px; margin-left: auto; margin-right: auto;">
+				Select all in my Contagxonomy<b>!</b>
+		   		
+		   	</div> -->
+		   	
+		   	
+		 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 1px; width:100%; padding-right: 5px;">
 		 	 	 
 		 	 </div>
 		  </div>
@@ -213,28 +228,31 @@
 	var catLooper = 0;
 	contaxonomyTagOptions.forEach(function(element) {
 		
-		tempElementString = "<div><div style = 'background-color: #4D4949; margin-bottom: 5px; height: 35px;'>";
+		//tempElementString = "<div><div style = 'background-color: #80A2CF; margin-bottom: 5px; height: 35px;'>";
+		tempElementString = "<div><div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'>";
 		
-		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #f2f2f2'><b>- - </b></span>";
-		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #dcdcdc; '>";
-		tempElementString = tempElementString + element.name;
-		tempElementString = tempElementString + "</span></div>";
+		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
+		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
+		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + element.name;
+		tempElementString = tempElementString + "</b></span></div>";
 		
 		if(element.childs) {			
 			element.childs.forEach(function(level2Element) {
 				//tempElementString = tempElementString + "LEVEL2-" + catLooper++;
-				tempElementString = tempElementString + "<div style = 'background-color: #4D4949; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #f2f2f2'><b>- - -</b></span>;"  
-				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #dcdcdc; '>";
-				tempElementString = tempElementString + level2Element.name;
-				tempElementString = tempElementString + "</span></div>";
+				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
+				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
+				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + level2Element.name;
+				tempElementString = tempElementString + "</b></span></div>";
 				
 				if(level2Element.childs) {			
 					level2Element.childs.forEach(function(level3Element) {
 						//tempElementString = tempElementString + "LEVEL3-" + catLooper++;
-						tempElementString = tempElementString + "<div style = 'background-color: #4D4949; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #f2f2f2'><b>- - - - - -</b></span>"  
-						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #dcdcdc; '>";
-						tempElementString = tempElementString + level3Element.name;
-						tempElementString = tempElementString + "</span></div>";
+						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
+						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
+						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + level3Element.name;
+						tempElementString = tempElementString + "</b></span></div>";
 					});
 				} 
 			});
@@ -311,6 +329,9 @@
 		//alert("Connections");
 		$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
 		$('#CONTAXONOMY_GROUPS').toggleClass('float-right','float-left');
+		
+		//$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
+		//text-green
 	}
 	/* ------------------------------------------------   */
 	
