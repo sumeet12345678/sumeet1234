@@ -313,16 +313,7 @@
 	
 	contaxonomyConnections();
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	 
 	
 	
 	/* ---------        Toogles between Connections and Groups ---------- */
@@ -339,10 +330,15 @@
 	});
 	
 	function toggleContaxonomyConsGroups() {
-		//alert("Connections");
-		$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
-		$('#CONTAXONOMY_GROUPS').toggleClass('float-right','float-left');
+		 
+		var contaxonomyConnections = $('#CONTAXONOMY_CONNECTIONS');
+		var contaxonomyGroups = $('#CONTAXONOMY_GROUPS');
 		
+		contaxonomyConnections.toggleClass('float-right','float-left');
+		contaxonomyGroups.toggleClass('float-right','float-left');  
+		
+		contaxonomyConnections.toggleClass('text-green','text-blue');
+		contaxonomyGroups.toggleClass('text-blue','text-green');
 		//$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
 		//text-green
 	}

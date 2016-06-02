@@ -88,6 +88,12 @@
 	
 }
 
+.section-title {
+	font-size: 10px;
+	font-weight: bold;	
+}
+
+
 
 @media screen and (min-width: 1025px)  {  
   .website-screen-width_dt {

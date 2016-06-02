@@ -1,9 +1,4 @@
-
- 
-
-
- 
-
+  
 	var globalSunModalContext = "profile";  
 	var CENTER_REGION_HEIGHT = getCenterScreenLayoutHeight();
 	var FOOTER_BAR_HEIGHT = getFooterBarHeight();  
@@ -70,6 +65,16 @@ function hideAllPopUpMenus(displayPopUp) {
 function treeMenuDepth_1(container) {
 	
 }
+
+
+//function getDeviceType() {
+	
+//	var device_width = screen.width;
+	
+	//if(device_width) {
+	// section_title
+	//}
+//}
 
 //window.onclick = function(event) {
 //////	alert("Event target Id ===   " + event.target.id);

@@ -19,11 +19,13 @@ div {
 
 #PROFILE_ACTION_BAR {
 	background-color: #363629;
-	height: 32px;
+	height: 40px;
 	color: #95B3D7;
-	padding-top: 5px;	
+	padding-top: 3px;	
 	
 	position: relative;
+	
+	border-top: 2px solid #000;
 }
 
 #PROFILE_TITLE {
@@ -53,6 +55,10 @@ div {
 	height: 40px;	
 	margin-top: 5px;
 	border: 1px solid #91B535;
+	
+}
+
+.tool-tip {
 	
 }
 

@@ -89,12 +89,20 @@ router.get('/view-aak', function(req, res, next) {
 
 
  
+router.get('/reviews', function(req, res, next) {
+	 var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('experience.ejs', {profileId: 'deb'});	    
+	}); 
+
+/*
 router.get('/experience', function(req, res, next) {
 	 var profileId = "deb";//req.param('profileId');
 	//  console.log("PRFILE IDDD  ===     " + profileId);
 	  res.render('experience.ejs', {profileId: 'deb'});	    
 	}); 
- 
+
+ */
 
 //router.get('/people/search/result', function(req, res, next) {
 	//  res.render('profiles/peopleSearchResults.ejs');	    
