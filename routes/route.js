@@ -87,12 +87,29 @@ router.get('/view-aak', function(req, res, next) {
 	  res.render('viewAak/viewAak.ejs');	    
 	});  
 
-
- 
-router.get('/reviews', function(req, res, next) {
+router.get('/experience', function(req, res, next) {
 	 var profileId = "deb";//req.param('profileId');
 	//  console.log("PRFILE IDDD  ===     " + profileId);
 	  res.render('experience.ejs', {profileId: 'deb'});	    
+	}); 
+
+ 
+router.get('/reviews', function(req, res, next) {
+	// var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('profiles/profileAspects/reviews.ejs');	    
+	}); 
+
+router.get('/skills', function(req, res, next) {
+	// var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('profiles/profileAspects/skills.ejs');	    
+	}); 
+
+router.get('/education', function(req, res, next) {
+	// var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('profiles/profileAspects/education.ejs');	    
 	}); 
 
 /*
