@@ -1,9 +1,12 @@
 <% var positionInfo = [
 			{
-				"role":"Manager",
-				"org":"xyz",
-				"start":"Sep 2008",
-				"end":"till date",
+				"role":"Technical Lead",
+				"org":"First American, India",
+				"orgLogo" : "/media/images/org/logos/FirstAmTtle.png",
+				"logoW" : 50,
+				"logoH" : 40,				
+				"start":"Sep 2012",
+				"end":"present",
 				"summary":"Providing services for enterprises requiring corporate and product level strategy,marketing and management consulting.",
 				/* "overview": {
 				
@@ -14,64 +17,105 @@
 			},
 
 			{
-				"role":"Manager",
-				"org":"xyz",
-				"start":"Sep 2008",
-				"end":"till date",
+				"role":"Software Architect",
+				"org":"Intwerwoven Technologies India Pvt Ltd",
+				"orgLogo" : "/media/images/org/logos/IWOV.png",
+				"logoW" : 100,
+				"logoH" : 40,
+				"start":"Jan 2007",
+				"end":"Jul 2012",
 				"summary":"Providing services for enterprises requiring corporate and product level strategy,marketing and management consulting."
 			},
 
 			{
-				"role":"Manager",
-				"org":"xyz",
-				"start":"Sep 2008",
-				"end":"till date",
+				"role":"Engineer, Design & Development",
+				"org":"Tata Elxsi",
+				"orgLogo" : "/media/images/org/logos/TataLxsi.png",
+				"logoW" : 50,
+				"logoH" : 40,
+				"start":"May 2005",
+				"end":"Mar 2007",
 				"summary":"Providing services for enterprises requiring corporate and product level strategy,marketing and management consulting."
 			},
 			
 			{
-				"role":"Manager",
-				"org":"xyz",
-				"start":"Sep 2008",
-				"end":"till date",
+				"role":"Nothing Doer",
+				"org":"Nowhere",
+				"start":"Since birth",
+				"end":"2007",
 				"summary":"Providing services for enterprises requiring corporate and product level strategy,marketing and management consulting."
 			}
 		];
 %>
 
 <div>
-	   <div class = "profile_aspect_title_bar profile-aspect-toggle-bar" >
+	   <div class = "profile_aspect_title_bar profile-aspect-toggle-bar"  onClick = "showHideDownSibling($(this));">
 			  <img  style = "margin-top: -2px; margin-right: 3px;" width = "19" height = "18" src="/media/images/icons/experience-black.png" />
 			  		Work History
 			   <img style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Up-2lines.png" />
 	   </div> 
 		   
 		<div>   	   
-		   <table>
+		   <table border = 0>
 			 	<%
 			 	for(var i = 0; i < positionInfo.length; i++) { 
 			 	  	var obj  = positionInfo[i];		 		  
 			 	%>			
 					<tr>
-						<td valign = top width = 71><font color= "#696969"><b><center><%=  obj.start %></center><center>-</center><center><%=  obj.end %></center></b></font></td>	
+						<td valign = top width = 90 rowspan = 2 align =center>
+							
+							<div style="background-color: #6CCEF5; text-align: center; height: 100px; width: 65px; font-size: 9x; color: #000; margin-top: 3px; border-radius: 2px;">
+							<b><%=  obj.start %>
+							<br/>-<br/>
+							<%=  obj.end %>	</b>
+							</div>
+							
+							
+							<div style="background-color: #fff; text-align: center; height: 90px; width: 85px; font-size: 7x; color: #000; margin-top:20px;">
+								<img width = "19" height = "17" src="/media/images/icons/tag-black.png" />&nbsp;<b><%= obj.role %></b>
+							</div>
+												
+						</td>	
 							
 						<td width="20" valign = top>
-							<% if(i == positionInfo.length - 1) { %>
-								<img src="/media/images/icons/tmlne-wth-pnt-olive.PNG">
-							<% } else { %>
-								<img src="/media/images/icons/tmlne-wth-pnt-olive_longer.PNG">
-							<% } %>
+							<img src="/media/images/timeline/tmlne-wth-pnt-olive.PNG">
 						</td>
 						
 						<td valign = top>	
 							<div style = "background-color: #fff; width: 100%; padding: 0px 3px 0px 5px;">
-								<font color= "#5C5B5B"><b>	<%= obj.role %></b>, <b><%= obj.org %></b></font>
-								<br/>&nbsp;
+								<font color= "#5C5B5B"><b><%= obj.org %></b>&nbsp;<img width = "<%= obj.logoW %>" height = "<%= obj.logoH %>" src="<%= obj.orgLogo %>" /></font>
+								
 								<p align = justify>
 									<%= obj.summary %>
 								</p>
 							</div>
 						</td>							
+					</tr>
+					<tr>
+						
+						
+						<td width="20" valign = top>
+							<% if(i == positionInfo.length - 1) { %>
+								<img src="/media/images/timeline/tmlne-75-px-olive.PNG">
+							<% } 
+							else 
+							{ 
+							%>
+								<img src="/media/images/timeline/tmlne-136-px-olive.PNG">
+							<%
+							} 
+							%>
+								
+							
+						</td>
+						
+						<td valign = top>	
+							<div style = "background-color: #fff; width: 100%; padding: 0px 3px 0px 5px;">								
+								<p align = justify>
+									<%= obj.summary %>
+								</p>
+							</div>
+						</td>						
 					</tr>
 				<% 
 				} 

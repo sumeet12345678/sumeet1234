@@ -67,6 +67,12 @@ function treeMenuDepth_1(container) {
 }
 
 
+function showHideDownSibling(whose) {
+	 
+	whose.siblings().toggle();
+}
+
+
 //function getDeviceType() {
 	
 //	var device_width = screen.width;

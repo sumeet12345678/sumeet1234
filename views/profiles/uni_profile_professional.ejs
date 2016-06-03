@@ -56,7 +56,7 @@
 		  	 											 img  : "/media/images/icons/thumbs-up-wht.png",
 		  	 											 iw	  : "35",
 			  	 										 ih	  : "26"  
-		  	 								},
+		  	 								}
   	 								
   	 							 /*		 
   	 								"Interests"	 : {
@@ -189,16 +189,16 @@
   			
   		</table>
   		   
-  <!-- 	<div id="PROFILE_BACKGROUND_HIDE_ICON" style = "display: inline-block; position: absolute; bottom: -61px; left:0; right:0; margin-right: auto; margin-left: auto; width: 28px;">   
-	  		<img   width = "32" height = "28"  src="/media/images/icons/arrow-head-up-black.png" />	  		 
-  		</div>
-  -->
+	   	<div id="PROFILE_BACKGROUND_HIDE_ICON" style = "background-color: #696969; display: inline-block; position: absolute; bottom: -68px; right: 0; height: 28px; width: 32px;">   
+		  		<img   width = "32" height = "28"  src="/media/images/icons/arrowhead-up-black.png" />	  		 
+	  	</div>
+  
   	 
   </div>
   
 
   
-  <div id = PROFILE_ACTION_BAR style = "overflow-x: hidden;">  	
+  <div id = PROFILE_ACTION_BAR>  	
   	
 	  	 <nobr>  
 	  		   
@@ -228,65 +228,77 @@
 				  		<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Fees, Payment</div>
 				     -->
 			 <% } } %>
-	  	</nobr>  
+	  	</nobr> 
 	  	
 	  	
-    <!-- 	
-	  	<div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = " display: none; position: absolute; bottom: -25px; left:0; right:0; margin-right: auto; margin-left: auto; width: 34px;">   
-		  		<img   width = "34" height = "28"  src="/media/images/icons/arrow-head-down-black.png" />	  		 
+  	  
+	  	<div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = "background-color: #696969; display: none; position: absolute; bottom: -28px;  right:0;  width: 34px;">   
+		  		<img   width = "34" height = "28"  src="/media/images/icons/arrowhead-down-black.png" />	  		 
 	  	</div>
- 	-->
+ 
  	
   </div>
-  
-  
-  <div style=  "padding-left: 5px; padding-right: 5px;">
-		  
-		  <div id = PROFILE_TITLE>
-		  		<h4><b>Debdas Sinha</b></h4>
-		  		Architect, <b>Bangalore</b><br>
-		  		 
+    
+  <div style=  "padding-left: 5px; padding-right: 5px;">	
+  	  
+	  <div id = PROFILE_TITLE style = "color: #696969; margin-top: 5px; text-align: center; margin-bottom: 20px; border: 0px solid red; font-size: 16px;">
+	  		<b>Anjali Arora</b><br>
+	  		Tech Lead, Information Technology & Services, Delhi NCR, India		  		
+	  </div> 
+	  <div>
+		  <div class = "profile_aspect_title_bar profile-aspect-toggle-bar"  onClick = "showHideDownSibling($(this));">
+					  <img  style = "margin-top: -2px; margin-right: 3px;" width = "19" height = "18" src="/media/images/icons/overview-summary-blk.png" />
+					  		About
+					   <img style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Up-2lines.png" />
+			   </div> 
+				  
+		  <div id = PROFILE_ASPECT_SUMMARY style = "text-align: justify; ">
+			  	
+			  	Anjali Arora focuses her practice on the procurement and enforcement of domestic and international patents, trademarks and copyrights. <br><br>
+			  	Her experience includes various technical areas such as aerospace, hybrid and electrical engines, architecture and construction, medical devices, agriculture, food, and energy systems.
 		  </div>
+	  
+	  </div>
+	  
+	  <div id = PROFILE_ASPECT_CONTAINER style = "border: 0px solid #f2f2f2; margin-top: 10px;"> <!-- aspect STACK -->
+			
+		   
+		   
+					  
+					  
+					  <!-- PIE CHART 
+					  
+					  <table  width = "100%" border = 1>					  
+					  	<tr>
+					  		<td width = "10%">
+					  		</td>
+					  		
+					  		<td align = center>
+					  			<div class="pie_chartss">
+										<div class="pie" data-start="0" data-value="30"> </div>
+										<div class="pie highlight" data-start="30" data-value="30"></div>
+										<div class="pie" data-start="60" data-value="40"></div>
+										<div class="pie big" data-start="100" data-value="260"></div>
+										
+									    <ul class="skilll" type="square" >
+									      <li data-value="36" style="color:orange">Skill</li>
+									      <li data-value="14" style="color:red">Experience</li>
+									      <li data-value="8" style="color:green">Progress</li>
+									      <li data-value="11" style="color:blue">Years</li>
+									    
+									    </ul>
   
-
-		 <div id = PROFILE_ASPECT_CONTAINER style = "border: 0px solid #f2f2f2; margin-top: 10px;"> <!-- aspect STACK -->
-		  
-				<!-- 	  <div id = PROFILE_MENU_OPTIONS_DETAILS style = "padding-left: 5px; padding-right: 5px; padding-bottom: 5px; text-align: justify;">
-					  		 
-					  </div>
-				--> 
-					  
-					  
-					  <div id = PROFILE_ASPECT_SUMMARY style = "text-align: justify; ">
-						  	<h5><b>About</b></h5>
-						  	Anjali Arora focuses her practice on the procurement and enforcement of domestic and international patents, trademarks and copyrights. <br><br>
-						  	Her experience includes various technical areas such as aerospace, hybrid and electrical engines, architecture and construction, medical devices, agriculture, food, and energy systems.
-					  </div>
-					  
-				<!-- 	
-					  <div id = PROFILE_ASPECT_ABC_SECTION  style = "padding-left: 5px; padding-right: 5px;">
-						  	<div class="profile_aspect_title_bar" style = " ">
-						  		<img id=""  width = "24" height = "24"  src="/media/edit_black.png" />
-						  		<div  style = " margin-top: 7px; display: inline-block;"> Practice Areas </div>
-						  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">-</span>
-						  		</div>
-						  	</div>
-						  	<div>
-						  		<img id=""  width = "100%" height= "100%" src="/media/practice_areas.PNG" />
-						  	</div>
-					   
-					    
-					 </div>
-					 
-					  <div id = PROFILE_ASPECT_XYZ_SECTION style = "padding-left: 5px; padding-right: 5px;">
-					  	<div class="profile_aspect_title_bar" style = "padding-left: 5px; padding-right: 5px; margin-top: 15px; background-color: #f2f2f2; height: 32px; ">
-					  		<img id=""  width = "22" height = "22"  src="/media/schedule_black.png" />
-					  		<div  style = " margin-top: 7px; display: inline-block;"> Consultation Schedule </div>
-					  		<div style= "display: inline-block; float: right; font-size: 22px; margin-right: 3px; ">+</span>
-					  		</div>
-					  	</div>
-					  </div>
-				-->	  
+								</div>
+					  		</td>
+					  		
+					  		<td width = "10%">
+					  		df
+					  		</td>
+					  		
+					  	</tr>
+					  </table>
+					<!--  			Pie Chart Ends     				 --> 
+				
 		 </div>
 		 
 	</div>
