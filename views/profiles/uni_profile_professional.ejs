@@ -10,7 +10,17 @@
   	 	"star" 			 	: "",
   	 	"summary" 			: "",
   	 	"cntxtSummary" 		: "",
-  	 	"viewableAspect"	: {
+  	 	"viewableAspect"	: { 
+  	 	
+  	 								"AspectStack" : {	"id"	: "PROFILE_ASPECT_STACK", 
+			  	 										"tooltip" : "AspectStack",
+			  	 										"url" : "/experience",
+			  	 										 img  : "/media/images/icons/aspect-stack-black-n-wht.png" , 
+			  	 										 iw	  : "35",
+			  	 										 ih	  : "31"  
+			  	 										 
+			  	 									},
+			  	 									
   	 								"Experience" : {	"id"	: "PROFILE_EXP", 
 			  	 										"tooltip" : "Experience",
 			  	 										"url" : "/experience",
@@ -304,17 +314,13 @@
 				$('#PROFILE_BACKGROUND_DISPLAY_ICON').hide();
 			});
 			
-			
-			
-			
-			
-			
+	  	
 			function getProfileAspectInfo(url) {
 				//alert(url);  
 				var xhr = new XMLHttpRequest();
 				
 				xhr.onload = function() {
-					if(xhr.status === 200){
+					if(xhr.status === 200) { 
 						console.log("Status  == 200");
 						$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
 						
