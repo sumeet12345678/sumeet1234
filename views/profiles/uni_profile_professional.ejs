@@ -14,7 +14,7 @@
   	 	
   	 								"AspectStack" : {	"id"	: "PROFILE_ASPECT_STACK", 
 			  	 										"tooltip" : "AspectStack",
-			  	 										"url" : "/experience",
+			  	 										"url" : "/experience123445",
 			  	 										 img  : "/media/images/icons/aspect-stack-black-n-wht.png" , 
 			  	 										 iw	  : "30",
 			  	 										 ih	  : "30"  
@@ -216,10 +216,9 @@
 	  		 	 	  var ih = viewableAspectObj[param].iw;
 	  		 	  
 	  		 	 %>
-			  	 
-				
+			   
 				    <div class = "tool-tip" id = <%= id %> onclick = getProfileAspectInfo("<%=url%>") style = " cursor: pointer; text-align: center; display: inline-block; width: 20%;">
-				    	 <img   width = <%= iw %> height = <%= ih %>  src= <%= img %> />	  	  
+				    	<a href = "#PROFILE_EDUCATION"> <img   width = <%= iw %> height = <%= ih %>  src= <%= img %> /> </a>	  	  
 				    	 
 				    <!-- 	 <span class = "tool-tip-text">  <%= tooltip %> </span> -->
 				    </div>  
@@ -250,7 +249,7 @@
 		  </div>
   
 
-		 <div id = PROFILE_ASPECT_CONTAINER style = "border: 0px solid #f2f2f2; margin-top: 10px;">
+		 <div id = PROFILE_ASPECT_CONTAINER style = "border: 0px solid #f2f2f2; margin-top: 10px;"> <!-- aspect STACK -->
 		  
 				<!-- 	  <div id = PROFILE_MENU_OPTIONS_DETAILS style = "padding-left: 5px; padding-right: 5px; padding-bottom: 5px; text-align: justify;">
 					  		 
@@ -264,7 +263,7 @@
 						  	Her experience includes various technical areas such as aerospace, hybrid and electrical engines, architecture and construction, medical devices, agriculture, food, and energy systems.
 					  </div>
 					  
-					
+				<!-- 	
 					  <div id = PROFILE_ASPECT_ABC_SECTION  style = "padding-left: 5px; padding-right: 5px;">
 						  	<div class="profile_aspect_title_bar" style = " ">
 						  		<img id=""  width = "24" height = "24"  src="/media/edit_black.png" />
@@ -287,7 +286,7 @@
 					  		</div>
 					  	</div>
 					  </div>
-					  
+				-->	  
 		 </div>
 		 
 	</div>
@@ -301,7 +300,7 @@
  
   
 	  
-	<script>
+	<script>  
 	
 			$('#PROFILE_BACKGROUND_HIDE_ICON').on('click', function() {
 				$('#PROFILE_HEADER').hide();
@@ -315,14 +314,21 @@
 			});
 			
 	  	
+			
+			
+			
+			
+			//var aspectAdded =
+			
 			function getProfileAspectInfo(url) {
 				//alert(url);  
 				var xhr = new XMLHttpRequest();
 				
-				xhr.onload = function() {
+				xhr.onload = function() {  
 					if(xhr.status === 200) { 
 						console.log("Status  == 200");
-						$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
+						//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
+						$('#PROFILE_ASPECT_CONTAINER').append(xhr.responseText);
 						
 						//updatePushZone();
 					}
