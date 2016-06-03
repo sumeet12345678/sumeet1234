@@ -216,9 +216,9 @@
 	  		 	 	  var ih = viewableAspectObj[param].iw;
 	  		 	  
 	  		 	 %>
-			   
+			  
 				    <div class = "tool-tip" id = <%= id %> onclick = getProfileAspectInfo("<%=url%>") style = " cursor: pointer; text-align: center; display: inline-block; width: 20%;">
-				    	<a href = "#PROFILE_EDUCATION"> <img   width = <%= iw %> height = <%= ih %>  src= <%= img %> /> </a>	  	  
+				    	  <img   width = <%= iw %> height = <%= ih %>  src= <%= img %> />  	  
 				    	 
 				    <!-- 	 <span class = "tool-tip-text">  <%= tooltip %> </span> -->
 				    </div>  
@@ -313,9 +313,7 @@
 				$('#PROFILE_BACKGROUND_DISPLAY_ICON').hide();
 			});
 			
-	  	
-			
-			
+	  	  
 			
 			
 			var aspectAdded = "";
@@ -331,6 +329,8 @@
 								//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
 								$('#PROFILE_ASPECT_CONTAINER').append(xhr.responseText);
 								
+								
+								
 							}
 							else {
 								console.log("Status == " + xhr.status);  
@@ -342,7 +342,13 @@
 						 
 				 aspectAdded = 	aspectAdded + url; 	 
 				}
+				
+			//	window.location.hash = '#PROFILE_EDUCATION';
 			};
+			
+			
+			
+			
 			
 		 
 			

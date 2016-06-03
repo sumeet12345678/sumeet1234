@@ -40,39 +40,43 @@
 %>
 
 <div>
-	   <div class = "profile_aspect_title_bar" >
-			 	Work History
-	   </div>
-	   	   
-	   <table>
-		 	<%
-		 	for(var i = 0; i < positionInfo.length; i++) { 
-		 	  	var obj  = positionInfo[i];		 		  
-		 	%>			
-				<tr>
-					<td valign = top width = 71><font color= "#696969"><b><center><%=  obj.start %></center><center>-</center><center><%=  obj.end %></center></b></font></td>	
+	   <div class = "profile_aspect_title_bar profile-aspect-toggle-bar" >
+			  <img  style = "margin-top: -2px; margin-right: 3px;" width = "19" height = "18" src="/media/images/icons/experience-black.png" />
+			  		Work History
+			   <img style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Up-2lines.png" />
+	   </div> 
+		   
+		<div>   	   
+		   <table>
+			 	<%
+			 	for(var i = 0; i < positionInfo.length; i++) { 
+			 	  	var obj  = positionInfo[i];		 		  
+			 	%>			
+					<tr>
+						<td valign = top width = 71><font color= "#696969"><b><center><%=  obj.start %></center><center>-</center><center><%=  obj.end %></center></b></font></td>	
+							
+						<td width="20" valign = top>
+							<% if(i == positionInfo.length - 1) { %>
+								<img src="/media/images/icons/tmlne-wth-pnt-olive.PNG">
+							<% } else { %>
+								<img src="/media/images/icons/tmlne-wth-pnt-olive_longer.PNG">
+							<% } %>
+						</td>
 						
-					<td width="20" valign = top>
-						<% if(i == positionInfo.length - 1) { %>
-							<img src="/media/images/icons/tmlne-wth-pnt-olive.PNG">
-						<% } else { %>
-							<img src="/media/images/icons/tmlne-wth-pnt-olive_longer.PNG">
-						<% } %>
-					</td>
-					
-					<td valign = top>	
-						<div style = "background-color: #fff; width: 100%; padding: 0px 3px 0px 5px;">
-							<font color= "#5C5B5B"><b>	<%= obj.role %></b>, <b><%= obj.org %></b></font>
-							<br/>&nbsp;
-							<p align = justify>
-								<%= obj.summary %>
-							</p>
-						</div>
-					</td>							
-				</tr>
-			<% 
-			} 
-			%>	
-			
-		</table>
+						<td valign = top>	
+							<div style = "background-color: #fff; width: 100%; padding: 0px 3px 0px 5px;">
+								<font color= "#5C5B5B"><b>	<%= obj.role %></b>, <b><%= obj.org %></b></font>
+								<br/>&nbsp;
+								<p align = justify>
+									<%= obj.summary %>
+								</p>
+							</div>
+						</td>							
+					</tr>
+				<% 
+				} 
+				%>	
+				
+			</table>
+		</div>  
 </div>
