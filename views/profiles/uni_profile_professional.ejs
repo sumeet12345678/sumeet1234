@@ -318,27 +318,30 @@
 			
 			
 			
-			//var aspectAdded =
+			var aspectAdded = "";
 			
 			function getProfileAspectInfo(url) {
 				//alert(url);  
-				var xhr = new XMLHttpRequest();
-				
-				xhr.onload = function() {  
-					if(xhr.status === 200) { 
-						console.log("Status  == 200");
-						//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
-						$('#PROFILE_ASPECT_CONTAINER').append(xhr.responseText);
+				if(aspectAdded.indexOf(url) == -1) {
+						var xhr = new XMLHttpRequest();
 						
-						//updatePushZone();
-					}
-					else {
-						console.log("Status == " + xhr.status);  
-					}
+						xhr.onload = function() {  
+							if(xhr.status === 200) { 
+								console.log("Status  == 200");
+								//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
+								$('#PROFILE_ASPECT_CONTAINER').append(xhr.responseText);
+								
+							}
+							else {
+								console.log("Status == " + xhr.status);  
+							}
+						}
+						
+						 xhr.open('GET',url, true);         
+						 xhr.send(null);
+						 
+				 aspectAdded = 	aspectAdded + url; 	 
 				}
-				
-				 xhr.open('GET',url, true);         
-				 xhr.send(null);
 			};
 			
 		 
