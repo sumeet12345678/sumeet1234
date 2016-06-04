@@ -3,7 +3,7 @@
 .position
 {
 	
-	background-color:#8c8585;
+	background-color: #696969;
 	color:#fff;
 	text-align:center;
 	width:40px;
@@ -15,7 +15,7 @@
 .percent
 {
 	
-	background-color:#696969;
+	background-color: #8c8585;
 	color:#000000;
 	border-radius:50%;
 	text-align:center;
@@ -28,7 +28,7 @@
 .grade
 {
 	
-	background-color:#1E9F0F;
+	background-color:#639140;
 	color:#fff;
 	border-radius:50%;
 	text-align:center;

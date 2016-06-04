@@ -60,18 +60,21 @@
 	<body> 
 		
 	  <% include ../partials/top_menu_bar.ejs %> 
+		 <!--  class = "earth-gradient-bg" -->  
 		  
-		<div id = PROFILE_BG_CONTAINER class = "earth-gradient-bg" style = "font-family: Bradley Hand ITC; color: #95B3D7; font-size: 25px; text-align:center; padding-top: 15px; position: absolute; left: 0; right: 0; top: 70px; width: 100%;   ">
-  			<b>Worrying is misuse of Imagination...</b>
+		   <!-- color: #95B3D7; -->
+		<div id = PROFILE_BG_CONTAINER  class = "earth-gradient-bg"  style = "font-family: Bradley Hand ITC; color: #95B3D7; font-size: 25px; text-align:center; padding-top: 15px; position: absolute; left: 0; right: 0; top: 70px; width: 100%;   ">
+  			<span class = "profile-tagline" ><b>Worrying is misuse of Imagination...</b><span>
   		</div>
 		
 		<div id = MAIN_CONTENT_CONTAINER class = "website-screen-width_dt" >
-		   
+		 
 			
 			<% if(page === "uniprofile") { %>
 				<% include ./uni_profile.ejs %>
 			<% } %>
 			
+			   
 		  
 		</div>
 		

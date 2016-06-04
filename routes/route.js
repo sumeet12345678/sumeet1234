@@ -40,6 +40,10 @@ router.get('/profile/view/professional', function(req, res, next) {
 	  res.render('profiles/common_with_bg.ejs', { page: "uniprofile", profile_context: "uniprofile_professional"});	    
 	}); 
 
+router.get('/profile/view/socialfun', function(req, res, next) {    
+	  res.render('profiles/uni_profile_social_fun.ejs', { page: "uniprofile", profile_context: "uniprofile_social_fun"});	    
+	}); 
+
 
 
 
@@ -56,6 +60,8 @@ router.get('/profile/view/abhijeet', function(req, res, next) {
 router.get('/profile/view/uniprofile_bg_img', function(req, res, next) {      
 	  res.render('profiles/common_bg_img.ejs', { page: "uniprofile", profile_context: "uniprofile_bg_img"});	    
 	}); 
+
+ 
 
  /*router.get('/people/search/result', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    

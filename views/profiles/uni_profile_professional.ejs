@@ -12,21 +12,22 @@
   	 	"cntxtSummary" 		: "",
   	 	"viewableAspect"	: { 
   	 	
-  	 								"AspectStack" : {	"id"	: "PROFILE_ASPECT_STACK", 
+  	 							/*	"AspectStack" : {	"id"	: "PROFILE_ASPECT_STACK", 
 			  	 										"tooltip" : "AspectStack",
 			  	 										"url" : "/experience123445",
-			  	 										 img  : "/media/images/icons/aspect-stack-black-n-wht.png" , 
-			  	 										 iw	  : "30",
-			  	 										 ih	  : "30"  
+			  	 										 "img"  : "/media/images/icons/aspect-stack-black-n-wht.png" , 
+			  	 										 "iw"	  : "30",
+			  	 										 "ih"	  : "30"  
 			  	 										 
 			  	 									},
+			  	 				*/
 			  	 									
   	 								"Experience" : {	"id"	: "PROFILE_EXP", 
 			  	 										"tooltip" : "Experience",
 			  	 										"url" : "/experience",
-			  	 										 img  : "/media/images/icons/experience-white.png" , 
-			  	 										 iw	  : "28",
-			  	 										 ih	  : "24"  
+			  	 										 "img"  : "/media/images/icons/experience-white.png" , 
+			  	 										 "iw"	  : "28",
+			  	 										 "ih"	  : "24"  
 			  	 										 
 			  	 									},
   	 								
@@ -34,9 +35,9 @@
 		  	 											"id" : "PROFILE_SKILLS",
 		  	 											"tooltip" : "Skills",
 		  	 											"url" : "/skills",
-		  	 											 img  : "/media/images/icons/skills-tools-white.png",
-		  	 											 iw	  : "20",
-			  	 										 ih	  : "22"  
+		  	 											 "img"  : "/media/images/icons/skills-tools-white.png",
+		  	 											 "iw"	  : "20",
+			  	 										 "ih"	  : "22"  
 		  	 								},
 		  	 								
 		  	 						
@@ -44,18 +45,18 @@
 		  	 											"id" : "PROFILE_EDUCATION",
 		  	 											"tooltip" : "Education",
 		  	 											"url" : "/education",
-		  	 											 img  : "/media/images/icons/school-white.png",
-		  	 											 iw	  : "20",
-			  	 										 ih	  : "20"  
+		  	 											 "img"  : "/media/images/icons/school-white.png",
+		  	 											 "iw"	  : "20",
+			  	 										 "ih"	  : "20"  
 		  	 								},
 		  	 								
 		  	 						"Reviews"	: {
 		  	 											"id" : "PROFILE_REVIEWS",
 		  	 											"tooltip" : "Reviews",
 		  	 											"url" : "/reviews",
-		  	 											 img  : "/media/images/icons/thumbs-up-wht.png",
-		  	 											 iw	  : "35",
-			  	 										 ih	  : "26"  
+		  	 											 "img"  : "/media/images/icons/thumbs-up-wht.png",
+		  	 											 "iw"	  : "35",
+			  	 										 "ih"	  : "26"  
 		  	 								}
   	 								
   	 							 /*		 
@@ -63,18 +64,18 @@
 	  	 											"id" : "PROFILE_INTERESTS",
 	  	 											"tooltip" : "Interests",
 	  	 											"url" : "/interests",
-	  	 											 img  : "/media/images/icons/arrow-head-up-black.png",
-	  	 										 	 iw	  : "32",
-			  	 									 ih	  : "28"  
+	  	 											 "img" : "/media/images/icons/arrow-head-up-black.png",
+	  	 										 	 "iw"	  : "32",
+			  	 									 "ih"	  : "28"  
   	 									 },
   	 									 
   	 								"Contact"	: { 
 	  	 											"id" : "CONTACT_INFO",
 	  	 											"tooltip" : "Contact Info",
 	  	 											"url" : "/contact",
-	  	 											 img  : "/media/images/icons/phn-email-contact-wht.png",
-	  	 											 iw	  : "32",
-			  	 									 ih	  : "34"  
+	  	 											 "img"  : "/media/images/icons/phn-email-contact-wht.png",
+	  	 											 "iw"	  : "32",
+			  	 									 "ih"	  : "34"  
 	  	 								} 
   	 							
   	 							 
@@ -82,9 +83,9 @@
 	  	 											"id" : "PROFILE_CAUSES",
 	  	 											"tooltip" : "Causes",
 	  	 											"url" : "/causes",
-	  	 											 img  : "/media/images/icons/arrow-head-up-black.png",
-	  	 											 iw	  : "32",
-			  	 									 ih	  : "28"  
+	  	 											 "img"  : "/media/images/icons/arrow-head-up-black.png",
+	  	 											 "iw"	  : "32",
+			  	 									 "ih"	  : "28"  
 	  	 								} 
 	  	 						*/
   	 						}
@@ -109,7 +110,7 @@
    
      
   <div id = PROFILE_HEADER>    
-  
+  		
   
   		<table width =100% border = 0 height = 100% cellpadding = 0 cellspacing = 0>
   			<tr>
@@ -131,7 +132,7 @@
 								<td width=6>
 									&nbsp;
 								</td>							
-								<td valign = bottom align=right>
+								<td valign = bottom align=right> 
 								
 									<table>
 				  						<tr>
@@ -188,57 +189,76 @@
 			</tr>
   			
   		</table>
-  		   
+  	<!-- 	   
 	   	<div id="PROFILE_BACKGROUND_HIDE_ICON" style = "background-color: #696969; display: inline-block; position: absolute; bottom: -68px; right: 0; height: 28px; width: 32px;">   
 		  		<img   width = "32" height = "28"  src="/media/images/icons/arrowhead-up-black.png" />	  		 
 	  	</div>
-  
+    -->		
+  		
   	 
   </div>
   
-
   
-  <div id = PROFILE_ACTION_BAR>  	
-  	
-	  	 <nobr>  
-	  		   
-	  		 <%	 var viewableAspectObj = profileJsonData.viewableAspect;
-	  		 
-	  		  	 for (var param in viewableAspectObj) {	
-	  		 	 
-	  		 	 	if(viewableAspectObj.hasOwnProperty(param))
-	  		 	 	{
-	  		 	 	  var id = viewableAspectObj[param].id;
-	  		 	 	  var tooltip = viewableAspectObj[param].tooltip;
-	  		 	 	  var url = viewableAspectObj[param].url;
-	  		 	 	  var img = viewableAspectObj[param].img;
-	  		 	 	  var iw = viewableAspectObj[param].iw;
-	  		 	 	  var ih = viewableAspectObj[param].iw;
-	  		 	  
-	  		 	 %>
-			  
-				    <div class = "tool-tip" id = <%= id %> onclick = getProfileAspectInfo("<%=url%>") style = " cursor: pointer; text-align: center; display: inline-block; width: 20%;">
-				    	  <img   width = <%= iw %> height = <%= ih %>  src= <%= img %> />  	  
-				    	 
-				    <!-- 	 <span class = "tool-tip-text">  <%= tooltip %> </span> -->
-				    </div>  
-				  	  
-				  	  
-				  	<!-- <div style = "text-align: center; display: inline-block; width: 33.333333%;">Reviews</div>
-				  		<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Fees, Payment</div>
-				     -->
-			 <% } } %>
-	  	</nobr> 
-	  	
-	  	
-  	  
-	  	<div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = "background-color: #696969; display: none; position: absolute; bottom: -28px;  right:0;  width: 34px;">   
+  
+  <div style = "background-color: #A3A29E; border-top: 2px solid #000;">	
+  
+     <table width = "100%">
+       <tr>
+       		<td width = 40>
+		  		  	 <img  style = "margin-left: 5px;" width = "30" height = "30"  src="/media/images/icons/aspect-stack-black-n-wht.png" /> 
+  		   </td>
+  		   
+			<td>
+				  <div id = PROFILE_ACTION_BAR >  	
+				  	
+					  	 <nobr>  
+					  		   
+					  		 <%	 var viewableAspectObj = profileJsonData.viewableAspect;
+					  		 
+					  		  	 for (var param in viewableAspectObj) {	
+					  		 	 
+					  		 	 	if(viewableAspectObj.hasOwnProperty(param))
+					  		 	 	{
+					  		 	 	  var id = viewableAspectObj[param].id;
+					  		 	 	  var tooltip = viewableAspectObj[param].tooltip;
+					  		 	 	  var url = viewableAspectObj[param].url;
+					  		 	 	  var img = viewableAspectObj[param].img;
+					  		 	 	  var iw = viewableAspectObj[param].iw;
+					  		 	 	  var ih = viewableAspectObj[param].iw;
+					  		 	  
+					  		 	 %>
+							  
+								    <div class = "tool-tip" id = <%= id %>  style = " text-align: center; display: inline-block; width: 25%;">
+								    	  <img style = " cursor: pointer;"  width = <%= iw %> height = <%= ih %>  src= <%= img %> onclick = getProfileAspectInfo("<%=url%>") />  	  
+								    	 
+								    <!-- 	 <span class = "tool-tip-text">  <%= tooltip %> </span> -->
+								    </div>  
+								  	  
+								  	  
+								  	<!-- <div style = "text-align: center; display: inline-block; width: 33.333333%;">Reviews</div>
+								  		<div style = "text-align: left;  display: inline-block; width: 33.333333%;">Fees, Payment</div>
+								     -->
+							 <% } } %>
+					  	</nobr> 
+					 
+				  </div><!--  PROFILE_ACTION_BAR ends -->  
+			</td>
+			<td width = 40 align = right>	  
+				  <div style = "display: inline-block;  vertical-align: top;"> 
+		  		  	 <img  style = "margin-right: 5px;" width = "25" height = "25"  src="/media/images/icons/double-arrow-right.png" />  	  
+		  		  </div>
+  		   </td>
+  	</tr>  
+   </table>
+</div>
+  
+   <!--  
+    <div id="PROFILE_BACKGROUND_DISPLAY_ICON" style = "background-color: #696969; display: none;  float: right;  width: 34px;">   
 		  		<img   width = "34" height = "28"  src="/media/images/icons/arrowhead-down-black.png" />	  		 
-	  	</div>
- 
- 	
-  </div>
-    
+   </div> 
+   -->
+  
+     
   <div style=  "padding-left: 5px; padding-right: 5px;">	
   	  
 	  <div id = PROFILE_TITLE style = "color: #696969; margin-top: 5px; text-align: center; margin-bottom: 20px; border: 0px solid red; font-size: 16px;">
