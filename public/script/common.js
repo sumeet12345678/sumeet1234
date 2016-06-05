@@ -66,10 +66,18 @@ function treeMenuDepth_1(container) {
 	
 }
 
-
+/* toggle bar*/
 function showHideDownSibling(whose) {
-	 
-	whose.siblings().toggle();
+	//alert("Src == " + whose.attr('src'));
+	whose.parent().siblings().toggle();
+	
+ 	 if( whose.attr('src') ==  '/media/images/icons/arrowUpLines.png' ) { 
+ 		whose.attr('src', '/media/images/icons/arrow-Down-lines.png');
+ 	 }
+ 	 else {
+ 		whose.attr('src', '/media/images/icons/arrowUpLines.png');
+ 		 
+ 	 }
 }
 
 

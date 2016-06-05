@@ -106,6 +106,7 @@
   </style>
   
   <link href="/styles/profiles/uniProfileProfessional.css" rel="stylesheet" />  
+  <link href="/styles/profiles/uniProfileCommon.css" rel="stylesheet" /> 
   
    
      
@@ -200,7 +201,7 @@
   
   
   
-  <div style = "background-color: #A3A29E; border-top: 2px solid #000;">	
+  <div style = "background-color: #8C8585; border-top: 2px solid #000;">	
   
      <table width = "100%">
        <tr>
@@ -245,7 +246,7 @@
 			</td>
 			<td width = 40 align = right>	  
 				  <div style = "display: inline-block;  vertical-align: top;"> 
-		  		  	 <img  style = "margin-right: 5px;" width = "25" height = "25"  src="/media/images/icons/double-arrow-right.png" />  	  
+		  		  	 <img  style = "margin-right: 5px; cursor: pointer;" width = "25" height = "25"  src="/media/images/icons/double-arrow-right.png" onclick = getProfileAspectInfo("/likes") />  	  
 		  		  </div>
   		   </td>
   	</tr>  
@@ -266,10 +267,10 @@
 	  		Tech Lead, Information Technology & Services, Delhi NCR, India		  		
 	  </div> 
 	  <div>
-		  <div class = "profile_aspect_title_bar profile-aspect-toggle-bar"  onClick = "showHideDownSibling($(this));">
+		  <div class = "profile_aspect_title_bar profile-aspect-toggle-bar">
 					  <img  style = "margin-top: -2px; margin-right: 3px;" width = "19" height = "18" src="/media/images/icons/overview-summary-blk.png" />
 					  		About
-					   <img style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrowUpLines.png" />
+					   <img style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrowUpLines.png"  onClick = "showHideDownSibling($(this));"/>
 			   </div> 
 				  
 		  <div id = PROFILE_ASPECT_SUMMARY style = "text-align: justify; ">

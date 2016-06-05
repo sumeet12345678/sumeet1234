@@ -118,6 +118,13 @@ router.get('/education', function(req, res, next) {
 	  res.render('profiles/profileAspects/education.ejs');	    
 	}); 
 
+router.get('/likes', function(req, res, next) {
+	// var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('profiles/profileAspects/likes.ejs');	    
+	}); 
+
+
 /*
 router.get('/experience', function(req, res, next) {
 	 var profileId = "deb";//req.param('profileId');
