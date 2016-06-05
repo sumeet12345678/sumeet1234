@@ -11,7 +11,8 @@ div {
 
 #PROFILE_HEADER {
 	background-color: #4A4A38;  
-	
+	background-color: #3f3f3f;
+	border-top: 0px solid #95b3d7;
 	padding-top: 0px;
 	color: #dcdcdc;
 	position: relative;
