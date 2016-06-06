@@ -15,7 +15,7 @@ $(function(){
 		 
 		var $composerWrapper = $('.composerWrapper');     
 		 
-		$composerWrapper.css('bottom', '77px'); 
+		$composerWrapper.css('bottom', getFooterBarHeight()); 
 		//$composerWrapper.css('top', $footerBarHeight); 
 		//$composerWrapper.toggleClass('visible');
 		hideAllPopUpMenus($composerWrapper);
@@ -60,8 +60,8 @@ $(function(){
 	
 	function minimizeComposer() {
 		
-		$composerWrapper.css('height', '120px');  
-		$composerWrapper.css('bottom', '77px');  
+		$composerWrapper.css('height', '160px');  
+		$composerWrapper.css('bottom', getFooterBarHeight());  
 		$ccTextArea.css('display', 'none');///////
 		$chatTextArea.css('display', 'none');///////
 		$composerBottomBar.css('display', 'none');

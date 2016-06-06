@@ -47,21 +47,38 @@ var treeMenuDepth1Data = [
  <% include ../modal/aakInboxPopUp.ejs %>   
  <% include ../aakBox/aakOptionsPopUp.ejs %>           
  <% include ../common/treeMenuDepth1.ejs %>
+ 
+ <style>
+ 	.footer-bar-image-div-settings {
+ 		box-sizing: content-box;
+ 		display: inline-block;
+ 		height: 100%; 
+ 		padding-left: 7px; 
+ 		padding-right: 7px;
+ 		padding-top: 7px;
+ 	}
+ 	
+ 	.footer-bar-image-div-bg {
+ 		background-color: #525252;
+ 	}
+ </style>
+ 
 
 <div class="row footer menubar-footer navbar-fixed-bottom container-fluid" id="footerBarId" style="padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px;">       
   		
-  		<div class="footer-container website-screen-width_dt" style="height: 42px; padding-top: 5px;">
+  		<div class="footer-container website-screen-width_dt" style="height: 42px; padding-top: 0px;">
   			 
-  			<table width = 100% border = 0>  
+  			<table width = "100%" height= "100%" border = 0>  
       			<tr>      				
-      				<td width="16.66666667" valign = middle align = left>      					
+      				<td width="16.66666667" valign = middle align = left>  
+      					<div class = "footer-bar-image-div-settings ">     					
       						  <img id=AKK_OPTIONS_POPUP_ID width="28" height="28" src="/media/images/icons/3dots_vert_white.png" /> 
       						<!--   <img id=AKK_OPTIONS_TRIAL_ICON width="28" height="28" src="/media/images/icons/lifestyle_illustration.png" /> -->
-      						 					
+      					</div>	 					
       				</td>
       				 
       				<td width="16.66666667" valign = middle align = left>  <!-- style="border: 2px dotted #fff;" -->     
-      					<div id="d360">
+      					<div id="d360 footer-bar-image-div-settings footer-bar-image-div">
       					 	<img  id="sunIcon" class="profileContext" width="30" height="30" src="/media/images/icons/folders-white.png"/>   
       					</div>					      						
       				</td>
@@ -73,21 +90,23 @@ var treeMenuDepth1Data = [
       				</td>
       				
       				<td width="16.66666667%" valign = middle align = right>      					
-      						
+      					<div class = "footer-bar-image-div-settings "> 	
       						<img id=AAK_INBOX_POPUP_ID style="" width="28" height="28" src="/media/images/icons/aakbox.png"/>
-      						      					
+      					</div>	      					
       				</td>
       				
       				<td width="16.66666667%" valign = middle align = right>      					
       						
-      						 <img id="plus" width="28" height="28" src="/media/images/icons/wht-plus.png" />
+      					<div class = "footer-bar-image-div-settings footer-bar-image-div-bg"> 
+      						<img   id="plus" width="28" height="28" src="/media/images/icons/wht-plus.png" /> 
+      					</div>
       						    					
       				</td>
       				
       				<td width="16.66666667%" valign = middle align = right>      					
-      						  
-      						  <img id=QUK_TOOL_ICON_ID width="28" height="28" src="/media/images/icons/aak-services.png"/> 
-      						   					
+   						<div class = "footer-bar-image-div-settings ">   
+   						  <img  id=QUK_TOOL_ICON_ID width="28" height="28" src="/media/images/icons/aak-services.png"/> 
+   						</div>   					
       				</td>
       			 
       			</tr>

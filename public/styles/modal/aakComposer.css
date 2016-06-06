@@ -3,7 +3,7 @@
 
 /* ------- Top Wrapper Section ------- */
 .composerWrapper{
-				width: 50%;  
+				width: 80%;  
 				margin-left:auto;
 				margin-right:auto;
 				display: none;
@@ -12,7 +12,7 @@
 				right: 0;	 
 				z-index: 1051;			 
 				background-color: #f2f2f2;
-			    border: 1px solid #696969;
+			    border123: 1px solid #696969;
 			  			
 }
 
@@ -20,7 +20,7 @@
 	display: block;
 }
 
-
+ 
 
 /* ------- Header Section ------- */			
  
