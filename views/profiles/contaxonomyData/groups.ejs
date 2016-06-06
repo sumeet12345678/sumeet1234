@@ -1,0 +1,139 @@
+<%
+	var contaxonomyGroups = [  
+	                               {
+	                            	   'id' : 'CLOSE_FRIENDS1',
+	                            	   'name' : "Learning, Studies, Education"
+	                            	 
+	                            	   
+	                               },	                               
+	                               {
+	                            	   'id' : 'FRIENDS1',
+	                            	   'name' : "Job, Profession, Career, Business"
+	                               },
+	                               
+	                               {
+	                            	   'id' : 'COWORKERS1',
+	                            	   'name' : "Personal Development, Attitude"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES1',
+		                        	   'name' : "Money, Finances",
+			                           'childs' : [
+			                                {
+			                            	 'id' : 'MONEY_1',
+			                            	 'name' : 'MONEY 1',
+			                            	 'childs' : [{
+				                            	 'id' : 'MONEY 1_1',
+				                            	 'name' : 'MONEY 1_1'
+					                            },
+					                            {
+					                                'id' : 'MONEY_ 1_2',
+					                            	'name' : 'MONEY_ 1_2'
+					                            }]
+				                            },
+				                            {
+				                                'id' : 'MONEY_2',
+				                            	'name' : 'MONEY_2_1'
+				                            }
+			                           ]
+			                       },
+			                       
+			                       {
+			                    	   'name' : "Family, Relationships"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Legal"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Health"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Wellness, Welfare"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Community, Friends"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Spiritual, Karma"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Hobbies, Activities, Leisure"
+				                   },
+	                             
+	                               {
+				                	   'name' : "Lifestyle, Fashion"
+				                   },
+				                   {
+				                	   'name' : "Food"
+				                   }
+	                             
+	                             ];
+	
+%>
+
+
+<div id = CONTAXONOMY_GROUPS>
+	 <%	
+		var tempElementString = "";
+		var tempChildElements = null;
+		var catLooper = 0;
+		contaxonomyGroups.forEach(function(element) {
+		
+		 
+		tempElementString = "<div><div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'>";
+		
+		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
+		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
+		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + element.name;
+		tempElementString = tempElementString + "</b></span> <input style = 'float: right;' type = 'checkbox'> </div>";
+		
+		if(element.childs) {			
+			element.childs.forEach(function(level2Element) {
+				//tempElementString = tempElementString + "LEVEL2-" + catLooper++;
+				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
+				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
+				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + level2Element.name;
+				tempElementString = tempElementString + "</b></span> <input style = 'float: right;' type = 'checkbox'> </div>";
+				
+				if(level2Element.childs) {			
+					level2Element.childs.forEach(function(level3Element) {
+						//tempElementString = tempElementString + "LEVEL3-" + catLooper++;
+						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
+						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
+						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + level3Element.name;
+						tempElementString = tempElementString + "</b></span> <input style = 'float: right;' type = 'checkbox'> </div>";
+					});
+				} 
+			});
+		} 
+		 
+		
+		tempElementString = tempElementString + "</div>";
+%>
+
+ <%- tempElementString %>
+ 
+<%	 
+	});
+	
+			
+%>
+ 
+	
+	
+</div>
+
+
+
+<script>
+
+</script>

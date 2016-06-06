@@ -74,6 +74,90 @@
 </style>
 
 
+<%
+	var contaxonomyGroups = [  
+	                               {
+	                            	   'id' : 'CLOSE_FRIENDS',
+	                            	   'name' : "Learning, Studies, Education"
+	                            	 
+	                            	   
+	                               },	                               
+	                               {
+	                            	   'id' : 'FRIENDS',
+	                            	   'name' : "Job, Profession, Career, Business"
+	                               },
+	                               
+	                               {
+	                            	   'id' : 'COWORKERS',
+	                            	   'name' : "Personal Development, Attitude"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES',
+		                        	   'name' : "Money, Finances",
+			                           'childs' : [
+			                                {
+			                            	 'id' : 'ACQUINTANCES_INTERESTS',
+			                            	 'name' : 'Through Interests',
+			                            	 'childs' : [{
+				                            	 'id' : 'ACQUINTANCES_INTERESTS_SWIMMING',
+				                            	 'name' : 'Swimming'
+					                            },
+					                            {
+					                                'id' : 'ACQUINTANCES_INTERESTS_TREKKING',
+					                            	'name' : 'Trekking'
+					                            }]
+				                            },
+				                            {
+				                                'id' : 'ACQUINTANCES_CAUSES',
+				                            	'name' : 'Through Causes'
+				                            }
+			                           ]
+			                       },
+			                       
+			                       {
+			                    	   'name' : "Family, Relationships"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Legal"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Health"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Wellness, Welfare"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Community, Friends"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Spiritual, Karma"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Hobbies, Activities, Leisure"
+				                   },
+	                             
+	                               {
+				                	   'name' : "Lifestyle, Fashion"
+				                   },
+				                   {
+				                	   'name' : "Food"
+				                   }
+	                             
+	                             ];
+	
+%>
+
+
+
+
+
 <div id = CONTAXONOMY_MODAL style = "background-color: rgba(0,0,0,0.6);">	 
 	 
 	<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative;" >		 
@@ -92,7 +176,7 @@
 		  	  </div>  
 		  	  
 		  	  <div id = CONTAXONOMY_GROUPS class = "float-right text-blue" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px;"> 
-		  		<img   width="24" height="24" src="/media/images/icons/crowd-black.png" />
+		  		<img   width="24" height="24" src="/media/images/icons/crowd-black.png"/>
 		  		<span style = "display: block; line-height:.5; font-size: 12px;"><b>Groups</b></span>
 		  	  </div>
 		  	  
@@ -107,10 +191,8 @@
 										<button class="btn" type="button" id="searchBtnId" style="background-color: #ADAAAA;"><span class="glyphicon glyphicon-search searchIcon"></span></button>
 									</span>
 						 </div><!-- input-group ends -->
-					  
-				
 		   		
-		  		 </div>
+		  	  </div>
 	  	 
 		  	       
 		   </div>
@@ -181,6 +263,37 @@
 			
 	}
 	*/
+	
+	
+	//var contaxGroupAjax = "";
+	
+	function getContaxonomyGroups() { 
+		//alert("contax Groups");  
+	//	if(aspectAdded.indexOf(url) == -1) {
+				var xhr = new XMLHttpRequest();
+				
+				xhr.onload = function() {  
+					if(xhr.status === 200) { 
+						console.log("Status  == 200");
+						//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
+						$('#CONTAXONOMY_OPTIONS').append(xhr.responseText);
+						
+						
+						
+					}
+					else {
+						console.log("Status == " + xhr.status);  
+					}
+				}
+				
+				 xhr.open('GET','/contaxonomyGroups', true);         
+				 xhr.send(null);
+				 
+				// contaxGroupAjax = 	contaxGroupAjax + url; 	 
+		//}
+	
+	};
+	
 	
 	
  function contaxonomyConnections() {	
@@ -319,6 +432,7 @@
 	/* ---------        Toogles between Connections and Groups ---------- */
 	$('#CONTAXONOMY_CONNECTIONS').on('click', function() {
 		toggleContaxonomyConsGroups();
+		$('#CONTAXONOMY_OPTIONS').html("");
 		contaxonomyConnections();
 		 
 	});
@@ -326,6 +440,7 @@
 	$('#CONTAXONOMY_GROUPS').on('click', function(){
 		toggleContaxonomyConsGroups();
 		$('#CONTAXONOMY_OPTIONS').html("");
+		getContaxonomyGroups();
 		 
 	});
 	
