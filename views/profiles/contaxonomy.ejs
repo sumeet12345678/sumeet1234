@@ -177,13 +177,13 @@
 		       <table width = "100%" height = "100%">  
 		       	  <tr> 
 		       	   <td align = center valign = middle bgcolor = "#77933C">    
-				      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
+				      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "cursor: pointer; font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
 				   </td >
 			 	   <td align = center valign = middle>
-			 		  <div id = CONTAX_CONT_CONS_BTN  style = "font-size:11px; display: inline-block; ">Contacts,<br/>Connections</div>
+			 		  <div id = CONTAX_CONT_CONS_BTN  style = "cursor: pointer; font-size:11px; display: inline-block; ">Contacts,<br/>Connections</div>
 			 	   </td>
 			 	   <td align = center valign = middle>
-			 		  <div id = CONTAX_GROUPS_BTN style = "font-size:11px; display: inline-block; ">Groups</div>
+			 		  <div id = CONTAX_GROUPS_BTN style = "cursor: pointer; font-size:11px; display: inline-block; ">Groups</div>
 			 	   </td>  
 		 		  </tr>
 	 		  	</table>
@@ -192,7 +192,7 @@
 		  
 		  
 		  
-		  <div style = "background-color: #fff; height: 50px; position: relative; padding-left: 3px; padding-right: 3px; border-bottom: 0px solid #f2f2f2;"> 		&nbsp;
+		  <div  id = CONTAX_SRCH_BAR style = "background-color: #fff; height: 50px; position: relative; padding-left: 3px; padding-right: 3px; border-bottom: 0px solid #f2f2f2;"> 		&nbsp;
 		  	  <div id = CONTAXONOMY_CONNECTIONS class = "float-left text-green" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px; ">
 		  		<img   width="24" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
 		  		<span style = "display: block;  line-height:.5; font-size: 12px;"><b>Contacts</b></span> 
@@ -250,7 +250,7 @@
 		  
 		   <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
 		   				<center> 
-		   						<div style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;">OK</div>  
+		   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;" onclick = "populateAudience();">OK</div>  
 		   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
 		   				</center>
 		    </div>
@@ -456,10 +456,24 @@
 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
 		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+		$('#CONTAX_SRCH_BAR').hide(); 
 		
-		getContaxonomyGroups();
+		//getContaxonomyGroups();
 		 
 	});
+	
+	
+
+	$('#CONTAX_CONT_CONS_BTN').on('click', function(){
+		$('#CONTAXONOMY_CONNECTIONS').trigger('click');
+	});
+	
+	$('#CONTAX_GROUPS_BTN').on('click', function(){
+		$('#CONTAXONOMY_GROUPS').trigger('click');
+	});
+	
+	
+	
 	
 	
 	function toggleContaxonomyConsGroups() {
@@ -568,9 +582,15 @@
 	 	  
 	 	
 	 	if(whereFrom == 'AK_COMPOSER') {  
+	 		
+	 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
+			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+			  
 	 		$('#AD_PERSON').hide();
+	 		$('#CONTAX_SRCH_BAR').hide();  
 		 	$('#AK_COMPOSER').show();
-	  
+		   
 	 	}
 	 	
 
@@ -585,6 +605,32 @@
 	function hideContaxonomyModal() {
 		
 		$('#CONTAXONOMY_MODAL').hide();
+	}
+	
+	
+	function populateAudience() {
+		
+		grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
+		
+		//alert("Length == " + grouponomyChkboxSelected.length);
+		var chkdLength = 0;
+		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').html('');
+		
+		for(var i=0; i < grouponomyChkboxSelected.length; i++) {
+			if($(grouponomyChkboxSelected[i]).prop("checked") == true) {
+				//chkdLength++;
+				//alert('dfdfdfdfdfdfd');
+				$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append($(grouponomyChkboxSelected[i]).val() + "<br/>");  
+				
+			}
+		 
+			
+		}
+		//alert("Chkd L =  " +  chkdLength);
+		$('#CONTAX_APPLIED_AUDIENCE_BTN').trigger('click');
+		
+		 
+		
 	}
 			
 	
