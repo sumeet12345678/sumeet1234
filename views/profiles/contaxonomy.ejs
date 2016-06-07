@@ -171,18 +171,19 @@
 	 		  <div style = "float: right; margin-right: 3px; color: #95B3D7; margin-top: 5px; "><b>+ New</b></div>
 		     		  
 		  </div>	
-		    
+		 
+		 <!-- for AakComposer Context -->   
 		  <div  id = AK_COMPOSER class="contagxonmy-title-bar" style = "display: none;">  
 		       <table width = "100%" height = "100%">  
 		       	  <tr> 
 		       	   <td align = center valign = middle bgcolor = "#77933C">    
-				      <div id = CONTAX_APPLIED_AUDIENCE style = "font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
+				      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
 				   </td >
 			 	   <td align = center valign = middle>
-			 		  <div id = CONTAX_CONT_CONS  style = "font-size:11px; display: inline-block; ">Contacts,<br/>Connections</div>
+			 		  <div id = CONTAX_CONT_CONS_BTN  style = "font-size:11px; display: inline-block; ">Contacts,<br/>Connections</div>
 			 	   </td>
 			 	   <td align = center valign = middle>
-			 		  <div id = CONTAX_GROUPS style = "font-size:11px; display: inline-block; ">Groups</div>
+			 		  <div id = CONTAX_GROUPS_BTN style = "font-size:11px; display: inline-block; ">Groups</div>
 			 	   </td>  
 		 		  </tr>
 	 		  	</table>
@@ -226,16 +227,26 @@
 		  
 		  	 <!--  <div style = "background-color: #3f3f3f; color: #D1B4A5; font-size: 15px; text-align: center; padding: 4px 0px 0px 0px; border-radius: 3px; margin-top: 12px; height: 30px; width: 250px; margin-left: auto; margin-right: auto;">
 				Select all in my Contagxonomy<b>!</b>
-		   		
+		   		  
 		   	</div> -->
-		   	
-		   	
-		 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 20px; width:100%; padding-right: 5px;">
-		 	 	 
-		 	 </div>
-		 	 
+			 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 20px; width:100%; padding-right: 5px;">
+			 	 	
+			 	 	<div id = CONTAXONOMY_OPTIONS_CONS_CNTNR style = "display: block;">
+			 	 	
+			 	 	</div>
+			 	 	
+			 	 	<div id = CONTAXONOMY_OPTIONS_GRPS_CNTNR style = "display: none;">
+			 	 	
+			 	 	</div>
+			 	 	
+			 	 	<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "display: none;">
+			 	 	
+			 	 	</div>
+			 	 	 
+			 	 </div>
 		 	
 		  </div>
+		  
 		  
 		   <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
 		   				<center> 
@@ -253,54 +264,21 @@
 </div> <!--  CONTAXONOMY_MODAL ends -->
  
  
- 
- 
- 
-
 <script>
-/*	var contaxonomyTagOptions = [
-			{
-				"Acquaintances" : { "Interests" : ['Swimming'],
-									"Causes"	: []
-					
-								 }
-			}
-			
-		];
-
-	*/
-	
-	/* var contaxonomyTagOptions = {
-			"Acquaintances" : { 
-								"Interests" : ["Swimming"],
-								 "Causes"	: []
-								 
-							  },
-							  
-							  
-			"Business"	:     {
-				
-							  }
-			
-	}
-	*/
-	
-	
-	//var contaxGroupAjax = "";
-	
+ 
+ 	var contaxGroupsCalled = false;
 	function getContaxonomyGroups() { 
-		//alert("contax Groups");  
-	//	if(aspectAdded.indexOf(url) == -1) {
+		 
+	   if(!contaxGroupsCalled) {
 				var xhr = new XMLHttpRequest();
 				
 				xhr.onload = function() {  
 					if(xhr.status === 200) { 
 						console.log("Status  == 200");
 						//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
-						$('#CONTAXONOMY_OPTIONS').append(xhr.responseText);
+						$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').append(xhr.responseText);
 						
-						
-						
+						contaxGroupsCalled = true;
 					}
 					else {
 						console.log("Status == " + xhr.status);  
@@ -308,10 +286,8 @@
 				}
 				
 				 xhr.open('GET','/contaxonomyGroups', true);         
-				 xhr.send(null);
-				 
-				// contaxGroupAjax = 	contaxGroupAjax + url; 	 
-		//}
+				 xhr.send(null); 
+		 }
 	
 	};
 	
@@ -426,7 +402,7 @@
 	*/
 		  
 		
-		$('#CONTAXONOMY_OPTIONS').append($(tempElementString));
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').append($(tempElementString));
 		//$('#CONTAXONOMY_OPTIONS').append($("<br/>"));
 		
 		
@@ -453,28 +429,53 @@
 	/* ---------        Toogles between Connections and Groups ---------- */
 	$('#CONTAXONOMY_CONNECTIONS').on('click', function() {
 		toggleContaxonomyConsGroups();
-		$('#CONTAXONOMY_OPTIONS').html("");
+		//manageContaxOptionsDisplay($(this));
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').show();
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		 
 		contaxonomyConnections();
 		 
-	});
+	});  
+	
 	
 	$('#CONTAXONOMY_GROUPS').on('click', function(){
 		toggleContaxonomyConsGroups();
-		$('#CONTAXONOMY_OPTIONS').html("");
+		//$('#CONTAXONOMY_OPTIONS').html("");
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').show();
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
+		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		
 		getContaxonomyGroups();
 		 
 	});
+	
+	$('#CONTAX_APPLIED_AUDIENCE_BTN').on('click', function(){
+		toggleContaxonomyConsGroups();
+		//$('#CONTAXONOMY_OPTIONS').html("");
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
+		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+		
+		getContaxonomyGroups();
+		 
+	});
+	
 	
 	function toggleContaxonomyConsGroups() {
 		 
 		var contaxonomyConnections = $('#CONTAXONOMY_CONNECTIONS');
 		var contaxonomyGroups = $('#CONTAXONOMY_GROUPS');
 		
-		contaxonomyConnections.toggleClass('float-right','float-left');
-		contaxonomyGroups.toggleClass('float-right','float-left');  
+		contaxonomyConnections.toggleClass('float-right float-left');
+		contaxonomyGroups.toggleClass('float-right float-left');  
 		
-		contaxonomyConnections.toggleClass('text-green','text-blue');
-		contaxonomyGroups.toggleClass('text-blue','text-green');
+		if(contaxonomyConnections.hasClass('float-left')) {
+			contaxonomyConnections.prop('disabled', true);
+		}
+		
+		contaxonomyConnections.toggleClass('text-green text-blue');
+		contaxonomyGroups.toggleClass('text-green text-blue');
 		//$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
 		//text-green
 	}
@@ -569,18 +570,14 @@
 	 	if(whereFrom == 'AK_COMPOSER') {  
 	 		$('#AD_PERSON').hide();
 		 	$('#AK_COMPOSER').show();
-	 		 
-	 		//var contaxTitleBar = $('.contagxonmy-title-bar');
-	 		 
+	  
 	 	}
 	 	
 
 	 	if(whereFrom == 'AD_PERSON') {  
 	 		$('#AD_PERSON').show();
 		 	$('#AK_COMPOSER').hide();
-	 		 
-	 		//var contaxTitleBar = $('.contagxonmy-title-bar');
-	 		 
+	 	 
 	 	}
 	 	
 	 }

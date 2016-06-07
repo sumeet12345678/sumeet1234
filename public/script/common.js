@@ -105,18 +105,4 @@ function showHideDownSibling(whose) {
 ////}
 
 
-/*  // AK_COMPOSER 	AD_PERSON	NW_CONTACT   , 'whereFrom' is called from where  */
-// function showContaxonomyModal(whereFrom) { 
-// 	
-// 	var $contaxonomyModal = $('#CONTAXONOMY_MODAL');
-// 	
-// 	$contaxonomyModal.show();
-// 	
-// 	if(whereFrom == 'AK_COMPOSER') {  
-// 		alert("----" + whereFrom);
-// 		$contaxonomyModal.find('#CONTAX_APPLIED_AUDIENCE').css('display', 'inline-block');
-// 	}
-// 	
-// }
-
  
