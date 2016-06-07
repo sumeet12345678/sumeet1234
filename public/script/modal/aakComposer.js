@@ -60,13 +60,12 @@ $(function(){
 	
 	function minimizeComposer() {
 		
-		$composerWrapper.css('height', '160px');  
+		$composerWrapper.css('height', '157px');  
 		$composerWrapper.css('bottom', getFooterBarHeight());  
 		$ccTextArea.css('display', 'none');///////
 		$chatTextArea.css('display', 'none');///////
 		$composerBottomBar.css('display', 'none');
-		  
-		
+		     
 		composerCurrentSize = "MINIMIZED";  
 		
 	}
