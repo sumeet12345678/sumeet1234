@@ -79,5 +79,12 @@ $(function(){
 		
 	}
 	
+	$('#MSG_COMPOSER_TO').on('click', function() {
+		
+		//$('#CONTAXONOMY_MODAL').show();
+		showContaxonomyModal('AK_COMPOSER');
+		
+	});
+	
 	
 });
