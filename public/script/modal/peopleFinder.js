@@ -13,7 +13,7 @@
 								   {"title": "Health, Physical attributes " ,
 										 "id": "PEOPLE_FINDER_HEALTH"
 								   },
-								   {"title": "Social, Family",
+								   {"title": "Social, Family",   
 											 "id": "PEOPLE_FINDER_SOCIAL"
 								   }
 								  ];
@@ -37,6 +37,8 @@ var peopleFinderOptionsTitle = ["Education, School, Institute",
                                 "Financial",
                                 'Projects, Initiatives, Causes'
                                 ];  
+ 
+
 
 var peopleFinderOptionsDeleted = []; //contains the index of deleted(removed from DOM) item from peopleFinderOptionsId array(peopleFinderOptionsId array will still contain the element
 
@@ -107,6 +109,8 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 		$peopleFinderContentDiv.append(outerDiv);
 	
 	});
+	
+ 
 	
 	
 	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD  style= "float: right; margin-top: 3px;">' +

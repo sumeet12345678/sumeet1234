@@ -153,6 +153,38 @@ router.get('/profile/view/mahika/experience', function(req, res, next) {
 
 
 
+/*
+ * People Search Criteria  
+ */
+router.get('/people/search/basic', function(req, res, next) {
+	res.render('people/search/basic_criteria.ejs');   
+});
+
+ router.get('/people/search/education', function(req, res, next) {
+	  res.render('people/search/education_inst.ejs');   
+	});
+ 
+ router.get('/people/search/professional_occupational', function(req, res, next) {
+	  res.render('people/search/professional_occupational.ejs');   
+	});
+ router.get('/people/search/community', function(req, res, next) {
+	  res.render('people/search/community.ejs');   
+	});
+ router.get('/people/search/lifestyle', function(req, res, next) {
+	  res.render('people/search/lifestyle.ejs');     
+	});
+
+ 
+
+
+ /*
+  * People Search Criteria Ends  
+  */	
+
+
+
+ 
+ 
 var profileJsonData = [{
 	"profile_header" : [  { "pic" : "/media/images/profile_images/Mihika_JustDial.jpg",	                        
 	                        "pic-size" : "passport", //s, passport or Visa size

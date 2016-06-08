@@ -248,7 +248,7 @@
 			 	 	
 			 	 	</div>
 			 	 	
-			 	 	<div id = CONTAX_PPL_FINDER_CNTNR style = "display: block;">
+			 	 	<div id = CONTAX_PPL_FINDER_CNTNR style = "display: none;">
 			 	  
 			 	 	</div>
 			 	 	 
@@ -500,9 +500,48 @@
 	});
 	
 	$('#CONTAX_PPL_FINDER_BTN').on('click', function() {
-		//alert("ppp");
-		$('#CONTAX_PPL_FINDER_CNTNR').append($('#PEOPLE_FINDER_CONTENT'));
+		//alert("ppph");
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
+		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		$('#CONTAX_SRCH_BAR').hide(); 
+		
+		$('#CONTAX_PPL_FINDER_CNTNR').show();
+		
+		appendSearchCriteria('/people/search/basic');
+		//$('#CONTAX_PPL_FINDER_CNTNR').append($('#PEOPLE_FINDER_CONTENT'));
 	});
+	 
+	var searchAdded = "";
+	
+	function appendSearchCriteria(url) {
+		//alert(url);  
+		//if(aspectAdded.indexOf(url) == -1) {  
+				var xhr = new XMLHttpRequest();
+				
+				xhr.onload = function() {  
+					if(xhr.status === 200) { 
+						console.log("Status  == 200");
+						//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
+						$('#CONTAX_PPL_FINDER_CNTNR').append(xhr.responseText); 
+					}
+					else {
+						console.log("Status == " + xhr.status);  
+					}
+				}
+				
+				 xhr.open('GET',url, true);         
+				 xhr.send(null);
+				 
+		// aspectAdded = 	aspectAdded + url; 	 
+		//}
+		
+	//	window.location.hash = '#PROFILE_EDUCATION';
+	};
+	
+	
+	
+	
 	
 	
 	
