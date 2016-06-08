@@ -3,8 +3,10 @@
  	padding: 0px;  
  }
  
- 
- 
+ *:focus {
+ 	outline: 0;
+ }
+
  
  /* ---------------------- COMMON TOP MENU BAR STYLE --------------------------- */
 	

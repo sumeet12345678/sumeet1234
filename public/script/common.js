@@ -81,6 +81,9 @@ function showHideDownSibling(whose) {
 }
 
 
+
+
+
 //function getDeviceType() {
 	
 //	var device_width = screen.width;
@@ -103,6 +106,8 @@ function showHideDownSibling(whose) {
 // 	}
 ////	});
 ////}
+
+
 
 
  

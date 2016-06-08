@@ -19,7 +19,9 @@ $(function(){
 		//$composerWrapper.css('top', $footerBarHeight); 
 		//$composerWrapper.toggleClass('visible');
 		hideAllPopUpMenus($composerWrapper);
-		 
+		
+		/* For Desktop Esc Key functionality */
+		$('.composerWrapper').focus(); 
 	}); 
 	 
 	/* EXPAND AAK COMPOSER */
@@ -83,8 +85,11 @@ $(function(){
 		
 		//$('#CONTAXONOMY_MODAL').show();
 		showContaxonomyModal('AK_COMPOSER');
+		$('#CONTAXONOMY_MODAL').focus();
 		
 	});
 	
+	
+	$('.composerWrapper').focus();
 	
 });

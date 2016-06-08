@@ -158,9 +158,11 @@
 
 
 
-<div id = CONTAXONOMY_MODAL style = "background-color: rgba(0,0,0,0.6);">	 
+<div id = CONTAXONOMY_MODAL style = "background-color: rgba(0,0,0,0.6);"  tabindex="0">	 
+ 
 	 
-	<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative;" >		 
+	<div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative;" >	
+				 
 		  <div  id = AD_PERSON class="contagxonmy-title-bar" style = "display: none;">  
 		       <div style = "display: inline-block; font-size: 22px; margin-top: 4px; padding-left: 2px; "><span style = "font-family: Arial; color: #98BF49;"><b>my</b></span></div><div style = "display: inline-block; font-size: 20px; vertical-align: top; margin-top: 2px; font-family: Sans Serif; color: #dcdcdc;">Contagxonomy<img style = "margin-bottom: 8px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> </div>  
 		     <!--    
@@ -173,17 +175,20 @@
 		  </div>	
 		 
 		 <!-- for AakComposer Context -->   
-		  <div  id = AK_COMPOSER class="contagxonmy-title-bar" style = "display: none;">  
+		  <div  id = CONTAGXONOMY_AK_COMPOSER class="contagxonmy-title-bar" style = "display: none;">  
 		       <table width = "100%" height = "100%">  
 		       	  <tr> 
-		       	   <td align = center valign = middle bgcolor = "#77933C">    
+		       	   <td tabindex="2" align = center valign = middle style = "background-color:#77933C; border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">    
 				      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "cursor: pointer; font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
 				   </td >
-			 	   <td align = center valign = middle>
-			 		  <div id = CONTAX_CONT_CONS_BTN  style = "cursor: pointer; font-size:11px; display: inline-block; ">Contacts,<br/>Connections</div>
+			 	   <td tabindex="3" align = center valign = middle style = "border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">
+			 		  <div id = CONTAX_CONT_CONS_BTN  style = "cursor: pointer; font-size:11px; display: inline-block; ">My Connections</div>
 			 	   </td>
-			 	   <td align = center valign = middle>
-			 		  <div id = CONTAX_GROUPS_BTN style = "cursor: pointer; font-size:11px; display: inline-block; ">Groups</div>
+			 	   <td tabindex="4" align = center valign = middle style = "border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">
+			 		  <div id = CONTAX_GROUPS_BTN style = "cursor: pointer; font-size:11px; display: inline-block; ">My Groups</div>
+			 	   </td>  
+			 	    <td tabindex="5" align = center valign = middle class = "contagxonomy-ak-composer-title-bar-tab">
+			 		  <div id = CONTAX_PPL_FINDER_BTN style = "cursor: pointer; font-size:11px; display: inline-block; ">Rest of the world</div>
 			 	   </td>  
 		 		  </tr>
 	 		  	</table>
@@ -242,6 +247,10 @@
 			 	 	<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "display: none;">
 			 	 	
 			 	 	</div>
+			 	 	
+			 	 	<div id = CONTAX_PPL_FINDER_CNTNR style = "display: block;">
+			 	  
+			 	 	</div>
 			 	 	 
 			 	 </div>
 		 	
@@ -254,6 +263,8 @@
 		   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
 		   				</center>
 		    </div>
+		    
+		   
 		  
     </div>		 
     
@@ -265,6 +276,22 @@
  
  
 <script>
+
+	$('.contagxonomy-ak-composer-title-bar-tab').on('click', function() {
+		$('.contagxonomy-ak-composer-title-bar-tab').css('background-color','');
+		$(this).css('background-color','#77933C');
+		
+	}); 
+
+
+/*	--		Hiding PopUp on esc						-- */	
+	$('#CONTAXONOMY_MODAL').focus();
+	
+	
+	
+	
+	
+	
  
  	var contaxGroupsCalled = false;
 	function getContaxonomyGroups() { 
@@ -472,6 +499,10 @@
 		$('#CONTAXONOMY_GROUPS').trigger('click');
 	});
 	
+	$('#CONTAX_PPL_FINDER_BTN').on('click', function() {
+		//alert("ppp");
+		$('#CONTAX_PPL_FINDER_CNTNR').append($('#PEOPLE_FINDER_CONTENT'));
+	});
 	
 	
 	
@@ -589,14 +620,14 @@
 			  
 	 		$('#AD_PERSON').hide();
 	 		$('#CONTAX_SRCH_BAR').hide();  
-		 	$('#AK_COMPOSER').show();
+		 	$('#CONTAGXONOMY_AK_COMPOSER').show();
 		   
 	 	}
 	 	
 
 	 	if(whereFrom == 'AD_PERSON') {  
 	 		$('#AD_PERSON').show();
-		 	$('#AK_COMPOSER').hide();
+		 	$('#CONTAGXONOMY_AK_COMPOSER').hide();
 	 	 
 	 	}
 	 	
@@ -633,30 +664,11 @@
 		
 	}
 			
-	
-			
-		
-		
  
 	 		
 	 		
 	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
-   
-	
+ 	
 
 
 </script>
