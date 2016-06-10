@@ -276,32 +276,8 @@
 				     		  
 				</div>	
 				
-				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: none;  overflow-y: auto; height: calc(100% - 40px);"> 
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.	Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					
-				
-					Alphabet Inc. is an American multinational conglomerate created in 2015 as the parent company of Google and several other companies previously owned by Google.
-					
-					 
+				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px);"> 
+				  
 					 	 	
 			    </div>
 		 	 
@@ -314,7 +290,7 @@
 		  
 		   <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
 		   				<center> 
-		   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;" onclick = "populateAudience();">OK</div>  
+		   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;">OK</div>  
 		   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
 		   				</center>
 		    </div>
@@ -514,7 +490,7 @@
 		//manageContaxOptionsDisplay($(this));
 		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').show();
 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
-		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		//$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
 		 
 		contaxonomyConnections();
 		 
@@ -526,7 +502,7 @@
 		//$('#CONTAXONOMY_OPTIONS').html("");
 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').show();
 		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
-		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		//$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
 		
 		getContaxonomyGroups();
 		 
@@ -558,7 +534,7 @@
 		//alert("ppph");
 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
-		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		//$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
 		$('#CONTAX_SRCH_BAR').hide(); 
 		
 		$('#CONTAX_PPL_FINDER_CNTNR').show();
@@ -805,18 +781,18 @@
 	}
 	
 	
-	function populateAudience() {
+	function populateAudience(checkBox) { 
 		
-		grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
+		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(checkBox.val() + "<br/>");
 		
-		//alert("Length == " + grouponomyChkboxSelected.length);
+	/*	grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
+
 		var chkdLength = 0;
 		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').html('');
 		
 		for(var i=0; i < grouponomyChkboxSelected.length; i++) {
 			if($(grouponomyChkboxSelected[i]).prop("checked") == true) {
-				//chkdLength++;
-				//alert('dfdfdfdfdfdfd');
+			 
 				$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append($(grouponomyChkboxSelected[i]).val() + "<br/>");  
 				
 			}
@@ -825,6 +801,7 @@
 		}
 		//alert("Chkd L =  " +  chkdLength);
 		$('#CONTAX_APPLIED_AUDIENCE_BTN').trigger('click');
+	 */
 		
 		 
 		

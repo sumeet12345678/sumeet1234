@@ -101,7 +101,7 @@
 		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
 		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
 		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + element.name;
-		tempElementString = tempElementString + "</b></span> <input type = 'checkbox'  value = " + element.id + " class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px; float: right;'> </div>";
+		tempElementString = tempElementString + "</b></span> <input type = 'checkbox'  value = " + element.id + " class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px; float: right;' onclick = 'populateAudience($(this));'> </div>";
 		
 		if(element.childs) {			
 			element.childs.forEach(function(level2Element) {
@@ -110,16 +110,16 @@
 				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
 				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + level2Element.name;
-				tempElementString = tempElementString + "</b></span> <input type = 'checkbox'  value = " + level2Element.id + " class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px; float: right;'> </div>";
+				tempElementString = tempElementString + "</b></span> <input type = 'checkbox'  value = " + level2Element.id + " class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px; float: right;'  onclick = 'populateAudience($(this));'> </div>";
 				
-				if(level2Element.childs) {			
+				if(level2Element.childs) {			  
 					level2Element.childs.forEach(function(level3Element) {
 						//tempElementString = tempElementString + "LEVEL3-" + catLooper++;
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
 						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
 						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b>" + level3Element.name;
-						tempElementString = tempElementString + "</b></span> <input  type = 'checkbox'  value = " + level3Element.id + " class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px; float: right;'> </div>";
+						tempElementString = tempElementString + "</b></span> <input  type = 'checkbox'  value = " + level3Element.id + " class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px; float: right;' onclick = 'populateAudience($(this));'> </div>";
 					});
 				} 
 			});
