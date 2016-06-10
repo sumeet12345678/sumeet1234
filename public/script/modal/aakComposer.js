@@ -87,9 +87,10 @@ $(function(){
 	}
 	
 	$('#MSG_COMPOSER_TO').on('click', function() {
+		//alert( $('#MSG_CATEGORY option:selected').text() );  
 		
 		//$('#CONTAXONOMY_MODAL').show();
-		showContaxonomyModal('AK_COMPOSER');
+		showContaxonomyModal('AK_COMPOSER', $('#MSG_CATEGORY option:selected').text());
 		$('#CONTAXONOMY_MODAL').focus();
 		
 	});

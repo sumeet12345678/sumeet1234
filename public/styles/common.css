@@ -95,7 +95,7 @@
 	font-weight: bold;	
 }
 
-.profile_aspect_title_bar {
+.common_section_title_bar {
 	 padding-left: 5px;
 	 padding-top: 13px; 
 	  
@@ -134,6 +134,11 @@
 	 
 	
 	 border: 1px solid #EBEBEB;
+}
+
+.instruction_msg {
+	font-size : 16px;
+	color: red;
 }
 
 

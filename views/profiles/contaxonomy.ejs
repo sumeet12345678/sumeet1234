@@ -69,13 +69,19 @@
 	.text-blue {
 		color: #008CC9;
 	}	
-
-   
+	
+	
+/* MEDIA SCREEN (tab and Ipad) */  
+   @media screen and (max-width: 768px) { 
+ 
+  }
+	
+  
 </style>
 
 
 <%
-	var contaxonomyGroups = [  
+	var contaxonomyGroups = [    
 	                               {
 	                            	   'id' : 'CLOSE_FRIENDS',
 	                            	   'name' : "Learning, Studies, Education"
@@ -116,43 +122,64 @@
 			                       },
 			                       
 			                       {
+			                       	   'id'	  : "FAMILY_RELATIONSHIP",
 			                    	   'name' : "Family, Relationships"
 				                   },
 				                   
-				                   {
+				                   {	'id'	  : "LEGAL",
 				                	   'name' : "Legal"
 				                   },
 				                   
-				                   {
+				                   {	'id'	  : "HEALTH",
 				                	   'name' : "Health"
 				                   },
 				                   
-				                   {
+				                   {	'id'	  : "WELLNESS_WELFARE",
 				                	   'name' : "Wellness, Welfare"
 				                   },
 				                   
-				                   {
+				                   {	'id'	  : "COMMUNITY_FRIENDS",
 				                	   'name' : "Community, Friends"
 				                   },
 				                   
-				                   {
+				                   {	'id'	  : "SPIRITUAL_KARMA",
 				                	   'name' : "Spiritual, Karma"
 				                   },
 				                   
-				                   {
+				                   {	'id'	  : "HOBBIES",
 				                	   'name' : "Hobbies, Activities, Leisure"
 				                   },
 	                             
-	                               {
+	                               {	'id'	  : "LIFESTYLE",
 				                	   'name' : "Lifestyle, Fashion"
 				                   },
-				                   {
+				                   {	'id'	  : "FOOD",
 				                	   'name' : "Food"
 				                   }
 	                             
 	                             ];
 	
 %>
+
+<%
+	var contaxAudienceTable = [{
+									'id' : "CONNECTIONS",
+									'name' : 'My Connections'
+							   },
+							   
+							   {
+							   		'id' : "TEAM",
+									'name' : 'My Team'
+							   },
+							   
+							   {
+							   		'id' : "GROUPS",
+									'name' : 'My Groups'
+							   }
+	 ];
+%>
+
+
 
 
 
@@ -177,7 +204,7 @@
 				 
 				 <!-- for AakComposer Context -->   
 				  <div  id = CONTAGXONOMY_AK_COMPOSER class="contagxonmy-title-bar" style = "display: none;">  
-				       <table width = "100%" height = "100%">  
+				       <table  width = "100%" height = "100%">  
 				       	  <tr> 
 				       	  <!--  <td tabindex="2" align = center valign = middle style = "background-color:#77933C; border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">    
 						      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "cursor: pointer; font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
@@ -254,7 +281,7 @@
 					 	 	</div> 
 					 	 	
 					 	 	<div id = CONTAX_PPL_FINDER_CNTNR style = "display: none;">
-					 	  		<!-- 	<div id = TRIAL_DIV style = "background-color: grey; height: 30px;">PPPPPPPPPPP qwqqqqqqqqqqqqqq</div> -->
+					 	  		   
 					 	 	</div>
 					 	 	 
 					 	 </div>
@@ -265,32 +292,44 @@
 		 
  	
 		 	<div id = CONTAXONOMY_CONTAINER_BOTTOM style = "height: 35%; margin-bottom: 10px;">
-		 		<div  class="contagxonmy-title-bar" style = "display: block;">  
-				       <table width = "100%" height = "100%">  
+		 		<div  class="common_section_title_bar" style = "display: block; text-align: center;">  
+				      <!--  <table width = "100%" height = "100%">  
 				       	  <tr> 
 					       	   <td tabindex="2" align = center valign = middle style = "background-color:#77933C; border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">    
 							      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "cursor: pointer; font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
 							   </td >
 						  </tr>
 					</table>
-				     		  
+				     -->
+				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;" src = "/media/images/icons/arrow-up.png" width = "30px" height = "30px">  
+				     <div  style = "display: inline-block; text-align: center;" class = ""> Set up Audience for your <span class = "msg-category"></span>.</div>	
+				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right;" src = "/media/images/icons/arrow-down-plain-black.png" width = "30px" height = "30px">  	  
 				</div>	
 				
-				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px);"> 
-				  
+				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
+				  	<div class = "instruction_msg" style = "margin-left: 20px;"> No audience applied yet.</div>
+				  	
+				  	<table id = CONTAXONOMY_OPTIONS_AUDIENCE_TABLE width = "100%"  border = 1 >
+				  		<tr width = "100%">
+				  			 <% for(var i = 0; i < contaxAudienceTable.length; i++) { %>
+				  			 	<th><%= contaxAudienceTable[i].name %></th>
+				  			 <% } %>
+				  		</tr>
+				  	
+				  	</table>
 					 	 	
 			    </div>
 		 	 
 		 	
 		 </div> <!-- CONTAXONOMY_CONTAINER_BOTTOM Ends -->
-				 
-				 
+				  
+				  
 		
 		
 		  
 		   <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
 		   				<center> 
-		   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;">OK</div>  
+		   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;">Apply</div>  
 		   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
 		   				</center>
 		    </div>
@@ -318,9 +357,7 @@
 /*	--		Hiding PopUp on esc						-- */	
 	$('#CONTAXONOMY_MODAL').focus();
 	
-	
-	
-	
+	  
 	
 	
  
@@ -542,7 +579,15 @@
 		appendSearchCriteria('/people/search/basic');
 		//$('#CONTAX_PPL_FINDER_CNTNR').append($('#PEOPLE_FINDER_CONTENT'));
 	});
-	 
+	
+	
+	$('#CONTAXONOMY_AUDIENCE_MAX_ICON').on('click', function() { 
+		maxMinAudienceSection('max');
+	});
+	
+	$('#CONTAXONOMY_AUDIENCE_MIN_ICON').on('click', function() { 
+		maxMinAudienceSection('min');
+	});
 	
 	
 
@@ -585,28 +630,7 @@
 							  
 						 
 							 }
-				    /*  else {  
-							 
-							 PPL_SRCH_CRITERIA_MAP_OBJ[url] = {};
-							 
-							 
-							 var searchElement1 = $(xhr.responseText);
-							 
-							 $('#CONTAX_PPL_FINDER_CNTNR').append(searchElement1);
-							
-							 PPL_SRCH_CRITERIA_MAP_OBJ[url].htmlString = xhr.responseText;
-							 
-							 //PPL_SRCH_CRITERIA_MAP_OBJ[url] = xhr.responseText;
-							  PPL_SRCH_CRITERIA_MAP_OBJ[url].id = '#' +  searchElement1.children().attr('id');
-							 
-								 
-							 }
-				*/
-							  
-							/* Add url as key to the PPL_SRCH_CRITERIA_MAP_OBJ, map object will contain  ID and Url(as key)*/
-							//PPL_SRCH_CRITERIA_MAP_OBJ[url] = xhr.responseText;
-							 
-				//	}
+				  
 					
 					else {
 						console.log("Status == " + xhr.status);  
@@ -742,12 +766,10 @@
 		
 		$('#CONTAXONOMY_OPTIONS').append($("<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>"));
 	}
+	 
 	
 	
-	
-	
-	
-	function showContaxonomyModal(whereFrom) { 
+	function showContaxonomyModal(whereFrom, msgCategory) { 
 		//alert("aaaaa11111111111");
 	 	var $contaxonomyModal = $('#CONTAXONOMY_MODAL');
 	 	
@@ -763,6 +785,8 @@
 	 		$('#AD_PERSON').hide();
 	 		$('#CONTAX_SRCH_BAR').hide();  
 		 	$('#CONTAGXONOMY_AK_COMPOSER').show();
+		 	
+		 	$('.msg-category').text('"'+ msgCategory + '"');
 		   
 	 	}
 	 	
@@ -782,12 +806,21 @@
 	
 	
 	function populateAudience(checkBox) { 
-		if(checkBox.prop("checked") == true){
 		
-			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(checkBox.val() + "<br/>");
+		var checkBoxId = checkBox.attr('id');
+		//alert("id == " + checkBoxId);
+		if(checkBox.prop("checked") == true  &&  $()) {
+			//var divString = '<div id = ' + checkBoxId + '>' + checkBox.val() + '</div>';
+			//alert('divString == ' + divString);
+		
+			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(divString);
 		}
 		
+		else {
+			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').find('#' + checkBoxId).remove();
+		} 
 		
+	
 	/*	grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
 
 		var chkdLength = 0;
@@ -811,7 +844,28 @@
 	}
 			
  
-	 		
+	
+	function maxMinAudienceSection(maxMin) {
+			
+		if(maxMin === 'max') {
+			$('#CONTAXONOMY_CONTAINER_TOP').hide();
+			$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '100%');
+			
+			/* if()*/
+			
+		}
+		
+		else if(maxMin === 'min') {
+			//alert("minnnn");
+			$('#CONTAXONOMY_CONTAINER_BOTTOM').hide();
+			$('#CONTAXONOMY_CONTAINER_TOP').show();
+			$('#CONTAXONOMY_CONTAINER_TOP').css('height', '100%');
+			 
+			
+		}
+		
+	}
+			 		
 	 		
 	 		
  	
