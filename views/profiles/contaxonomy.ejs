@@ -300,7 +300,7 @@
 					 	 	</div> 
 					 	 	
 					 	 	<div id = CONTAX_PPL_FINDER_CNTNR style = "display: none;">
-					 	  
+					 	  		<!-- 	<div id = TRIAL_DIV style = "background-color: grey; height: 30px;">PPPPPPPPPPP qwqqqqqqqqqqqqqq</div> -->
 					 	 	</div>
 					 	 	 
 					 	 </div>
@@ -567,25 +567,67 @@
 	 
 	
 	
-	
-	var searchAdded = "";
-	var PPL_SRCH_CRITERIA_MAP = {};
+
+	/* Ajax call for appending People Search Criteria */
+	/*
+	* 	Add each div element to Map after ajax call.  If element to be added is already on Map, avoid ajax call and make that div visible if its invisible, else do nothing.
+	*/
+	//var searchAdded = "";
+	var PPL_SRCH_CRITERIA_MAP_OBJ = {}; 
 	  
-	function appendSearchCriteria(url) {
-		//alert(url);  
-		 if(searchAdded.indexOf(url) == -1) {  
+	function appendSearchCriteria(url) { 
+			 
+			 /*check if map obj contains the key(url) */
+			 if(! (url in PPL_SRCH_CRITERIA_MAP_OBJ) )  {
+			 
 				var xhr = new XMLHttpRequest();
 				
 				xhr.onload = function() {  
 					if(xhr.status === 200) { 
 						console.log("Status  == 200");
-						//$('#PROFILE_ASPECT_CONTAINER').html(xhr.responseText);
-						$('#CONTAX_PPL_FINDER_CNTNR').append(xhr.responseText);
-						
-						/* Add url as key to the PPL_SRCH_CRITERIA_MAP */
-						PPL_SRCH_CRITERIA_MAP[url] = xhr.responseText;
-						//$('#CONTAX_PPL_FINDER_CNTNR').append(PPL_SRCH_CRITERIA_MAP['/people/search/basic']);
-					}
+					 
+					//	 if(url == '/people/search/basic') {
+							 
+							 PPL_SRCH_CRITERIA_MAP_OBJ[url] = {};
+							 
+							 
+							 var searchElement1 = $(xhr.responseText);
+							 
+							 $('#CONTAX_PPL_FINDER_CNTNR').append(searchElement1);
+							
+							 PPL_SRCH_CRITERIA_MAP_OBJ[url].htmlString = xhr.responseText;
+							 
+							 //PPL_SRCH_CRITERIA_MAP_OBJ[url] = xhr.responseText;
+							  PPL_SRCH_CRITERIA_MAP_OBJ[url].id = searchElement1.children().attr('id');
+							 
+							// PPL_SRCH_CRITERIA_MAP_OBJ['status'] = "displayed";  //displayed or removed
+							//console.log(PPL_SRCH_CRITERIA_MAP_OBJ);
+							
+							 	//alert("Appended id =  ==  " + searchElement.attr('id'));
+							 }
+				    /*  else {  
+							 
+							 PPL_SRCH_CRITERIA_MAP_OBJ[url] = {};
+							 
+							 
+							 var searchElement1 = $(xhr.responseText);
+							 
+							 $('#CONTAX_PPL_FINDER_CNTNR').append(searchElement1);
+							
+							 PPL_SRCH_CRITERIA_MAP_OBJ[url].htmlString = xhr.responseText;
+							 
+							 //PPL_SRCH_CRITERIA_MAP_OBJ[url] = xhr.responseText;
+							  PPL_SRCH_CRITERIA_MAP_OBJ[url].id = '#' +  searchElement1.children().attr('id');
+							 
+								 
+							 }
+				*/
+							  
+							/* Add url as key to the PPL_SRCH_CRITERIA_MAP_OBJ, map object will contain  ID and Url(as key)*/
+							//PPL_SRCH_CRITERIA_MAP_OBJ[url] = xhr.responseText;
+							 
+				//	}
+					
 					else {
 						console.log("Status == " + xhr.status);  
 					}
@@ -593,19 +635,49 @@
 				
 				 xhr.open('GET',url, true);         
 				 xhr.send(null);
-				 
-				 searchAdded = 	searchAdded + url; 	 
-		}
-		
-	//	window.location.hash = '#PROFILE_EDUCATION';
+			 }	 /////
+			 
+			 else {  /* use url to get the value(html string) and find Id from it to display it */
+					 alert("Reached else");
+			 		// $('#PEOPLE_FINDER_COMMUNITY').show();
+			 		//$('#CONTAX_PPL_FINDER_CNTNR').append(PPL_SRCH_CRITERIA_MAP_OBJ[url]);
+			 //show
+			 
+			 	//  U hav URL, so get Id
+					 var id = PPL_SRCH_CRITERIA_MAP_OBJ[url].id;
+			 		alert("ID == " + id);
+			 		
+			 		var strId = "#"+id;
+			 		alert("String == " + strId);
+			 		
+			 		 $(strId).show();
+			 		 $(strId).show();
+			 		 
+			 
+			 }
+			 
+			
+				
+	 
 	};
+/*	
+	 var peopleFinderOptionsCloseBtn = $('.peopleFinderOptionsCloseBtn');
+	 peopleFinderOptionsCloseBtn. on('click', function() {
+			//closeOptions($(this));
+			alert("Closed btn");
+		});
+	*/
+	 function  closeSearchCriteriaOptions(closeBtn) {
+		 // var parentId = closeBtn.parent().attr('id');
+		 // closeBtn.parent().css('display','none');
+		  closeBtn.parent().hide();
+		
+	 }
 	
-	
-	
-	
-	
-	
-	
+	/*
+	*
+	*
+	*/
 	
 	function toggleContaxonomyConsGroups() {
 		 

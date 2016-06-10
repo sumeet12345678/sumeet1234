@@ -39,6 +39,11 @@ $(function(){
 	 
 	}); 
 	
+	$('#MSG_COMPOSER_ADD_STUFF').on('click', function() {
+		$('#ATTACH_OPTIONS').toggle();
+	});
+	
+	
     $('#MSG_COMPOSER_MESSAGE_TEXTAREA').on('focus', function() {
     	//alert("Total Screen =  " + screen.height);
     });

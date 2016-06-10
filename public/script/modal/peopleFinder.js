@@ -96,7 +96,7 @@ $(function() {
 		closeBtn.parent().hide();
 	}
 	
-});
+}); /*  Ready Function ends */
 
 function populatePeopleFinderOptions(peopFinderOptionsArray) {
 	
