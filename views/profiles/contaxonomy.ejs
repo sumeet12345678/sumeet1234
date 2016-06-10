@@ -782,8 +782,11 @@
 	
 	
 	function populateAudience(checkBox) { 
+		if(checkBox.prop("checked") == true){
 		
-		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(checkBox.val() + "<br/>");
+			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(checkBox.val() + "<br/>");
+		}
+		
 		
 	/*	grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
 
