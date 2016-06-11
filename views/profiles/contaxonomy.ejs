@@ -71,9 +71,20 @@
 	}	
 	
 	
-/* MEDIA SCREEN (tab and Ipad) */  
-   @media screen and (max-width: 768px) { 
- 
+/* MEDIA SCREEN (mobile) */  
+   @media screen and (max-width: 767px) { 
+ 		.audience-container-div-sections {
+ 			width: 50%;
+ 			display: inline-block;
+ 		}
+  }
+  
+  /* MEDIA SCREEN (desktop) */  
+   @media screen and (min-width: 768px) { 
+ 		.audience-container-div-sections {
+ 			width: 25%;
+ 		    display: inline-block;
+ 		}
   }
 	
   
@@ -162,7 +173,7 @@
 %>
 
 <%
-	var contaxAudienceTable = [{
+	var contaxAudienceTabOptions = [{
 									'id' : "CONNECTIONS",
 									'name' : 'My Connections'
 							   },
@@ -175,7 +186,13 @@
 							   {
 							   		'id' : "GROUPS",
 									'name' : 'My Groups'
+							   },
+							   
+							    {
+							   		'id' : "PEOPLE",
+									'name' : 'Rest of the world'
 							   }
+							   
 	 ];
 %>
 
@@ -306,33 +323,41 @@
 				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right; margin-top: -5px;" src = "/media/images/icons/plainblack/arro-dwn-vanilla-blk.png" width = "30px" height = "30px">  	  
 				</div>	
 				
+				
 				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
 				  	<div class = "instruction_msg" style = "margin-left: 20px;"> No audience applied yet.</div>
+				  	 
+				 
+				  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "background-color: grey;">
+				  	   <div> <b> <%= contaxAudienceTabOptions[0].name %></b></div>
+				  	</div><!-- 
 				  	
-				  	<table id = CONTAXONOMY_OPTIONS_AUDIENCE_TABLE width = "100%"  border = 1 >
-				  		<tr width = "100%">
-				  			 <% for(var i = 0; i < contaxAudienceTable.length; i++) { %>
-				  			 	<th><%= contaxAudienceTable[i].name %></th>
-				  			 <% } %>
-				  		</tr>
+				  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "background-color: blue;">
+				 		 <div> <b> <%= contaxAudienceTabOptions[1].name %></b></div>
+				  	</div><!-- 
 				  	
-				  	</table>
-					 	 	
+				  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "background-color: orange;">
+				  		 <div>  <b> <%= contaxAudienceTabOptions[2].name %></b></div>
+				  	</div><!-- 
+				  	
+				  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "background-color: red;">
+						 <div>  <b> <%= contaxAudienceTabOptions[3].name %></b></div>
+				  	</div>
+				   	
 			    </div>
 		 	 
 		 	
 		 </div> <!-- CONTAXONOMY_CONTAINER_BOTTOM Ends -->
 				  
-				  
-		
+				 
 		
 		  
-		   <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
-		   				<center> 
-		   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;">Apply</div>  
-		   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
-		   				</center>
-		    </div>
+	    <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
+	   				<center> 
+	   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 20px;">Apply</div>  
+	   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
+	   				</center>
+	     </div>
 		    
 		   
 		  
@@ -808,11 +833,10 @@
 	function populateAudience(checkBox) { 
 		
 		var checkBoxId = checkBox.attr('id');
+		alert(checkBox.prop("name"));
 		//alert("id == " + checkBoxId);
-		if(checkBox.prop("checked") == true  &&  $()) {
-			//var divString = '<div id = ' + checkBoxId + '>' + checkBox.val() + '</div>';
-			//alert('divString == ' + divString);
-		
+		if( (checkBox.prop("checked") == true) &&  (checkBox.prop("name") == "groups-chkbox") ) {
+			  
 			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(divString);
 		}
 		
