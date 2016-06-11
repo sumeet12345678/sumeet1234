@@ -188,7 +188,7 @@
 <div id = CONTAXONOMY_MODAL style = "background-color: rgba(0,0,0,0.6);"  tabindex="0">	 
  
 	 
-    <div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative;" >	
+    <div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative; padding-bottom: 42px;" >	
 		 
 		 	<div id = CONTAXONOMY_CONTAINER_TOP  style = "height: 65%;">	 
 				  <div  id = AD_PERSON class="contagxonmy-title-bar" style = "display: none;">  
@@ -291,8 +291,8 @@
 		 </div><!-- CONTAXONOMY_CONTAINER_TOP Ends -->
 		 
  	
-		 	<div id = CONTAXONOMY_CONTAINER_BOTTOM style = "height: 35%; margin-bottom: 10px;">
-		 		<div  class="common_section_title_bar" style = "display: block; text-align: center;">  
+		 <div id = CONTAXONOMY_CONTAINER_BOTTOM style = "height: 35%; margin-bottom: 10px;">
+		 		<div  class="common_section_title_bar" style = "margin-top: 0px; display: block; text-align: center;">  
 				      <!--  <table width = "100%" height = "100%">  
 				       	  <tr> 
 					       	   <td tabindex="2" align = center valign = middle style = "background-color:#77933C; border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">    
@@ -301,9 +301,9 @@
 						  </tr>
 					</table>
 				     -->
-				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;" src = "/media/images/icons/arrow-up.png" width = "30px" height = "30px">  
+				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;  margin-top: -5px;" src = "/media/images/icons/plainblack/arro-up-vanilla-blk.png" width = "30px" height = "30px">  
 				     <div  style = "display: inline-block; text-align: center;" class = ""> Set up Audience for your <span class = "msg-category"></span>.</div>	
-				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right;" src = "/media/images/icons/arrow-down-plain-black.png" width = "30px" height = "30px">  	  
+				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right; margin-top: -5px;" src = "/media/images/icons/plainblack/arro-dwn-vanilla-blk.png" width = "30px" height = "30px">  	  
 				</div>	
 				
 				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
@@ -845,21 +845,49 @@
 			
  
 	
+	var audienceSectionState = "normal"; //maximized, minimized, normal.
 	function maxMinAudienceSection(maxMin) {
 			
 		if(maxMin === 'max') {
-			$('#CONTAXONOMY_CONTAINER_TOP').hide();
-			$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '100%');
+			//$('#CONTAXONOMY_CONTAINER_TOP').hide();
+			//$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '100%');
 			
-			/* if()*/
+			if( audienceSectionState == "normal") {
+				$('#CONTAXONOMY_CONTAINER_TOP').hide();
+				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '100%');
+				audienceSectionState = "maximized";
+			}
+			else if(audienceSectionState == "minimized") {
+				$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '35%');
+				$('#CONTAXONOMY_CONTAINER_TOP').css('height', '65%');
+				audienceSectionState = "normal";
+			}
 			
 		}
 		
 		else if(maxMin === 'min') {
 			//alert("minnnn");
-			$('#CONTAXONOMY_CONTAINER_BOTTOM').hide();
-			$('#CONTAXONOMY_CONTAINER_TOP').show();
-			$('#CONTAXONOMY_CONTAINER_TOP').css('height', '100%');
+			
+			if( audienceSectionState == "normal") {
+				$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '42px');
+				$('#CONTAXONOMY_CONTAINER_TOP').css('height', 'calc(100% - 40px)');
+				audienceSectionState = "minimized";
+			}
+			
+			else if(audienceSectionState == "maximized") {
+				 
+				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '35%');
+				$('#CONTAXONOMY_CONTAINER_TOP').css('height', '65%');
+				$('#CONTAXONOMY_CONTAINER_TOP').show();
+				audienceSectionState = "normal";
+				
+			}
+			
+			//$('#CONTAXONOMY_CONTAINER_BOTTOM').hide();
+			//$('#CONTAXONOMY_CONTAINER_TOP').show();
+			//$('#CONTAXONOMY_CONTAINER_TOP').css('height', '100%');
 			 
 			
 		}
