@@ -130,6 +130,12 @@ router.get('/contaxonomyGroups', function(req, res, next) {
 	  res.render('profiles/contaxonomyData/groups.ejs');	    
 	}); 
 
+router.get('/contaxonomyTeams', function(req, res, next) {
+	// var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('profiles/contaxonomyData/teams.ejs');	    
+	}); 
+
 
 /*
 router.get('/experience', function(req, res, next) {

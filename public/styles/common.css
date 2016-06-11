@@ -136,9 +136,10 @@
 	 border: 1px solid #EBEBEB;
 }
 
-.instruction_msg {
+.neg-state-usr-msg {
 	font-size : 16px;
-	color: red;
+	color: #b57507;
+	font-weight: bold;
 }
 
 
