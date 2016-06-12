@@ -70,7 +70,12 @@
 		color: #008CC9;
 	}	
 	
-	
+    .contax-audience-table-items {
+    	background-color: #f2f2f2;
+    	padding: 3px;
+    	margin-bottom: 10px;
+    }
+    
  .connections_cat_node_chkbox {
 			 float: right;
   }
@@ -78,8 +83,10 @@
 /* MEDIA SCREEN (mobile) */  
    @media screen and (max-width: 767px) { 
  		.audience-container-div-sections {
- 			width: 50%;
- 			display: inline-block;
+ 			 width: 100%;
+ 			 display: inline-block; 
+ 			 padding-right: 5px;
+ 			 
  		}
  		
  		#CONTAXONOMY_CONNECTIONS_TABLE {
@@ -91,8 +98,8 @@
    @media screen and (min-width: 768px) { 
  		.audience-container-div-sections {
  			width: 25%;
- 		    display: inline-block;
- 		    padding: 5px;
+ 		    display: inline-block; 
+ 		    padding-right: 5px;
  		}
  		
  		#CONTAXONOMY_CONNECTIONS_TABLE {
@@ -225,7 +232,7 @@
 	 
     <div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative; padding-bottom: 42px;" >	
 		 
-		 	<div id = CONTAXONOMY_CONTAINER_TOP  style = "height: 65%;">	 
+		 	<div id = CONTAXONOMY_CONTAINER_TOP  style = "height: 55%;">	 
 				  <div  id = AD_PERSON class="contagxonmy-title-bar" style = "display: none;">  
 				      <div style = "display: inline-block; font-size: 22px; margin-top: 4px; padding-left: 2px; "><span style = "font-family: Arial; color: #98BF49;"><b>my</b></span></div><div style = "display: inline-block; font-size: 20px; vertical-align: top; margin-top: 2px; font-family: Sans Serif; color: #dcdcdc;">Contagxonomy<img style = "margin-bottom: 8px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> </div>  
 				     <!--    
@@ -303,14 +310,14 @@
 						Select all in my Contagxonomy<b>!</b>
 				   		  
 				   	</div> -->
-					 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 20px; width:100%; padding-right: 5px;">
+					 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 10px; width:100%; padding-right: 5px;">
 					 	 	
 					 	 	<div id = CONTAXONOMY_OPTIONS_CONS_CNTNR style = "display: block;">
 					 	 	
 					 	 		 <div class = "aakComposerContext  text-green" style = "margin-left: 3px;  margin-bottom: 15px;">
 					 	 		  	<div style = "text-align: center; display: inline-block; width: 90px;">
 								  		<img   width="28" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
-								  		<span style = "display: block;  line-height:.5; font-size: 14px;"><b>Connections</b></span>
+								  		<span style = "display: block;  line-height:.5; font-size: 12px;"><b>Connections</b></span>
 								     </div> 
 							    </div> 
 							    
@@ -337,8 +344,8 @@
 		 </div><!-- CONTAXONOMY_CONTAINER_TOP Ends -->
 		 
  	
-		 <div id = CONTAXONOMY_CONTAINER_BOTTOM style = "height: 35%; margin-bottom: 10px;  padding-left: 3px; padding-right: 3px;">
-		 		<div  class="common_section_title_bar" style = "margin-top: 0px; display: block; text-align: center;">  
+		 <div id = CONTAXONOMY_CONTAINER_BOTTOM style = "height: 45%; margin-bottom: 10px;  padding-left: 3px; padding-right: 3px;">
+		 		<div  class="common_section_title_bar" style = "margin-top: 0px; display: block; text-align: center; margin-bottom: 10px;">  
 				      <!--  <table width = "100%" height = "100%">  
 				       	  <tr> 
 					       	   <td tabindex="2" align = center valign = middle style = "background-color:#77933C; border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">    
@@ -348,29 +355,29 @@
 					</table>
 				     -->
 				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;  margin-top: -5px;" src = "/media/images/icons/plainblack/arro-up-vanilla-blk.png" width = "30px" height = "30px">  
-				     <div  style = "display: inline-block; text-align: center;" class = ""> Set up Audience for your <span class = "msg-category"></span></div>	
+				     <div  style = "display: inline-block; text-align: center;" class = "">Audience for your <span class = "msg-category"></span></div>	
 				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right; margin-top: -5px;" src = "/media/images/icons/plainblack/arro-dwn-vanilla-blk.png" width = "30px" height = "30px">  	  
 				</div>	
 				
 				
-				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
+				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 40px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
 				  	<div id = NEG-STATE-USER-MSG-ID class = "neg-state-usr-msg" style = "display: none; margin-left: 8px; margin-bottom: 5px;"> No audience applied yet.</div>
 				  	 
 				 
-				  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "display: inline-block; vertical-align: top; background-color: #F2F2F2;">
-				  	   <div> <b> <%= contaxAudienceTabOptions[0].name %>:</b></div>
+				  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
+				  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %></b></div>
 				  	</div><!-- 
 				  	
-				  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "display: inline-block;  vertical-align: top;  background-color: #e6e3e3;">
-				 		 <div> <b> <%= contaxAudienceTabOptions[1].name %>:</b></div>
+				  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
+				 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %></b></div>
 				  	</div><!-- 
 				  	
-				  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "display: inline-block;  vertical-align: top; background-color: #F2F2F2;">
-				  		 <div>  <b> <%= contaxAudienceTabOptions[2].name %>:</b></div>
+				  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
+				  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %></b></div>
 				  	</div><!-- 
 				  	
-				  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "display:inline- block;  vertical-align: top; background-color: #e6e3e3;">
-						 <div>  <b> <%= contaxAudienceTabOptions[3].name %>:</b></div>
+				  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
+						 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %></b></div>
 				  	</div>
 				   	
 			    </div>
@@ -906,17 +913,17 @@
 		if( (checkBox.prop("checked") == true)) {
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
-			 $('#AUDIENCE_CNTNR_CONNECTIONS').append(checkBoxId + '<br/>');
+			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' >" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 			 
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
-				 $('#AUDIENCE_CNTNR_GROUPS').append(checkBoxId + '<br/>');
+				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' >" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 				 
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
-				 $('#AUDIENCE_CNTNR_TEAMS').append(checkBoxId + '<br/>');
+				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' >" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 				 
 			}
 		}
