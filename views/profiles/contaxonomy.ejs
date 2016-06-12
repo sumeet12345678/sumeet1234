@@ -92,7 +92,12 @@
  		.audience-container-div-sections {
  			width: 25%;
  		    display: inline-block;
+ 		    padding: 5px;
  		}
+ 		
+ 		#CONTAXONOMY_CONNECTIONS_TABLE {
+			width:  330px;	 
+		} 
   }
   
   
@@ -301,9 +306,10 @@
 					 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 20px; width:100%; padding-right: 5px;">
 					 	 	
 					 	 	<div id = CONTAXONOMY_OPTIONS_CONS_CNTNR style = "display: block;">
+					 	 	
 					 	 		 <div class = "aakComposerContext  text-green" style = "margin-left: 3px;  margin-bottom: 15px;">
-					 	 		  	<div style = "text-align: center; display: inline-block;">
-								  		<img   width="24" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
+					 	 		  	<div style = "text-align: center; display: inline-block; width: 90px;">
+								  		<img   width="28" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 14px;"><b>Connections</b></span>
 								     </div> 
 							    </div> 
@@ -348,23 +354,23 @@
 				
 				
 				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 0px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
-				  	<div class = "neg-state-usr-msg" style = "margin-left: 8px; margin-bottom: 5px;"> No audience applied yet.</div>
+				  	<div id = NEG-STATE-USER-MSG-ID class = "neg-state-usr-msg" style = "display: none; margin-left: 8px; margin-bottom: 5px;"> No audience applied yet.</div>
 				  	 
 				 
-				  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "display: none; background-color: grey;">
-				  	   <div> <b> <%= contaxAudienceTabOptions[0].name %></b></div>
+				  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "display: inline-block; vertical-align: top; background-color: #F2F2F2;">
+				  	   <div> <b> <%= contaxAudienceTabOptions[0].name %>:</b></div>
 				  	</div><!-- 
 				  	
-				  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "display: none;  background-color: blue;">
-				 		 <div> <b> <%= contaxAudienceTabOptions[1].name %></b></div>
+				  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "display: inline-block;  vertical-align: top;  background-color: #e6e3e3;">
+				 		 <div> <b> <%= contaxAudienceTabOptions[1].name %>:</b></div>
 				  	</div><!-- 
 				  	
-				  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "display: none; background-color: orange;">
-				  		 <div>  <b> <%= contaxAudienceTabOptions[2].name %></b></div>
+				  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "display: inline-block;  vertical-align: top; background-color: #F2F2F2;">
+				  		 <div>  <b> <%= contaxAudienceTabOptions[2].name %>:</b></div>
 				  	</div><!-- 
 				  	
-				  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "display: none; background-color: red;">
-						 <div>  <b> <%= contaxAudienceTabOptions[3].name %></b></div>
+				  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "display:inline- block;  vertical-align: top; background-color: #e6e3e3;">
+						 <div>  <b> <%= contaxAudienceTabOptions[3].name %>:</b></div>
 				  	</div>
 				   	
 			    </div>
@@ -405,14 +411,14 @@
 /*	--		Hiding PopUp on esc						-- */	
 	$('#CONTAXONOMY_MODAL').focus();
 	
-	  
-	
-	
  
  	var contaxGroupsCalled = false;
 	function getContaxonomyGroups() { 
 		 
 	   if(!contaxGroupsCalled) {
+		   
+		   if(!contaxGroupsCalled) {
+			    contaxGroupsCalled = true;
 				var xhr = new XMLHttpRequest();
 				
 				xhr.onload = function() {  
@@ -431,7 +437,7 @@
 				 xhr.open('GET','/contaxonomyGroups', true);         
 				 xhr.send(null); 
 		 }
-	
+	   }
 	}; //
 	
 	
@@ -714,9 +720,7 @@
 							
 							 PPL_SRCH_CRITERIA_MAP_OBJ[url].htmlString = xhr.responseText;
 							 
-							  PPL_SRCH_CRITERIA_MAP_OBJ[url].id = searchElement1.children().attr('id');
-							  
-							  
+							 PPL_SRCH_CRITERIA_MAP_OBJ[url].id = searchElement1.children().attr('id'); 
 						 
 							 }
 				  
@@ -899,14 +903,27 @@
 		var checkBoxId = checkBox.attr('id');
 		//alert(checkBox.prop("name"));
 		//alert("id == " + checkBoxId);
-		if( (checkBox.prop("checked") == true) &&  (checkBox.prop("name") == "groups-chkbox") ) {
-			  
-			//$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append(divString);
+		if( (checkBox.prop("checked") == true)) {
+			
+			if( (checkBox.prop("name") == "connections-chkbox") ) {  
+			 $('#AUDIENCE_CNTNR_CONNECTIONS').append(checkBoxId + '<br/>');
+			 
+			}
+			
+			if( (checkBox.prop("name") == "groups-chkbox") ) {  
+				 $('#AUDIENCE_CNTNR_GROUPS').append(checkBoxId + '<br/>');
+				 
+			}
+			
+			if( (checkBox.prop("name") == "teams-chkbox") ) {  
+				 $('#AUDIENCE_CNTNR_TEAMS').append(checkBoxId + '<br/>');
+				 
+			}
 		}
-		
-		else {
-			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').find('#' + checkBoxId).remove();
-		} 
+		 
+		//else {  
+		//	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').find('#' + checkBoxId).remove();
+		//} 
 		
 	
 	/*	grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
