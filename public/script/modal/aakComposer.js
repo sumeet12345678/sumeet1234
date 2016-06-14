@@ -170,7 +170,7 @@ $('#CLOSE').on('click', function(){
 
 $('.imo_icon_img').on('click', function(e){
 	
-	$('#MSG_COMPOSER_TO_TEXTAREA').append($(this).clone());
+	$('#MSG_COMPOSER_MESSAGE_TEXTAREA').append($(this).clone());
    // document.querySelector('[contenteditable]').appendChild(e.target.cloneNode(true));
  
   });
