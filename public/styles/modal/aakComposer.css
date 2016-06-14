@@ -56,3 +56,30 @@
 	  	border: 2px solid green;
 	  }
 }
+
+
+
+
+	#close {
+	    float:right;
+	    display:inline-block;
+	   
+	}
+	
+	/*Melbin's code*/
+	
+	[contenteditable] {
+	  border: 1px solid #000;
+	  margin: 0.4em 0;
+	  line-height: 1.4em;
+	  -webkit-appearance: textfield;
+	  appearance: textfield;
+	}
+	img123 {
+	  vertical-align: top;
+	  max-height: 1.4em;
+	  max-width: 1.4em;
+	}
+	.selectable-icons img {
+	  cursor: pointer;
+	}

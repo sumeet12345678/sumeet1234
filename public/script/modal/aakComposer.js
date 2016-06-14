@@ -90,7 +90,7 @@ $(function(){
 		//alert( $('#MSG_CATEGORY option:selected').text() );  
 		
 		//$('#CONTAXONOMY_MODAL').show();
-		showContaxonomyModal('AK_COMPOSER', $('#MSG_CATEGORY option:selected').text());
+		showContaxonomyModal('AK_COMPOSER', $('#MSG_TYPE_OPTION_SELECT option:selected').text());
 		$('#CONTAXONOMY_MODAL').focus();
 		
 	});
@@ -98,4 +98,289 @@ $(function(){
 	
 	$('.composerWrapper').focus();
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	 *  SALVIN'S CODE
+	 * */
+	// Toggle function 
+
+
+	 
+
+
+
+
+//  Emotion Buttons
+
+
+$('#EMOTIONS').on('click', function(){
+	$('#SMILEY_EMOTIONS').toggle();
+});
+
+
+$('#EMOTION1').on('click', function() {
+	$('.emotion-div-class').hide();
+	$('#EMOTION_1').show();
+	
+
+});
+
+$('#EMOTION2').on('click', function(){
+	$('.emotion-div-class').hide();
+	$('#EMOTION_2').show();
+	
+});
+
+$('#EMOTION3').on('click', function(){
+	$('.emotion-div-class').hide();
+	$('#EMOTION_3').show();
+});
+
+$('#EMOTION4').on('click', function(){
+	$('.emotion-div-class').hide();
+	$('#EMOTION_4').show();
+});
+
+
+$('#CLOSE').on('click', function(){
+	$('#SMILEY_EMOTIONS').hide();
+});
+
+
+
+//Smileys to the text area
+
+
+
+
+// document.querySelector('.imo_icon_img').addEventListener('click', function(e) {
+//   if (e.target.tagName.toLowerCase() === 'img') {
+//     document.querySelector('[contenteditable]').appendChild(e.target.cloneNode(true));
+//   }
+// });
+
+
+$('.imo_icon_img').on('click', function(e){
+	
+	$('#MSG_COMPOSER_TO_TEXTAREA').append($(this).clone());
+   // document.querySelector('[contenteditable]').appendChild(e.target.cloneNode(true));
+ 
+  });
+
+	
+
+
+//msgCats();
+	$('#MSG_TYPE_OPTION_SELECT').on('change', function(e) {
+		//alert( this.value );
+		msgCats(this.value);
+	});
+
+ function msgCats(msgType) {	
+	var msgCatsOptions;
+
+  if(msgType == "SM") {
+	 msgCatsOptions = [  
+	                               {
+	                            	   'id' : 'INDIA',
+	                            	   'name' : "Kerala"
+	                            	 
+	                            	   
+	                               },	                               
+	                               {
+	                            	   'id' : 'FRIENDS',
+	                            	   'name' : "Karnataka"
+	                               },
+	                               
+	                               {
+	                            	   'id' : 'COWORKERS',
+	                            	   'name' : "Tamilnadu"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES',
+		                        	   'name' : "Goa",
+			                           'childs' : [
+			                                {
+			                            	 'id' : 'ACQUINTANCES_INTERESTS',
+			                            	 'name' : 'Maharashtra',
+			                            	 'childs' : [{
+				                            	 'id' : 'ACQUINTANCES_INTERESTS_SWIMMING',
+				                            	 'name' : 'Hariyana'
+					                            },
+					                            {
+					                                'id' : 'ACQUINTANCES_INTERESTS_TREKKING',
+					                            	'name' : 'Kerala'
+					                            }]
+				                            },
+				                            {
+				                                'id' : 'ACQUINTANCES_CAUSES',
+				                            	'name' : 'Karnataka'
+				                            }
+			                           ]
+			                       },
+			                       
+			                       {
+			                    	   'name' : "Business"
+				                   },
+				                   
+				                   {
+				                	   'name' : "Service"
+				                   },
+	                             
+	                             
+	                             ];
+	 }
+
+	 if(msgType == "MM") { 
+	 		msgCatsOptions = [  
+	                               {
+	                            	   'id' : 'INDIA',
+	                            	   'name' : "Washington"
+	                            	 
+	                            	   
+	                               },	                               
+	                               
+	                               {
+	                            	   'id' : 'FRIENDS',
+	                            	   'name' : "California"
+
+	                             	  
+
+	                             	},
+    
+	                               {
+	                            	   'id' : 'COWORKERS',
+	                            	   'name' : "Florida"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES',
+		                        	   'name' : "Missouri",
+			                          
+			                       },
+			                       
+			                       
+	                             
+	                             ];
+	 }
+
+
+	 if(msgType == "LM"){
+	 		msgCatsOptions = [  
+	                               {
+	                            	   'id' : 'INDIA',
+	                            	   'name' : "Darlington"
+	                            	 
+	                            	   
+	                               },	                               
+	                               
+	                               {
+	                            	   'id' : 'FRIENDS',
+	                            	   'name' : "Hambleton"
+
+	                             	  
+
+	                             	},
+    
+	                               {
+	                            	   'id' : 'COWORKERS',
+	                            	   'name' : "Craven"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES',
+		                        	   'name' : "Lancaster",
+			                          
+			                       },
+			                       
+			                       
+	                             
+	                             ];
+	 }	
+	
+
+
+	 if(msgType == "XLM"){
+	 		msgCatsOptions = [  
+	                               {
+	                            	   'id' : 'INDIA',
+	                            	   'name' : "Tasmania"
+	                            	 
+	                            	   
+	                               },	                               
+	                               
+	                               {
+	                            	   'id' : 'FRIENDS',
+	                            	   'name' : "Victoria"
+
+	                             	  
+
+	                             	},
+    
+	                               {
+	                            	   'id' : 'COWORKERS',
+	                            	   'name' : "Western Austalia"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES',
+		                        	   'name' : "Queensland",
+			                          
+			                       },
+			                       
+			                       
+	                             
+	                             ];
+	 }	
+	
+
+	
+
+
+
+
+	 $('#MSG_CATS_OPTIONS_SELECT').html('');
+	// $('#MSG_CATS_OPTIONS_SELECT').append
+	msgCatsOptions.forEach(function(element) {
+		
+		var elementString = '<option>' + element.name + '</option>';
+		$('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
+		 
+		 
+		if(element.childs) {			
+			element.childs.forEach(function(level2Element) {
+				var elementString = '<option>&nbsp;' + level2Element.name + '</option>';
+				$('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
+				
+
+				if(level2Element.childs) {			
+					level2Element.childs.forEach(function(level3Element) {
+						 var elementString = '<option>&nbsp;&nbsp;&nbsp;' + level3Element.name + '</option>';
+				         $('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
+				        
+
+
+					});
+				} 
+			});
+		} 
+		
+
+	});
+	
+}
+
+
+
+
+
 });
