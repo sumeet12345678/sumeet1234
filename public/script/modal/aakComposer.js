@@ -199,13 +199,13 @@ $('.imo_icon_img').on('click', function(e){
 
 //msgCats();
 	$('#MSG_TYPE_OPTION_SELECT').on('change', function(e) {
-		//alert( this.value );
+		 //alert( this.value );
 		msgCats(this.value);
 	});
 
  function msgCats(msgType) {	
-	var msgCatsOptions;
-
+	var msgCatsOptions = [];
+  
   if(msgType == "SM") {
 	 msgCatsOptions = [  
 	                               {
@@ -370,7 +370,7 @@ $('.imo_icon_img').on('click', function(e){
 	 $('#MSG_CATS_OPTIONS_SELECT').html('');
 	// $('#MSG_CATS_OPTIONS_SELECT').append
 	msgCatsOptions.forEach(function(element) {
-		
+	  
 		var elementString = '<option>' + element.name + '</option>';
 		$('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
 		 
