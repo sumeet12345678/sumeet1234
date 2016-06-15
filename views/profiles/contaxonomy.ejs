@@ -352,7 +352,7 @@
 					</table>
 				     -->
 				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;  margin-top: -5px;" src = "/media/images/icons/plainblack/arro-up-vanilla-blk.png" width = "30px" height = "30px">  
-				     <div  style = "display: inline-block; text-align: center;" class = "">Audience for your <span class = "msg-category"></span></div>	
+				     <div  style = "display: inline-block; text-align: center;" class = "">Audience for your <span class = "msg-category"></span> (<span id = TOTAL_COUNT></span>)	</div>	
 				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right; margin-top: -5px;" src = "/media/images/icons/plainblack/arro-dwn-vanilla-blk.png" width = "30px" height = "30px">  	  
 				</div>	
 				
@@ -360,26 +360,22 @@
 				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 40px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
 				  	<div id = NEG-STATE-USER-MSG-ID class = "neg-state-usr-msg" style = "display: none; margin-left: 8px; margin-bottom: 5px;"> No audience applied yet.</div>
 				  	 
-				    <div id = AUDIENCE_TABLE>
-				    	
-				    	<div id = AUDIENCE_TABLE_HEADER_MSG>
-				    		Audience for your "Promo": <span id = TOTAL_COUNT></span>	
-				    	</div>
+				    <div id = AUDIENCE_TABLE> 
 				    	
 					  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %></b></div>
+					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span id = CONNECTIONS_COUNT></span>)</b></div>
 					  	</div><!-- 
 					  	
 					  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
-					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %></b></div>
+					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %>(<span id = TEAMS_COUNT></span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %></b></div>
+					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %>(<span id = GROUPS_COUNT></span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
-							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %></b></div>
+							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %>(<span id = PEOPLES_COUNT></span>)</b></div>
 					  	</div>
 				   	</div>
 			    </div>
@@ -916,30 +912,40 @@
 	}
 	
 	
-	var totalAudience = 0;
+	
+	/*
+		POPULATES THE AUDIENCE SECTION WHEN CHECK BOXES ARE CLICKED
+	*/
+	
+	var totalConnectionsCount = 0;
+	var totalTeamsCount = 0;
+	var totalGroupsCount = 0;
+		
+	var totalAudienceCount = 0;
+	
 	function populateAudience(checkBox) { 
 		
 		var checkBoxId = checkBox.attr('id');
 		//alert(checkBox.prop("name"));
 		//alert("id == " + checkBoxId);
-		if( (checkBox.prop("checked") == true)) {
+		if( (checkBox.prop("checked") == true)) {  
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
 			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').text() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
-			 totalAudience = totalAudience + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
-			  alert(totalAudience);
-			 $('#AUDIENCE_TABLE_HEADER_MSG').find('#TOTAL_COUNT').text(totalAudience);
+			 
+			 updateTotalAudienceCount(checkBox, "add");
+			
 			 
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
 				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
-				 
+				 updateTotalAudienceCount(checkBox, "add");
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
 				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
-				 
+				 updateTotalAudienceCount(checkBox, "add");
 			}
 		}
 		
@@ -948,52 +954,46 @@
 		
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  	 
 				$('#AUDIENCE_CNTNR_CONNECTIONS #' + checkBoxId ).remove();
+				updateTotalAudienceCount(checkBox, "substract");
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  	 
 				$('#AUDIENCE_CNTNR_GROUPS #' + checkBoxId ).remove();
+				updateTotalAudienceCount(checkBox, "substract");
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  	 
 				$('#AUDIENCE_CNTNR_TEAMS #' + checkBoxId ).remove();
+				updateTotalAudienceCount(checkBox, "substract");
 			}
 		
-		}
-		
-		 
-		//else {  
-		//	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').find('#' + checkBoxId).remove();
-		//} 
-		
+		} 
+	} 
 	
-	/*	grouponomyChkboxSelected  =  $('.grouponomy_cat_node_chkbox');
+	/*Adds or delete audience count  when checkbox is checked or unchecked */
+	function  updateTotalAudienceCount(checkBox, operation) {
 
-		var chkdLength = 0;
-		$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').html('');
-		
-		for(var i=0; i < grouponomyChkboxSelected.length; i++) {
-			if($(grouponomyChkboxSelected[i]).prop("checked") == true) {
-			 
-				$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').append($(grouponomyChkboxSelected[i]).val() + "<br/>");  
-				
-			}
-		 
-			
-		}
-		//alert("Chkd L =  " +  chkdLength);
-		$('#CONTAX_APPLIED_AUDIENCE_BTN').trigger('click');
-	 */
-		
-		 
-		
-	}
-			
+		if(operation == "add") {
+			totalAudienceCount = totalAudienceCount + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
+		 }
+		 if(operation == "substract") {
+			 totalAudienceCount = totalAudienceCount - parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
+		 }
+				 
+		  //alert(totalAudience);
+		 $('#TOTAL_COUNT').text(totalAudienceCount);
+	 }		
  
 	
- /*  ---    DIRECTION BASED (TWO STEP)  -----------  */
+	
+	
+ /*  ---    DIRECTION BASED (TWO STEP)  -----------  FOR MAXINIMING AND MINIMIZING CONTAXONOMY'S TOP AND BOTTOM SECTION */
 	var audienceSectionState = "normal"; //maximized, minimized, normal.
 	function maxMinAudienceSection(maxMin) {
 			
+		var leftArrow = $('#CONTAXONOMY_AUDIENCE_MAX_ICON');
+		var rightArrow =  $('#CONTAXONOMY_AUDIENCE_MIN_ICON');
+		
 		if(maxMin === 'max') {
 			//$('#CONTAXONOMY_CONTAINER_TOP').hide();
 			//$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '100%');
@@ -1002,12 +1002,17 @@
 				$('#CONTAXONOMY_CONTAINER_TOP').hide();
 				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '100%');
 				audienceSectionState = "maximized";
+				leftArrow.hide();
+				rightArrow.show();
+				
 			}
 			else if(audienceSectionState == "minimized") {
 				$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
 				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '35%');
 				$('#CONTAXONOMY_CONTAINER_TOP').css('height', '65%');
 				audienceSectionState = "normal";
+				leftArrow.show();
+				rightArrow.show();
 			}
 			
 		}
@@ -1020,6 +1025,8 @@
 				$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height', '42px');
 				$('#CONTAXONOMY_CONTAINER_TOP').css('height', 'calc(100% - 40px)');
 				audienceSectionState = "minimized";
+				leftArrow.show();
+				rightArrow.hide();
 			}
 			
 			else if(audienceSectionState == "maximized") {
@@ -1028,7 +1035,8 @@
 				$('#CONTAXONOMY_CONTAINER_TOP').css('height', '65%');
 				$('#CONTAXONOMY_CONTAINER_TOP').show();
 				audienceSectionState = "normal";
-				
+				leftArrow.show();
+				rightArrow.show();
 			}
 			
 			//$('#CONTAXONOMY_CONTAINER_BOTTOM').hide();
