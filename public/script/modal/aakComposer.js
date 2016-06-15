@@ -200,7 +200,15 @@ $('.imo_icon_img').on('click', function(e){
 //msgCats();
 	$('#MSG_TYPE_OPTION_SELECT').on('change', function(e) {
 		 //alert( this.value );
-		msgCats(this.value);
+		if(this.value == "IM") {
+			$('#MSG_CATS_OPTIONS_SELECT').css('display', 'none');
+		}
+		
+		else {
+			$('#MSG_CATS_OPTIONS_SELECT').css('display', 'inline-block');
+			msgCats(this.value);
+		}
+		 
 	});
 
  function msgCats(msgType) {	
