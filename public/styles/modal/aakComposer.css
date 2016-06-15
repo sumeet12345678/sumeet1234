@@ -38,22 +38,32 @@
 
 
 /* ------- Mobile Device Section*/
-@media screen and (max-width: 993px) {
+@media screen and (max-width: 767px) {
 	 .composerWrapper {
 	 	width: 100%;	 	 
 	 	left: 0px;
 	 	right: 0px;
 	 	
-	 }	
+	 }
+
+	 #SMILEY_EMOTIONS {
+	 	width: 100%;
+	 	position: absolute;
+	 }
 }
 
 
 /* ------- Larger Device Section*/
-@media screen and (min-width: 994px) {
+@media screen and (min-width: 768px) {
 	  #MSG_COMPOSER_STANDALONE_RTF_ICON12345 {
 	  	margin-right: 16px;
 	  	display:none;
 	  	border: 2px solid green;
+	  }
+
+	  #SMILEY_EMOTIONS {
+	  	width: 60%;
+	  	position: absolute;
 	  }
 }
 

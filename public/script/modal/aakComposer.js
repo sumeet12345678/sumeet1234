@@ -9,6 +9,10 @@ $(function(){
 	var $chatTextArea = $('#MSG_COMPOSER_CHAT_TEXTAREA');
 	var $composerBottomBar = $('#MSG_COMPOSER_BOTTOM_BAR');  
 	
+	//Melbin's Code
+	var $smileyemotions = $('#SMILEY_EMOTIONS');
+	var $attachoption = $('#ATTACH_OPTIONS');
+	
 //	$composerBottomBar.css('width', '-=80');  //Intial width during loading
 	
 	$('#plus').on('click', function() {
@@ -59,6 +63,14 @@ $(function(){
 		$ccTextArea.css('display', 'block');///////
 		$chatTextArea.css('display', 'block');///////
 		$composerBottomBar.css('display', 'block');
+		
+		//Melbin's Code
+		$smileyemotions.css('top', '0px');
+		$smileyemotions.css('height', '30%');
+		$smileyemotions.css('right', '40px');
+		
+		$attachoption.css('height', '30%');
+		
 		 
 		
 		composerCurrentSize = "MAXIMIZED";    
@@ -72,6 +84,13 @@ $(function(){
 		$ccTextArea.css('display', 'none');///////
 		$chatTextArea.css('display', 'none');///////
 		$composerBottomBar.css('display', 'none');
+		
+		//Melbin's Code
+		$smileyemotions.css('top', '-151px');
+		$smileyemotions.css('height', '70%');
+		$smileyemotions.css('right', '0px');
+		
+		$attachoption.css('height', '70%');
 		     
 		composerCurrentSize = "MINIMIZED";  
 		
@@ -379,8 +398,34 @@ $('.imo_icon_img').on('click', function(e){
 	
 }
 
+//Hide When click on the Text Area
 
+
+
+ $(document).mouseup(function (e) 
+ {
+  var SMILEY_EMOTIONS = $("#SMILEY_EMOTIONS");
+  if (!$('#SMILEY_EMOTIONS').is(e.target) && !SMILEY_EMOTIONS.is(e.target) && SMILEY_EMOTIONS.has(e.target).length == 0) 
+  {
+      SMILEY_EMOTIONS.hide();
+  }
+ });
+
+
+
+
+ $(document).mouseup(function (e) 
+ {
+  var attach_icons = $(".attach_icons");
+  if (!$('.attach_icons').is(e.target) && !attach_icons.is(e.target) && attach_icons.has(e.target).length == 0) 
+  {
+      attach_icons.hide();
+  }
+ });
 
 
 
 });
+
+
+

@@ -363,23 +363,28 @@
 				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 40px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
 				  	<div id = NEG-STATE-USER-MSG-ID class = "neg-state-usr-msg" style = "display: none; margin-left: 8px; margin-bottom: 5px;"> No audience applied yet.</div>
 				  	 
-				 
-				  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-				  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %></b></div>
-				  	</div><!-- 
-				  	
-				  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
-				 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %></b></div>
-				  	</div><!-- 
-				  	
-				  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-				  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %></b></div>
-				  	</div><!-- 
-				  	
-				  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
-						 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %></b></div>
-				  	</div>
-				   	
+				    <div id = AUDIENCE_TABLE>
+				    	
+				    	<div id = AUDIENCE_TABLE_HEADER_MSG>
+				    		Audience for your "Promo": <span id = TOTAL_COUNT></span>	
+				    	</div>
+				    	
+					  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
+					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %></b></div>
+					  	</div><!-- 
+					  	
+					  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
+					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %></b></div>
+					  	</div><!-- 
+					  	
+					  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
+					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %></b></div>
+					  	</div><!-- 
+					  	
+					  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
+							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %></b></div>
+					  	</div>
+				   	</div>
 			    </div>
 		 	 
 		 	
@@ -488,47 +493,56 @@
 		var contaxonomyTagOptions = [  
 	                               {
 	                            	   'id' : 'CLOSE_FRIENDS',
-	                            	   'name' : "Close Friends"
+	                            	   'name' : "Close Friends",
+	                            	   'count' : "101"
 	                            	 
 	                            	   
 	                               },	                               
 	                               {
 	                            	   'id' : 'FRIENDS',
-	                            	   'name' : "Friends"
+	                            	   'name' : "Friends",
+	                            	   'count' : "300"
 	                               },
 	                               
 	                               {
 	                            	   'id' : 'COWORKERS',
-	                            	   'name' : "Co-workers"
+	                            	   'name' : "Co-workers",
+	                            	   'count' : "50"
 		                           },
 		                           
 		                           {
 		                        	   'id' : 'ACQUINTANCES',
 		                        	   'name' : "Acquaintances",
+	                            	   'count' : "10",
 			                           'childs' : [
 			                                {
 			                            	 
 				                            	 'id' : 'ACQUINTANCES_INTERESTS_SWIMMING',
-				                            	 'name' : 'Swimming'
+				                            	 'name' : 'Swimming',
+				                            	  'count' : "95"
 					                        },
 					                        {
 					                                'id' : 'ACQUINTANCES_INTERESTS_TREKKING',
-					                            	'name' : 'Trekking'
+					                            	'name' : 'Trekking',
+					                            	 'count' : "300"
 					                        },
 					                     
 				                            {
 				                                'id' : 'ACQUINTANCES_CAUSES',
-				                            	'name' : 'Through Causes'
+				                            	'name' : 'Through Causes',
+				                            	 'count' : "75"
 				                            }
 			                           ]
 			                       },
 			                       
 			                       {
-			                    	   'name' : "Business"
+			                    	   'name' : "Business",
+	                            	   'count' : "10"
 				                   },
 				                   
 				                   {
-				                	   'name' : "Service"
+				                	   'name' : "Service",
+	                            	   'count' : "50"
 				                   },
 	                             
 	                             
@@ -544,7 +558,7 @@
 		
 		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
 		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
-		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + element.name;
+		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + element.name + " (<span class = 'contax-count'>" + element.count + "</span>)</span>";
 		tempElementString = tempElementString + "</b></span><input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px; margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 		
 		if(element.childs) {			
@@ -553,7 +567,7 @@
 				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
 				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
-				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + level2Element.name;
+				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + level2Element.name  + "(" + level2Element.count + ")";
 				tempElementString = tempElementString + "</b></span><input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 				
 				if(level2Element.childs) {			
@@ -562,7 +576,7 @@
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
 						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
-						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + level3Element.name;
+						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + level3Element.name  + "(" + level3Element.count + ")";
 						tempElementString = tempElementString + "</b></span><input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 					});
 				} 
@@ -905,6 +919,7 @@
 	}
 	
 	
+	var totalAudience = 0;
 	function populateAudience(checkBox) { 
 		
 		var checkBoxId = checkBox.attr('id');
@@ -913,7 +928,10 @@
 		if( (checkBox.prop("checked") == true)) {
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
-			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').text() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+			 totalAudience = totalAudience + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
+			  alert(totalAudience);
+			 $('#AUDIENCE_TABLE_HEADER_MSG').find('#TOTAL_COUNT').text(totalAudience);
 			 
 			}
 			
