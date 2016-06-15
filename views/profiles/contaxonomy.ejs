@@ -913,20 +913,38 @@
 		if( (checkBox.prop("checked") == true)) {
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
-			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' >" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 			 
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
-				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' >" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 				 
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
-				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' >" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 				 
 			}
 		}
+		
+		
+		if( (checkBox.prop("checked") == false)) { 
+		
+			if( (checkBox.prop("name") == "connections-chkbox") ) {  	 
+				$('#AUDIENCE_CNTNR_CONNECTIONS #' + checkBoxId ).remove();
+			}
+			
+			if( (checkBox.prop("name") == "groups-chkbox") ) {  	 
+				$('#AUDIENCE_CNTNR_GROUPS #' + checkBoxId ).remove();
+			}
+			
+			if( (checkBox.prop("name") == "teams-chkbox") ) {  	 
+				$('#AUDIENCE_CNTNR_TEAMS #' + checkBoxId ).remove();
+			}
+		
+		}
+		
 		 
 		//else {  
 		//	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').find('#' + checkBoxId).remove();
