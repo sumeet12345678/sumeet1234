@@ -2,27 +2,32 @@
 		var contaxonomyTeams = [  	{
 		                        	   'id'		 	: 'STARTUP_PROJECT_TEAM',
 		                        	   'name' 	  	: "Startup Project Team",
-		                        	   'profilePic' : "/media/images/icons/temp/Sample_Team_Profile_Pic_Startup.png", 
+		                        	   'profilePic' : "/media/images/icons/temp/Sample_Team_Profile_Pic_Startup.png",
+		                        	   'count'		: '100',
 		                        	   
 			                           'childs' 	: [
 			                                {
 			                            	 
 				                            	 'id' : 'salvin',
-				                            	 'name' : 'Salvin Stephen Thomas'
+				                            	 'name' : 'Salvin Stephen Thomas',
+		                        	  			 'count'		: '100'
 					                        },
 					                        {
 					                                'id' : 'melbin',
-					                            	'name' : 'Melbin Mathai'
+					                            	'name' : 'Melbin Mathai',
+		                        	   				'count'		: '100'
 					                        },
 					                     
 				                            {
 				                                'id' : 'unni',
-				                            	'name' : 'Unnikrishnan C'
+				                            	'name' : 'Unnikrishnan C',
+		                        	   			'count'		: '100'
 				                            },
 				                            
 				                            {
 				                                'id' : 'amar',
-				                            	'name' : 'Amar Chhetri'
+				                            	'name' : 'Amar Chhetri',
+		                        	  			'count'		: '100'
 				                            } 
 			                           ]
 			                       },
@@ -32,52 +37,63 @@
 			                        {
 		                        	   'id' : 'COMMUNITY_WELFARE_SUPERTEAM',
 		                        	   'name' : "Community Welfare SupertTeam",
+		                        	   'count'		: '100',
 			                           'childs' : [
 					                                {
 					                            	 'id' : 'CULTURAL_ACTIVITIES',
 					                            	 'name' : 'Cultural activities',
+		                        	  				 'count'		: '100',
 					                            	 'childs' : [{
 					                            	 
 									                            	 'id' : 'mihika',
-									                            	 'name' : 'Mihika Mishra'  
+									                            	 'name' : 'Mihika Mishra',
+		                        	  								 'count'		: '100'  
 										                        },
 										                        {
 										                                'id' : 'ajay',
-										                            	'name' : 'Capt. Ajay'
+										                            	'name' : 'Capt. Ajay',
+		                        	   									'count'		: '100'
 										                        },
 										                     
 									                            {
 									                                'id' : 'abhijit',
-									                            	'name' : 'Abhijit Prusty'
+									                            	'name' : 'Abhijit Prusty',
+		                        	   								'count'		: '100'
 									                            },
 									                            {
 										                                'id' : 'prabal',
-										                            	'name' : 'Prabal Atreya'
+										                            	'name' : 'Prabal Atreya',
+		                        	   									'count'		: '100'
 										                        },
 										                            
 										                        {
 										                                'id' : 'navin',
-										                            	'name' : 'Navin Meshram'
+										                            	'name' : 'Navin Meshram',
+		                        	 									'count'		: '100'
 										                        }
 									                            ]
 						                            },
 						                            
 						                            {
 						                                'id' : 'EDUCATIONAL_ACTIVITIES',
-						                            	'name' : 'Educational Activities',
+						                            	'name' : 'Educational Activities',,
+		                        	   					'count'		: '100',
 						                            	'childs' : [ {
 										                                'id' : 'abhijit',
-										                            	'name' : 'Abhijit Prusty'
+										                            	'name' : 'Abhijit Prusty',
+		                        	  									'count'		: '100'
 										                            },
 										                            
 										                            {
 										                                'id' : 'prabal',
-										                            	'name' : 'Prabal Atreya'
+										                            	'name' : 'Prabal Atreya',
+		                        	  									 'count'		: '100'
 										                            },
 										                            
 										                            {
 										                                'id' : 'navin',
-										                            	'name' : 'Navin Meshram'
+										                            	'name' : 'Navin Meshram',
+		                        	  									 'count'		: '100'
 										                            }
 									                           ]
 						                            }
@@ -139,7 +155,7 @@
 		else {
 			tempElementString = tempElementString + "<div style = 'display: inline-block; height: 22px; width: 22px; background-color: #95B3D7; border-radius: 50%; line-height: 22px; text-align: center;'><b>" +  element.name.charAt(0).toUpperCase() + "</b></div>"; 
 		}
-		tempElementString = tempElementString + "&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + element.name;  
+		tempElementString = tempElementString + "&nbsp;&nbsp;" + element.name ;
 		tempElementString = tempElementString + "</b></span> <input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px; margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
 		
 		

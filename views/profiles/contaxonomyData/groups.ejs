@@ -2,85 +2,101 @@
 	var contaxonomyGroups = [  
 	                               {
 	                            	   'id' : 'LEARNING',
-	                            	   'name' : "Learning, Studies, Education"
+	                            	   'name' : "Learning, Studies, Education",
+	                            	   'count' : '200'
 	                            	 
 	                            	   
 	                               },	                               
 	                               {
 	                            	   'id' : 'PROFESSION',
-	                            	   'name' : "Job, Profession, Career, Business"
+	                            	   'name' : "Job, Profession, Career, Business",
+	                            	   'count' : '300'
 	                               },
 	                               
 	                               {
 	                            	   'id' : 'PERSONAL_DEVELOPMENT',
-	                            	   'name' : "Personal Development, Attitude"
+	                            	   'name' : "Personal Development, Attitude",
+	                            	   'count' : '20'
 		                           },
 		                           
 		                           {
 		                        	   'id' : 'MONEY_PARENT',
 		                        	   'name' : "Money, Finances",
+	                            	   'count' : '20',
 			                           'childs' : [
 			                                {
 			                            	 'id' : 'MONEY_LEVEL2',
 			                            	 'name' : 'Money Level 2',
 			                            	 'childs' : [{
 				                            	 'id' : 'MONEY_LEVEL3_1',
-				                            	 'name' : 'Money_Level3_1'
+				                            	 'name' : 'Money_Level3_1',
+	                            	  			 'count' : '10'
 					                            },
 					                            {
 					                                'id' : 'MONEY_LEVEL3_2',
-					                            	'name' : 'Money_Level3_2'
+					                            	'name' : 'Money_Level3_2',
+	                            	 			    'count' : '60'
 					                            }]
 				                            },
 				                            {
 				                                'id' : 'MONEY_LEVEL2_2ND_NODE',
-				                            	'name' : 'Money_Level2_2nd_Node'
+				                            	'name' : 'Money_Level2_2nd_Node',
+	                            			     'count' : '20'
 				                            }
 			                           ]
 			                       },
 			                       
 			                       {
 			                       	   'id' : 'FAMILY_RELATIONSHIPS',
-			                    	   'name' : "Family, Relationships"
+			                    	   'name' : "Family, Relationships",
+	                            	   'count' : '100'
 				                   },
 				                   
 				                   {
 				                       'id' : 'LEGAL',
-				                	   'name' : "Legal"
+				                	   'name' : "Legal",
+	                            	   'count' : '600'
 				                   },
 				                   
 				                   {
 				                       'id' : 'HEALTH',
-				                	   'name' : "Health"
+				                	   'name' : "Health",
+	                            	   'count' : '90'
 				                   },
 				                   
 				                   {
 				                       'id' : 'WELLNESS',
-				                	   'name' : "Wellness, Welfare"
+				                	   'name' : "Wellness, Welfare",
+	                            	   'count' : '50'
 				                   },
 				                   
 				                   {
 				                       'id' : 'COMMUNITY_FRIENDS',
-				                	   'name' : "Community, Friends"
+				                	   'name' : "Community, Friends",
+	                            	   'count' : '80'
 				                   },
 				                   
 				                   {
 				                       'id' : 'GOOD_WORK',
-				                	   'name' : "Spiritual, Karma"
+				                	   'name' : "Spiritual, Karma",
+	                            	   'count' : '40'
 				                   },
 				                   
 				                   {
 				                       'id' : 'HOBBIES',
-				                	   'name' : "Hobbies, Activities, Leisure"
+				                	   'name' : "Hobbies, Activities, Leisure",
+	                            	   'count' : '70'
 				                   },
 	                             
 	                               {
 	                                   'id' : 'LIFESTYLE',
-				                	   'name' : "Lifestyle, Fashion"
+				                	   'name' : "Lifestyle, Fashion",
+	                            	   'count' : '90'
 				                   },
 				                   {
 				                       'id' : 'FOOD',
-				                	   'name' : "Food"
+				                	   'name' : "Food",
+	                            	   'count' : '10'  
 				                   }
 	                             
 	                             ];
@@ -130,7 +146,7 @@
 		
 		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
 		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
-		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + element.name;
+		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + element.name + " (<span class = 'contax-count'>" + element.count + "</span>)</span>";
 		tempElementString = tempElementString + "</b></span> <input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'groups-chkbox' class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
 		
 		if(element.childs) {			
@@ -139,7 +155,7 @@
 				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
 				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
-				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + level2Element.name;
+				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name + " (<span class = 'contax-count'>" + level2Element.count + "</span>)</span>";
 				tempElementString = tempElementString + "</b></span> <input  id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'groups-chkbox' class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;'  onclick = 'populateAudience($(this));'> </div>";
 				
 				if(level2Element.childs) {			  
@@ -148,7 +164,7 @@
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
 						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
-						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'>" + level3Element.name;
+						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name + " (<span class = 'contax-count'>" + level3Element.count + "</span>)</span>";
 						tempElementString = tempElementString + "</b></span> <input  id =" + level3Element.id + "  type = 'checkbox'  value = " + level3Element.id + " name = 'groups-chkbox' class = 'grouponomy_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
 					});
 				} 

@@ -46,8 +46,16 @@
 	 	
 	 }
 
+	
 	 #SMILEY_EMOTIONS {
 	 	width: 100%;
+	 	position: absolute;
+	 }
+
+	 			/* Melbin's code */
+
+	 #ATTACH_OPTIONS {
+	 	width: 50%;
 	 	position: absolute;
 	 }
 }
@@ -61,10 +69,16 @@
 	  	border: 2px solid green;
 	  }
 
-	  #SMILEY_EMOTIONS {
-	  	width: 60%;
+	 #SMILEY_EMOTIONS {
+	  	width: 28.6%; 
 	  	position: absolute;
-	  }
+	  }									
+	  					/* Melbin's code */
+
+	  #ATTACH_OPTIONS {
+	 	width: 25%;
+	 	position: absolute;
+	 }
 }
 
 
@@ -90,6 +104,13 @@
 	  max-height: 1.4em;
 	  max-width: 1.4em;
 	}
-	.selectable-icons img {
-	  cursor: pointer;
+	 
+	.emotion-icons-container img {
+	margin-top: 5px;
+	
+}
+
+	.emotion-div-class{
+		overflow-y:scroll;
 	}
+	

@@ -66,11 +66,17 @@ $(function(){
 		
 		//Melbin's Code
 		$smileyemotions.css('top', '0px');
-		$smileyemotions.css('height', '30%');
+		$smileyemotions.css('height', '20%');
 		$smileyemotions.css('right', '40px');
-		
-		$attachoption.css('height', '30%');
-		
+		$attachoption.css('height', '25%');
+
+		if (screen.width <= 767) {
+			$smileyemotions.css('width', 'calc(100% - 80px)');  
+		}	
+
+		if (screen.width <= 767) {
+			$attachoption.css('height', '20%');
+		}													/////////////// Mobile Alignment
 		 
 		
 		composerCurrentSize = "MAXIMIZED";    
@@ -89,8 +95,15 @@ $(function(){
 		$smileyemotions.css('top', '-151px');
 		$smileyemotions.css('height', '70%');
 		$smileyemotions.css('right', '0px');
-		
 		$attachoption.css('height', '70%');
+
+		if (screen.width <= 767) {
+			$smileyemotions.css('width', '100%');
+		} 					
+
+		if (screen.width <= 767) {
+			$attachoption.css('height', '20%');
+		}						//////////// Mobile Alignment
 		     
 		composerCurrentSize = "MINIMIZED";  
 		
@@ -406,30 +419,36 @@ $('.imo_icon_img').on('click', function(e){
 	
 }
 
+
+ 
+ 
 //Hide When click on the Text Area
 
+	$(document).mouseup(function (e) 
+	{
+   var SMILEY_EMOTIONS = $("#SMILEY_EMOTIONS");
+   if (!$('#SMILEY_EMOTIONS').is(e.target) && !SMILEY_EMOTIONS.is(e.target) && SMILEY_EMOTIONS.has(e.target).length == 0) 
+   {
+       SMILEY_EMOTIONS.hide();
+   }
 
-
- $(document).mouseup(function (e) 
- {
-  var SMILEY_EMOTIONS = $("#SMILEY_EMOTIONS");
-  if (!$('#SMILEY_EMOTIONS').is(e.target) && !SMILEY_EMOTIONS.is(e.target) && SMILEY_EMOTIONS.has(e.target).length == 0) 
-  {
-      SMILEY_EMOTIONS.hide();
-  }
- });
-
+});
 
 
 
- $(document).mouseup(function (e) 
- {
-  var attach_icons = $(".attach_icons");
-  if (!$('.attach_icons').is(e.target) && !attach_icons.is(e.target) && attach_icons.has(e.target).length == 0) 
-  {
-      attach_icons.hide();
-  }
- });
+	$(document).mouseup(function (e) 
+	{
+   var ATTACH_OPTIONS = $("#ATTACH_OPTIONS");
+   if (!$('#ATTACH_OPTIONS').is(e.target) && !ATTACH_OPTIONS.is(e.target) && ATTACH_OPTIONS.has(e.target).length == 0) 
+   {
+       ATTACH_OPTIONS.hide();
+   }
+
+	    	 $('#MSG_COMPOSER_ADD_STUFF').on('click', function(){
+			$('#ATTACH_OPTIONS').toggle();
+			});
+
+});
 
 
 
