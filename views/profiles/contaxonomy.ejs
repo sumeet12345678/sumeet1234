@@ -79,6 +79,10 @@
  .connections_cat_node_chkbox {
 			 float: right;
   }
+  
+  .msg-category11 {
+  	color: #008CC9;
+  }
 	
 /* MEDIA SCREEN (mobile) */  
    @media screen and (max-width: 767px) { 
@@ -355,7 +359,7 @@
 					</table>
 				     -->
 				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;  margin-top: -5px;" src = "/media/images/icons/plainblack/arro-up-vanilla-blk.png" width = "30px" height = "30px">  
-				     <div  style = "display: inline-block; text-align: center;" class = "">Audience for your <span class = "msg-category"></span> (<span id = TOTAL_COUNT></span>)	</div>	
+				     <div  style = "display: inline-block; text-align: center;">Audience for your <span class = "msg-category"></span> (<span class = "hpy-usr-green-text" id = TOTAL_COUNT>0</span>)	</div>	
 				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right; margin-top: -5px;" src = "/media/images/icons/plainblack/arro-dwn-vanilla-blk.png" width = "30px" height = "30px">  	  
 				</div>	
 				
@@ -366,19 +370,19 @@
 				    <div id = AUDIENCE_TABLE style = "display: none;">   
 				    	
 					  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span id = CONNECTIONS_COUNT></span>)</b></div>
+					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span class = "hpy-usr-green-text" id = CONNECTIONS_COUNT></span>)</b></div>
 					  	</div><!-- 
 					  	
 					  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
-					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %>(<span id = TEAMS_COUNT></span>)</b></div>
+					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %>(<span class = "hpy-usr-green-text" id = TEAMS_COUNT></span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %>(<span id = GROUPS_COUNT></span>)</b></div>
+					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %>(<span class = "hpy-usr-green-text" id = GROUPS_COUNT></span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
-							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %>(<span id = PEOPLES_COUNT></span>)</b></div>
+							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %>(<span class = "hpy-usr-green-text" id = PEOPLES_COUNT></span>)</b></div>
 					  	</div>
 				   	</div>
 			    </div>
@@ -554,9 +558,9 @@
 		//tempElementString = "<div><div style = 'background-color: #80A2CF; margin-bottom: 5px; height: 35px;'>";
 		tempElementString = tempElementString +  "<div style = 'margin-left: 45px;'><div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'>";
 		
-		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
+		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>"; 
 		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
-		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + element.name + " (<span class = 'contax-count'>" + element.count + "</span>)</span>";
+		tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + element.name + " (<span class = 'contax-count hpy-usr-green-text'>" + element.count + "</span>)</span>";
 		tempElementString = tempElementString + "</b></span><input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px; margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 		
 		if(element.childs) {			
@@ -565,7 +569,7 @@
 				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
 				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
-				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name  + " (<span class = 'contax-count'>" + level2Element.count + "</span>)</span>";
+				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name  + " (<span class = 'contax-count hpy-usr-green-text'>" + level2Element.count + "</span>)</span>";
 				tempElementString = tempElementString + "</b></span><input id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 				
 				if(level2Element.childs) {			
@@ -574,7 +578,7 @@
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
 						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
-						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name  + " (<span class = 'contax-count'>" + level3Element.count + "</span>)</span>";
+						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name  + " (<span class = 'contax-count hpy-usr-green-text'>" + level3Element.count + "</span>)</span>";
 						tempElementString = tempElementString + "</b></span><input id =" + level3Element.id + " type = 'checkbox'  value = " + level3Element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 					});
 				} 
@@ -880,7 +884,7 @@
 		if( (checkBox.prop("checked") == true)) {  
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
-			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').text() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 			 
 			 updateTotalAudienceCount(checkBox, "add");
 			

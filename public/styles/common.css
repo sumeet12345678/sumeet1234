@@ -142,6 +142,9 @@
 	font-weight: bold;
 }
 
+.hpy-usr-green-text {
+	color: #77933C;
+}
 
 @media screen and (min-width: 1025px)  {  
   .website-screen-width_dt {
