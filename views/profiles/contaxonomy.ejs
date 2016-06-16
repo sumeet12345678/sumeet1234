@@ -103,7 +103,7 @@
  		}
  		
  		#CONTAXONOMY_CONNECTIONS_TABLE {
-			width:  330px;	 
+			width:  380px;	 
 		} 
   }
   
@@ -561,7 +561,7 @@
 				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
 				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name  + " (<span class = 'contax-count'>" + level2Element.count + "</span>)</span>";
-				tempElementString = tempElementString + "</b></span><input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
+				tempElementString = tempElementString + "</b></span><input id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 				
 				if(level2Element.childs) {			
 					level2Element.childs.forEach(function(level3Element) {
@@ -570,24 +570,19 @@
 						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
 						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name  + " (<span class = 'contax-count'>" + level3Element.count + "</span>)</span>";
-						tempElementString = tempElementString + "</b></span><input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
+						tempElementString = tempElementString + "</b></span><input id =" + level3Element.id + " type = 'checkbox'  value = " + level3Element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
 					});
 				} 
 			});
 		} 
-		
-
-		
+		  
 		//loop and append Child 
 		
 		//tempChildElements = element.childs.length
 		
 		tempElementString = tempElementString + "</div>";
-		
-		
 		 
-		
-	 
+		 
 		
 		//$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').append($(tempElementString));//////
 		//$('#CONTAXONOMY_OPTIONS').append($("<br/>"));

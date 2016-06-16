@@ -1,33 +1,31 @@
-<%
-		var contaxonomyTeams = [  	{
+<%var contaxonomyTeams = [  	{
 		                        	   'id'		 	: 'STARTUP_PROJECT_TEAM',
 		                        	   'name' 	  	: "Startup Project Team",
-		                        	   'profilePic' : "/media/images/icons/temp/Sample_Team_Profile_Pic_Startup.png",
-		                        	   'count'		: '100',
-		                        	   
+		                        	   'profilePic' : "/media/images/icons/temp/Sample_Team_Profile_Pic_Startup.png", 
+		                        	   'count'		: '200',
 			                           'childs' 	: [
 			                                {
 			                            	 
 				                            	 'id' : 'salvin',
 				                            	 'name' : 'Salvin Stephen Thomas',
-		                        	  			 'count'		: '100'
+				                            	 'count'		: '1'
 					                        },
 					                        {
 					                                'id' : 'melbin',
 					                            	'name' : 'Melbin Mathai',
-		                        	   				'count'		: '100'
+					                            	'count'		: '1'
 					                        },
 					                     
 				                            {
 				                                'id' : 'unni',
 				                            	'name' : 'Unnikrishnan C',
-		                        	   			'count'		: '100'
+				                            	'count'		: '1'
 				                            },
 				                            
 				                            {
 				                                'id' : 'amar',
 				                            	'name' : 'Amar Chhetri',
-		                        	  			'count'		: '100'
+				                            	'count'		: '1'
 				                            } 
 			                           ]
 			                       },
@@ -37,63 +35,63 @@
 			                        {
 		                        	   'id' : 'COMMUNITY_WELFARE_SUPERTEAM',
 		                        	   'name' : "Community Welfare SupertTeam",
-		                        	   'count'		: '100',
+		                        	   'count'		: '200',
 			                           'childs' : [
 					                                {
 					                            	 'id' : 'CULTURAL_ACTIVITIES',
 					                            	 'name' : 'Cultural activities',
-		                        	  				 'count'		: '100',
+					                            	 'count'		: '200',
 					                            	 'childs' : [{
 					                            	 
 									                            	 'id' : 'mihika',
 									                            	 'name' : 'Mihika Mishra',
-		                        	  								 'count'		: '100'  
+									                            	 'count'		: '1'
 										                        },
 										                        {
 										                                'id' : 'ajay',
 										                            	'name' : 'Capt. Ajay',
-		                        	   									'count'		: '100'
+										                            	'count'		: '1'
 										                        },
 										                     
 									                            {
 									                                'id' : 'abhijit',
 									                            	'name' : 'Abhijit Prusty',
-		                        	   								'count'		: '100'
+									                            	'count'		: '1'
 									                            },
 									                            {
 										                                'id' : 'prabal',
 										                            	'name' : 'Prabal Atreya',
-		                        	   									'count'		: '100'
+										                            	'count'		: '1'
 										                        },
 										                            
 										                        {
 										                                'id' : 'navin',
 										                            	'name' : 'Navin Meshram',
-		                        	 									'count'		: '100'
+										                            	'count'		: '1'
 										                        }
-									                            ]
+									                           ]
 						                            },
 						                            
 						                            {
 						                                'id' : 'EDUCATIONAL_ACTIVITIES',
-						                            	'name' : 'Educational Activities',,
-		                        	   					'count'		: '100',
+						                            	'name' : 'Educational Activities',
+						                            	'count'		: '200',
 						                            	'childs' : [ {
 										                                'id' : 'abhijit',
 										                            	'name' : 'Abhijit Prusty',
-		                        	  									'count'		: '100'
+										                            	'count'		: '1'
 										                            },
 										                            
 										                            {
 										                                'id' : 'prabal',
 										                            	'name' : 'Prabal Atreya',
-		                        	  									 'count'		: '100'
+										                            	'count'		: '1'
 										                            },
 										                            
 										                            {
 										                                'id' : 'navin',
 										                            	'name' : 'Navin Meshram',
-		                        	  									 'count'		: '100'
+										                            	'count'		: '1'
 										                            }
 									                           ]
 						                            }
@@ -103,7 +101,6 @@
 			                       
 			                    
 			                     ];
- 
 
 %>
 
@@ -121,7 +118,7 @@
      
     @media screen and (min-width: 768px) { 
 		#CONTAXONOMY_TEAMS_TABLE{
-			width:  330px;	
+			width:  380px;	
 		}  
     }
    
@@ -155,17 +152,17 @@
 		else {
 			tempElementString = tempElementString + "<div style = 'display: inline-block; height: 22px; width: 22px; background-color: #95B3D7; border-radius: 50%; line-height: 22px; text-align: center;'><b>" +  element.name.charAt(0).toUpperCase() + "</b></div>"; 
 		}
-		tempElementString = tempElementString + "&nbsp;&nbsp;" + element.name ;
+		tempElementString = tempElementString + "&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + element.name + " (<span class = 'contax-count'>" + element.count + "</span>)</span>";
 		tempElementString = tempElementString + "</b></span> <input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px; margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
 		
 		
 		if(element.childs) {			
 			element.childs.forEach(function(level2Element) {
-				//tempElementString = tempElementString + "LEVEL2-" + catLooper++;
+				 
 				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
 				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; font-size: 12px;'>";
-				tempElementString = tempElementString + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + level2Element.name;
+				tempElementString = tempElementString + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name + " (<span class = 'contax-count'>" + level2Element.count + "</span>)</span>";
 				tempElementString = tempElementString + "</span> <input  id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px; margin-right: 3px;'  onclick = 'populateAudience($(this));'> </div>";
 				
 				if(level2Element.childs) {			  
@@ -174,14 +171,14 @@
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
 						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; font-size: 12px;'>";
-						tempElementString = tempElementString + "&nbsp;&nbsp;&nbsp;&nbsp;" + level3Element.name;
+						tempElementString = tempElementString + "&nbsp;&nbsp;&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name + " (<span class = 'contax-count'>" + level3Element.count + "</span>)</span>";
 						tempElementString = tempElementString + "</span> <input  id =" + level3Element.id + "  type = 'checkbox'  value = " + level3Element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px; margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
 					});
 				} 
 			 
-			});
+			}); 
 		} 
-		 
+		   
 		
 		tempElementString = tempElementString + "</div>";
 %>

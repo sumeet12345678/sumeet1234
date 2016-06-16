@@ -64,6 +64,7 @@ $(function(){
 		$chatTextArea.css('display', 'block');///////
 		$composerBottomBar.css('display', 'block');
 		
+
 		//Melbin's Code
 		$smileyemotions.css('top', '0px');
 		$smileyemotions.css('height', '20%');
@@ -71,12 +72,9 @@ $(function(){
 		$attachoption.css('height', '25%');
 
 		if (screen.width <= 767) {
-			$smileyemotions.css('width', 'calc(100% - 80px)');  
+			$smileyemotions.css('width', 'calc(100% - 80px)');
+			$attachoption.css('height', '15%');
 		}	
-
-		if (screen.width <= 767) {
-			$attachoption.css('height', '20%');
-		}													/////////////// Mobile Alignment
 		 
 		
 		composerCurrentSize = "MAXIMIZED";    
@@ -99,11 +97,10 @@ $(function(){
 
 		if (screen.width <= 767) {
 			$smileyemotions.css('width', '100%');
+			
 		} 					
 
-		if (screen.width <= 767) {
-			$attachoption.css('height', '20%');
-		}						//////////// Mobile Alignment
+		
 		     
 		composerCurrentSize = "MINIMIZED";  
 		
