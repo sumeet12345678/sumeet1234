@@ -229,7 +229,7 @@
 	 
     <div id = CONTAXONOMY_CONTAINER  class = "website-screen-width_dt" style = "background-color: #fff; height: 100%; position: relative; padding-bottom: 42px;" >	
 		 
-		 	<div id = CONTAXONOMY_CONTAINER_TOP  style = "height: 55%;">	 
+		 	<div id = CONTAXONOMY_CONTAINER_TOP  style = "height: 100%;">	 
 				  <div  id = AD_PERSON class="contagxonmy-title-bar" style = "display: none;">  
 				      <div style = "display: inline-block; font-size: 22px; margin-top: 4px; padding-left: 2px; "><span style = "font-family: Arial; color: #98BF49;"><b>my</b></span></div><div style = "display: inline-block; font-size: 20px; vertical-align: top; margin-top: 2px; font-family: Sans Serif; color: #dcdcdc;">Contagxonomy<img style = "margin-bottom: 8px;" id = CONTAXONOMY_MIN_ICON width="24" height="24" src="/media/images/icons/add-audience.png" /> </div>  
 				     <!--    
@@ -298,7 +298,10 @@
 				  	       
 				   </div>
 				   
-				   		   
+				   <div id = CONTAXONOMY_USR_GUIDANCE_MSG style = "font-size: 14px; font-weight: 700; color: #3F3F3F;  margin-left: 8px; margin-top: 5px;">
+				   		User Guidance message here..  
+				   
+				   </div>	   
 				  
 				  			
 				  <div id = CONTAXONOMY  style = "background-color: #fff;  height: calc(100% - 84px);   overflow: auto;" >
@@ -341,7 +344,7 @@
 		 </div><!-- CONTAXONOMY_CONTAINER_TOP Ends -->
 		 
  	
-		 <div id = CONTAXONOMY_CONTAINER_BOTTOM style = "height: 45%; margin-bottom: 10px;  padding-left: 3px; padding-right: 3px;">
+		 <div id = CONTAXONOMY_CONTAINER_BOTTOM style = " display: none; height: 0%; margin-bottom: 10px;  padding-left: 3px; padding-right: 3px;">
 		 		<div  class="common_section_title_bar" style = "margin-top: 0px; display: block; text-align: center; margin-bottom: 10px;">  
 				      <!--  <table width = "100%" height = "100%">  
 				       	  <tr> 
@@ -360,7 +363,7 @@
 				<div id = CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR style = "padding-bottom: 40px; display: block;  overflow-y: auto; height: calc(100% - 40px); width: 100%;"> 
 				  	<div id = NEG-STATE-USER-MSG-ID class = "neg-state-usr-msg" style = "display: none; margin-left: 8px; margin-bottom: 5px;"> No audience applied yet.</div>
 				  	 
-				    <div id = AUDIENCE_TABLE> 
+				    <div id = AUDIENCE_TABLE style = "display: none;">   
 				    	
 					  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
 					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span id = CONNECTIONS_COUNT></span>)</b></div>
@@ -409,6 +412,8 @@
 	$('.contagxonomy-ak-composer-title-bar-tab').on('click', function() {
 		$('.contagxonomy-ak-composer-title-bar-tab').css('background-color','');
 		$(this).css('background-color','#77933C');
+		$('#CONTAXONOMY_USR_GUIDANCE_MSG').hide();
+		
 		
 	}); 
 
@@ -792,84 +797,7 @@
 		//$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
 		//text-green
 	}
-	/*
-	*
-	*/
-	function firstWithDivAndTablePlusTriangle() {
-		var tempElementString = "";
-		//tempElementString = "<div>";
-		
-		tempElementString = tempElementString + "<table width=100%><tr>";
-		
-		//tempElementString = "<span style='color: #B8B4B4;'><b>- - </b></span>";
-		tempElementString = "<td valign=middle><span style='color: #95B3D7; font-size: 15px;'><b>- - </b></span></td>";
-		
-		tempElementString = tempElementString + "<td valign=middle><div class='arow-lft-tagxonmy-lvl1-grey'></div></td>";
-		
-		//tempElementString = tempElementString + "<span style = 'display: inline-block; vertical-align: middle; background-color: #4D4949; width: 60%; height: 35px; color: #dcdcdc; margin-top:  3px; margin-bottom: 10px;'>";
-		//tempElementString = tempElementString + element.title ;
-		//tempElementString = tempElementString + "</span>";
-		
-		tempElementString = tempElementString + "<td width=620 valign=middle><span style = 'display: inline-block; vertical-align: middle; background-color: #4D4949; width: 60%; height: 35px; color: #dcdcdc;'>";
-		tempElementString = tempElementString + element.title ;
-		tempElementString = tempElementString + "</span></td>";
-		
-		tempElementString = tempElementString + "</tr></table>";
-		
-		$('#CONTAXONOMY_OPTIONS').append($(tempElementString));
-		$('#CONTAXONOMY_OPTIONS').append($("<br/>"));
-
-		tempElementString = "";		
-		tempElementString = tempElementString + "<table><tr>";
-		
-		//tempElementString = tempElementString + "<br/>";		
-		//tempElementString = tempElementString + "<span style='color: #B8B4B4;'><b>- - - - </b></span>";
-		
-		tempElementString = tempElementString + "<td valign=middle><span style='color: #95B3D7; font-size: 15px;'><b>- - - - </b></span></td>";
-		
-		
-		tempElementString = tempElementString + "<td valign=middle align=left><div class='arow-lft-tagxonmy-lvl2-grey'></div></td>";
-		
-		//tempElementString = tempElementString + "<div style = 'display: inline-block; vertical-align: middle; background-color: #696969; width: 60%; height: 35px; color: #dcdcdc; margin-top:  3px; margin-bottom: 10px;'>";
-		//tempElementString = tempElementString + element.title + " Child1";
-		//tempElementString = tempElementString + "</div>";
-		
-		tempElementString = tempElementString + "<td valign=middle width=600><div style = 'display: inline-block; vertical-align: middle; background-color: #696969; width: 60%; height: 35px; color: #dcdcdc;'>";
-		tempElementString = tempElementString + element.title + " Child1";
-		tempElementString = tempElementString + "</div></td>";
-		
-		tempElementString = tempElementString + "</tr></table>";
-		$('#CONTAXONOMY_OPTIONS').append($(tempElementString));
-		$('#CONTAXONOMY_OPTIONS').append($("<br/>"));
-		
-		//tempElementString = tempElementString + "<br/>";
-		
-		tempElementString = "";		
-		tempElementString = tempElementString + "<table><tr>";
-		
-		//tempElementString = tempElementString + "<span style='color: #B8B4B4;'><b>- - - - - - </b></span>";
-		tempElementString = tempElementString + "<td><span style='color: #95B3D7; font-size: 15px;'><b>- - - - - - </b></span></td>";
-		
-		//tempElementString = tempElementString + "<div class='arow-lft-tagxonmy-lvl3-grey'></div>";
-		tempElementString = tempElementString + "<td valign=middle align=left><div class='arow-lft-tagxonmy-lvl3-grey'></div></td>";
-		
-		//tempElementString = tempElementString + "<div style = 'display: inline-block; vertical-align: middle; background-color: #8C8585; width: 60%; height: 35px; color: #dcdcdc; margin-top:  3px; margin-bottom: 10px;'>";
-		//tempElementString = tempElementString + element.title + " Child1 Child1";
-		//tempElementString = tempElementString + "</div>";
-		
-		tempElementString = tempElementString + "<td valign=middle width=570><div style = 'display: inline-block; vertical-align: middle; background-color: #8C8585; width: 60%; height: 35px; color: #dcdcdc;'>";
-		tempElementString = tempElementString + element.title + " Child1 Child1";
-		tempElementString = tempElementString + "</div></td>";
-		
-		tempElementString = tempElementString + "</tr></table>";
-		$('#CONTAXONOMY_OPTIONS').append($(tempElementString));
-		
-		//tempElementString = tempElementString + "</div><br/>";
-		
-		$('#CONTAXONOMY_OPTIONS').append($("<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>"));
-	}
-	 
-	
+  
 	
 	function showContaxonomyModal(whereFrom, msgCategory) { 
 		    
@@ -908,6 +836,18 @@
 	
 	
 	
+	/* on click of TAB options, audience section should be displayed */
+	
+	
+/*	$('.contagxonomy-ak-composer-title-bar-tab').on('click', function() {
+		if(!audienceSectionVisible) {
+			$('#CONTAXONOMY_CONTAINER_BOTTOM').show();
+			$('#CONTAXONOMY_USR_GUIDANCE_MSG').hide();
+			audienceSectionVisible = true;
+		}
+	});
+*/	
+	
 	/*
 		POPULATES THE AUDIENCE SECTION WHEN CHECK BOXES ARE CLICKED
 	*/
@@ -916,9 +856,23 @@
 	var totalTeamsCount = 0;
 	var totalGroupsCount = 0;
 		
-	var totalAudienceCount = 0;
+	var totalAudienceCount = 0;    
+	//var audienceTableVisible = false;
+	var audienceSectionVisible = false;
 	
 	function populateAudience(checkBox) { 
+		
+		if(!audienceSectionVisible) {
+			$('#CONTAXONOMY_CONTAINER_BOTTOM').show();
+			$('#CONTAXONOMY_USR_GUIDANCE_MSG').hide();			
+			$('#AUDIENCE_TABLE').show();
+			$('#NEG-STATE-USER-MSG-ID').hide();
+			
+			$('#CONTAXONOMY_CONTAINER_TOP').css('height','55%');
+			$('#CONTAXONOMY_CONTAINER_BOTTOM').css('height','45%');
+			audienceSectionVisible = true;
+			//audienceTableVisible = true;
+		}
 		
 		var checkBoxId = checkBox.attr('id');
 		//alert(checkBox.prop("name"));

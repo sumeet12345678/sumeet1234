@@ -267,13 +267,21 @@
 		
 		
 		<script>
-		$('#MSG_COMPOSER_DSGN_N_PRVW_DISPLAY_ICON').on('click', function() {
-			//$('#MSG_COMPOSER_DSGN_N_PRVW_TOOL').toggle();
-			//$('#MSG_COMPOSER_DSGN_N_PRVW_TOOL').html($('#MSG_COMPOSER_MESSAGE_TEXTAREA').html());
+			$('#MSG_COMPOSER_DSGN_N_PRVW_DISPLAY_ICON').on('click', function() {
+			 	$('#MSG_COMPOSER_DSGN_N_PRVW_TOOL').toggle();
+				 $('#MSG_COMPOSER_DSGN_N_PRVW_TOOL').html($('#MSG_COMPOSER_MESSAGE_TEXTAREA').html());
+				
+				 console.log($('#MSG_COMPOSER_DSGN_N_PRVW_TOOL').html());
+				 
+			});
 			
-			//console.log($('#MSG_COMPOSER_DSGN_N_PRVW_TOOL').html());
-			window.open("", "", "width=200,height=100");
-		});
+			 
+				$('#MSG_POP_OUT_WINDOW').on('click', function() {
+					 
+					var thisIsAnObject = {foo:'bar'};
+					var newWindow = window.open("", "ppppppp",  "width=200,height=100,left=120px,location=0,menubar=no,titlebar=no,fullscreen=no,toolbar=1,resizable=no,status=1");
+					newWindow.document.body.innerHTML = $('.composerWrapper').html();
+			});
 		</script>
 		
 		  

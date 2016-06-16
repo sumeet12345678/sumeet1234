@@ -120,6 +120,8 @@ $(function(){
 		
 		//$('#CONTAXONOMY_MODAL').show();
 		showContaxonomyModal('AK_COMPOSER', $('#MSG_TYPE_OPTION_SELECT option:selected').text());
+		//$('#CONTAXONOMY_MODAL').detach();
+		//$('#CONTAXONOMY_MODAL').attach();
 		$('#CONTAXONOMY_MODAL').focus();
 		
 	});
