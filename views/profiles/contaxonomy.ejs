@@ -926,7 +926,7 @@
 	/*Adds or Substracts audience count on Audience title bar  when checkbox is checked or unchecked */
 	function  updateTotalAudienceCount(checkBox, operation) {
 
-		alert(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
+		//alert(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
 		
 		if(operation == "add") {
 			totalAudienceCount = totalAudienceCount + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());
