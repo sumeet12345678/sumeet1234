@@ -88,7 +88,7 @@
    @media screen and (max-width: 767px) { 
  		.audience-container-div-sections {
  			 width: 100%;
- 			 display: inline-block; 
+ 			 display: none; 
  			 padding-right: 5px;
  			 
  		}
@@ -370,19 +370,19 @@
 				    <div id = AUDIENCE_TABLE style = "display: none;">   
 				    	
 					  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span class = "hpy-usr-green-text" id = CONNECTIONS_COUNT></span>)</b></div>
+					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span class = "hpy-usr-green-text" id = CONNECTIONS_COUNT>0</span>)</b></div>
 					  	</div><!-- 
 					  	
 					  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
-					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %>(<span class = "hpy-usr-green-text" id = TEAMS_COUNT></span>)</b></div>
+					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %>(<span class = "hpy-usr-green-text" id = TEAMS_COUNT>0</span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %>(<span class = "hpy-usr-green-text" id = GROUPS_COUNT></span>)</b></div>
+					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %>(<span class = "hpy-usr-green-text" id = GROUPS_COUNT>0</span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
-							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %>(<span class = "hpy-usr-green-text" id = PEOPLES_COUNT></span>)</b></div>
+							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %>(<span class = "hpy-usr-green-text" id = PEOPLES_COUNT>0</span>)</b></div>
 					  	</div>
 				   	</div>
 			    </div>
@@ -864,6 +864,7 @@
 	//var audienceTableVisible = false;
 	var audienceSectionVisible = false;
 	
+	
 	function populateAudience(checkBox) { 
 		
 		if(!audienceSectionVisible) {
@@ -887,7 +888,8 @@
 				$('#AUDIENCE_CNTNR_CONNECTIONS').css('display','inline-block');
 				$('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 			 
-			 updateTotalAudienceCount(checkBox, "add");
+			    updateTotalAudienceCount(checkBox, "add"); //updates total count 
+			    updateSectionAudienceCount("C", "add" );       //updates count for each section 
 			
 			 
 			}
@@ -912,6 +914,7 @@
 				
 				$('#AUDIENCE_CNTNR_CONNECTIONS #' + checkBoxId ).remove();
 				updateTotalAudienceCount(checkBox, "substract");
+				 
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  	 
@@ -927,6 +930,16 @@
 		} 
 	} 
 	
+	
+	function updateSectionAudienceCount(section, operation) {
+		console.log("updating section");
+		if(section == "C" && operation == "add") {
+			totalConnectionsCount = 100 + parseInt($('#CONNECTIONS_COUNT').text());
+			
+			 console.log( "Value == " + $('#CONNECTIONS_COUNT').text());
+			$('#CONNECTIONS_COUNT').text(totalConnectionsCount);
+		 }
+	}
 	/*Adds or Substracts audience count on Audience title bar  when checkbox is checked or unchecked */
 	function  updateTotalAudienceCount(checkBox, operation) {
 
