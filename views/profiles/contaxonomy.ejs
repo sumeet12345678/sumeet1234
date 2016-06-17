@@ -58,9 +58,7 @@
 		float: left;
 	}
 	
-	.float-right {
-		float: right;
-	}
+	
 	
 	.text-green {
 		color: #91CC18;
@@ -84,6 +82,11 @@
   	color: #008CC9;
   }
 	
+ .float-right {
+		float: right;
+		 
+	}
+	
 /* MEDIA SCREEN (mobile) */  
    @media screen and (max-width: 767px) { 
  		.audience-container-div-sections {
@@ -96,6 +99,13 @@
  		#CONTAXONOMY_CONNECTIONS_TABLE {
 			width:  100%;	 
 		} 
+		
+		.float-right11 {
+		float: right;
+		position: fixed;
+		top: 40px;
+		right: 0;
+	}
   }
   
   /* MEDIA SCREEN (desktop) */  
@@ -109,6 +119,14 @@
  		#CONTAXONOMY_CONNECTIONS_TABLE {
 			width:  380px;	 
 		} 
+		
+	   .float-right11 {
+		float: right;
+		position: fixed;
+		top: 40px;
+		right: 15%;
+	}
+		
   }
   
   
@@ -262,50 +280,51 @@
 					 	   <td tabindex="4" align = center valign = middle style = "border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">
 					 		  <div id = CONTAX_GROUPS_BTN style = "cursor: pointer;  display: inline-block; ">Groups</div>
 					 	   </td>  
-					 	    <td tabindex="5" align = center valign = middle class = "contagxonomy-ak-composer-title-bar-tab">
-					 		  <div id = CONTAX_PPL_FINDER_BTN style = "cursor: pointer;  display: inline-block; ">Others</div>
+					 	    <td tabindex="5" align = center valign = middle class = "contagxonomy-ak-composer-title-bar-tab" style = "display: hidden;">
+					 		   <div id = CONTAX_PPL_FINDER_BTN style = "cursor: pointer;  display: inline-block; ">Others</div>  
 					 	   </td>  
 				 		  </tr>
 			 		  	</table>
 				  </div>	
-				  
 				 
 				  
-				  
-				  
-				  
-				  <div  id = CONTAX_SRCH_BAR style = "background-color: #fff; height: 50px; position: relative; padding-left: 3px; padding-right: 3px; border-bottom: 0px solid #f2f2f2;"> 		&nbsp;
-				  	  <div id = CONTAXONOMY_CONNECTIONS class = "float-left text-green" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px; ">
+				  <!-- 
+				      <div  id = CONTAX_SRCH_BAR style = "height: 0px; background-color: #fff; position: relative; padding-left: 3px; padding-right: 3px; border-bottom: 0px solid #f2f2f2;"> 		&nbsp;
+				  	  <div id = CONTAXONOMY_CONNECTIONS class =  "float-right text-blue" style = "vertical-align: top; display: none; text-align: center; margin-top: 9px; margin-right: 5px; ">
 				  		<img   width="24" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
 				  		<span style = "display: block;  line-height:.5; font-size: 12px;"><b>Connections</b></span> 
 				  	  </div>  
+				  	    
+				  	  <div id = CONTAXONOMY_TEAMS class = "float-right text-blue" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px; margin-right: 5px;"> 
+				  		<img   width="24" height="24" src="/media/images/icons/crowd-black.png"/>
+				  		<span style = "display: block; line-height:.5; font-size: 12px;"><b>Teams</b></span>
+				  	  </div>
 				  	  
-				  	  <div id = CONTAXONOMY_GROUPS class = "float-right text-blue" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px;"> 
+				  	  <div id = CONTAXONOMY_GROUPS class = "float-right text-blue" style = "vertical-align: top; display: inline-block; text-align: center; margin-top: 9px; margin-right: 5px;"> 
 				  		<img   width="24" height="24" src="/media/images/icons/crowd-black.png"/>
 				  		<span style = "display: block; line-height:.5; font-size: 12px;"><b>Groups</b></span>
 				  	  </div>
-				  	  
+				   
 				  	  
 			   
-				  	  <div style = "position: absolute; left: 50%; transform: translateX(-50%); display: inline-block;  top: 7px;   height: 50px; ">
+				  	  <div style = "display: none; position: absolute; left: 50%; transform: translateX(-50%); top: 7px;   height: 50px; ">
 						 
-						   		 
-								<div id= CONTAXONOMY_SEARCH_BOX class="input-group" style = "width: 160px;" >      
+						   	 	 
+						 	    <div id= CONTAXONOMY_SEARCH_BOX class="input-group" style = "width: 160px;" >      
 								       <input style="border: 1px solid #ADAAAA;" type="text" class="form-control searchBox" placeholder="" />
 								           <span class="input-group-btn">
 												<button class="btn" type="button" id="searchBtnId" style="background-color: #ADAAAA;"><span class="glyphicon glyphicon-search searchIcon"></span></button>
 											</span>
-								 </div><!-- input-group ends -->
-				   		
+								</div>
+				   		 
 				  	  </div>
 			  	 
 				  	       
-				   </div>
-				   
-				   <div id = CONTAXONOMY_USR_GUIDANCE_MSG style = "font-size: 14px; font-weight: 700; color: #3F3F3F;  margin-left: 8px; margin-top: 5px;">
+				   </div>  
+				   -->
+				    <div id = CONTAXONOMY_USR_GUIDANCE_MSG style = "font-size: 14px; font-weight: 700; color: #3F3F3F;  margin-left: 8px; margin-top: 5px;">
 				   		User Guidance message here..  
-				   
-				   </div>	   
+				     </div>	   
 				  
 				  			
 				  <div id = CONTAXONOMY  style = "background-color: #fff;  height: calc(100% - 84px);   overflow: auto;" >
@@ -314,12 +333,12 @@
 						Select all in my Contagxonomy<b>!</b>
 				   		  
 				   	</div> -->
-					 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 10px; width:100%; padding-right: 5px;">
+					 	 <div id = CONTAXONOMY_OPTIONS style = "margin-top: 7px; width:100%; padding-right: 5px;">
 					 	 	
 					 	 	<div id = CONTAXONOMY_OPTIONS_CONS_CNTNR style = "display: block;">
 					 	 	
-					 	 		 <div class = "aakComposerContext  text-green" style = "margin-left: 3px;  margin-bottom: 15px;">
-					 	 		  	<div style = "text-align: center; display: inline-block; width: 90px;">
+					 	 		 <div id = CONTAXONOMY_OPTIONS_CONS_CNTNR_HEADING class = "aakComposerContext  text-green" style = "margin-left: 0px;  margin-bottom: 15px;">
+					 	 		  	<div style = "text-align: center; display: inline-block; width: 80px; BORDER11: 1Px solid black;">
 								  		<img   width="28" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 12px;"><b>Connections</b></span>
 								     </div> 
@@ -330,7 +349,7 @@
 					 	 	</div>
 					 	 	
 					 	 	<div id = CONTAXONOMY_OPTIONS_TEAMS_CNTNR style = "display: none;">
-					 	  
+					 	  	 
 					 	 	</div>
 					 	 	
 					 	 	<div id = CONTAXONOMY_OPTIONS_GRPS_CNTNR style = "display: none;">
@@ -359,7 +378,7 @@
 					</table>
 				     -->
 				     <img id = CONTAXONOMY_AUDIENCE_MAX_ICON style = "float: left;  margin-top: -5px;" src = "/media/images/icons/plainblack/arro-up-vanilla-blk.png" width = "30px" height = "30px">  
-				     <div  style = "display: inline-block; text-align: center;">Audience for your <span class = "msg-category"></span> (<span class = "hpy-usr-green-text" id = TOTAL_COUNT>0</span>)	</div>	
+				     <div  style = "display: inline-block; text-align: center;"><span class = "msg-category"></span> Audience (<span class = "hpy-usr-green-text" id = TOTAL_COUNT>0</span>)	</div>	
 				     <img  id = CONTAXONOMY_AUDIENCE_MIN_ICON style = "float: right; margin-top: -5px;" src = "/media/images/icons/plainblack/arro-dwn-vanilla-blk.png" width = "30px" height = "30px">  	  
 				</div>	
 				
@@ -370,19 +389,20 @@
 				    <div id = AUDIENCE_TABLE style = "display: none;">   
 				    	
 					  	<div id = AUDIENCE_CNTNR_CONNECTIONS class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  	   <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %>(<span class = "hpy-usr-green-text" id = CONNECTIONS_COUNT>0</span>)</b></div>
+					  	   <div class= "audience-table-heading" style = "padding-left: 5px; text-align: left; background-color: #ddebf0; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[0].name %> (<span class = "hpy-usr-green-text" id = CONNECTIONS_COUNT>0</span>)</b></div>
+					  	   
 					  	</div><!-- 
 					  	
 					  --><div id = AUDIENCE_CNTNR_TEAMS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top;  background-color1111: #e6e3e3;">
-					 		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %>(<span class = "hpy-usr-green-text" id = TEAMS_COUNT>0</span>)</b></div>
+					 		 <div class= "audience-table-heading" style = "padding-left: 5px; text-align: left; background-color: #ddebf0; margin-bottom: 10px;"> <b> <%= contaxAudienceTabOptions[1].name %> (<span class = "hpy-usr-green-text" id = TEAMS_COUNT>0</span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_GROUPS  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #F2F2F2;">
-					  		 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %>(<span class = "hpy-usr-green-text" id = GROUPS_COUNT>0</span>)</b></div>
+					  		 <div class= "audience-table-heading" style = "padding-left: 5px; text-align: left; background-color: #ddebf0; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[2].name %> (<span class = "hpy-usr-green-text" id = GROUPS_COUNT>0</span>)</b></div>
 					  	</div><!-- 
 					  	
 					  	--><div id = AUDIENCE_CNTNR_PEOPLE  class = "audience-container-div-sections" style = "text-align: right; vertical-align: top; background-color1111: #e6e3e3;">
-							 <div style = "padding-left: 5px; text-align: left; background-color: #6CCEF5; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %>(<span class = "hpy-usr-green-text" id = PEOPLES_COUNT>0</span>)</b></div>
+							 <div class= "audience-table-heading" style = "padding-left: 5px; text-align: left; background-color: #ddebf0; margin-bottom: 10px;">  <b> <%= contaxAudienceTabOptions[3].name %> (<span class = "hpy-usr-green-text" id = PEOPLES_COUNT>0</span>)</b></div>
 					  	</div>
 				   	</div>
 			    </div>
@@ -395,8 +415,8 @@
 		  
 	    <div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; background: linear-gradient(#344C15,#698A25);	 color: #fff; padding-top: 7px;">
 	   				<center> 
-	   						<div  style = "cursor: pointer; display: inline-block; height: 30px;  margin-right: 30px;">Done</div>  
-	   						<div style = "cursor: pointer; display: inline-block;  height: 30px;"  onclick = "hideContaxonomyModal();">Cancel</div>
+	   						<div id = CONTAXONOMY_DONE_BOTTON style = "display: none; cursor: pointer;  height: 30px;  margin-right: 30px;"><b>Done</b></div>  
+	   						<div id = CONTAXONOMY_CANCEL_BOTTON style = "cursor: pointer; display: inline-block;  height: 30px;">Cancel</div>
 	   				</center>
 	     </div>
 		    
@@ -616,7 +636,7 @@
 	
 	/* ---------        Toogles between Connections and Groups ---------- */
 	$('#CONTAXONOMY_CONNECTIONS').on('click', function() {
-		toggleContaxonomyConsGroups();
+		toggleContaxonomyConsGroups($(this));
 		//manageContaxOptionsDisplay($(this));
 		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').show();
 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
@@ -630,7 +650,7 @@
 	
 	
 	$('#CONTAXONOMY_GROUPS').on('click', function(){
-		toggleContaxonomyConsGroups();
+		toggleContaxonomyConsGroups($(this));
 		//$('#CONTAXONOMY_OPTIONS').html("");
 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').show();
 		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();
@@ -641,11 +661,24 @@
 		 
 	});
 	
+	$('#CONTAXONOMY_TEAMS').on('click', function(){
+		toggleContaxonomyConsGroups($(this));
+		//$('#CONTAXONOMY_OPTIONS').html("");
+		console.log("Teams");
+		$('#CONTAXONOMY_OPTIONS_TEAMS_CNTNR').show();
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide(); 
+		//$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		
+		getContaxonomyTeams();
+		 
+	});
+	
 
 	
 	
 	$('#CONTAX_APPLIED_AUDIENCE_BTN').on('click', function(){
-		toggleContaxonomyConsGroups();
+		toggleContaxonomyConsGroups($(this));
 		//$('#CONTAXONOMY_OPTIONS').html("");
 		//$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 		//$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
@@ -659,11 +692,22 @@
 	  
 
 	$('#CONTAX_CONT_CONS_BTN').on('click', function(){
-		$('#CONTAXONOMY_CONNECTIONS').trigger('click');
+		//$('#CONTAXONOMY_CONNECTIONS').trigger('click');
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').show();
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+		$('#CONTAXONOMY_OPTIONS_TEAMS_CNTNR').hide();
+		
+		//$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').hide();
+		 
+		contaxonomyConnections();
 	});
 	
 	$('#CONTAX_GROUPS_BTN').on('click', function(){
-		$('#CONTAXONOMY_GROUPS').trigger('click');
+		//$('#CONTAXONOMY_GROUPS').trigger('click');
+		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').show();
+		$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();
+		$('#CONTAXONOMY_OPTIONS_TEAMS_CNTNR').hide();
+		getContaxonomyGroups();
 	});
 	
 	$('#CONTAX_TEAMS_BTN').on('click', function(){
@@ -703,7 +747,15 @@
 	});
 	
 	
-
+	$('#CONTAXONOMY_CANCEL_BOTTON').on('click', function() { 
+		exitContagxonomy();
+	});
+	
+	$('#CONTAXONOMY_DONE_BOTTON').on('click', function() { 
+		exitContagxonomy();
+	});
+	
+	
 	/* Ajax call for appending People Search Criteria */
 	/*
 	* 	Add each div element to Map after ajax call.  If element to be added is already on Map, avoid ajax call and make that div visible if its invisible, else do nothing.
@@ -784,7 +836,7 @@
 	*
 	*/
 	
-	function toggleContaxonomyConsGroups() {
+/*	function toggleContaxonomyConsGroups() {
 		 
 		var contaxonomyConnections = $('#CONTAXONOMY_CONNECTIONS');
 		var contaxonomyGroups = $('#CONTAXONOMY_GROUPS');
@@ -802,43 +854,19 @@
 		//text-green
 	}
   
+*/
+function toggleContaxonomyConsGroups(clickedContaxIcon) {
+	 
+	//var contaxonomyConnections = $('#CONTAXONOMY_CONNECTIONS');
+	//var contaxonomyGroups = $('#CONTAXONOMY_GROUPS');
 	
-	function showContaxonomyModal(whereFrom, msgCategory) { 
-		    
-	 	var $contaxonomyModal = $('#CONTAXONOMY_MODAL');
-	 	
-	 	$contaxonomyModal.show();
-	 	  
-	 	
-	 	if(whereFrom == 'AK_COMPOSER') {  
-	 		
-	 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
-			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();		
-			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
-			  
-	 		$('#AD_PERSON').hide();
-	 		$('#CONTAX_SRCH_BAR').hide();  
-		 	$('#CONTAGXONOMY_AK_COMPOSER').show();
-		 	
-		 	$('.msg-category').text('"'+ msgCategory + '"');
-		   
-	 	}
-	 	
-
-	 	if(whereFrom == 'AD_PERSON') {  
-	 		$('#AD_PERSON').show();
-		 	$('#CONTAGXONOMY_AK_COMPOSER').hide();
-	 	 
-	 	}
-	 	
-	 }
-  
-	function hideContaxonomyModal() {
-		
-		$('#CONTAXONOMY_MODAL').hide();
-	}
-	
-	
+	$('.float-right').css('display', 'inline-block');
+	clickedContaxIcon.css('display','none');
+	  
+	 
+	//$('#CONTAXONOMY_CONNECTIONS').toggleClass('float-right','float-left');
+	//text-green
+}
 	
 	/* on click of TAB options, audience section should be displayed */
 	
@@ -869,6 +897,8 @@
 		
 		if(!audienceSectionVisible) {
 			$('#CONTAXONOMY_CONTAINER_BOTTOM').show();
+			console.log("dfdsfdsfsdfsdf peopelee e  e e");
+			$('#CONTAXONOMY_DONE_BOTTON').css('display','inline-block'); 
 			$('#CONTAXONOMY_USR_GUIDANCE_MSG').hide();			
 			$('#AUDIENCE_TABLE').show();
 			$('#NEG-STATE-USER-MSG-ID').hide();
@@ -884,9 +914,12 @@
 		//alert("id == " + checkBoxId);
 		if( (checkBox.prop("checked") == true)) {  
 			
+			var appendString = "<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>";
+			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_CONNECTIONS').css('display','inline-block');
-				$('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>");
+			
+				$('#AUDIENCE_CNTNR_CONNECTIONS').append(appendString);
 			 	
 				updateSectionAudienceCount("C", checkBox, "add" );       //updates count for each section 
 			    updateTotalAudienceCount(checkBox, "add"); //updates total count 
@@ -897,7 +930,7 @@
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_GROUPS').css('display','inline-block');
-				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>");
+				 $('#AUDIENCE_CNTNR_GROUPS').append(appendString);
 				 
 				 updateSectionAudienceCount("G", checkBox, "add" );       //updates count for each section 
 				 updateTotalAudienceCount(checkBox, "add");
@@ -905,7 +938,7 @@
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_TEAMS').css('display','inline-block');
-				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>");
+				 $('#AUDIENCE_CNTNR_TEAMS').append(appendString);
 				 
 				 updateSectionAudienceCount("T", checkBox, "add" );       //updates count for each section 
 				 updateTotalAudienceCount(checkBox, "add");
@@ -1122,8 +1155,85 @@
 	}
 	*/	 		
  	
+	
+	function showContaxonomyModal(whereFrom, msgCategory) { 
+		    
+	 	var $contaxonomyModal = $('#CONTAXONOMY_MODAL');
+	 	
+	 	$contaxonomyModal.show();
+	 	  
+	 	
+	 	if(whereFrom == 'AK_COMPOSER') {  
 	 		
- 	
+	 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	  	
+			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+			  
+	 		$('#AD_PERSON').hide();
+	 		$('#CONTAX_SRCH_BAR').hide();  
+		 	$('#CONTAGXONOMY_AK_COMPOSER').show();
+		 	
+		 	$('.msg-category').text("'"+ msgCategory + "'");
+		   
+	 	}
+	 	
 
+	 	if(whereFrom == 'AD_PERSON') {  
+	 		//$('#AD_PERSON').show();
+		 	//$('#CONTAGXONOMY_AK_COMPOSER').hide();
+		 	//$('#CONTAX_SRCH_BAR').show();  
+		    $('#CONTAX_SRCH_BAR').hide(); 
+		 	$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	
+		 	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+			$('#CONTAGXONOMY_AK_COMPOSER').show();
+			
+			//$('#CONTAX_CONT_CONS_BTN').trigger('click');
+		 	 
+	 	}
+	 	
+	 }
+   
+			
+	/* EXITS THE CONTAINER AND RESETS THE CONTAXONOMY CONTAINER */
+ 	function exitContagxonomy() {
+ 		 audienceSectionVisible = false;
+ 		 connectionsPopulated = false; 
+ 		 contaxGroupsCalled = false;
+ 		 contaxTeamCalled = false;
+ 		 totalConnectionsCount = 0;
+ 		 totalTeamsCount = 0;
+ 		 totalGroupsCount = 0;
+ 			
+ 		totalAudienceCount = 0;   
+ 		
+ 		// $('#CONTAXONOMY_OPTIONS_CONS_CNTNR div:not(:first-child)').empty(); 
+ 		 $('#CONTAXONOMY_OPTIONS_CONS_CNTNR_HEADING').siblings().remove(); 
+ 		 $('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').empty(); 
+ 		 $('#CONTAXONOMY_OPTIONS_TEAMS_CNTNR').empty(); 
+ 		 $('#CONTAX_PPL_FINDER_CNTNR').empty();
+ 		// contaxGroupsCalled = false;
+ 		
+ 		$('#CONTAXONOMY_CONTAINER_BOTTOM').hide();
+ 		
+ 		$('#CONTAXONOMY_CONTAINER_TOP').css('height', '100%');
+ 		$('#TOTAL_COUNT').text('0');
+ 		
+ 		$('#AUDIENCE_CNTNR_CONNECTIONS').hide();
+ 		$('#AUDIENCE_CNTNR_GROUPS').hide();
+ 		$('#AUDIENCE_CNTNR_TEAMS').hide();
+ 		$('#AUDIENCE_CNTNR_PEOPLE').hide();
+ 		
+ 		$('.audience-table-heading').siblings().remove();
+ 		
+ 		$('#CONTAXONOMY_USR_GUIDANCE_MSG').show();
+ 		$('#CONTAXONOMY_DONE_BOTTON').hide(); 
+ 		
+ 		$('.contagxonomy-ak-composer-title-bar-tab').css('background-color','');
+ 		 //div:not(.awesome)
+ 		//var audienceTableVisible = false;
+ 		$('#CONTAXONOMY_MODAL').hide();
+ 	}
+ 	
 
 </script>
