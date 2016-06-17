@@ -102,7 +102,7 @@
    @media screen and (min-width: 768px) { 
  		.audience-container-div-sections {
  			width: 25%;
- 		    display: inline-block; 
+ 		    display: none; 
  		    padding-right: 5px;
  		}
  		
@@ -884,7 +884,8 @@
 		if( (checkBox.prop("checked") == true)) {  
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
-			 $('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				$('#AUDIENCE_CNTNR_CONNECTIONS').css('display','inline-block');
+				$('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 			 
 			 updateTotalAudienceCount(checkBox, "add");
 			
@@ -892,11 +893,13 @@
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
+				$('#AUDIENCE_CNTNR_GROUPS').css('display','inline-block');
 				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 				 updateTotalAudienceCount(checkBox, "add");
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
+				$('#AUDIENCE_CNTNR_TEAMS').css('display','inline-block');
 				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
 				 updateTotalAudienceCount(checkBox, "add");
 			}
@@ -906,6 +909,7 @@
 		if( (checkBox.prop("checked") == false)) { 
 		
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  	 
+				
 				$('#AUDIENCE_CNTNR_CONNECTIONS #' + checkBoxId ).remove();
 				updateTotalAudienceCount(checkBox, "substract");
 			}
