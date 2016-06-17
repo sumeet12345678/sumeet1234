@@ -434,20 +434,22 @@ $('.imo_icon_img').on('click', function(e){
 });
 
 
-
 	$(document).mouseup(function (e) 
-	{
-   var ATTACH_OPTIONS = $("#ATTACH_OPTIONS");
-   if (!$('#ATTACH_OPTIONS').is(e.target) && !ATTACH_OPTIONS.is(e.target) && ATTACH_OPTIONS.has(e.target).length == 0) 
-   {
-       ATTACH_OPTIONS.hide();
-   }
+		 	{
+		     var ATTACH_OPTIONS = $("#ATTACH_OPTIONS");
+		     if (!$('#ATTACH_OPTIONS').is(e.target) && !ATTACH_OPTIONS.is(e.target) && ATTACH_OPTIONS.has(e.target).length == 0) 
+		     {
+		         ATTACH_OPTIONS.hide();  ///////////////
 
-	    	 $('#MSG_COMPOSER_ADD_STUFF').on('click', function(){
-			$('#ATTACH_OPTIONS').toggle();
-			});
 
-});
+		         $('#MSG_COMPOSER_ADD_STUFF').on('click', function(){
+					$('#ATTACH_OPTIONS').toggle();
+					});
+
+		     }
+
+			    	 
+		 });
 
 
 
