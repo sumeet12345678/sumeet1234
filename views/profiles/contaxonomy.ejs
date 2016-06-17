@@ -887,9 +887,10 @@
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_CONNECTIONS').css('display','inline-block');
 				$('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
-			 
+			 	
+				updateSectionAudienceCount("C", checkBox, "add" );       //updates count for each section 
 			    updateTotalAudienceCount(checkBox, "add"); //updates total count 
-			    updateSectionAudienceCount("C", "add" );       //updates count for each section 
+			   
 			
 			 
 			}
@@ -897,12 +898,16 @@
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_GROUPS').css('display','inline-block');
 				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				 
+				 updateSectionAudienceCount("G", checkBox, "add" );       //updates count for each section 
 				 updateTotalAudienceCount(checkBox, "add");
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_TEAMS').css('display','inline-block');
 				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				 
+				 updateSectionAudienceCount("T", checkBox, "add" );       //updates count for each section 
 				 updateTotalAudienceCount(checkBox, "add");
 			}
 		}
@@ -913,17 +918,23 @@
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  	 
 				
 				$('#AUDIENCE_CNTNR_CONNECTIONS #' + checkBoxId ).remove();
+				
+				updateSectionAudienceCount("C", checkBox, "substract" );
 				updateTotalAudienceCount(checkBox, "substract");
-				 
+							 
 			}
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  	 
 				$('#AUDIENCE_CNTNR_GROUPS #' + checkBoxId ).remove();
+				
+				updateSectionAudienceCount("G", checkBox, "substract" );
 				updateTotalAudienceCount(checkBox, "substract");
 			}
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  	 
 				$('#AUDIENCE_CNTNR_TEAMS #' + checkBoxId ).remove();
+				
+				updateSectionAudienceCount("T", checkBox, "substract" );
 				updateTotalAudienceCount(checkBox, "substract");
 			}
 		
@@ -931,15 +942,49 @@
 	} 
 	
 	
-	function updateSectionAudienceCount(section, operation) {
+	function updateSectionAudienceCount(section,checkBox,operation) {
 		console.log("updating section");
-		if(section == "C" && operation == "add") {
-			totalConnectionsCount = 100 + parseInt($('#CONNECTIONS_COUNT').text());
+		if(section == "C") {
+			if(operation == "add") {
+				totalConnectionsCount = totalConnectionsCount  + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());	
+			}
+			else  if(operation == "substract") {
+				totalConnectionsCount = totalConnectionsCount  - parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());	
+			}
+			
 			
 			 console.log( "Value == " + $('#CONNECTIONS_COUNT').text());
 			$('#CONNECTIONS_COUNT').text(totalConnectionsCount);
 		 }
+		
+		if(section == "G") {
+			if(operation == "add") {
+				totalGroupsCount = totalGroupsCount  + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());	
+			}
+			else  if(operation == "substract") {
+				totalGroupsCount = totalGroupsCount  - parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());	
+			}
+			
+			
+			 console.log( "Value == " + $('#GROUPS_COUNT').text());
+			$('#GROUPS_COUNT').text(totalGroupsCount);
+		 }
+		
+		if(section == "T") {
+			if(operation == "add") {
+				totalTeamsCount = totalTeamsCount  + parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());	
+			}
+			else  if(operation == "substract") {
+				totalTeamsCount = totalTeamsCount  - parseInt(checkBox.parent().find('.common-contax-label').find('.contax-count').text());	
+			}
+			
+			
+			 console.log( "Value == " + $('#TEAMS_COUNT').text());
+			$('#TEAMS_COUNT').text(totalTeamsCount);
+		 }
 	}
+	
+	
 	/*Adds or Substracts audience count on Audience title bar  when checkbox is checked or unchecked */
 	function  updateTotalAudienceCount(checkBox, operation) {
 
