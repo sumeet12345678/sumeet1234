@@ -886,7 +886,7 @@
 			
 			if( (checkBox.prop("name") == "connections-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_CONNECTIONS').css('display','inline-block');
-				$('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				$('#AUDIENCE_CNTNR_CONNECTIONS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBox.parent().find('.common-contax-label').html() + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>");
 			 	
 				updateSectionAudienceCount("C", checkBox, "add" );       //updates count for each section 
 			    updateTotalAudienceCount(checkBox, "add"); //updates total count 
@@ -897,7 +897,7 @@
 			
 			if( (checkBox.prop("name") == "groups-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_GROUPS').css('display','inline-block');
-				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				 $('#AUDIENCE_CNTNR_GROUPS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId +  "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>");
 				 
 				 updateSectionAudienceCount("G", checkBox, "add" );       //updates count for each section 
 				 updateTotalAudienceCount(checkBox, "add");
@@ -905,7 +905,7 @@
 			
 			if( (checkBox.prop("name") == "teams-chkbox") ) {  
 				$('#AUDIENCE_CNTNR_TEAMS').css('display','inline-block');
-				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png'><div>");
+				 $('#AUDIENCE_CNTNR_TEAMS').append("<div class = 'contax-audience-table-items' id = " + checkBoxId + ">" + checkBoxId + "<img style = 'float: right; margin-left: 5px;' width = 20 height = 20 src = '/media/images/icons/operators/black/x-ncircled-blk.png' onclick = 'deleteAudienceEntry($(this))'><div>");
 				 
 				 updateSectionAudienceCount("T", checkBox, "add" );       //updates count for each section 
 				 updateTotalAudienceCount(checkBox, "add");
@@ -1002,8 +1002,11 @@
 	 }		
  
 	//CONNECTIONS_COUNT
-	
-	
+	  
+	function deleteAudienceEntry(closeIcon) {
+		//console.log("delete Audience");
+		closeIcon.parent('div').remove();
+	}
 	
 	
 	
