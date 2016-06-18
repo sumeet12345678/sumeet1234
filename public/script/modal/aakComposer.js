@@ -13,35 +13,112 @@ $(function(){
 	var $smileyemotions = $('#SMILEY_EMOTIONS');
 	var $attachoption = $('#ATTACH_OPTIONS');
 	
+	var newBar = $('#headerBarId'); //salvin
+	
+	var top = 0; //salvin
+	
 //	$composerBottomBar.css('width', '-=80');  //Intial width during loading
 	
 	$('#plus').on('click', function() {
 		 
 		var $composerWrapper = $('.composerWrapper');     
-		 
-		$composerWrapper.css('bottom', getFooterBarHeight()); 
+		
+		$composerWrapper.toggle(); //salvin
+		
+		//$composerWrapper.css('bottom', getFooterBarHeight()); 
+		$composerWrapper.css('bottom', '40px');
+		
+		/* Savlins*/
+		 newBar = $('#headerBarId');
+		 newBar.show();
+		 newBar.css('top', $composerWrapper.css('top'));
+		 newBar.css('top','-=40');
+		/* Salvin's ends*/
 		//$composerWrapper.css('top', $footerBarHeight); 
 		//$composerWrapper.toggleClass('visible');
-		hideAllPopUpMenus($composerWrapper);
+		//hideAllPopUpMenus($composerWrapper); //
 		
 		/* For Desktop Esc Key functionality */
 		$('.composerWrapper').focus(); 
 	}); 
+	
+	
+	
+	
+	/*Salvin's start*/
+	var bottomVar = 80;
+	var leftVar = 20;
+	var z_index = 1058;
+	
+$('#new_plus').on('click', function() {
+		
+		var newComposer = $('.composerWrapper').clone(true);
+		newComposer.appendTo('body');
+		//alert(newComposer.attr('bottom'));
+
+		newComposer.css('bottom', 30 + bottomVar);
+		bottomVar = bottomVar + 80;
+		newComposer.css('left', 60 + leftVar);
+		leftVar = leftVar + 65;
+		newComposer.css('z-index', z_index);
+		z_index--;
+		newBar.css('top', newComposer.css('top'));
+		newBar.css('top','-=40');
+		newBar.css('left', newComposer.css('left'));
+		
+		//bottomVar = bottomVar + 10;
+		
+		//$composerWrapper1.show();
+		//$composerWrapper.css('top', $footerBarHeight); 
+		//$composerWrapper.toggleClass('visible');
+		//hideAllPopUpMenus($composerWrapper);
+		 
+	});
+
+var topWindow = $('.composerWrapper');
+//on click on each composer //	
+$('.composerWrapper').on('click',function(){
+ 
+    console.log('composer.......');
+    var bottom =  $(this).css('bottom');
+	var z_index = $(this).css('z-index');
+	var left = $(this).css('left');
+	var top = $(this).css('top');
+	
+	console.log(bottom + " "+ z_index + "  " +left);
+
+  
+		
+	$(this).css('bottom', topWindow.css('bottom'));
+	$(this).css('z-index', topWindow.css('z-index'));
+	$(this).css('left', topWindow.css('left'));
+
+	 
+
+	topWindow.css('bottom', bottom);
+	topWindow.css('z-index', z_index);
+	topWindow.css('left', left);
+ 
+	topWindow = $(this);
+ 
+});
 	 
 	/* EXPAND AAK COMPOSER */
 	 
 	$('#MSG_COMPOSER_MAX_MIN').on('click', function() {
-		
+		console.log('max min.......');
 		if(composerCurrentSize == "MINIMIZED"){
 			 
-			maximizeComposer();
+			maximizeComposer($(this).closest('.composerWrapper'));
 		}	
 		else if(composerCurrentSize == "MAXIMIZED"){
 			 
-			minimizeComposer();  
+			minimizeComposer($(this).closest('.composerWrapper'));  
 		}		 
 	 
-	}); 
+	});   
+	
+	
 	
 	$('#MSG_COMPOSER_ADD_STUFF').on('click', function() {
 		$('#ATTACH_OPTIONS').toggle();
@@ -56,13 +133,14 @@ $(function(){
     	//alert("Total Screen =  " + screen.height);
     });  
     
-	function maximizeComposer(){
+	function maximizeComposer(parentComposerWrapper){
 		
-		$composerWrapper.css('height', '100%');  
-		$composerWrapper.css('bottom','0');  
-		$ccTextArea.css('display', 'block');///////
-		$chatTextArea.css('display', 'block');///////
-		$composerBottomBar.css('display', 'block');
+		 parentComposerWrapper.css('height', '100%');  
+		 parentComposerWrapper.css('bottom','0');
+		 parentComposerWrapper.css('top','0'); 
+		 //parentComposerWrapper.find('#MSG_COMPOSER_CC_TEXTAREA').css('display', 'block');///////
+	    // parentComposerWrapper.find('#MSG_COMPOSER_CHAT_TEXTAREA').css('display', 'block');///////
+		// parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'block');
 		
 
 		//Melbin's Code
@@ -81,13 +159,15 @@ $(function(){
 
 	}
 	
-	function minimizeComposer() {
-		
-		$composerWrapper.css('height', '157px');  
-		$composerWrapper.css('bottom', getFooterBarHeight());  
-		$ccTextArea.css('display', 'none');///////
-		$chatTextArea.css('display', 'none');///////
-		$composerBottomBar.css('display', 'none');
+	function minimizeComposer(parentComposerWrapper) {
+		 
+		parentComposerWrapper.css('height', '157px');  
+		//parentComposerWrapper.css('bottom', getFooterBarHeight());
+		parentComposerWrapper.css('bottom', '40px');
+		parentComposerWrapper.css('top', 'auto');  ////////////////////////////////////////
+		//parentComposerWrapper.find('#MSG_COMPOSER_CC_TEXTAREA').css('display', 'none');///////
+		//parentComposerWrapper.find('#MSG_COMPOSER_CHAT_TEXTAREA').css('display', 'none');///////
+		//parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'none');
 		
 		//Melbin's Code
 		$smileyemotions.css('top', '-151px');
@@ -119,7 +199,7 @@ $(function(){
 		//alert( $('#MSG_CATEGORY option:selected').text() );  
 		
 		//$('#CONTAXONOMY_MODAL').show();
-		showContaxonomyModal('AK_COMPOSER', $('#MSG_TYPE_OPTION_SELECT option:selected').text());
+		showContaxonomyModal('AK_COMPOSER', $('#AAK_PLUS_CAT option:selected').text());
 		//$('#CONTAXONOMY_MODAL').detach();
 		//$('#CONTAXONOMY_MODAL').attach();
 		$('#CONTAXONOMY_MODAL').focus();
@@ -209,21 +289,134 @@ $('.imo_icon_img').on('click', function(e){
 	
 
 
+ var ajaxJsonMappingData =  [
+							    
+	                         	{
+	                         		'id' : 			'P',
+	                         		'url' :			 '/unicomposer/post',  
+	                         		'alreadyCalled' : "no"
+	                         	},
+	                         	
+	                         	{
+	                         		'id' : 			'E',
+	                         		'url' :			 '/unicomposer/email',
+	                         		'alreadyCalled' : 'no'
+	                         	}
+                         
+                         
+                         ];
+ 
 //msgCats();
-	$('#MSG_TYPE_OPTION_SELECT').on('change', function(e) {
-		 //alert( this.value );
-		if(this.value == "IM") {
-			$('#MSG_CATS_OPTIONS_SELECT').css('display', 'none');
+	$('#AAK_PLUS_CAT').on('change', function(e) {
+		
+		var parentComposerWrapper = $(this).closest('.composerWrapper');
+		
+		parentComposerWrapper.find('.uni-composer-msg-category').hide();
+		
+		 
+		
+		
+		var selectedOptionValue = this.value;
+		
+		showHideAakSubCat(selectedOptionValue, parentComposerWrapper); 
+		
+		if(selectedOptionValue == 'IM') { 
+			parentComposerWrapper.find('#UNI_COMPOSER_IM').show();
+			
+			//maximizeComposer();
 		}
 		
 		else {
-			$('#MSG_CATS_OPTIONS_SELECT').css('display', 'inline-block');
-			msgCats(this.value);
+			
+			populateAakComposer(selectedOptionValue, parentComposerWrapper);
 		}
-		 
+		
+		//$('#MSG_COMPOSER_GENERAL').hide();
 	});
+	 
+	 
+	function populateAakComposer(selectedOptionValue, parentComposerWrapper) {
+		//first hide any msg category displayed
+		
+		
+		for(var i = 0; i < ajaxJsonMappingData.length; i++) {
+			var obj = ajaxJsonMappingData[i];
+			
+			if( (obj.id == selectedOptionValue) ) {
+				if((obj.alreadyCalled == 'no')) {
+					
+					 appendMsgCategory(obj.url, selectedOptionValue, parentComposerWrapper);
+					 
+				}
+				else {
+					
+					 
+				}
+				
+				//
+				
+			}
+			
+		}
+		
+		
+		
+		
+	} /* populateAakComposer() ends */
+	
+	//////////////////////////////////  
+	
+	function appendMsgCategory(url, selectedOptionValue, parentComposerWrapper) {
+		var xhr = new XMLHttpRequest();
+		
+		xhr.onload = function() {  
+			if(xhr.status === 200) { 
+				console.log("Status  == 200");
+				
+				parentComposerWrapper.find('#TEXT_AREA').append(xhr.responseText);
+				
+				 //display the selected msg category
+				if(selectedOptionValue == 'P') {
+					parentComposerWrapper.find('#UNI_COMPOSER_POST').show();
+					maximizeComposer(parentComposerWrapper);
+				}
+				if(selectedOptionValue == 'E') { 
+					parentComposerWrapper.find('#UNI_COMPOSER_EMAIL').show();
+					
+					maximizeComposer(parentComposerWrapper);
+				}
+				
+				
+				 
+			}
+			else {
+				console.log("Status == " + xhr.status);  
+			}
+		}
+		
+		 xhr.open('GET', url, true);         
+		 xhr.send(null); 
+	}
+	
+	
+	
+	/* SHOWS or HIDES CATEGORIES SELECT OPTIONS */
+	function showHideAakSubCat(msgTypeSelected, parentComposerWrapper) {
+		 //alert( this.value );
+		if(msgTypeSelected == "IM") {
+			parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').css('display', 'none');
+		}
+		
+		else {
+			parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').css('display', 'inline-block');
+			msgCats(msgTypeSelected, parentComposerWrapper);
+		}
+		
+	}
 
- function msgCats(msgType) {	
+  
+	
+ function msgCats(msgType, parentComposerWrapper) {	
 	var msgCatsOptions = [];
   
   if(msgType == "SM") {
@@ -387,24 +580,24 @@ $('.imo_icon_img').on('click', function(e){
 
 
 
-	 $('#MSG_CATS_OPTIONS_SELECT').html('');
-	// $('#MSG_CATS_OPTIONS_SELECT').append
+	 parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').html('');
+	// $('#AAK_PLUS_SUB_CAT').append
 	msgCatsOptions.forEach(function(element) {
 	  
 		var elementString = '<option>' + element.name + '</option>';
-		$('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
+		parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').append($(elementString));
 		 
 		 
 		if(element.childs) {			
 			element.childs.forEach(function(level2Element) {
 				var elementString = '<option>&nbsp;' + level2Element.name + '</option>';
-				$('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
+				parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').append($(elementString));
 				
 
 				if(level2Element.childs) {			
 					level2Element.childs.forEach(function(level3Element) {
 						 var elementString = '<option>&nbsp;&nbsp;&nbsp;' + level3Element.name + '</option>';
-				         $('#MSG_CATS_OPTIONS_SELECT').append($(elementString));
+						 parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').append($(elementString));
 				        
 
 

@@ -36,6 +36,10 @@
 	  
 /* ------- Footer Section ------- */
 
+/* AAK PLUS CAT */
+.uni-composer-msg-category {
+	display: none;
+}
 
 /* ------- Mobile Device Section*/
 @media screen and (max-width: 767px) {

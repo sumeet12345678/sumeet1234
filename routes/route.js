@@ -12,10 +12,27 @@ var router = express.Router()
 */
 
 
+/* GET people_with_pic.ejs file. */
+router.get('/unicomposer/post', function(req, res, next) {
+  res.render('unicomposer/ajax/post.ejs');     
+});
+
+router.get('/unicomposer/post', function(req, res, next) {
+	  res.render('unicomposer/ajax/post.ejs');     
+});
+
 
 /* GET people_with_pic.ejs file. */
-router.get('/people_with_pic', function(req, res, next) {
-  res.render('profiles/people_with_pic');   
+router.get('/unicomposer/instantMessage', function(req, res, next) {
+  res.render('unicomposer/ajax/instantMessage.ejs');       
+}); 
+
+  
+
+
+/* GET people_with_pic.ejs file. */
+router.get('/unicomposer/email', function(req, res, next) {
+  res.render('unicomposer/ajax/email.ejs');   
 });
 
 
