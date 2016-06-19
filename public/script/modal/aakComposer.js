@@ -61,7 +61,7 @@ $(function(){
 	 
 	
 	/*Salvin's start*/
-	var bottomVar = 80;
+	var bottomVar = 58;
 	var leftVar = 20;
 	var z_index = 1058;
 	
@@ -73,7 +73,7 @@ $('#new_plus').on('click', function() {
 		//alert(newComposer.attr('bottom'));
 
 		newComposer.css('bottom', 30 + bottomVar);
-		bottomVar = bottomVar + 80;
+		bottomVar = bottomVar + 48;
 		newComposer.css('left', 60 + leftVar);
 		leftVar = leftVar + 65;
 		newComposer.css('z-index', z_index);
@@ -91,10 +91,10 @@ $('#new_plus').on('click', function() {
 		/* lighter border(same as composerWrapper)*/
 		 
 		
-		newComposer.css('border-top', '2px solid #999696');   
-		newComposer.css('border-left', '1px solid #999696');  
-		newComposer.css('border-right', '1px solid #999696');  
-		newComposer.css('border-bottom', '0px solid #999696');  
+		newComposer.css('border-top', '2px solid #525252');   
+		newComposer.css('border-left', '1px solid #525252');  
+		newComposer.css('border-right', '1px solid #525252');  
+		newComposer.css('border-bottom', '0px solid #525252');  
 		
 		//alert("topddd === " + newBar.css('top'));
 		
@@ -173,6 +173,14 @@ $('.composerWrapper').on('click',function() {
 	//////////////
  
 	topWindow = $(this);
+	
+	$('.composerWrapper').hide();
+	topWindow.show();
+	
+	newBar.css('top', topWindow.position().top);
+	newBar.css('top','-=40'); 
+	newBar.css('left',topWindow.css('left')); 
+	
  
 });
 	 
