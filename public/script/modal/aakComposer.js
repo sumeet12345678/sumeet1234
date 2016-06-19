@@ -21,7 +21,8 @@ $(function(){
 	
 	$('#plus').on('click', function() {
 		 
-		var $composerWrapper = $('.composerWrapper');     
+		//var $composerWrapper = $('.composerWrapper');     // 
+		 
 		
 		$composerWrapper.toggle(); //salvin
 		
@@ -40,10 +41,8 @@ $(function(){
 		
 		/* For Desktop Esc Key functionality */
 		$('.composerWrapper').focus(); 
-	}); 
-	
-	
-	
+	});   
+	 
 	
 	/*Salvin's start*/
 	var bottomVar = 80;
@@ -52,7 +51,8 @@ $(function(){
 	
 $('#new_plus').on('click', function() {
 		
-		var newComposer = $('.composerWrapper').clone(true);
+		//var newComposer = $('.composerWrapper').clone(true);
+	    var newComposer = $composerWrapper.clone(true);
 		newComposer.appendTo('body');
 		//alert(newComposer.attr('bottom'));
 
@@ -75,9 +75,11 @@ $('#new_plus').on('click', function() {
 		 
 	});
 
-var topWindow = $('.composerWrapper');
+//var topWindow = $('.composerWrapper');
+
+var topWindow = $composerWrapper;  
 //on click on each composer //	
-$('.composerWrapper').on('click',function(){
+$('.composerWrapper').on('click',function() {
  
     console.log('composer.......');
     var bottom =  $(this).css('bottom');
@@ -103,15 +105,15 @@ $('.composerWrapper').on('click',function(){
  
 });
 	 
-	/* EXPAND AAK COMPOSER */
+	/* EXPAND AAK COMPOSER */ 
 	 
 	$('#MSG_COMPOSER_MAX_MIN').on('click', function() {
 		console.log('max min.......');
-		if(composerCurrentSize == "MINIMIZED"){
+		if(composerCurrentSize == "MINIMIZED") {
 			 
 			maximizeComposer($(this).closest('.composerWrapper'));
 		}	
-		else if(composerCurrentSize == "MAXIMIZED"){
+		else if(composerCurrentSize == "MAXIMIZED") {
 			 
 			minimizeComposer($(this).closest('.composerWrapper'));  
 		}		 
@@ -358,7 +360,6 @@ $('.imo_icon_img').on('click', function(e){
 			}
 			
 		}
-		
 		
 		
 		
