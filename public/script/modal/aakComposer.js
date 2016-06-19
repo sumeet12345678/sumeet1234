@@ -81,12 +81,20 @@ $('#new_plus').on('click', function() {
 		newBar.css('top', newComposer.position().top);
 		newBar.css('top','-=40');
 		newBar.css('left', newComposer.css('left'));
-		
+
 		/*lighter grey background color for new composer popups*/
 		newComposer.find('#MSG_COMPOSER_TOP_BAR').css('background-color','#999696'); 
 		newComposer.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color','#999696'); 
 		newComposer.find('#MSG_COMPOSER_LEFT_BAR').css('background-color','#999696');
 		newComposer.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color','#999696');
+		
+		/* lighter border(same as composerWrapper)*/
+		 
+		
+		newComposer.css('border-top', '2px solid #999696');   
+		newComposer.css('border-left', '1px solid #999696');  
+		newComposer.css('border-right', '1px solid #999696');  
+		newComposer.css('border-bottom', '0px solid #999696');  
 		
 		//alert("topddd === " + newBar.css('top'));
 		
@@ -104,16 +112,14 @@ $('#new_plus').on('click', function() {
 var topWindow = $composerWrapper;  
 //on click on each composer //	
 $('.composerWrapper').on('click',function() {
- 
+	 
     console.log('composer.......');
     var bottom =  $(this).css('bottom');
 	var z_index = $(this).css('z-index');
 	var left = $(this).css('left');
 	var top = $(this).position().top;
 	
-	console.log(bottom + " "+ z_index + "  " +left);
-
-  
+	console.log(bottom + " "+ z_index + "  " +left); 
 		
 	$(this).css('bottom', topWindow.css('bottom'));
 	$(this).css('z-index', topWindow.css('z-index'));
@@ -125,7 +131,7 @@ $('.composerWrapper').on('click',function() {
 	topWindow.css('z-index', z_index);
 	topWindow.css('left', left);
 	
-	//EXCHANGE COLORS
+	//EXCHANGE COLORS  
 	var topBarBgColor = $(this).find('#MSG_COMPOSER_TOP_BAR').css('background-color');
 	var rightBarBgColor = $(this).find('#MSG_COMPOSER_RIGHT_BAR').css('background-color');
 	var leftBarBgColor = $(this).find('#MSG_COMPOSER_LEFT_BAR').css('background-color');
@@ -143,7 +149,28 @@ $('.composerWrapper').on('click',function() {
 	topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color', leftBarBgColor );
 	topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', bottomBarBgColor ); 
 	 
+	//EXCHANGE BORDERS
+
 	 
+	var borderTop = $(this).css('border-top');
+	var borderLeft =  $(this).css('border-left');
+	var borderRight =  $(this).css('border-right');
+	var borderBottom =  $(this).css('border-bottom');
+	  
+	
+	$(this).css('border-top', topWindow.css('border-top'));   
+	$(this).css('border-left', topWindow.css('border-left'));  
+	$(this).css('border-right', topWindow.css('border-right'));  
+	$(this).css('border-bottom', topWindow.css('border-bottom'));     
+	 
+	 
+	  
+	topWindow.css('border-top', borderTop);  
+	topWindow.css('border-left', borderLeft);   
+	topWindow.css('border-right', borderRight); 
+	topWindow.css('border-bottom', borderBottom);   
+	
+	//////////////
  
 	topWindow = $(this);
  
