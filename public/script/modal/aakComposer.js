@@ -27,13 +27,29 @@ $(function(){
 		$composerWrapper.toggle(); //salvin
 		
 		//$composerWrapper.css('bottom', getFooterBarHeight()); 
-		$composerWrapper.css('bottom', '40px');
+		$composerWrapper.css('bottom', '40px'); 
 		
-		/* Savlins*/
+		/* Savlins*/ 
 		 newBar = $('#headerBarId');
 		 newBar.show();
-		 newBar.css('top', $composerWrapper.css('top'));
-		 newBar.css('top','-=40');
+		 
+//		No help... always returns 'auto' as top :( like jQuery 
+//		 var computedStyle = getComputedStyle(document.getElementsByClassName('composerWrapper')[0], null)
+//		 
+//		     alert(computedStyle.top)
+ 
+		 //newBar.css('top', $composerWrapper.css('top'));
+		 //newBar.css('top','-=40'); 
+		 
+		newBar.css('top', $composerWrapper.position().top);
+		newBar.css('top','-=40'); 
+		 
+		//alert("Wrapper == " + $composerWrapper.position().top);
+		// alert("New Bar = " + newBar.css('top'));
+		 
+		 
+		 
+		 
 		/* Salvin's ends*/
 		//$composerWrapper.css('top', $footerBarHeight); 
 		//$composerWrapper.toggleClass('visible');
@@ -62,9 +78,17 @@ $('#new_plus').on('click', function() {
 		leftVar = leftVar + 65;
 		newComposer.css('z-index', z_index);
 		z_index--;
-		newBar.css('top', newComposer.css('top'));
+		newBar.css('top', newComposer.position().top);
 		newBar.css('top','-=40');
 		newBar.css('left', newComposer.css('left'));
+		
+		/*lighter grey background color for new composer popups*/
+		newComposer.find('#MSG_COMPOSER_TOP_BAR').css('background-color','#999696'); 
+		newComposer.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color','#999696'); 
+		newComposer.find('#MSG_COMPOSER_LEFT_BAR').css('background-color','#999696');
+		newComposer.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color','#999696');
+		
+		//alert("topddd === " + newBar.css('top'));
 		
 		//bottomVar = bottomVar + 10;
 		
@@ -85,7 +109,7 @@ $('.composerWrapper').on('click',function() {
     var bottom =  $(this).css('bottom');
 	var z_index = $(this).css('z-index');
 	var left = $(this).css('left');
-	var top = $(this).css('top');
+	var top = $(this).position().top;
 	
 	console.log(bottom + " "+ z_index + "  " +left);
 
@@ -100,6 +124,26 @@ $('.composerWrapper').on('click',function() {
 	topWindow.css('bottom', bottom);
 	topWindow.css('z-index', z_index);
 	topWindow.css('left', left);
+	
+	//EXCHANGE COLORS
+	var topBarBgColor = $(this).find('#MSG_COMPOSER_TOP_BAR').css('background-color');
+	var rightBarBgColor = $(this).find('#MSG_COMPOSER_RIGHT_BAR').css('background-color');
+	var leftBarBgColor = $(this).find('#MSG_COMPOSER_LEFT_BAR').css('background-color');
+	var bottomBarBgColor = $(this).find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color');
+	
+	$(this).find('#MSG_COMPOSER_TOP_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_TOP_BAR').css('background-color'));
+	$(this).find('#MSG_COMPOSER_RIGHT_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color'));
+	$(this).find('#MSG_COMPOSER_LEFT_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color'));
+	$(this).find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color'));
+	 
+	
+	 
+	topWindow.find('#MSG_COMPOSER_TOP_BAR').css('background-color', topBarBgColor );
+	topWindow.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color', rightBarBgColor );
+	topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color', leftBarBgColor );
+	topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', bottomBarBgColor ); 
+	 
+	 
  
 	topWindow = $(this);
  
