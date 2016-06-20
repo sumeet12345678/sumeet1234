@@ -78,58 +78,12 @@ $('#AAK_NEW_COMPOSER_WINDOW_BTN').on('click', function() {
  
 /* on click on each composer exchange the windows */	
 $('.composerWrapper').on('click',function() {
-	 
-    console.log('composer.......');
-    var bottom =  $(this).css('bottom');
-	var z_index = $(this).css('z-index');
-	var left = $(this).css('left');
-	var top = $(this).position().top;  
-		
-	$(this).css('bottom', topWindow.css('bottom'));
-	$(this).css('z-index', topWindow.css('z-index'));
-	$(this).css('left', topWindow.css('left'));  
-	
-	topWindow.css('bottom', bottom);
-	topWindow.css('z-index', z_index);
-	topWindow.css('left', left);
-	
-	//EXCHANGE COLORS  
-	var topBarBgColor = $(this).find('#MSG_COMPOSER_TOP_BAR').css('background-color');
-	var rightBarBgColor = $(this).find('#MSG_COMPOSER_RIGHT_BAR').css('background-color');
-	var leftBarBgColor = $(this).find('#MSG_COMPOSER_LEFT_BAR').css('background-color');
-	var bottomBarBgColor = $(this).find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color');
-	
-	$(this).find('#MSG_COMPOSER_TOP_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_TOP_BAR').css('background-color'));
-	$(this).find('#MSG_COMPOSER_RIGHT_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color'));
-	$(this).find('#MSG_COMPOSER_LEFT_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color'));
-	$(this).find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color'));  
-	
-	topWindow.find('#MSG_COMPOSER_TOP_BAR').css('background-color', topBarBgColor );
-	topWindow.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color', rightBarBgColor );
-	topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color', leftBarBgColor );
-	topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', bottomBarBgColor ); 
-	 
-	//EXCHANGE BORDERS 
-	var borderTop = $(this).css('border-top');
-	var borderLeft =  $(this).css('border-left');
-	var borderRight =  $(this).css('border-right');
-	var borderBottom =  $(this).css('border-bottom');  
-	
-	$(this).css('border-top', topWindow.css('border-top'));   
-	$(this).css('border-left', topWindow.css('border-left'));  
-	$(this).css('border-right', topWindow.css('border-right'));  
-	$(this).css('border-bottom', topWindow.css('border-bottom'));  
-	  
-	topWindow.css('border-top', borderTop);  
-	topWindow.css('border-left', borderLeft);   
-	topWindow.css('border-right', borderRight); 
-	topWindow.css('border-bottom', borderBottom);   
-	
-	
-	
-	
-	
-	topWindow = $(this);
+	   
+        if(!topWindow.is(this)) {
+        	 var whichWindow = swapComposerWindows($(this));
+         	maximizeComposer(whichWindow);
+        }
+        
 	
 	/* HIDE ALL OTHER WINDOWS AND SHOW THE CURRENT ONE . THE CLICKED WINDOW IS THE CURRENT TOP WINDOW NOW. */
 /*	$('.composerWrapper').hide();
@@ -142,6 +96,61 @@ $('.composerWrapper').on('click',function() {
 	//newWindowBtn.css('bottom', '500');
 	 
 });
+
+function swapComposerWindows(swapTo) {
+	 console.log('composer.......');
+	    
+	    var bottom =  swapTo.css('bottom');
+		var z_index =swapTo.css('z-index');
+		var left =swapTo.css('left');
+		var top =swapTo.position().top;  
+			
+		swapTo.css('bottom', topWindow.css('bottom'));
+		swapTo.css('z-index', topWindow.css('z-index'));
+		swapTo.css('left', topWindow.css('left'));  
+		
+		topWindow.css('bottom', bottom);
+		topWindow.css('z-index', z_index);
+		topWindow.css('left', left);
+		
+		//EXCHANGE COLORS  
+		var topBarBgColor =swapTo.find('#MSG_COMPOSER_TOP_BAR').css('background-color');
+		var rightBarBgColor =swapTo.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color');
+		var leftBarBgColor =swapTo.find('#MSG_COMPOSER_LEFT_BAR').css('background-color');
+		var bottomBarBgColor =swapTo.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color');
+		
+		swapTo.find('#MSG_COMPOSER_TOP_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_TOP_BAR').css('background-color'));
+		swapTo.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color'));
+		swapTo.find('#MSG_COMPOSER_LEFT_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color'));
+		swapTo.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color'));  
+		
+		topWindow.find('#MSG_COMPOSER_TOP_BAR').css('background-color', topBarBgColor );
+		topWindow.find('#MSG_COMPOSER_RIGHT_BAR').css('background-color', rightBarBgColor );
+		topWindow.find('#MSG_COMPOSER_LEFT_BAR').css('background-color', leftBarBgColor );
+		topWindow.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color', bottomBarBgColor ); 
+		 
+		//EXCHANGE BORDERS 
+		var borderTop =swapTo.css('border-top');
+		var borderLeft = swapTo.css('border-left');
+		var borderRight = swapTo.css('border-right');
+		var borderBottom = swapTo.css('border-bottom');  
+		
+		swapTo.css('border-top', topWindow.css('border-top'));   
+		swapTo.css('border-left', topWindow.css('border-left'));  
+		swapTo.css('border-right', topWindow.css('border-right'));  
+		swapTo.css('border-bottom', topWindow.css('border-bottom'));  
+		  
+		topWindow.css('border-top', borderTop);  
+		topWindow.css('border-left', borderLeft);   
+		topWindow.css('border-right', borderRight); 
+		topWindow.css('border-bottom', borderBottom);   
+		
+		 
+		
+		topWindow =swapTo;
+		
+		return topWindow;
+}
 
 $('#AAK_PLUS_CLOSE_BTN').on('click', function() {
 	//$(this).closest(".composerWrapper").remove();
