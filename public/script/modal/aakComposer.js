@@ -21,11 +21,15 @@ $(function(){
 	var windowsHidden = false;
 	
 	
+	
 	// main window shou  60px and focuse
 	
 	// set creat new 
 	
 	$('#plus').on('click', function() { 
+		
+		$('#COMMON_BLUR_SCREEN').toggle();
+		
 		 $('.composerWrapper').toggle();
 		 
 		 if(windowsHidden) {
@@ -152,8 +156,12 @@ function swapComposerWindows(swapTo) {
 		return topWindow;
 }
 
-$('#AAK_PLUS_CLOSE_BTN').on('click', function() {
-	//$(this).closest(".composerWrapper").remove();
+$('#AAK_PLUS_CLOSE_BTN').on('click', function() { 
+	if($('.composerWrapper').length == 1) {
+		$('#COMMON_BLUR_SCREEN').toggle();
+	}
+	
+	$(this).closest(".composerWrapper").remove();
 });
 	 
 	/* EXPAND AAK COMPOSER */ 
@@ -193,7 +201,7 @@ function maximizeComposer(parentComposerWrapper){
 	 parentComposerWrapper.css('top','0'); 
 	 //parentComposerWrapper.find('#MSG_COMPOSER_CC_TEXTAREA').css('display', 'block');///////
     // parentComposerWrapper.find('#MSG_COMPOSER_CHAT_TEXTAREA').css('display', 'block');///////
-	// parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'block');
+	  parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'block');
 	
 
 	//Melbin's Code
@@ -220,7 +228,7 @@ function minimizeComposer(parentComposerWrapper) {
 	parentComposerWrapper.css('top', 'auto');  ////////////////////////////////////////
 	//parentComposerWrapper.find('#MSG_COMPOSER_CC_TEXTAREA').css('display', 'none');///////
 	//parentComposerWrapper.find('#MSG_COMPOSER_CHAT_TEXTAREA').css('display', 'none');///////
-	//parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'none');
+	parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'none');
 	
 	//Melbin's Code
 	$smileyemotions.css('top', '-151px');

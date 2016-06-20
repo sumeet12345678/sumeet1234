@@ -7,7 +7,7 @@
 	
 	//alert(" -----"  + CENTER_REGION_HEIGHT);  
 	//alert(" ----ttt-"  + TOP_MENU_BAR_HEIGHT);
-	
+	var _g_blurScreen;
    
 
  
@@ -81,8 +81,22 @@ function showHideDownSibling(whose) {
 }
 
 
+function blurScreen() {
+	 
+	if(!_g_blurScreen){
+		 
+		_g_blurScreen = $('<div style = "width: 100%; height: 100%; background-color: #000;"></div>');
+		 
+		_g_blurScreen.appendTo('body');
+		
+	} 
+	
+	_g_blurScreen.show();
+}
 
-
+function unBlurScreen() {
+	_g_blurScreen.hide();
+}
 
 //function getDeviceType() {
 	
