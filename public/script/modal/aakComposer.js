@@ -70,20 +70,20 @@ $('#AAK_NEW_COMPOSER_WINDOW_BTN').on('click', function() {
 		newComposer.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color','#999696');
 		
 		/* lighter border(same as composerWrapper)*/ 
-		newComposer.css('border-top', '2px solid #525252');   
-		newComposer.css('border-left', '1px solid #525252');  
-		newComposer.css('border-right', '1px solid #525252');  
-		newComposer.css('border-bottom', '0px solid #525252');  
+		 newComposer.css('border-top', '0px solid #999696');   
+		 newComposer.css('border-left', '0px solid #999696');  
+		 newComposer.css('border-right', '0px solid #999696');  
+		 newComposer.css('border-bottom', '0px solid #999696');  
 	});
  
-/* on click on each composer */	
+/* on click on each composer exchange the windows */	
 $('.composerWrapper').on('click',function() {
 	 
     console.log('composer.......');
     var bottom =  $(this).css('bottom');
 	var z_index = $(this).css('z-index');
 	var left = $(this).css('left');
-	var top = $(this).position().top; 
+	var top = $(this).position().top;  
 		
 	$(this).css('bottom', topWindow.css('bottom'));
 	$(this).css('z-index', topWindow.css('z-index'));
@@ -113,7 +113,7 @@ $('.composerWrapper').on('click',function() {
 	var borderTop = $(this).css('border-top');
 	var borderLeft =  $(this).css('border-left');
 	var borderRight =  $(this).css('border-right');
-	var borderBottom =  $(this).css('border-bottom'); 
+	var borderBottom =  $(this).css('border-bottom');  
 	
 	$(this).css('border-top', topWindow.css('border-top'));   
 	$(this).css('border-left', topWindow.css('border-left'));  
@@ -124,18 +124,23 @@ $('.composerWrapper').on('click',function() {
 	topWindow.css('border-left', borderLeft);   
 	topWindow.css('border-right', borderRight); 
 	topWindow.css('border-bottom', borderBottom);   
- 
+	
+	
+	
+	
+	
 	topWindow = $(this);
 	
 	/* HIDE ALL OTHER WINDOWS AND SHOW THE CURRENT ONE . THE CLICKED WINDOW IS THE CURRENT TOP WINDOW NOW. */
-	$('.composerWrapper').hide();
+/*	$('.composerWrapper').hide();
 	topWindow.show();
 	windowsHidden = true;
-	
-	newWindowBtn.css('top', topWindow.position().top);
-	newWindowBtn.css('top','-=31'); 
-	newWindowBtn.css('left',topWindow.css('left'));  
-	
+*/	
+//	newWindowBtn.css('top', topWindow.position().top);
+//	newWindowBtn.css('top','-=31'); 
+//	newWindowBtn.css('left',topWindow.css('left'));  
+	//newWindowBtn.css('bottom', '500');
+	 
 });
 
 $('#AAK_PLUS_CLOSE_BTN').on('click', function() {
