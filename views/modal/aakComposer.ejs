@@ -49,11 +49,15 @@
 	
 	<body  id="AAK_BOX_CONTENT">		  
 		 
-		  <div class="composerWrapper popUp" tabindex="0" style="height: 157px;  border-top: 2px solid #000;   border-left: 1px solid #000; border-right: 1px solid #000;   border-bottom: 0px solid #525252;">
+		  <div class="composerWrapper popUp" tabindex="0" style="height: 157px;  border-top: 2px solid #525252;   border-left: 1px solid #525252; border-right: 1px solid #525252;   border-bottom: 0px solid #7D7A7A;">
 		  
 		  		
 		      
-		  		<div id = "MSG_COMPOSER_TOP_BAR" style="width: 100%; background-color: #525252; height: 40px;  padding-top: 8px;">
+		  		<div id = "MSG_COMPOSER_TOP_BAR" style="width: 100%; background-color: #7D7A7A; height: 40px;  padding-top: 8px; position: relative;">
+		  				<div id = "AAK_PLUS_CLOSE_BTN" style = "margin-left: 2px; height: 30px; width: 30px; line-height: 30px; position: absolute; bottom: 43px; background-color: #525252; text-align: center; border-radius: 2px; border: 1px solid #525252;">
+	  			 			 <span style = "font-size: 18px; color: #fff;  "><b>x</b></span>
+	  			 	    </div> 
+	  			 	
 		  			 
 		  				 <select  id = AAK_PLUS_CAT style = "margin-left: 40px; width: 85px; margin-right: 5px; height: 22px;">
 		  				  <option value="">Select Option</option>
@@ -72,13 +76,13 @@
 		  			 
 		  			
 	  			 	<img  id = MSG_COMPOSER_MAX_MIN style="float: right; display:block;  margin-right: 10px;" src="/media/images/aakPlus/full-screen-zoom-wht.png" height="22" width="22"> 
-	  			 	<img id= "MSG_POP_OUT_WINDOW"  style="float: right; display:block;   margin-right: 20px;" src="/media/images/aakPlus/new-win-pop-out-wht.png" height="18" width="18"> 
-	  			 	
-	  			 	
+	  			 	<img id= "MSG_POP_OUT_WINDOW"  style="float: right; display:block;   margin-right: 20px;" src="/media/images/aakPlus/new-win-pop-out-wht.png" height="18" width="18">
+	  			 	 
+	  			 
 		  		</div><!-- 
 		  		
 		  		  
-		  --> <div id="MSG_COMPOSER_LEFT_BAR" style="width: 40px; padding-top: 0px; background-color: #525252; height:calc(100% - 40px); float:left; position:relative;">
+		  --> <div id="MSG_COMPOSER_LEFT_BAR" style="width: 40px; padding-top: 0px; background-color: #7D7A7A; height:calc(100% - 40px); float:left; position:relative;">
 		  			<img  id = MSG_COMPOSER_TO style="display:block;margin-left:auto;margin-right:auto;" src="/media/images/icons/add-audience.png" height="28" width="28">
 		  			<!-- <img  id = MSG_COMPOSER_MSG_TYPE   style="display:block; position1:absolute; lef1t:0; right1:0;margin-left:auto; margin-right:auto;" src="/media/images/icons/messages-icon.png" height="28" width="28"> -->	
 		  			<!-- <img id = MSG_COMPOSER_CATEGORY style="display:block;margin-left:auto;margin-right:auto; margin-top:12px;" class="" src="/media/images/icons/icon-question.png" height="28" width="28"> --> 	  
@@ -87,11 +91,13 @@
 		  			  
 		  		</div>      
 		  
-		  		<div id="MSG_COMPOSER_RIGHT_BAR" style="width: 40px; background-color: #525252; height:calc(100% - 40px); float:right; position:relative; padding-top:0px;">  
+		  		<div id="MSG_COMPOSER_RIGHT_BAR" style="width: 40px; background-color: #7D7A7A; height:calc(100% - 40px); float:right; position:relative; padding-top:0px;">  
 		  			<!-- <img  id = MSG_COMPOSER_TO style="display:block;margin-left:auto;margin-right:auto;" src="/media/images/icons/white-portals.png" height="28" width="28"> -->
 		  			 
 		  		<!-- 	<img  id = MSG_COMPOSER_ADD_STUFF style="display:block;margin-left:auto;margin-right:auto; margin-top:16px;" src="/media/images/icons/wht-plus.png" height="28" width="28"> -->
-		  			<img  id = MSG_COMPOSER_ADD_STUFF style="display:block;margin-left:auto;margin-right:auto; margin-top:35px;" src="/media/images/icons/operators-white/plus-white.png" height="18" width="18">	
+		  			  <img  id = MSG_COMPOSER_ADD_STUFF style="display:block;margin-left:auto;margin-right:auto; margin-top:35px;" src="/media/images/icons/operators-white/plus-white.png" height="18" width="18">
+		  		<!-- 	<img  id = new_plus style="display:block;margin-left:auto;margin-right:auto; margin-top:35px;" src="/media/images/icons/operators-white/plus-white.png" height="18" width="18"> -->
+		  			
 		  			<img  id =  MSG_COMPOSER_STANDALONE_SND_ICON style="display: none; position: absolute; bottom : 5px; left: 0; right: 0;  margin-left:auto; margin-right:auto; " src="/media/images/icons/send_icon.png" height="28" width="28"> 	    
 		  		</div>
 		  		
@@ -111,7 +117,7 @@
 		  		</div>
 		  
 		  		  
-		  		<div id= MSG_COMPOSER_BOTTOM_BAR style="display: none; width: 100%; height: 40px; position: absolute; bottom: 0; left:0; right: 0; margin-left: auto; margin-right: auto; background-color: #525252;">
+		  		<div id= MSG_COMPOSER_BOTTOM_BAR style="display: none; width: 100%; height: 40px; position: absolute; bottom: 0; left:0; right: 0; margin-left: auto; margin-right: auto; background-color: #7D7A7A;">
 		  					&nbsp;  
 		  		</div>    
 		  		
@@ -273,13 +279,11 @@
 		  </div>   
 		
 		
-		<!--                   HEADER               -->
-		<div id ='headerBarId' style = "height: 40px; background-color: #54A32F; position: fixed; top: 0; bottom: 0; width: 80%; left:0; right: 0; margin-left:auto; margin-right:auto; display:none;"> 
-			<img id="new_plus" width="28" height="28" src="media/images/icons/wht-plus.png"/> New
-			<!-- <span style = "font-size: 20px; font-weight: bold; color: #fff;">+</span> -->
-		
-		</div>
-		
+		<!--                   HEADER         -->     
+	 	<div id ='AAK_NEW_COMPOSER_WINDOW_BTN' style = "height: 30px; width: 30px; line-height: 30px; text-align: center; border: 1px solid #525252; border-radius: 2px; background-color: #CCD674; position: fixed; top: 0; bottom: 0;display:none;">  
+			  <span style = " width: 28; height: 28; font-size: 20px; font-weight: bold; color: #000;">+</span>   
+		</div>  
+	 
 		
 		<script>
 			$('#MSG_COMPOSER_DSGN_N_PRVW_DISPLAY_ICON').on('click', function() {
