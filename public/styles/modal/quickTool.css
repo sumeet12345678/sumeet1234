@@ -13,7 +13,7 @@
 	top:0;
 	left:0;
     width: 100%;
-    padding-top: 5px;
+  
 	height: 55px;
 	border-bottom: 2px solid #558ED5;
 }
@@ -27,7 +27,7 @@
 	height:calc(100%-100px);
 	background-color: #525252;
     width:80px;
-    padding-right: 0px;
+    
     border-right: 2px solid #558ED5;
 }
 #QUK_TOOL_RIGHT_BAR
@@ -39,7 +39,7 @@
 	height:calc(100%-100px);
 	background-color:#525252;
     width:80px;
-    padding-left: 0px;
+   
     border-left: 2px solid #558ED5;
 }
 #QUK_TOOL_BOTTOM_BAR
@@ -49,7 +49,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 55px;
-	padding-bottom: 0px;
+	 
 	left: 0;
 	text-align: center;
 	border-top: 2px solid #558ED5;
@@ -61,22 +61,22 @@
 	max-width:1000px; 
 }
 
-#QUK_TOOL_TOP_BAR11 img
+#QUK_TOOL_TOP_BAR11111111 img 
 {
-	left: 10%;
+	left1111: 10%;
 	margin-right: 110px;
     margin-left: 2px;
     max-width: 100%;
 	 
 }
-#QUK_TOOL_LEFT_BAR  img
+#QUK_TOOL_LEFT_BAR12333  img 
 {
 	margin-top: 50px;
 	margin-bottom111: 40px;
 	margin-right111: 75px;
 	
 }
-#QUK_TOOL_RIGHT_BAR img
+#QUK_TOOL_RIGHT_BAR12345 img 
 {
 	margin-top: 50px;
 	margin-bottom111: 40px;
@@ -87,11 +87,11 @@
 {
 	
 }
-#QUK_TOOL_TOP_BAR:first-child > img
+#QUK_TOOL_TOP_BAR12345:first-child > img
 {
 	left: 50px;
 }
-#QUK_TOOL_TOP_BAR:last-child > img
+#QUK_TOOL_TOP_BAR12345:last-child > img
 {
 	right:50px;
 }

@@ -32,7 +32,7 @@ router.get('/unicomposer/instantMessage', function(req, res, next) {
 
 /* GET people_with_pic.ejs file. */
 router.get('/unicomposer/email', function(req, res, next) {
-  res.render('unicomposer/ajax/email.ejs');   
+  res.render('unicomposer/ajax/classifieds.ejs');   
 });
 
 

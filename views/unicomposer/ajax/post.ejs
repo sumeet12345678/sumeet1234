@@ -1,19 +1,156 @@
+<style>
+	#PLACE_HOLDER{
+	margin-left: auto;
+	margin-right: auto;
+}
 
-<div id = UNI_COMPOSER_POST  class = "uni-composer-msg-category">
-	<div style = "height: 20px; background-color: #fff;">
-		Audience
-	</div>
+#POST_TARGET_AUDIENCE {
+
+	border: 1px solid black;
+	width: 100%; 
+	height: 30px; 
+	margin-bottom: 5px;
+
+}
+
+
+#POST_TARGET_HEADLINE{
+
+	border: 1px solid black; 
+	width: 100%; 
+	height: 30px; 
+	margin-bottom: 5px;
+}
+
+#POST_TARGET_UPLOAD_IMAGE{
+
+	text-align: center;
+	border: 2px solid orange; 
+	height: 300px; 
+	margin-bottom: 5px;
+
 	
-	<div style = "height: 20px; background-color: #fff;">
-		Headline: Why you should be changing companies every often and regularly!
-	</div>
+}
+
+#POST_TARGET_UPLOAD_IMAGE:before{
+	content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+#POST_TARGET_WRITE_UP{
+
+	border: 1px solid black; 
+	width: 70%; 
+	height: 150px;
+	margin-top: 5px;
+}
+
+#POST_TARGET_SUB_CATEGORY{
+
+	border: 1px solid black; 
+	width:20%; 
+	height: 30px; 
+	margin-top: 5px; 
+	display: inline-block; 
+	float: left;
+	margin-right: 10px;
 	
-	<div style = "height: 200px;">
-		Add an Image to bring your post to life.
-	</div>
+}
+
+#POST_TARGET_ICON{
+
+	margin-top: 5px;
+}
+
+.post-target-image{
+	width: 60%;
+	display: inline-block;
+	height: auto;
 	
+}
+
+#OUTPUT{
+	width: 50%;
+	height: 70%;
+}
+
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-placeholder) }
+
+
+
+
+/* ---- Mobile Device Section --- */
+
+@media screen and (max-width: 767px){
+
+	#POST_TARGET_UPLOAD_IMAGE{
+		width: 100%;
+	}
+
+	#POST_TARGET_WRITE_UP{
+		width: 100%;
+	}
+
+	#POST_TARGET_SUB_CATEGORY{
+		width: 70%;
+	}
+
+	#PLACE_HOLDER{
+		width: 100%;
+	}
+
 	
-	<div style = "height: 200px; background-color: #fff;">
-		Write up:
-	</div>
-</div>
+}
+
+
+/* ----- Larger Device Section ----*/
+
+@media screen and (min-width: 768px){
+
+	#POST_TARGET_UPLOAD_IMAGE{
+		width: 70%;
+	}
+
+	#POST_TARGET_WRITE_UP{
+		width: 70%;
+	}
+
+	#PLACE_HOLDER{
+		width: 80%;
+	}
+}
+
+</style>
+
+<div id= PLACE_HOLDER>
+
+
+		 <div id=POST_TARGET_AUDIENCE contentEditable=true data-placeholder="Audience:" ></div>
+
+		 <div id=POST_TARGET_HEADLINE contentEditable=true data-placeholder="Headline:" ></div>
+
+		<div id= POST_TARGET_UPLOAD_IMAGE >
+		
+			<div class="post-target-image" >	
+	
+				<img  src="media/icons/down-grey.png" width="30px" height="30px" >
+				<p><b><font size = "5"> Add an image to bring your post to life</font></b></p>
+				<p><b>Images that are atleast 700 x 400 pixels look best</b></p>
+
+			</div>
+			
+		</div>  
+
+		<div id= POST_TARGET_WRITE_UP  contentEditable= true data-placeholder="Write Up:"></div>
+
+		<div id= POST_TARGET_SUB_CATEGORY contentEditable= true data-placeholder="SubCategory:"></div>
+
+		<div id= POST_TARGET_ICON  >
+			<img src="media/icons/add.png" width="30px;" height="30px;">
+		</div>
+
+</div> 

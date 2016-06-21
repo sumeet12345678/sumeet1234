@@ -113,8 +113,92 @@ $(function(){
 		  			   'text' : 'Groups',
 		  			   'col'  : 'yellow',
 		  			   'url'  : '123'
+		            },
+		            {  'id'   : '16',
+		  			   'img'  : '/media/images/icons/add-audience.png',
+		  			   'text' : 'Connections',
+		  			   'col'  : '#dcdcdc',
+		  			   'url'  : '123'
+	                },
+	                {  'id'   : '17',
+			  			   'img'  : '/media/images/icons/team/team-blk.png',
+			  			   'text' : 'Teams',
+			  			   'col'  : 'orange',
+			  			   'url'  : '123'
+		            },
+		            {  'id'   : '18',
+		  			   'img'  : '/media/images/icons/crowd-black.png',
+		  			   'text' : 'Groups',
+		  			   'col'  : 'yellow',
+		  			   'url'  : '123'
+		            },
+		            {  'id'   : '16',
+		  			   'img'  : '/media/images/icons/add-audience.png',
+		  			   'text' : 'Connections',
+		  			   'col'  : '#dcdcdc',
+		  			   'url'  : '123'
+	                },
+	                {  'id'   : '17',
+			  			   'img'  : '/media/images/icons/team/team-blk.png',
+			  			   'text' : 'Teams',
+			  			   'col'  : 'orange',
+			  			   'url'  : '123'
+		            },
+		            {  'id'   : '18',
+		  			   'img'  : '/media/images/icons/crowd-black.png',
+		  			   'text' : 'Groups',
+		  			   'col'  : 'yellow',
+		  			   'url'  : '123'
+		            },
+		            {  'id'   : '16',
+		  			   'img'  : '/media/images/icons/add-audience.png',
+		  			   'text' : 'Connections',
+		  			   'col'  : '#dcdcdc',
+		  			   'url'  : '123'
+	                },
+	                {  'id'   : '17',
+			  			   'img'  : '/media/images/icons/team/team-blk.png',
+			  			   'text' : 'Teams',
+			  			   'col'  : 'orange',
+			  			   'url'  : '123'
+		            },
+		            {  'id'   : '18',
+		  			   'img'  : '/media/images/icons/crowd-black.png',
+		  			   'text' : 'Groups',
+		  			   'col'  : 'yellow',
+		  			   'url'  : '123'
+		            },
+		            {  'id'   : '17',
+			  			   'img'  : '/media/images/icons/team/team-blk.png',
+			  			   'text' : 'Teams',
+			  			   'col'  : 'orange',
+			  			   'url'  : '123'
+		            },
+		            {  'id'   : '18',
+		  			   'img'  : '/media/images/icons/crowd-black.png',
+		  			   'text' : 'Groups',
+		  			   'col'  : 'yellow',
+		  			   'url'  : '123'
+		            },
+		            {  'id'   : '16',
+		  			   'img'  : '/media/images/icons/add-audience.png',
+		  			   'text' : 'Connections',
+		  			   'col'  : '#dcdcdc',
+		  			   'url'  : '123'
+	                },
+	                {  'id'   : '17',
+			  			   'img'  : '/media/images/icons/team/team-blk.png',
+			  			   'text' : 'Teams',
+			  			   'col'  : 'orange',
+			  			   'url'  : '123'
+		            },
+		            {  'id'   : '18',
+		  			   'img'  : '/media/images/icons/crowd-black.png',
+		  			   'text' : 'Groups',
+		  			   'col'  : 'yellow',
+		  			   'url'  : '123'
 		            }
-    
+
 	  ];
 	  
 	  //alert("ID === " + images[0].id);
@@ -127,12 +211,34 @@ $(function(){
 //	  leftbarEnd=12;
 //	  image();  
 	  
+	 
+	  /* DECIDE THESE VALUES BASED ON DEVICE SIZE */
 	  rightbarStart=1;
-	  rightbarEnd=3;
-	  topbarStart=4;
-	  topbarEnd=7;
-	  leftbarStart=8;
-	  leftbarEnd=10;
+	  
+	  //rightbarEnd=3; //End value auto generated
+	  //height [.height()] of right bar(400)/42 + 5 + 5  = 7.6 = rounded to lowest = 7 i.e, rightBarEnd = 7  and topBarStart =  rightBarEnd + 1
+	  // after getting each bar size, check if the bar is consuming entire json image data. If it is, then check the next bar's variable setting.
+	  var rightBarHeight = $('#QUK_TOOL_RIGHT_BAR').height();
+	  rightbarEnd = Math.floor(rightBarHeight/52); // height of image with container and top and bottom margin
+	  
+	 
+	  
+	  //topbarStart=4;
+	  topbarStart= rightbarEnd + 1;
+	  //  auto generate topbarEnd
+	 // topbarEnd=7;
+	  var topBarWidth = $('#QUK_TOOL_TOP_BAR').width(); 
+	  topbarEnd = topbarStart +  Math.floor(topBarWidth/90) -1;
+	  
+	  
+	 // leftbarStart=8;
+	  leftbarStart= topbarEnd + 1;
+	  var leftBarHeight = $('#QUK_TOOL_LEFT_BAR').height();
+	  leftbarEnd = leftbarStart + Math.floor(leftBarHeight/52)-1;
+	  
+	  console.log("rightBarStart == " + rightbarStart + "  rightbarEnd == " + rightbarEnd + "  topbarStart == " + topbarStart + "  topbarEnd == " + topbarEnd + "  leftbarStart==" + leftbarStart + "  leftbarEnd==" + leftbarEnd );
+	  
+	//  leftbarEnd=10;
 	  image();
 	  
 //	  rightbarStart=0;
@@ -266,7 +372,7 @@ $(function(){
          
 	     
 	     
-        	  divContainerForImage = $('<div style = "text-align: center; display: inline-block; width: 80px;"></div>');
+        	  divContainerForImage = $('<div style = "text-align: center; display: inline-block; width: 80px; height: 42px;"></div>');
         	  
         	  imageToAppend = $('<img>');
         	  imageToAppend.attr('width', "30");
@@ -292,7 +398,7 @@ $(function(){
 //            f1_2012_image.setAttribute("height", "50");
 //            f1_2012_image.setAttribute("width", "50");
 
-      	  divContainerForImage = $('<div style = "text-align: center; display: inline-block; width: 80px;"></div>');
+      	  divContainerForImage = $('<div style = "text-align: center; display: inline-block; width: 80px;height: 42px;"></div>');
       	  
       	  imageToAppend = $('<img>');
       	  imageToAppend.attr('width', "30");
@@ -315,8 +421,10 @@ $(function(){
 //
 //            f1_2012_image.setAttribute("height", "50");
 //            f1_2012_image.setAttribute("width", "50");
+        	
+        	//appendToBar(index, content, containerBar);
 
-      	  divContainerForImage = $('<div style = "text-align: center; display: inline-block; width: 80px;"></div>');
+      	  divContainerForImage = $('<div style = "text-align: center; display: inline-block; width: 80px; height: 42px;"></div>');
       	  
       	  imageToAppend = $('<img>');
       	  imageToAppend.attr('width', "30");
@@ -336,10 +444,10 @@ $(function(){
     }
 	
 	
-// function appendToBar(content, containerBar){
-//	 
-//	 
-// }
+ function appendToBar(index, content, containerBar){
+	 
+	 
+ }
 	                 
  function leftArrow()
   {
