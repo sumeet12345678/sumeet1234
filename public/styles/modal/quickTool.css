@@ -1,49 +1,97 @@
 
-
-#QUK_TOOL_TOP_BAR{
-		display: none;
-		width: 100%; 
-		height: 45px;
-		position: fixed; 
-		top:0px;
-		left: 0px; 
-		z-index: 99999; 
-		background-color: #404040;  
+#QUK_TOOL_TOP_BAR, #QUK_TOOL_LEFT_BAR, #QUK_TOOL_RIGHT_BAR, #QUK_TOOL_BOTTOM_BAR {
+	z-index: 9999;	
 }
 
-#QUK_TOOL_BOTTOM_BAR {
-		display: none;
-		width: 100%; 
-		height: 45px;
-		position: fixed; 
-		bottom123:0px;
-		left	: 0px; 
-		z-index: 99999; 
-		background-color: #404040;
-		background-color123: blue;  
+
+
+#QUK_TOOL_TOP_BAR
+{
+	display: none;
+	position: fixed;
+	background-color:#525252;
+	top:0;
+	left:0;
+    width: 100%;
+    padding-top: 5px;
+	height: 55px;
+	border-bottom: 2px solid #558ED5;
 }
 
-#QUK_TOOL_LEFT_BAR {
-		display: none;
-		width: 45px; 
-		height11: 75%;
-		position: fixed; 
-		bottom1:0px;
-		left	: 0px;
-		top:45px; 
-		z-index: 99999; 
-		background-color: #404040;
-		background-color123: silver;
+#QUK_TOOL_LEFT_BAR
+{   display: none;
+	position: fixed;
+	left:0px;
+	top: 50px;
+	bottom: 60px;
+	height:calc(100%-100px);
+	background-color: #525252;
+    width:80px;
+    padding-right: 0px;
+    border-right: 2px solid #558ED5;
+}
+#QUK_TOOL_RIGHT_BAR
+{   display: none;
+	position: fixed;
+	right:0px;
+	top: 50px;
+	bottom: 50px;
+	height:calc(100%-100px);
+	background-color:#525252;
+    width:80px;
+    padding-left: 0px;
+    border-left: 2px solid #558ED5;
+}
+#QUK_TOOL_BOTTOM_BAR
+{   display: none;
+	background-color: #525252;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 55px;
+	padding-bottom: 0px;
+	left: 0;
+	text-align: center;
+	border-top: 2px solid #558ED5;
+	
+}
+#slideshow 
+{ 
+	max-height:1000px; 
+	max-width:1000px; 
 }
 
-#QUK_TOOL_RIGHT_BAR {
-		display: none;
-		width: 45px; 
-		position: fixed; 
-		bottom1:0px;
-		right	: 0px;
-		top:45px; 
-		z-index: 99999; 
-		background-color: #404040;
+#QUK_TOOL_TOP_BAR11 img
+{
+	left: 10%;
+	margin-right: 110px;
+    margin-left: 2px;
+    max-width: 100%;
+	 
 }
- 
+#QUK_TOOL_LEFT_BAR  img
+{
+	margin-top: 50px;
+	margin-bottom111: 40px;
+	margin-right111: 75px;
+	
+}
+#QUK_TOOL_RIGHT_BAR img
+{
+	margin-top: 50px;
+	margin-bottom111: 40px;
+	margin-right111: 75px;
+	
+}
+#QUK_TOOL_BOTTOM_BAR img
+{
+	
+}
+#QUK_TOOL_TOP_BAR:first-child > img
+{
+	left: 50px;
+}
+#QUK_TOOL_TOP_BAR:last-child > img
+{
+	right:50px;
+}
