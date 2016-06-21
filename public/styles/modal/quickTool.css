@@ -13,9 +13,9 @@
 	top:0;
 	left:0;
     width: 100%;
-  
-	height: 55px;
-	border-bottom: 2px solid #558ED5;
+	height: 65px;
+	border-bottom: 0px solid #558ED5;
+	text-align: center;
 }
 
 #QUK_TOOL_LEFT_BAR
@@ -28,7 +28,7 @@
 	background-color: #525252;
     width:80px;
     
-    border-right: 2px solid #558ED5;
+    border-right: 0px solid #558ED5;
 }
 #QUK_TOOL_RIGHT_BAR
 {   display: none;
@@ -40,7 +40,7 @@
 	background-color:#525252;
     width:80px;
    
-    border-left: 2px solid #558ED5;
+    border-left: 0px solid #558ED5;
 }
 #QUK_TOOL_BOTTOM_BAR
 {   display: none;
@@ -48,11 +48,10 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 55px;
-	 
+	height: 65px;   
 	left: 0;
 	text-align: center;
-	border-top: 2px solid #558ED5;
+	border-top: 0px solid #558ED5;
 	
 }
 #slideshow 
@@ -61,29 +60,26 @@
 	max-width:1000px; 
 }
 
-#QUK_TOOL_TOP_BAR11111111 img 
+#QUK_TOOL_TOP_BAR .quk-tool-img-caption-container 
 {
-	left1111: 10%;
-	margin-right: 110px;
-    margin-left: 2px;
-    max-width: 100%;
-	 
+	 margin-top: 2px;
+	 margin-left: 15px;
+	 margin-right: 15px;
 }
-#QUK_TOOL_LEFT_BAR12333  img 
+
+#QUK_TOOL_LEFT_BAR  .quk-tool-img-caption-container
 {
-	margin-top: 50px;
-	margin-bottom111: 40px;
-	margin-right111: 75px;
-	
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
-#QUK_TOOL_RIGHT_BAR12345 img 
+
+#QUK_TOOL_RIGHT_BAR .quk-tool-img-caption-container 
 {
-	margin-top: 50px;
-	margin-bottom111: 40px;
-	margin-right111: 75px;
-	
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
-#QUK_TOOL_BOTTOM_BAR img
+
+#QUK_TOOL_BOTTOM_BAR12345 img
 {
 	
 }
