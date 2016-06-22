@@ -6,7 +6,46 @@
  *:focus {
  	outline: 0;
  }
+ 
+ /*TOP MENU BAR and PUSH ZONE SETTINGS @ media query below */
+ 
+.img-with-caption-common {
+	text-align: center; 
+	display: inline-block; 
+	width: 80px;
+	margin-top: 15px;
+}
 
+.img-with-caption-common .img-caption {
+	display: block;
+	line-height:.5; 
+	font-size: 12px; 
+	margin-top: 2px;
+	margin-top: 15px;
+	color: #525252;
+	 
+}
+ 
+.common-text-box-prop {
+	border-radius: 0px;
+}
+.common-text-box-prop:focus {
+	border: 2px solid #77933C;
+	border-radius: 0px;
+}
+ 
+/* -----  SECTIONS      ------------- */
+
+.big-sections-bar {  
+		height: 80px; 
+		border-radius: 3px;
+		background-color: #cddb4d;
+		text-align: center;
+		line-height: 60px;
+		color: #000;
+		margin-left: 5px;
+		margin-right: 5px;
+}
  
  /* ---------------------- COMMON TOP MENU BAR STYLE --------------------------- */
 	
@@ -146,13 +185,32 @@
 	color: #77933C;
 }
 
-@media screen and (min-width: 1025px)  {  
+
+@media screen and (max-width: 1024px)  {  
+    #PROJECT_TOP_MENU_BAR_CNTNR_ID {
+  	 height: 42px;
+    }
+  
+  #PROJECT_TOP_MENU_BAR_PUSH_ZONE_ID {
+    height: 31px;
+  } 
+	  
+}
+
+@media screen and (min-width: 1025px)  {   
   .website-screen-width_dt {
  	width: 70%;
  	margin-left: auto;  
  	margin-right: auto;
- }
-	
+  }
+  
+  #PROJECT_TOP_MENU_BAR_CNTNR_ID {
+  	height: 42px;
+  }
+  
+  #PROJECT_TOP_MENU_BAR_PUSH_ZONE_ID {
+    height: 29px; 
+  }
 	
 }
  

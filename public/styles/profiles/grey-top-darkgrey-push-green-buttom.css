@@ -116,12 +116,7 @@ div {
 	border: 2px solid #77933C;
 	border-radius: 0px;
 }
-
-
-.searchBox:focus {
-	border: 2px solid #77933C;
-	border-radius: 0px;
-}
+ 
 /* Displays search button on focus only */
 #searchBtnId {
 	background-color: #3f3f3f;

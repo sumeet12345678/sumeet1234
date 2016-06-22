@@ -80,6 +80,11 @@ function showHideDownSibling(whose) {
  	 }
 }
 
+/* toggle big section */
+function showHideDownSiblingForBigSection(whose) {
+	whose.siblings().toggle();
+}
+
 
 function blurScreen() {
 	 

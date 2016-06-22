@@ -28,20 +28,28 @@ router.get('/unicomposer/instantMessage', function(req, res, next) {
 }); 
 
   
-
+/* GET people_with_pic.ejs file. */
+router.get('/teamsHome', function(req, res, next) {
+  res.render('teams/teamsHome.ejs');     
+});
 
 /* GET people_with_pic.ejs file. */
-router.get('/unicomposer/email', function(req, res, next) {
-  res.render('unicomposer/ajax/classifieds.ejs');   
+router.get('/careerHome', function(req, res, next) {
+  res.render('career/careerHome.ejs');     
+});
+
+/* GET people_with_pic.ejs file. */
+router.get('/classifieds', function(req, res, next) {
+  res.render('classifieds/vehicle/crude/classifieds.ejs');     
 });
 
 
-router.get('/profile/view/mahika', function(req, res, next) {
+router.get('/profile/view/mahika', function(req, res, next) {  
 	  res.render('profiles/profile.ejs'); 
 		//res.render('profile/profile.ejs');
 	});
 
-router.get('/profile/view/lawyer', function(req, res, next) {
+router.get('/profile/view/lawyer', function(req, res, next) {  
 	  res.render('profiles/common_with_bg.ejs', {	page: "uniprofile",
 		  											profile_context: "uniprofile_lawyer"
 		  											//lawyerData123 : lawyerData
@@ -147,10 +155,10 @@ router.get('/contaxonomyGroups', function(req, res, next) {
 	  res.render('profiles/contaxonomyData/groups.ejs');	    
 	}); 
 
-router.get('/contaxonomyTeams', function(req, res, next) {
+router.get('/teams', function(req, res, next) {
 	// var profileId = "deb";//req.param('profileId');
 	//  console.log("PRFILE IDDD  ===     " + profileId);
-	  res.render('profiles/contaxonomyData/teams.ejs');	    
+	  res.render('teams/teams.ejs'); 
 	}); 
 
 

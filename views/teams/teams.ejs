@@ -1,0 +1,225 @@
+<%var contaxonomyTeams = [  	{
+		                        	   'id'		 	: 'STARTUP_PROJECT_TEAM',
+		                        	   'name' 	  	: "Startup Project Team",
+		                        	   'profilePic' : "/media/images/icons/temp/Sample_Team_Profile_Pic_Startup.png", 
+		                        	   'count'		: '200',
+			                           'childs' 	: [
+			                               
+					                        {
+					                                'id' : 'melbin',
+					                            	'name' : 'Melbin Mathai',
+					                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+					                        },
+					                        
+					                        {
+			                            	 
+				                            	 'id' : 'salvin',
+				                            	 'name' : 'Salvin Stephen Thomas',
+				                            	 'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+					                        },
+					                     
+				                            {
+				                                'id' : 'unni',
+				                            	'name' : 'Unnikrishnan C',
+				                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+				                            },
+				                            
+				                            {
+				                                'id' : 'amar',
+				                            	'name' : 'Amar Chhetri',
+				                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+				                            } 
+			                           ]
+			                       },
+			                       
+			                       
+			                       
+			                        {
+		                        	   'id' : 'COMMUNITY_WELFARE_SUPERTEAM',
+		                        	   'name' : "Community Welfare SupertTeam",
+		                        	   'count'		: '200',
+			                           'childs' : [
+					                                {
+					                            	 'id' : 'CULTURAL_ACTIVITIES',
+					                            	 'name' : 'Cultural activities',
+					                            	 'count'		: '200',
+					                            	 'childs' : [{
+					                            	 
+									                            	 'id' : 'mihika',
+									                            	 'name' : 'Mihika Mishra',
+									                            	 'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                        },
+										                        {
+										                                'id' : 'ajay',
+										                            	'name' : 'Capt. Ajay',
+										                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                        },
+										                     
+									                            {
+									                                'id' : 'abhijit',
+									                            	'name' : 'Abhijit Prusty',
+									                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+									                            },
+									                            {
+										                                'id' : 'prabal',
+										                            	'name' : 'Prabal Atreya',
+										                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                        },
+										                            
+										                        {
+										                                'id' : 'navin',
+										                            	'name' : 'Navin Meshram',
+										                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                        }
+									                           ]
+						                            },
+						                            
+						                            {
+						                                'id' : 'EDUCATIONAL_ACTIVITIES',
+						                            	'name' : 'Educational Activities',
+						                            	'count'		: '200',
+						                            	'childs' : [ {
+										                                'id' : 'abhijit',
+										                            	'name' : 'Abhijit Prusty',
+										                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                            },
+										                            
+										                            {
+										                                'id' : 'prabal',
+										                            	'name' : 'Prabal Atreya',
+										                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                            },
+										                            
+										                            {
+										                                'id' : 'navin',
+										                            	'name' : 'Navin Meshram',
+										                            	'count'		: '1',
+					                            	'img'	: '/media/images/icons/grey/usr-grey-200.png'
+										                            }
+									                           ]
+						                            }
+			                               ]
+			                    
+			                      }
+			                       
+			                    
+			                     ];
+
+%>
+
+<style>
+	
+	.team_cat_node_chkbox {
+			 float: right;
+		}
+		
+	 @media screen and (max-width: 767px) { 
+		#CONTAXONOMY_TEAMS_TABLE{
+			width:  100%;	 
+		}  
+     }
+     
+    @media screen and (min-width: 768px) { 
+		#CONTAXONOMY_TEAMS_TABLE{
+			width:  380px;	
+		}  
+    }
+   
+  
+</style>
+ 
+
+<div id = CONTAXONOMY_TEAMS>
+	<div class = "text-green" style = "margin-left: 0px;  margin-bottom: 15px;">
+ 		  <div style = "text-align: center; display: inline-block; width: 80px;">
+	  		<img   width="23" height="16" src="/media/images/icons/team/team-blk.png" />
+	  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Teams</b></span>
+	     </div> 
+	</div> 
+							    
+	 <%	
+		var tempElementString = "<table id = CONTAXONOMY_TEAMS_TABLE border = 0> <tr><td>";
+		var tempChildElements = null;
+		var catLooper = 0;
+		contaxonomyTeams.forEach(function(element) {
+		
+		 
+		tempElementString = tempElementString + "<div style = 'margin-left: 45px;'><div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'>";
+		
+		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
+		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block;  margin-bottom: 2px; height: 35px; color: #696969;'>";
+		
+		if(element.profilePic) {
+			tempElementString = tempElementString + "<img  src='" + element.profilePic + "' width= '22' height= '22'>";  
+		} 
+		else {
+			tempElementString = tempElementString + "<div style = 'display: inline-block; height: 22px; width: 22px; background-color: #95B3D7; border-radius: 50%; line-height: 22px; text-align: center;'><b>" +  element.name.charAt(0).toUpperCase() + "</b></div>"; 
+		}
+		tempElementString = tempElementString + "&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + element.name + " (<span class = 'contax-count'>" + element.count + "</span>)</span>";
+		tempElementString = tempElementString + "</b></span> <input id =" + element.id + " type = 'checkbox'  value = " + element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px; margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
+		
+		
+		if(element.childs) {			
+			element.childs.forEach(function(level2Element) {
+				 
+			//tempElementString = tempElementString + "LEVEL2-" + catLooper++;
+				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
+				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
+				tempElementString = tempElementString + "&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name + " (<span class = 'contax-count'>" + level2Element.count + "</span>)</span>";
+				tempElementString = tempElementString + "</b></span> <input  id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px;  margin-right: 3px;'  onclick = 'populateAudience($(this));'> </div>";
+				
+				if(level2Element.childs) {			  
+					level2Element.childs.forEach(function(level3Element) {
+						//tempElementString = tempElementString + "LEVEL3-" + catLooper++;
+						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
+						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
+						tempElementString = tempElementString + "&nbsp;&nbsp;<img src = '" + level3Element.img + "' width = 16, height  = 16>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name + " (<span class = 'contax-count'>" + level3Element.count + "</span>)</span>";
+						tempElementString = tempElementString + "</b></span> <input  id =" + level3Element.id + "  type = 'checkbox'  value = " + level3Element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";
+					});
+				} 
+			 
+			}); 
+		} 
+		   
+		
+		tempElementString = tempElementString + "</div>";
+%>
+
+
+ 
+<%	 
+	});
+	
+	tempElementString = tempElementString + "</tr></td></table>";
+			
+%>
+ 
+	 <%- tempElementString %>
+	
+</div>
+
+
+
+<script>
+
+
+
+
+
+
+	//$('.contagxonomy_cat_node_chkbox').
+
+</script>

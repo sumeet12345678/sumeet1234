@@ -8,7 +8,7 @@ $(function() {
 		  			   'img'  : '/media/images/icons/add-audience.png',
 		  			   'text' : 'Connections',
 		  			   'col'  : '#dcdcdc',
-		  			   'url'  : '123'
+		  			   'url'  : '/classifieds'
 	                },
 	                {  'id'   : '2',
 			  			   'img'  : '/media/images/icons/banknotes-white.png',
@@ -20,7 +20,7 @@ $(function() {
 		  			   'img'  : '/media/images/icons/experience-white.png',
 		  			   'text' : 'Jobs',
 		  			   'col'  : '#dcdcdc',
-		  			   'url'  : '123'
+		  			   'url'  : '/careerHome'
 		            },
 		            {  'id'   : '4',
 		  			   'img'  : '/media/images/icons/statoscope-white.png',
@@ -87,7 +87,7 @@ $(function() {
 			  			   'img'  : '/media/images/icons/experience-white.png',
 			  			   'text' : 'Jobs',
 			  			   'col'  : '#dcdcdc',
-			  			   'url'  : '123'
+			  			   'url'  : '/careerHome'
 			            },
 			            {  'id'   : '4',
 			  			   'img'  : '/media/images/icons/statoscope-white.png',
@@ -154,7 +154,7 @@ $(function() {
 				  			   'img'  : '/media/images/icons/experience-white.png',
 				  			   'text' : 'Jobs',
 				  			   'col'  : '#dcdcdc',
-				  			   'url'  : '123'
+				  			   'url'  : '/careerHome'
 				            },
 				            {  'id'   : '4',
 				  			   'img'  : '/media/images/icons/statoscope-white.png',
@@ -178,31 +178,31 @@ $(function() {
 				  			   'img'  : '/media/images/icons/weighing-mc.png',
 				  			   'text' : 'Legal',
 				  			   'col'  : '#dcdcdc',
-				  			   'url'  : '123'
+				  			   'url'  : '123' 
 						     },
 						     {  'id'   : '5',
 					  			   'img'  : '/media/images/icons/relationships_white.png',
 				  			   'text' : 'Family',
-				  			   'col'  : '#dcdcdc',
+				  			   'col'  : '#dcdcdc', 
 				  			   'url'  : '123'
 					        },
 					        {  'id'   : '5',
 					  			   'img'  : '/media/images/icons/school-white.png',
-				  			   'text' : 'Education',
+				  			   'text' : 'Teams',
 				  			   'col'  : '#dcdcdc',
-				  			   'url'  : '123'
+				  			   'url'  : '/teamsHome'
 					        },
 					        {  'id'   : '5',
 					  			   'img'  : '/media/images/icons/thumbs-up-white.png',
-				  			   'text' : 'Grow',
+				  			   'text' : 'Teams',
 				  			   'col'  : '#dcdcdc',
-				  			   'url'  : '123'
+				  			   'url'  : '/teamsHome'
 					        },
 					        {  'id'   : '5',
-					  			   'img'  : '/media/images/icons/bulb-enlightenment-white.png',
-				  			   'text' : 'Causes',
+					  			'img'  : '/media/images/icons/bulb-enlightenment-white.png',
+				  			   'text' : 'Teams',
 				  			   'col'  : '#dcdcdc',
-				  			   'url'  : '123'
+				  			   'url'  : '/teamsHome'
 					        }
 			        
 		            
@@ -329,6 +329,7 @@ $(function() {
 		
 		var imageToAppend;
 		var divContainerForImage;
+		var aTag;
 		  
         for (var i =leftbarStart; i <= leftbarEnd; i++) 
         {
@@ -341,6 +342,7 @@ $(function() {
 	     
 	     
         	  divContainerForImage = $('<div class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px; height: 42px;"></div>');
+        	  aTag = $('<a href ="' + images[i].url + '"></a>');
         	  
         	  imageToAppend = $('<img>');
         	  imageToAppend.attr('width', "30");
@@ -349,7 +351,9 @@ $(function() {
         	  imageToAppend.attr('src', images[i].img);
         	  imageToAppend.attr('onclick', images[i].url);
         	  
-        	  divContainerForImage.append(imageToAppend);
+        	  aTag.append(imageToAppend);
+        	  
+        	  divContainerForImage.append(aTag);
         	  divContainerForImage.append('<span style = "display: block;  margin-top: 8px; font-size: 12px; font-weight: bold; color:' + images[i].col +';">' + images[i].text + '</span>');
         	  
 
@@ -367,6 +371,7 @@ $(function() {
 //            f1_2012_image.setAttribute("width", "50");
 
       	  divContainerForImage = $('<div  class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px;height: 42px;"></div>');
+      	  aTag = $('<a href ="' + images[i].url + '"></a>');
       	  
       	  imageToAppend = $('<img>');
       	  imageToAppend.attr('width', "30");
@@ -375,7 +380,9 @@ $(function() {
       	  imageToAppend.attr('src', images[i].img);
       	  imageToAppend.attr('onclick', images[i].url);
       	  
-      	  divContainerForImage.append(imageToAppend);
+      	  aTag.append(imageToAppend);
+      	 
+      	  divContainerForImage.append(aTag);
       	  divContainerForImage.append('<span style = "display: block;   margin-top: 8px; font-size: 12px; font-weight: bold; color:' + images[i].col +';">' + images[i].text + '</span>');
 
           $('#QUK_TOOL_TOP_BAR').append(divContainerForImage);
@@ -390,10 +397,11 @@ $(function() {
 //            f1_2012_image.setAttribute("height", "50");
 //            f1_2012_image.setAttribute("width", "50");
         	
-        	//appendToBar(index, content, containerBar);
+        	//appendToBar(index, content, containerBar);  
 
       	  divContainerForImage = $('<div  class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px; height: 42px;"></div>');
-      	  
+      	  aTag = $('<a href ="' + images[i].url + '"></a>');
+      	 
       	  imageToAppend = $('<img>');
       	  imageToAppend.attr('width', "30");
       	  imageToAppend.attr('height', "30");
@@ -401,7 +409,9 @@ $(function() {
       	  imageToAppend.attr('src', images[i].img);
       	  imageToAppend.attr('onclick', images[i].url);
       	  
-      	  divContainerForImage.append(imageToAppend);
+      	  aTag.append(imageToAppend);
+      	 
+      	  divContainerForImage.append(aTag);
       	  divContainerForImage.append('<span style = "display: block;    margin-top: 8px; font-size: 12px; font-weight: bold; color:' + images[i].col +';">' + images[i].text + '</span>');
       	  
           $('#QUK_TOOL_RIGHT_BAR').append(divContainerForImage);

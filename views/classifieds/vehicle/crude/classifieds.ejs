@@ -1,0 +1,146 @@
+	<style>
+	   .contenteditable:empty:not(:focus):before{
+  content: attr(data-placeholder);
+  display: block; /* For Firefox */
+}
+
+#POST_CLASSIFIED
+{
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+#imagePreview
+{
+	width: 50%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+
+input:focus,select:focus,
+textarea:focus
+{
+	outline:none;
+    border-color:white;
+    box-shadow:0 0 10px white;
+}
+
+
+@media screen and (max-width: 767px) {
+	 #CLASSIFIED_DETAIL_ATTRIBUTES{
+	 	width: 100%;	 	 
+	 	
+	 	
+	 }
+	 #POST_CLASSIFIED
+{
+	width: 100%;
+
+}	
+#imagePreview
+{
+	width:100%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+}
+
+
+/* ------- Larger Device Section*/
+@media screen and (min-width: 768px) {
+	  #CLASSIFIED_DETAIL_ATTRIBUTES {
+	  	width: 100%;
+	  }
+	  #POST_CLASSIFIED
+{
+	width: calc(80% - 80px);
+
+}	
+
+}
+	   
+	  
+		 
+	</style>
+
+
+	<div id="POST_CLASSIFIED">
+
+		<div id=POST_CLASSIFIED_TARGET_AUDIENCE style="border:1px solid; height: 30px; margin-bottom:10px; " class="
+		contenteditable" contenteditable=true data-placeholder="Target Audience:"></div>
+
+		<div id=POST_CLASSIFIED_TITLE style="border:1px solid; height: 30px; margin-bottom:10px;" class="contenteditable" contenteditable="true" data-placeholder="Classified Title:"></div>
+
+		<div id=POST_DESCRIPTION style="border:1px solid; height: 100px; margin-bottom:10px;" class="contenteditable" contenteditable="true" data-placeholder="Description:"></div>
+		
+		<div id="CLASSIFIED_DETAIL_ATTRIBUTES">
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; border:0.1px outset; width:160px; background-color:white;">
+				<label>Price :</label><input type="text" name="Price" style="border:0px; width:100px; ">
+			</div>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; margin-left:10px;">
+					
+				<label>Negotiable<input type="checkbox" style="margin-left:89px; display:inline-block;"/></label>
+			</div>
+			<br>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; border:0.1px outset; width:160px; background-color:white;">
+				<label>Km :</label><input type="text" name="km" style="border:0px; width:100px;" />
+			</div>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; margin-left:10px;">
+				<label>Insurance<input type="checkbox" style="margin-left:97px; display:inline-block;"/></label>
+			</div>
+			<br>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; border:0.1px outset; width:160px; background-color:white;">
+				<label>Owned :</label><input type="text" name="own" style="border:0px; width:90px;"/>
+			</div>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; margin-left:10px; border:0.1px outset; width:170px; background-color:white;">
+				<label>Year :</label><input type="text" name="buy" style="border:0px; width:110px;"/>
+			</div>
+			<br>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; border:0.1px outset; width:160px; background-color:white;">
+				<label>Model :</label><input type="text" name="model" style="border:0px; width:90px;"/>
+			</div>
+			<div style="height: 25px; margin-bottom:10px; display:inline-block; margin-left:10px; border:0.1px outset; width:170px; background-color:white;">
+				<label>MfgBy :</label><input type="text" name="mfg" style="border:0px; width:110px;" />
+			</div>
+		</div>
+		<div style="margin-bottom:10px;">
+			<div id="imagePreview">
+				
+			</div>
+			
+			<br>
+			<input id="uploadFile" type="file" name="image" class="img" />
+			
+		</div>
+		<br>
+		<input type="button" value="post">
+		
+	</div>
+	
+	
+	<script type="text/javascript">
+			 $(function() {
+    $("#uploadFile").on("change", function()
+    {
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+ 
+        if (/^image/.test( files[0].type)){ // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
+ 
+            reader.onloadend = function(){ // set image data as background of div
+                $("#imagePreview").css("background-image", "url("+this.result+")");
+
+            }
+        }
+    });
+});
+		</script>

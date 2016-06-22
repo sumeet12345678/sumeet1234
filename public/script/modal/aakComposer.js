@@ -310,8 +310,8 @@ $('.imo_icon_img').on('click', function(e){
 	                         	},
 	                         	
 	                         	{
-	                         		'id' : 			'E',
-	                         		'url' :			 '/unicomposer/email',
+	                         		'id' : 			'C',
+	                         		'url' :			 '/classifieds',
 	                         		'alreadyCalled' : 'no'
 	                         	}
                          
@@ -361,8 +361,9 @@ function appendMsgCategory(url, selectedOptionValue, parentComposerWrapper) {
 				parentComposerWrapper.find('#UNI_COMPOSER_POST').show();
 				maximizeComposer(parentComposerWrapper);
 			}
-			if(selectedOptionValue == 'E') { 
-				parentComposerWrapper.find('#UNI_COMPOSER_EMAIL').show();
+			if(selectedOptionValue == 'C') { 
+				//parentComposerWrapper.find('#UNI_COMPOSER_EMAIL').show();
+				parentComposerWrapper.find('#POST_CLASSIFIED').show();
 				
 				maximizeComposer(parentComposerWrapper);
 			}
