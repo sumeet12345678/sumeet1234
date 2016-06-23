@@ -156,7 +156,7 @@
 <body> 
 		
 	  <% include ../partials/top_menu_bar.ejs %> 
-	  <div class = "website-screen-width_dt" style = "margin-top: 70px; background-color: #fff; height: 100%;">
+	  <div class = "website-screen-width_dt" style = "margin-top: 0px; background-color: #fff; height: 100%;">
 	 <!-- for AakComposer Context -->   
 				<!--   <div  id = TEAM_MAIN class="contagxonmy-title-bar">  
 				       <table  width = "100%" height = "100%">  
@@ -187,9 +187,9 @@
 					[ <b>Opportunities, News, Employers and more...</b> ]
 				</div>
 			-->
-				<div id = CAREER_HOME_HEADER_BAR class = " common-page-header-bar" style = "display: none; position: relative;">
+				<!-- <div id = CAREER_HOME_HEADER_BAR class = " common-page-header-bar" style = "display: none; position: relative;">
 					
-				</div>
+				</div>  -->
 				
 				<!-- 
 				 	 <div id = TEAM_HOME_MENU_BAR style = "margin-bottom: 15px;"> 
@@ -243,7 +243,7 @@
 					 </div>   
 					 
 				</div> -->
-			 
+			  ggg
 	        
 	           <div style = "padding-bottom: 50px;">
 	           		<img src = "/media/images/joblistings-temp.PNG"/ style = " width: 99%; height: 500px; margin-left: .5%;"><br/>
@@ -261,112 +261,81 @@
 	 
 	 <script>
 	 
-		    var headerBarCareerJsonData = [{'id'  : '',
-		    						  'img' : '/media/images/icons/plainblack/opportunities-blk.png',
-		    						  'img-text' : 'Opportunities',
-		    						  'url' : '/teamsHome'
-		    
-		    						 },
-		    						 {'id'  : '',
-			    					  'img' : '/media/images/icons/plainblack/preferences-blk.png',
-			    					  'img-text' : 'Opportunities',
-			    					   'url' : '/teamsHome'
-			    
-			    					 },
-			    					 {'id'  : '',
-				    				  'img' : '/media/images/icons/plainblack/talks-trending-blk.png',
-				    				  'img-text' : 'Opportunities',
-				    				  'url' : '/teamsHome'
+	 g_pageHeaderBarJSONData = { 
+		    		                    'title' : 'Opportunities, News, Employers and more...',
+		    							'features' :
+				    						 [{'id'  : '',
+				    						  'img' : '/media/images/icons/plainblack/opportunities-blk.png',
+				    						  'txt' : 'Opportunities',
+				    						  'url' : '/teamsHome'
 				    
-				    				 },
-				    				 
-				    				 {'id'  : '',
-		    						  'img' : '/media/images/icons/plainblack/opportunities-blk.png',
-		    						  'img-text' : 'Opportunities',
-		    						  'url' : '/teamsHome'
-		    
-		    						 },
-		    						 {'id'  : '',
-			    					  'img' : '/media/images/icons/plainblack/preferences-blk.png',
-			    					  'img-text' : 'Opportunities',
-			    					   'url' : '/teamsHome'
-			    
-			    					 },
-			    					 {'id'  : '',
-				    				  'img' : '/media/images/icons/plainblack/talks-trending-blk.png',
-				    				  'img-text' : 'Opportunities',
-				    				  'url' : '/teamsHome'
+				    						 },
+				    						 {'id'  : '',
+					    					  'img' : '/media/images/icons/plainblack/preferences-blk.png',
+					    					  'txt' : 'Preferences',
+					    					   'url' : '/teamsHome'
+					    
+					    					 },
+					    					 {'id'  : '',
+						    				  'img' : '/media/images/icons/plainblack/talks-trending-blk.png',
+						    				  'txt' : 'Trending',
+						    				  'url' : '/teamsHome'
+						    
+						    				 },
+						    				 
+						    				 {'id'  : '',
+				    						  'img' : '/media/images/icons/plainblack/interview-blk.png',
+				    						  'txt' : 'Interviews',
+				    						  'url' : '/teamsHome'
 				    
-				    				 },
-				    				 
-				    				 {'id'  : '',
-		    						  'img' : '/media/images/icons/plainblack/opportunities-blk.png',
-		    						  'img-text' : 'Opportunities',
-		    						  'url' : '/teamsHome'
-		    
-		    						 },
-		    						 {'id'  : '',
-			    					  'img' : '/media/images/icons/plainblack/preferences-blk.png',
-			    					  'img-text' : 'Opportunities',
-			    					   'url' : '/teamsHome'
-			    
-			    					 },
-			    					 {'id'  : '',
-				    				  'img' : '/media/images/icons/plainblack/talks-trending-blk.png',
-				    				  'img-text' : 'Opportunities',
-				    				  'url' : '/teamsHome'
+				    						 },
+				    						 {'id'  : '',
+					    					  'img' : '/media/images/icons/plainblack/money-bag-blk.png',
+					    					  'txt' : 'Salaries',
+					    					   'url' : '/teamsHome'
+					    
+					    					 },
+					    					 {'id'  : '',
+						    				  'img' : '/media/images/icons/plainblack/org-grey.png',
+						    				  'txt' : 'Employers',
+						    				  'url' : '/teamsHome'
+						    
+						    				 },
+						    				 
+						    				 
+						    				 {'id'  : '',
+				    						  'img' : '/media/images/icons/crowd-black.png',
+				    						  'txt' : 'Groups',
+				    						  'url' : '/teamsHome'
 				    
-				    				 },
-				    				 
-				    				 {'id'  : '',
-		    						  'img' : '/media/images/icons/plainblack/opportunities-blk.png',
-		    						  'img-text' : 'Opportunities',
-		    						  'url' : '/teamsHome'
-		    
-		    						 },
-		    						 {'id'  : '',
-			    					  'img' : '/media/images/icons/plainblack/preferences-blk.png',
-			    					  'img-text' : 'Opportunities',
-			    					   'url' : '/teamsHome'
-			    
-			    					 },
-			    					 {'id'  : '',
-				    				  'img' : '/media/images/icons/plainblack/talks-trending-blk.png',
-				    				  'img-text' : 'Opportunities',
-				    				  'url' : '/teamsHome'
+				    						 },
+				    						 {'id'  : '',
+					    					  'img' : '/media/images/icons/plainblack/spkr-posts-grey.png',
+					    					  'txt' : 'Posts',
+					    					   'url' : '/teamsHome'
+					    
+					    					 },
+					    					 {'id'  : '',
+						    				  'img' : '/media/images/icons/plainblack/Q-n-A-blk.png',
+						    				  'txt' : 'Q&A',
+						    				  'url' : '/teamsHome'
+						    
+						    				 },				    				
+						    				 {'id'  : '',
+				    						  'img' : '/media/images/icons/plainblack/innovate-blk.png',
+				    						  'txt' : 'Challenges',
+				    						  'url' : '/teamsHome'
 				    
-				    				 },
-				    				 
-				    				 {'id'  : '',
-		    						  'img' : '/media/images/icons/plainblack/opportunities-blk.png',
-		    						  'img-text' : 'Opportunities',
-		    						  'url' : '/teamsHome'
-		    
-		    						 },
-		    						 {'id'  : '',
-			    					  'img' : '/media/images/icons/plainblack/preferences-blk.png',
-			    					  'img-text' : 'Opportunities',
-			    					   'url' : '/teamsHome'
-			    
-			    					 },
-			    					 {'id'  : '',
-				    				  'img' : '/media/images/icons/plainblack/talks-trending-blk.png',
-				    				  'img-text' : 'Opportunities',
-				    				  'url' : '/teamsHome'
-				    
-				    				 }  
-	                            ];   
+				    						 } 
+			                            ]  
+		    }
 	   
-		 $(function(){
-			 var headerBar = $('#CAREER_HOME_HEADER_BAR');
-			 /* Pending : trim the header size to some fixed size */
-			 var headerBarTitle = "Opportunities, News, Employers and more...";
+		 //$(function(){
+			  			 
+			 initHeaderBar(); 
 			 
 			 
-			 initHeaderBar(headerBarTitle, headerBar, headerBarCareerJsonData); /* DISPLAYS HEADER BAR ON TOP OF PAGE */
-			 
-			 
-			 $('#CAREER_HOME_HEADER_BAR .menu-drop-down-icon img').on('click', function() {
+			/* $('#CAREER_HOME_HEADER_BAR .menu-drop-down-icon img').on('click', function() {
 				 $('.cmn_mnu_itm_cntnr').toggle();
 			 });
 			 
@@ -374,10 +343,10 @@
 			 $('#CAREER_HOME_HEADER_BAR .img-with-caption-common').on('click', function() {
 				     //alert("Data attr  ====   " + this.getAttribute("data-url-value")) ;
 					linkToTeams(this.getAttribute("data-url-value"));
-			 });
+			 });*/
 			 
 			 
-			 alignMenuBarItems(); 
+			 //alignMenuBarItems(); 
 			 
 			 
 			 
@@ -387,12 +356,9 @@
 				 getTeamsDataThroughAjax();
 			 });
 		*/
-		 });
+		 //});
 		 
-		 function linkToTeams(url) {
-			 window.location.href = url;
-		 }
-		  
+		   
 		
 		 /* 
 	    var teamsDataRecieved = false;
