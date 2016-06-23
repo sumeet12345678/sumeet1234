@@ -32,10 +32,17 @@
 			 height: 100%;
 			}
 			
-			#TEAM_MAIN
+			
+/* Salvin's css  */			
+#TEAM_MAIN
 {
 	margin-left: auto;
 	margin-right: auto;
+}
+#TEAM_MAIN_CONTAINER
+{
+	margin-left: auto;
+	margin-right:auto; 
 }
 #TEAM_CONTAINER 
 	{
@@ -65,28 +72,37 @@
 {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5px;
+	margin-top: 20px;
 }
 .work-teams-circle
 {
 	border: 1px solid;
 	text-align: center;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	
+	width: 100px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.work-teams-img
+{
+	margin-top: 15px;
+	margin-left: 5px;
 }
 
 
 .work-board
 {
 	border: 1px solid;
-	width: 45%;
+	width: 40%;
 	text-align: center;
-	margin-top: 5px;
+	margin-top: 20px;
+	background-color: blue;
+	margin-left: 15px;
 }
 
- 
+
 
 @media screen and (max-width: 767px) 
 {
@@ -101,25 +117,34 @@
 	.work-teams .work-teams-block
 	{
 
-		width: 40%;
-		display: inline-block;
-	}
-
-	.work-teams-circle
-	{
-		margin-left: 25px;
-	}
-	.work-teams .work-board
-	{
 		width: 45%;
 		display: inline-block;
+	}
+
+	
+	.work-teams .work-board
+	{
+		width: 40%;
+		display: inline-block;
 
 	}
+	.work-teams-img
+	{
+	
+		
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
 	
 }
 @media screen and (min-width: 768px)
 {
-	 
+	#TEAM_MAIN 
+	{
+		width: 80%;
+	}
 	#TEAM_CONTAINER 
 	{
 		width: 80%;
@@ -129,10 +154,11 @@
 		width: 80%;
 
 	}
-	.work-teams-circle
+	.work-teams-block
 	{
-		margin-left: 80px;
+		margin-left: 10px;
 	}
+	
 	.work-teams .work-teams-block
 	{
 		
@@ -148,7 +174,8 @@
 	
 	
 } 
-			
+
+
 	
 	</style>
 </head>
@@ -183,10 +210,11 @@
 				   
 				  
 	
-				<div style = "background-color:#ddebf0; height: 35px; border: 1px solid #dcdcdc; margin-top: 76px; margin-left: 3px; margin-right: 3px; line-height: 35px; text-align: center;color: #525252;margin-bottom: 15px;">
+			<!-- 	<div style = "background-color:#ddebf0; height: 35px; border: 1px solid #dcdcdc; margin-top: 76px; margin-left: 3px; margin-right: 3px; line-height: 35px; text-align: center;color: #525252;margin-bottom: 15px;">
 					[ <b>Work, Collaboration, Teams and more..</b> ]
 				</div>
-				
+			-->	
+			<!-- 
 				<div id = TEAM_HOME_MENU_BAR style = "margin-bottom: 15px;"> 
 					 <div class = "img-with-caption-common">
 						<img   width="28" height="28" src="/media/images/icons/plainblack/feed-blk.png" />
@@ -213,6 +241,10 @@
 					 </div> 
 					 
 				</div>
+			-->
+			<div id = TEAM_HOME_HEADER_BAR class = " common-page-header-bar" style = "display: none; position: relative;">
+					
+			</div>
 				
 			<div id = TEAMS_HOME_ACTIVITIES class = "teams-home-containers-item">	  
 				<div style = "margin-bottom: 10px;">  
@@ -220,137 +252,136 @@
 						Space A
 					  </div>
 					  
-					  <div id = "WORK_SPACES" style = "display: none;">
-							<div class="work-teams">
-								<div>
-									Teams
-								</div>
-								<br>
-								<div class="work-teams-block">
-									<div class="work-teams-circle">
-										<span style="display: inline-block; margin-top:10px; font-size: 14px;">Team <br>X
-									</div>
-									<div class="work-teams-img">
-										<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-									</div>
-								</div>
-								<!--<div style="display:inline-block; width:10%;">
-									
-								</div>-->
-		
-								<div class="work-teams-block">
-									<div class="work-teams-circle">
-										<span style="display: inline-block; margin-top:10px; font-size: 14px;">Team <br> y
-									</div>
-									<div class="work-teams-img">
-										<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-									</div>
-								</div>
-		
-								<div class="work-teams-block">
-									<div class="work-teams-circle">
-										<span style="display: inline-block; margin-top:10px; font-size: 14px;">Team <br> y
-									</div>
-									<div class="work-teams-img">
-										<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px; margin-top: 5px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-									</div>
-								</div>
-		
-								<div class="work-teams-block">
-									<div class="work-teams-circle">
-										<span style="display: inline-block; margin-top:10px; font-size: 14px;">Team <br> y
-									</div>
-									<div class="work-teams-img">
-										<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-		         						<div style = "text-align: center; display: inline-block; width: 50px; margin-top: 5px;">
-		              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
-		              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
-		         						</div> 
-									</div>
-								</div>
-
+					  	  
+				<div id = "WORK_SPACES">
+					<div class="work-teams">
+						<div>
+							Teams
+						</div>
+						<br>
+						<div class="work-teams-block">
+							<div class="work-teams-circle" style="background-color: blue;">
+								<span style="display: inline-block; margin-top:35px; font-size: 14px; color:white;">Team <br>X
 							</div>
-				  			<br>
-
-						  	<div class="work-teams">
-							  	<div>
-							  		Board
-							  	</div>
-							  	<br>
-								<div class="work-board">
-									Team z<br>Board1
-								</div>
-		
-								<div class="work-board">
-									Team z<br>Board2
-								</div>
-								<div class="work-board">
-									Team z<br>Board1
-								</div>
-		
-								<div class="work-board">
-									Team z<br>Board2
-								</div>
-		
+							<div class="work-teams-img">
+								<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
 							</div>
+						</div>
+						
+
+						<div class="work-teams-block">
+							<div class="work-teams-circle" style="background-color: red;">
+								<span style="display: inline-block; margin-top:35px; font-size: 14px;">Team <br> Y
+							</div>
+							<div class="work-teams-img">
+								<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+							</div>
+						</div>
+
+						<div class="work-teams-block">
+							<div class="work-teams-circle" style="background-color: green; color:white;">
+								<span style="display: inline-block; margin-top:35px; font-size: 14px;">Team <br> Z
+							</div>
+							<div class="work-teams-img">
+								<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px; margin-top: 5px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+							</div>
+						</div>
+
+						<div class="work-teams-block">
+							<div class="work-teams-circle" style="background-color: yellow;">
+								<span style="display: inline-block; margin-top:35px; font-size: 14px;">Team <br> A
+							</div>
+							<div class="work-teams-img">
+								<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/settings.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>settings</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/user.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>members</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+         						<div style = "text-align: center; display: inline-block; width: 50px; margin-top: 5px;">
+              						<img   width="23" height="16" src="/media/images/icons/team/cal.png" />
+              						<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Boards</b></span>
+         						</div> 
+							</div>
+						</div>
+
+					</div>
+				  	<br>
+
+				  	<div class="work-teams">
+					  	<div>
+					  		Board
+					  	</div>
+					  	<br>
+						<div class="work-board">
+							<font color="white">Team z<br>Board1</font>
+						</div>
+
+						<div class="work-board">
+							<font color="white">Team z<br>Board2</font>
+						</div>
+						<div class="work-board">
+							<font color="white">Team z<br>Board1</font>
+						</div>
+
+						<div class="work-board">
+							<font color="white">Team z<br>Board2</font>
+						</div>
+
+					</div>
 				  	
-				    </div>	
+				</div>	 <!-------------- Copy Upto here--------->
 			    </div>	
 			    
 			    <div style = "margin-bottom: 10px;">  
@@ -372,7 +403,7 @@
 						 child div
 					  </div>
 			    </div>	
-	        </div>
+	        </div> <!-- TEAMS_HOME_ACTIVITIES ends -->
 	        
 	        <div id = TEAMS_HOME_TEAMS class = "teams-home-containers-item" style = "display: none;">
 	        	
@@ -383,10 +414,65 @@
 	   <% include ../partials/footer_bar.ejs %> 
 	   
 	 
-	 <script>
-	   
+	 <script> 
+	     
+	    var headerBarTeamsJsonData = [
+	          {'id'  : '',
+			  'img' : '/media/images/icons/plainblack/feed-blk.png',
+			  'img-text' : 'Opportunities',
+			  'url' : '/careerHome'
+
+			 },
+			 
+			 {'id'  : '',
+			  'img' : '/media/images/icons/plainblack/cal.png',
+			  'img-text' : 'Opportunities',
+			   'url' : '/careerHome'
+
+			 },
+			 
+			 {'id'  : '',
+			  'img' : '/media/images/icons/plainblack/teamspaces-blk.png',
+			  'img-text' : 'Opportunities',
+			  'url' : '/careerHome'
+
+			 },
+			 
+			 {'id'  : '',
+			  'img' : '/media/images/icons/team/team-blk.png',
+			  'img-text' : 'Opportunities',
+			  'url' : '/careerHome'
+
+			 },
+			   
+			 {'id'  : '',
+			  'img' : '/media/images/icons/plainblack/report-metrics-blk.png',
+			  'img-text' : 'Opportunities',
+			   'url' : '/teamsHome'
+
+			 }  
+        ];    
+	    
+	    
+	 
 		 $(function(){
-			 alignMenuBarItems(); 
+			// alignMenuBarItems();
+			 var headerBar = $('#TEAM_HOME_HEADER_BAR');
+			 /* Pending : trim the header size to some fixed size */
+			 var headerBarTitle = "Work, Collaboration, Teams and more..";
+			 
+			 initHeaderBar(headerBarTitle, headerBar, headerBarTeamsJsonData);
+			 
+			 $('#TEAM_HOME_HEADER_BAR .menu-drop-down-icon img').on('click', function() {
+				 $('.cmn_mnu_itm_cntnr').toggle();
+			 });
+			 
+
+			 $('#TEAM_HOME_HEADER_BAR .img-with-caption-common').on('click', function() {
+				     //alert("Data attr  ====   " + this.getAttribute("data-url-value")) ;
+					linkToCareer(this.getAttribute("data-url-value"));
+			 });
+			 
 			 
 			 $('#TEAMS_HOME_TEAMS_MNU_ICON').on('click', function(){
 				 $('.teams-home-containers-item').hide()
@@ -394,6 +480,11 @@
 				 getTeamsDataThroughAjax();
 			 });
 		 });
+		 
+		 
+		 function linkToCareer(url) {
+			 window.location.href = url;
+		 }
 		  
 		 
 	    var teamsDataRecieved = false;
@@ -424,6 +515,7 @@
 		/////////////
 		 
 		 /* make it a common function */
+		 /*
 		 function alignMenuBarItems() {
 			 var $menuBar = $('#TEAM_HOME_MENU_BAR');
 			 var menuBarWidth = $menuBar.width();
@@ -440,7 +532,7 @@
 			 $menuBar.find('.img-with-caption-common:not(:last-child)').css('margin-right', imgMarginRight); 
 			 
 		 }
-		
+		*/
 	 </script>
 </body>
 		<!-- 	<script type="text/javascript">

@@ -34,6 +34,23 @@
 	border-radius: 0px;
 }
  
+/*  ----------- COMMON : PAGE HEADER BAR ---------- */
+.common-page-header-bar {
+		background-color111111:#ddebf0;
+		background-color : #95B3D7;
+		height: 35px; 
+		border: 1px solid #dcdcdc; 
+		margin-top: 76px; 
+		margin-left: 3px; 
+		margin-right: 3px; 
+		line-height: 35px; 
+		text-align: left;
+		color1111: #525252;
+		color: #000;
+		margin-bottom: 15px;
+		padding-left: 3px;
+}
+ 
 /* -----  SECTIONS      ------------- */
 
 .big-sections-bar {  
@@ -186,6 +203,15 @@
 }
 
 
+@media screen and (max-width: 726px)  {  
+	
+  .cmn_mnu_itm_cntnr {
+  	max-width: 100%;
+  }
+	  
+}
+
+
 @media screen and (max-width: 1024px)  {  
     #PROJECT_TOP_MENU_BAR_CNTNR_ID {
   	 height: 42px;
@@ -194,6 +220,14 @@
   #PROJECT_TOP_MENU_BAR_PUSH_ZONE_ID {
     height: 31px;
   } 
+  
+  .cmn_mnu_itm_cntnr {
+  	max-width: 
+  }
+  
+  .cmn_mnu_itm_cntnr {
+  	max-width: 100%;
+  }
 	  
 }
 
@@ -210,6 +244,10 @@
   
   #PROJECT_TOP_MENU_BAR_PUSH_ZONE_ID {
     height: 29px; 
+  }
+  
+  .cmn_mnu_itm_cntnr {
+  	max-width: 100%;
   }
 	
 }
