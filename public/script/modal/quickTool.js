@@ -15,13 +15,13 @@ $(function() {
 						   'img'  : '/media/images/icons/plainblack/opportunities-blk.png',
 						   'text' : 'Opportunities',
 						   'col'  : '#dcdcdc',
-						   'url'  : '/classifieds'
+						   'url'  : '/career_opportunities'
 					},
 					{  'id'   : '2',
 							   'img'  : '/media/images/icons/plainblack/preferences-blk.png',
 							   'text' : 'Preferences',
 							   'col'  : '#dcdcdc',
-							   'url'  : '123'
+							   'url'  : '/career_preferences'
 					}, 
 				 	 
 	               
