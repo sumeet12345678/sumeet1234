@@ -416,62 +416,55 @@
 	 
 	 <script> 
 	
-	    var headerBarTeamsJsonData = [
-	          {'id'  : '1',
-			  'img' : '/media/images/icons/plainblack/feed-blk.png',
-			  'img_text' : 'Activities',
-			  'url' : '/careerHome'
-
-			 },
+	    g_pageHeaderBarJSONData = {
+	                               
+			 'title' : 'Opportunities, News, Employers and more...',
 			 
-			 {'id'  : '2',
-			  'img' : '/media/images/icons/plainblack/cal.png',
-			  'img_text' : 'Boards',
-			   'url' : '/careerHome'
-
-			 },
-			 
-			 {'id'  : '3',
-			  'img' : '/media/images/icons/plainblack/teamspaces-blk.png',
-			  'img_text' : 'Workspaces',
-			  'url' : '/careerHome'
-
-			 },
-			 
-			 {'id'  : '4',
-			  'img' : '/media/images/icons/team/team-blk.png',
-			  'img_text' : 'Teams',
-			  'url' : '/careerHome'
-
-			 },
-			   
-			 {'id'  : '5',
-			  'img' : '/media/images/icons/plainblack/report-metrics-blk.png',
-			  'img_text' : 'Reports',
-			   'url' : '/careerHome'
-
-			 }    
-        ];    
+			 'features' : [  {'id'  : '1',
+					  'img' : '/media/images/icons/plainblack/feed-blk.png',
+					  'txt' : 'Activities',
+					  'url' : '/careerHome'
+		
+					 },
+					 
+					 {'id'  : '2',
+					  'img' : '/media/images/icons/plainblack/cal.png',
+					  'txt' : 'Boards',
+					   'url' : '/careerHome'
+		
+					 },
+					 
+					 {'id'  : '3',
+					  'img' : '/media/images/icons/plainblack/teamspaces-blk.png',
+					  'txt' : 'Workspaces',
+					  'url' : '/careerHome'
+		
+					 },
+					 
+					 {'id'  : '4',
+					  'img' : '/media/images/icons/team/team-blk.png',
+					  'txt' : 'Teams',
+					  'url' : '/careerHome'
+		
+					 },
+					   
+					 {'id'  : '5',
+					  'img' : '/media/images/icons/plainblack/report-metrics-blk.png',
+					  'txt' : 'Reports',
+					   'url' : '/careerHome'
+		
+					 }
+					]
+	    };    
 	    
 	    
 	 
 		 $(function(){
-			// alignMenuBarItems();
-			 var headerBar = $('#TEAM_HOME_HEADER_BAR');
-			 /* Pending : trim the header size to some fixed size */
-			 var headerBarTitle = "Work, Collaboration, Teams and more..";
+			  
+			 initHeaderBar(); 
 			 
-			 initHeaderBar(headerBarTitle, headerBar, headerBarTeamsJsonData);
 			 
-			 $('#TEAM_HOME_HEADER_BAR .menu-drop-down-icon img').on('click', function() {
-				 $('.cmn_mnu_itm_cntnr').toggle();
-			 });
-			 
-
-			 $('#TEAM_HOME_HEADER_BAR .img-with-caption-common').on('click', function() {
-				     //alert("Data attr  ====   " + this.getAttribute("data-url-value")) ;
-					linkToCareer(this.getAttribute("data-url-value"));
-			 });
+ 
 			 
 			 
 			 $('#TEAMS_HOME_TEAMS_MNU_ICON').on('click', function(){
@@ -481,11 +474,11 @@
 			 });
 		 });
 		 
-		 
-		 function linkToCareer(url) {
+	 	 
+		/* function linkToCareer(url) {
 			 window.location.href = url;
 		 }
-		  
+  	  */
 		 
 	    var teamsDataRecieved = false;
 		function getTeamsDataThroughAjax() { 

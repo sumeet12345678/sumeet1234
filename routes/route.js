@@ -38,10 +38,19 @@ router.get('/careerHome', function(req, res, next) {
   res.render('career/careerHome.ejs');     
 });
 
+router.get('/career_opportunities', function(req, res, next) {
+	  res.render('work_opportunities/opportunities.ejs');     
+	});
+
+router.get('/career_preferences', function(req, res, next) { 
+	  res.render('work_opportunities/preferences.ejs');     
+	});
+
 /* GET people_with_pic.ejs file. */
 router.get('/classifieds', function(req, res, next) {
   res.render('classifieds/vehicle/crude/classifieds.ejs');     
 });
+
 
 
 router.get('/profile/view/mahika', function(req, res, next) {  
