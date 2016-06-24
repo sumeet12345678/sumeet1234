@@ -5,11 +5,26 @@ $(function() {
 	  
 	  var images = [
 	                {  'id'   : '1',
-		  			   'img'  : '/media/images/icons/add-audience.png',
-		  			   'text' : 'Connections',
-		  			   'col'  : '#dcdcdc',
-		  			   'url'  : '/classifieds'
-	                },
+			  			   'img'  : '/media/images/icons/add-audience.png',
+			  			   'text' : 'Connections',
+			  			   'col'  : '#dcdcdc',
+			  			   'url'  : '/classifieds'
+		            },
+		                
+					{  'id'   : '1',
+						   'img'  : '/media/images/icons/plainblack/opportunities-blk.png',
+						   'text' : 'Opportunities',
+						   'col'  : '#dcdcdc',
+						   'url'  : '/classifieds'
+					},
+					{  'id'   : '2',
+							   'img'  : '/media/images/icons/plainblack/preferences-blk.png',
+							   'text' : 'Preferences',
+							   'col'  : '#dcdcdc',
+							   'url'  : '123'
+					}, 
+				 	 
+	               
 	                {  'id'   : '2',
 			  			   'img'  : '/media/images/icons/banknotes-white.png',
 			  			   'text' : 'My Money',
@@ -273,10 +288,10 @@ $(function() {
 		 image();  
 	});   
 	
-	function setWidthOfLeftandRightBar(){
+	function setWidthOfLeftandRightBar() {
 		//Set height of quk_tool,  and set left and right bar's width equal to top bar
 		var $viewPortHeight = $(window).height();     
-		var $footerBarHeight = $('#footerBarId').height();     
+		var $footerBarHeight = $('#footerBarId').height();       
 		
 		var $topBar = $('#QUK_TOOL_TOP_BAR');
 		var $bottomBar = $('#QUK_TOOL_BOTTOM_BAR'); 
@@ -368,8 +383,8 @@ $(function() {
 //            f1_2012_image.setAttribute("src", images[i]);
 //
 //            f1_2012_image.setAttribute("height", "50");
-//            f1_2012_image.setAttribute("width", "50");
-
+//            f1_2012_image.setAttribute("width", "50"); 
+ 
       	  divContainerForImage = $('<div  class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px;height: 42px;"></div>');
       	  aTag = $('<a href ="' + images[i].url + '"></a>');
       	  
@@ -403,7 +418,7 @@ $(function() {
       	  aTag = $('<a href ="' + images[i].url + '"></a>');
       	 
       	  imageToAppend = $('<img>');
-      	  imageToAppend.attr('width', "30");
+      	  imageToAppend.attr('width', "30");  
       	  imageToAppend.attr('height', "30");
       	  imageToAppend.attr('id', images[i].id);
       	  imageToAppend.attr('src', images[i].img);
