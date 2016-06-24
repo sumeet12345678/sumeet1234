@@ -11,6 +11,8 @@
 	    
 		<style>
 		
+		
+		
 			/* common */
 .work-opportunities
 {
@@ -77,12 +79,7 @@
 
 /* Third Layer */
 
-
-#ITEM_ATTR_SKILLS
-{
-	display:inline-block; 
-	vertical-align:top;
-}
+ 
 .skills-items
 {
 	display: inline-block;
@@ -90,6 +87,10 @@
 	border: 1px solid;
 	border-radius: 3px;
 	margin-right: 5px;
+	margin-bottom: 5px;
+	min-width: 50px;
+	text-align: center;
+	padding: 3px;
 }
 
 
@@ -160,23 +161,8 @@
 		width:45%;
 		display:inline-block; 
 	}
-	#ITEM_ATTR_SKILLS
-	{
-		width:50%;
-	}
-	#ITEM_ATTR_SKILLS_LEFT
-	{
-		display:inline-block;
-		vertical-align: top;
-		width: 40%;
-	}
-	#ITEM_ATTR_SKILLS_RIGHT
-	{
-		display: inline-block;
-		width:40%;
-	}
-
-
+	 
+	 
 
 	/* Last Layer */
 	#ITEM_LIST_BOTTOM_BAR_APPLY
@@ -230,21 +216,7 @@
 		 
 		
 	}
-
-	#ITEM_ATTR_SKILLS_LEFT
-	{
-		width: 50px;
-		display: inline-block;
-	}
-	#ITEM_ATTR_SKILLS_RIGHT
-	{
-		display: inline-block;
-	}
-	#ITEM_ATTR_SKILLS
-	{
-		margin-left:150px; 
-	}
-
+  
 
 	/* Last Layer */
 
@@ -277,23 +249,24 @@
 	  <% include ../partials/top_menu_bar.ejs %> 
 	  <div class = "website-screen-width_dt" style = "margin-top: 0px; background-color: #fff; height: 100%; margin-top: 72px; overflow-y: auto;">	
 		
-		<div class="work-opportunities">
+		<div class="work-opportunities" style = "color: #000; padding-left: 3px; padding-right: 3px;">
 			
 			<!-- Heading -->
+			<!-- 	
 				<div align="left" style="margin-left: 27%; margin-top:15px; height:40px;">
 					<div style="display:inline-block; margin-right:5px;">
-						<img src="/media/images/icons/plainblack/aws.png" width="40" height="40">
+						<img src="/media/images/org/logos/aws.png" width="40" height="40">
 					</div>
 					<div class="common-txt" style="display:inline-block;">
 						<font color="#525252" size="6"><b>Job Listing</b></font>
 					</div>
 				</div>
 
-
+			-->
 
 				
 			<!-- second Layer -->
-				<div style="margin-top:20px; padding-left: 3px;">
+			<!-- 	<div style="margin-top:20px; padding-left: 3px;">
 					<div id="ITEM_DETAILS_POSITION">
 						<div style="display:inline-block; vertical-align:top;">
 							<img src="/media/images/icons/plainblack/tag-black.png" width="20" height="20">
@@ -325,12 +298,92 @@
 					</div>
 				</div>
 
-
+    -->
 
 				
 			<!-- Third Layer -->
-				<div style="margin-top:30px; padding-left: 3px;">
-					<div id="ITEM_ATTR_UPDATED">
+			   
+			   
+			      <table>
+			      	<tr>
+			      		<td valign = "top">
+				      		 <div id="ITEM_ATTR_SKILLS_LEFT" style = "display: inline-block;   vertical-align: top;margin-right: 15px;">
+									 <img src="/media/images/icons/plainblack/tools_grey.png" width="25" height="28" />
+							 </div>
+						</td>
+						
+			      		<td align = "right">
+			      			<div id="ITEM_ATTR_SKILLS_RIGHT"  style = "display: inline-block;" >								
+							
+							<div class="skills-items">
+								<font color="#fff">Java</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">HBase</font>  
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Hadoop</font> 
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Docker</font>
+							</div>	
+							
+							
+							<div class="skills-items">
+								<font color="#fff">Java</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">HBase</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Hadoop</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Docker</font>
+							</div>		
+							
+							<div class="skills-items">
+								<font color="#fff">Java</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">HBase</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Hadoop</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Docker</font>
+							</div>		
+							
+							<div class="skills-items">
+								<font color="#fff">Java</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">HBase</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Hadoop</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Docker</font>
+							</div>				
+							
+						</div>
+			      	 </td>
+			      		
+			      	</tr>
+			      </table>
+						    
+						  
+					 
+						
+						
+			 
+			  
+			  
+			  
+			 <div style="margin-top:30px; padding-left: 3px;">
+					<div id="ITEM_ATTR_UPDATED" style="display:inline-block;">
 						<div style="display:inline-block; vertical-align:top;">
 							<img src="/media/images/icons/plainblack/edit-pen-grey.png" width="20" height="20">
 						</div>
@@ -338,38 +391,31 @@
 							<font color="#8C8585">20+<br>Days ago</font>
 						</div>
 					</div>
-					<div id="ITEM_ATTR_SKILLS" style = "border111: 1px solid black;">
-						<div style="display:inline-block; vertical-align:top;">
-							<img src="/media/images/icons/plainblack/tools_grey.png" width="20" height="20">
-						</div>
-						
-							<div id="ITEM_ATTR_SKILLS_LEFT">
-								<font color="#8C8585">Skills</font>
-							</div>
-							<div id="ITEM_ATTR_SKILLS_RIGHT">
-								<div class="skills-items">
-									<font color="#fff">Java</font>
-								</div>
-								<div class="skills-items">
-									<font color="#fff">C</font>
-								</div>
-								<div class="skills-items">
-									<font color="#fff">C#</font>
-								</div>
-								<div class="skills-items">
-									<font color="#fff">ASP.net</font>
-								</div>
-								<div class="skills-items">
-									<font color="#fff">Project Management</font>
-								</div>
-								<div class="skills-items">
-									<font color="#fff">Angular JS</font>
-								</div>
-							</div>
-						
-					</div>
-				</div>
+					
+			</div>
+				
+				
+				
+				
+<!-- 
 
+							<div class="skills-items">
+								<font color="#fff">Java</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">HBase</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Hadoop</font>
+							</div>
+							<div class="skills-items">
+								<font color="#fff">Docker</font>
+							</div>								 
+							<div class="skills-items">
+								<font color="#fff">Apache Kafka</font>
+							</div>
+							
+ -->
 
 
 				<!-- Fourth Layer -->
@@ -400,7 +446,7 @@
 						<img src="/media/images/icons/plainblack/share-fwd-blk.png" width="40" height="40">
 					</div>
 					<div id="ITEM_LIST_BOTTOM_BAR_REFER">
-						<img src="/media/images/icons/plainblack/refer.png" width="40" height="40">
+						<img src="/media/images/icons/temp/refer.png" width="40" height="40">
 					</div>
 					
 				</div>
