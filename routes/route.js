@@ -11,6 +11,10 @@ var router = express.Router()
 
 */
 
+router.get('/', function(req, res, next) {
+	  res.render('landing.ejs', { page: "peopleSearchResult"});	    
+	}); 
+
 
 /* GET people_with_pic.ejs file. */
 router.get('/unicomposer/post', function(req, res, next) {
@@ -101,9 +105,11 @@ router.get('/profile/view/uniprofile_bg_img', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});    
   */
-router.get('/', function(req, res, next) {
+
+/*router.get('/', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});  
+*/
 
 router.get('/aakBox', function(req, res, next) {
 	  var categoryId = req.param('categoryId');

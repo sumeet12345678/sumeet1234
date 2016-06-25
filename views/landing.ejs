@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	     <script src="/lib/JQuery/jquery.1.9.1-min.js"></script> 
+	    <title>My App</title>
+	   
+	    
+	     
+	  
+	    <style>
+	     	
+	     	html, body {
+	     		height: 100%;
+	     		width: 100%;
+	     		background-color: #fff;
+				margin: 0px;
+	     	}
+
+	    	
+	    	 @media screen and (max-width: 760px) { 
+  	 			 
+  	 			 #MAIN_CONTENT_CONTAINER 
+  	 			 {
+  	 				width : 100%;
+  	 				min-height: 100%;
+  	 				margin-top: 65px;
+  	 			}
+  	 			 #PEOPLE_TOP_ACTIONBAR
+				{
+					width: 100%;
+				}
+                .drop-down-list
+                {
+                	width: 100%;
+                }
+  		
+  			}
+  			
+  			@media screen and (min-width: 761px) 
+  			{ 
+	  			 #MAIN_CONTENT_CONTAINER 
+	  			 {
+	    	 	
+	    	 	margin-top111: 130px;
+	    	 	/* width : 67%; 
+	    	 	   margin-left: auto;
+	    	 	   margin-right: auto;
+	    	 	
+	    	 	*/
+	    	 	
+	    	 	min-height: 100%; 	 	
+	    	    background-color: #fff;
+	    	    position: relative;
+	    	 }
+			 
+			  .website-screen-width_dt 
+			  {
+				width: 70%;
+				margin-left: auto;  
+				margin-right: auto;
+			  }
+			  .drop-down-list
+			  {
+			  	width: 90%;
+			  }
+			  .drop-down-left
+			  {
+			  	margin-left:65px;
+			  	display:inline-block; 
+				width:45%;
+			  }
+			  .drop-down-right
+			  {
+			  	
+			  	display:inline-block; 
+				width:45%;
+			  }
+
+
+			
+  
+  	  	}
+  	  	
+  	  	.drop-down-main
+{
+
+	width:100%; 
+	overflow: auto;
+	
+	 
+}
+.drop-down-list
+{
+	
+	margin-top: 10px;
+	height: 70px;
+	text-align: center;
+	
+}
+  	  	
+  	  	
+	    </style>
+
+	  
+			  
+	       
+	</head>  
+
+	<body> 
+		
+	 <!--  <div style = "height:73px; background-color: silver; position: fixed; width: 100%; top: 0px; z-index: 999;">
+	  		<img id="ARROW_DROP_DOWN" src="images/arrow-down.png" width="28" height="28">
+	  </div>
+-->
+  
+		 <% include ./partials/top_menu_bar.ejs %>  
+		 
+		
+		<div id = MAIN_CONTENT_CONTAINER class = "website-screen-width_dt" style="margin-top: 71px; padding-top: 25px; margin-bottom: 50px;" >
+		
+
+
+			<!--fine by me 
+			 	<img src="images/adv_1_camaro-wallpaper-1920x1080.jpg">-->
+
+			 <div class="drop-down-main">
+
+
+			 	<div class="drop-down-left">
+
+			 		<div class="drop-down-list" style="background-color:#2d5c93">
+			 			<font color="#fff" style="display:inline-block; margin-top:5px;"><b>Wallet<br>
+			 			Bal:3400<br>
+			 			Points:50000</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#383838">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Offers,Promos(100+)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#7e7e7e">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>News(7+)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#0b1c36">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Events(6+)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#102d59">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Communiniques(500+)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#495e1e">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Reccomendations(30+)</b></font>
+			 		</div>
+
+
+			 	</div>
+
+
+
+			 	<div class="drop-down-right">
+
+			 		<div class="drop-down-list" style="background-color:#495e1e">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Earning Opportunities(5)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#545454">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Todos(5)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#4f8fdc">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Work Updates(10+)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#aaaaaa">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Health(5)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#759533">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Classifieds(50)</b></font>
+			 		</div>
+
+			 		<div class="drop-down-list" style="background-color:#195464">
+			 			<font color="#fff"><span style="display:inline-block; margin-top:25px;"><b>Money(100+)</b></font>
+			 		</div>
+
+			 	</div>
+			 </div>
+  			
+		  
+		</div>
+		
+     
+     <% include ./partials/footer_bar.ejs %> 
+
+		<script type="text/javascript">
+			$(function()
+					   {
+					      // Calling Login Form
+					      $("#ARROW_DROP_DOWN").on('click',function()
+					      {
+					         $(".drop-down-main").show();
+					         
+					         
+					      });
+					   });
+			$(document).mouseup(function (e) 
+					 {
+
+					     var drop_down = $(".drop-down-main");
+					     if (!$('.drop-down-main').is(e.target) && !drop_down.is(e.target) && drop_down.has(e.target).length == 0) 
+					     {
+					         drop_down.hide();
+
+					     }
+					 });
+		</script>
+
+
+</body>
+</html>
+
+ 
