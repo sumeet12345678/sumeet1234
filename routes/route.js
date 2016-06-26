@@ -12,7 +12,7 @@ var router = express.Router()
 */
 
 router.get('/', function(req, res, next) {
-	  res.render('landing.ejs', { page: "peopleSearchResult"});	    
+	  res.render('landing.ejs');	    
 	}); 
 
 
@@ -101,10 +101,10 @@ router.get('/profile/view/uniprofile_bg_img', function(req, res, next) {
 
  
 
- /*router.get('/people/search/result', function(req, res, next) {
+  router.get('/people/search/result', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});    
-  */
+  
 
 /*router.get('/', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
@@ -188,7 +188,7 @@ router.get('/experience', function(req, res, next) {
 
 //router.get('/people/search/result', function(req, res, next) {
 	//  res.render('profiles/peopleSearchResults.ejs');	    
-	//});  
+	// });  
 
 
 /*
