@@ -4,103 +4,56 @@
 		.searchCol removed.
  -->
 
-
-
 <script src="/lib/JQuery/jquery.1.9.1-min.js"></script>  
- 
+<script src="/script/desktop/desktop.js"></script> 
 <link href="/styles/common.css" rel="stylesheet" /> 
 
 
-<div id = PROJECT_TOP_MENU_BAR_ID class="top-menubar navbar-fixed-top" style = "margin: 0px; padding: 0px; border1: 1px solid red;"> 
-      
+<div id = PROJECT_TOP_MENU_BAR_ID class="top-menubar navbar-fixed-top" style = "margin: 0px; padding: 0px; border1: 1px solid red;">  
         
        <div id = PROJECT_TOP_MENU_BAR_CNTNR_ID class="top-menu-container" style = " height: 42px; margin: 0; padding-left: 0; padding-right: 0; border1: 1px solid green;">
        		<div class="top-menu-content website-screen-width_dt" style = "height: 100%;"> 
        		
-       			 	<table width = "100%" height = "100%" border = 0>
-       				   
+       			 	<table width = "100%" height = "100%" border = 0> 
        				   <tr>
        				   		<td valign = middle>
        				   		   <img  id= MASTER_MENU_ICON style="width: 30px; height: 30px;" src="/media/images/icons/3lines-menu.png" />       				   		 
-       				   		</td>  
-       				   		
-       				   		<td valign = top width = "66%" align = center> 
-	       				   		 <!--  <div style = " width: 100%; border: 1px solid orange;"> -->   
+       				   		</td>   
+       				   		<td valign = top width = "66%" align = center> 	       		 
 	       				   		 <table width = "100%" height = "100%">
 	       				   		 	<tr>
 	       				   		 		<td valign = middle>
 	       				   		 			 <input style = "height: 26px; width: 100%;" type="text" class="searchBox" placeholder="Search" />
 	       				   		 		</td>
-	       				   		 		<td valign = middle>
-	       				   		 			  	 <img   style = "margin-left: 0px;" width = "30" height = "30" src="/media/images/icons/search-icon.png" />  
-	       				   		 		</td>
-	       				   		 	
+	       				   		 		<td valign = middle>	       				   		 		    
+	       				   		 			 <img style = "background-color: #262626; margin-left: 0px;" width = "28" height = "26" src="/media/images/icons/search-gls-white.png" />	       				   		 			  
+	       				   		 		</td> 
 	       				   		 	</tr>
-	       				   		 </table>
-	       				   		     
-						            	
-						            	 
-       				   		</td> 
-       				   		
-       				   		 
+	       				   		 </table>  
+       				   		</td>  
        				   		
        				   		<td align = right valing = middle>
        				   			 <span class="menubar-btn blue-on-top-of-earth-color">
 					         		<img  id= PEOPLE_FINDER_ICON width="30px" height="30px" src="/media/images/icons/white-portals.png" /> 
 					        	 </span>
-       				   		</td>
-       				   
+       				   		</td> 
        				   </tr>
        				
-       				</table>
-        
-       		 
-       		   <!-- 
-		       		<div class="col-xs-2" style = "display: inline-block; padding-left: 0px;" >		  	        
-			            <img  id= MASTER_MENU_ICON style="width: 30px; height: 30px;" src="/media/images/icons/3lines-menu.png" />
-			        </div>  
-	 
-			        <div class="col-xs-8 text-center searchCol">
-			        
-			        	<div class="input-group">      
-			            	<input type="text" class="form-control searchBox" placeholder="Search" />
-			            	<span class="input-group-btn">
-								<button class="btn" type="button" id="searchBtnId"><span class="glyphicon glyphicon-search searchIcon"></span></button>
-							</span>
-			            </div> 
-			            
-			        </div>   
-			        
-			        <div class="col-xs-2" style = "padding-right: 0px; text-align: right;">   
-			         <span class="menubar-btn blue-on-top-of-earth-color">
-			         	<img  id= PEOPLE_FINDER_ICON width="30px" height="30px" src="/media/images/icons/white-portals.png" /> 
-			         </span>
-			          
-			        </div>
-			     -->  
-			        
-	       	</div><!-- top-menu-content Ends -->  
-	       	 
-	       	  
-	       	  
-       </div><!-- top-menu-container ends -->
-       
-          
+       				</table>  
+	       	</div> 
+       </div> 
        
        <div id = PROJECT_TOP_MENU_BAR_PUSH_ZONE_ID  class="row top-push-zone" style="color:#D7D7D7;font-size: 12px; margin: 0px;">         
        		<div class="pushContainer website-screen-width_dt" style="position: relative;">
        			<div id="leftBlock" style= "">   
-	 				<!-- <img  height="15" width="17" class="pull-left" style="margin-right: 10px; margin-top: 3px" src="/media/images/icons/deals.png" /> -->
 	 				<img id="offersIcon" height="17" width="17" class="pull-left" style="margin-right: 10px; margin-top: 5px" src="/media/images/icons/done.png" />
-	 				<div style="display:inline-block;"> 3578/- of referrals, 29317/- of discounts.. <span class="blue-on-top-of-earth-color arrow-link">&gt;&gt;</span></div>
-	 				
-	 			<span id="no-of-notification" class="pull-right" style="position:absolute; top: 4px; color:white; font-family: 'Arial Narrow'">63</span>
-	 			<img id="notificationIcon" height="20" width="20" class="pull-right" src="/media/images/icons/notifications-pushes-green.png"  style="margin-top: 2px" /> <!-- onclick="javascript:displayNotificationPopUpMenu(event);"/> -->	 
-	 			</div>   
-	 						
+	 				<div style="display:inline-block;"> 3578/- of referrals, 29317/- of discounts.. <span class="blue-on-top-of-earth-color arrow-link">&gt;&gt;</span></div>	 				
+	 				<span id="no-of-notification" class="pull-right" style="position:absolute; top: 4px; color:white; font-family: 'Arial Narrow'">63</span>
+	 				<img id="notificationIcon" height="20" width="20" class="pull-right" src="/media/images/icons/notifications-pushes-green.png"  style="margin-top: 2px" /> <!-- onclick="javascript:displayNotificationPopUpMenu(event);"/> -->	 
+	 			</div>   	
  			</div> 
    	   </div>  
-            
+        
  </div>    
  
  <div id = CONTENT_HEADER_BAR class = "common-page-header-bar website-screen-width_dt" style = "display: none; position: relative;">
@@ -108,11 +61,7 @@
  </div>
   
   
-  <script src="/script/common.js"></script> 
-
-  
-   
-<% include ../modal/notificationPopUp.ejs %>    
+<script src = "/script/common.js"></script>  
 <% include ../modal/peopleFinder.ejs %>
 <% include ../modal/masterMenu.ejs %> 
  

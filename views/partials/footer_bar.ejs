@@ -1,60 +1,4 @@
-<script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
-<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-
-<script>
-var treeMenuDepth1Data = [ 
-                          {
-                     		"label": 'Deals, Promos',
-                     		"id": '',
-                     		"icon": '.png',
-                     		"items": [{
-                     			"label" : 'Groceries',
-                     			"id" : '',
-                     			"icon" : '.png'
-                     		},
-                     		{
-                     			"label" : 'Electronics',
-                     			"id" : '',
-                     			"icon" : '.png'
-                     		}
-                     		]	 
-                     	 },
-                     	 {
-                     		"label" : 'Alerts',
-                     		"id" : '',
-                     		"icon" : '.png',
-                     		"items" : [{
-                     			"label" : 'Banking',
-                     			"id" : '',
-                     			"icon" : '.png'
-                     		},
-                     		{
-                     			"label" : 'Jobs',
-                     			"id" : '',
-                     			"icon" : '.png'
-                     		}
-                     		]	 
-                     	 }
-                     	 ];
-                     	 
-           
-
-
-       	 
-                  
-</script>
-
-
-
-       
- <% include ../modal/mPopUp.ejs %> 
- <% include ../modal/aakComposer.ejs %>
- <% include ../modal/quickTool.ejs %> 
- <% include ../modal/aakInboxPopUp.ejs %>   
- <% include ../aakBox/aakOptionsPopUp.ejs %>           
- <% include ../common/treeMenuDepth1.ejs %>
- 
- <style>
+<style>
  	.footer-bar-image-div-settings {
  		box-sizing: content-box;
  		display: inline-block;
@@ -71,43 +15,34 @@ var treeMenuDepth1Data = [
  </style>
     
 
-<div class="row footer menubar-footer navbar-fixed-bottom container-fluid" id="footerBarId" style="height: 42px; padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px;">       
+<div class="menubar-footer" id="footerBarId" style="z-index: 1030; width : 100%; position: fixed; bottom: 0; height: 42px; padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px;">       
   		
-  		<div class="footer-container website-screen-width_dt" style="padding-top: 0px;">
+  		<div class="footer-container website-screen-width_dt" style="padding-top: 0px; height: 100%;">
   		 	   
   			<table width = "100%" height= "100%" border = 0>    
       			<tr>      				
       				<td width="16.66666667" valign = middle align = left>    
-      					<div class = "footer-bar-image-div-settings" style = "background-color: #8C8585;">     					
+      					<div class = "footer-bar-image-div-settings" style = "background-color: #8C8585; height: 100%;">     					
       						    <img id=AKK_OPTIONS_POPUP_ID width="28" height="28" src="/media/images/icons/3dots_vert_white.png" onClick = "javascript: iconsMenuLauncherClickHandler('FOOTER_CONTEXTUAL_PAGE_OPTIONS', testJONData);"/> 
-      						<!--   <img id=AKK_OPTIONS_TRIAL_ICON width="28" height="28" src="/media/images/icons/lifestyle_illustration.png" /> -->
-      						<!-- <img id=AKK_OPTIONS_POPUP_ID width="30" height="30" src="/media/images/icons/options.png" /> -->
       					</div>	 					
       				</td>
       				     
-      				<td width="16.66666667" valign = middle align = left>  <!-- style="border: 2px dotted #fff;" -->     
-      					<!-- 
-      					<div id="d360 footer-bar-image-div-settings footer-bar-image-div">
-      					 	<img  id="sunIcon" class="profileContext" width="30" height="30" src="/media/images/icons/folders-white.png"/>   
-      					</div>
-      					-->					      						
+      				<td width="16.66666667" valign = middle align = left>  
       				</td>
       			 
       				<td width="16.66666667" valign = middle align = right>     
-      					<!-- 	<img id= "FOOTER_SEARCH" style="" width="30" height="30" src="/media/images/icons/search-gls-white.png" /> -->
-      					<div class = "footer-bar-image-div-settings  footer_bar_static_icon"> 	  
-      						<img id="" width="32" height="32" src="/media/images/icons/icon-question.png">
+      					<div class = "footer-bar-image-div-settings footer_bar_static_icon"> 	  
+      						<img width="32" height="32" src="/media/images/icons/icon-question.png">
       					</div>	      					
       				</td>  
       				
       				<td width="16.66666667%" valign = middle align = right >      					
-      					<div class = "footer-bar-image-div-settings  footer_bar_static_icon"> 	 
-      						<img   id="plus" width="30" height="30" src="/media/images/icons/operators-white/gen-content-plus-wht.png" /> 
+      					<div class = "footer-bar-image-div-settings footer_bar_static_icon"> 	 
+      						<img id="plus" width="30" height="30" src="/media/images/icons/operators-white/gen-content-plus-wht.png" /> 
       					</div>	      					
       				</td>
       				
-      				<td width="16.66666667%" valign = middle align = right>      					
-      						
+      				<td width="16.66666667%" valign = middle align = right> 
       					<div class = "footer-bar-image-div-settings footer_bar_static_icon"> 
       						<img id=AAK_INBOX_POPUP_ID style="" width="28" height="24" src="/media/images/icons/aakbox.png"/>
       					</div>
@@ -115,7 +50,7 @@ var treeMenuDepth1Data = [
       				</td>
       				
       				<td width="16.66666667%" valign = middle align = right>      					
-   						<div class = "footer-bar-image-div-settings  footer_bar_static_icon">   
+   						<div class = "footer-bar-image-div-settings footer_bar_static_icon">   
    						  <img  id=QUK_TOOL_ICON_ID width="28" height="28" src="/media/images/icons/aak-services.png"/> 
    						</div>   					
       				</td>
@@ -132,24 +67,19 @@ var treeMenuDepth1Data = [
  	$('.footer_bar_static_icon').on('click', function(){
  		
  		if($(this).hasClass('footer-bar-image-div-bg')) {
- 			//$(this).removeClass('footer-bar-image-div-bg');
  			$('.footer_bar_static_icon').removeClass('footer-bar-image-div-bg');
  		}
  		else {
  			$('.footer_bar_static_icon').removeClass('footer-bar-image-div-bg');
  			$(this).addClass('footer-bar-image-div-bg');
  		}
- 		
- 		
- 		
- 		//$(this).toggleClass('footer-bar-image-div-bg');
+ 		 
  	}); 
  	   
  </script>    
-   
  
- <script src="/script/desktop/desktop.js"></script> 
- <script src="/script/modal/mPopUp.js"></script>       
+ <% include ../modal/aakComposer.ejs %>
+ <% include ../modal/quickTool.ejs %> 
 
  
  

@@ -3,45 +3,44 @@ $(function() {
 	var masterMenu = $('#MASTER_MENU');
 	var masterMenuIcon = $('#MASTER_MENU_ICON');
 	var masterMenuMinIcon = $('#MASTER_MENU_MIN_ICON');
-	//var expandIcon = $('.expandIcon');
 	var masterMenuToggleBar = $('.master-menu-content-toggleBar');
+	var masterMenuBanner = $('#MASTER_MENU_BANNER');
+	var masterMenuContent = 	$('#MASTER_MENU_CONTENT');
 	
 	masterMenu.css('height', SCREEN_HEIGHT_GLOBAL);
 	
-	/* SHOW/HIDES MASTER MENU */   
+	/*
+	 *  SHOW/HIDES MASTER MENU 
+	*/   
 	masterMenuIcon.on('click', function(){
 		toggleMasterMenuDisplay();
 	});
 	
 	masterMenuMinIcon.on('click', function() {
 		toggleMasterMenuDisplay();
-		
 	});
 	
 	
-	/* EXPANDING THE ICON */
+	/* 
+	 *  EXPANDING THE ICON 
+	*/
 	masterMenuToggleBar.on('click', function() {
 		var element = $(this);
 		element.siblings('.masterMenuOptions').toggle();
 		element.children('.expandIcon').toggle();
-		//$(this).css('color', '#fff');
 		element.children('.barTitle').toggleClass('green-text');
-		//element.toggleClass('green-toggle-bar');
-		element.toggleClass('earth-gradient-bg')
-		//element.css('background-color', '#91B535');
+		element.toggleClass('earth-gradient-bg');
 	});
 	
 	$('#MASTER_MENU_PROFILE_ICON').on('click', function() {
-		$('#MASTER_MENU_BANNER').css('display','block');
-		$('#MASTER_MENU_CONTENT').css('display','none');
+		masterMenuBanner.css('display','block');
+		masterMenuContent.css('display','none');
 	});
 	
 	$('#MASTER_MENU_QUESTION_ICON').on('click', function() {
-		$('#MASTER_MENU_BANNER').css('display','none');
-		$('#MASTER_MENU_CONTENT').css('display','block');
+		masterMenuBanner.css('display','none');
+		masterMenuContent.css('display','block');
 	});
-	
-	
 	
 	function toggleMasterMenuDisplay() {
 		masterMenu.toggle();

@@ -10,82 +10,8 @@
 	height: 100%; 
 	background-color: white;
 	z-index: 99999;
-
 	padding: 0px 0px 8px 0px;
-	
-	border-left111: 3px solid #558ED5;
-	border-right11: 3px solid #558ED5;
 	border: 1px solid #558ED5;
-	
-}
-
-#MASTER_MENU_TITLE_BAR111 {
-	background: -webkit-linear-gradient(#696969,#3f3f3f);
-	background: -o-linear-gradient(#696969,#3f3f3f);
-	background: -moz-linear-gradient(#696969,#3f3f3f);
-	background: linear-gradient(#696969,#3f3f3f);
-}
-
-.masterMenuToggleBar111555 {
-	background-color: #95B3D7;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 100%; 
-	margin-top: 8px;
-	color: #000;
-	font-weight: bold;
-	cursor: pointer;
-	text-align11: right;
-	
-	border-radius: 3px;
-}  
-
-.masterMenuToggleBar:hover11111111 {
-	background-color12345: #91B535;
-	background: -webkit-linear-gradient(#696969,#3f3f3f);
-	background: -o-linear-gradient(#696969,#3f3f3f);
-	background: -moz-linear-gradient(#696969,#3f3f3f);
-	background: linear-gradient(#696969,#3f3f3f);
-	color: #fff;
-}
-
-.masterMenuToggleBar:hover5555  {
-	background: -webkit-linear-gradient(#696969,#3f3f3f);
-	background: -o-linear-gradient(#696969,#3f3f3f);
-	background: -moz-linear-gradient(#696969,#3f3f3f);
-	background: linear-gradient(#696969,#3f3f3f);
-	color: #fff;
-}
-
-
-
-
- 
-
-.white-text {
-	color: #fff;  
-}
-
-
-
-.green-toggle-bar{
-	background-color: #91B535;
-}
-
-
-.masterMenuToggleBar img {
-	margin-right: 5px;
-}
-.masterMenuToggleBar .barTitle123{
-	float: right;
-	margin-right: 5px;
-}
-
-.expandIcon {
-	font-size: 18px;  
-	 
 }
 
 .masterMenuOptions { 
@@ -109,16 +35,8 @@
 	display: none;
 }
 
-input {
+#MASTER_MENU_CONTENT input {
 	height: 20px;
 	width: 20px;
 }
-
-
-  /* MEDIA SCREEN (tab and Ipad) */  
-   @media screen and (min-width: 768px) { 
-	#MASTER_MENU_TABLE {
-		width: 70%;
-	}
-	
-  }
+ 
