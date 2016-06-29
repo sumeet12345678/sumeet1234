@@ -47,7 +47,7 @@ function initComposer() {
 	 $smileyemotions = $('#SMILEY_EMOTIONS');
 	 $attachoption = $('#ATTACH_OPTIONS'); 
 	 topWindow = $composerWrapper;  
-	 newWindowBtn = $('#AAK_NEW_COMPOSER_WINDOW_BTN');   
+	 newWindowBtn = $('#AAK_NEW_COMPOSER_WINDOW_BTN');     
 	 top = 0;  
 	 bottomVar = 40;
 	 leftVar = 40;
@@ -142,7 +142,7 @@ function uniComposeMsg(usrId, usrName, msgType, context) {  //uniComposeMsg(cate
 
 function positionComposer(context) {
 	
-     $composerWrapper.css('bottom', '40px');   
+     $composerWrapper.css('bottom', '42px');   
 	 
      if(context != "localCntxt"){
 		 newWindowBtn.show();	 
@@ -254,34 +254,38 @@ function maxMinComposer(composerWindow) {
 function closeWindow(closeBtn) {
 	if($('.composerWrapper').length == 1) {
 		$('#COMMON_BLUR_SCREEN').toggle();
+		closeBtn.closest(".composerWrapper").hide();
 	}
-	
-	closeBtn.closest(".composerWrapper").remove();
-}
+	else {
+		closeBtn.closest(".composerWrapper").remove();
+	}
+}    
 
-function maximizeComposer(parentComposerWrapper) {	
+function maximizeComposer(parentComposerWrapper) {	 
 	 parentComposerWrapper.css('height', '100%');  
 	 parentComposerWrapper.css('bottom','0');
 	 parentComposerWrapper.css('top','0'); 
-    parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'block');
+     parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'block');
 	 
-	 $smileyemotions.css('top', '0px');
+	 $smileyemotions.css('top', '0px');    
 	 $smileyemotions.css('height', '20%');
 	 $smileyemotions.css('right', '40px');
-	 $attachoption.css('height', '25%');
+	 $attachoption.css('height', '25%'); 
 
 	 if (screen.width <= 767) {
-		$smileyemotions.css('width', 'calc(100% - 80px)');
+		$smileyemotions.css('width', 'calc(100% - 80px)'); 
 		$attachoption.css('height', '15%');
 	 }	 
 	 
-	composerCurrentSize = "MAXIMIZED";    
+	 parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').css('height', 'calc(100% - 40px)');
+	
+	 composerCurrentSize = "MAXIMIZED";     
 }
 	
 function minimizeComposer(parentComposerWrapper) {
 	 
 	parentComposerWrapper.css('height', '157px');  
-	parentComposerWrapper.css('bottom', '40px');
+	parentComposerWrapper.css('bottom', '42px');
 	parentComposerWrapper.css('top', 'auto');   
 	parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'none');
 	 
@@ -292,8 +296,10 @@ function minimizeComposer(parentComposerWrapper) {
 
 	if (screen.width <= 767) {
 		$smileyemotions.css('width', '100%');
-	} 					
-	     
+	} 					 
+	  
+	parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').css('height', 'calc(100% - 40px)');
+	
 	composerCurrentSize = "MINIMIZED";  
 }
 
@@ -314,7 +320,7 @@ function appendMsgCategory(url, selectedOptionValue, parentComposerWrapper) {
 	xhr.onload = function() {  
 		if(xhr.status === 200) { 
 			console.log("Status  == 200");			
-			parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').append(xhr.responseText);			
+			parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').append(xhr.responseText);  			
 			if(selectedOptionValue == 'P') {
 				parentComposerWrapper.find('#UNI_COMPOSER_POST').show();
 				maximizeComposer(parentComposerWrapper);
