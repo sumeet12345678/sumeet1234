@@ -1,67 +1,67 @@
-/* ------- Common Section --------- */
+/* deleted "visible" class.
+  can delete  div { box-sizing: border-box;}
+
+ */
+
+ 
 div {
 	 box-sizing: border-box;
 }
 
 /* ------- Top Wrapper Section ------- */
-.composerWrapper{
-				width: 80%;  
-				margin-left:auto;
-				margin-right:auto;
-				display: none;
-				position: fixed;  
-				left: 0; 
-				right: 0;	 
-				z-index: 1059;			 
-				background-color: #f2f2f2;
-			    border123: 1px solid #696969;
-			  			
+.composerWrapper {
+	width: 80%;  
+	margin-left:auto;
+	margin-right:auto;
+	display: none;
+	position: fixed;  
+	left: 0; 
+	right: 0;	 
+	z-index: 1059;			 
+	background-color: #f2f2f2;
+    border123: 1px solid #696969;
+  			
 }
 
-.visible {
-	display: block;
-}
-
- 
-
-/* ------- Header Section ------- */			
- 
- 
-
-
-
-/* ------- Main Body Section ------- */
- 
-
-/* Sidebar Section */
-  
-	  
-/* ------- Footer Section ------- */
-
-/* AAK PLUS CAT */
 .uni-composer-msg-category {
 	display: none;
 }
 
-/* ------- Mobile Device Section*/
+#close {
+    float:right;
+    display:inline-block;
+   
+} 
+
+[contenteditable] {
+  border: 1px solid #000;
+  margin: 0.4em 0;
+  line-height: 1.4em;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.emotion-icons-container img {
+margin-top: 5px;
+
+}
+
+.emotion-div-class {
+	overflow-y:auto;
+}
+
 @media screen and (max-width: 767px) {
 	 .composerWrapper {
-	 	width: 100%;	 	 
-	  left2222: 0px;
-	 	 right2222: 0px;
+	 	width: 100%;	 	
 	 	left: 0px;
-	 	right: 0px;
-	 	
-	 }
-
-	
+	 	right: 0px; 
+	 } 
+	 
 	 #SMILEY_EMOTIONS {
 	 	width: 100%;
 	 	position: absolute;
 	 }
-
-	 			/* Melbin's code */
-
+	
 	 #ATTACH_OPTIONS {
 	 	width: 50%;
 	 	position: absolute;
@@ -70,10 +70,9 @@ div {
 	 #AAK_NEW_COMPOSER_WINDOW_BTN {
 	 	left: 0;
 	 }
-}
+} 
 
-
-/* ------- Larger Device Section*/
+ 
 @media screen and (min-width: 768px) {
 	
 	.composerWrapper {
@@ -82,18 +81,12 @@ div {
 	 	right: 10%;
 	 	
 	 }
-	  #MSG_COMPOSER_STANDALONE_RTF_ICON12345 {
-	  	margin-right: 16px;
-	  	display:none;
-	  	border: 2px solid green;
-	  }
-
+	 
 	 #SMILEY_EMOTIONS {
 	  	width: 28.6%; 
 	  	position: absolute;
-	  }									
-	  					/* Melbin's code */
-
+	  }				 
+	  
 	  #ATTACH_OPTIONS {
 	 	width: 25%;
 	 	position: absolute;
@@ -103,37 +96,6 @@ div {
 	 	left: 10%;
 	 }
 }
+ 
 
-
-
-
-	#close {
-	    float:right;
-	    display:inline-block;
-	   
-	}
-	
-	/*Melbin's code*/
-	
-	[contenteditable] {
-	  border: 1px solid #000;
-	  margin: 0.4em 0;
-	  line-height: 1.4em;
-	  -webkit-appearance: textfield;
-	  appearance: textfield;
-	}
-	img123 {
-	  vertical-align: top;
-	  max-height: 1.4em;
-	  max-width: 1.4em;
-	}
-	 
-	.emotion-icons-container img {
-	margin-top: 5px;
-	
-}
-
-	.emotion-div-class {
-		overflow-y:auto;
-	}
 	

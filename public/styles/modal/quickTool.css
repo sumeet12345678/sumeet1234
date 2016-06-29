@@ -1,9 +1,7 @@
 
 #QUK_TOOL_TOP_BAR, #QUK_TOOL_LEFT_BAR, #QUK_TOOL_RIGHT_BAR, #QUK_TOOL_BOTTOM_BAR {
-	z-index: 9999;	
-}
-
-
+	z-index: 1100;	
+} 
 
 #QUK_TOOL_TOP_BAR
 {

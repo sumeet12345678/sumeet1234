@@ -95,10 +95,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <script src="/lib/JQuery/jquery.1.9.1-min.js"></script> 
 	    
-	    <title>My App</title>
-	   
-	    
-	     
+	    <title>My App</title>	     
 	  
 	    <style>
 	     	
@@ -135,43 +132,18 @@
   			
   			@media screen and (min-width: 761px) 
   			{ 
-  			
-  			    * {
-  			    	box-sizing: border-box;
-  			    }
-  			    
 	  			 #MAIN_CONTENT_CONTAINER 
-	  			 {
-	    	 	
-	    	 	margin-top111: 130px;
-	    	 	/* width : 67%; 
-	    	 	   margin-left: auto;
-	    	 	   margin-right: auto;
-	    	 	
-	    	 	*/
-	    	 	
-	    	 	min-height: 100%; 	 	
-	    	    background-color: #fff;
-	    	    position: relative;
-	    	 }
+	  			 { 	    	 	
+		    	 	min-height: 100%; 	 	
+		    	    background-color: #fff;
+		    	    position: relative;
+	    	 	}
 			 
-			  .website-screen-width_dt 
-			  {
-				width: 70%;
-				margin-left: auto;  
-				margin-right: auto;
-			  }
+			 
 			  .drop-down-list
 			  {
 			  	width: 46.7%;
 			  	display: inline-block;
-			  	
-			  	margin-right111: 2%;
-				margin-left111: 2%;
-				
-			  	/*margin-right: 20px;
-				margin-left: 20px;
-				*/
 				margin-top: 20px;
 				height: 80px;
 				text-align: center;
@@ -191,21 +163,17 @@
    				 
 				} 
 		}
+		
 		.drop-down-main
-				{
-					
-					width:100%; 
-					overflow-y: auto;
-					z-index: 1053;
-					margin-left: auto;
-					margin-right: auto;
-					
-					
-				}
-				
-
-  	  	
-	    </style>   
+		{ 
+				width:100%; 
+				overflow-y: auto;
+				z-index: 0;
+				margin-left: auto;
+				margin-right: auto; 
+		} 
+		
+	</style>   
 			  
 	       
 	</head>  
@@ -213,16 +181,8 @@
 	<body> 
 	    
 	    <% include ./partials/top_menu_bar.ejs %> 
-		 
 		
 		<div id = MAIN_CONTENT_CONTAINER class = "website-screen-width_dt" style="margin-bottom: 50px;" >
-		
-			<!--<div style="z-index:0; top:0px;">
-
-			fine by me 
-			 <img src="images/adv_1_camaro-wallpaper-1920x1080.jpg">
-			</div>--> 
-    
 			 <div class="drop-down-main"> 
 			 
 				 	<%
@@ -256,10 +216,6 @@
 				 	<% } %> 
 			 	
 				</div>
-  			
-		 
-			
-			
 		 	
 		</div>
 		
@@ -267,30 +223,5 @@
 		
 	  <% include ./partials/footer_bar.ejs %> 
 		
-		<!-- 
-<script type="text/javascript">
-        var z_index = 1054;
-            $(function()
-                       {
-                          // Calling Login Form
-                          $("#ARROW_DROP_DOWN").on('click',function()
-                          {
-                            var drop_down_main = $("main.html")
-                            drop_down_main.toggle();
-                            
-                             
-                             
-                          });
-                       });
-            
-        </script>
--->
-
-
-
-
-		 
-
-
-		 </body>
-		 </html>
+ </body>
+ </html>

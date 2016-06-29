@@ -1,4 +1,9 @@
-a:hover{
+* {
+	
+	box-sizing: border-box;
+}
+
+a:hover {
 	text-decoration: none;	
 }
 
@@ -13,10 +18,6 @@ a:hover{
 	font-size:32px;  
 	} 
 	
-.menubar-footer .col-xs-2 img { 
-	margin: 6px 0px 6px 0px;
-	vertical-align: center;
-} 
 
 .menubar-footer .col-xs-5 img { 
 	margin: 6px 5px 6px 5px; 
@@ -47,9 +48,13 @@ a:hover{
 	cursor:pointer;  
 }
 
+
 .profile-content {margin-bottom:50px}
+
 .text-white {color:#fff}
+
 .brand-earth {color:#595959}  
+
 .blue-on-top-of-earth-color {
 	color: #95B3D7;
 }

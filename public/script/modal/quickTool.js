@@ -1,9 +1,5 @@
 
-
-$(function() {
-	  var qukToolVisible=false;
-	  
-	  var images = [
+var images = [
 	                {  'id'   : '1',
 			  			   'img'  : '/media/images/icons/add-audience.png',
 			  			   'text' : 'Connections',
@@ -222,54 +218,41 @@ $(function() {
 			        
 		            
 	  ];
-	  
-	  //alert("ID === " + images[0].id);
-	  
-	var	  rightbarStart=0
-	var	  rightbarEnd=0;
-	var	  topbarStart=0;
-	var   topbarEnd=0;
-	var   leftbarStart=0;
-	var   leftbarEnd=0;
+
+
+$(function() {
 	
-	var   bottomBarStart = 0;
-	var   bottomBarEnd = 0;
-  
-	  
-	
+	var qukToolVisible=false;  
+	var rightbarStart=0
+	var rightbarEnd=0;
+	var topbarStart=0;
+	var topbarEnd=0;
+	var leftbarStart=0;
+	var leftbarEnd=0;
+	var bottomBarStart = 0;
+	var bottomBarEnd = 0;
+    
 	function setBarsPositionVariables() {
 		 /* DECIDE THESE VALUES BASED ON DEVICE SIZE */
-		  rightbarStart=1;
-		  
-		  //rightbarEnd=3; //End value auto generated
-		  //height [.height()] of right bar(400)/42 + 5 + 5  = 7.6 = rounded to lowest = 7 i.e, rightBarEnd = 7  and topBarStart =  rightBarEnd + 1
-		  // after getting each bar size, check if the bar is consuming entire json image data. If it is, then check the next bar's variable setting.
+		  rightbarStart=1;   
+		  /*
+		   * 
+		    rightbarEnd=3; //End value auto generated
+		    height [.height()] of right bar(400)/42 + 5 + 5  = 7.6 = rounded to lowest = 7 i.e, rightBarEnd = 7  and topBarStart =  rightBarEnd + 1
+		    after getting each bar size, check if the bar is consuming entire json image data. If it is, then check the next bar's variable setting.
+		    
+		  */
 		  var rightBarHeight = $('#QUK_TOOL_RIGHT_BAR').height();
 		  rightbarEnd = Math.floor(rightBarHeight/92); // height of image with container and top and bottom margin,  42+25+25 = 92 , 42 = width of left bar,  margin-top and bottom both 15px.
-		  
-		 
-		  
-		  //topbarStart=4;
 		  topbarStart= rightbarEnd + 1;
-		  //  auto generate topbarEnd
-		 // topbarEnd=7;
+		  
 		  var topBarWidth = $('#QUK_TOOL_TOP_BAR').width(); 
 		  topbarEnd = topbarStart +  Math.floor(topBarWidth/110) -1; //80+15+15 = 110, left and right margin both 25px
-		  //alert('topbarEnd == ' +  topBarWidth);
-		  
-		  
-		 // leftbarStart=8;
 		  leftbarStart= topbarEnd + 1;
+		  
 		  var leftBarHeight = $('#QUK_TOOL_LEFT_BAR').height();
 		  leftbarEnd = leftbarStart + Math.floor(leftBarHeight/92)-1; // 42+25+25 = 92 , 42 = width of left bar,  margin-top and bottom both 25px.
-		  
-		  console.log("rightBarStart == " + rightbarStart + "  rightbarEnd == " + rightbarEnd + "  topbarStart == " + topbarStart + "  topbarEnd == " + topbarEnd + "  leftbarStart==" + leftbarStart + "  leftbarEnd==" + leftbarEnd );
-		  
-		//  leftbarEnd=10;
-		 
 	}
-	 
-	 
 	  
 //	  rightbarStart=0;
 //	  rightbarEnd=2;
@@ -277,9 +260,6 @@ $(function() {
 //	  topbarEnd=8;
 //	  leftbarStart=9;
 //	  leftbarEnd=11;
-//	  image();  
-	  
-	 
 	  
 	$('#QUK_TOOL_ICON_ID').on('click', function() {    
 		 clearAllBars();
@@ -309,8 +289,6 @@ $(function() {
 	  
 	};
 	
-	 
-	
    $('#left_Arrow').on('click',function() 
     {
         clearAllBars();
@@ -338,8 +316,7 @@ $(function() {
         return i;
 
     }
- 
-	                       
+                      
 	function image() {  
 		
 		var imageToAppend;
@@ -348,14 +325,6 @@ $(function() {
 		  
         for (var i =leftbarStart; i <= leftbarEnd; i++) 
         {
-//            var f1_2012_image = document.createElement("IMG");
-//            f1_2012_image.setAttribute("src", images[i]);
-//
-//            f1_2012_image.setAttribute("height", "50");
-//            f1_2012_image.setAttribute("width", "50");
-         
-	     
-	     
         	  divContainerForImage = $('<div class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px; height: 42px;"></div>');
         	  aTag = $('<a href ="' + images[i].url + '"></a>');
         	  
@@ -371,20 +340,11 @@ $(function() {
         	  divContainerForImage.append(aTag);
         	  divContainerForImage.append('<span style = "display: block;  margin-top: 8px; font-size: 12px; font-weight: bold; color:' + images[i].col +';">' + images[i].text + '</span>');
         	  
-
-            $('#QUK_TOOL_LEFT_BAR').append(divContainerForImage);
-            
-           
+              $('#QUK_TOOL_LEFT_BAR').append(divContainerForImage);
         }
         
         for (var i = topbarEnd; i >=  topbarStart; i--) 
         {
-//            var f1_2012_image = document.createElement("IMG");
-//            f1_2012_image.setAttribute("src", images[i]);
-//
-//            f1_2012_image.setAttribute("height", "50");
-//            f1_2012_image.setAttribute("width", "50"); 
- 
       	  divContainerForImage = $('<div  class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px;height: 42px;"></div>');
       	  aTag = $('<a href ="' + images[i].url + '"></a>');
       	  
@@ -401,19 +361,10 @@ $(function() {
       	  divContainerForImage.append('<span style = "display: block;   margin-top: 8px; font-size: 12px; font-weight: bold; color:' + images[i].col +';">' + images[i].text + '</span>');
 
           $('#QUK_TOOL_TOP_BAR').append(divContainerForImage);
-
         }
           
         for (var i = rightbarEnd; i >=rightbarStart ; i--) 
         {
-//            var f1_2012_image = document.createElement("IMG");
-//            f1_2012_image.setAttribute("src", images[i]);
-//
-//            f1_2012_image.setAttribute("height", "50");
-//            f1_2012_image.setAttribute("width", "50");
-        	
-        	//appendToBar(index, content, containerBar);  
-
       	  divContainerForImage = $('<div  class = "quk-tool-img-caption-container" style = "text-align: center; display: inline-block; width: 80px; height: 42px;"></div>');
       	  aTag = $('<a href ="' + images[i].url + '"></a>');
       	 
@@ -425,13 +376,10 @@ $(function() {
       	  imageToAppend.attr('onclick', images[i].url);
       	  
       	  aTag.append(imageToAppend);
-      	 
       	  divContainerForImage.append(aTag);
       	  divContainerForImage.append('<span style = "display: block;    margin-top: 8px; font-size: 12px; font-weight: bold; color:' + images[i].col +';">' + images[i].text + '</span>');
       	  
           $('#QUK_TOOL_RIGHT_BAR').append(divContainerForImage);
-
-            
         }
 
     }
@@ -448,8 +396,7 @@ $(function() {
 	   {
 	    
 	   }
-	   else
-	   {
+	   else {
 	    rightbarStart--;
 	    rightbarEnd--;
 	    topbarStart--;
@@ -457,9 +404,9 @@ $(function() {
 	    leftbarStart--;
 	    leftbarEnd--;
 	   }
-   }
+ }
 	   
-function rightArrow()  {
+ function rightArrow()  {
 	
     if (leftbarEnd < images.length - 1) 
     {
@@ -470,18 +417,10 @@ function rightArrow()  {
     leftbarStart++;
     leftbarEnd++;
     }
-    else
-    {
+    else{
 
     }
-  
  }
- 
 
-});  
+});  /* document ready function ends */
 	
-
-//function function1() {
-//	alert("dfffffffff");
-//}
- 

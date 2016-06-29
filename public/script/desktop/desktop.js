@@ -1,6 +1,4 @@
-
  
-
 function onEscapeHide( element ){
 	element.hide();	
 }
@@ -15,12 +13,8 @@ $(document).keydown(function(e) {
 	   
 	   if (e.keyCode == 80 && e.altKey) {        //p =  87
 		   $('#MSG_COMPOSER_TO').trigger('click');//
-		}
-	  
-});
-
-
-
+		} 
+}); 
 
 $('#CONTAXONOMY_MODAL').keydown(function(e) {
     // ESCAPE key pressed

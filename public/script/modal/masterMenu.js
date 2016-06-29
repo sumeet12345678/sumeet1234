@@ -12,7 +12,7 @@ $(function() {
 	/*
 	 *  SHOW/HIDES MASTER MENU 
 	*/   
-	masterMenuIcon.on('click', function(){
+	masterMenuIcon.on('click', function() {
 		toggleMasterMenuDisplay();
 	});
 	
