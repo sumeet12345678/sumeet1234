@@ -10,7 +10,7 @@
 <link href="/styles/common.css" rel="stylesheet" /> 
 <link href="/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
 
-<style>
+<style>  
 
     .plain-text-box {
 	border: 0px; 
@@ -43,10 +43,11 @@
 	       				   		 		</td>   
 	       				   		 	</tr>
 	       				   		 </table>    
-       				   		</td> 
-       				   		<td align = right valing = middle>
+       				   		</td>   
+       				   		<td align = right valing = middle>    
        				   			 <span class="menubar-btn blue-on-top-of-earth-color">
-					         		<img  id= PEOPLE_FINDER_ICON width="30px" height="30px" src="/media/images/icons/white-portals.png" /> 
+					         		<!-- <img  id= PEOPLE_FINDER_ICON width="30px" height="30px" src="/media/images/icons/white-portals.png" /> -->
+					         		 <img  id= PEOPLE_APP_ICON width="30px" height="30px" src="/media/images/icons/white-portals.png" onclick = "loadPeopleApp($('#CONTENT_HEADER_BAR'))"/> 
 					        	 </span>
        				   		</td> 
        				   </tr>
@@ -66,16 +67,17 @@
  			</div> 
    	   </div>  
         
- </div>    
- 
+ </div>     
+   
  <div id = CONTENT_HEADER_BAR class = "common-page-header-bar website-screen-width_dt" style = "display: none; position: relative;">
  	<div id = "CONTENT_HEADER_BAR_RT_ICON" style = "display:none; height: 30px; top: 0; position: absolute; right: 0;"><img src = "/media/images/icons/plainblack/3lines-thin-menu-blk.png" width = 30px; height = 30px;" onClick = "javascript: iconsMenuLauncherClickHandler('CONTENT_HEADER_BAR_RT_ICON');"/></div>
  </div>
+ 
+ 
+  
   
   
 
-
-<% include ../modal/peopleFinder.ejs %>
 <% include ../modal/masterMenu.ejs %> 
  
  

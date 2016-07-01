@@ -47,9 +47,9 @@ var $peopleFinderContentDiv = $('#PEOPLE_FINDER_CONTENT');
 $(function() {
 	
 	populatePeopleFinderOptions();
-	/*Populate people finder options*/
+	/* Populate people finder options */
 		
-	var peopleFinderIcon =  $('#PEOPLE_FINDER_ICON');  
+	var peopleFinderIcon =  $('#PEOPLE_FINDER_ICON');    
 	var peopleFinder =  $('#PEOPLE_FINDER'); 	 //popUp	PEOPLE_FINDER_MIN_ICON
 	var peopleFinderMinIcon=  $('#PEOPLE_FINDER_MIN_ICON');
 	var peopleFinderOptionsCloseBtn = $('.peopleFinderOptionsCloseBtn');

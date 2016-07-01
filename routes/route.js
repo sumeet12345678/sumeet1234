@@ -15,6 +15,13 @@ router.get('/', function(req, res, next) {
 	  res.render('landing.ejs');	    
 	}); 
 
+router.get('/peopleApp', function(req, res, next) {
+	  res.render('people/peopleHome.ejs');	    
+	});
+
+router.get('/peopleFinder', function(req, res, next) {
+	  res.render('people/peopleFinder.ejs');	    
+	}); 
 
 /* GET people_with_pic.ejs file. */
 router.get('/unicomposer/post', function(req, res, next) {

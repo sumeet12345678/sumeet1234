@@ -47,14 +47,20 @@
    	 			}  
    	 
    	 ];
-   
- 
+    
+  
    %>
  	 
    	
 	<link rel="stylesheet" href="/styles/profiles/peopleSearchResults.css"/>
 		 
-	
+	<%
+		var perPage = 10;
+		var start = 0;
+		var end = 3;
+		
+		
+	%>
 	
 	
 	
@@ -79,7 +85,7 @@
   		
   		
 	     <!--action bar -->
-       <div id="PEOPLE_CONTENT_CONTAINER">
+    <div id="PEOPLE_CONTENT_CONTAINER">
          <!--   <div id="PEOPLE_TOP_ACTIONBAR">
                 <table id="PEOPLE_TOP_ACTIONBAR_IMG_CONTAINER">
                 
@@ -110,7 +116,7 @@
         
        
            <% 
-			 for(var i = 0; i < peopleSearchResultData.length ; i++) {
+			 for(var i = start; i < end ; i++) {
 			 	
 			 	var searchObj = peopleSearchResultData[i];
 			 
@@ -118,7 +124,7 @@
    	 			
 			 %>  
 		  
-          	 <table width = "100%" border = 1>          	 
+          	 <table width = "100%" border = 0>          	 
 			 
 			 	 <tr>                
             		<td style = "width: 75px; position: relative;" valign = top >   
@@ -170,9 +176,14 @@
               <% 
               } 
               %>
-             	
-			 </table>
-			 
+              <tr> 
+              		<td>
+              			<div id = "BLA"><input type="hidden" class="pagenum" value="" />	 <!-- <input type="hidden" class="rowcount" value="' . $_GET["rowcount"] . '" />'; -->
+              			</div> 	
+              		</td>	
+              </tr>
+			 </table>   
+			   
 			<center>
 				 <div style ="background-color: #558ED5; text-align:center; border: 1px solid #dcdcdc; width: 300px; height: 25px; margin-bottom: 5px; margin-top: 5px;">Show more..</div>
 			</center>
@@ -181,10 +192,7 @@
 			 <br/>
 			 <br/>
               
-        </div>
- 
-
-
+        </div>  
   
           <!--people list view -->
 
@@ -381,14 +389,32 @@
             
         </div> 
        
+ </div>
 </div>
 
 <!-- PEOPLE_CONTENT_CONTAINER ends -->
         <!-- javascript-->
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+     
+       
            <script type="text/javascript">
-
-            /*list-view icon*/
+  
+           /* New Code Starts*/ 
+           
+            	$(window).scroll(function(){
+            		if($(window).scrollTop() == 0) {
+            			//alert("Hello");
+            		}
+            		
+            	});
+            	 
+          /* New Code Ends */  	
+           
+          
+           
+          
+          
+          
                 $(function() 
                 {
                        

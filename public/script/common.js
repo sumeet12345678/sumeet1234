@@ -86,7 +86,6 @@ function showHideDownSiblingForBigSection(whose) {
 	whose.siblings().toggle();
 }
 
-
 function blurScreen() {
 	 
 	if(!_g_blurScreen){
@@ -135,14 +134,14 @@ function iconsMenuLauncherClickHandler(launchersIdentifer, iconsDataJson) {
 		$(iconsMenuObj).toggle();
 	}
 }
-
+ 
 /*function placeIcon() {
 	var menuDropDownDiv = $('<div class = "menu-drop-down-icon" style = "display:inline-block; height: 30px; top: 0; position: absolute; right: 0;"></div>'); 
 	var menuDropDownImgIcon = $('<img src = "/media/images/icons/plainblack/3lines-thin-menu-blk.png" width = 30px; height = 30px;" />');
 	menuDropDownDiv.append(menuDropDownImgIcon);
 
 }*/
-
+  
 
 function createIconMenu(iconsMenuID, iconsInfoJson) {	
 	/* append images(menu items) to menu items container */
@@ -168,13 +167,36 @@ function alignMenuBarItems() {
 	 var avlbleSpace =  menuBarWidth - (noOfMenuItems * menuItemWidth);
 	 console.log("Total width = " + menuBarWidth  + "    Total Free space == " + avlbleSpace + "  noOfMenuItems == " + noOfMenuItems);
 	 var imgMarginRight =  avlbleSpace / (noOfMenuItems - 1)-4; // -5 should be removed, jst given a discrete value
+	 
 	 if(imgMarginRight <= 0) {
 		 imgMarginRight = 0;
 	 }
 	 console.log("Margin-right ===  " + imgMarginRight);
 	 //alert("Total images === " + noOfMenuItemImages);  li:not(:last-child)
-	 $menuBar.find('.img-with-caption-common:not(:last-child)').css('margin-right', imgMarginRight); 
+	 $menuBar.find('.img-with-caption-common:not(:last-child)').css('margin-right', imgMarginRight);    
 	 
+}
+  
+
+/**/
+var peopleAppLoaded = false;
+
+function loadPeopleApp(element) {
+	
+    if(!peopleAppLoaded)
+    { 	    
+    	$.get('/peopleApp')
+    	.done(function(data) {
+    		$(data).insertAfter(element);
+			peopleAppLoaded = true;  
+    	})
+    	.fail( function(){ console.log("Ajax call to people App failed") });
+    }
+    else {
+    	$('#PEOPLE_HOME').toggle();
+    }
+    
+  
 }
 
 
