@@ -87,6 +87,10 @@
 		 
 	}
 	
+.common-label-container:hover {
+		background-color: grey;		
+	}
+	
 /* MEDIA SCREEN (mobile) */  
    @media screen and (max-width: 767px) { 
  		.audience-container-div-sections {
@@ -573,7 +577,7 @@
 	contaxonomyTagOptions.forEach(function(element) {
 		
 		//tempElementString = "<div><div style = 'background-color: #80A2CF; margin-bottom: 5px; height: 35px;'>";
-		tempElementString = tempElementString +  "<div style = 'margin-left: 45px;'><div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'>";
+		tempElementString = tempElementString +  "<div style = 'margin-left: 45px;'><div class = 'common-label-container' style = 'margin-bottom: 5px; height: 35px;'>";
 		
 		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>"; 
 		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969;'>";
@@ -584,7 +588,7 @@
 			element.childs.forEach(function(level2Element) {
 				//tempElementString = tempElementString + "LEVEL2-" + catLooper++;
 				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
-				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+				tempElementString = tempElementString + "<div class = 'common-label-container' style = 'margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
 				tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name  + " (<span class = 'contax-count hpy-usr-green-text'>" + level2Element.count + "</span>)</span>";
 				tempElementString = tempElementString + "</b></span><input id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
@@ -593,7 +597,7 @@
 					level2Element.childs.forEach(function(level3Element) {
 						//tempElementString = tempElementString + "LEVEL3-" + catLooper++;
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
-						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+						tempElementString = tempElementString + "<div class = 'common-label-container' style = 'margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
 						tempElementString = tempElementString + "<img  src=/media/images/icons/tag-black.png width= 22 height= 22>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name  + " (<span class = 'contax-count hpy-usr-green-text'>" + level3Element.count + "</span>)</span>";
 						tempElementString = tempElementString + "</b></span><input id =" + level3Element.id + " type = 'checkbox'  value = " + level3Element.id + " name = 'connections-chkbox' class = 'connections_cat_node_chkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'></div>";
@@ -1161,16 +1165,16 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 	 	  
 	 	
 	 	if(whereFrom == 'AK_COMPOSER') {  
-	 		
+	 		 
 	 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	  	
 			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
-			  
+			    
 	 		$('#AD_PERSON').hide();
 	 		$('#CONTAX_SRCH_BAR').hide();  
-		 	$('#CONTAGXONOMY_AK_COMPOSER').show();
+		 	$('#CONTAGXONOMY_AK_COMPOSER').show(); 
 		 	
-		 	$('.msg-category').text("'"+ msgCategory + "'");
+		 	$('.msg-category').text("'"+ msgCategory + "'");  
 		   
 	 	}
 	 	
@@ -1189,8 +1193,31 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 		 	 
 	 	}
 	 	
+	 	if(whereFrom == 'PEOPLE_APP') {  
+	 		//$('#AD_PERSON').show();
+		 	//$('#CONTAGXONOMY_AK_COMPOSER').hide(); 
+		 	//$('#CONTAX_SRCH_BAR').show();    
+		    $('#CONTAX_SRCH_BAR').hide(); 
+		 	$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
+			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	
+		 	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+			$('#CONTAGXONOMY_AK_COMPOSER').show();
+			
+			
+			//$('#CONTAXONOMY_MODAL').css('height', '');
+			$('#CONTAXONOMY_MODAL').css('position', 'absolute');
+		//	$('#CONTAXONOMY_MODAL').css('top', '45px');
+			//$('#CONTAXONOMY_MODAL').css('position', 'absolute');  
+			$('#CONTAXONOMY_MODAL').appendTo('#PEOPLE_HOME_CONNECTIONS');   
+			
+			
+			//$('#CONTAX_CONT_CONS_BTN').trigger('click');
+		 
+		 	 
+	 	}
+	 	
 	 }
-   
+     
 			
 	/* EXITS THE CONTAINER AND RESETS THE CONTAXONOMY CONTAINER */
  	function exitContagxonomy() {
@@ -1202,7 +1229,7 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
  		 totalTeamsCount = 0;
  		 totalGroupsCount = 0;
  			
- 		totalAudienceCount = 0;   
+ 		 totalAudienceCount = 0;   
  		
  		// $('#CONTAXONOMY_OPTIONS_CONS_CNTNR div:not(:first-child)').empty(); 
  		 $('#CONTAXONOMY_OPTIONS_CONS_CNTNR_HEADING').siblings().remove(); 

@@ -100,15 +100,15 @@ function blurScreen() {
 }   
 
 function unBlurScreen() {
-	_g_blurScreen.hide();  
+	_g_blurScreen.hide();     
 }
 
 /* 
  * 
- * For init-ing header bar in pages 
+ * For init-ing header bar in pages     
  * 
  */
-function initHeaderBar() {
+function initHeaderBar() { 
 	var headerBar = $('#CONTENT_HEADER_BAR');
 	headerBar.append('<b>' + g_pageHeaderBarJSONData.title + '</b>'); 
 	if(g_pageHeaderBarJSONData.features.length > 0) {
@@ -196,7 +196,26 @@ function loadPeopleApp(element) {
     	$('#PEOPLE_HOME').toggle();
     }
     
-  
+}
+
+/**/
+var b_contaxgonomyLoaded = false;
+
+function loadContaxgonomy() {
+	
+    if(!b_contaxgonomyLoaded)
+    { 	    
+    	$.get('/peopleApp')
+    	.done(function(data) {
+    		$(data).insertAfter($('#CONTENT_HEADER_BAR'));
+    		b_contaxgonomyLoaded = true;    
+    	})
+    	.fail( function(){ console.log("Ajax call to contaxonomy  failed") });
+    }
+//    else {
+//    	$('#CONTAXONOMY_MODAL').toggle();
+//    }
+      
 }
 
 

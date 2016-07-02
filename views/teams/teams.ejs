@@ -147,7 +147,7 @@
 	  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;"><b>Teams</b></span>
 	     </div> 
 	</div> 
-							    
+		 						    
 	 <%	
 		var tempElementString = "<table id = CONTAXONOMY_TEAMS_TABLE border = 0> <tr><td>";
 		var tempChildElements = null;
@@ -155,7 +155,7 @@
 		contaxonomyTeams.forEach(function(element) {
 		
 		 
-		tempElementString = tempElementString + "<div style = 'margin-left: 45px;'><div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'>";
+		tempElementString = tempElementString + "<div style = 'margin-left: 45px;'><div class = 'common-label-container' style = 'margin-bottom: 5px; height: 35px;'>";
 		
 		tempElementString = tempElementString + "<span style='display: inline-block; margin:0; color: #B8B4B4; height: 100%; background-color: #fff;'><b>&nbsp;</b></span>";
 		tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block;  margin-bottom: 2px; height: 35px; color: #696969;'>";
@@ -175,7 +175,7 @@
 				 
 			//tempElementString = tempElementString + "LEVEL2-" + catLooper++;
 				//tempElementString = tempElementString + "<div style = 'background-color: #A6C0E3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- -</b></span>";
-				tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+				tempElementString = tempElementString + "<div class = 'common-label-container' style = 'margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 				tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle; margin-bottom: 2px; height: 35px; color: #696969; '>";
 				tempElementString = tempElementString + "&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level2Element.name + " (<span class = 'contax-count'>" + level2Element.count + "</span>)</span>";
 				tempElementString = tempElementString + "</b></span> <input  id =" + level2Element.id + " type = 'checkbox'  value = " + level2Element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px;  margin-right: 3px;'  onclick = 'populateAudience($(this));'> </div>";
@@ -184,7 +184,7 @@
 					level2Element.childs.forEach(function(level3Element) {
 						//tempElementString = tempElementString + "LEVEL3-" + catLooper++;
 						//tempElementString = tempElementString + "<div style = 'background-color: #7C8DA3; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>- - - </b></span>";  
-						tempElementString = tempElementString + "<div style = 'background-color: #fff; margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
+						tempElementString = tempElementString + "<div class = 'common-label-container' style = 'margin-bottom: 5px; height: 35px;'><span style='display: inline-block; margin:0; vertical-align: top;  color: #B8B4B4; height: 100%; background-color: #fff'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>";
 						tempElementString = tempElementString + "<span style = 'padding-left: 5px; padding-top: 7px; display: inline-block; vertical-align: middle;   margin-bottom: 2px; height: 35px; color: #696969; '>";
 						tempElementString = tempElementString + "&nbsp;&nbsp;<img src = '" + level3Element.img + "' width = 16, height  = 16>&nbsp;&nbsp;<b style = 'font-size: 12px;'><span style = 'inline-block' class = 'common-contax-label'>" + level3Element.name + " (<span class = 'contax-count'>" + level3Element.count + "</span>)</span>";
 						tempElementString = tempElementString + "</b></span> <input  id =" + level3Element.id + "  type = 'checkbox'  value = " + level3Element.id + " name = 'teams-chkbox' class = 'team_cat_node_chkbox contaxonomy_checkbox' style = 'margin-left: 20px;  margin-right: 3px;' onclick = 'populateAudience($(this));'> </div>";

@@ -20,8 +20,15 @@
 			background-color: #f6f8fa;
 			
 			height: calc(100% - 90px);
+			
 			 
 		}
+		
+		.people-finder-child-div {
+			display: none;
+		}
+		
+		
 	
 		  @media screen and (max-width: 767px) { 
 			#PEOPLE_HOME {
@@ -47,18 +54,31 @@
 				 		  <div id = CONTAX_GROUPS_BTN1 style = "cursor: pointer;  display: inline-block; line-height: 100%;">Saved Filters</div>
 				 	   </td>  
 				 	    <td tabindex="5" align = center valign = middle style = "display: hidden;">
-				 		   <div id = CONTAX_PPL_FINDER_BTN1 style = "cursor: pointer;  display: inline-block; line-height: 100%;">Connections</div>  
+				 		   <div id = PEOPLE_CONNECTIONS_BTN style = "cursor: pointer;  display: inline-block; line-height: 100%;">Connections</div>  
 				 	   </td>  
 			 		  </tr>
 		 		  	</table>
 			  </div>	
 				   
-			<div id = PEOPLE_HOME_CONTENT_CONTAINER>
+			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px;">
 			
+				<div id = "PEOPLE_HOME_UPDATES" class = "people-finder-child-div">
+					
+				</div>
+				
+				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div">
+					
+				</div>
+				
+				<div id = "PEOPLE_HOME_SAVED_FILTERS" class = "people-finder-child-div">
+					
+				</div>
+				
+				<div id = "PEOPLE_HOME_CONNECTIONS" class = "people-finder-child-div">
+					
+				</div>
 				   
 			</div>  
-			
-          
 	</div>
 	  
 	 
@@ -67,11 +87,22 @@
 	    $('#PEOPLE_FINDER_ICON').on('click', function() {
 			$('#PEOPLE_HOME').toggle();  
 		});
+	      
 	    
 	    $('#PEOPLE_FINDER_BTN').on('click', function() {
 			//hide containers of all other buttons, then make an AJAX call for people_finder and insert
-			$('#PEOPLE_HOME_CONTENT_CONTAINER').load('/peopleFinder');
+			$('.people-finder-child-div').hide();
+			$('#PEOPLE_HOME_FINDER').show();
+			$('#PEOPLE_HOME_FINDER').load('/peopleFinder');
 			
+		});
+	    
+	    $('#PEOPLE_CONNECTIONS_BTN').on('click', function() {
+	    	//alert("people home connections");
+	    	$('.people-finder-child-div').hide();  	
+	    	
+	    	$('#PEOPLE_HOME_CONNECTIONS').show();
+	    	showContaxonomyModal("PEOPLE_APP" , "");
 		});
 	    
 	
