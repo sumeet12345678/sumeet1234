@@ -26,6 +26,7 @@
 		
 		.people-finder-child-div {
 			display: none;
+			height: calc(100% - 85px);
 		}
 		
 		
@@ -60,13 +61,21 @@
 		 		  	</table>
 			  </div>	
 				   
-			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px;">
+			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px; ">
 			
 				<div id = "PEOPLE_HOME_UPDATES" class = "people-finder-child-div">
 					
 				</div>
 				
-				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div">
+				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div" style = "border: 1px solid red;">
+					<div id = "PEOPLE_SEARCH_CRITERIAS">
+						
+					</div>
+					
+					<div  id = "PEOPLE_ADD_MORE_CRITERIA" style = "height: 40px;">
+					   More criteria, Attributes...
+					</div>
+					
 					
 				</div>
 				
@@ -78,7 +87,14 @@
 					
 				</div>
 				   
-			</div>  
+			</div> 
+			
+			
+			<div style = "position: absolute; font-size: 15px; bottom: 0px; height: 42px; width: 100%; color: #fff; padding-top: 7px;">
+	   				 		<div id = PEOPLE_SUBMIT_BTN class = "earth-gradient-bg" style = "float: right; width: 100px; text-align: center; display: inline-block; cursor: pointer;   height: 30px;">Submit</div>
+	   						<div id = PEOPLE_SAVE_BTN class = "earth-gradient-bg" style = "float: right; width: 100px; text-align: center;  display: inline-block; cursor: pointer;  height: 30px;  margin-right: 30px;"><b>Save</b></div>  
+	     </div>
+		     
 	</div>
 	  
 	 
@@ -93,7 +109,7 @@
 			//hide containers of all other buttons, then make an AJAX call for people_finder and insert
 			$('.people-finder-child-div').hide();
 			$('#PEOPLE_HOME_FINDER').show();
-			$('#PEOPLE_HOME_FINDER').load('/peopleFinder');
+			$('#PEOPLE_SEARCH_CRITERIAS').load('/peopleFinder');
 			
 		});
 	    
