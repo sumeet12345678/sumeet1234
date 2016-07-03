@@ -11,9 +11,9 @@
 		right: 0;
 		  
 		margin-left: auto; 
-		margin-right: auto;
+		margin-right: auto;  
 		
-		backround-color: #000;
+		backround-color: #000; 
 	}
 	
 	.contagxonmy-title-bar {
@@ -36,11 +36,11 @@
   
 	}
 	
-	.arow-lft-tagxonmy-lvl2-grey{
+	.arow-lft-tagxonmy-lvl2-grey {
 	  width: 0; 
 	  height: 0; 
 	  border-top: 18px solid transparent;
-	  border-bottom: 18px solid transparent;   
+	  border-bottom: 18px solid transparent;    
 	  border-right:18px solid #696969;
 	  
 	}
@@ -1196,25 +1196,25 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 	 	if(whereFrom == 'PEOPLE_APP') {  
 	 		//$('#AD_PERSON').show();
 		 	//$('#CONTAGXONOMY_AK_COMPOSER').hide(); 
-		 	//$('#CONTAX_SRCH_BAR').show();    
+		 	//$('#CONTAX_SRCH_BAR').show(); 
+		 	var $contaxonomyModal =  $('#CONTAXONOMY_MODAL');
 		    $('#CONTAX_SRCH_BAR').hide(); 
 		 	$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	
 		 	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
-			$('#CONTAGXONOMY_AK_COMPOSER').show();
+			$('#CONTAGXONOMY_AK_COMPOSER').show(); 
 			
-			
-			
-			$('#CONTAXONOMY_MODAL').css('position', 'absolute');
-			 $('#CONTAXONOMY_MODAL').css('height', 'calc(100% - 45px)');
+			$contaxonomyModal.css('position', 'absolute');
+			$contaxonomyModal.css('top', '43px');
+			$contaxonomyModal.css('height', 'calc(100% - 43px)');
+			$contaxonomyModal.css('width', '100%');
 		//	$('#CONTAXONOMY_MODAL').css('top', '45px');
 			//$('#CONTAXONOMY_MODAL').css('position', 'absolute');  
-			$('#CONTAXONOMY_MODAL').appendTo('#PEOPLE_HOME_CONNECTIONS');   
+			$contaxonomyModal.appendTo('#PEOPLE_HOME_CONNECTIONS');    
+			$('#CONTAXONOMY_CONTAINER').css('width', '100%');
 			
 			
-			//$('#CONTAX_CONT_CONS_BTN').trigger('click');
-		 
-		 	 
+			//$('#CONTAX_CONT_CONS_BTN').trigger('click'); 
 	 	}
 	 	
 	 }
