@@ -171,6 +171,18 @@ router.get('/likes', function(req, res, next) {
 	  res.render('profiles/profileAspects/likes.ejs');	    
 	}); 
 
+
+/* 
+ * CONTAXGONOMY  
+ * 
+ * */
+router.get('/contagxonomy', function(req, res, next) {
+	// var profileId = "deb";//req.param('profileId');
+	//  console.log("PRFILE IDDD  ===     " + profileId);
+	  res.render('profiles/contaxonomy.ejs');	    
+	}); 
+
+  
 router.get('/contaxonomyGroups', function(req, res, next) {
 	// var profileId = "deb";//req.param('profileId');
 	//  console.log("PRFILE IDDD  ===     " + profileId);

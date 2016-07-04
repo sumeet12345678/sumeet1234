@@ -198,25 +198,47 @@ function loadPeopleApp(element) {
     
 }
 
+
+
 /**/
 var b_contaxgonomyLoaded = false;
 
-function loadContaxgonomy() {
+function loadContaxgonomy(callback) {
 	
     if(!b_contaxgonomyLoaded)
     { 	    
-    	$.get('/peopleApp')
+    	$.get('/contagxonomy')
     	.done(function(data) {
     		$(data).insertAfter($('#CONTENT_HEADER_BAR'));
-    		b_contaxgonomyLoaded = true;    
+    		b_contaxgonomyLoaded = true;  
+    		
+    		if (callback && typeof(callback) === "function") {
+    	        callback();
+    	    } 
     	})
     	.fail( function(){ console.log("Ajax call to contaxonomy  failed") });
-    }
-//    else {
-//    	$('#CONTAXONOMY_MODAL').toggle();
-//    }
-      
+    }  
+   else {
+	     if (callback && typeof(callback) === "function") {
+   		     callback();
+   	     } 
+   }
+        
 }
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
 
 
 //function getDeviceType() {

@@ -77,8 +77,11 @@ function initComposer() {
 	});
 	
 	$('#MSG_COMPOSER_TO').on('click', function() {
-		showContaxonomyModal('AK_COMPOSER', $('#AAK_PLUS_CAT option:selected').text());
-		$('#CONTAXONOMY_MODAL').focus();
+		loadContaxgonomy(function() {
+			showContaxonomyModal('AK_COMPOSER', $('#AAK_PLUS_CAT option:selected').text());		
+			$('#CONTAXONOMY_MODAL').focus();
+		}); //Ajax call  
+		
 	});
 		
 	$('.composerWrapper').focus();

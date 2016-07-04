@@ -115,10 +115,12 @@
 	    
 	    $('#PEOPLE_CONNECTIONS_BTN').on('click', function() {
 	    	//alert("people home connections");
-	    	$('.people-finder-child-div').hide();  	
-	    	
-	    	$('#PEOPLE_HOME_CONNECTIONS').show();
-	    	showContaxonomyModal("PEOPLE_APP" , "");
+	    	loadContaxgonomy(function() {
+		    		$('.people-finder-child-div').hide();  		
+		    		$('#PEOPLE_HOME_CONNECTIONS').show();
+		    		showContaxonomyModal("PEOPLE_APP" , "");
+	    	}); //Ajax call  
+	    	 
 		});
 	    
 	

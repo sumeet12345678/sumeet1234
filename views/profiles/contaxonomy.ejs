@@ -271,7 +271,7 @@
 				       	  <!--  <td tabindex="2" align = center valign = middle style = "background-color:#77933C; border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">    
 						      <div id = CONTAX_APPLIED_AUDIENCE_BTN style = "cursor: pointer; font-size:11px; display: inline-block; font-weight: bold;">Audience</div>
 						   </td >
-						  -->
+						  -->  
 					 	   <td tabindex="3" align = center valign = middle style = "border-right: 1px solid #fff" class = "contagxonomy-ak-composer-title-bar-tab">
 					 		  <div id = CONTAX_CONT_CONS_BTN  style = "cursor: pointer; display: inline-block; ">Connections</div>
 					 	   </td>
@@ -1165,57 +1165,77 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 	 	  
 	 	
 	 	if(whereFrom == 'AK_COMPOSER') {  
-	 		 
+
+		 	
+	 		setToContagxonomyModalOriginalPosition($contaxonomyModal);
+			
 	 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	  	
 			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
+			$('#CONTAX_PPL_FINDER_BTN').show();
 			    
 	 		$('#AD_PERSON').hide();
 	 		$('#CONTAX_SRCH_BAR').hide();  
 		 	$('#CONTAGXONOMY_AK_COMPOSER').show(); 
 		 	
 		 	$('.msg-category').text("'"+ msgCategory + "'");  
-		   
+		 	
+		 	
 	 	}
 	 	
 
 	 	if(whereFrom == 'AD_PERSON') {  
-	 		//$('#AD_PERSON').show();
-		 	//$('#CONTAGXONOMY_AK_COMPOSER').hide();
-		 	//$('#CONTAX_SRCH_BAR').show();  
+
+	 		setToContagxonomyModalOriginalPosition($contaxonomyModal);
+	 		
 		    $('#CONTAX_SRCH_BAR').hide(); 
 		 	$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	
 		 	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
 			$('#CONTAGXONOMY_AK_COMPOSER').show();
+			$('#CONTAX_PPL_FINDER_BTN').hide();
 			
-			//$('#CONTAX_CONT_CONS_BTN').trigger('click');
-		 	 
+			$contaxonomyModal.css('position', 'fixed');
+			$contaxonomyModal.css('top', '0');
+			$contaxonomyModal.css('height', '1px)');
+			$contaxonomyModal.css('width', '100%');  
+			$('#CONTAXONOMY_CONTAINER').addClass('website-screen-width_dt'); 
+			$contaxonomyModal.insertAfter('#CONTENT_HEADER_BAR'); 
+					 	 
 	 	}
 	 	
 	 	if(whereFrom == 'PEOPLE_APP') {  
-	 		//$('#AD_PERSON').show();
-		 	//$('#CONTAGXONOMY_AK_COMPOSER').hide(); 
-		 	//$('#CONTAX_SRCH_BAR').show(); 
-		 	var $contaxonomyModal =  $('#CONTAXONOMY_MODAL');
+	 		
 		    $('#CONTAX_SRCH_BAR').hide(); 
 		 	$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	
 		 	$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
 			$('#CONTAGXONOMY_AK_COMPOSER').show(); 
+			$('#CONTAX_PPL_FINDER_BTN').hide();
 			
 			$contaxonomyModal.css('position', 'absolute');
 			$contaxonomyModal.css('top', '43px');
-			$contaxonomyModal.css('height', 'calc(100% - 43px)');
+			$contaxonomyModal.css('height', 'calc(100% - 41px)');
 			$contaxonomyModal.css('width', '100%');
 			$contaxonomyModal.appendTo('#PEOPLE_HOME_CONNECTIONS');    
-			$('#CONTAXONOMY_CONTAINER').css('width', '100%');
+			$('#CONTAXONOMY_CONTAINER').removeClass('website-screen-width_dt'); 
 			
-			
-			//$('#CONTAX_CONT_CONS_BTN').trigger('click'); 
 	 	}
 	 	
 	 }
+	
+	
+	function setToContagxonomyModalOriginalPosition($contaxonomyModal) {
+		
+		$contaxonomyModal.insertAfter('#CONTENT_HEADER_BAR'); 
+		
+		$contaxonomyModal.css('position', 'fixed');
+		$contaxonomyModal.css('top', '0');
+		$contaxonomyModal.css('height', '100%');
+		$contaxonomyModal.css('width', '100%');  
+		$('#CONTAXONOMY_CONTAINER').addClass('website-screen-width_dt');
+		
+	}
      
 			
 	/* EXITS THE CONTAINER AND RESETS THE CONTAXONOMY CONTAINER */

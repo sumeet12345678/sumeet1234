@@ -430,11 +430,12 @@
                      //CONTAXONOMY
                      $('.PEOPLE_CONTAXONOMY').on('click', function() {
                     	 	 
-                    	 
-                    		//$('#CONTAXONOMY_MODAL').show();
-                    		showContaxonomyModal('AD_PERSON');
-                    		
-                    		populateContaxonomy();
+                    	 loadContaxgonomy(function() {
+                    		 showContaxonomyModal('AD_PERSON', "");	
+                 			 $('#CONTAXONOMY_MODAL').focus();
+                 		 }); //Ajax call    
+                    		 
+                    	populateContaxonomy();    
                     	 
                      });
                      
