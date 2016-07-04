@@ -258,6 +258,7 @@ function closeWindow(closeBtn) {
 	if($('.composerWrapper').length == 1) {
 		$('#COMMON_BLUR_SCREEN').toggle();
 		closeBtn.closest(".composerWrapper").hide();
+		newWindowBtn.hide();
 	}
 	else {
 		closeBtn.closest(".composerWrapper").remove();
