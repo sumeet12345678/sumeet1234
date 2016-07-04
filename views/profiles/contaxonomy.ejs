@@ -25,7 +25,7 @@
 		color: #FFF; 
 	}
 	 	 
-	.arow-lft-tagxonmy-lvl1-grey{
+	.arow-lft-tagxonmy-lvl1-grey {
 	  width: 0; 
 	  height: 0; 
 	  border-top: 18px solid transparent;
@@ -283,9 +283,9 @@
 					 	   </td>  
 				 		  </tr>
 			 		  	</table>
-				  </div>	
-				 
-				  
+				  </div> 	
+				    
+				    
 				  <!-- 
 				      <div  id = CONTAX_SRCH_BAR style = "height: 0px; background-color: #fff; position: relative; padding-left: 3px; padding-right: 3px; border-bottom: 0px solid #f2f2f2;"> 		&nbsp;
 				  	  <div id = CONTAXONOMY_CONNECTIONS class =  "float-right text-blue" style = "vertical-align: top; display: none; text-align: center; margin-top: 9px; margin-right: 5px; ">
@@ -1149,18 +1149,18 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
  	    
 	
 	function showContaxonomyModal(whereFrom, msgCategory) { 
-		
-		    
+		 
+		     
 	 	var $contaxonomyModal = $('#CONTAXONOMY_MODAL');
 	 	  
 	 	$contaxonomyModal.show();
 	 	  
-	 	
+	 	 
 	 	if(whereFrom == 'AK_COMPOSER') {  
 
-		 	
+		 	 
 	 		setToContagxonomyModalOriginalPosition($contaxonomyModal);
-			
+			 
 	 		$('#CONTAXONOMY_OPTIONS_GRPS_CNTNR').hide();
 			$('#CONTAXONOMY_OPTIONS_CONS_CNTNR').hide();	  	
 			$('#CONTAXONOMY_OPTIONS_AUDIENCE_CNTNR').show();
@@ -1171,10 +1171,10 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 		 	$('#CONTAGXONOMY_AK_COMPOSER').show(); 
 		 	
 		 	$('.msg-category').text("'"+ msgCategory + "'");  
-		 	
+		 	 
 	 	}
-	 	
-
+	 	 
+  
 	 	if(whereFrom == 'AD_PERSON') {  
 
 	 		setToContagxonomyModalOriginalPosition($contaxonomyModal);
@@ -1211,10 +1211,17 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 			$contaxonomyModal.appendTo('#PEOPLE_HOME_CONNECTIONS');    
 			$('#CONTAXONOMY_CONTAINER').removeClass('website-screen-width_dt'); 
 			
-	 	}
+			$('.contagxonmy-title-bar').css({'background' : '-webkit-linear-gradient(#fff,#fff)',
+											  'background' : '-o-linear-gradient(#fff,#fff)',
+											  'background' : '-moz-linear-gradient(#fff,#fff)',
+											  'background' : 'linear-gradient(#fff,#fff)',
+											  'color'	   : '#000'
+											});
+		}
+			 
+	 }
 	 	
-	 } 
-	
+ 
 	function setToContagxonomyModalOriginalPosition($contaxonomyModal) {
 		
 		$contaxonomyModal.insertAfter('#CONTENT_HEADER_BAR'); 
@@ -1225,8 +1232,15 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 		$contaxonomyModal.css('width', '100%');  
 		$('#CONTAXONOMY_CONTAINER').addClass('website-screen-width_dt');
 		
+		$('.contagxonmy-title-bar').css({'background' : '-webkit-linear-gradient(#696969,#3f3f3f)',
+			  'background' : '-o-linear-gradient(#696969,#3f3f3f)',
+			  'background' : '-moz-linear-gradient(#696969,#3f3f3f)',
+			  'background' : 'linear-gradient(#696969,#3f3f3f)',
+			  'color'	   : '#FFF'
+			});
+		
 	}
-   
+     
 	/*
 	function resetTitleTabBg() {
 
@@ -1237,7 +1251,7 @@ function toggleContaxonomyConsGroups(clickedContaxIcon) {
 		});
 		
 		$('.contagxonomy-ak-composer-title-bar-tab').css({'background-color',''});
-	
+	    
 	}
 	*/		
 	/* EXITS THE CONTAINER AND RESETS THE CONTAXONOMY CONTAINER */
