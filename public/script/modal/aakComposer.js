@@ -58,7 +58,7 @@ function initComposer() {
 		 uniComposeMsg();
 	 });  
 	
-	 $('#AAK_NEW_COMPOSER_WINDOW_BTN').on('click', createNewComposerWindow); 
+	 newWindowBtn.on('click', createNewComposerWindow); 
 	 
 	 $('.composerWrapper').on('click',function() {
 		 selectComposerWindow(this);
@@ -178,9 +178,9 @@ function createNewComposerWindow() {
 	newComposer.find('#MSG_COMPOSER_BOTTOM_BAR').css('background-color','#999696');
 	
 	/* lighter border(same as composerWrapper)*/ 
-	newComposer.css('border-top', '0px solid #999696');   
-	newComposer.css('border-left', '0px solid #999696');  
-	newComposer.css('border-right', '0px solid #999696');  
+	newComposer.css('border-top', '2px solid #999696');   
+	newComposer.css('border-left', '1px solid #999696');  
+	newComposer.css('border-right', '1px solid #999696');  
 	newComposer.css('border-bottom', '0px solid #999696');  
 }
    
@@ -265,7 +265,7 @@ function closeWindow(closeBtn) {
 	}
 }    
 
-function maximizeComposer(parentComposerWrapper) {	 
+function maximizeComposer(parentComposerWrapper) {	   
 	 parentComposerWrapper.css('height', '100%');  
 	 parentComposerWrapper.css('bottom','0');
 	 parentComposerWrapper.css('top','0'); 
@@ -542,7 +542,7 @@ function msgCats(msgType, parentComposerWrapper) {
 
 /*   mouseup Event  need to be verified */	
 //Hide When click on the Text Area 
-$(document).mouseup(function (e) 
+$(document).mouseup(function(e) 
 {
  var SMILEY_EMOTIONS = $("#SMILEY_EMOTIONS");
  if (!$('#SMILEY_EMOTIONS').is(e.target) && !SMILEY_EMOTIONS.is(e.target) && SMILEY_EMOTIONS.has(e.target).length == 0) {
