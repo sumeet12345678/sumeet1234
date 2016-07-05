@@ -1,10 +1,345 @@
-<div>
-	<div id="PEOPLE_FINDER_DEMOGRAPHY" class="toggle-bar-menu" style = "width: 50%;">
-		<img style="" width="28" height="28" src="/media/images/icons/community-group-white.png">&nbsp;&nbsp;Community, Ethnicity, Faith
-		
-		<div style="display: inline-block; width: 50px; height: 100%;" class="peopleFinderOptionsCloseBtn"  onclick = "closeSearchCriteriaOptions($(this));">
-			<img style="float: right; margin-top: 5px;" width="15" height="15" src="/media/images/icons/x-mark-white.png">
-		</div>
-   </div>
-</div>
-  
+ 
+	 
+		<style type="text/css">
+			*
+			{
+				box-sizing: border-box;
+				outline: 0;
+				margin: 0;
+				padding: 0;
+			}	
+			#keywords  
+			{
+				border:1px outset;
+				border-radius: 4px;
+				height: 40px;
+			}
+			.multi-selector-contentbox
+			{
+				width: 25%;
+				border: 1px outset;
+				border-color:grey; 
+				border-radius: 4px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				overflow-y: auto;
+			}
+			.multi-list
+			{
+				width: 100%;
+				display: none;
+
+			}
+			
+			.multi-selector-contentbox div
+			{
+				display: inline-block;
+				background-color: lightgrey;
+				margin-right: 10px;
+				margin-left: 1px;
+				border-radius: 3px;
+			}
+			.list-item
+			{
+				margin-bottom: 2px;
+			}
+			.age
+			{
+				border: 1px outset;
+				border-radius: 4px;
+				width: 100%;
+				height: 40px;
+			}
+			.gender
+			{
+				border: 1px outset;
+				border-radius: 4px;
+				width:100%;
+				height: 40px;
+				margin-bottom: 10px;
+			}
+			.criteria
+			{
+				border: 1px outset;
+				border-radius: 4px;
+				height: 40px;
+				margin-top: 0px;
+			}
+
+
+			[contenteditable="true"]:empty:before
+			{
+				content:attr(data-placeholder);
+  				color:gray;
+  				display: inline-block;
+  				margin-top: 7px;
+			}
+
+			 @media screen and (max-width: 760px) 
+			 { 
+			 	 #MAIN_CONTENT_CONTAINER 
+  	 			 {
+  	 				width : 100%;
+  	 				min-height: 100%;
+  	 				margin-top: 65px;
+  	 			}
+  	 			#keywords
+  	 			{
+  	 				width: 100%;
+  	 			}
+  	 			.multi-selector-contentbox
+				{
+					width: 100%;
+					height: auto;
+				}
+				.multi-list
+				{
+					width: 100%;
+				}
+				.list-item
+				{
+					height:30px;
+				}
+				.item-text
+				{
+					display: inline-block;
+					margin-top: 5px;
+				}
+				#age-content1
+				{
+					width: 54%;
+					height:38px;
+					border:0px;
+					
+				}
+				#age-content2
+				{
+					width:85%; 
+					height:38px; 
+					border:0px;
+					
+				}
+
+  	 			
+			}
+            @media screen and (min-width: 761px)
+            { 
+			   
+			  #keywords
+  	 			{
+  	 				width: 100%;
+  	 			}
+  	 			.multi-selector-contentbox
+				{
+					width: 100%;
+					margin-top: 5px; 
+					height: auto;
+				}
+				#age-content1
+				{
+					width:83.5%; 
+					height:38px; 
+					border:0px;
+				}
+				#age-content2
+				{
+					width:95%; 
+					height:38px; 
+					border:0px;
+				}
+				 
+            }
+		</style>
+	 
+		 
+
+	   
+	  		<div style = "position: absolute; bottom: 0px; width: 100%;">
+	  			
+
+	  			<div class = "attach-attributes" style="display: none; margin-bottom: 50px;">
+	  				
+	  			</div>
+
+	  			<div>
+	  				
+	  				<div class = "attributes" style=" display: none; margin-bottom: 0px;">
+
+	  						<div id= INTEREST  class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #ff6600;">
+	  							<span style = " display: inline-block; margin-top: 10px;">Interests,Likes,Activities</span>
+	  							<div class = "close-button" id = INTEREST_CLOSE style="display: inline-block; margin-top: 10px; float: right; display: none;">
+	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
+	  							</div>
+	  						</div>
+	  						
+	  						<div id= CHARACTERISTICS class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #00cc44;">
+	  							<span style = " display: inline-block; margin-top: 10px;">Personality,Outlook,Character Attributes</span>
+	  							<div class = "close-button" id = CHARACTERISTICS_CLOSE style="display: inline-block; margin-top: 10px; float: right; display: none;">
+	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
+	  							</div>
+	  						</div>
+	  						
+	  						<div id = SKILLS class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #3399ff;">
+	  							<span style = " display: inline-block; margin-top: 10px;">Occupation,Experience,Proffessional</span>
+	  							<div class = "close-button"  id = SKILLS_CLOSE style="display: inline-block; margin-top: 5px; float: right; display: none;">
+	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
+	  							</div>
+	  						</div>
+	  						<div id = EDUCATION class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #669999;">
+	  							<span style = " display: inline-block; margin-top: 10px;">Education,School,Institute</span>
+	  							<div class = "close-button" id = EDUCATION_CLOSE style="display: inline-block; margin-top: 5px; float: right; display: none;">
+	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
+	  							</div>
+	  						</div>
+	  				</div>
+
+	  				<div class="criteria" >
+	  					<font color="grey" >More criteria, attributes..</font>
+	  					<div class="popup" style="display: inline-block; margin-top: 5px; float: right; cursor: pointer; font-size: 16px; font-weight: bold;">
+	  						+
+	  					</div>
+	  					
+	  				</div>
+
+	  			</div>
+
+	  		</div>
+	 
+ 
+	<script type="text/javascript">
+	var multiDropDown = [];
+		 $(function()
+                       {
+						  // Calling Login Form
+						  
+						  //var i = myArray.indexOf("data-item-attr");
+                          $(".multi-selector-contentbox").on('click',function()
+                          {
+                            var multiList = $(".multi-list")
+                           	multiList.show();
+                            
+                             
+                             
+                          });
+                           // Calling List
+                          $(".list-item").on('click',function()
+                          {
+                          	var dataAttribValue = $(this).attr("data-item-attr");
+                          	var index = multiDropDown.indexOf(dataAttribValue);
+                          	if(index < 0)
+                          	{
+                          		multiDropDown.push(dataAttribValue);
+                          		var listItem = $(this).text();
+	                            var listItemElem = $('<div class="list-item1" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
+	                            	$('<img style="cursor: pointer;" class="itemclose" src="fileclose.png" width="20" height="20" onclick="delSelected($(this))">').appendTo(listItemElem);
+	                            listItemElem.prependTo(".multi-selector-contentbox");	
+                          	}
+
+
+                          });
+
+
+                        $('.popup').on('click', function(){
+                        	$('.attributes').toggle();
+                        })
+
+
+                       /* $('#INTEREST').on('click', function(){
+                          	var criteria = $('#INTEREST');
+                          	criteria.appendTo('.attach-attributes');
+                           	$('.attributes').hide();
+                           	$('#INTEREST_CLOSE').show();
+                           	$('.attach-attributes').show();
+                           	criteria.css('margin-bottom', 10);
+                        });
+						*/
+
+						$('.attribute-item').on('click', function(){
+                          	var criteria = $(this);
+
+                          	if(criteria.hasClass('item-on-popup')) {
+	                          	criteria.appendTo('.attach-attributes');
+	                           	$('.attributes').hide();
+	                           	$('.close-button').show();
+	                           	$('.attach-attributes').show();
+	                           	criteria.css('margin-bottom', 10);
+	                           	criteria.removeClass('item-on-popup');
+	                        }
+	                        
+                        });
+
+					/*
+                        $('#CHARACTERISTICS').on('click', function(){
+                          	var criteria = $('#CHARACTERISTICS');
+                          	criteria.appendTo('.attach-attributes');
+                           	$('.attributes').hide();
+                           	$('#CHARACTERISTICS_CLOSE').show();
+                           	$('.attach-attributes').show();
+                           	criteria.css('margin-bottom', 10);
+                        });
+
+                        $('#SKILLS').on('click', function(){
+                          	var criteria = $('#SKILLS');
+                          	criteria.appendTo('.attach-attributes');
+                           	$('.attributes').hide();
+                           	$('#SKILLS_CLOSE').show();
+                           	$('.attach-attributes').show();
+                           	criteria.css('margin-bottom', 10);
+                        });
+
+                        $('#EDUCATION').on('click', function(){
+                          	var criteria = $('#EDUCATION');
+                          	criteria.appendTo('.attach-attributes');
+                           	$('.attributes').hide();
+                          	$('#EDUCATION_CLOSE').show();
+                          	$('.attach-attributes').show();
+                          	criteria.css('margin-bottom', 10);
+                        });
+					*/
+                        $('.close-button').on('click', function(){
+                        	//alert('llll');
+                        	var parent = $(this).parent(); 
+
+                          	if(!parent.hasClass('item-on-popup')) {
+                          		 
+                          		parent.addClass('item-on-popup');
+	                          	parent.appendTo('.attributes');
+
+	                           	//$('.attributes').hide();
+	                           	
+	                           	$('.attach-attributes').show();
+	                           	 
+	                        }
+
+                        });
+
+               
+                          $(document).mouseup(function (e) 
+							 {
+							     var 	multiList= $(".multi-list");
+							     if (!$('.multi-list').is(e.target) && !multiList.is(e.target) && multiList.has(e.target).length == 0) 
+							     {
+							         	multiList.hide();
+							     }
+							 });
+
+
+                      
+
+
+
+
+                       });
+
+		 				// Removing It From Content Container 
+                       function delSelected(closeBtn)
+                       {  
+                       		var dataAttribValue = closeBtn.parent().attr("data-item-attr");
+                          	var index = multiDropDown.indexOf(dataAttribValue);
+                          	multiDropDown.splice(index,1);
+                       		$(closeBtn).parent().remove();
+
+					   }
+                          
+	</script>
+ 

@@ -28,9 +28,8 @@
 			display: none;
 			height: calc(100% - 85px);
 		}
-		
-		
-	
+		  
+		 
 		  @media screen and (max-width: 767px) { 
 			#PEOPLE_HOME {
 				width: 99%;
@@ -61,21 +60,16 @@
 		 		  	</table>
 			  </div>	
 				   
-			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px; ">
+			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px; height: calc(100% - 85px);">
 			
 				<div id = "PEOPLE_HOME_UPDATES" class = "people-finder-child-div">
-					
-				</div>
+					  
+				</div> 
 				
-				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div" style = "border: 1px solid red;">
-					<div id = "PEOPLE_SEARCH_CRITERIAS">
+				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div" style = "height: 100%; width: 100%; ">  
+					<div id = "PEOPLE_SEARCH_CRITERIAS" style = "position: relative; height: 100%;" >  
 						
 					</div>
-					
-					<div  id = "PEOPLE_ADD_MORE_CRITERIA" style = "height: 40px;">
-					   More criteria, Attributes...
-					</div>
-					
 					
 				</div>
 				
@@ -102,7 +96,7 @@
 	  
 	    $('#PEOPLE_FINDER_ICON').on('click', function() {
 			$('#PEOPLE_HOME').toggle();  
-		});
+		});  
 	      
 	    
 	    $('#PEOPLE_FINDER_BTN').on('click', function() {

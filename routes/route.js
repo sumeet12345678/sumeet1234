@@ -20,7 +20,7 @@ router.get('/peopleApp', function(req, res, next) {
 	});
 
 router.get('/peopleFinder', function(req, res, next) {
-	  res.render('people/peopleFinder.ejs');	    
+	  res.render('people/peopleFinder.ejs');  	     
 	}); 
 
 /* GET people_with_pic.ejs file. */
