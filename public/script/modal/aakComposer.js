@@ -1,3 +1,9 @@
+/*
+ * In this code, new composer windows are created by cloning existing window. So while clicking on any buttons/options on any window,
+ * the parent of the buttons/options is first identified(using closest()). 
+ * 
+ * */
+
 
 var ajaxJsonMappingData =  [
 								    
@@ -68,8 +74,11 @@ function initComposer() {
 		 closeWindow($(this))
 	});
 	 
-	$('#MSG_COMPOSER_MAX_MIN').on('click', function() {
-		maxMinComposer($(this));	 
+	$('#MSG_COMPOSER_MAX_MIN').on('click', function(event) {
+		//event.stopPropagation();
+	 	 //maxMinComposer($(this));	
+		maxMinComposer($(this).closest('.composerWrapper'));
+		 
 	});   
 	
 	$('#MSG_COMPOSER_ADD_STUFF').on('click', function() {
@@ -244,10 +253,20 @@ function swapComposerWindows(swapTo) {
 	return topWindow;  
 }
 
+
+/* 
+ * This function gets called when max_min button is clicked on composer. The maximizeComposer() or minimizeComposer() will be called
+ *  depending on the current max or min status of the composer whose btn is clicked.
+ *  
+*/
 function maxMinComposer(composerWindow) {  
-	
+	  
 	if(composerCurrentSize == "MINIMIZED") {
-		maximizeComposer(composerWindow.closest('.composerWrapper'));
+		/* check below done to avoid calling max function if it is not the top window, coz for back windows selectComposerWindow() is implemented where we swap and maximize the clicked window.  */
+		 if(topWindow.is(composerWindow)) {
+			 maximizeComposer(composerWindow.closest('.composerWrapper'));
+	    }	 
+		  
 	}	
 	else if(composerCurrentSize == "MAXIMIZED") {
 		minimizeComposer(composerWindow.closest('.composerWrapper'));  
@@ -266,6 +285,7 @@ function closeWindow(closeBtn) {
 }    
 
 function maximizeComposer(parentComposerWrapper) {	   
+	
 	 parentComposerWrapper.css('height', '100%');  
 	 parentComposerWrapper.css('bottom','0');
 	 parentComposerWrapper.css('top','0'); 
@@ -287,7 +307,7 @@ function maximizeComposer(parentComposerWrapper) {
 }
 	
 function minimizeComposer(parentComposerWrapper) {
-	 
+	
 	parentComposerWrapper.css('height', '157px');  
 	parentComposerWrapper.css('bottom', '42px');
 	parentComposerWrapper.css('top', 'auto');   

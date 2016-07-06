@@ -108,16 +108,11 @@ function populatePeopleFinderOptions(peopFinderOptionsArray) {
 		outerDiv.append(el);
 		$peopleFinderContentDiv.append(outerDiv);
 	
-	});
-	
- 
-	
+	}); 
 	
 	$peopleFinderContentDiv.append('<div id= PEOPLE_FINDER_ADD  style= "float: right; margin-top: 3px;">' +
 							'<img style="margin-left: 10px;"  width="30" height="30" src="/media/images/icons/add-black.png" /></div>');
-	
-	
-	
+	 
 }
 
 
@@ -127,9 +122,9 @@ $('#FIND_PEOPLE_BUTTON').on('click', function() {
 	$('#PEOPLE_FIND_SUBMIT').css('display', 'inline-block');
 	$('#FIND_PEOPLE_REFRESH_ICON').css('display', 'inline-block');
 	//$('#FIND_PEOPLE_BUTTON').text('Find');
-	 
+	   
 	
-	$(this).css('display', 'none');
+	$(this).css('display', 'none');   
 });
 
 

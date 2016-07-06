@@ -1,5 +1,39 @@
+    <%
+    	var peopleSearchCriteria = [
+    		{'id' : 'CHARACTERISTICS',
+    		 'text' : 'Personality,Outlook,Character Attributes',
+    		 'bg'	: ' #62818A',
+    		 'col'	: '#fff',
+    		 'index' : '0'
+    		},
+
+    		{'id' : 'SKILLS',
+    		 'text' : 'Occupation,Experience,Proffessional',
+    		 'bg'	: '#97A1AD',
+    		 'col'	: '#fff',
+    		 'index' : '1'
+    		},
+
+    		{'id' : 'EDUCATION',
+    		 'text' : 'Education,School,Institute',
+    		 'bg'	: '#737339',
+    		 'col'	: '#fff',
+    		 'index' : '2'
+    		},
+
+    		{'id' : 'INTEREST',
+    		 'text' : 'Interests,Likes,Activities',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'index' : '3'
+    		}
+    	];
+
+
+    %>
  
-	 
+		 
+		  
 		<style type="text/css">
 			*
 			{
@@ -8,62 +42,15 @@
 				margin: 0;
 				padding: 0;
 			}	
-			#keywords  
-			{
-				border:1px outset;
-				border-radius: 4px;
-				height: 40px;
-			}
-			.multi-selector-contentbox
-			{
-				width: 25%;
-				border: 1px outset;
-				border-color:grey; 
-				border-radius: 4px;
-				padding-top: 2px;
-				padding-bottom: 2px;
-				overflow-y: auto;
-			}
-			.multi-list
-			{
-				width: 100%;
-				display: none;
-
-			}
 			
-			.multi-selector-contentbox div
-			{
-				display: inline-block;
-				background-color: lightgrey;
-				margin-right: 10px;
-				margin-left: 1px;
-				border-radius: 3px;
-			}
-			.list-item
-			{
-				margin-bottom: 2px;
-			}
-			.age
-			{
-				border: 1px outset;
-				border-radius: 4px;
-				width: 100%;
-				height: 40px;
-			}
-			.gender
-			{
-				border: 1px outset;
-				border-radius: 4px;
-				width:100%;
-				height: 40px;
-				margin-bottom: 10px;
-			}
+			
 			.criteria
 			{
-				border: 1px outset;
+
+				border: 1px solid;
 				border-radius: 4px;
 				height: 40px;
-				margin-top: 0px;
+				
 			}
 
 
@@ -75,269 +62,181 @@
   				margin-top: 7px;
 			}
 
+			 
+
 			 @media screen and (max-width: 760px) 
 			 { 
-			 	 #MAIN_CONTENT_CONTAINER 
-  	 			 {
-  	 				width : 100%;
-  	 				min-height: 100%;
-  	 				margin-top: 65px;
-  	 			}
-  	 			#keywords
-  	 			{
-  	 				width: 100%;
-  	 			}
-  	 			.multi-selector-contentbox
-				{
-					width: 100%;
-					height: auto;
-				}
-				.multi-list
-				{
-					width: 100%;
-				}
-				.list-item
-				{
-					height:30px;
-				}
-				.item-text
-				{
-					display: inline-block;
-					margin-top: 5px;
-				}
-				#age-content1
-				{
-					width: 54%;
-					height:38px;
-					border:0px;
-					
-				}
-				#age-content2
-				{
-					width:85%; 
-					height:38px; 
-					border:0px;
-					
-				}
+			 	
+
+  	 		.ppl-attrib-popup-container {
+			  	width: 100%;
+			  	
+			  }
+
+			  .attrib-popup {
+			  	width: 100%;
+			  }
+			 		
+  	 			
 
   	 			
 			}
             @media screen and (min-width: 761px)
-            { 
-			   
-			  #keywords
-  	 			{
-  	 				width: 100%;
-  	 			}
-  	 			.multi-selector-contentbox
-				{
-					width: 100%;
-					margin-top: 5px; 
-					height: auto;
-				}
-				#age-content1
-				{
-					width:83.5%; 
-					height:38px; 
-					border:0px;
-				}
-				#age-content2
-				{
-					width:95%; 
-					height:38px; 
-					border:0px;
-				}
-				 
+            {
+            	 #MAIN_CONTENT_CONTAINER 
+	  			 {
+	    	 	
+	    	 	margin-top111: 130px;
+	    	 	/* width : 67%; 
+	    	 	   margin-left: auto;
+	    	 	   margin-right: auto;
+	    	 	
+	    	 	*/
+	    	 	
+	    	 	min-height: 100%; 	 	
+	    	    background-color: #fff;
+	    	    position: relative;
+	    	 }
+			 
+			  .website-screen-width_dt 
+			  {
+				width: 70%;
+				margin-left: auto;  
+				margin-right: auto;
+			  }
+
+			  .ppl-attrib-popup-container {
+			  	width: 100%;
+
+			  }
+
+			   .attrib-popup11 {
+			  	width: 100%;
+			  }
+			  
+			  
             }
+
 		</style>
 	 
-		 
+	 
+		    
 
-	   
-	  		<div style = "position: absolute; bottom: 0px; width: 100%;">
+	  	 
+	  		<div class="ppl-attrib-popup-container" style="height: 100%; position: relative;   overflow-y: auto;" >
 	  			
 
-	  			<div class = "attach-attributes" style="display: none; margin-bottom: 50px;">
+	  			<div class = "attach-attributes" style="display: block; margin-bottom: 50px;">
 	  				
 	  			</div>
 
-	  			<div>
+	  			<div class = "attrib-popup" style = "position: absolute; bottom: 0px;">
 	  				
-	  				<div class = "attributes" style=" display: none; margin-bottom: 0px;">
+	  				<div class = "attributes" style=" display: none; margin-bottom: 0px; ">
 
-	  						<div id= INTEREST  class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #ff6600;">
-	  							<span style = " display: inline-block; margin-top: 10px;">Interests,Likes,Activities</span>
-	  							<div class = "close-button" id = INTEREST_CLOSE style="display: inline-block; margin-top: 10px; float: right; display: none;">
-	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
-	  							</div>
+	  					<%
+					 		for(var i = 0; i < peopleSearchCriteria.length; i++) { 
+					 	  		var obj  = peopleSearchCriteria[i];		 		  
+			 			%>		
+	  					<div>	
+	  						<div id= <%= obj.id %>  data-index = <%= obj.id %> class = "attribute-item item-on-popup " style = "height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
+	  							
+								  	 <span class = "attrib-text"><%= obj.text%></span>
+								
 	  						</div>
 	  						
-	  						<div id= CHARACTERISTICS class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #00cc44;">
-	  							<span style = " display: inline-block; margin-top: 10px;">Personality,Outlook,Character Attributes</span>
-	  							<div class = "close-button" id = CHARACTERISTICS_CLOSE style="display: inline-block; margin-top: 10px; float: right; display: none;">
-	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
-	  							</div>
-	  						</div>
-	  						
-	  						<div id = SKILLS class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #3399ff;">
-	  							<span style = " display: inline-block; margin-top: 10px;">Occupation,Experience,Proffessional</span>
-	  							<div class = "close-button"  id = SKILLS_CLOSE style="display: inline-block; margin-top: 5px; float: right; display: none;">
-	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
-	  							</div>
-	  						</div>
-	  						<div id = EDUCATION class = "attribute-item item-on-popup" style="border:1px outset; height: 40px; background-color: #669999;">
-	  							<span style = " display: inline-block; margin-top: 10px;">Education,School,Institute</span>
-	  							<div class = "close-button" id = EDUCATION_CLOSE style="display: inline-block; margin-top: 5px; float: right; display: none;">
-	  								<img src="/media/images/icons/close_icon.png" width="15" height="15">
-	  							</div>
-	  						</div>
+	  					</div>
+
+	  					<% } %>
+	  						  						
 	  				</div>
 
-	  				<div class="criteria" >
+	  				<div class="criteria">
 	  					<font color="grey" >More criteria, attributes..</font>
-	  					<div class="popup" style="display: inline-block; margin-top: 5px; float: right; cursor: pointer; font-size: 16px; font-weight: bold;">
-	  						+
+	  					<div class="popup" style="display: inline-block; margin-top: 5px; float: right; cursor: pointer;">
+	  						<img src="/media/images/icons/add-black.png" width="28" height="28" align="right">
 	  					</div>
 	  					
 	  				</div>
 
 	  			</div>
 
-	  		</div>
+	  		</div>       
+			
+		 
+
+		 
 	 
- 
 	<script type="text/javascript">
-	var multiDropDown = [];
-		 $(function()
-                       {
-						  // Calling Login Form
-						  
-						  //var i = myArray.indexOf("data-item-attr");
-                          $(".multi-selector-contentbox").on('click',function()
-                          {
-                            var multiList = $(".multi-list")
-                           	multiList.show();
-                            
-                             
-                             
-                          });
-                           // Calling List
-                          $(".list-item").on('click',function()
-                          {
-                          	var dataAttribValue = $(this).attr("data-item-attr");
-                          	var index = multiDropDown.indexOf(dataAttribValue);
-                          	if(index < 0)
-                          	{
-                          		multiDropDown.push(dataAttribValue);
-                          		var listItem = $(this).text();
-	                            var listItemElem = $('<div class="list-item1" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
-	                            	$('<img style="cursor: pointer;" class="itemclose" src="fileclose.png" width="20" height="20" onclick="delSelected($(this))">').appendTo(listItemElem);
-	                            listItemElem.prependTo(".multi-selector-contentbox");	
-                          	}
+                        
 
-
-                          });
-
-
-                        $('.popup').on('click', function(){
+                        $('.criteria').on('click', function(){
                         	$('.attributes').toggle();
                         })
 
 
-                       /* $('#INTEREST').on('click', function(){
-                          	var criteria = $('#INTEREST');
-                          	criteria.appendTo('.attach-attributes');
-                           	$('.attributes').hide();
-                           	$('#INTEREST_CLOSE').show();
-                           	$('.attach-attributes').show();
-                           	criteria.css('margin-bottom', 10);
-                        });
-						*/
-
-						$('.attribute-item').on('click', function(){
-                          	var criteria = $(this);
+						$('.attribute-item').on('click', function() {
+                          	/*var criteria = $(this);
 
                           	if(criteria.hasClass('item-on-popup')) {
 	                          	criteria.appendTo('.attach-attributes');
 	                           	$('.attributes').hide();
-	                           	$('.close-button').show();
 	                           	$('.attach-attributes').show();
-	                           	criteria.css('margin-bottom', 10);
-	                           	criteria.removeClass('item-on-popup');
+	                            criteria.css('margin-bottom', 20);
+	                           	criteria.removeClass('item-on-popup');	                           	
+	                           	criteria.children('.down-arrow').show();
+	                           	criteria.children('.close-button').show();
 	                        }
-	                        
+	                       */
+	                       	addCriteria($(this));
+
                         });
 
-					/*
-                        $('#CHARACTERISTICS').on('click', function(){
-                          	var criteria = $('#CHARACTERISTICS');
-                          	criteria.appendTo('.attach-attributes');
-                           	$('.attributes').hide();
-                           	$('#CHARACTERISTICS_CLOSE').show();
-                           	$('.attach-attributes').show();
-                           	criteria.css('margin-bottom', 10);
-                        });
+                        function addCriteria(selectedItem) {
+                        	var dataValue = selectedItem.attr('data-index');
+                        	var text_text =  selectedItem.children('.attrib-text').text();
+                        	//alert(text_text);
+                        	var element = $('<div><div class = "common_section_title_bar" data-index ="' + dataValue +  '"></div></div>');
 
-                        $('#SKILLS').on('click', function(){
-                          	var criteria = $('#SKILLS');
-                          	criteria.appendTo('.attach-attributes');
-                           	$('.attributes').hide();
-                           	$('#SKILLS_CLOSE').show();
-                           	$('.attach-attributes').show();
-                           	criteria.css('margin-bottom', 10);
-                        });
+                        	element.find('div:first-child').append('<img class = "close-button" style = "margin-top: -2px; margin-right: 3px;" width = "22" height = "22" src="/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this))"/>');
+                        	element.find('div:first-child').append(text_text);
+                        	element.find('div:first-child').append('<img class = "down-arrow" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" onClick = "showHideDownSibling($(this));"/>');
+                        	element.append('<div style = "display: none;"> ABC </div>');
+                        	element.appendTo('.attach-attributes');
 
-                        $('#EDUCATION').on('click', function(){
-                          	var criteria = $('#EDUCATION');
-                          	criteria.appendTo('.attach-attributes');
-                           	$('.attributes').hide();
-                          	$('#EDUCATION_CLOSE').show();
-                          	$('.attach-attributes').show();
-                          	criteria.css('margin-bottom', 10);
-                        });
-					*/
-                        $('.close-button').on('click', function(){
-                        	//alert('llll');
+                        	/*hide on popup*/
+                        	selectedItem.hide();
+
+                        }
+
+					
+                     /*   $('.close-button').on('click', function(){    
                         	var parent = $(this).parent(); 
 
                           	if(!parent.hasClass('item-on-popup')) {
-                          		 
+                          		alert("dfdfpdfopdpofd");
                           		parent.addClass('item-on-popup');
 	                          	parent.appendTo('.attributes');
-
-	                           	//$('.attributes').hide();
-	                           	
 	                           	$('.attach-attributes').show();
 	                           	 
 	                        }
 
                         });
-
-               
-                          $(document).mouseup(function (e) 
-							 {
-							     var 	multiList= $(".multi-list");
-							     if (!$('.multi-list').is(e.target) && !multiList.is(e.target) && multiList.has(e.target).length == 0) 
-							     {
-							         	multiList.hide();
-							     }
-							 });
-
-
-                      
-
-
-
-
-                       });
+						*/
 
 		 				// Removing It From Content Container 
-                       function delSelected(closeBtn)
+                       function closeAttribItem(closeBtn)
                        {  
-                       		var dataAttribValue = closeBtn.parent().attr("data-item-attr");
-                          	var index = multiDropDown.indexOf(dataAttribValue);
-                          	multiDropDown.splice(index,1);
-                       		$(closeBtn).parent().remove();
+                       	    var parent =  closeBtn.parent();
+                       	    parent.parent().hide();
+                       		var data_index = parent.attr("data-index");
+
+                       		$('#' + data_index).show();
+
+
+                          	//var index = multiDropDown.indexOf(dataAttribValue);
+                          	//multiDropDown.splice(index,1);
+                       		//$(closeBtn).parent().remove();
 
 					   }
                           
