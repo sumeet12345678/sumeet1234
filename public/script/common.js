@@ -73,10 +73,10 @@ function showHideDownSibling(whose) {
 	whose.parent().siblings().toggle();
 	
  	 if( whose.attr('src') ==  '/media/images/icons/arrowUpLines.png' ) { 
- 		whose.attr('src', '/media/images/icons/arrow-Down-lines.png');
+ 		whose.attr('src', '/media/images/icons/arrow-Down-lines.png');   
  	 }
  	 else {
- 		whose.attr('src', '/media/images/icons/arrowUpLines.png');
+ 		whose.attr('src', '/media/images/icons/arrowUpLines.png'); 
  		 
  	 }
 }
@@ -206,7 +206,7 @@ var b_contaxgonomyLoaded = false;
 function loadContaxgonomy(callback) {
 	
     if(!b_contaxgonomyLoaded)
-    { 	    
+    { 	      
     	$.get('/contagxonomy')
     	.done(function(data) {
     		$(data).insertAfter($('#CONTENT_HEADER_BAR'));
@@ -223,6 +223,8 @@ function loadContaxgonomy(callback) {
    		     callback();
    	     } 
    }
+    
+    
         
 }
 

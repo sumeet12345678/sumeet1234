@@ -112,9 +112,9 @@ a:visited {
 	border-radius: 0px;
 }
  
-/*  ----------- COMMON : PAGE HEADER BAR ---------- */
+/*  ----------- COMMON : PAGE HEADER BAR ---------- */ 
 .common-page-header-bar {
-		background-color111111:#ddebf0;
+		background-color111111:#ddebf0;  
 		background-color : #95B3D7;
 		height: 35px; 
 		border: 1px solid #dcdcdc; 

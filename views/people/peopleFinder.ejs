@@ -3,29 +3,36 @@
     		{'id' : 'CHARACTERISTICS',
     		 'text' : 'Personality,Outlook,Character Attributes',
     		 'bg'	: ' #62818A',
-    		 'col'	: '#fff',
-    		 'index' : '0'
+    		 'col'	: '#fff'
     		},
 
     		{'id' : 'SKILLS',
     		 'text' : 'Occupation,Experience,Proffessional',
     		 'bg'	: '#97A1AD',
-    		 'col'	: '#fff',
-    		 'index' : '1'
+    		 'col'	: '#fff'
     		},
 
     		{'id' : 'EDUCATION',
     		 'text' : 'Education,School,Institute',
     		 'bg'	: '#737339',
-    		 'col'	: '#fff',
-    		 'index' : '2'
+    		 'col'	: '#fff'
     		},
 
-    		{'id' : 'INTEREST',
-    		 'text' : 'Interests,Likes,Activities',
+    		{'id' : 'INTEREST2',
+    		 'text' : 'Interests,Likes,Activities222',
     		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff',
-    		 'index' : '3'
+    		 'col'	: '#fff'
+    		},
+    		
+    		{'id' : 'INTEREST3',
+    		 'text' : 'Interests,Likes,Activities333',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff'
+    		},
+    		{'id' : 'INTEREST4',
+    		 'text' : 'Interests,Likes,Activities444',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff' 
     		}
     	];
 
@@ -110,7 +117,7 @@
 
 			  }
 
-			   .attrib-popup11 {
+			   .attrib-popup {
 			  	width: 100%;
 			  }
 			  
@@ -123,16 +130,16 @@
 		    
 
 	  	 
-	  		<div class="ppl-attrib-popup-container" style="height: 100%; position: relative;   overflow-y: auto;" >
+	  		<div class="ppl-attrib-popup-container" style="height: 100%; position: relative;" >
 	  			
 
-	  			<div class = "attach-attributes" style="display: block; margin-bottom: 50px;">
+	  			<div class = "attach-attributes" style="padding-bottom: 45px;  overflow-y: auto; height: 100%;  display: block; margin-bottom: 50px;">
 	  				
 	  			</div>
 
 	  			<div class = "attrib-popup" style = "position: absolute; bottom: 0px;">
 	  				
-	  				<div class = "attributes" style=" display: none; margin-bottom: 0px; ">
+	  				<div class = "attributes" style=" display: none; margin-bottom: 0px;">
 
 	  					<%
 					 		for(var i = 0; i < peopleSearchCriteria.length; i++) { 
@@ -141,7 +148,7 @@
 	  					<div>	
 	  						<div id= <%= obj.id %>  data-index = <%= obj.id %> class = "attribute-item item-on-popup " style = "height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
 	  							
-								  	 <span class = "attrib-text"><%= obj.text%></span>
+								  	 <span class = "attrib-text" style=""><%= obj.text%></span>
 								
 	  						</div>
 	  						
@@ -151,10 +158,10 @@
 	  						  						
 	  				</div>
 
-	  				<div class="criteria">
-	  					<font color="grey" >More criteria, attributes..</font>
-	  					<div class="popup" style="display: inline-block; margin-top: 5px; float: right; cursor: pointer;">
-	  						<img src="/media/images/icons/add-black.png" width="28" height="28" align="right">
+	  				<div class="criteria" style = "width: 100%; margin-top: 5px; position: relative; height: 42px; background-color: #fff; padding-left: 3px;">
+	  					<font color="grey" style="display: inline-block; margin-top: 8px;">More criteria, attributes..</font>
+	  					<div class="popup" style="display: inline-block; margin-top: 2px; margin-right: 5px; float: right; cursor: pointer;">
+	  						<span style = "font-size: 30px; font-weight: bold;">+</span>
 	  					</div>
 	  					
 	  				</div>
@@ -162,32 +169,12 @@
 	  			</div>
 
 	  		</div>       
-			
-		 
-
 		 
 	 
 	<script type="text/javascript">
-                        
-
-                        $('.criteria').on('click', function(){
-                        	$('.attributes').toggle();
-                        })
-
-
+                         
 						$('.attribute-item').on('click', function() {
-                          	/*var criteria = $(this);
-
-                          	if(criteria.hasClass('item-on-popup')) {
-	                          	criteria.appendTo('.attach-attributes');
-	                           	$('.attributes').hide();
-	                           	$('.attach-attributes').show();
-	                            criteria.css('margin-bottom', 20);
-	                           	criteria.removeClass('item-on-popup');	                           	
-	                           	criteria.children('.down-arrow').show();
-	                           	criteria.children('.close-button').show();
-	                        }
-	                       */
+    				        $('.attributes').hide();
 	                       	addCriteria($(this));
 
                         });
@@ -198,33 +185,18 @@
                         	//alert(text_text);
                         	var element = $('<div><div class = "common_section_title_bar" data-index ="' + dataValue +  '"></div></div>');
 
-                        	element.find('div:first-child').append('<img class = "close-button" style = "margin-top: -2px; margin-right: 3px;" width = "22" height = "22" src="/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this))"/>');
+                        	element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this))"/>');
                         	element.find('div:first-child').append(text_text);
                         	element.find('div:first-child').append('<img class = "down-arrow" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" onClick = "showHideDownSibling($(this));"/>');
-                        	element.append('<div style = "display: none;"> ABC </div>');
+                        	element.append('<div style = "display: none; overflow-y: auto;"></div>');
                         	element.appendTo('.attach-attributes');
 
                         	/*hide on popup*/
                         	selectedItem.hide();
 
-                        }
+                        };
 
-					
-                     /*   $('.close-button').on('click', function(){    
-                        	var parent = $(this).parent(); 
-
-                          	if(!parent.hasClass('item-on-popup')) {
-                          		alert("dfdfpdfopdpofd");
-                          		parent.addClass('item-on-popup');
-	                          	parent.appendTo('.attributes');
-	                           	$('.attach-attributes').show();
-	                           	 
-	                        }
-
-                        });
-						*/
-
-		 				// Removing It From Content Container 
+                 
                        function closeAttribItem(closeBtn)
                        {  
                        	    var parent =  closeBtn.parent();
@@ -232,13 +204,21 @@
                        		var data_index = parent.attr("data-index");
 
                        		$('#' + data_index).show();
+					   };  
 
 
-                          	//var index = multiDropDown.indexOf(dataAttribValue);
-                          	//multiDropDown.splice(index,1);
-                       		//$(closeBtn).parent().remove();
+					    $(document).mouseup(function (e) 
+							 {
+							     var 	attributes= $(".attributes");
+							     if (!$('.attributes').is(e.target) && !attributes.is(e.target) && attributes.has(e.target).length == 0) 
+							     {
+							       	attributes.hide();
+							     }
 
-					   }
+							     $('.criteria').on('click', function(){
+                        			attributes.toggle();
+                        		});
+							 });
                           
 	</script>
  
