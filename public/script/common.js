@@ -68,8 +68,8 @@ function treeMenuDepth_1(container) {
 }
 
 /* toggle bar*/
-function showHideDownSibling(whose) {
-	//alert("Src == " + whose.attr('src'));
+function showHideDownSibling(whose, url) {
+	//alert("url ==== " + url );
 	whose.parent().siblings().toggle();
 	
  	 if( whose.attr('src') ==  '/media/images/icons/arrowUpLines.png' ) { 
@@ -77,6 +77,8 @@ function showHideDownSibling(whose) {
  	 }
  	 else {
  		whose.attr('src', '/media/images/icons/arrowUpLines.png'); 
+ 		
+ 		/* if getAttribute of data-ajaxCalled is 'yes' than dont call the method below, else make an ajax call and set data-ajaxCalled = 'yes' */
  		 
  	 }
 }

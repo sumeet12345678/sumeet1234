@@ -3,36 +3,43 @@
     		{'id' : 'CHARACTERISTICS',
     		 'text' : 'Personality,Outlook,Character Attributes',
     		 'bg'	: ' #62818A',
-    		 'col'	: '#fff'
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
     		},
 
     		{'id' : 'SKILLS',
     		 'text' : 'Occupation,Experience,Proffessional',
     		 'bg'	: '#97A1AD',
-    		 'col'	: '#fff'
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
     		},
 
     		{'id' : 'EDUCATION',
     		 'text' : 'Education,School,Institute',
     		 'bg'	: '#737339',
-    		 'col'	: '#fff'
-    		},
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		}, 
 
-    		{'id' : 'INTEREST2',
+    		{'id' : 'INTEREST', 
     		 'text' : 'Interests,Likes,Activities222',
     		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff'
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
     		},
     		
     		{'id' : 'INTEREST3',
     		 'text' : 'Interests,Likes,Activities333',
     		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff'
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
     		},
+    		
     		{'id' : 'INTEREST4',
     		 'text' : 'Interests,Likes,Activities444',
     		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff' 
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'  
     		}
     	];
 
@@ -54,12 +61,47 @@
 			.criteria
 			{
 
-				border: 1px solid;
-				border-radius: 4px;
+				border: 1px solid #a6a6a6;
 				height: 40px;
 				
 			}
 
+			#keywords {
+				border: 1px solid #a6a6a6;
+				height: 40px;
+				width: 100%;
+
+			}
+
+			.multi-list {
+				width: 100%;
+				display: none;
+			}
+
+			..list-item
+			{
+				margin-bottom: 2px;
+
+			}
+
+			.multi-selector-contentbox
+			{
+				border: 1px solid #a6a6a6;
+				border-color111:#fff; 
+				
+				padding-top: 2px;
+				padding-bottom: 2px;
+				overflow-y: auto;
+			}
+
+			.multi-selector-contentbox div
+			{
+				display: inline-block;
+				background-color: #fff;
+				margin-right: 10px;
+				margin-left: 1px;
+				border-radius: 3px;
+			}
 
 			[contenteditable="true"]:empty:before
 			{
@@ -69,22 +111,87 @@
   				margin-top: 7px;
 			}
 
-			 
+			.age
+			{
+				border: 1px solid #a6a6a6;
+				border-radius: 4px;
+				width: 100%;
+				height: 40px;
+				background-color: #fff;
+			}
+
+
+			.gender
+			{
+				border: 1px solid #a6a6a6;
+				 
+				width:100%;
+				height: 40px;
+				margin-bottom: 10px;
+			}
+			
+			[contentEditable=true]:empty:before {
+			  content:attr(data-placeholder);
+			  color:blue;
+			}
+ 
 
 			 @media screen and (max-width: 760px) 
 			 { 
 			 	
 
-  	 		.ppl-attrib-popup-container {
+  	 		.ppl-attrib-container {
 			  	width: 100%;
 			  	
+			  }
+
+			  .ppl-details-container {
+			  	width: 100%;
 			  }
 
 			  .attrib-popup {
 			  	width: 100%;
 			  }
+
+			  #keyword {
+			  	width: 100%;
+			  }
+
+			  .multi-list {
+			  	width: 100%;
+			  }
+
+			  .list-item
+				{
+					height:30px;
+				}
+
+				.multi-selector-contentbox
+				{
+					width: 100%;
+					height: auto;
+				}
 			 		
-  	 			
+  	 			.item-text
+				{
+					display: inline-block;
+					margin-top: 5px;
+				}
+
+				#age-content1
+				{
+					width: 54%;
+					height:38px;
+					border:0px;
+					
+				}
+				#age-content2
+				{
+					width:85%; 
+					height:38px; 
+					border:0px;
+					
+				}
 
   	 			
 			}
@@ -112,15 +219,43 @@
 				margin-right: auto;
 			  }
 
-			  .ppl-attrib-popup-container {
+			  .ppl-attrib-container {
 			  	width: 100%;
 
+			  }
+
+			  .ppl-details-container {
+			  	width: 100%;
 			  }
 
 			   .attrib-popup {
 			  	width: 100%;
 			  }
+
+			  #keyword {
+			  	width: 100%;
+			  }
+
+			  .multi-selector-contentbox
+				{
+					width: 100%;
+					margin-top111: 5px; 
+					height: auto;
+				}
+
+				#age-content1
+				{
+					width:83%; 
+					height:38px; 
+					
+				}
 			  
+				#age-content2
+				{
+					width:94%; 
+					height:38px; 
+					
+				}
 			  
             }
 
@@ -130,12 +265,102 @@
 		    
 
 	  	 
-	  		<div class="ppl-attrib-popup-container" style="height: 100%; position: relative;" >
+	  		<div class="ppl-attrib-container" style="height: 100% ; position: relative; " >
+
+	  			<div class = "ppl-details-container" style="height: calc(100% - 42px); overflow-y: auto;">
+	  				<form>
+	  					<table width="100%">
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" placeholder="Keywords:">
+	  						</td>
+	  					</tr>
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td colspan="3">
+	  							<div class="content-box">
+
+									<div class="multi-selector-contentbox" contenteditable="true" style="height: 40px; background-color: #fff;padding-left: 3px;">
+										<font color="grey" style="display: inline-block; margin-top: 8px;">Locations,Cities,Areas...</font>
+									</div>
+								 	<div class="multi-list">
+
+										<div id="ITEM_JAVA" class="list-item" style="text-align:center; border:1px solid ; height: 25px;" data-item-attr="ITEM_JAVA">
+											<span class="item-text">Bangalore</span>
+											
+										</div>
+										<div id="ITEM_C" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C">
+											<span class="item-text">Kochi</span>
+											
+										</div>
+										<div id="ITEM_C++" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C++">
+											<span class="item-text">Mumbai</span>
+										</div>
+
+									</div>
+								
+								</div>
+	  						</td>
+	  					</tr>	
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td width="45%">
+	  							<!-- <div class="age" contentEditable = "true"> -->
+	  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
+	  								<input type="text" placeholder="Age From:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%;">
+	  							<!-- </div> -->
+	  						</td>
+
+	  						<td>
+	  							
+	  						</td>
+	  						
+	  						<td width="45%">
+	  							<!-- <div class="age"> -->
+	  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
+	  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
+	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%;">
+	  							<!-- </div> -->
+	  						</td>
+	  					</tr>
+
+	  					<tr height="14px;">
+	  						
+	  					</tr>
+
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+
+	  					</table>
+	  				</form>
+
+	  				<div class = "attach-attributes" style="padding-bottom: 45px; display: block; margin-bottom: 50px;">
+	  				
+	  				</div>
+
+	  			</div>
 	  			
 
-	  			<div class = "attach-attributes" style="padding-bottom: 45px;  overflow-y: auto; height: 100%;  display: block; margin-bottom: 50px;">
-	  				
-	  			</div>
+	  			
 
 	  			<div class = "attrib-popup" style = "position: absolute; bottom: 0px;">
 	  				
@@ -146,10 +371,9 @@
 					 	  		var obj  = peopleSearchCriteria[i];		 		  
 			 			%>		
 	  					<div>	
-	  						<div id= <%= obj.id %>  data-index = <%= obj.id %> class = "attribute-item item-on-popup " style = "padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
+	  						<div id= <%= obj.id %>  data-index = <%= obj.id %>  data-url = <%= obj.url %>  class = "attribute-item item-on-popup " style = "padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
 	  							
-								  	 <span class = "attrib-text" style=""><%= obj.text%></span>
-								
+								  	 <span class = "attrib-text" style=""><%= obj.text%></span>   
 	  						</div>
 	  						
 	  					</div>
@@ -158,9 +382,9 @@
 	  						  						
 	  				</div>
 
-	  				<div class="criteria" style = "width: 100%; margin-top: 5px; position: relative; height: 42px; background-color: #fff; padding-left: 3px;">
+	  				<div class="criteria" style = "width: 100%; margin-top: 0px; position: relative; height: 42px; background-color: #fff; padding-left: 3px;  cursor: pointer;">
 	  					<font color="grey" style="display: inline-block; margin-top: 8px;">More criteria, attributes..</font>
-	  					<div class="popup" style="display: inline-block; margin-top: 2px; margin-right: 5px; float: right; cursor: pointer;">
+	  					<div class="popup" style="display: inline-block; margin-top: 2px; margin-right: 5px; float: right;">
 	  						<span style = "font-size: 30px; font-weight: bold;">+</span>
 	  					</div>
 	  					
@@ -172,6 +396,40 @@
 		 
 	 
 	<script type="text/javascript">
+
+						  	$(document).mouseup(function (e) 
+							 	{
+								    var 	contentbox= $(".multi-list");
+								    if (!$('.multi-list').is(e.target) && !contentbox.is(e.target) && contentbox.has(e.target).length == 0) 
+								    {
+								       	contentbox.hide();
+								    }
+
+								    $('.multi-selector-contentbox').on('click', function(){
+										$('.multi-list').toggle();
+									});
+							    
+							});
+						
+						  // Calling List
+
+                          $(".list-item").on('click',function()
+                          {
+                          	var dataAttribValue = $(this).attr("data-item-attr");
+                          	var index = multiDropDown.indexOf(dataAttribValue);
+                          	if(index < 0)
+                          	{
+                          		multiDropDown.push(dataAttribValue);
+                          		var listItem = $(this).text();
+	                            var listItemElem = $('<div class="list-item1" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
+	                            	$('<img style="cursor: pointer;" class="itemclose" src="fileclose.png" width="20" height="20" onclick="delSelected($(this))">').appendTo(listItemElem);
+	                            listItemElem.prependTo(".multi-selector-contentbox");	
+                          	}
+
+
+                          });
+
+
                          
 						$('.attribute-item').on('click', function() {
     				        $('.attributes').hide();
@@ -181,13 +439,14 @@
 
                         function addCriteria(selectedItem) {
                         	var dataValue = selectedItem.attr('data-index');
+                        	var url = selectedItem.attr('data-url');
                         	var text_text =  selectedItem.children('.attrib-text').text();
-                        	//alert(text_text);
+                        	// alert(url);
                         	var element = $('<div><div class = "common_section_title_bar" data-index ="' + dataValue +  '"></div></div>');
 
                         	element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this))"/>');
                         	element.find('div:first-child').append(text_text);
-                        	element.find('div:first-child').append('<img class = "down-arrow" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" onClick = "showHideDownSibling($(this));"/>');
+                        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" onClick = "showHideDownSibling($(this))"/>'); 
                         	element.append('<div style = "display: none; overflow-y: auto;"></div>');
                         	element.appendTo('.attach-attributes');
 
@@ -195,7 +454,7 @@
                         	selectedItem.hide();
 
                         };
-
+					
                  
                        function closeAttribItem(closeBtn)
                        {  
@@ -205,7 +464,18 @@
 
                        		$('#' + data_index).show();
 					   };  
-
+					   
+					   
+					   ///////
+					   $('.attach-attributes').on('click', '.showHideSiblingIcon', function() {
+						  
+					   });
+					   
+					   function appendSubSection() {
+						   
+						   
+					   }
+					
 
 					    $(document).mouseup(function (e) 
 							 {
