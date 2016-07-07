@@ -49,8 +49,8 @@
 		 
 		  
 		<style type="text/css">
-			*
-			{
+			
+			*{
 				box-sizing: border-box;
 				outline: 0;
 				margin: 0;
@@ -96,11 +96,14 @@
 
 			.multi-selector-contentbox div
 			{
-				display: inline-block;
-				background-color: #fff;
+			
+				background-color: #aaaaaa;
 				margin-right: 10px;
 				margin-left: 1px;
 				border-radius: 3px;
+				margin-top: 5px;
+				display: inline-block;
+
 			}
 
 			[contenteditable="true"]:empty:before
@@ -130,11 +133,12 @@
 				margin-bottom: 10px;
 			}
 			
+			/*
 			[contentEditable=true]:empty:before {
 			  content:attr(data-placeholder);
 			  color:blue;
 			}
- 
+ */
 
 			 @media screen and (max-width: 760px) 
 			 { 
@@ -263,10 +267,11 @@
 	 
 	 
 		    
-
+			<!-- <input type="text" id="ajax" list="json-datalist" placeholder="e.g. datalist"> -->
+			<datalist id="json-datalist"></datalist>
 	  	 
 	  		<div class="ppl-attrib-container" style="height: 100% ; position: relative; " >
-
+					
 	  			<div class = "ppl-details-container" style="height: calc(100% - 42px); overflow-y: auto;">
 	  				<form>
 	  					<table width="100%">
@@ -275,7 +280,7 @@
 	  					</tr>
 	  						<tr>
 	  						<td colspan="3">
-	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" placeholder="Keywords:">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:">
 	  						</td>
 	  					</tr>
 
@@ -287,7 +292,7 @@
 	  						<td colspan="3">
 	  							<div class="content-box">
 
-									<div class="multi-selector-contentbox" contenteditable="true" style="height: 40px; background-color: #fff;padding-left: 3px;">
+									<div class="multi-selector-contentbox" contenteditable="false" style="height: 40px; background-color: #fff;padding-left: 3px; cursor: pointer;">
 										<font color="grey" style="display: inline-block; margin-top: 8px;">Locations,Cities,Areas...</font>
 									</div>
 								 	<div class="multi-list">
@@ -338,10 +343,10 @@
 	  						</td>
 	  						
 	  						<td width="45%">
-	  							<!-- <div class="age"> -->
+	  							<!-- <div class="age"> --> 
 	  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
 	  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
-	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;">
+	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;"> 
 	  							<!-- </div> -->
 	  						</td>
 	  					</tr>
@@ -356,7 +361,7 @@
 	  								<option>Gender</option>
 	  								<option>Male</option>
 	  								<option>Female</option>
-	  								<option>others</option>
+	  								<option>Others</option>
 	  							</select>
 	  						</td>
 	  					</tr>
@@ -407,24 +412,26 @@
 		 
 	 
 	<script type="text/javascript">
+	
+						var multiDropDown = [];
 
-						  	$(document).mouseup(function (e) 
-							 	{
-								    var 	contentbox= $(".multi-list");
-								    if (!$('.multi-list').is(e.target) && !contentbox.is(e.target) && contentbox.has(e.target).length == 0) 
-								    {
-								       	contentbox.hide();
-								    }
+					  	$(document).mouseup(function (e) 
+						 	{
+							    var 	contentbox= $(".multi-list");
+							    if (!$('.multi-list').is(e.target) && !contentbox.is(e.target) && contentbox.has(e.target).length == 0) 
+							    {
+							       	contentbox.hide();
+							    }
 
-								    $('.multi-selector-contentbox').on('click', function(){
-										$('.multi-list').toggle();
-									});
-							    
-							});
+							    $('.multi-selector-contentbox').on('click', function(){
+									$('.multi-list').toggle();
+								});
+						    
+						});
 						
 						  // Calling List
 
-                          $(".list-item").on('click',function()
+                         $(".list-item").on('click',function()
                           {
                           	var dataAttribValue = $(this).attr("data-item-attr");
                           	var index = multiDropDown.indexOf(dataAttribValue);
@@ -432,11 +439,10 @@
                           	{
                           		multiDropDown.push(dataAttribValue);
                           		var listItem = $(this).text();
-	                            var listItemElem = $('<div class="list-item1" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
-	                            	$('<img style="cursor: pointer;" class="itemclose" src="fileclose.png" width="20" height="20" onclick="delSelected($(this))">').appendTo(listItemElem);
+	                            var listItemElem = $('<div class="list-item1" style = "padding: 0 7px 0 7px ; color: #fff;" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
+	                            	$('<span style = "font-size: 20px; color: #dcdcdc; margin-left: 3px" onclick="delSelected($(this))">x</span>').appendTo(listItemElem);
 	                            listItemElem.prependTo(".multi-selector-contentbox");	
                           	}
-
 
                           });
 
@@ -457,7 +463,7 @@
 
                         	element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this))"/>');
                         	element.find('div:first-child').append(text_text);
-                        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" onClick = "showHideDownSibling($(this))"/>'); 
+                        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" />'); /* onClick = "showHideDownSibling($(this))"/>'); */ 
                         	element.append('<div style = "display: none; overflow-y: auto;"></div>');
                         	element.appendTo('.attach-attributes');
 
@@ -479,11 +485,11 @@
 					   
 					   ///////
 					   $('.attach-attributes').on('click', '.showHideSiblingIcon', function() {
-						  
+						  // alert("hello");
 					   });
 					   
-					   function appendSubSection() {
-						   
+					   function appendSubSection() { 
+						     
 						   
 					   }
 					
@@ -500,6 +506,49 @@
                         			attributes.toggle();
                         		});
 							 });
-                          
+                    
+					    
+					 // Get the <datalist> and <input> elements.
+						var dataList = document.getElementById('json-datalist');
+						var input = document.getElementById('keywords');
+							 /* Search keyword ajax call ends */
+						 
+									// Create a new XMLHttpRequest.
+						var request = new XMLHttpRequest();
+						
+						// Handle state changes for the request.
+						request.onreadystatechange = function(response) {
+						  if (request.readyState === 4) {
+						    if (request.status === 200) {
+						      // Parse the JSON
+						      var jsonOptions = JSON.parse(request.responseText);
+						
+						      // Loop over the JSON array.
+						      jsonOptions.forEach(function(item) {
+						        // Create a new <option> element.
+						        var option = document.createElement('option');
+						        // Set the value using the item in the JSON array.
+						        option.value = item;
+						        // Add the <option> element to the <datalist>.
+						        dataList.appendChild(option);
+						      });
+						
+						      // Update the placeholder text.
+						      //input.placeholder = "e.g. datalist";
+						    } else {
+						      // An error occured :(
+						      input.placeholder = "Couldn't load datalist options :(";
+						    }
+						  }
+						};
+						
+						// Update the placeholder text.
+						//input.placeholder = "Loading options...";
+						
+						// Set up and make the request.
+						request.open('GET', '/data/searchKeywords.json', true);
+						request.send(); 
+
+       /* Search keyword ajax call ends */
 	</script>
  
