@@ -1,0 +1,1848 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'prozess' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.2
+4 verbose install initial load of C:\Users\hp\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'prozess', null ]
+7 verbose cache add spec prozess
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'prozess',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'prozess',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed prozess@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for prozess
+11 info addNameTag [ 'prozess', 'latest' ]
+12 silly mapToRegistry name prozess
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/prozess
+16 verbose addNameTag registry:https://registry.npmjs.org/prozess not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/prozess
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 7:56:19 PM
+20 verbose request id b4322237398d4228
+21 verbose etag "2SSICK9W0RJ3UJ5ZYSDPOCPOZ"
+22 http request GET https://registry.npmjs.org/prozess
+23 http 304 https://registry.npmjs.org/prozess
+24 verbose headers { date: 'Thu, 07 Jul 2016 14:26:24 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   etag: '"2SSICK9W0RJ3UJ5ZYSDPOCPOZ"',
+24 verbose headers   age: '0',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1467901584.997866,VS0,VE241',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 304,
+25 silly get   { date: 'Thu, 07 Jul 2016 14:26:24 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     etag: '"2SSICK9W0RJ3UJ5ZYSDPOCPOZ"',
+25 silly get     age: '0',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-sin6922-SIN',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1467901584.997866,VS0,VE241',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose etag https://registry.npmjs.org/prozess from cache
+27 verbose get saving prozess to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\prozess\.cache.json
+28 silly addNameTag next cb for prozess with tag latest
+29 silly addNamed prozess@0.7.3
+30 verbose addNamed "0.7.3" is a plain semver version for prozess
+31 silly cache afterAdd prozess@0.7.3
+32 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\prozess\0.7.3\package\package.json not in flight; writing
+33 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\prozess\0.7.3\package\package.json written
+34 silly install resolved [ { name: 'prozess',
+34 silly install resolved     description: 'Prozess is a kafka library for Node.js',
+34 silly install resolved     keywords: [ 'kafka', 'producer', 'consumer' ],
+34 silly install resolved     version: '0.7.3',
+34 silly install resolved     bugs: { url: 'https://github.com/cainus/Prozess/issues' },
+34 silly install resolved     scripts: { test: 'make test-coveralls' },
+34 silly install resolved     maintainers: [ [Object] ],
+34 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+34 silly install resolved     dependencies:
+34 silly install resolved      { underscore: '1.3.3',
+34 silly install resolved        buffermaker: '1.0.0',
+34 silly install resolved        binary: '0.3.0',
+34 silly install resolved        crc32: '0.2.2',
+34 silly install resolved        'buffer-crc32': '0.2.1',
+34 silly install resolved        bignum: '0.6.2',
+34 silly install resolved        'readable-stream': '1.0.26' },
+34 silly install resolved     devDependencies:
+34 silly install resolved      { istanbul: '0.2.8',
+34 silly install resolved        jshint: '2.5.0',
+34 silly install resolved        coveralls: '2.10.0',
+34 silly install resolved        jscoverage: '0.3.6',
+34 silly install resolved        mockery: '1.1.2',
+34 silly install resolved        hottap: '1.0.1',
+34 silly install resolved        mocha: '1.3.0',
+34 silly install resolved        should: '1.1.0',
+34 silly install resolved        sinon: '1.5.2' },
+34 silly install resolved     main: 'index.js',
+34 silly install resolved     directories: { test: 'test' },
+34 silly install resolved     repository: { type: 'git', url: 'git://github.com/cainus/Prozess.git' },
+34 silly install resolved     engines: { node: '>=0.8.0' },
+34 silly install resolved     author: { name: 'Gregg Caines' },
+34 silly install resolved     license: 'BSD',
+34 silly install resolved     homepage: 'https://github.com/cainus/Prozess',
+34 silly install resolved     gitHead: '112e126e38a7e427166b13b2e75c482afc6a0cfb',
+34 silly install resolved     _id: 'prozess@0.7.3',
+34 silly install resolved     _shasum: 'f934b272b856d34450518c56ea550556d4573d54',
+34 silly install resolved     _from: 'prozess@latest',
+34 silly install resolved     _npmVersion: '1.4.14',
+34 silly install resolved     _npmUser: { name: 'cainus', email: 'gregg@caines.ca' },
+34 silly install resolved     dist:
+34 silly install resolved      { shasum: 'f934b272b856d34450518c56ea550556d4573d54',
+34 silly install resolved        tarball: 'https://registry.npmjs.org/prozess/-/prozess-0.7.3.tgz' },
+34 silly install resolved     _resolved: 'https://registry.npmjs.org/prozess/-/prozess-0.7.3.tgz',
+34 silly install resolved     readme: 'ERROR: No README data found!' } ]
+35 info install prozess@0.7.3 into C:\Users\hp\AppData\Roaming\npm
+36 info installOne prozess@0.7.3
+37 verbose installOne of prozess to C:\Users\hp\AppData\Roaming\npm not in flight; installing
+38 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\prozess-1f7478aad0839fb7.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+39 silly install write writing prozess 0.7.3 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+40 verbose unbuild node_modules\prozess
+41 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess is being purged from base C:\Users\hp\AppData\Roaming\npm
+42 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+43 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\prozess\0.7.3\package.tgz
+44 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+45 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess is being purged
+46 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+47 silly gunzTarPerm modes [ '777', '666' ]
+48 silly gunzTarPerm extractEntry package.json
+49 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+54 silly gunzTarPerm extractEntry LICENSE
+55 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+56 silly gunzTarPerm extractEntry FetchResponse.js
+57 silly gunzTarPerm modified mode [ 'FetchResponse.js', 436, 438 ]
+58 silly gunzTarPerm extractEntry produce_test.js
+59 silly gunzTarPerm modified mode [ 'produce_test.js', 436, 438 ]
+60 silly gunzTarPerm extractEntry Message.js
+61 silly gunzTarPerm modified mode [ 'Message.js', 436, 438 ]
+62 silly gunzTarPerm extractEntry FetchRequest.js
+63 silly gunzTarPerm modified mode [ 'FetchRequest.js', 436, 438 ]
+64 silly gunzTarPerm extractEntry ProduceRequest.js
+65 silly gunzTarPerm modified mode [ 'ProduceRequest.js', 436, 438 ]
+66 silly gunzTarPerm extractEntry Producer.js
+67 silly gunzTarPerm modified mode [ 'Producer.js', 436, 438 ]
+68 silly gunzTarPerm extractEntry Request.js
+69 silly gunzTarPerm modified mode [ 'Request.js', 436, 438 ]
+70 silly gunzTarPerm extractEntry Consumer.js
+71 silly gunzTarPerm modified mode [ 'Consumer.js', 436, 438 ]
+72 silly gunzTarPerm extractEntry Response.js
+73 silly gunzTarPerm modified mode [ 'Response.js', 436, 438 ]
+74 silly gunzTarPerm extractEntry ConnectionCache.js
+75 silly gunzTarPerm modified mode [ 'ConnectionCache.js', 436, 438 ]
+76 silly gunzTarPerm extractEntry consume_test.js
+77 silly gunzTarPerm modified mode [ 'consume_test.js', 436, 438 ]
+78 silly gunzTarPerm extractEntry Connection.js
+79 silly gunzTarPerm modified mode [ 'Connection.js', 436, 438 ]
+80 silly gunzTarPerm extractEntry index.js
+81 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
+82 silly gunzTarPerm extractEntry OffsetsRequest.js
+83 silly gunzTarPerm modified mode [ 'OffsetsRequest.js', 436, 438 ]
+84 silly gunzTarPerm extractEntry OffsetsResponse.js
+85 silly gunzTarPerm modified mode [ 'OffsetsResponse.js', 436, 438 ]
+86 silly gunzTarPerm extractEntry .travis.yml
+87 silly gunzTarPerm modified mode [ '.travis.yml', 436, 438 ]
+88 silly gunzTarPerm extractEntry Makefile
+89 silly gunzTarPerm modified mode [ 'Makefile', 436, 438 ]
+90 silly gunzTarPerm extractEntry test/Consumer.js
+91 silly gunzTarPerm modified mode [ 'test/Consumer.js', 436, 438 ]
+92 silly gunzTarPerm extractEntry test/FetchResponse.js
+93 silly gunzTarPerm modified mode [ 'test/FetchResponse.js', 436, 438 ]
+94 silly gunzTarPerm extractEntry test/Message.js
+95 silly gunzTarPerm modified mode [ 'test/Message.js', 436, 438 ]
+96 silly gunzTarPerm extractEntry test/OffsetsRequest.js
+97 silly gunzTarPerm modified mode [ 'test/OffsetsRequest.js', 436, 438 ]
+98 silly gunzTarPerm extractEntry test/FetchRequest.js
+99 silly gunzTarPerm modified mode [ 'test/FetchRequest.js', 436, 438 ]
+100 silly gunzTarPerm extractEntry test/ProduceRequest.js
+101 silly gunzTarPerm modified mode [ 'test/ProduceRequest.js', 436, 438 ]
+102 silly gunzTarPerm extractEntry test/Producer.js
+103 silly gunzTarPerm modified mode [ 'test/Producer.js', 436, 438 ]
+104 silly gunzTarPerm extractEntry test/Request.js
+105 silly gunzTarPerm modified mode [ 'test/Request.js', 436, 438 ]
+106 silly gunzTarPerm extractEntry test/Response.js
+107 silly gunzTarPerm modified mode [ 'test/Response.js', 436, 438 ]
+108 silly gunzTarPerm extractEntry test/OffsetsResponse.js
+109 silly gunzTarPerm modified mode [ 'test/OffsetsResponse.js', 436, 438 ]
+110 silly gunzTarPerm extractEntry test/lib/mock_socket.js
+111 silly gunzTarPerm modified mode [ 'test/lib/mock_socket.js', 436, 438 ]
+112 silly gunzTarPerm extractEntry test/lib/sinonPatch.js
+113 silly gunzTarPerm modified mode [ 'test/lib/sinonPatch.js', 436, 438 ]
+114 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\package.json
+115 info preinstall prozess@0.7.3
+116 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\package.json
+117 silly prepareForInstallMany adding underscore@1.3.3 from prozess dependencies
+118 silly prepareForInstallMany adding buffermaker@1.0.0 from prozess dependencies
+119 silly prepareForInstallMany adding binary@0.3.0 from prozess dependencies
+120 silly prepareForInstallMany adding crc32@0.2.2 from prozess dependencies
+121 silly prepareForInstallMany adding buffer-crc32@0.2.1 from prozess dependencies
+122 silly prepareForInstallMany adding bignum@0.6.2 from prozess dependencies
+123 silly prepareForInstallMany adding readable-stream@1.0.26 from prozess dependencies
+124 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\package.json
+125 silly cache add args [ 'buffermaker@1.0.0', null ]
+126 verbose cache add spec buffermaker@1.0.0
+127 silly cache add parsed spec Result {
+127 silly cache add   raw: 'buffermaker@1.0.0',
+127 silly cache add   scope: null,
+127 silly cache add   name: 'buffermaker',
+127 silly cache add   rawSpec: '1.0.0',
+127 silly cache add   spec: '1.0.0',
+127 silly cache add   type: 'version' }
+128 silly addNamed buffermaker@1.0.0
+129 verbose addNamed "1.0.0" is a plain semver version for buffermaker
+130 silly mapToRegistry name buffermaker
+131 silly mapToRegistry using default registry
+132 silly mapToRegistry registry https://registry.npmjs.org/
+133 silly mapToRegistry uri https://registry.npmjs.org/buffermaker
+134 verbose addNameVersion registry:https://registry.npmjs.org/buffermaker not in flight; fetching
+135 silly cache add args [ 'binary@0.3.0', null ]
+136 verbose cache add spec binary@0.3.0
+137 silly cache add parsed spec Result {
+137 silly cache add   raw: 'binary@0.3.0',
+137 silly cache add   scope: null,
+137 silly cache add   name: 'binary',
+137 silly cache add   rawSpec: '0.3.0',
+137 silly cache add   spec: '0.3.0',
+137 silly cache add   type: 'version' }
+138 silly addNamed binary@0.3.0
+139 verbose addNamed "0.3.0" is a plain semver version for binary
+140 silly mapToRegistry name binary
+141 silly mapToRegistry using default registry
+142 silly mapToRegistry registry https://registry.npmjs.org/
+143 silly mapToRegistry uri https://registry.npmjs.org/binary
+144 verbose addNameVersion registry:https://registry.npmjs.org/binary not in flight; fetching
+145 silly cache add args [ 'crc32@0.2.2', null ]
+146 verbose cache add spec crc32@0.2.2
+147 silly cache add parsed spec Result {
+147 silly cache add   raw: 'crc32@0.2.2',
+147 silly cache add   scope: null,
+147 silly cache add   name: 'crc32',
+147 silly cache add   rawSpec: '0.2.2',
+147 silly cache add   spec: '0.2.2',
+147 silly cache add   type: 'version' }
+148 silly addNamed crc32@0.2.2
+149 verbose addNamed "0.2.2" is a plain semver version for crc32
+150 silly mapToRegistry name crc32
+151 silly mapToRegistry using default registry
+152 silly mapToRegistry registry https://registry.npmjs.org/
+153 silly mapToRegistry uri https://registry.npmjs.org/crc32
+154 verbose addNameVersion registry:https://registry.npmjs.org/crc32 not in flight; fetching
+155 silly cache add args [ 'buffer-crc32@0.2.1', null ]
+156 verbose cache add spec buffer-crc32@0.2.1
+157 silly cache add parsed spec Result {
+157 silly cache add   raw: 'buffer-crc32@0.2.1',
+157 silly cache add   scope: null,
+157 silly cache add   name: 'buffer-crc32',
+157 silly cache add   rawSpec: '0.2.1',
+157 silly cache add   spec: '0.2.1',
+157 silly cache add   type: 'version' }
+158 silly addNamed buffer-crc32@0.2.1
+159 verbose addNamed "0.2.1" is a plain semver version for buffer-crc32
+160 silly mapToRegistry name buffer-crc32
+161 silly mapToRegistry using default registry
+162 silly mapToRegistry registry https://registry.npmjs.org/
+163 silly mapToRegistry uri https://registry.npmjs.org/buffer-crc32
+164 verbose addNameVersion registry:https://registry.npmjs.org/buffer-crc32 not in flight; fetching
+165 silly cache add args [ 'bignum@0.6.2', null ]
+166 verbose cache add spec bignum@0.6.2
+167 silly cache add parsed spec Result {
+167 silly cache add   raw: 'bignum@0.6.2',
+167 silly cache add   scope: null,
+167 silly cache add   name: 'bignum',
+167 silly cache add   rawSpec: '0.6.2',
+167 silly cache add   spec: '0.6.2',
+167 silly cache add   type: 'version' }
+168 silly addNamed bignum@0.6.2
+169 verbose addNamed "0.6.2" is a plain semver version for bignum
+170 silly mapToRegistry name bignum
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry https://registry.npmjs.org/
+173 silly mapToRegistry uri https://registry.npmjs.org/bignum
+174 verbose addNameVersion registry:https://registry.npmjs.org/bignum not in flight; fetching
+175 silly cache add args [ 'readable-stream@1.0.26', null ]
+176 verbose cache add spec readable-stream@1.0.26
+177 silly cache add parsed spec Result {
+177 silly cache add   raw: 'readable-stream@1.0.26',
+177 silly cache add   scope: null,
+177 silly cache add   name: 'readable-stream',
+177 silly cache add   rawSpec: '1.0.26',
+177 silly cache add   spec: '1.0.26',
+177 silly cache add   type: 'version' }
+178 silly addNamed readable-stream@1.0.26
+179 verbose addNamed "1.0.26" is a plain semver version for readable-stream
+180 silly mapToRegistry name readable-stream
+181 silly mapToRegistry using default registry
+182 silly mapToRegistry registry https://registry.npmjs.org/
+183 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+184 verbose addNameVersion registry:https://registry.npmjs.org/readable-stream not in flight; fetching
+185 silly cache add args [ 'underscore@1.3.3', null ]
+186 verbose cache add spec underscore@1.3.3
+187 silly cache add parsed spec Result {
+187 silly cache add   raw: 'underscore@1.3.3',
+187 silly cache add   scope: null,
+187 silly cache add   name: 'underscore',
+187 silly cache add   rawSpec: '1.3.3',
+187 silly cache add   spec: '1.3.3',
+187 silly cache add   type: 'version' }
+188 silly addNamed underscore@1.3.3
+189 verbose addNamed "1.3.3" is a plain semver version for underscore
+190 silly mapToRegistry name underscore
+191 silly mapToRegistry using default registry
+192 silly mapToRegistry registry https://registry.npmjs.org/
+193 silly mapToRegistry uri https://registry.npmjs.org/underscore
+194 verbose addNameVersion registry:https://registry.npmjs.org/underscore not in flight; fetching
+195 verbose request uri https://registry.npmjs.org/binary
+196 verbose request no auth needed
+197 info attempt registry request try #1 at 7:56:20 PM
+198 verbose etag "8QNK4P49J4MT1TQIAOBET04Q4"
+199 http request GET https://registry.npmjs.org/binary
+200 verbose request uri https://registry.npmjs.org/buffermaker
+201 verbose request no auth needed
+202 info attempt registry request try #1 at 7:56:20 PM
+203 verbose etag "9DMQ9A2QCR35Y8T5FCUQRIJ92"
+204 http request GET https://registry.npmjs.org/buffermaker
+205 verbose request uri https://registry.npmjs.org/buffer-crc32
+206 verbose request no auth needed
+207 info attempt registry request try #1 at 7:56:20 PM
+208 verbose etag "CR10R1H9CLVA9L87RE1JJV0SA"
+209 http request GET https://registry.npmjs.org/buffer-crc32
+210 verbose request uri https://registry.npmjs.org/crc32
+211 verbose request no auth needed
+212 info attempt registry request try #1 at 7:56:20 PM
+213 verbose etag "AXJVHF8M1WYTQT3D7FF03ZDXQ"
+214 http request GET https://registry.npmjs.org/crc32
+215 verbose request uri https://registry.npmjs.org/underscore
+216 verbose request no auth needed
+217 info attempt registry request try #1 at 7:56:20 PM
+218 verbose etag "CVLDPOZARWNW23Q1JUTDO88J1"
+219 http request GET https://registry.npmjs.org/underscore
+220 verbose request uri https://registry.npmjs.org/bignum
+221 verbose request no auth needed
+222 info attempt registry request try #1 at 7:56:20 PM
+223 verbose etag "5XA318AD4C7ZRQG989IUU7KYW"
+224 http request GET https://registry.npmjs.org/bignum
+225 verbose request uri https://registry.npmjs.org/readable-stream
+226 verbose request no auth needed
+227 info attempt registry request try #1 at 7:56:20 PM
+228 verbose etag "E9VURFQDJSVN7SKYIIMYUOYYK"
+229 http request GET https://registry.npmjs.org/readable-stream
+230 http 304 https://registry.npmjs.org/binary
+231 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+231 verbose headers   via: '1.1 varnish',
+231 verbose headers   'cache-control': 'max-age=300',
+231 verbose headers   etag: '"8QNK4P49J4MT1TQIAOBET04Q4"',
+231 verbose headers   age: '221',
+231 verbose headers   connection: 'keep-alive',
+231 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+231 verbose headers   'x-cache': 'HIT',
+231 verbose headers   'x-cache-hits': '4',
+231 verbose headers   'x-timer': 'S1467901585.770965,VS0,VE0',
+231 verbose headers   vary: 'Accept-Encoding' }
+232 silly get cb [ 304,
+232 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+232 silly get     via: '1.1 varnish',
+232 silly get     'cache-control': 'max-age=300',
+232 silly get     etag: '"8QNK4P49J4MT1TQIAOBET04Q4"',
+232 silly get     age: '221',
+232 silly get     connection: 'keep-alive',
+232 silly get     'x-served-by': 'cache-sin6922-SIN',
+232 silly get     'x-cache': 'HIT',
+232 silly get     'x-cache-hits': '4',
+232 silly get     'x-timer': 'S1467901585.770965,VS0,VE0',
+232 silly get     vary: 'Accept-Encoding' } ]
+233 verbose etag https://registry.npmjs.org/binary from cache
+234 verbose get saving binary to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\binary\.cache.json
+235 silly cache afterAdd binary@0.3.0
+236 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\binary\0.3.0\package\package.json not in flight; writing
+237 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\binary\0.3.0\package\package.json written
+238 http 304 https://registry.npmjs.org/buffer-crc32
+239 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+239 verbose headers   via: '1.1 varnish',
+239 verbose headers   'cache-control': 'max-age=300',
+239 verbose headers   etag: '"CR10R1H9CLVA9L87RE1JJV0SA"',
+239 verbose headers   age: '130',
+239 verbose headers   connection: 'keep-alive',
+239 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+239 verbose headers   'x-cache': 'HIT',
+239 verbose headers   'x-cache-hits': '8',
+239 verbose headers   'x-timer': 'S1467901585.792095,VS0,VE0',
+239 verbose headers   vary: 'Accept-Encoding' }
+240 silly get cb [ 304,
+240 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+240 silly get     via: '1.1 varnish',
+240 silly get     'cache-control': 'max-age=300',
+240 silly get     etag: '"CR10R1H9CLVA9L87RE1JJV0SA"',
+240 silly get     age: '130',
+240 silly get     connection: 'keep-alive',
+240 silly get     'x-served-by': 'cache-sin6920-SIN',
+240 silly get     'x-cache': 'HIT',
+240 silly get     'x-cache-hits': '8',
+240 silly get     'x-timer': 'S1467901585.792095,VS0,VE0',
+240 silly get     vary: 'Accept-Encoding' } ]
+241 verbose etag https://registry.npmjs.org/buffer-crc32 from cache
+242 verbose get saving buffer-crc32 to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\buffer-crc32\.cache.json
+243 silly cache afterAdd buffer-crc32@0.2.1
+244 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\buffer-crc32\0.2.1\package\package.json not in flight; writing
+245 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\buffer-crc32\0.2.1\package\package.json written
+246 http 304 https://registry.npmjs.org/underscore
+247 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+247 verbose headers   via: '1.1 varnish',
+247 verbose headers   'cache-control': 'max-age=300',
+247 verbose headers   etag: '"CVLDPOZARWNW23Q1JUTDO88J1"',
+247 verbose headers   age: '64',
+247 verbose headers   connection: 'keep-alive',
+247 verbose headers   'x-served-by': 'cache-sin6926-SIN',
+247 verbose headers   'x-cache': 'HIT',
+247 verbose headers   'x-cache-hits': '5',
+247 verbose headers   'x-timer': 'S1467901585.830939,VS0,VE0',
+247 verbose headers   vary: 'Accept-Encoding' }
+248 silly get cb [ 304,
+248 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+248 silly get     via: '1.1 varnish',
+248 silly get     'cache-control': 'max-age=300',
+248 silly get     etag: '"CVLDPOZARWNW23Q1JUTDO88J1"',
+248 silly get     age: '64',
+248 silly get     connection: 'keep-alive',
+248 silly get     'x-served-by': 'cache-sin6926-SIN',
+248 silly get     'x-cache': 'HIT',
+248 silly get     'x-cache-hits': '5',
+248 silly get     'x-timer': 'S1467901585.830939,VS0,VE0',
+248 silly get     vary: 'Accept-Encoding' } ]
+249 verbose etag https://registry.npmjs.org/underscore from cache
+250 verbose get saving underscore to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\underscore\.cache.json
+251 http 304 https://registry.npmjs.org/readable-stream
+252 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+252 verbose headers   via: '1.1 varnish',
+252 verbose headers   'cache-control': 'max-age=300',
+252 verbose headers   etag: '"E9VURFQDJSVN7SKYIIMYUOYYK"',
+252 verbose headers   age: '134',
+252 verbose headers   connection: 'keep-alive',
+252 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+252 verbose headers   'x-cache': 'HIT',
+252 verbose headers   'x-cache-hits': '108',
+252 verbose headers   'x-timer': 'S1467901585.834046,VS0,VE0',
+252 verbose headers   vary: 'Accept-Encoding' }
+253 silly get cb [ 304,
+253 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+253 silly get     via: '1.1 varnish',
+253 silly get     'cache-control': 'max-age=300',
+253 silly get     etag: '"E9VURFQDJSVN7SKYIIMYUOYYK"',
+253 silly get     age: '134',
+253 silly get     connection: 'keep-alive',
+253 silly get     'x-served-by': 'cache-sin6920-SIN',
+253 silly get     'x-cache': 'HIT',
+253 silly get     'x-cache-hits': '108',
+253 silly get     'x-timer': 'S1467901585.834046,VS0,VE0',
+253 silly get     vary: 'Accept-Encoding' } ]
+254 verbose etag https://registry.npmjs.org/readable-stream from cache
+255 verbose get saving readable-stream to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\readable-stream\.cache.json
+256 silly cache afterAdd underscore@1.3.3
+257 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\underscore\1.3.3\package\package.json not in flight; writing
+258 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\underscore\1.3.3\package\package.json written
+259 silly cache afterAdd readable-stream@1.0.26
+260 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\readable-stream\1.0.26\package\package.json not in flight; writing
+261 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\readable-stream\1.0.26\package\package.json written
+262 http 304 https://registry.npmjs.org/crc32
+263 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+263 verbose headers   via: '1.1 varnish',
+263 verbose headers   'cache-control': 'max-age=300',
+263 verbose headers   etag: '"AXJVHF8M1WYTQT3D7FF03ZDXQ"',
+263 verbose headers   age: '0',
+263 verbose headers   connection: 'keep-alive',
+263 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+263 verbose headers   'x-cache': 'HIT',
+263 verbose headers   'x-cache-hits': '1',
+263 verbose headers   'x-timer': 'S1467901585.783382,VS0,VE248',
+263 verbose headers   vary: 'Accept-Encoding' }
+264 silly get cb [ 304,
+264 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+264 silly get     via: '1.1 varnish',
+264 silly get     'cache-control': 'max-age=300',
+264 silly get     etag: '"AXJVHF8M1WYTQT3D7FF03ZDXQ"',
+264 silly get     age: '0',
+264 silly get     connection: 'keep-alive',
+264 silly get     'x-served-by': 'cache-sin6923-SIN',
+264 silly get     'x-cache': 'HIT',
+264 silly get     'x-cache-hits': '1',
+264 silly get     'x-timer': 'S1467901585.783382,VS0,VE248',
+264 silly get     vary: 'Accept-Encoding' } ]
+265 verbose etag https://registry.npmjs.org/crc32 from cache
+266 verbose get saving crc32 to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\crc32\.cache.json
+267 silly cache afterAdd crc32@0.2.2
+268 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\crc32\0.2.2\package\package.json not in flight; writing
+269 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\crc32\0.2.2\package\package.json written
+270 http 304 https://registry.npmjs.org/bignum
+271 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+271 verbose headers   via: '1.1 varnish',
+271 verbose headers   'cache-control': 'max-age=300',
+271 verbose headers   etag: '"5XA318AD4C7ZRQG989IUU7KYW"',
+271 verbose headers   age: '0',
+271 verbose headers   connection: 'keep-alive',
+271 verbose headers   'x-served-by': 'cache-sin6924-SIN',
+271 verbose headers   'x-cache': 'HIT',
+271 verbose headers   'x-cache-hits': '1',
+271 verbose headers   'x-timer': 'S1467901585.797739,VS0,VE247',
+271 verbose headers   vary: 'Accept-Encoding' }
+272 silly get cb [ 304,
+272 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+272 silly get     via: '1.1 varnish',
+272 silly get     'cache-control': 'max-age=300',
+272 silly get     etag: '"5XA318AD4C7ZRQG989IUU7KYW"',
+272 silly get     age: '0',
+272 silly get     connection: 'keep-alive',
+272 silly get     'x-served-by': 'cache-sin6924-SIN',
+272 silly get     'x-cache': 'HIT',
+272 silly get     'x-cache-hits': '1',
+272 silly get     'x-timer': 'S1467901585.797739,VS0,VE247',
+272 silly get     vary: 'Accept-Encoding' } ]
+273 verbose etag https://registry.npmjs.org/bignum from cache
+274 verbose get saving bignum to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\bignum\.cache.json
+275 silly cache afterAdd bignum@0.6.2
+276 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\bignum\0.6.2\package\package.json not in flight; writing
+277 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\bignum\0.6.2\package\package.json written
+278 http 304 https://registry.npmjs.org/buffermaker
+279 verbose headers { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+279 verbose headers   via: '1.1 varnish',
+279 verbose headers   'cache-control': 'max-age=300',
+279 verbose headers   etag: '"9DMQ9A2QCR35Y8T5FCUQRIJ92"',
+279 verbose headers   age: '0',
+279 verbose headers   connection: 'keep-alive',
+279 verbose headers   'x-served-by': 'cache-sin6927-SIN',
+279 verbose headers   'x-cache': 'HIT',
+279 verbose headers   'x-cache-hits': '1',
+279 verbose headers   'x-timer': 'S1467901585.778939,VS0,VE837',
+279 verbose headers   vary: 'Accept-Encoding' }
+280 silly get cb [ 304,
+280 silly get   { date: 'Thu, 07 Jul 2016 14:26:25 GMT',
+280 silly get     via: '1.1 varnish',
+280 silly get     'cache-control': 'max-age=300',
+280 silly get     etag: '"9DMQ9A2QCR35Y8T5FCUQRIJ92"',
+280 silly get     age: '0',
+280 silly get     connection: 'keep-alive',
+280 silly get     'x-served-by': 'cache-sin6927-SIN',
+280 silly get     'x-cache': 'HIT',
+280 silly get     'x-cache-hits': '1',
+280 silly get     'x-timer': 'S1467901585.778939,VS0,VE837',
+280 silly get     vary: 'Accept-Encoding' } ]
+281 verbose etag https://registry.npmjs.org/buffermaker from cache
+282 verbose get saving buffermaker to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\buffermaker\.cache.json
+283 silly cache afterAdd buffermaker@1.0.0
+284 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\buffermaker\1.0.0\package\package.json not in flight; writing
+285 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\buffermaker\1.0.0\package\package.json written
+286 silly install resolved [ { name: 'binary',
+286 silly install resolved     version: '0.3.0',
+286 silly install resolved     description: 'Unpack multibyte binary values from buffers',
+286 silly install resolved     main: './index.js',
+286 silly install resolved     repository:
+286 silly install resolved      { type: 'git',
+286 silly install resolved        url: 'git://github.com/substack/node-binary.git' },
+286 silly install resolved     keywords: [ 'binary', 'decode', 'endian', 'unpack', 'signed', 'unsigned' ],
+286 silly install resolved     author:
+286 silly install resolved      { name: 'James Halliday',
+286 silly install resolved        email: 'mail@substack.net',
+286 silly install resolved        url: 'http://substack.net' },
+286 silly install resolved     dependencies: { chainsaw: '~0.1.0', buffers: '~0.1.1' },
+286 silly install resolved     devDependencies: { seq: '~0.2.5', tap: '~0.2.4' },
+286 silly install resolved     scripts: { test: 'tap test/*.js' },
+286 silly install resolved     license: 'MIT',
+286 silly install resolved     engine: { node: '>=0.4.0' },
+286 silly install resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+286 silly install resolved     _id: 'binary@0.3.0',
+286 silly install resolved     optionalDependencies: {},
+286 silly install resolved     engines: { node: '*' },
+286 silly install resolved     _engineSupported: true,
+286 silly install resolved     _npmVersion: '1.1.19',
+286 silly install resolved     _nodeVersion: 'v0.6.11',
+286 silly install resolved     _defaultsLoaded: true,
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '9f60553bc5ce8c3386f3b553cff47462adecaa79',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/binary/-/binary-0.3.0.tgz' },
+286 silly install resolved     readme: 'ERROR: No README data found!',
+286 silly install resolved     maintainers: [ [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: '9f60553bc5ce8c3386f3b553cff47462adecaa79',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/binary/-/binary-0.3.0.tgz',
+286 silly install resolved     _from: 'binary@0.3.0',
+286 silly install resolved     bugs: { url: 'https://github.com/substack/node-binary/issues' },
+286 silly install resolved     homepage: 'https://github.com/substack/node-binary#readme' },
+286 silly install resolved   { author:
+286 silly install resolved      { name: 'Brian J. Brennan',
+286 silly install resolved        email: 'brianloveswords@gmail.com',
+286 silly install resolved        url: 'http://bjb.io' },
+286 silly install resolved     name: 'buffer-crc32',
+286 silly install resolved     description: 'A pure javascript CRC32 algorithm that plays nice with binary data',
+286 silly install resolved     version: '0.2.1',
+286 silly install resolved     contributors: [ [Object] ],
+286 silly install resolved     homepage: 'https://github.com/brianloveswords/buffer-crc32',
+286 silly install resolved     repository:
+286 silly install resolved      { type: 'git',
+286 silly install resolved        url: 'git://github.com/brianloveswords/buffer-crc32.git' },
+286 silly install resolved     main: 'index.js',
+286 silly install resolved     scripts: { test: 'tap tests/*.test.js' },
+286 silly install resolved     dependencies: {},
+286 silly install resolved     devDependencies: { tap: '~0.2.5' },
+286 silly install resolved     optionalDependencies: {},
+286 silly install resolved     engines: { node: '*' },
+286 silly install resolved     _id: 'buffer-crc32@0.2.1',
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: 'be3e5382fc02b6d6324956ac1af98aa98b08534c',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.1.tgz' },
+286 silly install resolved     _npmVersion: '1.1.65',
+286 silly install resolved     _npmUser: { name: 'brianloveswords', email: 'brian@nyhacker.org' },
+286 silly install resolved     maintainers: [ [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: 'be3e5382fc02b6d6324956ac1af98aa98b08534c',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.1.tgz',
+286 silly install resolved     _from: 'buffer-crc32@0.2.1',
+286 silly install resolved     bugs: { url: 'https://github.com/brianloveswords/buffer-crc32/issues' },
+286 silly install resolved     readme: 'ERROR: No README data found!' },
+286 silly install resolved   { name: 'underscore',
+286 silly install resolved     description: 'JavaScript\'s functional programming helper library.',
+286 silly install resolved     homepage: 'http://documentcloud.github.com/underscore/',
+286 silly install resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+286 silly install resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+286 silly install resolved     repository:
+286 silly install resolved      { type: 'git',
+286 silly install resolved        url: 'git://github.com/documentcloud/underscore.git' },
+286 silly install resolved     main: 'underscore.js',
+286 silly install resolved     version: '1.3.3',
+286 silly install resolved     _npmUser: { name: 'jashkenas', email: 'jashkenas@gmail.com' },
+286 silly install resolved     _id: 'underscore@1.3.3',
+286 silly install resolved     dependencies: {},
+286 silly install resolved     devDependencies: {},
+286 silly install resolved     optionalDependencies: {},
+286 silly install resolved     engines: { node: '*' },
+286 silly install resolved     _engineSupported: true,
+286 silly install resolved     _npmVersion: '1.1.1',
+286 silly install resolved     _nodeVersion: 'v0.6.11',
+286 silly install resolved     _defaultsLoaded: true,
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '47ac53683daf832bfa952e1774417da47817ae42',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/underscore/-/underscore-1.3.3.tgz' },
+286 silly install resolved     maintainers: [ [Object], [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: '47ac53683daf832bfa952e1774417da47817ae42',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/underscore/-/underscore-1.3.3.tgz',
+286 silly install resolved     _from: 'underscore@1.3.3',
+286 silly install resolved     bugs: { url: 'https://github.com/documentcloud/underscore/issues' },
+286 silly install resolved     readme: 'ERROR: No README data found!' },
+286 silly install resolved   { name: 'readable-stream',
+286 silly install resolved     version: '1.0.26',
+286 silly install resolved     description: 'An exploration of a new kind of readable streams for Node.js',
+286 silly install resolved     main: 'readable.js',
+286 silly install resolved     dependencies: { string_decoder: '~0.10.x' },
+286 silly install resolved     devDependencies: { tap: '~0.2.6' },
+286 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+286 silly install resolved     repository:
+286 silly install resolved      { type: 'git',
+286 silly install resolved        url: 'git://github.com/isaacs/readable-stream.git' },
+286 silly install resolved     keywords: [ 'readable', 'stream', 'pipe' ],
+286 silly install resolved     author:
+286 silly install resolved      { name: 'Isaac Z. Schlueter',
+286 silly install resolved        email: 'i@izs.me',
+286 silly install resolved        url: 'http://blog.izs.me/' },
+286 silly install resolved     license: 'BSD',
+286 silly install resolved     bugs: { url: 'https://github.com/isaacs/readable-stream/issues' },
+286 silly install resolved     homepage: 'https://github.com/isaacs/readable-stream',
+286 silly install resolved     _id: 'readable-stream@1.0.26',
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '12a9c4415f6a85374abe18b7831ba52d43105766',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.26.tgz' },
+286 silly install resolved     _from: 'readable-stream@1.0.26',
+286 silly install resolved     _npmVersion: '1.3.24',
+286 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+286 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: '12a9c4415f6a85374abe18b7831ba52d43105766',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.26.tgz',
+286 silly install resolved     readme: 'ERROR: No README data found!' },
+286 silly install resolved   { author:
+286 silly install resolved      { name: 'T. Jameson Little',
+286 silly install resolved        email: 't.jameson.little@gmail.com' },
+286 silly install resolved     name: 'crc32',
+286 silly install resolved     description: 'CRC-32 implemented in JavaScript',
+286 silly install resolved     version: '0.2.2',
+286 silly install resolved     repository: { type: 'git', url: 'git://github.com/beatgammit/crc32.git' },
+286 silly install resolved     main: './lib/crc32.js',
+286 silly install resolved     bin: { crc32: './bin/runner.js' },
+286 silly install resolved     scripts: { test: 'cd test ; ./runTests.sh' },
+286 silly install resolved     engines: { node: '>= 0.4.0' },
+286 silly install resolved     dependencies: {},
+286 silly install resolved     devDependencies: {},
+286 silly install resolved     _npmUser: { name: 'beatgammit', email: 't.jameson.little@gmail.com' },
+286 silly install resolved     _id: 'crc32@0.2.2',
+286 silly install resolved     _engineSupported: true,
+286 silly install resolved     _npmVersion: '1.0.106',
+286 silly install resolved     _nodeVersion: 'v0.6.2',
+286 silly install resolved     _defaultsLoaded: true,
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '7ad220d6ffdcd119f9fc127a7772cacea390a4ba',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/crc32/-/crc32-0.2.2.tgz' },
+286 silly install resolved     maintainers: [ [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: '7ad220d6ffdcd119f9fc127a7772cacea390a4ba',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/crc32/-/crc32-0.2.2.tgz',
+286 silly install resolved     _from: 'crc32@0.2.2',
+286 silly install resolved     bugs: { url: 'https://github.com/beatgammit/crc32/issues' },
+286 silly install resolved     readme: 'ERROR: No README data found!',
+286 silly install resolved     homepage: 'https://github.com/beatgammit/crc32#readme' },
+286 silly install resolved   { name: 'bignum',
+286 silly install resolved     version: '0.6.2',
+286 silly install resolved     description: 'Arbitrary-precision integer arithmetic using OpenSSL',
+286 silly install resolved     main: './index.js',
+286 silly install resolved     repository:
+286 silly install resolved      { type: 'git',
+286 silly install resolved        url: 'git+ssh://git@github.com/justmoon/node-bignum.git' },
+286 silly install resolved     keywords:
+286 silly install resolved      [ 'openssl',
+286 silly install resolved        'big',
+286 silly install resolved        'bignum',
+286 silly install resolved        'bigint',
+286 silly install resolved        'integer',
+286 silly install resolved        'arithmetic',
+286 silly install resolved        'precision' ],
+286 silly install resolved     author:
+286 silly install resolved      { name: 'Stefan Thomas',
+286 silly install resolved        email: 'justmoon@members.fsf.org',
+286 silly install resolved        url: 'http://www.justmoon.net' },
+286 silly install resolved     devDependencies: { expresso: '>=0.6.0', binary: '>=0.1.7', put: '>=0.0.5' },
+286 silly install resolved     license: 'MIT/X11',
+286 silly install resolved     engine: { node: '>=0.8.0' },
+286 silly install resolved     scripts: { install: 'node-gyp configure build', test: 'expresso' },
+286 silly install resolved     contributors: [ [Object] ],
+286 silly install resolved     bugs: { url: 'https://github.com/justmoon/node-bignum/issues' },
+286 silly install resolved     _id: 'bignum@0.6.2',
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '73099542d00ac244df3b35744f9ce627dd880505',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/bignum/-/bignum-0.6.2.tgz' },
+286 silly install resolved     _from: 'bignum@0.6.2',
+286 silly install resolved     _npmVersion: '1.3.2',
+286 silly install resolved     _npmUser: { name: 'justmoon', email: 'justmoon@members.fsf.org' },
+286 silly install resolved     maintainers: [ [Object], [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: '73099542d00ac244df3b35744f9ce627dd880505',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/bignum/-/bignum-0.6.2.tgz',
+286 silly install resolved     readme: 'ERROR: No README data found!',
+286 silly install resolved     homepage: 'https://github.com/justmoon/node-bignum#readme' },
+286 silly install resolved   { name: 'buffermaker',
+286 silly install resolved     description: 'buffermaker is a convenient way of creating binary strings',
+286 silly install resolved     keywords: [ 'buffer', 'binary' ],
+286 silly install resolved     version: '1.0.0',
+286 silly install resolved     bugs: { url: 'https://github.com/cainus/BufferMaker/issues' },
+286 silly install resolved     scripts: { test: 'make test-coveralls' },
+286 silly install resolved     maintainers: [ [Object] ],
+286 silly install resolved     dependencies: { bignum: '0.6.2' },
+286 silly install resolved     devDependencies:
+286 silly install resolved      { jscoverage: '0.3.6',
+286 silly install resolved        coveralls: '1.1.1',
+286 silly install resolved        mocha: '1.3.0',
+286 silly install resolved        should: '1.1.0' },
+286 silly install resolved     _id: 'buffermaker@1.0.0',
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '5d2ade76a6f2dd091651bbadc56ec7ee1fc70475',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/buffermaker/-/buffermaker-1.0.0.tgz' },
+286 silly install resolved     _npmVersion: '1.2.0',
+286 silly install resolved     _npmUser: { name: 'cainus', email: 'gregg@caines.ca' },
+286 silly install resolved     directories: {},
+286 silly install resolved     _shasum: '5d2ade76a6f2dd091651bbadc56ec7ee1fc70475',
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/buffermaker/-/buffermaker-1.0.0.tgz',
+286 silly install resolved     _from: 'buffermaker@1.0.0',
+286 silly install resolved     readme: 'ERROR: No README data found!' } ]
+287 info install binary@0.3.0 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+288 info install buffer-crc32@0.2.1 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+289 info install underscore@1.3.3 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+290 info install readable-stream@1.0.26 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+291 info install crc32@0.2.2 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+292 info install bignum@0.6.2 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+293 info install buffermaker@1.0.0 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+294 info installOne binary@0.3.0
+295 verbose installOne of binary to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+296 info installOne buffer-crc32@0.2.1
+297 verbose installOne of buffer-crc32 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+298 info installOne underscore@1.3.3
+299 verbose installOne of underscore to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+300 info installOne readable-stream@1.0.26
+301 verbose installOne of readable-stream to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+302 info installOne crc32@0.2.2
+303 verbose installOne of crc32 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+304 info installOne bignum@0.6.2
+305 verbose installOne of bignum to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+306 info installOne buffermaker@1.0.0
+307 verbose installOne of buffermaker to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess not in flight; installing
+308 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\binary-cca273f9e4e717d7.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+309 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\buffer-crc32-b1b5dcef13ecbbb6.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+310 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\underscore-4973fffae3e56868.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+311 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\buffermaker-33e1fcd4c9a203cd.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+312 silly install write writing binary 0.3.0 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+313 silly install write writing buffer-crc32 0.2.1 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+314 silly install write writing underscore 1.3.3 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+315 silly install write writing buffermaker 1.0.0 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+316 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\readable-stream-bdf4709786c633b6.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+317 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\crc32-16c4103e319f6bd9.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+318 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\bignum-2104ed29d3163d5e.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+319 silly install write writing readable-stream 1.0.26 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+320 silly install write writing crc32 0.2.2 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+321 silly install write writing bignum 0.6.2 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+322 verbose unbuild node_modules\prozess\node_modules\underscore
+323 verbose unbuild node_modules\prozess\node_modules\buffermaker
+324 verbose unbuild node_modules\prozess\node_modules\readable-stream
+325 verbose unbuild node_modules\prozess\node_modules\binary
+326 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore is being purged from base C:\Users\hp\AppData\Roaming\npm
+327 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+328 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\underscore\1.3.3\package.tgz
+329 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+330 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore is being purged
+331 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+332 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker is being purged from base C:\Users\hp\AppData\Roaming\npm
+333 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+334 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream is being purged from base C:\Users\hp\AppData\Roaming\npm
+335 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+336 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary is being purged from base C:\Users\hp\AppData\Roaming\npm
+337 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+338 silly gunzTarPerm modes [ '777', '666' ]
+339 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\buffermaker\1.0.0\package.tgz
+340 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+341 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker is being purged
+342 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+343 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\readable-stream\1.0.26\package.tgz
+344 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+345 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream is being purged
+346 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+347 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\binary\0.3.0\package.tgz
+348 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+349 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary is being purged
+350 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+351 silly gunzTarPerm modes [ '777', '666' ]
+352 silly gunzTarPerm modes [ '777', '666' ]
+353 silly gunzTarPerm modes [ '777', '666' ]
+354 verbose unbuild node_modules\prozess\node_modules\bignum
+355 verbose unbuild node_modules\prozess\node_modules\buffer-crc32
+356 verbose unbuild node_modules\prozess\node_modules\crc32
+357 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum is being purged from base C:\Users\hp\AppData\Roaming\npm
+358 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+359 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32 is being purged from base C:\Users\hp\AppData\Roaming\npm
+360 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+361 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\bignum\0.6.2\package.tgz
+362 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+363 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum is being purged
+364 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+365 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32 is being purged from base C:\Users\hp\AppData\Roaming\npm
+366 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+367 silly gunzTarPerm extractEntry .npmignore
+368 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+369 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\buffer-crc32\0.2.1\package.tgz
+370 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+371 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32 is being purged
+372 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+373 silly gunzTarPerm modes [ '777', '666' ]
+374 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\crc32\0.2.2\package.tgz
+375 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+376 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32 is being purged
+377 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+378 silly gunzTarPerm modes [ '777', '666' ]
+379 silly gunzTarPerm modes [ '777', '666' ]
+380 silly gunzTarPerm extractEntry package.json
+381 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+382 silly gunzTarPerm extractEntry package.json
+383 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+384 silly gunzTarPerm extractEntry package.json
+385 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+386 silly gunzTarPerm extractEntry CNAME
+387 silly gunzTarPerm modified mode [ 'CNAME', 420, 438 ]
+388 silly gunzTarPerm extractEntry favicon.ico
+389 silly gunzTarPerm modified mode [ 'favicon.ico', 493, 511 ]
+390 silly gunzTarPerm extractEntry .npmignore
+391 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+392 silly gunzTarPerm extractEntry README.md
+393 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+394 silly gunzTarPerm extractEntry package.json
+395 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+396 silly gunzTarPerm extractEntry .npmignore
+397 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+398 silly gunzTarPerm extractEntry README.md
+399 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+400 silly gunzTarPerm extractEntry package.json
+401 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+402 silly gunzTarPerm extractEntry .npmignore
+403 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+404 silly gunzTarPerm extractEntry index.js
+405 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+406 silly gunzTarPerm extractEntry package.json
+407 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+408 silly gunzTarPerm extractEntry .npmignore
+409 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+410 silly gunzTarPerm extractEntry index.js
+411 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+412 silly gunzTarPerm extractEntry index.html
+413 silly gunzTarPerm modified mode [ 'index.html', 420, 438 ]
+414 silly gunzTarPerm extractEntry .npmignore
+415 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+416 silly gunzTarPerm extractEntry README.md
+417 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+418 silly gunzTarPerm extractEntry index.js
+419 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+420 silly gunzTarPerm extractEntry README.md
+421 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+422 silly gunzTarPerm extractEntry LICENSE.MIT
+423 silly gunzTarPerm modified mode [ 'LICENSE.MIT', 420, 438 ]
+424 silly gunzTarPerm extractEntry index.js
+425 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+426 silly gunzTarPerm extractEntry .travis.yml
+427 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+428 silly gunzTarPerm extractEntry lib/BufferMaker.js
+429 silly gunzTarPerm modified mode [ 'lib/BufferMaker.js', 420, 438 ]
+430 silly gunzTarPerm extractEntry Makefile
+431 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+432 silly gunzTarPerm extractEntry test/BufferMaker.js
+433 silly gunzTarPerm modified mode [ 'test/BufferMaker.js', 420, 438 ]
+434 silly gunzTarPerm extractEntry LICENSE
+435 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+436 silly gunzTarPerm extractEntry duplex.js
+437 silly gunzTarPerm modified mode [ 'duplex.js', 420, 438 ]
+438 silly gunzTarPerm extractEntry example/stream.js
+439 silly gunzTarPerm modified mode [ 'example/stream.js', 420, 438 ]
+440 silly gunzTarPerm extractEntry example/parse.js
+441 silly gunzTarPerm modified mode [ 'example/parse.js', 420, 438 ]
+442 silly gunzTarPerm extractEntry LICENSE
+443 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+444 silly gunzTarPerm extractEntry package.json
+445 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+446 silly gunzTarPerm extractEntry bin/runner.js
+447 silly gunzTarPerm modified mode [ 'bin/runner.js', 493, 511 ]
+448 silly gunzTarPerm extractEntry lib/crc32.js
+449 silly gunzTarPerm modified mode [ 'lib/crc32.js', 420, 438 ]
+450 silly gunzTarPerm extractEntry .travis.yml
+451 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+452 silly gunzTarPerm extractEntry README.markdown
+453 silly gunzTarPerm modified mode [ 'README.markdown', 420, 438 ]
+454 silly gunzTarPerm extractEntry index.js
+455 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+456 silly gunzTarPerm extractEntry .travis.yml
+457 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+458 silly gunzTarPerm extractEntry transform.js
+459 silly gunzTarPerm modified mode [ 'transform.js', 420, 438 ]
+460 silly gunzTarPerm extractEntry passthrough.js
+461 silly gunzTarPerm modified mode [ 'passthrough.js', 420, 438 ]
+462 silly gunzTarPerm extractEntry example/buf.js
+463 silly gunzTarPerm modified mode [ 'example/buf.js', 420, 438 ]
+464 silly gunzTarPerm extractEntry test/negbs.js
+465 silly gunzTarPerm modified mode [ 'test/negbs.js', 420, 438 ]
+466 silly gunzTarPerm extractEntry test/flush.js
+467 silly gunzTarPerm modified mode [ 'test/flush.js', 420, 438 ]
+468 silly gunzTarPerm extractEntry test/into_stream.js
+469 silly gunzTarPerm modified mode [ 'test/into_stream.js', 420, 438 ]
+470 silly gunzTarPerm extractEntry test/scan.js
+471 silly gunzTarPerm modified mode [ 'test/scan.js', 420, 438 ]
+472 silly gunzTarPerm extractEntry test/scan_buf_null.js
+473 silly gunzTarPerm modified mode [ 'test/scan_buf_null.js', 420, 438 ]
+474 silly gunzTarPerm extractEntry test/parse.js
+475 silly gunzTarPerm modified mode [ 'test/parse.js', 420, 438 ]
+476 silly gunzTarPerm extractEntry test/peek.js
+477 silly gunzTarPerm modified mode [ 'test/peek.js', 420, 438 ]
+478 silly gunzTarPerm extractEntry test/skip.js
+479 silly gunzTarPerm modified mode [ 'test/skip.js', 420, 438 ]
+480 silly gunzTarPerm extractEntry test/into_buffer.js
+481 silly gunzTarPerm modified mode [ 'test/into_buffer.js', 420, 438 ]
+482 silly gunzTarPerm extractEntry test/loop_scan.js
+483 silly gunzTarPerm modified mode [ 'test/loop_scan.js', 420, 438 ]
+484 silly gunzTarPerm extractEntry test/immediate.js
+485 silly gunzTarPerm modified mode [ 'test/immediate.js', 420, 438 ]
+486 silly gunzTarPerm extractEntry test/loop.js
+487 silly gunzTarPerm modified mode [ 'test/loop.js', 420, 438 ]
+488 silly gunzTarPerm extractEntry test/negls.js
+489 silly gunzTarPerm modified mode [ 'test/negls.js', 420, 438 ]
+490 silly gunzTarPerm extractEntry test/pipe.js
+491 silly gunzTarPerm modified mode [ 'test/pipe.js', 420, 438 ]
+492 silly gunzTarPerm extractEntry test/posls.js
+493 silly gunzTarPerm modified mode [ 'test/posls.js', 420, 438 ]
+494 silly gunzTarPerm extractEntry test/from_buffer.js
+495 silly gunzTarPerm modified mode [ 'test/from_buffer.js', 420, 438 ]
+496 silly gunzTarPerm extractEntry test/deferred.js
+497 silly gunzTarPerm modified mode [ 'test/deferred.js', 420, 438 ]
+498 silly gunzTarPerm extractEntry test/posbs.js
+499 silly gunzTarPerm modified mode [ 'test/posbs.js', 420, 438 ]
+500 silly gunzTarPerm extractEntry test/get_buffer.js
+501 silly gunzTarPerm modified mode [ 'test/get_buffer.js', 420, 438 ]
+502 silly gunzTarPerm extractEntry test/not_enough_buf.js
+503 silly gunzTarPerm modified mode [ 'test/not_enough_buf.js', 420, 438 ]
+504 silly gunzTarPerm extractEntry test/interval.js
+505 silly gunzTarPerm modified mode [ 'test/interval.js', 420, 438 ]
+506 silly gunzTarPerm extractEntry test/eof.js
+507 silly gunzTarPerm modified mode [ 'test/eof.js', 420, 438 ]
+508 silly gunzTarPerm extractEntry test/not_enough_parse.js
+509 silly gunzTarPerm modified mode [ 'test/not_enough_parse.js', 420, 438 ]
+510 silly gunzTarPerm extractEntry test/lu.js
+511 silly gunzTarPerm modified mode [ 'test/lu.js', 420, 438 ]
+512 silly gunzTarPerm extractEntry test/dots.js
+513 silly gunzTarPerm modified mode [ 'test/dots.js', 420, 438 ]
+514 silly gunzTarPerm extractEntry test/nested.js
+515 silly gunzTarPerm modified mode [ 'test/nested.js', 420, 438 ]
+516 silly gunzTarPerm extractEntry test/split.js
+517 silly gunzTarPerm modified mode [ 'test/split.js', 420, 438 ]
+518 silly gunzTarPerm extractEntry test/bu.js
+519 silly gunzTarPerm modified mode [ 'test/bu.js', 420, 438 ]
+520 silly gunzTarPerm extractEntry test/scan_buf.js
+521 silly gunzTarPerm modified mode [ 'test/scan_buf.js', 420, 438 ]
+522 silly gunzTarPerm extractEntry perf/small.js
+523 silly gunzTarPerm modified mode [ 'perf/small.js', 420, 438 ]
+524 silly gunzTarPerm extractEntry perf/loop.js
+525 silly gunzTarPerm modified mode [ 'perf/loop.js', 420, 438 ]
+526 silly gunzTarPerm extractEntry .travis.yml
+527 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+528 silly gunzTarPerm extractEntry lib/vars.js
+529 silly gunzTarPerm modified mode [ 'lib/vars.js', 420, 438 ]
+530 silly gunzTarPerm extractEntry README.markdown
+531 silly gunzTarPerm modified mode [ 'README.markdown', 420, 438 ]
+532 silly gunzTarPerm extractEntry bignum.cc
+533 silly gunzTarPerm modified mode [ 'bignum.cc', 420, 438 ]
+534 silly gunzTarPerm extractEntry tests/crc.test.js
+535 silly gunzTarPerm modified mode [ 'tests/crc.test.js', 420, 438 ]
+536 silly gunzTarPerm extractEntry test/genCheckValues.sh
+537 silly gunzTarPerm modified mode [ 'test/genCheckValues.sh', 493, 511 ]
+538 silly gunzTarPerm extractEntry test/runTests.sh
+539 silly gunzTarPerm modified mode [ 'test/runTests.sh', 493, 511 ]
+540 silly gunzTarPerm extractEntry test/test.js
+541 silly gunzTarPerm modified mode [ 'test/test.js', 420, 438 ]
+542 silly gunzTarPerm extractEntry test/testFiles/helloWorld.txt
+543 silly gunzTarPerm modified mode [ 'test/testFiles/helloWorld.txt', 420, 438 ]
+544 silly gunzTarPerm extractEntry raw/
+545 silly gunzTarPerm modified mode [ 'raw/', 493, 511 ]
+546 silly gunzTarPerm extractEntry raw/underscore.psd
+547 silly gunzTarPerm modified mode [ 'raw/underscore.psd', 420, 438 ]
+548 silly gunzTarPerm extractEntry readable.js
+549 silly gunzTarPerm modified mode [ 'readable.js', 420, 438 ]
+550 silly gunzTarPerm extractEntry writable.js
+551 silly gunzTarPerm modified mode [ 'writable.js', 420, 438 ]
+552 silly gunzTarPerm extractEntry binding.gyp
+553 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+554 silly gunzTarPerm extractEntry examples/gen.js
+555 silly gunzTarPerm modified mode [ 'examples/gen.js', 420, 438 ]
+556 silly gunzTarPerm extractEntry README.md
+557 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+558 silly gunzTarPerm extractEntry underscore-min.js
+559 silly gunzTarPerm modified mode [ 'underscore-min.js', 420, 438 ]
+560 silly gunzTarPerm extractEntry underscore.js
+561 silly gunzTarPerm modified mode [ 'underscore.js', 420, 438 ]
+562 silly gunzTarPerm extractEntry examples/perfect.js
+563 silly gunzTarPerm modified mode [ 'examples/perfect.js', 420, 438 ]
+564 silly gunzTarPerm extractEntry examples/simple.js
+565 silly gunzTarPerm modified mode [ 'examples/simple.js', 420, 438 ]
+566 silly gunzTarPerm extractEntry float.patch
+567 silly gunzTarPerm modified mode [ 'float.patch', 420, 438 ]
+568 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+569 silly gunzTarPerm modified mode [ 'lib/_stream_duplex.js', 420, 438 ]
+570 silly gunzTarPerm extractEntry test/testFiles/lorem.txt
+571 silly gunzTarPerm modified mode [ 'test/testFiles/lorem.txt', 420, 438 ]
+572 silly gunzTarPerm extractEntry test/testFiles/random.txt
+573 silly gunzTarPerm modified mode [ 'test/testFiles/random.txt', 420, 438 ]
+574 silly gunzTarPerm extractEntry test/testFiles/declaration.txt
+575 silly gunzTarPerm modified mode [ 'test/testFiles/declaration.txt', 420, 438 ]
+576 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+577 silly gunzTarPerm modified mode [ 'lib/_stream_passthrough.js', 420, 438 ]
+578 silly gunzTarPerm extractEntry test/big.js
+579 silly gunzTarPerm modified mode [ 'test/big.js', 420, 438 ]
+580 silly gunzTarPerm extractEntry test/buf.js
+581 silly gunzTarPerm modified mode [ 'test/buf.js', 420, 438 ]
+582 silly gunzTarPerm extractEntry test/seed.js
+583 silly gunzTarPerm modified mode [ 'test/seed.js', 420, 438 ]
+584 silly gunzTarPerm extractEntry lib/_stream_readable.js
+585 silly gunzTarPerm modified mode [ 'lib/_stream_readable.js', 420, 438 ]
+586 silly gunzTarPerm extractEntry lib/_stream_transform.js
+587 silly gunzTarPerm modified mode [ 'lib/_stream_transform.js', 420, 438 ]
+588 silly gunzTarPerm extractEntry lib/_stream_writable.js
+589 silly gunzTarPerm modified mode [ 'lib/_stream_writable.js', 420, 438 ]
+590 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32\package.json
+591 info preinstall buffer-crc32@0.2.1
+592 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32\package.json
+593 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32\package.json
+594 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker\package.json
+595 silly install resolved []
+596 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+597 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+598 info preinstall buffermaker@1.0.0
+599 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker\package.json
+600 info linkStuff buffer-crc32@0.2.1
+601 silly linkStuff buffer-crc32@0.2.1 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+602 silly linkStuff buffer-crc32@0.2.1 is part of a global install
+603 silly linkStuff buffer-crc32@0.2.1 is installed into a global node_modules
+604 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker\package.json
+605 silly install resolved []
+606 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+607 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+608 verbose linkBins buffer-crc32@0.2.1
+609 verbose linkMans buffer-crc32@0.2.1
+610 verbose rebuildBundles buffer-crc32@0.2.1
+611 info install buffer-crc32@0.2.1
+612 info postinstall buffer-crc32@0.2.1
+613 info linkStuff buffermaker@1.0.0
+614 silly linkStuff buffermaker@1.0.0 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+615 silly linkStuff buffermaker@1.0.0 is part of a global install
+616 silly linkStuff buffermaker@1.0.0 is installed into a global node_modules
+617 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\buffer-crc32-b1b5dcef13ecbbb6.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffer-crc32
+618 verbose linkBins buffermaker@1.0.0
+619 verbose linkMans buffermaker@1.0.0
+620 verbose rebuildBundles buffermaker@1.0.0
+621 info install buffermaker@1.0.0
+622 info postinstall buffermaker@1.0.0
+623 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\buffermaker-33e1fcd4c9a203cd.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\buffermaker
+624 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32\package.json
+625 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum\package.json
+626 info preinstall crc32@0.2.2
+627 info preinstall bignum@0.6.2
+628 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32\package.json
+629 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum\package.json
+630 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\package.json
+631 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32\package.json
+632 info preinstall readable-stream@1.0.26
+633 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum\package.json
+634 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\package.json
+635 silly install resolved []
+636 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+637 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+638 silly install resolved []
+639 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+640 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+641 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore\package.json
+642 silly prepareForInstallMany adding string_decoder@~0.10.x from readable-stream dependencies
+643 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\package.json
+644 info linkStuff crc32@0.2.2
+645 silly linkStuff crc32@0.2.2 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+646 silly linkStuff crc32@0.2.2 is part of a global install
+647 silly linkStuff crc32@0.2.2 is installed into a global node_modules
+648 info linkStuff bignum@0.6.2
+649 silly linkStuff bignum@0.6.2 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+650 silly linkStuff bignum@0.6.2 is part of a global install
+651 silly linkStuff bignum@0.6.2 is installed into a global node_modules
+652 info preinstall underscore@1.3.3
+653 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore\package.json
+654 silly cache add args [ 'string_decoder@~0.10.x', null ]
+655 verbose cache add spec string_decoder@~0.10.x
+656 silly cache add parsed spec Result {
+656 silly cache add   raw: 'string_decoder@~0.10.x',
+656 silly cache add   scope: null,
+656 silly cache add   name: 'string_decoder',
+656 silly cache add   rawSpec: '~0.10.x',
+656 silly cache add   spec: '>=0.10.0 <0.11.0',
+656 silly cache add   type: 'range' }
+657 silly addNamed string_decoder@>=0.10.0 <0.11.0
+658 verbose addNamed ">=0.10.0 <0.11.0" is a valid semver range for string_decoder
+659 silly addNameRange { name: 'string_decoder',
+659 silly addNameRange   range: '>=0.10.0 <0.11.0',
+659 silly addNameRange   hasData: false }
+660 silly mapToRegistry name string_decoder
+661 silly mapToRegistry using default registry
+662 silly mapToRegistry registry https://registry.npmjs.org/
+663 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+664 verbose addNameRange registry:https://registry.npmjs.org/string_decoder not in flight; fetching
+665 verbose linkBins crc32@0.2.2
+666 verbose link bins [ { crc32: './bin/runner.js' },
+666 verbose link bins   'C:\\Users\\hp\\AppData\\Roaming\\npm\\node_modules\\prozess\\node_modules\\.bin',
+666 verbose link bins   false ]
+667 verbose linkMans crc32@0.2.2
+668 verbose rebuildBundles crc32@0.2.2
+669 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore\package.json
+670 verbose linkBins bignum@0.6.2
+671 verbose linkMans bignum@0.6.2
+672 verbose rebuildBundles bignum@0.6.2
+673 info install bignum@0.6.2
+674 verbose request uri https://registry.npmjs.org/string_decoder
+675 verbose request no auth needed
+676 info attempt registry request try #1 at 7:56:21 PM
+677 verbose etag "3SLQP4XEWUIBONOV855WOPR0B"
+678 http request GET https://registry.npmjs.org/string_decoder
+679 verbose unsafe-perm in lifecycle true
+680 silly install resolved []
+681 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+682 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+683 info linkStuff underscore@1.3.3
+684 silly linkStuff underscore@1.3.3 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+685 silly linkStuff underscore@1.3.3 is part of a global install
+686 silly linkStuff underscore@1.3.3 is installed into a global node_modules
+687 info install crc32@0.2.2
+688 info postinstall crc32@0.2.2
+689 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\crc32-16c4103e319f6bd9.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\crc32
+690 verbose linkBins underscore@1.3.3
+691 verbose linkMans underscore@1.3.3
+692 verbose rebuildBundles underscore@1.3.3
+693 info install underscore@1.3.3
+694 info postinstall underscore@1.3.3
+695 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\underscore-4973fffae3e56868.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\underscore
+696 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\package.json
+697 info preinstall binary@0.3.0
+698 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\package.json
+699 silly prepareForInstallMany adding chainsaw@~0.1.0 from binary dependencies
+700 silly prepareForInstallMany adding buffers@~0.1.1 from binary dependencies
+701 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\package.json
+702 silly cache add args [ 'chainsaw@~0.1.0', null ]
+703 verbose cache add spec chainsaw@~0.1.0
+704 silly cache add args [ 'buffers@~0.1.1', null ]
+705 verbose cache add spec buffers@~0.1.1
+706 silly cache add parsed spec Result {
+706 silly cache add   raw: 'chainsaw@~0.1.0',
+706 silly cache add   scope: null,
+706 silly cache add   name: 'chainsaw',
+706 silly cache add   rawSpec: '~0.1.0',
+706 silly cache add   spec: '>=0.1.0 <0.2.0',
+706 silly cache add   type: 'range' }
+707 silly addNamed chainsaw@>=0.1.0 <0.2.0
+708 verbose addNamed ">=0.1.0 <0.2.0" is a valid semver range for chainsaw
+709 silly addNameRange { name: 'chainsaw', range: '>=0.1.0 <0.2.0', hasData: false }
+710 silly mapToRegistry name chainsaw
+711 silly mapToRegistry using default registry
+712 silly mapToRegistry registry https://registry.npmjs.org/
+713 silly mapToRegistry uri https://registry.npmjs.org/chainsaw
+714 verbose addNameRange registry:https://registry.npmjs.org/chainsaw not in flight; fetching
+715 silly cache add parsed spec Result {
+715 silly cache add   raw: 'buffers@~0.1.1',
+715 silly cache add   scope: null,
+715 silly cache add   name: 'buffers',
+715 silly cache add   rawSpec: '~0.1.1',
+715 silly cache add   spec: '>=0.1.1 <0.2.0',
+715 silly cache add   type: 'range' }
+716 silly addNamed buffers@>=0.1.1 <0.2.0
+717 verbose addNamed ">=0.1.1 <0.2.0" is a valid semver range for buffers
+718 silly addNameRange { name: 'buffers', range: '>=0.1.1 <0.2.0', hasData: false }
+719 silly mapToRegistry name buffers
+720 silly mapToRegistry using default registry
+721 silly mapToRegistry registry https://registry.npmjs.org/
+722 silly mapToRegistry uri https://registry.npmjs.org/buffers
+723 verbose addNameRange registry:https://registry.npmjs.org/buffers not in flight; fetching
+724 verbose request uri https://registry.npmjs.org/buffers
+725 verbose request no auth needed
+726 info attempt registry request try #1 at 7:56:22 PM
+727 verbose etag "B86MHUKB0M67RBF5TSP1O1XUN"
+728 http request GET https://registry.npmjs.org/buffers
+729 verbose request uri https://registry.npmjs.org/chainsaw
+730 verbose request no auth needed
+731 info attempt registry request try #1 at 7:56:22 PM
+732 verbose etag "4LIQ4FZ51LUMZABJBPD4G7A19"
+733 http request GET https://registry.npmjs.org/chainsaw
+734 http 304 https://registry.npmjs.org/string_decoder
+735 verbose headers { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+735 verbose headers   via: '1.1 varnish',
+735 verbose headers   'cache-control': 'max-age=300',
+735 verbose headers   etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+735 verbose headers   age: '207',
+735 verbose headers   connection: 'keep-alive',
+735 verbose headers   'x-served-by': 'cache-sin6927-SIN',
+735 verbose headers   'x-cache': 'HIT',
+735 verbose headers   'x-cache-hits': '70',
+735 verbose headers   'x-timer': 'S1467901587.233414,VS0,VE0',
+735 verbose headers   vary: 'Accept-Encoding' }
+736 silly get cb [ 304,
+736 silly get   { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+736 silly get     via: '1.1 varnish',
+736 silly get     'cache-control': 'max-age=300',
+736 silly get     etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+736 silly get     age: '207',
+736 silly get     connection: 'keep-alive',
+736 silly get     'x-served-by': 'cache-sin6927-SIN',
+736 silly get     'x-cache': 'HIT',
+736 silly get     'x-cache-hits': '70',
+736 silly get     'x-timer': 'S1467901587.233414,VS0,VE0',
+736 silly get     vary: 'Accept-Encoding' } ]
+737 verbose etag https://registry.npmjs.org/string_decoder from cache
+738 verbose get saving string_decoder to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\string_decoder\.cache.json
+739 silly addNameRange number 2 { name: 'string_decoder',
+739 silly addNameRange   range: '>=0.10.0 <0.11.0',
+739 silly addNameRange   hasData: true }
+740 silly addNameRange versions [ 'string_decoder',
+740 silly addNameRange   [ '0.0.0',
+740 silly addNameRange     '0.0.1',
+740 silly addNameRange     '0.10.24',
+740 silly addNameRange     '0.11.10',
+740 silly addNameRange     '0.10.25',
+740 silly addNameRange     '0.11.10-1',
+740 silly addNameRange     '0.10.25-1',
+740 silly addNameRange     '0.10.31' ] ]
+741 silly addNamed string_decoder@0.10.31
+742 verbose addNamed "0.10.31" is a plain semver version for string_decoder
+743 silly cache afterAdd string_decoder@0.10.31
+744 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\string_decoder\0.10.31\package\package.json not in flight; writing
+745 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\string_decoder\0.10.31\package\package.json written
+746 silly install resolved [ { name: 'string_decoder',
+746 silly install resolved     version: '0.10.31',
+746 silly install resolved     description: 'The string_decoder module from Node core',
+746 silly install resolved     main: 'index.js',
+746 silly install resolved     dependencies: {},
+746 silly install resolved     devDependencies: { tap: '~0.4.8' },
+746 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+746 silly install resolved     repository:
+746 silly install resolved      { type: 'git',
+746 silly install resolved        url: 'git://github.com/rvagg/string_decoder.git' },
+746 silly install resolved     homepage: 'https://github.com/rvagg/string_decoder',
+746 silly install resolved     keywords: [ 'string', 'decoder', 'browser', 'browserify' ],
+746 silly install resolved     license: 'MIT',
+746 silly install resolved     gitHead: 'd46d4fd87cf1d06e031c23f1ba170ca7d4ade9a0',
+746 silly install resolved     bugs: { url: 'https://github.com/rvagg/string_decoder/issues' },
+746 silly install resolved     _id: 'string_decoder@0.10.31',
+746 silly install resolved     _shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+746 silly install resolved     _from: 'string_decoder@>=0.10.0 <0.11.0',
+746 silly install resolved     _npmVersion: '1.4.23',
+746 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+746 silly install resolved     maintainers: [ [Object], [Object] ],
+746 silly install resolved     dist:
+746 silly install resolved      { shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+746 silly install resolved        tarball: 'http://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz' },
+746 silly install resolved     directories: {},
+746 silly install resolved     _resolved: 'https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz',
+746 silly install resolved     readme: 'ERROR: No README data found!' } ]
+747 info install string_decoder@0.10.31 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+748 info installOne string_decoder@0.10.31
+749 verbose installOne of string_decoder to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream not in flight; installing
+750 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\string-decoder-f227e7331756cdb5.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+751 silly install write writing string_decoder 0.10.31 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+752 verbose unbuild node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+753 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder is being purged from base C:\Users\hp\AppData\Roaming\npm
+754 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+755 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\string_decoder\0.10.31\package.tgz
+756 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+757 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder is being purged
+758 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+759 silly gunzTarPerm modes [ '777', '666' ]
+760 silly gunzTarPerm extractEntry package.json
+761 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+762 silly gunzTarPerm extractEntry .npmignore
+763 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+764 silly gunzTarPerm extractEntry README.md
+765 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+766 silly gunzTarPerm extractEntry LICENSE
+767 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+768 silly gunzTarPerm extractEntry index.js
+769 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
+770 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder\package.json
+771 info preinstall string_decoder@0.10.31
+772 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder\package.json
+773 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder\package.json
+774 silly install resolved []
+775 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+776 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+777 info linkStuff string_decoder@0.10.31
+778 silly linkStuff string_decoder@0.10.31 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules as its parent node_modules
+779 silly linkStuff string_decoder@0.10.31 is part of a global install
+780 silly linkStuff string_decoder@0.10.31 is installed into a global node_modules
+781 verbose linkBins string_decoder@0.10.31
+782 verbose linkMans string_decoder@0.10.31
+783 verbose rebuildBundles string_decoder@0.10.31
+784 info install string_decoder@0.10.31
+785 info postinstall string_decoder@0.10.31
+786 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\string-decoder-f227e7331756cdb5.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream\node_modules\string_decoder
+787 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+788 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+789 info linkStuff readable-stream@1.0.26
+790 silly linkStuff readable-stream@1.0.26 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+791 silly linkStuff readable-stream@1.0.26 is part of a global install
+792 silly linkStuff readable-stream@1.0.26 is installed into a global node_modules
+793 verbose linkBins readable-stream@1.0.26
+794 verbose linkMans readable-stream@1.0.26
+795 verbose rebuildBundles readable-stream@1.0.26
+796 verbose rebuildBundles [ 'string_decoder' ]
+797 info install readable-stream@1.0.26
+798 info postinstall readable-stream@1.0.26
+799 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\readable-stream-bdf4709786c633b6.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\readable-stream
+800 http 304 https://registry.npmjs.org/buffers
+801 verbose headers { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+801 verbose headers   via: '1.1 varnish',
+801 verbose headers   'cache-control': 'max-age=300',
+801 verbose headers   etag: '"B86MHUKB0M67RBF5TSP1O1XUN"',
+801 verbose headers   age: '217',
+801 verbose headers   connection: 'keep-alive',
+801 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+801 verbose headers   'x-cache': 'HIT',
+801 verbose headers   'x-cache-hits': '2',
+801 verbose headers   'x-timer': 'S1467901587.342634,VS0,VE0',
+801 verbose headers   vary: 'Accept-Encoding' }
+802 silly get cb [ 304,
+802 silly get   { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+802 silly get     via: '1.1 varnish',
+802 silly get     'cache-control': 'max-age=300',
+802 silly get     etag: '"B86MHUKB0M67RBF5TSP1O1XUN"',
+802 silly get     age: '217',
+802 silly get     connection: 'keep-alive',
+802 silly get     'x-served-by': 'cache-sin6922-SIN',
+802 silly get     'x-cache': 'HIT',
+802 silly get     'x-cache-hits': '2',
+802 silly get     'x-timer': 'S1467901587.342634,VS0,VE0',
+802 silly get     vary: 'Accept-Encoding' } ]
+803 verbose etag https://registry.npmjs.org/buffers from cache
+804 verbose get saving buffers to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\buffers\.cache.json
+805 silly addNameRange number 2 { name: 'buffers', range: '>=0.1.1 <0.2.0', hasData: true }
+806 silly addNameRange versions [ 'buffers',
+806 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.1.0', '0.1.1' ] ]
+807 silly addNamed buffers@0.1.1
+808 verbose addNamed "0.1.1" is a plain semver version for buffers
+809 http 304 https://registry.npmjs.org/chainsaw
+810 verbose headers { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+810 verbose headers   via: '1.1 varnish',
+810 verbose headers   'cache-control': 'max-age=300',
+810 verbose headers   etag: '"4LIQ4FZ51LUMZABJBPD4G7A19"',
+810 verbose headers   age: '217',
+810 verbose headers   connection: 'keep-alive',
+810 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+810 verbose headers   'x-cache': 'HIT',
+810 verbose headers   'x-cache-hits': '3',
+810 verbose headers   'x-timer': 'S1467901587.350283,VS0,VE0',
+810 verbose headers   vary: 'Accept-Encoding' }
+811 silly get cb [ 304,
+811 silly get   { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+811 silly get     via: '1.1 varnish',
+811 silly get     'cache-control': 'max-age=300',
+811 silly get     etag: '"4LIQ4FZ51LUMZABJBPD4G7A19"',
+811 silly get     age: '217',
+811 silly get     connection: 'keep-alive',
+811 silly get     'x-served-by': 'cache-sin6922-SIN',
+811 silly get     'x-cache': 'HIT',
+811 silly get     'x-cache-hits': '3',
+811 silly get     'x-timer': 'S1467901587.350283,VS0,VE0',
+811 silly get     vary: 'Accept-Encoding' } ]
+812 verbose etag https://registry.npmjs.org/chainsaw from cache
+813 verbose get saving chainsaw to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\chainsaw\.cache.json
+814 silly cache afterAdd buffers@0.1.1
+815 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\buffers\0.1.1\package\package.json not in flight; writing
+816 silly addNameRange number 2 { name: 'chainsaw', range: '>=0.1.0 <0.2.0', hasData: true }
+817 silly addNameRange versions [ 'chainsaw',
+817 silly addNameRange   [ '0.0.1',
+817 silly addNameRange     '0.0.3',
+817 silly addNameRange     '0.0.4',
+817 silly addNameRange     '0.0.5',
+817 silly addNameRange     '0.0.6',
+817 silly addNameRange     '0.0.7',
+817 silly addNameRange     '0.0.8',
+817 silly addNameRange     '0.0.9',
+817 silly addNameRange     '0.1.0' ] ]
+818 silly addNamed chainsaw@0.1.0
+819 verbose addNamed "0.1.0" is a plain semver version for chainsaw
+820 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\buffers\0.1.1\package\package.json written
+821 silly cache afterAdd chainsaw@0.1.0
+822 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\chainsaw\0.1.0\package\package.json not in flight; writing
+823 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\chainsaw\0.1.0\package\package.json written
+824 silly install resolved [ { name: 'buffers',
+824 silly install resolved     description: 'Treat a collection of Buffers as a single contiguous partially mutable Buffer.',
+824 silly install resolved     version: '0.1.1',
+824 silly install resolved     repository:
+824 silly install resolved      { type: 'git',
+824 silly install resolved        url: 'git://github.com/substack/node-buffers.git' },
+824 silly install resolved     author:
+824 silly install resolved      { name: 'James Halliday',
+824 silly install resolved        email: 'mail@substack.net',
+824 silly install resolved        url: 'http://substack.net' },
+824 silly install resolved     main: './index',
+824 silly install resolved     scripts: { test: 'expresso' },
+824 silly install resolved     engines: { node: '>=0.2.0' },
+824 silly install resolved     _npmJsonOpts:
+824 silly install resolved      { file: '/home/substack/.npm/buffers/0.1.1/package/package.json',
+824 silly install resolved        wscript: false,
+824 silly install resolved        contributors: false,
+824 silly install resolved        serverjs: false },
+824 silly install resolved     _id: 'buffers@0.1.1',
+824 silly install resolved     dependencies: {},
+824 silly install resolved     devDependencies: {},
+824 silly install resolved     _engineSupported: true,
+824 silly install resolved     _npmVersion: '1.0.30',
+824 silly install resolved     _nodeVersion: 'v0.4.12',
+824 silly install resolved     _defaultsLoaded: true,
+824 silly install resolved     dist:
+824 silly install resolved      { shasum: 'b24579c3bed4d6d396aeee6d9a8ae7f5482ab7bb',
+824 silly install resolved        tarball: 'https://registry.npmjs.org/buffers/-/buffers-0.1.1.tgz' },
+824 silly install resolved     maintainers: [ [Object] ],
+824 silly install resolved     directories: {},
+824 silly install resolved     _shasum: 'b24579c3bed4d6d396aeee6d9a8ae7f5482ab7bb',
+824 silly install resolved     _resolved: 'https://registry.npmjs.org/buffers/-/buffers-0.1.1.tgz',
+824 silly install resolved     _from: 'buffers@>=0.1.1 <0.2.0',
+824 silly install resolved     bugs: { url: 'https://github.com/substack/node-buffers/issues' },
+824 silly install resolved     readme: 'ERROR: No README data found!',
+824 silly install resolved     homepage: 'https://github.com/substack/node-buffers#readme' },
+824 silly install resolved   { name: 'chainsaw',
+824 silly install resolved     version: '0.1.0',
+824 silly install resolved     description: 'Build chainable fluent interfaces the easy way... with a freakin\' chainsaw!',
+824 silly install resolved     main: './index.js',
+824 silly install resolved     repository:
+824 silly install resolved      { type: 'git',
+824 silly install resolved        url: 'git://github.com/substack/node-chainsaw.git' },
+824 silly install resolved     dependencies: { traverse: '>=0.3.0 <0.4' },
+824 silly install resolved     keywords: [ 'chain', 'fluent', 'interface', 'monad', 'monadic' ],
+824 silly install resolved     author:
+824 silly install resolved      { name: 'James Halliday',
+824 silly install resolved        email: 'mail@substack.net',
+824 silly install resolved        url: 'http://substack.net' },
+824 silly install resolved     license: 'MIT/X11',
+824 silly install resolved     engine: { node: '>=0.4.0' },
+824 silly install resolved     _id: 'chainsaw@0.1.0',
+824 silly install resolved     devDependencies: {},
+824 silly install resolved     engines: { node: '*' },
+824 silly install resolved     _engineSupported: true,
+824 silly install resolved     _npmVersion: '1.0.10',
+824 silly install resolved     _nodeVersion: 'v0.5.0-pre',
+824 silly install resolved     _defaultsLoaded: true,
+824 silly install resolved     dist:
+824 silly install resolved      { shasum: '5eab50b28afe58074d0d58291388828b5e5fbc98',
+824 silly install resolved        tarball: 'https://registry.npmjs.org/chainsaw/-/chainsaw-0.1.0.tgz' },
+824 silly install resolved     scripts: {},
+824 silly install resolved     directories: {},
+824 silly install resolved     _shasum: '5eab50b28afe58074d0d58291388828b5e5fbc98',
+824 silly install resolved     _resolved: 'https://registry.npmjs.org/chainsaw/-/chainsaw-0.1.0.tgz',
+824 silly install resolved     _from: 'chainsaw@>=0.1.0 <0.2.0',
+824 silly install resolved     bugs: { url: 'https://github.com/substack/node-chainsaw/issues' },
+824 silly install resolved     readme: 'ERROR: No README data found!',
+824 silly install resolved     homepage: 'https://github.com/substack/node-chainsaw#readme' } ]
+825 info install buffers@0.1.1 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+826 info install chainsaw@0.1.0 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+827 info installOne buffers@0.1.1
+828 verbose installOne of buffers to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary not in flight; installing
+829 info installOne chainsaw@0.1.0
+830 verbose installOne of chainsaw to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary not in flight; installing
+831 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\chainsaw-1b33f4fd8ce450d2.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+832 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\buffers-8a038ada4d82ba31.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+833 silly install write writing chainsaw 0.1.0 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+834 silly install write writing buffers 0.1.1 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+835 verbose unbuild node_modules\prozess\node_modules\binary\node_modules\chainsaw
+836 verbose unbuild node_modules\prozess\node_modules\binary\node_modules\buffers
+837 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw is being purged from base C:\Users\hp\AppData\Roaming\npm
+838 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+839 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers is being purged from base C:\Users\hp\AppData\Roaming\npm
+840 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+841 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\chainsaw\0.1.0\package.tgz
+842 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+843 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw is being purged
+844 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+845 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\buffers\0.1.1\package.tgz
+846 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+847 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers is being purged
+848 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+849 silly gunzTarPerm modes [ '777', '666' ]
+850 silly gunzTarPerm modes [ '777', '666' ]
+851 silly gunzTarPerm extractEntry index.js
+852 silly gunzTarPerm modified mode [ 'index.js', 493, 511 ]
+853 silly gunzTarPerm extractEntry index.js
+854 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+855 silly gunzTarPerm extractEntry .npmignore
+856 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+857 silly gunzTarPerm extractEntry package.json
+858 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+859 silly gunzTarPerm extractEntry package.json
+860 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+861 silly gunzTarPerm extractEntry README.markdown
+862 silly gunzTarPerm modified mode [ 'README.markdown', 420, 438 ]
+863 silly gunzTarPerm extractEntry examples/slice.js
+864 silly gunzTarPerm modified mode [ 'examples/slice.js', 420, 438 ]
+865 silly gunzTarPerm extractEntry examples/splice.js
+866 silly gunzTarPerm modified mode [ 'examples/splice.js', 420, 438 ]
+867 silly gunzTarPerm extractEntry README.markdown
+868 silly gunzTarPerm modified mode [ 'README.markdown', 420, 438 ]
+869 silly gunzTarPerm extractEntry examples/add_do.js
+870 silly gunzTarPerm modified mode [ 'examples/add_do.js', 420, 438 ]
+871 silly gunzTarPerm extractEntry test/buffers.js
+872 silly gunzTarPerm modified mode [ 'test/buffers.js', 420, 438 ]
+873 silly gunzTarPerm extractEntry examples/prompt.js
+874 silly gunzTarPerm modified mode [ 'examples/prompt.js', 420, 438 ]
+875 silly gunzTarPerm extractEntry test/chainsaw.js
+876 silly gunzTarPerm modified mode [ 'test/chainsaw.js', 420, 438 ]
+877 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers\package.json
+878 info preinstall buffers@0.1.1
+879 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers\package.json
+880 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers\package.json
+881 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\package.json
+882 silly install resolved []
+883 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+884 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+885 info preinstall chainsaw@0.1.0
+886 info linkStuff buffers@0.1.1
+887 silly linkStuff buffers@0.1.1 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules as its parent node_modules
+888 silly linkStuff buffers@0.1.1 is part of a global install
+889 silly linkStuff buffers@0.1.1 is installed into a global node_modules
+890 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\package.json
+891 verbose linkBins buffers@0.1.1
+892 verbose linkMans buffers@0.1.1
+893 verbose rebuildBundles buffers@0.1.1
+894 info install buffers@0.1.1
+895 info postinstall buffers@0.1.1
+896 silly prepareForInstallMany adding traverse@>=0.3.0 <0.4 from chainsaw dependencies
+897 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\package.json
+898 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\buffers-8a038ada4d82ba31.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\buffers
+899 silly cache add args [ 'traverse@>=0.3.0 <0.4', null ]
+900 verbose cache add spec traverse@>=0.3.0 <0.4
+901 silly cache add parsed spec Result {
+901 silly cache add   raw: 'traverse@>=0.3.0 <0.4',
+901 silly cache add   scope: null,
+901 silly cache add   name: 'traverse',
+901 silly cache add   rawSpec: '>=0.3.0 <0.4',
+901 silly cache add   spec: '>=0.3.0 <0.4.0',
+901 silly cache add   type: 'range' }
+902 silly addNamed traverse@>=0.3.0 <0.4.0
+903 verbose addNamed ">=0.3.0 <0.4.0" is a valid semver range for traverse
+904 silly addNameRange { name: 'traverse', range: '>=0.3.0 <0.4.0', hasData: false }
+905 silly mapToRegistry name traverse
+906 silly mapToRegistry using default registry
+907 silly mapToRegistry registry https://registry.npmjs.org/
+908 silly mapToRegistry uri https://registry.npmjs.org/traverse
+909 verbose addNameRange registry:https://registry.npmjs.org/traverse not in flight; fetching
+910 verbose request uri https://registry.npmjs.org/traverse
+911 verbose request no auth needed
+912 info attempt registry request try #1 at 7:56:22 PM
+913 verbose etag "DF8D59OQVCELGPPL7XTBKDJCQ"
+914 http request GET https://registry.npmjs.org/traverse
+915 http 304 https://registry.npmjs.org/traverse
+916 verbose headers { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+916 verbose headers   via: '1.1 varnish',
+916 verbose headers   'cache-control': 'max-age=300',
+916 verbose headers   etag: '"DF8D59OQVCELGPPL7XTBKDJCQ"',
+916 verbose headers   age: '284',
+916 verbose headers   connection: 'keep-alive',
+916 verbose headers   'x-served-by': 'cache-sin6927-SIN',
+916 verbose headers   'x-cache': 'HIT',
+916 verbose headers   'x-cache-hits': '8',
+916 verbose headers   'x-timer': 'S1467901587.702645,VS0,VE0',
+916 verbose headers   vary: 'Accept-Encoding' }
+917 silly get cb [ 304,
+917 silly get   { date: 'Thu, 07 Jul 2016 14:26:27 GMT',
+917 silly get     via: '1.1 varnish',
+917 silly get     'cache-control': 'max-age=300',
+917 silly get     etag: '"DF8D59OQVCELGPPL7XTBKDJCQ"',
+917 silly get     age: '284',
+917 silly get     connection: 'keep-alive',
+917 silly get     'x-served-by': 'cache-sin6927-SIN',
+917 silly get     'x-cache': 'HIT',
+917 silly get     'x-cache-hits': '8',
+917 silly get     'x-timer': 'S1467901587.702645,VS0,VE0',
+917 silly get     vary: 'Accept-Encoding' } ]
+918 verbose etag https://registry.npmjs.org/traverse from cache
+919 verbose get saving traverse to C:\Users\hp\AppData\Roaming\npm-cache\registry.npmjs.org\traverse\.cache.json
+920 silly addNameRange number 2 { name: 'traverse', range: '>=0.3.0 <0.4.0', hasData: true }
+921 silly addNameRange versions [ 'traverse',
+921 silly addNameRange   [ '0.1.2',
+921 silly addNameRange     '0.1.3',
+921 silly addNameRange     '0.2.0',
+921 silly addNameRange     '0.2.1',
+921 silly addNameRange     '0.2.2',
+921 silly addNameRange     '0.2.3',
+921 silly addNameRange     '0.2.4',
+921 silly addNameRange     '0.3.0',
+921 silly addNameRange     '0.3.1',
+921 silly addNameRange     '0.2.5',
+921 silly addNameRange     '0.2.6',
+921 silly addNameRange     '0.3.2',
+921 silly addNameRange     '0.3.3',
+921 silly addNameRange     '0.3.4',
+921 silly addNameRange     '0.3.5',
+921 silly addNameRange     '0.3.6',
+921 silly addNameRange     '0.3.7',
+921 silly addNameRange     '0.3.8',
+921 silly addNameRange     '0.4.0',
+921 silly addNameRange     '0.4.1',
+921 silly addNameRange     '0.4.2',
+921 silly addNameRange     '0.3.9',
+921 silly addNameRange     '0.4.3',
+921 silly addNameRange     '0.4.4',
+921 silly addNameRange     '0.4.5',
+921 silly addNameRange     '0.4.6',
+921 silly addNameRange     '0.5.0',
+921 silly addNameRange     '0.5.1',
+921 silly addNameRange     '0.5.2',
+921 silly addNameRange     '0.6.0',
+921 silly addNameRange     '0.6.1',
+921 silly addNameRange     '0.6.2',
+921 silly addNameRange     '0.6.3',
+921 silly addNameRange     '0.6.5',
+921 silly addNameRange     '0.6.6' ] ]
+922 silly addNamed traverse@0.3.9
+923 verbose addNamed "0.3.9" is a plain semver version for traverse
+924 silly cache afterAdd traverse@0.3.9
+925 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\traverse\0.3.9\package\package.json not in flight; writing
+926 verbose afterAdd C:\Users\hp\AppData\Roaming\npm-cache\traverse\0.3.9\package\package.json written
+927 silly install resolved [ { name: 'traverse',
+927 silly install resolved     version: '0.3.9',
+927 silly install resolved     description: 'Traverse and transform objects by visiting every node on a recursive walk',
+927 silly install resolved     author: { name: 'James Halliday' },
+927 silly install resolved     license: 'MIT/X11',
+927 silly install resolved     main: './index',
+927 silly install resolved     repository:
+927 silly install resolved      { type: 'git',
+927 silly install resolved        url: 'git://github.com/substack/js-traverse.git' },
+927 silly install resolved     devDependencies: { expresso: '0.7.x' },
+927 silly install resolved     scripts: { test: 'expresso' },
+927 silly install resolved     _id: 'traverse@0.3.9',
+927 silly install resolved     dependencies: {},
+927 silly install resolved     engines: { node: '*' },
+927 silly install resolved     _engineSupported: true,
+927 silly install resolved     _npmVersion: '1.0.10',
+927 silly install resolved     _nodeVersion: 'v0.5.0-pre',
+927 silly install resolved     _defaultsLoaded: true,
+927 silly install resolved     dist:
+927 silly install resolved      { shasum: '717b8f220cc0bb7b44e40514c22b2e8bbc70d8b9',
+927 silly install resolved        tarball: 'https://registry.npmjs.org/traverse/-/traverse-0.3.9.tgz' },
+927 silly install resolved     directories: {},
+927 silly install resolved     _shasum: '717b8f220cc0bb7b44e40514c22b2e8bbc70d8b9',
+927 silly install resolved     _resolved: 'https://registry.npmjs.org/traverse/-/traverse-0.3.9.tgz',
+927 silly install resolved     _from: 'traverse@>=0.3.0 <0.4.0',
+927 silly install resolved     bugs: { url: 'https://github.com/substack/js-traverse/issues' },
+927 silly install resolved     readme: 'ERROR: No README data found!',
+927 silly install resolved     homepage: 'https://github.com/substack/js-traverse#readme' } ]
+928 info install traverse@0.3.9 into C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+929 info installOne traverse@0.3.9
+930 verbose installOne of traverse to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw not in flight; installing
+931 verbose lock using C:\Users\hp\AppData\Roaming\npm-cache\_locks\traverse-9c8e4c70bc47d90f.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+932 silly install write writing traverse 0.3.9 to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+933 verbose unbuild node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+934 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse is being purged from base C:\Users\hp\AppData\Roaming\npm
+935 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+936 verbose tar unpack C:\Users\hp\AppData\Roaming\npm-cache\traverse\0.3.9\package.tgz
+937 verbose tar unpacking to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+938 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse is being purged
+939 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+940 silly gunzTarPerm modes [ '777', '666' ]
+941 silly gunzTarPerm extractEntry index.js
+942 silly gunzTarPerm modified mode [ 'index.js', 493, 511 ]
+943 silly gunzTarPerm extractEntry .npmignore
+944 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+945 silly gunzTarPerm extractEntry package.json
+946 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+947 silly gunzTarPerm extractEntry README.markdown
+948 silly gunzTarPerm modified mode [ 'README.markdown', 420, 438 ]
+949 silly gunzTarPerm extractEntry LICENSE
+950 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+951 silly gunzTarPerm extractEntry examples/negative.js
+952 silly gunzTarPerm modified mode [ 'examples/negative.js', 493, 511 ]
+953 silly gunzTarPerm extractEntry examples/leaves.js
+954 silly gunzTarPerm modified mode [ 'examples/leaves.js', 493, 511 ]
+955 silly gunzTarPerm extractEntry examples/json.js
+956 silly gunzTarPerm modified mode [ 'examples/json.js', 493, 511 ]
+957 silly gunzTarPerm extractEntry examples/stringify.js
+958 silly gunzTarPerm modified mode [ 'examples/stringify.js', 493, 511 ]
+959 silly gunzTarPerm extractEntry test/negative.js
+960 silly gunzTarPerm modified mode [ 'test/negative.js', 420, 438 ]
+961 silly gunzTarPerm extractEntry test/interface.js
+962 silly gunzTarPerm modified mode [ 'test/interface.js', 420, 438 ]
+963 silly gunzTarPerm extractEntry test/obj.js
+964 silly gunzTarPerm modified mode [ 'test/obj.js', 420, 438 ]
+965 silly gunzTarPerm extractEntry test/instance.js
+966 silly gunzTarPerm modified mode [ 'test/instance.js', 420, 438 ]
+967 silly gunzTarPerm extractEntry test/stop.js
+968 silly gunzTarPerm modified mode [ 'test/stop.js', 420, 438 ]
+969 silly gunzTarPerm extractEntry test/date.js
+970 silly gunzTarPerm modified mode [ 'test/date.js', 420, 438 ]
+971 silly gunzTarPerm extractEntry test/leaves.js
+972 silly gunzTarPerm modified mode [ 'test/leaves.js', 420, 438 ]
+973 silly gunzTarPerm extractEntry test/json.js
+974 silly gunzTarPerm modified mode [ 'test/json.js', 420, 438 ]
+975 silly gunzTarPerm extractEntry test/mutability.js
+976 silly gunzTarPerm modified mode [ 'test/mutability.js', 420, 438 ]
+977 silly gunzTarPerm extractEntry test/stringify.js
+978 silly gunzTarPerm modified mode [ 'test/stringify.js', 420, 438 ]
+979 silly gunzTarPerm extractEntry test/super_deep.js
+980 silly gunzTarPerm modified mode [ 'test/super_deep.js', 420, 438 ]
+981 silly gunzTarPerm extractEntry test/circular.js
+982 silly gunzTarPerm modified mode [ 'test/circular.js', 420, 438 ]
+983 silly gunzTarPerm extractEntry test/equal.js
+984 silly gunzTarPerm modified mode [ 'test/equal.js', 420, 438 ]
+985 verbose write writing to C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse\package.json
+986 info preinstall traverse@0.3.9
+987 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse\package.json
+988 verbose readDependencies loading dependencies from C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse\package.json
+989 silly install resolved []
+990 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+991 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+992 info linkStuff traverse@0.3.9
+993 silly linkStuff traverse@0.3.9 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules as its parent node_modules
+994 silly linkStuff traverse@0.3.9 is part of a global install
+995 silly linkStuff traverse@0.3.9 is installed into a global node_modules
+996 verbose linkBins traverse@0.3.9
+997 verbose linkMans traverse@0.3.9
+998 verbose rebuildBundles traverse@0.3.9
+999 info install traverse@0.3.9
+1000 info postinstall traverse@0.3.9
+1001 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\traverse-9c8e4c70bc47d90f.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw\node_modules\traverse
+1002 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+1003 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+1004 info linkStuff chainsaw@0.1.0
+1005 silly linkStuff chainsaw@0.1.0 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules as its parent node_modules
+1006 silly linkStuff chainsaw@0.1.0 is part of a global install
+1007 silly linkStuff chainsaw@0.1.0 is installed into a global node_modules
+1008 verbose linkBins chainsaw@0.1.0
+1009 verbose linkMans chainsaw@0.1.0
+1010 verbose rebuildBundles chainsaw@0.1.0
+1011 verbose rebuildBundles [ 'traverse' ]
+1012 info install chainsaw@0.1.0
+1013 info postinstall chainsaw@0.1.0
+1014 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\chainsaw-1b33f4fd8ce450d2.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary\node_modules\chainsaw
+1015 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+1016 info build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+1017 info linkStuff binary@0.3.0
+1018 silly linkStuff binary@0.3.0 has C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules as its parent node_modules
+1019 silly linkStuff binary@0.3.0 is part of a global install
+1020 silly linkStuff binary@0.3.0 is installed into a global node_modules
+1021 verbose linkBins binary@0.3.0
+1022 verbose linkMans binary@0.3.0
+1023 verbose rebuildBundles binary@0.3.0
+1024 verbose rebuildBundles [ 'buffers', 'chainsaw' ]
+1025 info install binary@0.3.0
+1026 info postinstall binary@0.3.0
+1027 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\binary-cca273f9e4e717d7.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\binary
+1028 info bignum@0.6.2 Failed to exec install script
+1029 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\bignum-2104ed29d3163d5e.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+1030 verbose about to build C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+1031 verbose unlock done using C:\Users\hp\AppData\Roaming\npm-cache\_locks\prozess-1f7478aad0839fb7.lock for C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+1032 verbose stack Error: bignum@0.6.2 install: `node-gyp configure build`
+1032 verbose stack Exit status 1
+1032 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
+1032 verbose stack     at emitTwo (events.js:87:13)
+1032 verbose stack     at EventEmitter.emit (events.js:172:7)
+1032 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+1032 verbose stack     at emitTwo (events.js:87:13)
+1032 verbose stack     at ChildProcess.emit (events.js:172:7)
+1032 verbose stack     at maybeClose (internal/child_process.js:821:16)
+1032 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+1033 verbose pkgid bignum@0.6.2
+1034 verbose cwd D:\WORKSPACE_ENIDE\Fuelers
+1035 error Windows_NT 6.1.7600
+1036 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "prozess"
+1037 error node v4.3.2
+1038 error npm  v2.14.12
+1039 error code ELIFECYCLE
+1040 error bignum@0.6.2 install: `node-gyp configure build`
+1040 error Exit status 1
+1041 error Failed at the bignum@0.6.2 install script 'node-gyp configure build'.
+1041 error This is most likely a problem with the bignum package,
+1041 error not with npm itself.
+1041 error Tell the author that this fails on your system:
+1041 error     node-gyp configure build
+1041 error You can get their info via:
+1041 error     npm owner ls bignum
+1041 error There is likely additional logging output above.
+1042 verbose exit [ 1, true ]
+1043 verbose unbuild node_modules\prozess\node_modules\bignum
+1044 info preuninstall bignum@0.6.2
+1045 info uninstall bignum@0.6.2
+1046 verbose unbuild rmStuff bignum@0.6.2 from C:\Users\hp\AppData\Roaming\npm\node_modules
+1047 verbose unbuild rmStuff in C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules
+1048 info postuninstall bignum@0.6.2
+1049 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum is being purged from base C:\Users\hp\AppData\Roaming\npm
+1050 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+1051 silly vacuum-fs purging C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules\bignum
+1052 silly vacuum-fs quitting because other entries in C:\Users\hp\AppData\Roaming\npm\node_modules\prozess\node_modules
+1053 verbose unbuild node_modules\prozess
+1054 info preuninstall prozess@0.7.3
+1055 info uninstall prozess@0.7.3
+1056 verbose unbuild rmStuff prozess@0.7.3 from C:\Users\hp\AppData\Roaming\npm\node_modules
+1057 info postuninstall prozess@0.7.3
+1058 silly gentlyRm C:\Users\hp\AppData\Roaming\npm\node_modules\prozess is being purged from base C:\Users\hp\AppData\Roaming\npm
+1059 verbose gentlyRm don't care about contents; nuking C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+1060 silly vacuum-fs purging C:\Users\hp\AppData\Roaming\npm\node_modules\prozess
+1061 silly vacuum-fs quitting because other entries in C:\Users\hp\AppData\Roaming\npm\node_modules

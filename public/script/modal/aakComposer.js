@@ -71,7 +71,7 @@ function initComposer() {
 	 });
 	 
 	 $('#AAK_PLUS_CLOSE_BTN').on('click', function() { 
-		 closeWindow($(this))
+		 closeWindow($(this));
 	});
 	 
 	$('#MSG_COMPOSER_MAX_MIN').on('click', function(event) {
@@ -280,9 +280,25 @@ function closeWindow(closeBtn) {
 		newWindowBtn.hide();
 	}
 	else {
+		/* search all windows whose buttom is greater than the current window and decrease the bottom with appropriate value  */
+		var currenWinbottom = closeBtn.closest(".composerWrapper").css('bottom');
+		console.log(currenWinbottom);
 		closeBtn.closest(".composerWrapper").remove();
+		
+		realignComposerWindows(currenWinbottom);    
 	}
-}    
+} 
+
+function realignComposerWindows(currenWinbottom) {
+	for(var i = 0; i < $('.composerWrapper').length; i++) {
+		if($('.composerWrapper').eq(i).css('bottom') > currenWinbottom) {
+			$('.composerWrapper').eq(i).css('bottom', '-=42');
+			$('.composerWrapper').eq(i).css('left', '-=40');
+		}
+	}
+	
+}
+
 
 function maximizeComposer(parentComposerWrapper) {	   
 	
