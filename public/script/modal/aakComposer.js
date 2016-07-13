@@ -36,6 +36,8 @@ var bottomVar;
 var leftVar;
 var z_index;
 var windowsHidden; 
+
+var firstTimePopUpped; ///
  
 	
 /* on ready function*/
@@ -56,9 +58,11 @@ function initComposer() {
 	 newWindowBtn = $('#AAK_NEW_COMPOSER_WINDOW_BTN');     
 	 top = 0;  
 	 bottomVar = 42;
-	 leftVar = 40;
+	 leftVar = 40; 
 	 z_index = 1058;
 	 windowsHidden = false;  
+	 
+	 firstTimePopUpped = true; ///
 	 
 	 $('#plus').on('click', function(){
 		 uniComposeMsg();
@@ -138,16 +142,20 @@ function initComposer() {
 
 
 function uniComposeMsg(usrId, usrName, msgType, context) {  //uniComposeMsg(category, true) ==> 'true' for show/hide composer's footer bar. context = local/global(footer bar)
-	 
+	// alert("hi");
 	 $('#COMMON_BLUR_SCREEN').toggle();		
 	 $('.composerWrapper').toggle();  
+	 newWindowBtn.toggle();
 	 $('#AAK_PLUS_CAT').val(msgType);
+	 //newWindowBtn.show(); ///
 	 $composerAudience.text(usrName);
-	 if(windowsHidden) {
-		 topWindow.show();
-		 windowsHidden = false;
-	 }
+//	 if(windowsHidden) {
+//		 topWindow.show();
+//		 windowsHidden = false;
+//	 }
 	 
+	 
+	
 	 positionComposer(context);	
 }
 
@@ -157,13 +165,27 @@ function positionComposer(context) {
      $composerWrapper.css('bottom', '42px');   
 	 
      if(context != "localCntxt"){
-		 newWindowBtn.show();	 
-		 newWindowBtn.css('top', $composerWrapper.position().top);
-		 newWindowBtn.css('top','-=31'); 
-		 newWindowBtn.css('margin-left', '40px');
+    	 if(firstTimePopUpped == true) {
+    		 newWindowBtn.show();	 
+    		 newWindowBtn.css('top', $composerWrapper.position().top);
+    		 newWindowBtn.css('top','-=31'); 
+    		 newWindowBtn.css('margin-left', '40px');
+    		 
+    		  firstTimePopUpped = false;
+    		}  
+    	 
+		 //newWindowBtn.show();	 
+		 //newWindowBtn.css('top', $composerWrapper.position().top);
+		 //newWindowBtn.css('top','-=31'); 
+		 //newWindowBtn.css('margin-left', '40px');
      }			 
 	/* For Desktop Esc Key functionality */
 	$('.composerWrapper').focus(); 
+	
+	
+	
+	
+	
 }
 
 
@@ -276,7 +298,7 @@ function maxMinComposer(composerWindow) {
 	}		 
 }
 
-function closeWindow(closeBtn) {
+function closeWindow(closeBtn) {  
 	if($('.composerWrapper').length == 1) {
 		$('#COMMON_BLUR_SCREEN').toggle();
 		closeBtn.closest(".composerWrapper").hide();
@@ -286,9 +308,8 @@ function closeWindow(closeBtn) {
 		/* search all windows whose buttom is greater than the current window and decrease the bottom with appropriate value  */
 		var currenWinbottom = closeBtn.closest(".composerWrapper").css('bottom');
 		console.log(currenWinbottom);
-		closeBtn.closest(".composerWrapper").remove();
-		
-		repositionComposerWindows(currenWinbottom);    
+		closeBtn.closest(".composerWrapper").remove();  
+		repositionComposerWindows(currenWinbottom);
 	}  
 }  
 
@@ -299,15 +320,9 @@ function repositionComposerWindows(currenWinbottom) {
 		var bottom = parseInt($('.composerWrapper').eq(i).css('bottom').replace(/[^-\d\.]/g, ''));
 		//alert(bottom);  
 			
-		if( bottom > currenWinbottom) {
-			console.log("Old bottom = " + $('.composerWrapper').eq(i).css('bottom'));
-			console.log("Old left = " + $('.composerWrapper').eq(i).css('left'));  
-			
+		if( bottom > currenWinbottom) { 			
 			$('.composerWrapper').eq(i).css('bottom', '-=44');
-			$('.composerWrapper').eq(i).css('left', '-=40');
-			
-			console.log("New bottom = " + $('.composerWrapper').eq(i).css('bottom'));
-			console.log("New left = " + $('.composerWrapper').eq(i).css('left'));  
+			$('.composerWrapper').eq(i).css('left', '-=40'); 
 		}
 	}
 	
