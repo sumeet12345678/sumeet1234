@@ -55,7 +55,7 @@ function initComposer() {
 	 topWindow = $composerWrapper;  
 	 newWindowBtn = $('#AAK_NEW_COMPOSER_WINDOW_BTN');     
 	 top = 0;  
-	 bottomVar = 40;
+	 bottomVar = 42;
 	 leftVar = 40;
 	 z_index = 1058;
 	 windowsHidden = false;  
@@ -170,8 +170,11 @@ function positionComposer(context) {
 function createNewComposerWindow() {
 	var newComposer = $composerWrapper.clone(true);
 	newComposer.appendTo('body'); 
+	//newComposer.css('bottom',  bottomVar + 44);
+	//bottomVar = bottomVar + 44; 
 	newComposer.css('bottom',  bottomVar + 44);
 	bottomVar = bottomVar + 44; 
+	
 	newComposer.css('left',  '+=' + leftVar);
 	leftVar = leftVar + 40;
 	newComposer.css('z-index', z_index);
@@ -285,15 +288,26 @@ function closeWindow(closeBtn) {
 		console.log(currenWinbottom);
 		closeBtn.closest(".composerWrapper").remove();
 		
-		realignComposerWindows(currenWinbottom);    
-	}
-} 
+		repositionComposerWindows(currenWinbottom);    
+	}  
+}  
 
-function realignComposerWindows(currenWinbottom) {
+function repositionComposerWindows(currenWinbottom) {
+	var currenWinbottom = parseInt(currenWinbottom.replace(/[^-\d\.]/g, ''));
 	for(var i = 0; i < $('.composerWrapper').length; i++) {
-		if($('.composerWrapper').eq(i).css('bottom') > currenWinbottom) {
-			$('.composerWrapper').eq(i).css('bottom', '-=42');
+		
+		var bottom = parseInt($('.composerWrapper').eq(i).css('bottom').replace(/[^-\d\.]/g, ''));
+		//alert(bottom);  
+			
+		if( bottom > currenWinbottom) {
+			console.log("Old bottom = " + $('.composerWrapper').eq(i).css('bottom'));
+			console.log("Old left = " + $('.composerWrapper').eq(i).css('left'));  
+			
+			$('.composerWrapper').eq(i).css('bottom', '-=44');
 			$('.composerWrapper').eq(i).css('left', '-=40');
+			
+			console.log("New bottom = " + $('.composerWrapper').eq(i).css('bottom'));
+			console.log("New left = " + $('.composerWrapper').eq(i).css('left'));  
 		}
 	}
 	
