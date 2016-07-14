@@ -62,7 +62,7 @@ function initComposer() {
 	 z_index = 1058;
 	 windowsHidden = false;  
 	 
-	 firstTimePopUpped = true; ///
+	 firstTimePopUpped = true; /// If this is the first time that we clicked "+" on footer
 	 
 	 $('#plus').on('click', function(){
 		 uniComposeMsg();
@@ -154,24 +154,22 @@ function uniComposeMsg(usrId, usrName, msgType, context) {  //uniComposeMsg(cate
 //		 windowsHidden = false;
 //	 }
 	 
-	 
-	
 	 positionComposer(context);	
 }
 
-
+  
 function positionComposer(context) {
 	
      $composerWrapper.css('bottom', '42px');   
 	 
-     if(context != "localCntxt"){
-    	 if(firstTimePopUpped == true) {
+     if(context != "localCntxt")  {
+    	 if(firstTimePopUpped == true) {   // this helps in positioning NewButton at the initial position(top of first window) only for the first time.
     		 newWindowBtn.show();	 
     		 newWindowBtn.css('top', $composerWrapper.position().top);
     		 newWindowBtn.css('top','-=31'); 
     		 newWindowBtn.css('margin-left', '40px');
     		 
-    		  firstTimePopUpped = false;
+    		 firstTimePopUpped = false;    
     		}  
     	 
 		 //newWindowBtn.show();	 
@@ -219,13 +217,31 @@ function createNewComposerWindow() {
 }
    
 function selectComposerWindow(selectedWindow) { 
-    if(!topWindow.is(selectedWindow)) {
-    	 var whichWindow = swapComposerWindows($(selectedWindow)); 
-     	 maximizeComposer(whichWindow);
+    if(!topWindow.is(selectedWindow)) { //this condition is made to avoid swapping windows when the clicked window is the top window itself.
+    	
+    	
+    	
+    	//before maximizing current clicked window, minimize currently maximized window(if any), then swap and maximize current clicked window
+    	//
+    	    	alert("Before if");
+    	if(composerCurrentSize === "MAXIMIZED") {
+    		alert("top window is maximized");
+    		
+    		minimizeComposer(topWindow);
+    	}
+    	  
+    	
+    	
+    	
+    	
+    	
+    	 var whichWindow = swapComposerWindows($(selectedWindow));    
+    	 
+     	 maximizeComposer(whichWindow);  
     }	   
 }
 
-function swapComposerWindows(swapTo) {
+function swapComposerWindows(swapTo) {  
 	 
     var bottom =  swapTo.css('bottom');
 	var z_index =swapTo.css('z-index');
@@ -236,8 +252,8 @@ function swapComposerWindows(swapTo) {
 	swapTo.css('z-index', topWindow.css('z-index'));
 	swapTo.css('left', topWindow.css('left'));  
 	
-	topWindow.css('bottom', bottom);
-	topWindow.css('z-index', z_index);
+	topWindow.css('bottom', bottom); 
+	topWindow.css('z-index', z_index); 
 	topWindow.css('left', left);
 	
 	//EXCHANGE COLORS  
@@ -294,8 +310,10 @@ function maxMinComposer(composerWindow) {
 		  
 	}	
 	else if(composerCurrentSize == "MAXIMIZED") {
+		//alert("minimizing window");
 		minimizeComposer(composerWindow.closest('.composerWrapper'));  
-	}		 
+		
+	}		   
 }
 
 function closeWindow(closeBtn) {  
@@ -319,13 +337,27 @@ function repositionComposerWindows(currenWinbottom) {
 		
 		var bottom = parseInt($('.composerWrapper').eq(i).css('bottom').replace(/[^-\d\.]/g, ''));
 		//alert(bottom);  
-			
-		if( bottom > currenWinbottom) { 			
+		
+		/* comparison done to bring down only those windows which are at higher position than currently closed window */
+		if( bottom >= currenWinbottom) { 			
 			$('.composerWrapper').eq(i).css('bottom', '-=44');
 			$('.composerWrapper').eq(i).css('left', '-=40'); 
+		 
 		}
+		 
 	}
+	/* Bring down and left align newWindowBtn as well when any window is closed */
+	realignNewButtonOnWindowClose();
 	
+	/* Decrease the value of bottomVar and leftVar when windows are deleted and repositioned, since these var currently contains value of the top window */
+	bottomVar = bottomVar - 44;
+	leftVar = leftVar - 40;
+}
+
+/* Bring down and left align newWindowBtn as well when any window is closed */
+function realignNewButtonOnWindowClose() {
+	newWindowBtn.css('top','+=44'); 
+	newWindowBtn.css('margin-left', '-=40px');
 }
 
 
@@ -351,11 +383,11 @@ function maximizeComposer(parentComposerWrapper) {
 	 composerCurrentSize = "MAXIMIZED";     
 }
 	
-function minimizeComposer(parentComposerWrapper) {
+function minimizeComposer(parentComposerWrapper) {  
 	
-	parentComposerWrapper.css('height', '157px');  
-	parentComposerWrapper.css('bottom', '42px');
-	parentComposerWrapper.css('top', 'auto');   
+	parentComposerWrapper.css('height', '157px');    
+	parentComposerWrapper.css('bottom', '42px');   
+	parentComposerWrapper.css('top', 'auto');    
 	parentComposerWrapper.find('#MSG_COMPOSER_BOTTOM_BAR').css('display', 'none');
 	 
 	$smileyemotions.css('top', '-151px');
@@ -368,12 +400,12 @@ function minimizeComposer(parentComposerWrapper) {
 	} 					 
 	  
 	parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').css('height', 'calc(100% - 40px)');
-	
+	  
 	composerCurrentSize = "MINIMIZED";  
 }
 
 function populateAakComposer(selectedOptionValue, parentComposerWrapper) {
-	//first hide any msg category displayed
+	//first hide any msg category displayed 
 	for(var i = 0; i < ajaxJsonMappingData.length; i++) {
 		var obj = ajaxJsonMappingData[i];		
 		if( (obj.id == selectedOptionValue) ) {
@@ -417,8 +449,8 @@ function onChangeOfMsgCat(selectCat) {
 	
 	if(selectedOptionValue == 'IM') { 
 		parentComposerWrapper.find('#UNI_COMPOSER_IM').show();
-	}	
-	else {		
+	}	 
+	else {		 
 		populateAakComposer(selectedOptionValue, parentComposerWrapper);
 	}
 }
