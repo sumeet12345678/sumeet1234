@@ -222,18 +222,10 @@ function selectComposerWindow(selectedWindow) {
     	//alert("composerCurrentSize == " + composerCurrentSize);
     	
     	//before maximizing current clicked window, minimize currently maximized window(if any), then swap and maximize current clicked window
-    	//  
-    	
-    	/* ****************** */
-    	    	alert("Before if");
-    	if(composerCurrentSize === "MAXIMIZED") {
-    		alert("top window is maximized");     
-    		
-    		minimizeComposer(topWindow);
-    	}  
-    	
-    	/* ****************** */
-    	 
+    	//      	
+ 	
+     	 minimizeComposer(topWindow); 
+     	 	
     	 var whichWindow = swapComposerWindows($(selectedWindow));    
     	 
      	 maximizeComposer(whichWindow);    
@@ -300,6 +292,8 @@ function swapComposerWindows(swapTo) {
  *    
 */  
 function maxMinComposer(composerWindow) {   
+	
+	/* On click of MSG_COMPOSER_MAX_MIN_ICON functionality is implemented only for top window. When clicked on other windows, it is swapped and made topWindow(then Icon works)  */
 	  
 	if(composerCurrentSize == "MINIMIZED") {
 		/* check below done to avoid calling max function if it is not the top window, coz for back windows selectComposerWindow() is implemented where we swap and maximize the clicked window.  */
@@ -310,7 +304,9 @@ function maxMinComposer(composerWindow) {
 	}	
 	else if(composerCurrentSize == "MAXIMIZED") {
 		//alert("minimizing window");
-		minimizeComposer(composerWindow.closest('.composerWrapper'));  
+		if(topWindow.is(composerWindow)) {
+			minimizeComposer(composerWindow.closest('.composerWrapper'));  
+		}
 		
 	}		   
 }
