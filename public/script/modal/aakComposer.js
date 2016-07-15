@@ -67,9 +67,9 @@ function initComposer() {
 	 $('#plus').on('click', function(){
 		 uniComposeMsg();
 	 });  
-	
+	  
 	 newWindowBtn.on('click', createNewComposerWindow); 
-	 
+	  
 	 $('.composerWrapper').on('click',function() {
 		 selectComposerWindow(this);
 	 });
@@ -80,8 +80,8 @@ function initComposer() {
 	 
 	$('#MSG_COMPOSER_MAX_MIN').on('click', function(event) {
 		//event.stopPropagation();
-	 	 //maxMinComposer($(this));	
-		maxMinComposer($(this).closest('.composerWrapper'));
+	 	 //maxMinComposer($(this));	  
+		maxMinComposer($(this).closest('.composerWrapper'));    
 		 
 	});   
 	
@@ -219,28 +219,27 @@ function createNewComposerWindow() {
 function selectComposerWindow(selectedWindow) { 
     if(!topWindow.is(selectedWindow)) { //this condition is made to avoid swapping windows when the clicked window is the top window itself.
     	
-    	
+    	//alert("composerCurrentSize == " + composerCurrentSize);
     	
     	//before maximizing current clicked window, minimize currently maximized window(if any), then swap and maximize current clicked window
-    	//
+    	//  
+    	
+    	/* ****************** */
     	    	alert("Before if");
     	if(composerCurrentSize === "MAXIMIZED") {
-    		alert("top window is maximized");
+    		alert("top window is maximized");     
     		
     		minimizeComposer(topWindow);
-    	}
-    	  
+    	}  
     	
-    	
-    	
-    	
-    	
+    	/* ****************** */
+    	 
     	 var whichWindow = swapComposerWindows($(selectedWindow));    
     	 
-     	 maximizeComposer(whichWindow);  
+     	 maximizeComposer(whichWindow);    
     }	   
 }
-
+  
 function swapComposerWindows(swapTo) {  
 	 
     var bottom =  swapTo.css('bottom');
@@ -298,16 +297,16 @@ function swapComposerWindows(swapTo) {
 /* 
  * This function gets called when max_min button is clicked on composer. The maximizeComposer() or minimizeComposer() will be called
  *  depending on the current max or min status of the composer whose btn is clicked.
- *  
-*/
-function maxMinComposer(composerWindow) {  
+ *    
+*/  
+function maxMinComposer(composerWindow) {   
 	  
 	if(composerCurrentSize == "MINIMIZED") {
 		/* check below done to avoid calling max function if it is not the top window, coz for back windows selectComposerWindow() is implemented where we swap and maximize the clicked window.  */
 		 if(topWindow.is(composerWindow)) {
-			 maximizeComposer(composerWindow.closest('.composerWrapper'));
+			 maximizeComposer(composerWindow.closest('.composerWrapper'));  
 	    }	 
-		  
+		    
 	}	
 	else if(composerCurrentSize == "MAXIMIZED") {
 		//alert("minimizing window");
@@ -380,7 +379,8 @@ function maximizeComposer(parentComposerWrapper) {
 	 
 	 parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').css('height', 'calc(100% - 40px)');
 	
-	 composerCurrentSize = "MAXIMIZED";     
+	 composerCurrentSize = "MAXIMIZED";    
+	 
 }
 	
 function minimizeComposer(parentComposerWrapper) {  
