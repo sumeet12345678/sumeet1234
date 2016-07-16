@@ -374,7 +374,7 @@ function maximizeComposer(parentComposerWrapper) {
 		$attachoption.css('height', '15%');
 	 }	 
 	 
-	 parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').css('height', 'calc(100% - 40px)');
+	 parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').css('height', 'calc(100% - 80px)');
 	
 	 composerCurrentSize = "MAXIMIZED";    
 	 
@@ -631,7 +631,65 @@ function msgCats(msgType, parentComposerWrapper) {
 	                        	   'name' : "Queensland"  
 		                       } 
 	                         ];
-		}	
+		}	 
+		
+		if(msgType == "P") {
+			msgCatsOptions = [  
+		                           {
+		                        	   'id' : 'INDIA',
+		                        	   'name' : "Tasmania" 
+		                           },	                               
+		                           
+		                           {
+		                        	   'id' : 'FRIENDS',
+		                        	   'name' : "Victoria" 
+			                       },
+		   
+		                           {
+		                        	   'id' : 'COWORKERS',
+		                        	   'name' : "Western Austalia"
+		                           },
+		                           
+		                           {
+		                        	   'id' : 'ACQUINTANCES',
+		                        	   'name' : "Queensland"  
+			                       } 
+		                         ];
+			}	
+		
+		 if(msgType == "C"){
+		 		msgCatsOptions = [  
+	                           {
+	                        	   'id' : 'INDIA',
+	                        	   'name' : "Darlington"
+	                        	 
+	                        	   
+	                           },	                               
+	                           
+	                           {
+	                        	   'id' : 'FRIENDS',
+	                        	   'name' : "Hambleton"
+	
+		                             	  
+	
+		                             	},
+	   
+		                               {
+		                            	   'id' : 'COWORKERS',
+	                        	   'name' : "Craven"
+	                           },
+	                           
+	                           {
+	                        	   'id' : 'ACQUINTANCES',
+	                        	   'name' : "Lancaster",
+		                          
+		                       },
+		                       
+		                       
+	                         
+	                         ];
+		 }	
+		
 	
 		parentComposerWrapper.find('#AAK_PLUS_SUB_CAT').html('');
 		msgCatsOptions.forEach(function(element) {

@@ -23,24 +23,22 @@
 	margin-bottom: 5px;
 }
 
-#POST_TARGET_UPLOAD_IMAGE{
+#POST_TARGET_UPLOAD_IMAGE {
 
 	text-align: center;
 	border: 2px solid orange; 
-	height: 300px; 
-	margin-bottom: 5px;
-
-	
+	height: 230px; 
+	margin-bottom: 5px;	
 }
 
-#POST_TARGET_UPLOAD_IMAGE:before{
+#POST_TARGET_UPLOAD_IMAGE:before {
 	content: ' ';
     display: inline-block;
     vertical-align: middle; /* vertical alignment of the inline element */
     height: 100%;
 }
 
-#POST_TARGET_WRITE_UP{
+#POST_TARGET_WRITE_UP {
 
 	border: 1px solid black; 
 	width: 70%; 
@@ -88,7 +86,7 @@
 
 @media screen and (max-width: 767px){
 
-	#POST_TARGET_UPLOAD_IMAGE{
+	#POST_TARGET_UPLOAD_IMAGE {
 		width: 100%;
 	}
 
@@ -101,7 +99,7 @@
 	}
 
 	#UNI_COMPOSER_POST{
-		width: 100%;
+		width: 100%;  
 	}
 
 	
@@ -134,13 +132,13 @@
 
 		<div id=POST_TARGET_HEADLINE contentEditable=true data-placeholder="Headline:" ></div>
 
-		<div id= POST_TARGET_UPLOAD_IMAGE >
+		<div id= POST_TARGET_UPLOAD_IMAGE style = "position: relative;">    
 		
-			<div class="post-target-image" >	
+			<div class="post-target-image" style = "position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" >	    
 	
 				<img  src="media/icons/down-grey.png" width="30px" height="30px" >
-				<p><b><font size = "5"> Add an image to bring your post to life</font></b></p>
-				<p><b>Images that are atleast 700 x 400 pixels look best</b></p>
+				<p><b> Add an image to bring your post to life </b></p>
+				<p style = "font-size: 10px;"><b>Images that are atleast 700 x 400 pixels look best</b></p>
 
 			</div>
 			
