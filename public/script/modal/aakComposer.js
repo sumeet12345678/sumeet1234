@@ -2,7 +2,7 @@
  * In this code, new composer windows are created by cloning existing window. So while clicking on any buttons/options on any window,
  * the parent of the buttons/options is first identified(using closest()). 
  * 
- * */
+ * */  
 
 
 var ajaxJsonMappingData =  [
@@ -75,6 +75,7 @@ function initComposer() {
 	 });
 	 
 	 $('#AAK_PLUS_CLOSE_BTN').on('click', function() { 
+		 console.log("Close btn clicked......................... ........."); 
 		 closeWindow($(this));
 	});
 	 
@@ -401,24 +402,32 @@ function minimizeComposer(parentComposerWrapper) {
 }
 
 function populateAakComposer(selectedOptionValue, parentComposerWrapper) {
+	var callToAjaxMade = false;
 	//first hide any msg category displayed 
 	for(var i = 0; i < ajaxJsonMappingData.length; i++) {
-		var obj = ajaxJsonMappingData[i];		
-		if( (obj.id == selectedOptionValue) ) {
-			if((obj.alreadyCalled == 'no')) {				
-				 appendMsgCategory(obj.url, selectedOptionValue, parentComposerWrapper);
-			}			
-		}		
+		var ajaxMappingObj = ajaxJsonMappingData[i];		
+		if( (ajaxMappingObj.id == selectedOptionValue) ) {
+			if((ajaxMappingObj.alreadyCalled == 'no')) {	
+				 callToAjaxMade = true;
+				 appendMsgCategory(selectedOptionValue, parentComposerWrapper, ajaxMappingObj);    
+			}	  		
+		}	
 	}
-} 
 	
-function appendMsgCategory(url, selectedOptionValue, parentComposerWrapper) {
+	if(!callToAjaxMade) {
+		displayMsgCategory(selectedOptionValue, parentComposerWrapper);
+	}
+}   
+	   
+function appendMsgCategory(selectedOptionValue, parentComposerWrapper, ajaxMappingObj) {
+ 
 	var xhr = new XMLHttpRequest();	
 	xhr.onload = function() {  
-		if(xhr.status === 200) { 
+		if(xhr.status === 200) {  
 			console.log("Status  == 200");			
-			parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').append(xhr.responseText);  			
-			if(selectedOptionValue == 'P') {
+			parentComposerWrapper.find('#UNI_COMPOSER_CONTENT_AREA').append(xhr.responseText);  	
+			
+		/*	if(selectedOptionValue == 'P') {
 				parentComposerWrapper.find('#UNI_COMPOSER_POST').show();
 				maximizeComposer(parentComposerWrapper);
 			}
@@ -426,12 +435,16 @@ function appendMsgCategory(url, selectedOptionValue, parentComposerWrapper) {
 				parentComposerWrapper.find('#POST_CLASSIFIED').show();
 				maximizeComposer(parentComposerWrapper);
 			}
+		*/	
+			displayMsgCategory(selectedOptionValue, parentComposerWrapper);
+			  
+			ajaxMappingObj.alreadyCalled = 'yes';  /* To avoid repeating Ajax request */
 		}
 		else {
 			console.log("Status == " + xhr.status);  
 		}
-	}	
-	xhr.open('GET', url, true);         
+	}	  
+	xhr.open('GET', ajaxMappingObj.url, true);         
 	xhr.send(null); 
 }   
 	
@@ -441,13 +454,25 @@ function onChangeOfMsgCat(selectCat) {
 	parentComposerWrapper.find('.uni-composer-msg-category').hide();
 	var selectedOptionValue = selectCat.value;
 	
-	showHideAakSubCat(selectedOptionValue, parentComposerWrapper); 
+	showHideAakSubCat(selectedOptionValue, parentComposerWrapper);     
 	
 	if(selectedOptionValue == 'IM') { 
 		parentComposerWrapper.find('#UNI_COMPOSER_IM').show();
 	}	 
 	else {		 
 		populateAakComposer(selectedOptionValue, parentComposerWrapper);
+		
+	}
+}
+
+function displayMsgCategory(selectedOptionValue, parentComposerWrapper) {
+	if(selectedOptionValue == 'P') {
+		parentComposerWrapper.find('#UNI_COMPOSER_POST').show();
+		maximizeComposer(parentComposerWrapper);
+	}
+	if(selectedOptionValue == 'C') { 
+		parentComposerWrapper.find('#POST_CLASSIFIED').show();
+		maximizeComposer(parentComposerWrapper);
 	}
 }
 
