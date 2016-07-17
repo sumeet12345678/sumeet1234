@@ -9,18 +9,20 @@
 
 	border: 1px solid black;
 	width: 100%; 
-	height: 30px; 
+	height: 30px;   
 	margin-bottom: 5px;
+	overflow: auto;
 
 }
 
 
-#POST_TARGET_HEADLINE{
+#POST_TARGET_HEADLINE {
 
 	border: 1px solid black; 
 	width: 100%; 
 	height: 30px; 
 	margin-bottom: 5px;
+	overflow: auto;
 }
 
 #POST_TARGET_UPLOAD_IMAGE {
@@ -44,6 +46,7 @@
 	width: 70%; 
 	height: 150px;
 	margin-top: 5px;
+	overflow: auto;
 }
 
 #POST_TARGET_SUB_CATEGORY{
@@ -51,7 +54,7 @@
 	border: 1px solid black; 
 	width:20%; 
 	height: 30px; 
-	margin-top: 5px; 
+	margin-top: 0px; 
 	display: inline-block; 
 	float: left;
 	margin-right: 10px;
@@ -111,11 +114,11 @@
 @media screen and (min-width: 768px){
 
 	#POST_TARGET_UPLOAD_IMAGE{
-		width: 70%;
+		width: 80%;
 	}
 
 	#POST_TARGET_WRITE_UP{
-		width: 70%;
+		width: 80%;
 	}
 
 	#UNI_COMPOSER_POST{
@@ -133,12 +136,13 @@
 		<div id=POST_TARGET_HEADLINE contentEditable=true data-placeholder="Headline:" ></div>
 
 		<div id= POST_TARGET_UPLOAD_IMAGE style = "position: relative;">    
-		
+		    <div id = "" style = "float: right; margin-top: 10px; margin-right: 10px; font-size: 12px; cursor: pointer;">X</div>  
+		    
 			<div class="post-target-image" style = "position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" >	    
 	
-				<img  src="media/icons/down-grey.png" width="30px" height="30px" >
-				<p><b> Add an image to bring your post to life </b></p>
-				<p style = "font-size: 10px;"><b>Images that are atleast 700 x 400 pixels look best</b></p>
+				<img  src="media/icons/down-grey.png" width="30px" height="30px" ><br/>
+				<span><b> Add an image to bring your post to life </b></span><br/>
+				<span style = "font-size: 10px;"><b>Images that are atleast 700 x 400 pixels look best</b></span>
 
 			</div>
 			
@@ -146,10 +150,18 @@
 
 		<div id= POST_TARGET_WRITE_UP  contentEditable= true data-placeholder="Write Up:"></div>
 
-		<div id= POST_TARGET_SUB_CATEGORY contentEditable= true data-placeholder="SubCategory:"></div>
-
-		<div id= POST_TARGET_ICON  >
+		<div id= POST_TARGET_SUB_CATEGORY  contentEditable= true data-placeholder="SubCategory:" ></div>
+  
+		<div id= POST_TARGET_ICON>
 			<img src="media/icons/add.png" width="30px;" height="30px;">
 		</div>
 
 </div> 
+
+<script>
+	$(function() {
+		
+		
+	});
+
+</script>
