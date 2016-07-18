@@ -41,10 +41,10 @@ var firstTimePopUpped; ///
  
 	
 /* on ready function*/
-$(function() { 
-	initComposer();
-});
-	
+//$(function() { 
+//	initComposer();
+//});
+//	
 function initComposer() {
 	 composerCurrentSize = "MINIMIZED";  
 	 $composerWrapper = $('.composerWrapper');
@@ -64,9 +64,9 @@ function initComposer() {
 	 
 	 firstTimePopUpped = true; /// If this is the first time that we clicked "+" on footer
 	 
-	 $('#plus').on('click', function(){
-		 uniComposeMsg();
-	 });  
+//	 $('#plus').on('click', function(){
+//		 uniComposeMsg();
+//	 });  
 	  
 	 newWindowBtn.on('click', createNewComposerWindow); 
 	  
@@ -89,7 +89,7 @@ function initComposer() {
 	$('#MSG_COMPOSER_ADD_STUFF').on('click', function() {
 		$('#ATTACH_OPTIONS').toggle();
 	});
-	
+	  
 	$('#MSG_COMPOSER_TO').on('click', function() {
 		loadContaxgonomy(function() {
 			showContaxonomyModal('AK_COMPOSER', $('#AAK_PLUS_CAT option:selected').text());		
@@ -137,12 +137,11 @@ function initComposer() {
 	$('#AAK_PLUS_CAT').on('change', function(e) {
 		onChangeOfMsgCat(this);
 	});
-	
 	     
 } /* initComposer() ends */
 
 
-function uniComposeMsg(usrId, usrName, msgType, context) {  //uniComposeMsg(category, true) ==> 'true' for show/hide composer's footer bar. context = local/global(footer bar)
+function toggleComposer(usrId, usrName, msgType, context) {  //uniComposeMsg(category, true) ==> 'true' for show/hide composer's footer bar. context = local/global(footer bar)
 	// alert("hi");
 	 $('#COMMON_BLUR_SCREEN').toggle();		
 	 $('.composerWrapper').toggle();  
@@ -164,7 +163,7 @@ function positionComposer(context) {
      $composerWrapper.css('bottom', '42px');   
 	 
      if(context != "localCntxt")  {
-    	 if(firstTimePopUpped == true) {   // this helps in positioning NewButton at the initial position(top of first window) only for the first time.
+    	 if(firstTimePopUpped) {   // this helps in positioning NewButton at the initial position(top of first window) only for the first time.
     		 newWindowBtn.show();	 
     		 newWindowBtn.css('top', $composerWrapper.position().top);
     		 newWindowBtn.css('top','-=31'); 
@@ -179,11 +178,7 @@ function positionComposer(context) {
 		 //newWindowBtn.css('margin-left', '40px');
      }			 
 	/* For Desktop Esc Key functionality */
-	$('.composerWrapper').focus(); 
-	
-	
-	
-	
+	$('.composerWrapper').focus();  
 	
 }
 

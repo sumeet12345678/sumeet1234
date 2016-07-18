@@ -77,15 +77,21 @@
  		}
  		else {
  			$('.footer_bar_static_icon').removeClass('footer-bar-image-div-bg');
- 			$(this).addClass('footer-bar-image-div-bg');
- 		}
+ 			$(this).addClass('footer-bar-image-div-bg'); 
+ 		}  
  		 
  	}); 
+ 	
+ 	/* loads COMPOSER*/
+ 	$('#plus').on('click', function(){
+ 		  //alert(" Composer in Common.js ...");
+ 			uniComposeMsg();
+ 	});   
  	   
- </script>    
+ </script>      
  
- <% include ../modal/aakComposer.ejs %>
- <% include ../modal/quickTool.ejs %> 
+  
+ 
  
 
  

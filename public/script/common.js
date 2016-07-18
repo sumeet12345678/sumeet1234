@@ -94,7 +94,7 @@ function blurScreen() {
 		 
 		_g_blurScreen = $('<div style = "width: 100%; height: 100%; background-color: #000;"></div>');
 		 
-		_g_blurScreen.appendTo('body');
+		_g_blurScreen.appendTo('body');  
 		
 	} 
 	
@@ -107,7 +107,7 @@ function unBlurScreen() {
 
 /* 
  * 
- * For init-ing header bar in pages     
+ * For init-ing header bar in pages       
  * 
  */
 function initHeaderBar() { 
@@ -180,6 +180,8 @@ function alignMenuBarItems() {
 }
   
 
+ 
+
 /**/
 var peopleAppLoaded = false;
 
@@ -229,6 +231,40 @@ function loadContaxgonomy(callback) {
     
         
 }
+
+
+
+
+///* loads COMPOSER*/
+//$('#plus').on('click', function(){
+//	  alert(" Composer in Common.js ...");
+//		loadMsgComposer();
+//});  	
+	
+var b_aakComposerLoaded = false;
+  
+function uniComposeMsg(usrId, usrName, msgType, context) {
+	
+    if(!b_aakComposerLoaded)
+    { 	      
+    	$.get('/aakComposer')
+    	.done(function(data) {  
+    		$(data).insertAfter($('#footerBarId'));
+    		b_aakComposerLoaded = true;      		 
+    		
+    		$(function() {   
+	    		initComposer();
+	    		toggleComposer(usrId, usrName, msgType, context);
+    		});
+    	})
+    	.fail( function(){ console.log("Ajax call to aakComposer  failed") });
+    }  
+   else {
+	  // initComposer();
+	   toggleComposer(usrId, usrName, msgType, context);	      
+   }  
+        
+}   
 
 
 
