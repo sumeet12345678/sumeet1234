@@ -56,7 +56,7 @@ router.get('/', function(req, res, next) {
 	   } 
 	   else {
 		   res.writeHead(301,
-		   {Location: 'http://ekpeople.herokuapp.com/'}
+		   {Location: 'http://ekprofile.herokuapp.com/'}
 		    );
 		   
 		   res.end();		   
