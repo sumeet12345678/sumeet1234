@@ -5,7 +5,29 @@ var router = express.Router()
 
 //GET home.ejs
 
+
+
+var g_user_location  = "local";
+
+router.get('/', function(req, res, next) {
+	  if(req.ip == "::1") {
+		  g_user_location = "local"; 
+	  } 
+	  
+	  else { 
+		  g_user_location = "remote";
+	  }
+	  
+	  console.log("User Location ===  " + g_user_location);
+	//  res.end();
+	         
+	  next();
+	  
+});   
+	
  
+
+
   router.get('/', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});
@@ -14,6 +36,40 @@ var router = express.Router()
 		  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 		});
 
+   
+   
+   
+  // res.writeHead(301,
+//		    {Location: 'http://ekpeople.herokuapp.com/'}
+//		  );
+//		  res.end();
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+   router.get('/profile/view/socialfun', function(req, res, next) {    
+	   if(g_user_location == "local"){
+		  res.render('profiles/uni_profile_social_fun.ejs', { page: "uniprofile", profile_context: "uniprofile_social_fun"});
+	   } 
+	   else {
+		   res.writeHead(301,
+		   {Location: 'http://ekpeople.herokuapp.com/'}
+		    );
+		   
+		   res.end();		   
+		  // res.render('profiles/uni_profile_social_fun.ejs', { page: "uniprofile", profile_context: "uniprofile_social_fun"});
+	   }
+		  
+	});  
+   
+   
+   
+   
+   
+   
 
 router.get('/peopleApp', function(req, res, next) {
 	  res.render('people/peopleHome.ejs');	    
