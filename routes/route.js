@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+
 //var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
 
 //GET home.ejs
@@ -90,7 +92,8 @@ router.get('/', function(req, res, next) {
    
 
 router.get('/peopleApp', function(req, res, next) {
-	  res.render('people/peopleHome.ejs');	    
+	   res.render('people/peopleHome.ejs', {hostUrl : g_hostUrl});
+	// res.render('people/peopleHome.ejs');
 	});
 
 router.get('/peopleFinder', function(req, res, next) {

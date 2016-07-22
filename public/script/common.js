@@ -188,7 +188,7 @@ var peopleAppLoaded = false;
 function loadPeopleApp(element) {
 	
     if(!peopleAppLoaded)
-    { 	    
+    { 	   
     	$.get('/peopleApp')
     	.done(function(data) {
     		$(data).insertAfter(element);
