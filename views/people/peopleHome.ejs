@@ -4,7 +4,11 @@
 	
 	
 	<style>
-		
+	
+		div, * {
+			box-sizing: border-box;
+		}
+	
 		#PEOPLE_HOME {
 			position: fixed;
 			top: 45px;
@@ -24,16 +28,41 @@
 			 
 		}
 		
+		#PEOPLE_HOME_HEADER_TABLE {
+			border-collapse: collapse;
+			 
+			border-spacing: 0;
+		}
+		
+			 td {
+				padding: 0px;
+				height: 100%;
+			}
+
 		.people-finder-child-div {
 			display: none;
 			height: calc(100% - 85px);
 		}
 		  
+	   .people-home-tab-options {
+	   	   cursor: pointer; display: inline-block; height: 100%; width: 100%; line-height: 100%; padding-top: 7px; border111111111: 1px solid red;"
+	   }
+	   
+	    .people-home-tab-options { 
+	    	padding-top111: 4px;
+	    }
+	   
+	   
+	   .tab-bottom-border {
+	   		border-bottom: 2px solid #77933C;
+	   }
 		 
 		  @media screen and (max-width: 767px) { 
 			#PEOPLE_HOME {
 				width: 99%;
 		 }  
+		 
+		
 	 
   }  
 	</style> 
@@ -41,24 +70,45 @@
 
 	<div id = PEOPLE_HOME class = "website-screen-width_dt"> 
 				 
-			  <div  id = PEOPLE_HOME_HEADER class = "earth-gradient-title-bar">  
-			       <table  width = "100%" height = "100%">    
-			       	  <tr>  				  
-				 	   <td tabindex="3" align = center valign = middle style = "border-right111: 1px solid #fff">
-				 		  <div id = CONTAX_CONT_CONS_BTN1  style = "cursor: pointer; display: inline-block; line-height: 100%;">Updates</div>
+			  <div  id = PEOPLE_HOME_HEADER class = "earth-gradient-title-bar" style = "height: 43px; padding-top: 0px;" >  
+			       <table  id = "PEOPLE_HOME_HEADER_TABLE" style = "height: 100%; width: 100%; border11: 1px solid red;" border = 0 >    
+			       	  <tr style = "height: 100%; border1111: 1px solid blue;">
+				       	    <td class = "people-home-tab-td" style = " padding: 0px; border111: 1px solid orange;" tabindex="3" align = center valign = middle>
+					 		   <div id = PEOPLE_HOME_UPDATES  class = "people-home-tab-options" style = "height: 100%;">Updates</div>
+					 	   </td>
+					 	   
+					 	   <td class = "people-home-tab-td" tabindex="4" align = center valign = middle>
+				 		  		<div id = PEOPLE_HOME_FINDER_BTN class = "people-home-tab-options" >People Finder</div>  
+				 	       </td> 
+				 	       
+				 	       <td class = "people-home-tab-td" tabindex="4" align = center valign = middle>
+				 		  		<div id = PEOPLE_HOME_SAVED_FILTERS class = "people-home-tab-options">Saved Filters</div>
+				 	   		</td>  
+				 	       
+				 	       <td class = "people-home-tab-td" tabindex="5" align = center valign = middle>
+				 		     <div id = PEOPLE_HOME_CONNECTIONS_BTN class = "people-home-tab-options">Connections</div>  
+				 	       </td>  
+			       	  </tr>
+		 		  	</table> 
+			  </div>	
+			  
+			  
+			  <!-- 
+			  	<tr style = "height: 100%;">  				  
+				 	   <td class = "people-home-tab-td" style = " border-bottom111111: 3px solid red;" tabindex="3" align = center valign = middle>
+				 		  <div id = PEOPLE_HOME_UPDATES  class = "people-home-tab-options">Updates</div>
 				 	   </td>
-				 	   <td tabindex="4" align = center valign = middle style = "border-right111: 1px solid #fff">
-				 		  <div id = PEOPLE_FINDER_BTN style = "cursor: pointer; display: inline-block; line-height: 100%; ">People Finder</div>
+				 	   <td class = "people-home-tab-td" tabindex="4" align = center valign = middle>
+				 		  <div id = PEOPLE_HOME_FINDER_BTN class = "people-home-tab-options" >People Finder</div>  
 				 	   </td>  
-				 	   <td tabindex="4" align = center valign = middle style = "border-right111: 1px solid #fff">
-				 		  <div id = CONTAX_GROUPS_BTN1 style = "cursor: pointer;  display: inline-block; line-height: 100%;">Saved Filters</div>
+				 	   <td class = "people-home-tab-td" tabindex="4" align = center valign = middle>
+				 		  <div id = PEOPLE_HOME_SAVED_FILTERS class = "people-home-tab-options">Saved Filters</div>
 				 	   </td>  
-				 	    <td tabindex="5" align = center valign = middle style = "display: hidden;">
-				 		   <div id = PEOPLE_CONNECTIONS_BTN style = "cursor: pointer;  display: inline-block; line-height: 100%;">Connections</div>  
+				 	    <td class = "people-home-tab-td" tabindex="5" align = center valign = middle style = "display12345: hidden;">
+				 		   <div id = PEOPLE_HOME_CONNECTIONS_BTN class = "people-home-tab-options">Connections</div>  
 				 	   </td>  
 			 		  </tr>
-		 		  	</table>
-			  </div>	
+			   -->  
 				   
 			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px; height: calc(100% - 85px);">
 			
@@ -68,9 +118,9 @@
 				
 				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div" style = "height: 100%; width: 100%; ">  
 					<div id = "PEOPLE_SEARCH_CRITERIAS" style = "position: relative; height: 100%;" >  
-						
+						 
 					</div>
-					
+					 
 				</div>
 				
 				<div id = "PEOPLE_HOME_SAVED_FILTERS" class = "people-finder-child-div">
@@ -99,15 +149,15 @@
 		});  
 	      
 	    
-	    $('#PEOPLE_FINDER_BTN').on('click', function() {
+	    $('#PEOPLE_HOME_FINDER_BTN').on('click', function() {
 			//hide containers of all other buttons, then make an AJAX call for people_finder and insert
 			$('.people-finder-child-div').hide();
 			$('#PEOPLE_HOME_FINDER').show();
 			$('#PEOPLE_SEARCH_CRITERIAS').load('/peopleFinder');
-			
+			 
 		});
-	    
-	    $('#PEOPLE_CONNECTIONS_BTN').on('click', function() {
+	      
+	    $('#PEOPLE_HOME_CONNECTIONS_BTN').on('click', function() {
 	    	//alert("people home connections");
 	    	loadContaxgonomy(function() {
 		    		$('.people-finder-child-div').hide();  		
@@ -116,6 +166,13 @@
 	    	}); //Ajax call  
 	    	 
 		});
+	       
+	   	 
+	   $('.people-home-tab-options').on('click', function() {
+		   
+		   $('.people-home-tab-options').removeClass('tab-bottom-border');
+		   $(this).addClass('tab-bottom-border');
+	   });
 	    
 	
 	</script>
