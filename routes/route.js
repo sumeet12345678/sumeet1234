@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+var g_imgUrl = "http://ekprofile.herokuapp.com" ;
 
 //var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
 
@@ -97,7 +98,7 @@ router.get('/peopleApp', function(req, res, next) {
 	});
 
 router.get('/peopleFinder', function(req, res, next) {
-	  res.render('people/peopleFinder.ejs');  	     
+	  res.render('people/peopleFinder.ejs', {imgUrl : g_imgUrl});  	     
 	}); 
 
  
