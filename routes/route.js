@@ -1,5 +1,5 @@
-var express = require('express')
-var router = express.Router()
+var express = require('express');
+var router = express.Router();
 
 //var lawyerData = require("../public/data/profileData/lawyerProfileJsonData.json");
 
@@ -12,7 +12,7 @@ var g_user_location  = "local";
 router.get('/', function(req, res, next) {
 	  if(req.ip == "::1") {
 		  g_user_location = "local"; 
-	  } 
+	  }   
 	  
 	  else { 
 		  g_user_location = "remote";
@@ -52,18 +52,36 @@ router.get('/', function(req, res, next) {
 		   
    router.get('/profile/view/socialfun', function(req, res, next) {    
 	   if(g_user_location == "local"){
-		  res.render('profiles/uni_profile_social_fun.ejs', { page: "uniprofile", profile_context: "uniprofile_social_fun"});
-	   } 
+		 
+		   res.writeHead(301,
+				   {Location: 'http://192.168.1.6:3000/profile/view/socialfun'}
+				    );
+				   
+					res.end();  
+	   	} 
 	   else {
 		   res.writeHead(301,
-		   {Location: 'http://ekprofile.herokuapp.com/'}
-		    );
+		   {Location: 'http://ekprofile.herokuapp.com/profile/view/socialfun'}
+		    ); 
 		   
 		   res.end();		   
-		  // res.render('profiles/uni_profile_social_fun.ejs', { page: "uniprofile", profile_context: "uniprofile_social_fun"});
+		 
 	   }
 		  
 	});  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
    

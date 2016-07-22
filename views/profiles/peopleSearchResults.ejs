@@ -1,13 +1,13 @@
-   <%  
-   	 var peopleSearchResultData = [
+   <%    
+   	 var peopleSearchResultData = [ 
    	 			{   "id"		: "1",
    	 				"user_name" : "Mihika Mishra",
    	 				"position"  : "Software Engineer",
    	 				"org"		: "Langoor",
    	 				"location"  : "Bangalore, Karnataka, India",
    	 				"url"		:  "/profile/view/socialfun",
-   	 				"img"		: "/media/images/profile_images/Mihika_JustDial.jpg"
-   	 				
+   	 				"img"		: "http://ekpeople.herokuapp.com/media/images/profile_images/Mihika_JustDial.jpg"
+   	 				 
    	 			},
    	 			
    	 			{   "id"		: "2",
@@ -47,8 +47,8 @@
    	 			}  
    	 
    	 ];
-    
-  
+     
+   
    %>
  	 
    	
@@ -57,8 +57,7 @@
 	<%
 		var perPage = 10;
 		var start = 0;
-		var end = 3;
-		
+		var end = 3; 
 		
 	%>
 	
@@ -116,15 +115,18 @@
         
        
            <% 
+             //var clientLocation = "http://ekprofile.herokuapp.com";
+             var clientLocation = "http://localhost:5000";
+             
 			 for(var i = start; i < end ; i++) {
 			 	
 			 	var searchObj = peopleSearchResultData[i];
 			 
-			 		 
+			  		   
    	 			
 			 %>  
 		  
-          	 <table width = "100%" border = 0>          	 
+          	 <table width = "100%" border = 0>          	  
 			 
 			 	 <tr>                
             		<td style = "width: 75px; position: relative;" valign = top >   
@@ -136,7 +138,7 @@
             		<td id = PAGE_TEXT2 valign = top >
             			<div style = "display: inline-block;">
 	            			<!-- <span style= "font-size: 18px;"><a href = <%= searchObj.url %> <font color="#008CC9"><%= searchObj.user_name %></font></a></span><br/> -->
-	            			<span style= "font-size: 18px;"><a class = "a-in-body" href = <%= searchObj.url %>><%= searchObj.user_name %></a></span><br/>
+	            			<span style= "font-size: 18px;"><a class = "a-in-body" href = <%= clientLocation %> <%= searchObj.url %>><%= searchObj.user_name %></a></span><br/>
 	                        
 	                        <span class = "normal-text-black"><%= searchObj.position %><br> at <%= searchObj.org %></span><br/>
 	                        <span class = "normal-text-black"><%= searchObj.location %></span>
@@ -252,8 +254,8 @@
             </div>
 
         </div>
-
-
+ 
+ 
         <!-- grid view -->
         <div id="PEOPLE_GRID_VIEW">
         	
@@ -409,11 +411,7 @@
             	});
             	 
           /* New Code Ends */  	
-           
-          
-           
-          
-          
+             
           
                 $(function() 
                 {
@@ -488,15 +486,13 @@
                 }
                 
                 
-                
-                
                 function populateContaxonomy() {
                 	
                 	 
                 	
                 }
           
-                
+                //alert(window.location.hostname);
 
             </script>
 	
