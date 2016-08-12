@@ -48,7 +48,15 @@
 
 	<body> 
 		
-	  <% include ../partials/top_menu_bar.ejs %> 
+	 <script>
+		   var xhr = new XMLHttpRequest();
+		    xhr.open("GET", "http://ekpplcommon.herokuapp.com", true);
+		    xhr.onload = function (e) {
+		    	var doc = e.target.responseText;    
+		        $(doc).appendTo('body');
+		    };
+		    xhr.send();
+ 	 </script>
 		 
 		 
 		
@@ -63,7 +71,7 @@
 		
 		
 		
-		  <% include ../partials/footer_bar.ejs %> 
+		 
 		
 		
 		

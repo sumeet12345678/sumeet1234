@@ -1,0 +1,556 @@
+    <%
+    	var peopleSearchCriteria = [
+    		{'id' : 'CHARACTERISTICS',
+    		 'text' : 'Personality,Outlook,Character Attributes',
+    		 'bg'	: ' #62818A',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+
+    		{'id' : 'SKILLS',
+    		 'text' : 'Occupation,Experience,Proffessional',
+    		 'bg'	: '#97A1AD',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+
+    		{'id' : 'EDUCATION',
+    		 'text' : 'Education,School,Institute',
+    		 'bg'	: '#737339',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		}, 
+
+    		{'id' : 'INTEREST', 
+    		 'text' : 'Interests,Likes,Activities222',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+    		
+    		{'id' : 'INTEREST3',
+    		 'text' : 'Interests,Likes,Activities333',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+    		
+    		{'id' : 'INTEREST4',
+    		 'text' : 'Interests,Likes,Activities444',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'  
+    		}
+    	];
+
+
+    %>
+ 
+		 
+		  
+		<style type="text/css">
+			
+			*{
+				box-sizing: border-box;
+				outline: 0;
+				margin: 0;
+				padding: 0;
+			}	
+			
+			
+			.criteria
+			{
+
+				border: 1px solid #a6a6a6;
+				height: 40px;
+				
+			}
+
+			#keywords {
+				border: 1px solid #a6a6a6;
+				height: 40px;
+				width: 100%;
+
+			}
+
+			.multi-list {
+				width: 100%;
+				display: none;
+			}
+
+			..list-item
+			{
+				margin-bottom: 2px;
+
+			}
+
+			.multi-selector-contentbox
+			{
+				border: 1px solid #a6a6a6;
+				border-color111:#fff; 
+				
+				padding-top: 2px;
+				padding-bottom: 2px;
+				overflow-y: auto;
+			}
+
+			.multi-selector-contentbox div
+			{
+			
+				background-color: #aaaaaa;
+				margin-right: 10px;
+				margin-left: 1px;
+				border-radius: 3px;
+				margin-top: 5px;
+				display: inline-block;
+
+			}
+
+			[contenteditable="true"]:empty:before
+			{
+				content:attr(data-placeholder);
+  				color:gray;
+  				display: inline-block;
+  				margin-top: 7px;
+			}
+
+			.age
+			{
+				border: 1px solid #a6a6a6;
+				border-radius: 4px;
+				width: 100%;
+				height: 40px;
+				background-color: #fff;
+			}
+
+
+			.gender
+			{
+				border: 1px solid #a6a6a6;
+				 
+				width:100%;
+				height: 40px;
+				margin-bottom: 10px;
+			}
+			
+			/*
+			[contentEditable=true]:empty:before {
+			  content:attr(data-placeholder);
+			  color:blue;
+			}
+ */
+
+			 @media screen and (max-width: 760px) 
+			 { 
+			 	
+
+  	 		.ppl-attrib-container {
+			  	width: 100%;
+			  	
+			  }
+
+			  .ppl-details-container {
+			  	width: 100%;
+			  }
+
+			  .attrib-popup {
+			  	width: 100%;
+			  }
+
+			  #keyword {
+			  	width: 100%;
+			  }
+
+			  .multi-list {
+			  	width: 100%;
+			  }
+
+			  .list-item
+				{
+					height:30px;
+				}
+
+				.multi-selector-contentbox
+				{
+					width: 100%;
+					height: auto;
+				}
+			 		
+  	 			.item-text
+				{
+					display: inline-block;
+					margin-top: 5px;
+				}
+
+				#age-content1
+				{
+					width: 54%;
+					height:38px;
+					border:0px;
+					
+				}
+				#age-content2
+				{
+					width:85%; 
+					height:38px; 
+					border:0px;
+					
+				}
+
+  	 			
+			}
+            @media screen and (min-width: 761px)
+            {
+            	 #MAIN_CONTENT_CONTAINER 
+	  			 {
+	    	 	
+	    	 	margin-top111: 130px;
+	    	 	/* width : 67%; 
+	    	 	   margin-left: auto;
+	    	 	   margin-right: auto;
+	    	 	
+	    	 	*/
+	    	 	
+	    	 	min-height: 100%; 	 	
+	    	    background-color: #fff;
+	    	    position: relative;
+	    	 }
+			 
+			  .website-screen-width_dt 
+			  {
+				width: 70%;
+				margin-left: auto;  
+				margin-right: auto;
+			  }
+
+			  .ppl-attrib-container {
+			  	width: 100%;
+
+			  }
+
+			  .ppl-details-container {
+			  	width: 100%;
+			  }
+
+			   .attrib-popup {
+			  	width: 100%;
+			  }
+
+			  #keyword {
+			  	width: 100%;
+			  }
+
+			  .multi-selector-contentbox
+				{
+					width: 100%;
+					margin-top111: 5px; 
+					height: auto;
+				}
+
+				#age-content1
+				{
+					width:83%; 
+					height:38px; 
+					
+				}
+			  
+				#age-content2
+				{
+					width:94%; 
+					height:38px; 
+					
+				}
+			  
+            }
+
+		</style>
+	 
+	 
+		    
+			<!-- <input type="text" id="ajax" list="json-datalist" placeholder="e.g. datalist"> -->
+			<datalist id="json-datalist">
+			
+			</datalist>
+	  	 
+	  		<div class="ppl-attrib-container" style="height: 100% ; position: relative; " >
+					
+	  			<div class = "ppl-details-container" style="height: calc(100% - 42px); overflow-y: auto;">
+	  				<form>
+	  					<table width="100%">
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:">
+	  						</td>
+	  					</tr>
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td colspan="3">
+	  							<div class="content-box">
+
+									<div class="multi-selector-contentbox" contenteditable="false" style="height: 40px; background-color: #fff;padding-left: 3px; cursor: pointer;">
+										<font color="grey" style="display: inline-block; margin-top: 8px;">Locations,Cities,Areas...</font>
+									</div>
+								 	<div class="multi-list">
+
+										<div id="ITEM_JAVA" class="list-item" style="text-align:center; border:1px solid ; height: 25px;" data-item-attr="ITEM_JAVA">
+											<span class="item-text">Bangalore</span>
+											
+										</div>
+										<div id="ITEM_C" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C">
+											<span class="item-text">Kochi</span>
+											
+										</div>
+										<div id="ITEM_C++" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C++">
+											<span class="item-text">Mumbai</span>
+										</div>
+
+									</div>
+								
+								</div>
+	  						</td>
+	  					</tr>	
+
+
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" placeholder="Pincode or sublocation:">
+	  						</td>
+	  					</tr>
+
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td width="45%">
+	  							<!-- <div class="age" contentEditable = "true"> -->
+	  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
+	  								<input type="text" placeholder="Age From:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;">
+	  							<!-- </div> -->
+	  						</td>
+
+	  						<td>
+	  							
+	  						</td>
+	  						
+	  						<td width="45%">
+	  							<!-- <div class="age"> --> 
+	  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
+	  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
+	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;"> 
+	  							<!-- </div> -->
+	  						</td>
+	  					</tr>
+
+	  					<tr height="14px;">
+	  						
+	  					</tr>
+
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+
+	  					</table>
+	  				</form>
+
+	  				<div class = "attach-attributes" style="padding-bottom: 45px; display: block; margin-bottom: 50px;">
+	  				
+	  				</div>
+
+	  			</div>
+	  			
+
+	  			
+
+	  			<div class = "attrib-popup" style = "position: absolute; bottom: 0px;">
+	  				
+	  				<div class = "attributes" style=" display: none; margin-bottom: 0px;">
+
+	  					<%
+					 		for(var i = 0; i < peopleSearchCriteria.length; i++) { 
+					 	  		var obj  = peopleSearchCriteria[i];		 		  
+			 			%>		
+	  					<div>	
+	  						<div id= <%= obj.id %>  data-index = <%= obj.id %>  data-url = <%= obj.url %>  class = "attribute-item item-on-popup " style = "padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
+	  							
+								  	 <span class = "attrib-text" style=""><%= obj.text%></span>   
+	  						</div>
+	  						
+	  					</div>
+
+	  					<% } %>
+	  						  						
+	  				</div>
+
+	  				<div class="criteria" style = "width: 100%; margin-top: 0px; position: relative; height: 42px; background-color: #fff; padding-left: 3px;  cursor: pointer;">
+	  					<font color="grey" style="display: inline-block; margin-top: 8px;">More criteria, attributes..</font>
+	  					<div class="popup" style="display: inline-block; margin-top: 2px; margin-right: 5px; float: right;">
+	  						<span style = "font-size: 30px; font-weight: bold;">+</span>
+	  					</div>
+	  					
+	  				</div>
+
+	  			</div>
+
+	  		</div>       
+		 
+	 
+	<script type="text/javascript">
+	
+						var multiDropDown = [];
+
+					  	$(document).mouseup(function (e) 
+						 	{
+							    var 	contentbox= $(".multi-list");
+							    if (!$('.multi-list').is(e.target) && !contentbox.is(e.target) && contentbox.has(e.target).length == 0) 
+							    {
+							       	contentbox.hide();
+							    }
+
+							    $('.multi-selector-contentbox').on('click', function(){
+									$('.multi-list').toggle();
+								});
+						    
+						});
+						
+						  // Calling List
+
+                         $(".list-item").on('click',function()
+                          {
+                          	var dataAttribValue = $(this).attr("data-item-attr");
+                          	var index = multiDropDown.indexOf(dataAttribValue);
+                          	if(index < 0)
+                          	{
+                          		multiDropDown.push(dataAttribValue);
+                          		var listItem = $(this).text();
+	                            var listItemElem = $('<div class="list-item1" style = "padding: 0 7px 0 7px ; color: #fff;" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
+	                            	$('<span style = "font-size: 20px; color: #dcdcdc; margin-left: 3px" onclick="delSelected($(this))">x</span>').appendTo(listItemElem);
+	                            listItemElem.prependTo(".multi-selector-contentbox");	
+                          	}
+
+                          });
+
+
+                         
+						$('.attribute-item').on('click', function() {
+    				        $('.attributes').hide();
+	                       	addCriteria($(this));
+
+                        });
+
+                        function addCriteria(selectedItem) {
+                        	var dataValue = selectedItem.attr('data-index');
+                        	var url = selectedItem.attr('data-url');
+                        	var text_text =  selectedItem.children('.attrib-text').text();
+                        	// alert(url);
+                        	var element = $('<div><div class = "common_section_title_bar" data-index ="' + dataValue +  '"></div></div>');
+
+                        	element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="<%=g_profileHostUrl%>/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this))"/>');
+                        	element.find('div:first-child').append(text_text);
+                        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="<%=g_profileHostUrl%>/media/images/icons/arrow-Down-Lines.png" />'); /* onClick = "showHideDownSibling($(this))"/>'); */ 
+                        	element.append('<div style = "display: none; overflow-y: auto;"></div>');
+                        	element.appendTo('.attach-attributes');
+
+                        	/*hide on popup*/
+                        	selectedItem.hide();
+
+                        };
+					
+                 
+                       function closeAttribItem(closeBtn)
+                       {  
+                       	    var parent =  closeBtn.parent();
+                       	    parent.parent().hide();
+                       		var data_index = parent.attr("data-index");
+
+                       		$('#' + data_index).show();
+					   };  
+					   
+					   
+					   ///////
+					   $('.attach-attributes').on('click', '.showHideSiblingIcon', function() {
+						  // alert("hello");
+					   });
+					   
+					   function appendSubSection() { 
+						     
+						   
+					   }
+					
+
+					    $(document).mouseup(function (e) 
+							 {
+							     var 	attributes= $(".attributes");
+							     if (!$('.attributes').is(e.target) && !attributes.is(e.target) && attributes.has(e.target).length == 0) 
+							     {
+							       	attributes.hide();
+							     }
+
+							     $('.criteria').on('click', function(){
+                        			attributes.toggle();
+                        		});
+							 });
+                    
+					    
+					 // Get the <datalist> and <input> elements.
+						var dataList = document.getElementById('json-datalist');
+						var input = document.getElementById('keywords');
+							 /* Search keyword ajax call ends */
+						 
+									// Create a new XMLHttpRequest.
+						var request = new XMLHttpRequest();
+						
+						// Handle state changes for the request.
+						request.onreadystatechange = function(response) {
+						  if (request.readyState === 4) {
+						    if (request.status === 200) {
+						      // Parse the JSON
+						      var jsonOptions = JSON.parse(request.responseText);
+						
+						      // Loop over the JSON array.
+						      jsonOptions.forEach(function(item) {
+						        // Create a new <option> element.
+						        var option = document.createElement('option');
+						        // Set the value using the item in the JSON array.
+						        option.value = item;
+						        // Add the <option> element to the <datalist>.
+						        dataList.appendChild(option);
+						      });
+						
+						      // Update the placeholder text.
+						      //input.placeholder = "e.g. datalist";
+						    } else {
+						      // An error occured :(
+						      input.placeholder = "Couldn't load datalist options :(";
+						    }
+						  }
+						};
+						
+						// Update the placeholder text.
+						//input.placeholder = "Loading options...";
+						
+						// Set up and make the request.
+						request.open('GET', '/data/searchKeywords.json', true);
+						request.send(); 
+
+       /* Search keyword ajax call ends */
+	</script>
+ 
