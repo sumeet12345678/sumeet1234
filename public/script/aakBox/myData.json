@@ -1,9 +1,0 @@
-{
-	"messages":[
-				{"url": "img/image1.jpg", "name": "Shraddha", "message": "I think I am liking you.", "date": "1 April" },
-				{"url": "img/image2.jpg", "name": "Unknown", "message": "Hey there.", "date": "2nd March" },
-				{"url": "img/Katrina.jpg", "name": "Katrina", "message": "Thats ok with me", "date": "28 February" },
-				{"url": "img/Kareena.jpg", "name": "Kareena","message": "Look- I am up for a commitment.... Keep it with you.","date": "1 March" }
-				]
-
-}

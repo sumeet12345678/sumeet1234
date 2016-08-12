@@ -205,7 +205,7 @@ function loadPeopleApp(element) {
 
 
 /**/
-var b_contaxgonomyLoaded = false;
+var b_contaxgonomyLoaded = false; /* ---------------       */
 
 function loadContaxgonomy(callback) {
 	
