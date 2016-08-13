@@ -1,13 +1,383 @@
-<div>
-					<div id= MASTER_MENU_LEARNING class= "toggle-bar-menu master-menu-content-toggleBar" >  
-						<span class="expandIcon" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-2lines.png"/></span>
-						<span class="expandIcon" style="float: right;display: none;">	<img  width="28" height="28" src="/media/images/icons/arrow-up-2lines.png"/></span>    						
-						<img  width="28" height="28" src="/media/images/icons/school-white.png"/>
-						<span class="barTitle">Search</span>
-						
-					</div> 
-					<div id = MASTER_MENU_LEARNING_OPTIONS class="masterMenuOptions">
-							 
-					</div>
-				</div>	 
+    <%
+    	var peopleSearchCriteria = [
+    		{'id' : 'CHARACTERISTICS',
+    		 'text' : 'Personality,Outlook,Character Attributes',
+    		 'bg'	: ' #62818A',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+
+    		{'id' : 'SKILLS',
+    		 'text' : 'Occupation,Experience,Proffessional',
+    		 'bg'	: '#97A1AD',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+
+    		{'id' : 'EDUCATION',
+    		 'text' : 'Education,School,Institute',
+    		 'bg'	: '#737339',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		}, 
+
+    		{'id' : 'INTEREST', 
+    		 'text' : 'Interests,Likes,Activities222',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+    		
+    		{'id' : 'INTEREST3',
+    		 'text' : 'Interests,Likes,Activities333',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+    		
+    		{'id' : 'INTEREST4',
+    		 'text' : 'Interests,Likes,Activities444',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'  
+    		}
+    	];
+
+
+    %>
+ 
+		 
+		  
+		<style type="text/css">
+			
+			*{
+				box-sizing: border-box;
+				outline: 0;
+				margin: 0;
+				padding: 0;
+			}	
+			
+			
+			.criteria
+			{
+
+				border: 1px solid #a6a6a6;
+				height: 40px;
+				
+			}
+
+			#keywords {
+				border: 1px solid #a6a6a6;
+				height: 40px;
+				width: 100%;
+
+			}
+
+			.multi-list {
+				width: 100%;
+				display: none;
+			}
+
+			..list-item
+			{
+				margin-bottom: 2px;
+
+			}
+
+			.multi-selector-contentbox
+			{
+				border: 1px solid #a6a6a6;
+				border-color111:#fff; 
+				
+				padding-top: 2px;
+				padding-bottom: 2px;
+				overflow-y: auto;
+			}
+
+			.multi-selector-contentbox div
+			{
+			
+				background-color: #aaaaaa;
+				margin-right: 10px;
+				margin-left: 1px;
+				border-radius: 3px;
+				margin-top: 5px;
+				display: inline-block;
+
+			}
+
+			[contenteditable="true"]:empty:before
+			{
+				content:attr(data-placeholder);
+  				color:gray;
+  				display: inline-block;
+  				margin-top: 7px;
+			}
+
+			.age
+			{
+				border: 1px solid #a6a6a6;
+				border-radius: 4px;
+				width: 100%;
+				height: 40px;
+				background-color: #fff;
+			}
+
+
+			.gender
+			{
+				border: 1px solid #a6a6a6;
 				 
+				width:100%;
+				height: 40px;
+				margin-bottom: 10px;
+			}
+			
+			/*
+			[contentEditable=true]:empty:before {
+			  content:attr(data-placeholder);
+			  color:blue;
+			}
+ */
+
+			 @media screen and (max-width: 760px) 
+			 { 
+			 	
+
+  	 		.ppl-attrib-container {
+			  	width: 100%;
+			  	
+			  }
+
+			  .ppl-details-container {
+			  	width: 100%;
+			  }
+
+			  .attrib-popup {
+			  	width: 100%;
+			  }
+
+			  #keyword {
+			  	width: 100%;
+			  }
+
+			  .multi-list {
+			  	width: 100%;
+			  }
+
+			  .list-item
+				{
+					height:30px;
+				}
+
+				.multi-selector-contentbox
+				{
+					width: 100%;
+					height: auto;
+				}
+			 		
+  	 			.item-text
+				{
+					display: inline-block;
+					margin-top: 5px;
+				}
+
+				#age-content1
+				{
+					width: 54%;
+					height:38px;
+					border:0px;
+					
+				}
+				#age-content2
+				{
+					width:85%; 
+					height:38px; 
+					border:0px;
+					
+				}
+
+  	 			
+			}
+            @media screen and (min-width: 761px)
+            {
+            	 #MAIN_CONTENT_CONTAINER 
+	  			 {
+	    	 	
+	    	 	margin-top111: 130px;
+	    	 	/* width : 67%; 
+	    	 	   margin-left: auto;
+	    	 	   margin-right: auto;
+	    	 	
+	    	 	*/
+	    	 	
+	    	 	min-height: 100%; 	 	
+	    	    background-color: #fff;
+	    	    position: relative;
+	    	 }
+			 
+			  .website-screen-width_dt 
+			  {
+				width: 70%;
+				margin-left: auto;  
+				margin-right: auto;
+			  }
+
+			  .ppl-attrib-container {
+			  	width: 100%;
+
+			  }
+
+			  .ppl-details-container {
+			  	width: 100%;
+			  }
+
+			   .attrib-popup {
+			  	width: 100%;
+			  }
+
+			  #keyword {
+			  	width: 100%;
+			  }
+
+			  .multi-selector-contentbox
+				{
+					width: 100%;
+					margin-top111: 5px; 
+					height: auto;
+				}
+
+				#age-content1
+				{
+					width:83%; 
+					height:38px; 
+					
+				}
+			  
+				#age-content2
+				{
+					width:94%; 
+					height:38px; 
+					
+				}
+			  
+            }
+
+		</style>
+	 
+	 
+
+         <div>
+				<div id= MASTER_MENU_LEARNING class= "toggle-bar-menu master-menu-content-toggleBar" >  
+	         	<span class="expandIcon" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-2lines.png"/></span>
+				<span class="expandIcon" style="float: right;display: none;">	<img  width="28" height="28" src="/media/images/icons/arrow-up-2lines.png"/></span>    						
+				<img  width="28" height="28" src="/media/images/icons/school-white.png"/>
+				<span class="barTitle">Search</span>
+				</div> 
+				   <div>
+					<div class="ppl-attrib-container" style="height: 100% ; position: relative; " >
+					
+	  			<div class = "ppl-details-container" style="height: calc(100% - 42px); overflow-y: auto;">
+	  				<form>
+	  					<table width="100%">
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:">
+	  						</td>
+	  					</tr>
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td colspan="3">
+	  							<div class="content-box">
+
+									<div class="multi-selector-contentbox" contenteditable="false" style="height: 40px; background-color: #fff;padding-left: 3px; cursor: pointer;">
+										<font color="grey" style="display: inline-block; margin-top: 8px;">Locations,Cities,Areas...</font>
+									</div>
+								 	<div class="multi-list">
+
+										<div id="ITEM_JAVA" class="list-item" style="text-align:center; border:1px solid ; height: 25px;" data-item-attr="ITEM_JAVA">
+											<span class="item-text">Bangalore</span>
+											
+										</div>
+										<div id="ITEM_C" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C">
+											<span class="item-text">Kochi</span>
+											
+										</div>
+										<div id="ITEM_C++" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C++">
+											<span class="item-text">Mumbai</span>
+										</div>
+
+									</div>
+								
+								</div>
+	  						</td>
+	  					</tr>	
+
+
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" placeholder="Pincode or sublocation:">
+	  						</td>
+	  					</tr>
+
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td width="45%">
+	  							<!-- <div class="age" contentEditable = "true"> -->
+	  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
+	  								<input type="text" placeholder="Age From:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;">
+	  							<!-- </div> -->
+	  						</td>
+
+	  						<td>
+	  							
+	  						</td>
+	  						
+	  						<td width="45%">
+	  							<!-- <div class="age"> --> 
+	  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
+	  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
+	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;"> 
+	  							<!-- </div> -->
+	  						</td>
+	  					</tr>
+
+	  					<tr height="14px;">
+	  						
+	  					</tr>
+
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+
+	  					</table
+	  				</form>
+
+	  				<div class = "attach-attributes" style="padding-bottom: 45px; display: block; margin-bottom: 50px;">
+	  				
+	  				</div>
+	  		</div>		
+		</div>
+					 
+	</div>		 
