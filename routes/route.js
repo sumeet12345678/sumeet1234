@@ -23,8 +23,8 @@ router.get('/peopleApp', function(req, res, next) {
 	// res.render('people/peopleHome.ejs');
 	});
 
-router.get('/peopleFinder', function(req, res, next) {
-	  res.render('people/peopleFinder.ejs', {imgUrl : g_profileHostUrl});  	     
+router.get('/peopleSearch', function(req, res, next) {
+	  res.render('people/peopleSearch_m.ejs', {imgUrl : g_profileHostUrl});  	     
 	}); 
 
   
