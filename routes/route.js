@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 //var g_hostUrl = "http://ekpeople.herokuapp.com" ;
-//var g_hostUrl = "http://ekpeople.herokuapp.com" ;
-var g_hostUrl = "http://localhost:4000" ;
+var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+//var g_hostUrl = "http://localhost:4000" ;
 var g_profileHostUrl = "http://ekprofile.herokuapp.com" ;
  
 
@@ -11,6 +11,12 @@ var g_profileHostUrl = "http://ekprofile.herokuapp.com" ;
   router.get('/', function(req, res, next) {
 	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
 	});
+    
+  router.get('/savedPeopleSearches', function(req, res, next) {
+	  res.render('people/search/savedPeopleSearches.ejs');	    
+	});
+  
+  
 
    router.get('/people/search/result', function(req, res, next) {
 		  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
