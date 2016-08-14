@@ -5,7 +5,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title>My App</title>
 	    
-	    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	    
 	    <link href="/styles/common.css" rel="stylesheet" /> 
 	        
 	    <script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
@@ -26,7 +26,7 @@
   	 				height: 100%;
   	 				 
   	 			 }  
-  		
+  		 
   			}
   			
   			@media screen and (min-width: 761px) { 
@@ -48,15 +48,24 @@
 
 	<body> 
 		
-	 <script>
-		   var xhr = new XMLHttpRequest();
-		    xhr.open("GET", "http://ekpplcommon.herokuapp.com", true);
-		    xhr.onload = function (e) {
-		    	var doc = e.target.responseText;    
-		        $(doc).appendTo('body');
-		    };
-		    xhr.send();
- 	 </script>
+	 
+    <% if(localOrRemoteUrl === "remote") { %>
+               <script>
+                   var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "http://ekpplcommon.herokuapp.com", true);
+                    xhr.onload = function (e) {
+                        var doc = e.target.responseText;    
+                        $(doc).appendTo('body');
+                    };
+                    xhr.send();
+              </script>
+          
+       <% }  %> 
+       
+        <% if(localOrRemoteUrl == "local") { %>
+             <% include ../partials/top_menu_bar.ejs %> 
+             <% include ../partials/footer_bar.ejs %> 
+        <% } %>
 		 
 		 
 		
@@ -69,12 +78,7 @@
 		 	
 		</div>
 		
-		
-		
 		 
-		
-		
-		
 		<script>
 		 
 			$('#MAIN_CONTENT_CONTAINER').css('margin-top', 73);

@@ -1,16 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-//var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+ 
 //var g_hostUrl = "http://ekpeople.herokuapp.com" ;
 var g_hostUrl = "http://localhost:4000" ;
+
+var localOrRemote = "local";
+//var localOrRemote = "remote";
+
 var g_profileHostUrl = "http://ekprofile.herokuapp.com" ;
- 
 
 
-  router.get('/', function(req, res, next) {
-	  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
-	});
+router.get('/', function(req, res, next) {
+      res.render('profiles/common.ejs', { page: "peopleSearchResult", localOrRemoteUrl : localOrRemote, hostUrl : g_hostUrl});        
+    }); 
     
   router.get('/savedPeopleSearches', function(req, res, next) {
 	  res.render('people/search/savedPeopleSearches.ejs');	    
@@ -19,7 +22,7 @@ var g_profileHostUrl = "http://ekprofile.herokuapp.com" ;
   
 
    router.get('/people/search/result', function(req, res, next) {
-		  res.render('profiles/common.ejs', { page: "peopleSearchResult"});	    
+		  res.render('profiles/common.ejs', { page: "peopleSearchResult", hostUrl : g_hostUrl});	    
 		});
 
    
