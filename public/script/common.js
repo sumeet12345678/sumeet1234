@@ -211,7 +211,7 @@ function loadContaxgonomy(callback) {
 	
     if(!b_contaxgonomyLoaded)
     { 	      
-    	$.get('/contagxonomy')
+    	$.get('http://ekcontagx.herokuapp.com/html/contagxonomy.html')
     	.done(function(data) {
     		$(data).insertAfter($('#CONTENT_HEADER_BAR'));
     		b_contaxgonomyLoaded = true;  

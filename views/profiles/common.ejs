@@ -49,7 +49,7 @@
 	<body> 
 		
 	 
-    <% if(localOrRemoteUrl === "remote") { %>
+	 <% if(localOrRemoteUrl === "remote") { %>
                <script>
                    var xhr = new XMLHttpRequest();
                     xhr.open("GET", "http://ekpplcommon.herokuapp.com", true);
@@ -62,7 +62,7 @@
           
        <% }  %> 
        
-        <% if(localOrRemoteUrl == "local") { %>
+        <% if(localOrRemoteUrl === "local") { %>
              <% include ../partials/top_menu_bar.ejs %> 
              <% include ../partials/footer_bar.ejs %> 
         <% } %>

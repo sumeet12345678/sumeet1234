@@ -9,7 +9,7 @@ var CONNECTIONS_TREE_URL = "http://localhost:5000";
 
 var CONTAGXONOMY_URL = "http://localhost:5000";
 
-var PEOPLE_URL = "http://localhost:5000";
+var PEOPLE_URL = "http://localhost:4000";
 
 var PROFILE_URL = "http://localhost:5000";
 
