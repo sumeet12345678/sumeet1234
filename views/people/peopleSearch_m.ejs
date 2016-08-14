@@ -1,4 +1,6 @@
       
+
+
 		   <style type="text/css">
 			
 			*{
@@ -238,9 +240,11 @@
 				
 		</div>	
 
+		
+
 	<script>
 		$('#SAVED_PPL_SEARCHES').on('click', function(){
-			alert("dkdkfds");
+		
 			showHideDownSibling($(this));
 			$.get("http://ekpeople.herokuapp.com/savedPeopleSearches").done(function(data){
 				console.log(data);
