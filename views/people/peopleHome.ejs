@@ -1,6 +1,6 @@
-	<link href="<%=hosturl%>/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
-	<link rel="stylesheet" href="<%=hosturl%>/styles/common.css"> 
-    <link rel="stylesheet" href="<%=hosturl%>/styles/common2.css"> 
+	<link href="<%=hostUrl%>/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
+	<link rel="stylesheet" href="<%=hostUrl%>/styles/common.css"> 
+    <link rel="stylesheet" href="<%=hostUrl%>/styles/common2.css"> 
 	
 	
 	<style>
@@ -9,18 +9,17 @@
 			position: fixed;
 			top: 45px;
 			border: 1px solid #9b9b9b;	
-	
+			height111: calc(100% - 42px);
 			margin-left: auto; 
 			margin-right: auto;
 			left: 0;
 			right: 0;
 			
-		    z-index: 2000;
+		    z-index: 1100;
 		    			 
 			background-color: #f6f8fa;
 			
 			height: calc(100% - 45px);
-			
 			 
 		}
 		
@@ -58,14 +57,14 @@
 		 		  	</table>
 			  </div>	
 				   
-			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 5px; padding-right: 5px; height: calc(100% - 85px);">
+			<div id = PEOPLE_HOME_CONTENT_CONTAINER style = "padding-left: 2px; padding-right: 2px; height: calc(100% - 85px);">
 			
 				<div id = "PEOPLE_HOME_UPDATES" class = "people-finder-child-div">
 					  
 				</div> 
 				
 				<div id = "PEOPLE_HOME_FINDER" class = "people-finder-child-div" style = "height: 100%; width: 100%; ">  
-					<div id = "PEOPLE_SEARCH_CRITERIAS" style = "position: relative; height: 100%;" >  
+					<div id = "PEOPLE_SEARCH_CRITERIAS" style = "position: relative; height: 100%; overflow: auto;" >  
 						
 					</div>
 					
@@ -81,8 +80,7 @@
 				   
 			</div> 
 			
-			
-			
+	 	
 		     
 	</div>
 	  
@@ -100,7 +98,9 @@
 			//hide containers of all other buttons, then make an AJAX call for people_finder and insert
 			$('.people-finder-child-div').hide();
 			$('#PEOPLE_HOME_FINDER').show();
-			$('#PEOPLE_SEARCH_CRITERIAS').load(hosturl/peopleSearch');
+			
+			showHideProgress();
+			$('#PEOPLE_SEARCH_CRITERIAS').load('<%=hostUrl%>/peopleSearch').done( function(data){showHideProgress();});
 			
 		});
 	    

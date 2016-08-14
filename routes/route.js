@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
  
-//var g_hostUrl = "http://ekpeople.herokuapp.com" ;
-var g_hostUrl = "http://localhost:4000" ;
+var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+//var g_hostUrl = "http://localhost:4000" ;
 
-var localOrRemote = "local";
-//var localOrRemote = "remote";
+//var localOrRemote = "local";
+var localOrRemote = "remote";
 
 var g_profileHostUrl = "http://ekprofile.herokuapp.com" ;
 

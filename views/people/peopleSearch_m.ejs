@@ -216,26 +216,192 @@
  
 	 	
 	 	<div>
-		 	<div  id = "SAVED_PPL_SEARCHES"  class= "toggle-bar-menu master-menu-content-toggleBar" >  
-		         	<span class="expandIcon1" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>   						
-					<img  width="28" height="28" src="/media/images/icons/school-white.png"/>
+		 	<div  id = "SAVED_PPL_SEARCHES"  class= "toggle-bar-menu" >  
+		         	<span class="expandIcon1" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/> </span>   						
+					<img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/>
 					<span class="barTitle">Saved Searches</span>
 	        </div> 
 	        
 	        <div  id = "SAVED_PPL_SEARCHES_CONTAINER">
-	        		PEOPLE SEARCH SAVED.........................................................
+	        	    
 	        </div>
         </div>
 
          <div>
-				<div   id = "PPL_SEARCHES" class= "toggle-bar-menu master-menu-content-toggleBar" >  
-		         	<span class="expandIcon1" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>    						
-					<img  width="28" height="28" src="/media/images/icons/school-white.png"/>
+				<div   id = "PPL_SEARCHES" class= "toggle-bar-menu" >  
+		         	<span class="expandIcon2" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>    						
+					<img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/>
 					<span class="barTitle">Search</span>
 				</div>      
 				
 				<div>
-	        		PEOPLE SEARCH .........................................................
+	        		   <form>
+	  					<table width="100%">
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:">
+	  						</td>
+	  					</tr>
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td colspan="3">
+	  							<div class="content-box">
+
+									<div class="multi-selector-contentbox" contenteditable="false" style="height: 40px; background-color: #fff;padding-left: 3px; cursor: pointer;">
+										<font color="grey" style="display: inline-block; margin-top: 8px;">Locations,Cities,Areas...</font>
+									</div>
+								 	<div class="multi-list">
+
+										<div id="ITEM_JAVA" class="list-item" style="text-align:center; border:1px solid ; height: 25px;" data-item-attr="ITEM_JAVA">
+											<span class="item-text">Bangalore</span>
+											
+										</div>
+										<div id="ITEM_C" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C">
+											<span class="item-text">Kochi</span>
+											
+										</div>
+										<div id="ITEM_C++" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C++">
+											<span class="item-text">Mumbai</span>
+										</div>
+
+									</div>
+								
+								</div>
+	  						</td>
+	  					</tr>	
+
+
+	  					<tr height = "8px">
+	  						
+	  					</tr>
+	  						<tr>
+	  						<td colspan="3">
+	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" placeholder="Pincode or sublocation:">
+	  						</td>
+	  					</tr>
+
+
+	  					<tr height="8px">
+	  						
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td width="45%">
+	  							<!-- <div class="age" contentEditable = "true"> -->
+	  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
+	  								<input type="text" placeholder="Age From:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;">
+	  							<!-- </div> -->
+	  						</td>
+
+	  						<td>
+	  							
+	  						</td>
+	  						
+	  						<td width="45%">
+	  							<!-- <div class="age"> --> 
+	  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
+	  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
+	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;"> 
+	  							<!-- </div> -->
+	  						</td>
+	  					</tr>
+
+	  					<tr height="14px;">
+	  						
+	  					</tr>
+
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+	  					<tr>
+	  						<td colspan="3">
+	  							<select class="gender">
+	  								<option>Gender</option>
+	  								<option>Male</option>
+	  								<option>Female</option>
+	  								<option>Others</option>
+	  							</select>
+	  						</td>
+	  					</tr>
+
+	  					</table>
+	  				</form>
+
 	       		</div>
 				
 		</div>	
@@ -243,10 +409,11 @@
 		
 
 	<script>
-		$('#SAVED_PPL_SEARCHES').on('click', function(){
+	
+		$('.expandIcon1').on('click', function(){
 		
 			showHideDownSibling($(this));
-			$.get("http://ekpeople.herokuapp.com/savedPeopleSearches").done(function(data){
+			$.get("/savedPeopleSearches").done(function(data){
 				console.log(data);
 				$('#SAVED_PPL_SEARCHES_CONTAINER').html(data);
 			});
@@ -254,11 +421,12 @@
 			
 		});
 		
-		$('#PPL_SEARCHES').on('click', function(){
+		$('.expandIcon2').on('click', function(){
 			
 			showHideDownSibling($(this));
 			
 		});
+		  
 	</script>
 		
 	 
