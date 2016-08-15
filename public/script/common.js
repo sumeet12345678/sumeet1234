@@ -240,7 +240,9 @@ function loadContaxgonomy(callback) {
 //	  alert(" Composer in Common.js ...");
 //		loadMsgComposer();
 //});  	
-	
+function showHideProgress(){
+	    $('#PROGRESS_BAR').toggle();    /* PROGRESS_BAR IS placed in footer*/
+	}
 var b_aakComposerLoaded = false;
   
 function uniComposeMsg(usrId, usrName, msgType, context) {
