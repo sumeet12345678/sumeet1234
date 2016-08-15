@@ -1,5 +1,3 @@
- 
-	
 <style>
   #SEARCH {
 	width: 100%;
@@ -113,17 +111,54 @@
 	</style>
  
 
- 
+
 
 	<div id = "SEARCH" style = "padding-left: 5px; padding-right: 5px;">		
    		<div style = 'height: 5px;'></div>
-   		<div class = "container" style = "padding: 3px; font-weight: bold;"><div class = "search-name">Name</div><div class = "search-matches">Matches</div><input value = "  ...  " style = "float: right; font-weight: bold; border-radius: 1px; background-color: #ccd674;" type = "button"></div>
+   		
+   		<div class = "container" style = "padding: 3px; font-weight: bold;"><div class = "search-name">Name</div><div class = "search-matches">Matches</div><input class = "" id="PEOPLE_SEARCH_SUBMIT_BUTTON" value = "  ...  " type = "button" style = "float: right; font-weight: bold; border-radius: 1px; background-color: ;"></div>
 
    		<div class = "saved-search-head" style = "width: 100%; margin-top: 5px;"></div>
    	</div>
    	
  
+ 
+ <form class = "people-search-form" action = "/p/search" method = "post">  	
+   	 <input id = "HIDDEN_CHECKED_INPUT" type="hidden" name="savedSearchesChkBox" value="">
+
+</form>
+   	
+   	
+ 
 <script>
+	
+    	$('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
+    	  
+    		var chkbox = document.getElementsByClassName("people-search-check-box");
+				
+			 
+			        var checkedBoxString = "";
+			         
+				    for (var i = 0; i < chkbox.length; i++) {
+				        if (chkbox[i].checked) {
+				          checkedBoxString = checkedBoxString + chkbox[i].value + ",";
+				          
+				        }
+				    }
+				    
+				 $("#HIDDEN_CHECKED_INPUT").val(checkedBoxString);
+    	
+    	
+    	     if(checkedBoxString != ""){
+    			$('.people-search-form').submit();
+    		 }
+    		 else {
+    			alert("No check Box Selected");
+    		 }
+    		 
+    	});
+
+
 	
 	var savedSearchesInfo= [
 	       {	
@@ -169,16 +204,33 @@
 	for(var i = 0;i < reviewArr.length;i++)
 			{
 				var obj = reviewArr[i];
-
+				var id = obj.id;
 				var name = obj.name;
 				var matches = obj.matches;   
 
-				var search = $('<div class = "container" style = "padding: 3px;"><div class = "search-name">'+ name +'</div><div class = "search-matches">(<b>'+ matches +'</b>)</div><input style = "float:right;" type="checkbox" name="vehicle" value="Bike"></div>');
+				var search = $('<div class = "container" style = "padding: 3px;"><div class = "search-name">'+ name +'</div><div class = "search-matches">(<b>'+ matches +'</b>)</div><input style = "float:right;" type="checkbox" class = "people-search-check-box" name = "peopleSearchCheckBox" value= "' + id + '"></div>');
 
 				$('.saved-search-head').append(search);
 			}
 	$('.saved-search-head').append("<br/>");
+
+	
+	
+	var button = document.getElementById("PEOPLE_SEARCH_SUBMIT_BUTTON");
+		var chkbox = document.getElementsByClassName("people-search-check-box");
+
+		function onChangeListener() {
+		    button.style.backgroundColor = "";
+		    for (var i = 0; i < chkbox.length; i++) {
+		        if (chkbox[i].checked) {
+		            button.style.backgroundColor = "lightgreen";
+		        }
+		    }
+		}
+
+		for (var i = 0; i < chkbox.length; i++) {
+		    var checkbox = chkbox[i];
+		    checkbox.addEventListener("change", onChangeListener);
+	}
+
 </script>  
-
-
- 

@@ -191,8 +191,8 @@ a:visited {
 	padding: 6px 5px 0px 3px; 
 	color: #FFF;
 }
- /*
-.toggle-bar-menu1111 {  
+ 
+.toggle-bar-menu {  
 	background-color: #95B3D7;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -209,7 +209,7 @@ a:visited {
 	border-radius: 3px;
 }  
 
-.toggle-bar-menu1111:hover  {
+.toggle-bar-menu:hover  {
 	background: -webkit-linear-gradient(#696969,#3f3f3f);
 	background: -o-linear-gradient(#696969,#3f3f3f);
 	background: -moz-linear-gradient(#696969,#3f3f3f);
@@ -217,7 +217,7 @@ a:visited {
 	color: #fff;
 }
 
-*/
+
 .toggle-bar-menu {  
     background-color: #95B3D7 ; 
     padding-left: 5px;
