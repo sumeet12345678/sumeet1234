@@ -427,11 +427,12 @@
 					$('#SAVED_PPL_SEARCHES_CONTAINER').html(data);
 					showHideProgress();
 					savedPeopleSearchesLoaded = true;
+					showHideDownSibling($(this));
 				});
 			}
-			
-			showHideDownSibling($(this));
-			
+		    else { 	
+				showHideDownSibling($(this));
+			}
 			
 		});
 		
