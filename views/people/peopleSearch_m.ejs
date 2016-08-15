@@ -413,16 +413,24 @@
 	 var g_hostUrl = "http://ekpeople.herokuapp.com" ;
 	//var g_hostUrl = "http://192.168.1.133:4000" ;  
 	
+	var savedPeopleSearchesLoaded = false;
+	
+	
+	
 		$('.expandIcon1').on('click', function(){
 		
-			showHideDownSibling($(this));
 			
-			showHideProgress();
-			$.get(g_hostUrl + "/savedPeopleSearches").done(function(data){
-				console.log(data);
-				$('#SAVED_PPL_SEARCHES_CONTAINER').html(data);
+			if(!savedPeopleSearchesLoaded) {
 				showHideProgress();
-			});
+				$.get(g_hostUrl + "/savedPeopleSearches").done(function(data){
+					console.log(data);
+					$('#SAVED_PPL_SEARCHES_CONTAINER').html(data);
+					showHideProgress();
+					savedPeopleSearchesLoaded = true;
+				});
+			}
+			
+			showHideDownSibling($(this));
 			
 			
 		});
