@@ -1,15 +1,16 @@
  
 	
 <style>
-		#SEARCH {
-	width: 80%;
+  #SEARCH {
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
+  }
 
 	#saved-search-head {
 		width: 100%;
-	}
+	} 
+	
  .name-content {
  	width: 55%;
  	margin-top: 3px;
@@ -25,14 +26,14 @@
 
  .search-name{
  	width: 65%;
- 	min-height: 35px;  
  	cursor: pointer;
  	display: inline-block;
+ 	color: #7D7A7A;
+ 	font-weight: bold;
  }
 
 .search-matches {
-	width: 20%; 
-	min-height: 35px; 
+	width: 20%; 	
 	color: #696969; 
 	text-align: center; 
 	display: inline-block;
@@ -52,11 +53,11 @@
 
 
 .saved-search-head .container:nth-child(odd) {
-	background: #ccc;
+	background: #e2e3dc;
 }
 
 .saved-search-head .container:nth-child(even) {
-	background: green;
+	background: #e9eae1;
 }
 
 @media screen and (max-width: 767px){
@@ -66,6 +67,7 @@
 		
 		.search-name{
  			width: 55%;
+ 			color: #3f3f3f;
  		}
 
  		..search-matches{
@@ -81,7 +83,7 @@
 		.search-match-header {
 			width: 30%; 
 			display: inline-block; 
-			text-align: center;
+			text-align: left;
 		}
 
 		.buttons {
@@ -113,77 +115,69 @@
 
  
 
-	<div id = "SEARCH">
-		<div  style = "border: 1px solid; display: inline-block; width: 100%; height:30px;">
-			<div class = "search-name-header">
-				<span>Name</span>
-			</div>
-			<div class = "search-match-header">
-				<span>Matches</span>
-			</div>
-   		</div>
+	<div id = "SEARCH" style = "padding-left: 5px; padding-right: 5px;">		
+   		<div style = 'height: 5px;'></div>
+   		<div class = "container" style = "padding: 3px; font-weight: bold;"><div class = "search-name">Name</div><div class = "search-matches">Matches</div><input value = "  ...  " style = "float: right; font-weight: bold; border-radius: 1px; background-color: #ccd674;" type = "button"></div>
 
-   		<div class = "saved-search-head" style = "width: 100%; margin-top: 5px;">
-   			
-   		</div>
+   		<div class = "saved-search-head" style = "width: 100%; margin-top: 5px;"></div>
    	</div>
    	
  
 <script>
 	
 	var savedSearchesInfo= [
-       {	
-       	   	"id" : "123456789", 
-           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
-           	"Matches": "965"
-           
-       },
-       {
-       		"id" : "123456789",
-           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
-           	"Matches": "1235"
-          
-       },
-       {
-       		"id" : "123456789",
-           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
-           	"Matches": "796"
-           
-       },
-       {
-       		"id" : "123456789",
-           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
-           	"Matches": "796"
-           
-       },
-       {
-       		"id" : "123456789",
-           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
-           	"Matches": "796"
-           
-       },
-       {
-       		"id" : "123456789",
-           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
-           	"Matches": "796"
-           
-       }
+	       {	
+	       	   	"id" : "123456789", 
+	           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
+	           	"matches": 965
+	           
+	       },
+	       {	
+	       	   	"id" : "123456789", 
+	           	"name": "Fresher Java, 2016 passout, Bangalore",
+	           	"matches": 5091
+	           
+	       },
+	       {	
+	       	   	"id" : "123456789", 
+	           	"name": "Startup Cofounder, Big Data, NIT/IIT, Bangalore",
+	           	"matches": 91
+	           
+	       },
+	       {	
+	       	   	"id" : "123456789", 
+	           	"name": "Life partner, educated, working, smart, Bangaore, 23 - 29",
+	           	"matches": 965
+	           
+	       },
+	       {	
+	       	   	"id" : "123456789", 
+	           	"name": "Fresher Java, 2016 passout, Bangalore",
+	           	"matches": 5091
+	           
+	       },
+	       {	
+	       	   	"id" : "123456789", 
+	           	"name": "Startup Cofounder, Big Data, NIT/IIT, Bangalore",
+	           	"matches": 91
+	           
+	       }
    ];
 
-   var reviewArr = savedSearchesInfo;
+    var reviewArr = savedSearchesInfo;
 	
 	for(var i = 0;i < reviewArr.length;i++)
 			{
 				var obj = reviewArr[i];
 
 				var name = obj.name;
-				var matches = obj.Matches;
+				var matches = obj.matches;   
 
-				var search = $('<div class = "container"><div class = "search-name">'+ name +'</div><div class = "search-matches">'+ matches +'</div><div class = "buttons"><input type = "button" value = "Save"></div></div>');
+				var search = $('<div class = "container" style = "padding: 3px;"><div class = "search-name">'+ name +'</div><div class = "search-matches">(<b>'+ matches +'</b>)</div><input style = "float:right;" type="checkbox" name="vehicle" value="Bike"></div>');
 
 				$('.saved-search-head').append(search);
 			}
-
+	$('.saved-search-head').append("<br/>");
 </script>  
 
 

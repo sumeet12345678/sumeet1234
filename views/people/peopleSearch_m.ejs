@@ -222,7 +222,7 @@
 					<span class="barTitle">Saved Searches</span>
 	        </div> 
 	        
-	        <div  id = "SAVED_PPL_SEARCHES_CONTAINER">
+	        <div  id = "SAVED_PPL_SEARCHES_CONTAINER" style = "margin-top: 3px;">
 	        	    
 	        </div>
         </div>
@@ -231,10 +231,10 @@
 				<div   id = "PPL_SEARCHES" class= "toggle-bar-menu" >  
 		         	<span class="expandIcon2" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>    						
 					<img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/>
-					<span class="barTitle">Search</span>
+					<span class="barTitle">People Finder</span>
 				</div>      
 				
-				<div>
+				<div  style = "padding-left: 5px; padding-right: 5px;">
 	        		   <form>
 	  					<table width="100%">
 	  					<tr height = "8px">
@@ -410,12 +410,18 @@
 
 	<script>
 	
+	 var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+	//var g_hostUrl = "http://192.168.1.133:4000" ;  
+	
 		$('.expandIcon1').on('click', function(){
 		
 			showHideDownSibling($(this));
-			$.get("/savedPeopleSearches").done(function(data){
+			
+			showHideProgress();
+			$.get(g_hostUrl + "/savedPeopleSearches").done(function(data){
 				console.log(data);
 				$('#SAVED_PPL_SEARCHES_CONTAINER').html(data);
+				showHideProgress();
 			});
 			
 			
