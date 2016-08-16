@@ -119,11 +119,15 @@
    		<div class = "container" style = "padding: 3px; font-weight: bold;"><div class = "search-name">Name</div><div class = "search-matches">Matches</div><input class = "" id="PEOPLE_SEARCH_SUBMIT_BUTTON" value = "  ...  " type = "button" style = "float: right; font-weight: bold; border-radius: 1px; background-color: ;"></div>
 
    		<div class = "saved-search-head" style = "width: 100%; margin-top: 5px;"></div>
+
+   		<div class = "people-search-menu" style = "display: none; min-width: 60px; min-height: 40px; float: right; margin-right: 20px; top: 20px;  border: 1px solid; background-color: #dcdcdc;">
+   			
+   		</div>
    	</div>
    	
  
  
- <form class = "people-search-form" action = "http://ekpeople.herokuapp.com/p/search" method = "post">  	
+ <form class = "people-search-form" action = "/p/search" method = "post">  	
    	 <input id = "HIDDEN_CHECKED_INPUT" type="hidden" name="savedSearchesChkBox" value="">
 
 </form>
@@ -131,32 +135,39 @@
    	
  
 <script>
+
+
+
+		$('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
+			//alert("hi");
+			$('.people-search-menu').toggle();
+		});
 	
-    	$('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
+    	// $('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
     	  
-    		var chkbox = document.getElementsByClassName("people-search-check-box");
+    	// 	var chkbox = document.getElementsByClassName("people-search-check-box");
 				
 			 
-			        var checkedBoxString = "";
+			  //       var checkedBoxString = "";
 			         
-				    for (var i = 0; i < chkbox.length; i++) {
-				        if (chkbox[i].checked) {
-				          checkedBoxString = checkedBoxString + chkbox[i].value + ",";
+				 //    for (var i = 0; i < chkbox.length; i++) {
+				 //        if (chkbox[i].checked) {
+				 //          checkedBoxString = checkedBoxString + chkbox[i].value + ",";
 				          
-				        }
-				    }
+				 //        }
+				 //    }
 				    
-				 $("#HIDDEN_CHECKED_INPUT").val(checkedBoxString);
+				 // $("#HIDDEN_CHECKED_INPUT").val(checkedBoxString);
     	
     	
-    	     if(checkedBoxString != ""){
-    			$('.people-search-form').submit();
-    		 }
-    		 else {
-    			alert("No check Box Selected");
-    		 }
+    	//      if(checkedBoxString != ""){
+    	// 		$('.people-search-form').submit();
+    	// 	 }
+    	// 	 else {
+    	// 		alert("No check Box Selected");
+    	// 	 }
     		 
-    	});
+    	// });
 
 
 	
@@ -232,5 +243,48 @@
 		    var checkbox = chkbox[i];
 		    checkbox.addEventListener("change", onChangeListener);
 	}
+
+
+	var savedSearchMenuItem = [
+		{ 
+			"id" : "",
+			"text" : "DELETE"
+		},
+		{
+			"id" : "",
+			"text" : "EDIT"
+		},
+		{
+			"id" : "",
+			"text" : "MERGE"
+		},
+		{
+			"id" : "",
+			"text" : "NOTIFICATION SETTING"
+		},
+		{
+			"id" : "",
+			"text" : "RUN"
+		},
+		{
+			"id" : "",
+			"text" : "VIEW" 
+		}
+
+];
+
+
+
+ for(var i = 0; i < savedSearchMenuItem.length; i++) {
+
+ 	var object = savedSearchMenuItem [i];
+
+ 	var text = object.text;
+
+ 	var menu = $('<div class = "menu-items">' + text + '</div><hr>');
+
+ 	$('.people-search-menu').append(menu);
+ }
+
 
 </script>  
