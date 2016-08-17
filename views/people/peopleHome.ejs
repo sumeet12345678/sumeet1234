@@ -1,4 +1,4 @@
- 	<!--
+ <!--	
  	<link href="<%=hostUrl%>/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
 	<link rel="stylesheet" href="<%=hostUrl%>/styles/common.css"> 
     <link rel="stylesheet" href="<%=hostUrl%>/styles/common2.css"> 
@@ -125,8 +125,12 @@
 			$('.people-finder-child-div').hide();
 			$('#PEOPLE_HOME_FINDER').show();
 			
-			//showHideProgress();
-			$('#PEOPLE_SEARCH_CRITERIAS').load('<%=hostUrl%>/peopleSearch');
+			showHideProgress();
+			$('#PEOPLE_SEARCH_CRITERIAS').load(hostUrl + '/peopleSearch', function(){
+			     //alert("12345");
+			     showHideProgress();
+			   
+			});
 			
 		});
 	    
