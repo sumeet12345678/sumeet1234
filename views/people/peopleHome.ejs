@@ -126,27 +126,12 @@
 			$('#PEOPLE_HOME_FINDER').show();
 			
 			 var peopleSearchLoaded= false;
-			
-			  function loadPeopleSearch() {
-	    	if (!peopleSearchLoaded) {
-	    		showHideProgress();
-	    		$.get(hostUrl + '/peopleSearch', function(data) {
-	    				$('#PEOPLE_SEARCH_CRITERIAS').append(data);
-	    				peopleSearchLoaded = true;
-	    				showHideProgress();
-	    		});
-	    	}
-
-	    }
-			
-			
-			
-			//showHideProgress();
+			showHideProgress();
 			$('#PEOPLE_SEARCH_CRITERIAS').load(hostUrl + '/peopleSearch', function(){
 			     //alert("12345");
 			     showHideProgress();
 			   
-			});//
+			});
 			
 		});
 	    
