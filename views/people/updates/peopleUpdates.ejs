@@ -86,9 +86,9 @@
 
 	<script>
 
-	var hostUrl = "http://localhost:4000";
+	//var hostUrl = "http://localhost:4000";
 
-	//var hostUrl = "https://ekpeople-melbin.herokuapp.com";
+	var hostUrl = "https://ekpeople.herokuapp.com";
 
 	
 	$('#PEOPLE_UPDTS_FEED_BTN').on('click', function() {
@@ -114,9 +114,11 @@
 
 		function peopleFeedLoad() {
 			if(!ajaxCallPeopleLoad) {
+				showHideProgress();
 				$.get(hostUrl + '/peopleFeed', function(data) {
 				$('.people-update-container').append(data);
 				ajaxCallPeopleLoad = true;
+				showHideProgress();
 			});
 			}
 			
