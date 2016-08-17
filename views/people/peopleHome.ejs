@@ -117,7 +117,7 @@
 	    $('#PEOPLE_FINDER_ICON').on('click', function() {
 			$('#PEOPLE_HOME').toggle();  
 		});  
-	      
+	     
 	    
 	    $('#PEOPLE_FINDER_BTN').on('click', function() {
 	       
@@ -125,6 +125,7 @@
 			$('.people-finder-child-div').hide();
 			$('#PEOPLE_HOME_FINDER').show();
 			
+			 var peopleSearchLoaded= false;
 			showHideProgress();
 			$('#PEOPLE_SEARCH_CRITERIAS').load(hostUrl + '/peopleSearch', function(){
 			     //alert("12345");

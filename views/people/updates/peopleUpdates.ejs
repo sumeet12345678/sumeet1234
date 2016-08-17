@@ -9,7 +9,7 @@
 					 	   <td tabindex="3" align = left valign = middle style = "border-right: 1px solid #fff" class = "connections-table-icon-con" >
 					 		  <div style = "margin-left: 0px;" id = "contag-first-tab" >
 					 	 		  	<div id = "PEOPLE_UPDTS_ALERT_BTN" class = "pplupdt_cont_cons_btn pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-								  		<img   width="28" height="24" src="/media/images/icons/add-2-contaxonomy-blk.png" />
+								  		<img   width="28" height="24" src="/media/images/icons/connections.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 12px;">Alert</span>
 								     </div> 
 							   </div> 
@@ -85,6 +85,11 @@
 
 
 	<script>
+
+	//var hostUrl = "http://localhost:4000";
+
+	var hostUrl = "https://ekpeople-melbin.herokuapp.com";
+
 	
 	$('#PEOPLE_UPDTS_FEED_BTN').on('click', function() {
 
@@ -95,101 +100,27 @@
 			$('#PEOPLE_UPDATES_OPTIONS_FEED_CNTNR').show();
 
 			$('.people-update-container').show();
+
+			peopleFeedLoad();
 	});
 
-	$('#PEOPLE_UPDATES_FEED_CONNECTIONS').on('click', function() {
-		$('#PEOPLE_UPDATE_CONNECTION_JSON').toggle();
-	});
 
 
-   var feed_menu_json = [
-
-	    {'id':'PEOPLE_UPDATES_FEED_TEAMS',
-	     'name': 'Teams',
-	     'count' : '0'
-	    },
-	    {'id':'PEOPLE_UPDATES_FEED_GROUPS',
-	     'name': 'Groups',
-	     'count' : '0'
-	    },
-	    {'id':'PEOPLE_UPDATES_FEED_CONNECTIONS',
-	     'name': 'Connections',
-	     'count' : '43'
-	    }
-
-	]
-
-	var feed_json = [{  
-		   
-     'teams' : [    {"total_count": '32'},
-     
-                    { "id" : "id1",  
-                      "name" : "Team 1",
-                      "count" : "20",
-                      "url"       : ""
-                    },
-                    
-                    { "id" : "id2", 
-                      "name" : "Team 2",
-                      "count" : "12",
-                      "url"       : ""
-                    }        
-     ],
-     
-     'groups' : [    {'total_count' : '65'},
-     
-                    { "id" : "id1",
-                      "name" : "Group 1",
-                      "count" : "10",
-                      "url"       : ""
-                    },
-                    { "id" : "id2", 
-                      "name" : "Group 2",
-                      "count" : "55",
-                      "url"       : ""
-        }        
-     
-     ],
-     
-     'connections': [  {'total_count' : '110'},
-                    
-	                   { "id" : "id1",
-	                      "name" : "Gossip Gang",
-	                      "count" : "20",
-	                      "url"       : ""
-	                   },
-	                   { "id" : "id2", 
-	                      "name" : "JEC Folks",
-	                      "count" : "90",
-	                      "url"       : ""
-	                   }                    
-	                ]
-                
-}];
-
-		
-
-		for(var i = 0; i < feed_menu_json.length; i++) {
-			var feed = feed_menu_json[i];
-
-			var id = feed.id;
-			var name = feed.name;
-			var count = feed.count;
-
-			var feeds = $('<div><div  id = '+ id +'  class= "toggle-bar-menu" style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/> </span> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div><div class = "json-data">hggFDDFDFD   </div><div>');
-
-            
-			$('.people-update-container').append(feeds);
 
 
-			$('.expandIcon1').on('click', function() {
-					showHideDownSibling($(this));
-			})
+    //   Ajax call for PeopleFeed page
 
+    	var ajaxCallPeopleLoad = false;
+
+		function peopleFeedLoad() {
+			if(!ajaxCallPeopleLoad) {
+				$.get(hostUrl + '/peopleFeed', function(data) {
+				$('.people-update-container').append(data);
+				ajaxCallPeopleLoad = true;
+			});
+			}
+			
 		}
 
-		// var feedJsonData = feed_json.connections;
-
-		// for(var i = 0; )
 
 </script>

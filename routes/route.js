@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
  
-var g_hostUrl = "http://ekpeople.herokuapp.com" ;
+var g_hostUrl = "https://ekpeople-melbin.herokuapp.com" ;
 //var g_hostUrl = "http://localhost:4000" ;
 
 //var localOrRemote = "local";
@@ -18,9 +18,25 @@ router.get('/', function(req, res, next) {
   router.get('/savedPeopleSearches', function(req, res, next) {
 	  res.render('people/search/savedPeopleSearches.ejs');	    
 	});
-  
+
   router.get('/peopleUpdates', function(req, res, next) {
 	  res.render('people/updates/peopleUpdates.ejs');	    
+	});
+
+  router.get('/peopleFeed', function(req, res, next) {
+	  res.render('people/updates/peopleFeed.ejs');	    
+	});
+
+  router.get('/teamsFeed', function(req, res, next) {
+	  res.render('people/updates/teamsFeed.ejs');	    
+	});
+
+  router.get('/groupFeed', function(req, res, next) {
+	  res.render('people/updates/groupFeed.ejs');	    
+	});
+
+  router.get('/connectionFeed', function(req, res, next) {
+	  res.render('people/updates/connectionFeed.ejs');	    
 	});
   
   router.post('/p/search', function(req, res, next) {

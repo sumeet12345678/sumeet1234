@@ -1,0 +1,45 @@
+<script>
+
+	var feed_json = {
+			
+
+				"connections": [
+					// {
+					// 	"total_count": "110"
+					// },
+
+					{
+						"id": "id1",
+						"name": "Gossip Gang",
+						"count": "20",
+						"url": ""
+					}, {
+						"id": "id2",
+						"name": "JEC Folks",
+						"count": "90",
+						"url": ""
+					}
+				]
+
+				};
+
+
+	var feedConnections = feed_json.connections;
+
+		for(var i = 0; i < feedConnections.length; i++ ) {
+			var connections = feedConnections[i];
+
+			var id = connections.id;
+			var name = connections.name;
+			var count = connections.count;
+
+			var connectionFeed = $('<div><div  id = '+ id +' class= "sibling-feed-menu"  style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/> </span> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div></div>');
+
+			//var connectionJson = $('#PEOPLE_UPDATES_FEED_CONNECTIONS');
+			$('#ID3').append(connectionFeed);
+
+		}
+
+
+
+</script>

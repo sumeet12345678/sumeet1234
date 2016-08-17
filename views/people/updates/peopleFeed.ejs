@@ -1,0 +1,123 @@
+<script>
+
+//var hostUrl = "http://localhost:4000";
+
+var hostUrl = "https://ekpeople-melbin.herokuapp.com";
+
+var feed_menu_json = [
+
+	    {'id':'PEOPLE_UPDATES_FEED_TEAMS',
+	     'name': 'Teams',
+	     'count' : '0',
+		 'img' : {
+		 			'loc': '/media/images/icons/team-blk.png',
+		 			'W' : '17',
+		 			'H' : '18'
+		 },
+		 'sibling' : 'ID1',
+		 'url' : ''
+	    },
+
+	    {'id':'PEOPLE_UPDATES_FEED_GROUPS',
+	     'name': 'Groups',
+	     'count' : '0',
+		 'img' : {
+		 			'loc': '/media/images/icons/crowd-black.png',
+		 			'W' : '17',
+		 			'H' : '18'
+		 },		 
+		 'sibling' : 'ID2'
+	    }, 
+
+		{'id':'PEOPLE_UPDATES_FEED_CONNECTIONS',
+	     'name': 'Connections',
+	     'count' : '43',
+		 'img' : {
+		 			'loc': '/media/images/icons/connections.png',
+		 			'W' : '19',
+		 			'H' : '20'
+		 },		 
+		 'sibling' : 'ID3'
+	    }
+	  
+	]
+
+
+
+		
+
+		for(var i = 0; i < feed_menu_json.length; i++) {
+			var feed = feed_menu_json[i];
+
+			var id = feed.id;
+			var name = feed.name;
+			var count = feed.count;
+			var sibling = feed.sibling;
+			var image = feed.img;
+
+				var loc = image.loc;
+				var h = image.H;
+				var w = image.W;
+
+
+            var stringHTML = '<div><div id = '+ id +' class= "toggle-bar-menu" style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/> </span><img  width= '+w+' height= '+h+' top-margin:"5px" src= "'+ loc +'"/> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div><div class = "menu-bar-sibling" id = '+ sibling +' style = "display: none;"></div><div>';
+           // console.log(stringHTML);
+
+			var feeds = $(stringHTML);
+            
+			$('.people-update-container').append(feeds);
+		}
+
+		$('.expandIcon1').on('click', function() {
+					showHideDownSibling($(this));
+
+					// if(){
+
+						
+					// }
+
+					teamsFeedLoad();
+					groupFeedLoad();
+					connectionFeedLoad();
+
+			});
+
+		var ajaxCallTeam = false;
+
+		function teamsFeedLoad() {
+			if(!ajaxCallTeam) {
+				$.get(hostUrl + '/teamsFeed', function(team) {
+				$('#ID1').append(team);
+				ajaxCallTeam = true;
+			});
+			}
+			
+		}
+
+		var ajaxCallGroup = false;
+
+		function groupFeedLoad() {
+			if(!ajaxCallGroup) {
+				$.get(hostUrl + '/groupFeed', function(group) {
+				$('#ID2').append(group);
+				ajaxCallGroup = true;
+			});
+			}
+			
+		}
+
+		var ajaxCallConnection = false;
+
+		function connectionFeedLoad() {
+			if(!ajaxCallConnection) {
+				$.get(hostUrl + '/connectionFeed', function(connection) {
+				$('#ID3').append(connection);
+				ajaxCallConnection = true;
+			});
+			}
+			
+		}
+
+		
+
+</script>

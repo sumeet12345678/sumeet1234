@@ -1,0 +1,45 @@
+<script>
+
+	var feed_json = {
+
+				"teams": [
+						// {
+						// "total_count": "32"
+						// },	
+						{
+						"id": "id1",
+						"name": "Team 1",
+						"count": "10",
+						"url": ""
+						}, 
+						{
+						"id": "id2",
+						"name": "Team 2",
+						"count": "55",
+						"url": ""
+						}
+						]
+
+
+				};
+
+
+	var feedTeams = feed_json.teams;
+
+		for(var i = 0; i < feedTeams.length; i++ ) {
+			var team = feedTeams[i];
+
+			var id = team.id;
+			var name = team.name;
+			var count = team.count;
+
+			var teamFeed = $('<div><div  id = '+ id +' class= "sibling-feed-menu"  style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/> </span> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div></div>');
+
+			//var connectionJson = $('#PEOPLE_UPDATES_FEED_CONNECTIONS');
+			$('#ID1').append(teamFeed);
+
+		}
+
+
+
+</script>

@@ -1,0 +1,80 @@
+<script>
+
+	var feed_json = {
+
+				"teams": [{
+						"total_count": "32"
+						},	
+						{
+						"id": "id1",
+						"count": "10",
+						"url": ""
+						}, 
+						{
+						"id": "id2",
+						"name": "Group 2",
+						"count": "55",
+						"url": ""
+						}
+
+					],
+
+			 "groups" : [ 
+			 			{
+			 			"total_count": '65'
+			 				},
+			     
+			             {
+						  "id" : "id1",
+			              "name" : "Group 1",
+			              "count" : "10",
+			              "url"       : ""
+			              },
+			              { "id" : "id2", 
+			                "name" : "Group 2",
+			                "count" : "55",
+			                "url"       : ""
+			               }        
+			     
+			     		],
+
+				"connections": [
+					// {
+					// 	"total_count": "110"
+					// },
+
+					{
+						"id": "id1",
+						"name": "Gossip Gang",
+						"count": "20",
+						"url": ""
+					}, {
+						"id": "id2",
+						"name": "JEC Folks",
+						"count": "90",
+						"url": ""
+					}
+				]
+
+				};
+
+
+	var feedGroups = feed_json.groups;
+
+		for(var i = 0; i < feedGroups.length; i++ ) {
+			var group = feedGroups[i];
+
+			var id = group.id;
+			var name = group.name;
+			var count = group.count;
+
+			var groupFeed = $('<div><div  id = '+ id +' class= "sibling-feed-menu"  style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/> </span> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div></div>');
+
+			//var connectionJson = $('#PEOPLE_UPDATES_FEED_CONNECTIONS');
+			$('#ID2').append(groupFeed);
+
+		}
+
+
+
+</script>
