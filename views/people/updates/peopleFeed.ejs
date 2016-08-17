@@ -2,7 +2,7 @@
 
 //var hostUrl = "http://localhost:4000";
 
-var hostUrl = "https://ekpeople-melbin.herokuapp.com";
+var hostUrl = "http://ekpeople.herokuapp.com";
 
 var feed_menu_json = [
 
@@ -10,7 +10,7 @@ var feed_menu_json = [
 	     'name': 'Teams',
 	     'count' : '0',
 		 'img' : {
-		 			'loc': '/media/images/icons/team-blk.png',
+		 			'loc': 'http://ekpeople.herokuapp.com/media/images/icons/people-updates/team-blk.png',
 		 			'W' : '17',
 		 			'H' : '18'
 		 },
@@ -22,7 +22,7 @@ var feed_menu_json = [
 	     'name': 'Groups',
 	     'count' : '0',
 		 'img' : {
-		 			'loc': '/media/images/icons/crowd-black.png',
+		 			'loc': 'http://ekpeople.herokuapp.com/media/images/icons/people-updates/crowd-black.png',
 		 			'W' : '17',
 		 			'H' : '18'
 		 },		 
@@ -33,9 +33,9 @@ var feed_menu_json = [
 	     'name': 'Connections',
 	     'count' : '43',
 		 'img' : {
-		 			'loc': '/media/images/icons/connections.png',
-		 			'W' : '19',
-		 			'H' : '20'
+		 			'loc': 'http://ekpeople.herokuapp.com/media/images/icons/people-updates/connections.png',
+		 			'W' : '21',
+		 			'H' : '23'
 		 },		 
 		 'sibling' : 'ID3'
 	    }
@@ -86,9 +86,11 @@ var feed_menu_json = [
 
 		function teamsFeedLoad() {
 			if(!ajaxCallTeam) {
+				showHideProgress();
 				$.get(hostUrl + '/teamsFeed', function(team) {
 				$('#ID1').append(team);
 				ajaxCallTeam = true;
+				showHideProgress();
 			});
 			}
 			
@@ -98,9 +100,11 @@ var feed_menu_json = [
 
 		function groupFeedLoad() {
 			if(!ajaxCallGroup) {
+				showHideProgress();
 				$.get(hostUrl + '/groupFeed', function(group) {
 				$('#ID2').append(group);
 				ajaxCallGroup = true;
+				showHideProgress();
 			});
 			}
 			
@@ -110,9 +114,11 @@ var feed_menu_json = [
 
 		function connectionFeedLoad() {
 			if(!ajaxCallConnection) {
+				showHideProgress();
 				$.get(hostUrl + '/connectionFeed', function(connection) {
 				$('#ID3').append(connection);
 				ajaxCallConnection = true;
+				showHideProgress();
 			});
 			}
 			

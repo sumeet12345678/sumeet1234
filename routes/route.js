@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
  
-var g_hostUrl = "https://ekpeople-melbin.herokuapp.com" ;
+var g_hostUrl = "https://ekpeople.herokuapp.com" ;
 //var g_hostUrl = "http://localhost:4000" ;
 
 //var localOrRemote = "local";
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 	});
 
   router.get('/peopleUpdates', function(req, res, next) {
-	  res.render('people/updates/peopleUpdates.ejs');	    
+	  res.render('people/updates/peopleUpdates.ejs', {hostUrl:g_hostUrl});	    
 	});
 
   router.get('/peopleFeed', function(req, res, next) {
