@@ -6,7 +6,9 @@
 	    <title>My App</title>
 	    
 	    
-	 <!-- <link href="/styles/common.css" rel="stylesheet" />  -->
+	    <% if(urls.ENVIRON == "LOCAL") { %>
+	    	 <link href="/styles/common.css" rel="stylesheet" />
+	    <%}%>
 	        
 	    <script src="/lib/JQuery/jquery.1.9.1-min.js"></script>
 	    
@@ -46,7 +48,7 @@
 	<body> 
 		
 	 
-	 <% if(localOrRemoteUrl === "remote") { %>
+	 <% if(urls.ENVIRON == "HEROKU") { %>
                <script>
                    var xhr = new XMLHttpRequest();
                     xhr.open("GET", "http://ekpplcommon.herokuapp.com", true);
@@ -59,7 +61,7 @@
           
        <% }  %> 
        
-        <% if(localOrRemoteUrl === "local") { %>
+        <% if(urls.ENVIRON == "LOCAL") { %>
              <% include ../partials/top_menu_bar.ejs %> 
              <% include ../partials/footer_bar.ejs %> 
         <% } %>

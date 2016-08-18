@@ -125,7 +125,7 @@
 			 		
   	 			.item-text
 				{
-					display: inline-block;
+					display: inline-block;PEOPLE_URL
 					margin-top: 5px;
 				}
 
@@ -342,7 +342,7 @@
 	<script>
 	
 	 //var g_hostUrl = "https://ekpeople-melbin.herokuapp.com" ;
-	 var g_hostUrl = "http://localhost:4000" ;  
+	 //var g_hostUrl = "http://localhost:4000" ;  
 	
 	var savedPeopleSearchesLoaded = false;
 	
@@ -353,7 +353,7 @@
 			
 			if(!savedPeopleSearchesLoaded) {
 				showHideProgress();
-				$.get(g_hostUrl + "/savedPeopleSearches").done(function(data){
+				$.get("<%=urls.PEOPLE_URL%>/savedPeopleSearches").done(function(data){
 					console.log(data);
 					$('#SAVED_PPL_SEARCHES_CONTAINER').html(data);
 					showHideProgress();
@@ -367,7 +367,7 @@
 			
 		});
 		
-		$('.expandIcon2').on('click', function(){
+		$('.expandIcon2').on('click', function(){  
 			
 			showHideDownSibling($(this));
 			

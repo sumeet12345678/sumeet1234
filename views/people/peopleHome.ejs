@@ -1,8 +1,8 @@
- <!--	
- 	<link href="<%=hostUrl%>/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
-	<link rel="stylesheet" href="<%=hostUrl%>/styles/common.css"> 
-    <link rel="stylesheet" href="<%=hostUrl%>/styles/common2.css"> 
- -->
+<% if(urls.ENVIRON == "LOCAL") { %>
+ 	<link href="<%=urls.PEOPLE_URL%>/styles/profiles/grey-top-darkgrey-push-green-buttom.css" rel="stylesheet" />
+	<link rel="stylesheet" href="<%=urls.PEOPLE_URL%>/styles/common.css"> 
+    <link rel="stylesheet" href="<%=urls.PEOPLE_URL%>/styles/common2.css"> 
+ <% } %>
 	
 	<style>
 		
@@ -88,8 +88,6 @@
 	 
 	<script>
 
-		var hostUrl = "http://localhost:4000";
-		//var hostUrl = "http://ekpeople.herokuapp.com";
 	    var peopleSearchLoaded= false;
         var peopleUpdatesLoaded = false;
 
@@ -102,9 +100,9 @@
 	    function loadPeopleUpdates() {
 	    	if (!peopleUpdatesLoaded) {
 	    		showHideProgress();
-	    		$.get(hostUrl + '/peopleUpdates', function(data) {
+	    		$.get('<%=urls.PEOPLE_URL%>/peopleUpdates', function(data) {
 	    				$('#PEOPLE_HOME_UPDATES').append(data);
-	    				peopleUpdatesLoaded = true;
+	    				peopleUpdatesLoaded = true;  
 	    				showHideProgress();
 	    		});
 	    	}
@@ -131,7 +129,7 @@
 	    function loadPeopleSearch() { 
 				 if(!peopleSearchLoaded) {
 		    		showHideProgress();
-				     $.get(hostUrl + '/peopleSearch', function(data){
+				     $.get('<%=urls.PEOPLE_URL%>/peopleSearch', function(data){
 					     $('#PEOPLE_SEARCH_CRITERIAS').append(data);
 					     peopleSearchLoaded = true;
 					     //showHideProgress();
