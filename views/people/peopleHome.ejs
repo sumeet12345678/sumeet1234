@@ -88,9 +88,9 @@
 	 
 	<script>
 
-		//var hostUrl = "http://localhost:4000";
-		var hostUrl = "http://ekpeople.herokuapp.com";
-	    
+		var hostUrl = "http://localhost:4000";
+		//var hostUrl = "http://ekpeople.herokuapp.com";
+	    var peopleSearchLoaded= false;
         var peopleUpdatesLoaded = false;
 
 	    $('#PEOPLE_UPDATES').on('click', function() {
@@ -120,21 +120,25 @@
 	     
 	    
 	    $('#PEOPLE_FINDER_BTN').on('click', function() {
-	       
-			//hide containers of all other buttons, then make an AJAX call for people_finder and insert
-			$('.people-finder-child-div').hide();
-			$('#PEOPLE_HOME_FINDER').show();
-			
-			 var peopleSearchLoaded= false;
-			showHideProgress();
-			$('#PEOPLE_SEARCH_CRITERIAS').load(hostUrl + '/peopleSearch', function(){
-			     //alert("12345");
-			     showHideProgress();
-			   
-			});
-			
+		       
+				//hide containers of all other buttons, then make an AJAX call for people_finder and insert
+				$('.people-finder-child-div').hide();
+				$('#PEOPLE_HOME_FINDER').show();
+				loadPeopleSearch();	
+				 
 		});
 	    
+	    function loadPeopleSearch() { 
+				 if(!peopleSearchLoaded) {
+		    		showHideProgress();
+				     $.get(hostUrl + '/peopleSearch', function(data){
+					     $('#PEOPLE_SEARCH_CRITERIAS').append(data);
+					     peopleSearchLoaded = true;
+					     //showHideProgress();
+						});
+				 }
+		 } 
+
 	    $('#PEOPLE_CONNECTIONS_BTN').on('click', function() {
 	    
 	    	loadContaxgonomy(function() {
