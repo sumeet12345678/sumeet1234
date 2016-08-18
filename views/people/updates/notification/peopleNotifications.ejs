@@ -1,0 +1,92 @@
+
+
+
+
+<script>
+
+var notification_menu_json = [
+
+	    {'id':'NOTIFICATION_CONNECTIONS',
+	     'name': 'Connection Requests',
+	     'count' : '10',
+		 'img' : {
+		 			'loc': '<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/team-blk.png',
+		 			'W' : '17',
+		 			'H' : '18'
+		 },
+		 'sibling' : 'user1',
+		 'url' : ''
+	    },
+
+	    {'id':'NOTIFICATION_COMMUNIQUES',
+	     'name': 'Communiques',
+	     'count' : '3',
+		 'img' : {
+		 			'loc': '<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/crowd-black.png',
+		 			'W' : '17',
+		 			'H' : '18'
+		 },		 
+		 'sibling' : 'user2'
+	    }, 
+
+		{'id':'NOTIFICATION_ANSWERS',
+	     'name': 'Answers, opinion seek-ed',
+	     'count' : '43',
+		 'img' : {
+		 			'loc': '<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/connections.png',
+		 			'W' : '21',
+		 			'H' : '23'
+		 },		 
+		 'sibling' : 'user3'
+	    }
+	  
+	]
+
+
+
+		
+
+		for(var i = 0; i < notification_menu_json.length; i++) {
+			var notification = notification_menu_json[i];
+
+			var id = notification.id;
+			var name = notification.name;
+			var count = notification.count;
+			var sibling = notification.sibling;
+			var image = notification.img;
+
+				var loc = image.loc;
+				var h = image.H;
+				var w = image.W;
+
+
+            var stringHTML = '<div><div id = '+ id +' class= "toggle-bar-menu" style = "margin-top: 10px;"> <span class="expandIcon2" style="float: right;"> <img  width="28" height="28" src="<%=urls.PEOPLE_URL%>/media/images/icons/arrow-Down-lines.png"/> </span><img  width= '+w+' height= '+h+' top-margin:"5px" src= "'+ loc +'"/> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div><div class = "menu-bar-sibling" id = '+ sibling +' style = "display: none;"></div><div>';
+           // console.log(stringHTML);
+
+			var notifications = $(stringHTML);
+            
+			$('.people-notification-container').append(notifications);
+		}
+
+
+		$('.expandIcon2').on('click', function() {
+				showHideDownSibling($(this));
+				connectionsRequests();
+		});
+
+
+		// Ajax call
+
+		var ajaxCallConnections = false;
+
+		function connectionsRequests() {
+			if(!ajaxCallConnections) {
+				showHideProgress();
+				$.get('<%=urls.PEOPLE_URL%>/connectionRequests', function(requests) {
+				$('#user1').append(requests);
+				ajaxCallConnections = true;
+				showHideProgress();
+			});
+			}
+			
+		}

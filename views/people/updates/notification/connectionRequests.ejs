@@ -1,0 +1,104 @@
+<style>
+
+
+.events {
+		width: 65%;
+		margin-left: 5px;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+.decesion {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-left: 3px;
+	float: right;
+	text-align: right;
+	display: inline-block;
+}
+
+.close-image {
+	margin-right: 10px;
+	margin-bottom: 9px;
+}
+
+.save-image {
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 726px)  {  
+  
+  .events {
+		width: 60%;
+		margin-left: 5px;
+		display: inline-block;
+	}
+
+	.decesion {
+		vertical-align: top;
+		width: 20%;
+		margin-left: 3px;
+		display: inline-block;
+	}
+
+.close-image {
+	margin-right: 3px;
+	margin-bottom: 9px;
+}
+
+.save-image {
+	margin-right: 3px;
+}
+	  
+}
+
+</style>
+
+<script>
+
+
+var connection_request_json = [
+
+	    {
+	 	 	'who':'123456',
+	 	 	'pic': 'http://ekgateway.herokuapp.com/media/images/profile_images/Mihika_JustDial.jpg',
+	     	'name': 'Sheljo James',
+	     	'node' : 'ACQ$Acquintances',
+			'url' : 'http://ekprofile.herokuapp.com'		 
+	    },
+		{
+	 	 	'who':'123457',
+	 	 	'pic': 'http://ekgateway.herokuapp.com/media/images/profile_images/Capt_Ajay.jpg',
+	     	'name': 'Xaviour Joseph',
+	     	'node' : 'ACQ$Acquintances',
+			'url' : 'http://ekprofile.herokuapp.com'		 
+	    }
+		
+
+	];
+
+
+
+		
+
+		for(var i = 0; i < connection_request_json.length; i++) {
+			var connections = connection_request_json[i];
+
+			var id = connections.who;
+			var name = connections.name;
+			var pic = connections.pic;
+			var url = connections.url;
+			var node = connections.node.substring(connections.node.indexOf("$") + 1, connections.node.length);
+
+
+            var stringHTML = '<div style = "width: 100%; height: auto; background-color: #e6e3e3;" ><div id = '+ id +' class= "" style = " margin-top: 10px;"><img width= "50" height= "50" top-margin:"5px" src= "'+ pic +'"/><a href = ' + url + '><div class = "events" style = "font-size:15px;"><span class="barTitle" style = " color: #696969; "><b>'+ name + '</b></span><span style = "color: #202020;"> wants to add you to "' + node + '".</span></div></a></span><div class = "decesion"><img class = "close-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/x-ncircled-blk.png" /><br><img class = "save-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/yes-ncrcled-blk.png" /></div></div></div>';
+
+			var connection_rqsts = $(stringHTML);
+            
+			$('#user1').append(connection_rqsts);
+		}
+
+
+
+
+</script>		

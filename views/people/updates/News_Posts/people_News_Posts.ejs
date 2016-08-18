@@ -1,0 +1,56 @@
+<script>
+
+
+
+var news_posts_menu_json = [
+
+	    {'id':'PEOPLE_UPDATES_POSTS_TEAMS',
+	     'name': 'Posts, Articles, Blogs',
+	     'count' : '17',
+		 'img' : {
+		 			'loc': '<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/team-blk.png',
+		 			'W' : '17',
+		 			'H' : '18'
+		 },
+		 //'sibling' : 'ID1',
+		 'url' : ''
+	    },
+
+	    {'id':'PEOPLE_UPDATES_FEED_GROUPS',
+	     'name': 'Trending, News',
+	     'count' : '29',
+		 'img' : {
+		 			'loc': '<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/crowd-black.png',
+		 			'W' : '17',
+		 			'H' : '18'
+		 },		 
+		 //'sibling' : 'ID2'
+	    }
+	  
+	]
+
+
+
+		
+
+		for(var i = 0; i < news_posts_menu_json.length; i++) {
+			var news = news_posts_menu_json[i];
+
+			var id = news.id;
+			var name = news.name;
+			var count = news.count;
+			var sibling = news.sibling;
+			var image = news.img;
+
+				var loc = image.loc;
+				var h = image.H;
+				var w = image.W;
+
+
+            var stringHTML = '<div><div id = '+ id +' class= "toggle-bar-menu" style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="<%=urls.PEOPLE_URL%>/media/images/icons/arrow-Down-lines.png"/> </span><img  width= '+w+' height= '+h+' top-margin:"5px" src= "'+ loc +'"/> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div><div>';
+           // console.log(stringHTML);
+
+			var news_posts = $(stringHTML);
+            
+			$('.people-news-container').append(news_posts);
+		}

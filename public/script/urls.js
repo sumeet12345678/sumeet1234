@@ -1,4 +1,4 @@
-// environ = 'LOCAL';
+ //environ = 'LOCAL';
 environ = 'HEROKU';
 
  TEAMS_TREE_URL = "http://localhost:8000/teams";

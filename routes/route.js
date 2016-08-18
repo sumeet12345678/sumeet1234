@@ -18,11 +18,11 @@ router.get('/', function(req, res, next) {
     }); 
     
   router.get('/savedPeopleSearches', function(req, res, next) {
-	  res.render('people/search/savedPeopleSearches.ejs');	    
+	  res.render('people/search/savedPeopleSearches.ejs', {urls: urls});	    
 	});
 
   router.get('/peopleUpdates', function(req, res, next) {
-	  res.render('people/updates/peopleUpdates.ejs', {hostUrl:g_hostUrl});	    
+	  res.render('people/updates/peopleUpdates.ejs', {urls: urls});	    
 	});
 
   router.get('/peopleFeed', function(req, res, next) {
@@ -39,6 +39,18 @@ router.get('/', function(req, res, next) {
 
   router.get('/connectionFeed', function(req, res, next) {
 	  res.render('people/updates/connectionFeed.ejs');	    
+	});
+  
+  router.get('/peopleNotifications', function(req, res, next) {
+	  res.render('people/updates/notification/peopleNotifications.ejs', {urls: urls});	    
+	}); 
+
+  router.get('/connectionRequests', function(req, res, next) {
+	  res.render('people/updates/notification/connectionRequests.ejs', {urls: urls});	    
+	}); 
+
+  router.get('/people_News_Posts', function(req, res, next) {
+	  res.render('people/updates/News_Posts/people_News_Posts.ejs', {urls: urls});	    
 	});
   
   router.post('/p/search', function(req, res, next) {

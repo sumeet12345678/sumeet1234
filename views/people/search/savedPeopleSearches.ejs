@@ -138,36 +138,36 @@
 
 
 
-		$('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
-			//alert("hi");
-			$('.people-search-menu').toggle();
-		});
+		// $('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
+		// 	//alert("hi");
+		// 	$('.people-search-menu').toggle();
+		// });
 	
-    	// $('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
+    	$('#PEOPLE_SEARCH_SUBMIT_BUTTON').on('click', function() {
     	  
-    	// 	var chkbox = document.getElementsByClassName("people-search-check-box");
+    		var chkbox = document.getElementsByClassName("people-search-check-box");
 				
 			 
-			  //       var checkedBoxString = "";
+			        var checkedBoxString = "";
 			         
-				 //    for (var i = 0; i < chkbox.length; i++) {
-				 //        if (chkbox[i].checked) {
-				 //          checkedBoxString = checkedBoxString + chkbox[i].value + ",";
+				    for (var i = 0; i < chkbox.length; i++) {
+				        if (chkbox[i].checked) {
+				          checkedBoxString = checkedBoxString + chkbox[i].value + ",";
 				          
-				 //        }
-				 //    }
+				        }
+				    }
 				    
-				 // $("#HIDDEN_CHECKED_INPUT").val(checkedBoxString);
+				 $("#HIDDEN_CHECKED_INPUT").val(checkedBoxString);
     	
     	
-    	//      if(checkedBoxString != ""){
-    	// 		$('.people-search-form').submit();
-    	// 	 }
-    	// 	 else {
-    	// 		alert("No check Box Selected");
-    	// 	 }
+    	     if(checkedBoxString != ""){
+    			$('.people-search-form').submit();
+    		 }
+    		 else {
+    			alert("No check Box Selected");
+    		 }
     		 
-    	// });
+    	});
 
 
 	
@@ -245,46 +245,46 @@
 	}
 
 
-	var savedSearchMenuItem = [
-		{ 
-			"id" : "",
-			"text" : "DELETE"
-		},
-		{
-			"id" : "",
-			"text" : "EDIT"
-		},
-		{
-			"id" : "",
-			"text" : "MERGE"
-		},
-		{
-			"id" : "",
-			"text" : "NOTIFICATION SETTING"
-		},
-		{
-			"id" : "",
-			"text" : "RUN"
-		},
-		{
-			"id" : "",
-			"text" : "VIEW" 
-		}
+// 	var savedSearchMenuItem = [
+// 		{ 
+// 			"id" : "",
+// 			"text" : "DELETE"
+// 		},
+// 		{
+// 			"id" : "",
+// 			"text" : "EDIT"
+// 		},
+// 		{
+// 			"id" : "",
+// 			"text" : "MERGE"
+// 		},
+// 		{
+// 			"id" : "",
+// 			"text" : "NOTIFICATION SETTING"
+// 		},
+// 		{
+// 			"id" : "",
+// 			"text" : "RUN"
+// 		},
+// 		{
+// 			"id" : "",
+// 			"text" : "VIEW" 
+// 		}
 
-];
+// ];
 
 
 
- for(var i = 0; i < savedSearchMenuItem.length; i++) {
+//  for(var i = 0; i < savedSearchMenuItem.length; i++) {
 
- 	var object = savedSearchMenuItem [i];
+//  	var object = savedSearchMenuItem [i];
 
- 	var text = object.text;
+//  	var text = object.text;
 
- 	var menu = $('<div class = "menu-items">' + text + '</div><hr>');
+//  	var menu = $('<div class = "menu-items">' + text + '</div><hr>');
 
- 	$('.people-search-menu').append(menu);
- }
+//  	$('.people-search-menu').append(menu);
+//  }
 
 
 </script>  

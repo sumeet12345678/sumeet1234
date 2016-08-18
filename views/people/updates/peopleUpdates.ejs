@@ -8,8 +8,8 @@
 				       	 
 					 	   <td tabindex="3" align = left valign = middle style = "border-right: 1px solid #fff" class = "connections-table-icon-con" >
 					 		  <div style = "margin-left: 0px;" id = "contag-first-tab" >
-					 	 		  	<div id = "PEOPLE_UPDTS_ALERT_BTN" class = "pplupdt_cont_cons_btn pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-								  		<img   width="28" height="27" src="<%= urls.PEOPLE_URL %>/media/images/icons/people-updates/notifications.png" />
+					 	 		  	<div id = "PEOPLE_UPDTS_NOTIFICATION_BTN" class = "pplupdt_cont_cons_btn pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
+								  		<img   width="28" height="27" src="<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/notifications.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;">Notifications</span>
 								     </div> 
 							   </div> 
@@ -18,7 +18,7 @@
 					 	   <td tabindex="4" align = center valign = middle style = "border-right: 1px solid #fff" class = "connections-table-icon-team" >
 					 		  	<div  style = "margin-left: 0px; ">
 							 		 <div id="PEOPLE_UPDTS_FEED_BTN" class = "pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-								  		<img   width="25" height="24" src="<%= urls.PEOPLE_URL %>/media/images/icons/people-updates/feed-blk.png" />
+								  		<img   width="25" height="24" src="<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/feed-blk.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;">Feed</span>
 								     </div> 
 								</div> 
@@ -28,8 +28,8 @@
 					 	   
 					 	   <td tabindex="4" width="" align = right valign = middle style = "border-right: 0px solid #000; margin:0;" class = "connections-table-icon-groups" >
 					 		  <div  style = "margin-left: 0px;">
-						 		  <div id="PEOPLE_UPDTS_GROUPS_BTN" class = "pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-							  		<img   width="24" height="25" src="<%= urls.PEOPLE_URL %>/media/images/icons/people-updates/news-postsblk.png" />
+						 		  <div id="PEOPLE_UPDTS_NEWS_BTN" class = "pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
+							  		<img   width="24" height="25" src="<%=urls.PEOPLE_URL%>/media/images/icons/people-updates/news-postsblk.png" />
 							  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;">News, Posts</span>
 							     </div> 
 						 	 </div> 
@@ -51,7 +51,7 @@
 				  	 
 					 	 <div id = PEOPLE_UPDATES_OPTIONS style = "margin-top: 7px; width:100%;">
 					 	 	
-					 	 	<div id = PEOPLE_UPDATES_OPTIONS_ALERTS_CNTNR style = "display: none"> 
+					 	 	<div id = PEOPLE_UPDATES_OPTIONS_NOTIFICATION_CNTNR style = "display: none"> 
 							    
 					 	 	</div>  
 					 	 	
@@ -60,7 +60,7 @@
 
 					 	 	</div>
 					 	 	
-					 	 	<div id = PEOPLE_UPDATES_OPTIONS_GRPS_CNTNR style = "display: none;">
+					 	 	<div id = PEOPLE_UPDATES_OPTIONS_NEWS_CNTNR style = "display: none;">
 					 	 	
 					 	 	</div> 
 					 	 	
@@ -82,28 +82,79 @@
 
 		</div>
 
+		<div class = "people-notification-container" style = "display: none;">
+
+
+		</div>
+
+		<div class = "people-news-container" style = "display: none;">
+
+
+		</div>
+
 
 
 	<script>
 
+
+
+	$('#PEOPLE_UPDTS_NOTIFICATION_BTN').on('click', function() {
+
+			var peopleNotifications = $('.people-notification-container');
+			$('#PEOPLE_UPDATES_OPTIONS_NOTIFICATION_CNTNR').append(peopleNotifications);
+			$('#PEOPLE_UPDATES_OPTIONS_NOTIFICATION_CNTNR').show();
+			$('#PEOPLE_UPDATES_OPTIONS_FEED_CNTNR').hide();
+			$('#PEOPLE_UPDATES_OPTIONS_NEWS_CNTNR').hide();
+			$('.people-notification-container').show();
+			peopleNotification();
+	});
+
+	
 	$('#PEOPLE_UPDTS_FEED_BTN').on('click', function() {
 
 		var peopleUpdates = $('.people-update-container');
-
 			$('#PEOPLE_UPDATES_OPTIONS_FEED_CNTNR').append(peopleUpdates);
-
 			$('#PEOPLE_UPDATES_OPTIONS_FEED_CNTNR').show();
-
+			$('#PEOPLE_UPDATES_OPTIONS_NEWS_CNTNR').hide();
+			$('#PEOPLE_UPDATES_OPTIONS_NOTIFICATION_CNTNR').hide();
 			$('.people-update-container').show();
-
 			peopleFeedLoad();
+	});
+
+
+	$('#PEOPLE_UPDTS_NEWS_BTN').on('click', function() {
+			var peopleNews = $('.people-news-container');
+			$('#PEOPLE_UPDATES_OPTIONS_NEWS_CNTNR').append(peopleNews);
+			$('#PEOPLE_UPDATES_OPTIONS_NEWS_CNTNR').show();
+			$('#PEOPLE_UPDATES_OPTIONS_FEED_CNTNR').hide();
+			$('#PEOPLE_UPDATES_OPTIONS_NOTIFICATION_CNTNR').hide();
+			$('.people-news-container').show();
+			peopleNewsPosts();
 	});
 
 
 
 
 
-    //   Ajax call for PeopleFeed page
+
+
+
+    //   Ajax call for PeopleUpdate page
+
+    	var ajaxCallNotification = false;
+
+		function peopleNotification() {
+			if(!ajaxCallNotification) {
+				showHideProgress();
+				$.get('<%=urls.PEOPLE_URL%>/peopleNotifications', function(notification) {
+				$('.people-notification-container').append(notification);
+				ajaxCallNotification = true;
+				showHideProgress();
+			});
+			}
+			
+		}
+
 
     	var ajaxCallPeopleLoad = false;
 
@@ -113,6 +164,21 @@
 				$.get('<%=urls.PEOPLE_URL%>/peopleFeed', function(data) {
 				$('.people-update-container').append(data);
 				ajaxCallPeopleLoad = true;
+				showHideProgress();
+			});
+			}
+			
+		}
+
+
+		var ajaxCallNewsPosts = false;
+
+		function peopleNewsPosts() {
+			if(!ajaxCallNewsPosts) {
+				showHideProgress();
+				$.get('<%=urls.PEOPLE_URL%>/people_News_Posts', function(news) {
+				$('.people-news-container').append(news);
+				ajaxCallNewsPosts = true;
 				showHideProgress();
 			});
 			}
