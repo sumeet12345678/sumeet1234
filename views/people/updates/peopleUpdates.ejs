@@ -9,7 +9,7 @@
 					 	   <td tabindex="3" align = left valign = middle style = "border-right: 1px solid #fff" class = "connections-table-icon-con" >
 					 		  <div style = "margin-left: 0px;" id = "contag-first-tab" >
 					 	 		  	<div id = "PEOPLE_UPDTS_ALERT_BTN" class = "pplupdt_cont_cons_btn pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-								  		<img   width="28" height="27" src="<%= hostUrl %>/media/images/icons/people-updates/notifications.png" />
+								  		<img   width="28" height="27" src="<%= urls.PEOPLE_URL %>/media/images/icons/people-updates/notifications.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;">Notifications</span>
 								     </div> 
 							   </div> 
@@ -18,7 +18,7 @@
 					 	   <td tabindex="4" align = center valign = middle style = "border-right: 1px solid #fff" class = "connections-table-icon-team" >
 					 		  	<div  style = "margin-left: 0px; ">
 							 		 <div id="PEOPLE_UPDTS_FEED_BTN" class = "pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-								  		<img   width="25" height="24" src="<%= hostUrl %>/media/images/icons/people-updates/feed-blk.png" />
+								  		<img   width="25" height="24" src="<%= urls.PEOPLE_URL %>/media/images/icons/people-updates/feed-blk.png" />
 								  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;">Feed</span>
 								     </div> 
 								</div> 
@@ -29,7 +29,7 @@
 					 	   <td tabindex="4" width="" align = right valign = middle style = "border-right: 0px solid #000; margin:0;" class = "connections-table-icon-groups" >
 					 		  <div  style = "margin-left: 0px;">
 						 		  <div id="PEOPLE_UPDTS_GROUPS_BTN" class = "pplupdate-title-bar-tab" style = "cursor: pointer; text-align: center; display: inline-block; width: 80px;">
-							  		<img   width="24" height="25" src="<%= hostUrl %>/media/images/icons/people-updates/news-postsblk.png" />
+							  		<img   width="24" height="25" src="<%= urls.PEOPLE_URL %>/media/images/icons/people-updates/news-postsblk.png" />
 							  		<span style = "display: block;  line-height:.5; font-size: 12px; margin-top: 5px;">News, Posts</span>
 							     </div> 
 						 	 </div> 
@@ -86,11 +86,6 @@
 
 	<script>
 
-	var hostUrl = "http://localhost:4000";
-
-	//var hostUrl = "http://ekpeople.herokuapp.com";
-
-	
 	$('#PEOPLE_UPDTS_FEED_BTN').on('click', function() {
 
 		var peopleUpdates = $('.people-update-container');
@@ -115,7 +110,7 @@
 		function peopleFeedLoad() {
 			if(!ajaxCallPeopleLoad) {
 				showHideProgress();
-				$.get('http://ekpeople.herokuapp.com/peopleFeed', function(data) {
+				$.get('<%=urls.PEOPLE_URL%>/peopleFeed', function(data) {
 				$('.people-update-container').append(data);
 				ajaxCallPeopleLoad = true;
 				showHideProgress();
