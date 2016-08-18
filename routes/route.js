@@ -55,7 +55,7 @@ router.get('/', function(req, res, next) {
   
   router.post('/p/search', function(req, res, next) {
 	  console.log("CHECKED BOXES=====" + req.param('savedSearchesChkBox'));
-	  res.render('profiles/common.ejs', { page: "peopleSearchResult", localOrRemoteUrl : localOrRemote, hostUrl : g_hostUrl});	        
+	  res.render('profiles/common.ejs', { page: "peopleSearchResult", hostUrl : g_hostUrl});	        
 	});
 
  
