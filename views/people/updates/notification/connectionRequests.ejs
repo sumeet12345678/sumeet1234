@@ -9,8 +9,6 @@
 	}
 
 .decesion {
-	padding-top: 3px;
-	padding-bottom: 3px;
 	margin-left: 3px;
 	float: right;
 	text-align: right;
@@ -24,12 +22,13 @@
 
 .save-image {
 	margin-right: 10px;
+	margin-top: 10px;
 }
 
 @media screen and (max-width: 726px)  {  
   
   .events {
-		width: 60%;
+		width: 70%;
 		margin-left: 5px;
 		display: inline-block;
 	}
@@ -48,6 +47,7 @@
 
 .save-image {
 	margin-right: 3px;
+	margin-top: 10px;
 }
 	  
 }
@@ -91,7 +91,7 @@ var connection_request_json = [
 			var node = connections.node.substring(connections.node.indexOf("$") + 1, connections.node.length);
 
 
-            var stringHTML = '<div style = "width: 100%; height: auto; background-color: #e6e3e3;" ><div id = '+ id +' class= "" style = " margin-top: 10px;"><img width= "50" height= "50" top-margin:"5px" src= "'+ pic +'"/><a href = ' + url + '><div class = "events" style = "font-size:15px;"><span class="barTitle" style = " color: #696969; "><b>'+ name + '</b></span><span style = "color: #202020;"> wants to add you to "' + node + '".</span></div></a></span><div class = "decesion"><img class = "close-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/x-ncircled-blk.png" /><br><img class = "save-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/yes-ncrcled-blk.png" /></div></div></div>';
+            var stringHTML = '<div style = "width: 100%; height: auto; background-color: #e6e3e3;" ><div id = '+ id +' class= "" style = " margin-top: 10px;"><img width= "60" height= "60" top-margin:"5px" src= "'+ pic +'"/><a href = ' + url + '><div class = "events" style = "font-size:15px;"><span class="barTitle" style = " color: #696969; "><b>'+ name + '</b></span><span style = "color: #202020;"> wants to add you to "' + node + '".</span></div></a></span><div class = "decesion"><img class = "close-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/x-ncircled-blk.png" /><br><img class = "save-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/yes-ncrcled-blk.png" /></div></div></div>';
 
 			var connection_rqsts = $(stringHTML);
             
