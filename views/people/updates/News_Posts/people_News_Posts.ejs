@@ -12,7 +12,7 @@ var news_posts_menu_json = [
 		 			'W' : '17',
 		 			'H' : '18'
 		 },
-		 //'sibling' : 'ID1',
+		 'sibling' : 'USER1',
 		 'url' : ''
 	    },
 
@@ -24,10 +24,10 @@ var news_posts_menu_json = [
 		 			'W' : '17',
 		 			'H' : '18'
 		 },		 
-		 //'sibling' : 'ID2'
+		 'sibling' : 'USER2'
 	    }
 	  
-	]
+	];
 
 
 
@@ -47,10 +47,32 @@ var news_posts_menu_json = [
 				var w = image.W;
 
 
-            var stringHTML = '<div><div id = '+ id +' class= "toggle-bar-menu" style = "margin-top: 10px;"> <span class="expandIcon1" style="float: right;"> <img  width="28" height="28" src="<%=urls.PEOPLE_URL%>/media/images/icons/arrow-Down-lines.png"/> </span><img  width= '+w+' height= '+h+' top-margin:"5px" src= "'+ loc +'"/> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div><div>';
+            var stringHTML = '<div><div id = '+ id +' class= "toggle-bar-menu" style = "margin-top: 10px;"> <span class="expandIcon3" style="float: right;"> <img  width="28" height="28" src="<%=urls.PEOPLE_URL%>/media/images/icons/arrow-Down-lines.png"/> </span><img  width= '+w+' height= '+h+' top-margin:"5px" src= "'+ loc +'"/> <span class="barTitle">'+ name + '<span>  (' + count + ')</span></span></div><div class = "menu-bar-sibling" id = '+ sibling +' style = "display: none;"></div><div>';
            // console.log(stringHTML);
 
 			var news_posts = $(stringHTML);
             
 			$('.people-news-container').append(news_posts);
+		}
+
+		$('.expandIcon3').on('click', function() {
+				showHideDownSibling($(this));
+				trendingNewsPosts();
+		});
+
+
+		// Ajax call
+
+		var ajaxCallNewsPostsnew = false;
+
+		function trendingNewsPosts() {
+			if(!ajaxCallNewsPostsnew) {
+				showHideProgress();
+				$.get('<%=urls.PEOPLE_URL%>/trending_news', function(posts) {
+						$('#USER2').append(posts);
+						ajaxCallNewsPostsnew = true;
+						showHideProgress();
+					});
+			}
+			
 		}

@@ -1,0 +1,94 @@
+<style>
+
+
+.events {
+		width: 60%;
+		margin-left: 5px;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+.decesion {
+	float: right;
+	padding-top: ;
+	display: inline-block;
+}
+
+.close-image {
+	margin-top: 3px;
+	margin-bottom: 9px;
+}
+
+
+
+@media screen and (max-width: 726px)  {  
+  
+  .events {
+		width: 60%;
+		margin-left: 5px;
+		display: inline-block;
+	}
+
+	.decesion {
+		margin-left: 3px;
+		display: inline-block;
+	}
+
+.close-image {
+	margin-right: 3px;
+	margin-bottom: 9px;
+}
+
+	  
+}
+
+</style>
+
+<script>
+
+
+var news_request_json = [
+
+	    {
+	 	 	'who':'9874',
+	 	 	'pic': 'http://ekgateway.herokuapp.com/media/images/profile_images/amar.jpg',
+	     	'name': 'Sheljo James',
+	     	'node' : 'ACQ$Acquintances',
+			'url' : 'http://ekprofile.herokuapp.com'		 
+	    },
+		{
+	 	 	'who':'98654',
+	 	 	'pic': '',
+	     	'name': 'Xaviour Joseph',
+	     	'node' : 'ACQ$Acquintances',
+			'url' : 'http://ekprofile.herokuapp.com'		 
+	    }
+		
+
+	];
+
+
+
+		
+
+		for(var i = 0; i < news_request_json.length; i++) {
+			var news_post = news_request_json[i];
+
+			var id = news_post.who;
+			var name = news_post.name;
+			var pic = news_post.pic;
+			var url = news_post.url;
+			var node = news_post.node.substring(news_post.node.indexOf("$") + 1, news_post.node.length);
+
+
+            var stringHTML = '<div style = "width: 100%; height: auto; background-color: #e6e3e3;" ><div id = '+ id +' class= "" style = " margin-top: 10px;"><img width= "60" height= "60" top-margin:"5px" src= "'+ pic +'"/><a href = ' + url + '><div class = "events" style = "font-size:15px;"><span class="barTitle" style = " color: #696969; "><b>'+ name + '</b></span><span style = "color: #202020;"> wants to add you to "' + node + '".</span></div></a></span><div class = "decesion"><img class = "close-image" width= "18" height= "18" src = "<%=urls.PEOPLE_URL%>/media/images/icons/operators/black/x-ncircled-blk.png" /></div></div></div>';
+
+			var news_rqsts = $(stringHTML);
+            
+			$('#USER2').append(news_rqsts);
+		}
+
+
+
+
+</script>		
