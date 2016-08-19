@@ -218,25 +218,6 @@ a:visited {
 }
 
 
-.toggle-bar-menu {  
-    background-color: #95B3D7 ; 
-    padding-left: 5px;
-    padding-right: 5px; 
-    height: 40px;
-    line-height: 40px; 
-    width: 100%; 
-    margin-top: 3px;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 3px;
-}  
-
-.toggle-bar-menu:hover  {    
-    color: #fff;
-}
-
-
 
 
 
