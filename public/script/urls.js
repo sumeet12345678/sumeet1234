@@ -1,5 +1,5 @@
-// environ = 'LOCAL';
-environ = 'HEROKU';
+environ = 'LOCAL';
+//environ = 'HEROKU';
 
  TEAMS_TREE_URL = "http://localhost:8000/teams";
 
@@ -14,7 +14,7 @@ environ = 'HEROKU';
 
  PROFILE_URL = "http://localhost:5000";
 
- COMPOSER_URL = "http:/avedSearchesChkBox/localhost:6000";
+ COMPOSER_URL = "http://localhost:6000";
 
  COMMON_UI_INFRA_URL = "http://localhost:7000";
 

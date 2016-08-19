@@ -4,7 +4,7 @@ var router = express.Router();
 urls = require('../public/script/urls.js');
   
 //var g_hostUrl = "https://ekpeople.herokuapp.com" ;
-//var g_hostUrl = "http://localhost:4000" ;
+var g_hostUrl = "http://localhost:4000" ;
 
 //var localOrRemote = "local";
 //var localOrRemote = "remote";
@@ -18,11 +18,11 @@ router.get('/', function(req, res, next) {
     }); 
     
   router.get('/savedPeopleSearches', function(req, res, next) {
-	  res.render('people/search/savedPeopleSearches.ejs');	    
+	  res.render('people/search/savedPeopleSearches.ejs', {urls: urls});	    
 	});
 
   router.get('/peopleUpdates', function(req, res, next) {
-	  res.render('people/updates/peopleUpdates.ejs', { urls : urls });	    
+	  res.render('people/updates/peopleUpdates.ejs', {urls: urls});	    
 	});
 
   router.get('/peopleFeed', function(req, res, next) {
@@ -40,14 +40,28 @@ router.get('/', function(req, res, next) {
   router.get('/connectionFeed', function(req, res, next) {
 	  res.render('people/updates/connectionFeed.ejs');	    
 	});
+  
+  router.get('/peopleNotifications', function(req, res, next) {
+	  res.render('people/updates/notification/peopleNotifications.ejs', {urls: urls});	    
+	}); 
+
+  router.get('/connectionRequests', function(req, res, next) {
+	  res.render('people/updates/notification/connectionRequests.ejs', {urls: urls});	    
+	}); 
+
+  router.get('/people_News_Posts', function(req, res, next) {
+	  res.render('people/updates/News_Posts/people_News_Posts.ejs', {urls: urls});	    
+	});
 
   router.get('/trending_news', function(req, res, next) {
-      res.render('people/updates/News_Posts/trending_news.ejs', {urls: urls});        
-    });
+	  res.render('people/updates/News_Posts/trending_news.ejs', {urls: urls});	    
+	});
+
+
   
   router.post('/p/search', function(req, res, next) {
 	  console.log("CHECKED BOXES=====" + req.param('savedSearchesChkBox'));
-	  res.render('profiles/common.ejs', { page: "peopleSearchResult", localOrRemoteUrl : localOrRemote, hostUrl : g_hostUrl});	        
+	  res.render('profiles/common.ejs', { page: "peopleSearchResult", hostUrl : g_hostUrl});	        
 	});
 
  
@@ -62,7 +76,10 @@ router.get('/peopleSearch', function(req, res, next) {
 	  res.render('people/peopleSearch_m.ejs', {imgUrl : g_profileHostUrl, urls : urls});  	     
 	}); 
 
-  
+ 
+router.get('/peopleExperience', function(req, res, next) {
+	res.render('people/search/ajax/peopleExperience.ejs');   
+});
 
 /*
  * People Search Criteria  

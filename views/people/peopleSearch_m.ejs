@@ -1,4 +1,50 @@
-      
+       <%
+    	var peopleSearchCriteria = [
+    		{'id' : 'CHARACTERISTICS',
+    		 'text' : 'Personality,Outlook,Character Attributes',
+    		 'bg'	: ' #62818A',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+
+    		{'id' : 'SKILLS',
+    		 'text' : 'Occupation,Experience,Proffessional',
+    		 'bg'	: '#97A1AD',
+    		 'col'	: '#fff',
+    		 'url'  : '/peopleExperience'
+    		},
+
+    		{'id' : 'EDUCATION',
+    		 'text' : 'Education,School,Institute',
+    		 'bg'	: '#737339',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		}, 
+
+    		{'id' : 'INTEREST', 
+    		 'text' : 'Interests,Likes,Activities222',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+    		
+    		{'id' : 'INTEREST3',
+    		 'text' : 'Interests,Likes,Activities333',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'
+    		},
+    		
+    		{'id' : 'INTEREST4',
+    		 'text' : 'Interests,Likes,Activities444',
+    		 'bg'	: '#BFCFE3',
+    		 'col'	: '#fff',
+    		 'url'  : '/likes.ejs'  
+    		}
+    	];
+
+
+    %>
 
 
 		   <style type="text/css">
@@ -9,19 +55,25 @@
 				margin: 0;
 				padding: 0;
 			}	
+			.commoninput
+			{
+				border: 1px solid #D7EEFC;
+				height: 45px;
+				border-radius:4px 4px 4px 4px;
+				padding-left: 5px;
+			}
 			
 			
-			.criteria
+			/*.criteria
 			{
 
 				border: 1px solid #a6a6a6;
 				height: 40px;
 				
-			}
+			}*/
 
 			#keywords {
-				border: 1px solid #a6a6a6;
-				height: 40px;
+				
 				width: 100%;
 
 			}
@@ -39,8 +91,7 @@
 
 			.multi-selector-contentbox
 			{
-				border: 1px solid #a6a6a6;
-				border-color111:#fff; 
+				 
 				
 				padding-top: 2px;
 				padding-bottom: 2px;
@@ -76,17 +127,112 @@
 				background-color: #fff;
 			}
 
-
-			.gender
+			input:focus
 			{
-				border: 1px solid #a6a6a6;
-				 
-				width:100%;
-				height: 40px;
-				margin-bottom: 10px;
+				border: 1px solid #9DA836;
 			}
-	 
-
+			div:focus
+			{
+				border: 1px solid #9DA836;
+			}
+			
+			
+			
+			/* check box*/
+			
+	 			.squaredFour {
+				  width: 20px;
+				  position: relative;
+				  margin: 20px auto;
+				}
+				.squaredFour label {
+				  width: 30px;
+				  height: 30px;
+				  cursor: pointer;
+				  position: absolute;
+				  top: 0;
+				  left: 0;
+				  border: 1px solid #95B3D7;
+				  background-color: #fff;
+				  border-radius: 5px;
+				 }
+				.squaredFour label:before {
+				  content: '';
+				  width: 13px;
+				  height: 7px;
+				  position: absolute;
+				  top: 7px;
+				  left: 6px;
+				  border: 3px solid #9DA836;
+				  border-top: none;
+				  border-right: none;
+				  background: transparent;
+				  opacity: 1;
+				  -webkit-transform: rotate(-45deg);
+				          transform: rotate(-45deg);
+				}
+				
+				.squaredFour input[type=checkbox] {
+				  visibility: hidden;
+				}
+				.squaredFour input[type=checkbox]:checked + label:before {
+				  opacity: 0;
+				}
+				
+				.genderContainer
+				{
+					
+				}
+				
+				/* radio */
+				
+				/*.roundedOne {
+			  width: 28px;
+			  height: 28px;
+			  position: relative;
+			  margin: 20px auto;
+			  background: #fff;
+			  border-radius: 50px;
+			 }
+			.roundedOne label {
+			  width: 28px;
+			  height: 28px;
+			  cursor: pointer;
+			  position: absolute;
+			  left: 0px;
+			  top: 0px;
+			  border:1px solid #95B3D7;
+			  border-radius: 50px;
+			}
+			.roundedOne label:before {
+			  content: '';
+			  width: 14px;
+			  height: 14px;
+			  position: absolute;
+			  top: 6px;
+			  left: 6px;
+			  background: #9DA836;
+			  opacity: 1;
+			  border-radius: 50px;
+			}
+			.roundedOne label:hover::after {
+			  opacity: 0;
+			}
+			.roundedOne input[type=checkbox] {
+			  visibility: hidden;
+			}
+			.roundedOne input[type=checkbox]:checked + label:before {
+			  opacity: 0;
+			}*/
+			@media screen and (max-width: 320px)
+			{
+				.genderContainer
+				{
+					width:20% !important;
+				}
+			}
+				
+			
 			 @media screen and (max-width: 760px) 
 			 { 
 			 	
@@ -120,12 +266,12 @@
 				.multi-selector-contentbox
 				{
 					width: 100%;
-					height: auto;
+					
 				}
 			 		
   	 			.item-text
 				{
-					display: inline-block;PEOPLE_URL
+					display: inline-block;
 					margin-top: 5px;
 				}
 
@@ -143,7 +289,23 @@
 					border:0px;
 					
 				}
-
+			
+	   			.genderContainer
+				{
+					width:30% !important;
+				}
+				.genderMale
+				{
+					margin-left:11%; 
+				}
+				.genderOthers
+				{
+					margin-left:25%; 
+				}
+				.genderFemale
+				{
+					margin-left:11%;
+				}
   	 			
 			}
             @media screen and (min-width: 761px)
@@ -191,7 +353,7 @@
 				{
 					width: 100%;
 					margin-top111: 5px; 
-					height: auto;
+					
 				}
 
 				#age-content1
@@ -207,12 +369,44 @@
 					height:38px; 
 					
 				}
+			/*	.gender
+			{
+				margin-left:15%; 
+				margin-right:3%;
+				color:grey;
+			}*/
+			.genderMale
+			{
+				margin-right:1%; 
+			}
+			.genderOthers
+			{
+				margin-left:74%; 
+			}
+			.genderFemale
+			{
+				margin-left:31%;
+			}
 			  
+            .selectFemale
+            {
+            	 margin-right:33%;
             }
+            .selectOthers
+            {
+            	 margin-right:1%;
+            }
+            .genderContainer
+            {
+            	width:33%;
+            }
+        }
 
 		</style>
 
-
+			<datalist id="json-datalist">
+			
+			</datalist>
  
 	 	
 	 	<div>
@@ -227,7 +421,7 @@
 	        </div>
         </div>
 
-         <div>
+         <div style = "height:100%;">
 				<div   id = "PPL_SEARCHES" class= "toggle-bar-menu" >  
 		         	<span class="expandIcon2" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>    						
 					<img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/>
@@ -237,25 +431,25 @@
 				<div  style = "padding-left: 5px; padding-right: 5px;">
 	        		   <form>
 	  					<table width="100%">
-	  					<tr height = "8px">
+	  					<tr height = "4px">
 	  						
 	  					</tr>
 	  						<tr>
 	  						<td colspan="3">
-	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:">
+	  							<input type="text" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:" class="commoninput">
 	  						</td>
 	  					</tr>
 
-	  					<tr height="8px">
+	  					<tr height="4px">
 	  						
 	  					</tr>
 	  					
 	  					<tr>
 	  						<td colspan="3">
-	  							<div class="content-box">
+	  							<!--  <div class="content-box">
 
-									<div class="multi-selector-contentbox" contenteditable="false" style="height: 40px; background-color: #fff;padding-left: 3px; cursor: pointer;">
-										<font color="grey" style="display: inline-block; margin-top: 8px;">Locations,Cities,Areas...</font>
+									<div class="multi-selector-contentbox commoninput" contenteditable="true" style="background-color: #fff;cursor: pointer;">
+										<font color="grey" style="display: inline-block; margin-top: 8px; font-size:14px;">Locations,Cities,Areas...</font>
 									</div>
 								 	<div class="multi-list">
 
@@ -273,22 +467,29 @@
 
 									</div>
 								
-								</div>
+								</div>-->
+								<input type="text" name="keyword" id="keywords" placeholder="Locations,Cities,Areas..." class="commoninput">
+								<!--  <ul style="text-align:center;">
+								    <li>Bangalore</li>
+								    <li>Cochin</li>
+								    <li>Chennai</li>
+								    <li>Mumbai</li>
+								</ul>-->
 	  						</td>
 	  					</tr>	
 
 
-	  					<tr height = "8px">
+	  					<tr height = "4px">
 	  						
 	  					</tr>
 	  						<tr>
 	  						<td colspan="3">
-	  							<input type="text" style = "padding-left: 3px;" name="keyword" id="keywords" placeholder="Pincode or sublocation:">
+	  							<input type="text" name="keyword" id="keywords" placeholder="Pincode or sublocation:" class="commoninput">
 	  						</td>
 	  					</tr>
 
 
-	  					<tr height="8px">
+	  					<tr height="4px">
 	  						
 	  					</tr>
 	  					
@@ -296,7 +497,7 @@
 	  						<td width="45%">
 	  							<!-- <div class="age" contentEditable = "true"> -->
 	  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
-	  								<input type="text" placeholder="Age From:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;">
+	  								<input type="text" placeholder="Age From:" style="width: 100%; margin-top: 4px;" class="commoninput">
 	  							<!-- </div> -->
 	  						</td>
 
@@ -308,23 +509,69 @@
 	  							<!-- <div class="age"> --> 
 	  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
 	  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
-	  								<input type="text" placeholder="To:" style="border: 1px solid #a6a6a6; padding-left: 3px; height: 40px; width: 100%; margin-top: 5px;"> 
+	  								<input type="text" placeholder="To:" style="padding-left: 3px; width: 100%; margin-top: 4px;" class="commoninput"> 
 	  							<!-- </div> -->
 	  						</td>
 	  					</tr>
 
-	  					<tr height="14px;">
+	  					<tr height="0px;">
 	  						
 	  					</tr>
 
 	  					<tr>
-	  						<td colspan="3">
-	  							<select class="gender">
-	  								<option>Gender</option>
-	  								<option>Male</option>
-	  								<option>Female</option>
-	  								<option>Others</option>
-	  							</select>
+	  						<td colspan="3" style=" width:100%;">
+	  							
+	  							<div class="genderContainer" style="display:inline-block;">
+	  								<font color="#3F3F3F"><label class="genderMale" style="display:inline-block;">Male</label></font>
+	  								<section title=".squaredFour" style="display:inline-block;">
+								    <!-- .squaredFour -->
+								    	<div class="squaredFour">
+								      		<input type="checkbox" value="squaredFour1" id="squaredFour1" name="check" checked />
+								      		<label for="squaredFour1"></label>
+								    	</div>
+								    <!-- end .squaredFour -->
+								  	</section>
+	  							</div>
+	  							<div class="genderContainer" style="display:inline-block;">
+	  							<!-- radio html -->
+	  									<!--  <label style="margin-right:1%; display:inline-block;">F</label>
+	  								 	<section title=".roundedOne" style="display:inline-block;">-->
+									    <!-- .roundedOne -->
+									    	<!--  <div class="roundedOne">
+									     	 	<input type="checkbox" value="None" id="roundedOne" name="check" checked />
+									      		<label for="roundedOne"></label>
+									    	</div>-->
+									    <!-- end .roundedOne -->
+									  	<!--  </section>-->
+									  	<!-- radio html end -->
+									  	
+									  	<label class="genderFemale" style="display:inline-block;"><font color="#3F3F3F">Female</font></label>
+		  								<section title=".squaredFour selectFemale" style="display:inline-block;">
+									    <!-- .squaredFour -->
+									    	<div class="squaredFour">
+									      		<input type="checkbox" value="squaredFour2" id="squaredFour2" name="check" checked />
+									      		<label for="squaredFour2"></label>
+									    	</div>
+									    <!-- end .squaredFour -->
+									  	</section>
+	  							</div>
+	  							<div class="genderContainer" style="display:inline-block;">
+	  								<!--  <select>
+									    <option value="volvo">Volvo</option>
+									    <option value="saab">Saab</option>
+									    <option value="mercedes">Mercedes</option>
+									    <option value="audi">Audi</option>
+									</select>-->
+									<label class="genderOthers" style="display:inline-block;"><font color="#3F3F3F">Others</font></label>
+		  								<section title=".squaredFour selectOthers" style="display:inline-block;">
+									    <!-- .squaredFour -->
+									    	<div class="squaredFour">
+									      		<input type="checkbox" value="squaredFour3" id="squaredFour3" name="check" checked />
+									      		<label for="squaredFour3"></label>
+									    	</div>
+									    <!-- end .squaredFour -->
+									  	</section>
+	  							</div>
 	  						</td>
 	  					</tr>
 	  					
@@ -332,11 +579,69 @@
 
 	  					</table>
 	  				</form>
+	  				
+	  				<div class = "attach-attributes" style="padding-bottom: 10px; display: block; margin-bottom: 2px;">
+	  				
+	  				</div>
+	  				<!--  <div class = "showAttr" style="display:none; border:1px solid; position:relative;"> 
+	  					<form>
+	  						<div style="margin-top:5px;">
+		  						<input type="text" style="display:inline-block;" class="commoninput">
+		  						<input type="text" style="display:inline-block;" class="commoninput">
+	  						</div>
+	  						<div style="margin-top:5px;">
+	  							<input type="text" placeholder="Profession" style="width:100%;" class="commoninput">
+	  						</div>
+	  						<div style="margin-top:5px; margin-bottom:5px;">
+	  							<input type="text" style="width:100%;" class="commoninput">
+	  						</div>
+	  					</form>
+	  				</div>-->
 
 	       		</div>
+	       		
+	       		<div class = "attrib-popup" style = "position: relative; top: 0px;">
+	  				
+	  				<div class = "attributes" style=" display: none; margin-bottom: 0px;  z-index:1053;">
+
+	  					<%
+					 		for(var i = 0; i < peopleSearchCriteria.length; i++) { 
+					 	  		var obj  = peopleSearchCriteria[i];		 		  
+			 			%>		
+	  					<div>	
+	  						<div id= <%= obj.id %>  data-index = <%= obj.id %>  data-url = <%= obj.url %>  class = "attribute-item item-on-popup " style = "padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
+	  							
+								  	 <span class = "attrib-text" style=""><%= obj.text%></span>   
+	  						</div>
+	  						
+	  					</div>
+
+	  					<% } %>
+	  						  						
+	  				</div>
+
+	  				<div class="criteria commoninput" style = "width: 100%; margin-top: 0px; position: relative; background-color: #fff;  cursor: pointer;">
+	  					<font color="grey" style="display: inline-block; margin-top: 8px;">More criteria, attributes..</font>
+	  					<div class="popup" style="display: inline-block; margin-top: 2px; margin-right: 5px; float: right;">
+	  						<span style = "font-size: 30px; font-weight: bold;">+</span>
+	  					</div>
+	  					
+	  				</div>
+
+	  			</div>
+	  			<div style="position: relative; font-size: 15px; bottom: -30px; height: 42px; width: 100%; color: #fff; padding-top: 7px; margin-bottom:0;">
+	  			
+	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center; display: inline-block; cursor: pointer;   height: 30px;">
+	  					SUBMIT
+	  				</div>
+	  				
+	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center;  display: inline-block; cursor: pointer;  height: 30px;  margin-right: 30px;">
+	  					SAVE
+	  				</div>
+	  			
+	  			</div>
 				
 		</div>	
-
 		
 
 	<script>
@@ -372,6 +677,183 @@
 			showHideDownSibling($(this));
 			
 		});
+		
+
+		var multiDropDown = [];
+
+	  	$(document).mouseup(function (e) 
+		 	{
+			    var 	contentbox= $(".multi-list");
+			    if (!$('.multi-list').is(e.target) && !contentbox.is(e.target) && contentbox.has(e.target).length == 0) 
+			    {
+			       	contentbox.hide();
+			    }
+
+			    $('.multi-selector-contentbox').on('click', function(){
+					$('.multi-list').toggle();
+				});
+		    
+		});
+		
+		  // Calling List
+
+         $(".list-item").on('click',function()
+          {
+          	var dataAttribValue = $(this).attr("data-item-attr");
+          	var index = multiDropDown.indexOf(dataAttribValue);
+          	if(index < 0)
+          	{
+          		multiDropDown.push(dataAttribValue);
+          		var listItem = $(this).text();
+                var listItemElem = $('<div class="list-item1" style = "padding: 0 7px 0 7px ; color: #fff;" contenteditable="false" data-item-attr="' + dataAttribValue +'">' + listItem + '</div>&nbsp; &nbsp;');
+                	$('<span style = "font-size: 20px; color: #dcdcdc; margin-left: 3px" onclick="delSelected($(this))">x</span>').appendTo(listItemElem);
+                listItemElem.prependTo(".multi-selector-contentbox");	
+          	}
+
+          });
+
+
+         
+		$('.attribute-item').on('click', function() {
+	        $('.attributes').hide();
+           	addCriteria($(this));
+
+        });
+
+        function addCriteria(selectedItem) {
+        	var dataValue = selectedItem.attr('data-index');
+        	var url = selectedItem.attr('data-url');
+        	var text_text =  selectedItem.children('.attrib-text').text();
+        	// alert(url);
+        	var element = $('<div><div class = "common_section_title_bar" data-index ="' + dataValue +  '"></div></div>');
+
+        	element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="<%=imgUrl%>/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this));"/>');
+        	element.find('div:first-child').append(text_text);
+        	
+        	//var htmlString = 
+        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" data-callAjax="yes" data-url="'+ url +'" onClick = " addSubsection($(this));"/>');  /* addSubsection("'+ url +'",$(this));"/>'); onClick = "showHideDownSibling($(this))"/>'); */ 
+        	element.append('<div style = "display: none; "></div>');
+        	element.appendTo('.attach-attributes');
+
+        	/*hide on popup*/
+        	selectedItem.hide();
+
+        };
+	
+ 
+       function closeAttribItem(closeBtn)
+       {  
+       	    var parent =  closeBtn.parent();
+       	    parent.parent().hide();
+       		var data_index = parent.attr("data-index");
+
+       		$('#' + data_index).show();
+	   };  
+	   
+	   
+	   ///////
+	   /*$('.attach-attributes').on('click', '.showHideSiblingIcon', function() {
+		  //alert("hello");
+		   $('.showAttr').show();
+	   });
+	   
+	   function appendSubSection() { 
+		     
+		   
+	   }*/
+	
+
+	    $(document).mouseup(function (e) 
+			 {
+			     var 	attributes= $(".attributes");
+			     if (!$('.attributes').is(e.target) && !attributes.is(e.target) && attributes.has(e.target).length == 0) 
+			     {
+			       	attributes.hide();
+			     }
+
+			     $('.criteria').on('click', function(){
+        			attributes.toggle();
+        		});
+			 });
+    
+	    
+	 // Get the <datalist> and <input> elements.
+		var dataList = document.getElementById('json-datalist');
+		var input = document.getElementById('keywords');
+			 /* Search keyword ajax call ends */
+		 
+					// Create a new XMLHttpRequest.
+		var request = new XMLHttpRequest();
+		
+		// Handle state changes for the request.
+		request.onreadystatechange = function(response) {
+		  if (request.readyState === 4) {
+		    if (request.status === 200) {
+		      // Parse the JSON
+		      var jsonOptions = JSON.parse(request.responseText);
+		
+		      // Loop over the JSON array.
+		      jsonOptions.forEach(function(item) {
+		        // Create a new <option> element.
+		        var option = document.createElement('option');
+		        // Set the value using the item in the JSON array.
+		        option.value = item;
+		        // Add the <option> element to the <datalist>.
+		        dataList.appendChild(option);
+		      });
+		
+		      // Update the placeholder text.
+		      //input.placeholder = "e.g. datalist";
+		    } else {
+		      // An error occured :(
+		      input.placeholder = "Couldn't load datalist options :(";
+		    }
+		    request.open('GET', '<%=urls.PEOPLE_URL%>/data/searchKeywords.json', true);
+			request.send(); 
+		  }
+		  	
+		};
+		
+		// Update the placeholder text.
+		//input.placeholder = "Loading options...";
+		
+		// Set up and make the request.
+		
+
+/* Search keyword ajax call ends */
+$('input').keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $('ul li').hide().filter(function(){
+        return $(this).html().substring(0, value.length).toLowerCase() == value;
+    }).show();
+});
+
+function addSubsection(whose)
+{
+	//alert("fggd");
+	
+	if(whose.attr("data-callAjax") == "yes"){
+		    var url = whose.attr("data-url");
+			$.get(url, function(data, status){
+			
+			 var $data = $(data);
+			 
+			 var parentSectionBar = whose.parent();
+			 $data.insertAfter(parentSectionBar); 
+			  
+			  
+			}).done(function() {
+	           
+	            whose.attr("data-callAjax","no");
+	        })
+  }
+ else
+	{
+		showHideDownSibling(whose);
+	}
+	
+
+}
 		  
 	</script>
 		
