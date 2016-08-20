@@ -92,6 +92,10 @@ router.get('/searchBySocial', function(req, res, next) {
 router.get('/searchBySkills', function(req, res, next) {
 	res.render('people/search/ajax/searchBySkills.ejs');   
 });
+
+router.get('/searchByLikes', function(req, res, next) {
+	res.render('people/search/ajax/searchByLikes.ejs');   
+});
 /*
  * People Search Criteria  
  */
