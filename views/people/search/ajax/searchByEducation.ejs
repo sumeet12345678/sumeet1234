@@ -54,60 +54,89 @@
 <body> -->
 
 	<div class = "education" style ="padding-left: 5px; padding-right: 5px; background-color: #dcdcdc;">
-	<div style = "display: inline-block; width: 90%;">
-		<form>
+		<div style = "display: inline-block; width: 90%;">
+			<form>
 
-	  		<table width="100%">
-	  		
-	  			<tr height = "4px">
-	  						
-	  			</tr>
-	  		
-	  			<tr>
-	  				<td colspan="3">
-	  					<input type="text" name="Qualification" id="keywords" list="json-datalist" placeholder="Education" class="commoninput">
-	  				</td>
-	  			</tr>
+		  		<table width="100%">
+		  		
+		  			<tr height = "4px">
+		  						
+		  			</tr>
+		  		
+		  			<tr>
+		  				<td colspan="3">
+		  					<input type="text" name="Qualification" id="keywords" list="json-datalist" placeholder="Education" class="commoninput">
+		  				</td>
+		  			</tr>
 
-	  			<tr height="4px">
-	  						
-	  			</tr>
+		  			<tr height="4px">
+		  						
+		  			</tr>
 
-	  			<tr>
-	  				<td colspan="3">
-	  					<input type="text" name="Qualification" id="keywords" list="json-datalist" placeholder="College Name" class="commoninput">
-	  				</td>
-	  			</tr>
+		  			<tr>
+		  				<td colspan="3">
+		  					<input type="text" name="Qualification" id="keywords" list="json-datalist" placeholder="College Name" class="commoninput">
+		  				</td>
+		  			</tr>
 
-	  			<tr height="4px">
-	  						
-	  			</tr>
+		  			<tr height="4px">
+		  						
+		  			</tr>
 
-	  			<tr>
-	  				<td width="55%">
-	  					<input type="text" placeholder="Marks" style="width: 100%;" class="commoninput">
-	  				</td>
+		  			<tr>
+		  				<td width="55%">
+		  					<input type="text" placeholder="Marks" style="width: 100%;" class="commoninput">
+		  				</td>
 
-	  				<td>
-	  							
-	  				</td>
-	  						
-	  				<td width="40%">
-	  					<input type="text" placeholder="Year" style=" width: 100%;" class="commoninput"> 
-	  				</td>
-	  			</tr>
+		  				<td>
+		  							
+		  				</td>
+		  						
+		  				<td width="40%">
+		  					<input type="text" placeholder="Year" style=" width: 100%;" class="commoninput"> 
+		  				</td>
+		  			</tr>
 
-	  			<tr height="4px">
-	  						
-	  			</tr>
-	  		</table>
-	  	</form>
-	</div>
-	<div style = " display: inline-block; vertical-align: top;">
-		<div class="popup" style=" margin-top: 2px; margin-right: 5px; float: right; width: 5%;">
-		  	<span style = "font-size: 22px;">x</span><br><br><br><br><br>
-		  	<span style = "font-size: 25px; font-weight: bold;">+</span>
+		  			<tr height="4px">
+		  						
+		  			</tr>
+		  		</table>
+		  	</form>
 		</div>
-	</div>
+		<div style = " display: inline-block; vertical-align: top;">
+			<div class="popup" style=" margin-top: 2px; margin-right: 5px; float: right; width: 5%;">
+			  	<span style = "font-size: 22px;">x</span><br><br><br><br><br>
+			  	<span class = "create-new" style = "font-size: 25px; font-weight: bold;">+</span>
+			</div>
+		</div>
 					
 </div>
+
+<script>
+
+
+
+
+	function createNewForm() {
+
+		var presentOne = $('.education');
+
+		var newForm = $('<div class = "education" style ="padding-left: 5px; padding-right: 5px; background-color: #dcdcdc; margin-top: 10px;">		<div style = "display: inline-block; width: 90%;"><form><table width="100%"><tr height = "4px"></tr><tr><td colspan="3"><input type="text" name="Qualification" id="keywords" list="json-datalist" placeholder="Education" class="commoninput"></td></tr><tr height="4px"></tr><tr><td colspan="3"><input type="text" name="Qualification" id="keywords" list="json-datalist" placeholder="College Name" class="commoninput"></td></tr><tr height="4px"></tr><tr><td width="55%"><input type="text" placeholder="Marks" style="width: 100%;" class="commoninput"></td>	<td></td><td width="40%"><input type="text" placeholder="Year" style=" width: 100%;" class="commoninput"> </td></tr><tr height="4px"></tr></table></form></div><div style = " display: inline-block; vertical-align: top;"><div class="popup" style=" margin-top: 2px; margin-right: 5px; float: right; width: 5%;"><span style = "font-size: 22px;">x</span><br><br><br><br><br><span class = "create-new" onclick = \'buttonFunction($(this))\' style = "font-size: 25px; font-weight: bold;">+</span></div></div></div>');
+
+		newForm.insertAfter(presentOne);
+
+	}
+
+	// function buttonFunction(eduDetails) {
+	// 	var parent = eduDetails.closest('.education');
+	// 	var details = $('.create-new');
+	// 	parent.find(details);
+	// 	createNewForm();
+	// }
+
+
+	$('.create-new').on('click', function() {
+			createNewForm();
+	});
+
+</script>
