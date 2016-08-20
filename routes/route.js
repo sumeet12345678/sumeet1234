@@ -85,6 +85,10 @@ router.get('/searchByEducation', function(req, res, next) {
 	res.render('people/search/ajax/searchByEducation.ejs');   
 });
 
+router.get('/searchBySocial', function(req, res, next) {
+	res.render('people/search/ajax/searchBySocial.ejs');   
+	});
+
 /*
  * People Search Criteria  
  */

@@ -122,6 +122,23 @@ input:focus
 		  opacity: 0;
 		}	
 
+		select {
+	    padding: 5px 8px;
+	    width55555555: 300px;
+	    width: 250px;
+	    height: 45px;
+	    border-radius: 4px;
+	    border-color: #95B3D7 ;
+	
+	   /* box-shadow: none;
+	    background: transparent;
+	    background-image: none;
+	    -webkit-appearance: none;*/
+		}
+		
+		 select:focus {
+		    outline: none;
+		}
 /*  --------- FORM ELEMENTS ENDS ----------- --------- */
 			
  
