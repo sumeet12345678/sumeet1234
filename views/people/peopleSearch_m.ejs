@@ -10,47 +10,15 @@
     		 'text' : 'Skills',
     		 'bg'	: '#fff',
     		 'col'	: '#fff',
-    		 'url'  : '/peopleExperience'
+    		 'url'  : '/skills'
     		},
-    		{'id' : 'SKILLS',
+    		{'id' : 'EXPERIENCE',
     		 'text' : 'Experience',
     		 'bg'	: '#fff',
     		 'col'	: '#fff',
     		 'url'  : '/peopleExperience'
     		}
 
-    		
-    		
-    		
-/*
-    		{'id' : 'INTEREST', 
-    		 'text' : 'Interests,Likes,Activities222',
-    		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff',
-    		 'url'  : '/likes.ejs'
-    		},
-    		
-    		{'id' : 'INTEREST3',
-    		 'text' : 'Interests,Likes,Activities333',
-    		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff',
-    		 'url'  : '/likes.ejs'
-    		},
-    		
-    		{'id' : 'INTEREST4',
-    		 'text' : 'Interests,Likes,Activities444',
-    		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff',
-    		 'url'  : '/likes.ejs'  
-    		},
-    		{'id' : 'CHARACTERISTICS',
-    		 'text' : 'Personality,Outlook,Character Attributes',
-    		 'bg'	: ' #62818A',
-    		 'col'	: '#fff',
-    		 'url'  : '/likes.ejs'
-    		}
-    		
-   */
     	];
 
 
@@ -612,16 +580,17 @@
 	       		
 	       		<div class = "attrib-popup" style = "position: relative; top: 0px;">
 	  				
-	  				<div class = "attributes" style=" display: none; margin-bottom: 0px;  z-index:1053;">
+	  				<div class = "attributes" style=" border: 1px solid #dcdcdc; display: none; margin-bottom: 0px;  z-index:1053;">
 
 	  					<%
 					 		for(var i = 0; i < peopleSearchCriteria.length; i++) { 
 					 	  		var obj  = peopleSearchCriteria[i];		 		  
 			 			%>		
-	  					<div>	
-	  						<div id= <%= obj.id %>  data-index = <%= obj.id %>  data-url = <%= obj.url %>  class = "attribute-item item-on-popup " style = "padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
+	  					<div> 
+	  						<div id= <%= obj.id %>  data-index = <%= obj.id %>  data-url = <%= obj.url %>  class = "attribute-item item-on-popup " style = "border-bottom: 1px solid #dcdcdc; padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
 	  							
-								  	 <span class = "attrib-text" style=""><%= obj.text%></span>   
+								  	 <span class = "attrib-text" style=""><%= obj.text%></span> 
+								  	 <hr>  
 	  						</div>
 	  						
 	  					</div>
