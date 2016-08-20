@@ -74,11 +74,11 @@ table {
 	
 input:focus
 			{
-				border: 1px solid #9DA836;
+				border: 1px solid #54A32F;
 			}
 			div:focus
 			{
-				border: 1px solid #9DA836;
+				border: 1px solid #54A32F;
 			}
 		 
 			/* check box*/
