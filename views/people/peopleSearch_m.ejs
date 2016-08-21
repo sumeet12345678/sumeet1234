@@ -538,11 +538,11 @@
 	  			
 	  			<div style="position: relative; font-size: 15px; bottom: -30px; height: 42px; width: 100%; color: #fff; padding-top: 7px; margin-bottom:0;">
 	  			
-	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center; display: inline-block; cursor: pointer;   height: 30px;">
+	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center; display: inline-block; cursor: pointer; line-height: 30px; height: 30px;">
 	  					SUBMIT
 	  				</div>
 	  				
-	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center;  display: inline-block; cursor: pointer;  height: 30px;  margin-right: 30px;">
+	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center;  display: inline-block; cursor: pointer;  height: 30px;  line-height: 30px;  margin-right: 30px;">
 	  					SAVE
 	  				</div>
 	  			
@@ -665,7 +665,8 @@
         	element.appendTo('.attach-attributes');
         	
         	/*hide on popup*/
-        	selectedItem.hide();
+        	//selectedItem.hide();
+        	selectedItem.remove();
 
         };
 	
@@ -784,7 +785,11 @@ for(var i = 0; i < peopleSearchCriteria.length; i++) {
 $('.attributes').on('change', function() {
 	//alert("changed");
 	var selectedItem = $(".attributes option:selected").last();
-	// alert("SelectedItem Value: " + selectedItem.val());
+	//alert("SelectedItem length: " + $('.attributes').children('option').length);
+	 if($(this).children('option').length == 2){
+			 $(this).hide();
+	 }
+	 
 	if(selectedItem.index() != 0){
 	 	addCriteria(selectedItem);
 	}
