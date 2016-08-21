@@ -658,8 +658,12 @@
         //	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/3dots_vert_white.png" data-callAjax="yes" data-url="'+ url +'" onClick = " addSubsection($(this));"/>');  /* addSubsection("'+ url +'",$(this));"/>'); onClick = "showHideDownSibling($(this))"/>'); */ 
         	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/3dots_vert_white.png"/>'); 
         	element.append('<div style = "display: none; "></div>');
-        	element.appendTo('.attach-attributes');
+        	//element.appendTo('.attach-attributes');
 
+        	addSubsection(element.find('.peopleSearch_section_bar'));
+        	
+        	element.appendTo('.attach-attributes');
+        	
         	/*hide on popup*/
         	selectedItem.hide();
 
@@ -676,32 +680,7 @@
 	   };  
 	   
 	   
-	   ///////
-	   /*$('.attach-attributes').on('click', '.showHideSiblingIcon', function() {
-		  //alert("hello");
-		   $('.showAttr').show();
-	   });
-	   
-	   function appendSubSection() { 
-		     
-		   
-	   }*/
-	
-
-	  /*
-	  $(document).mouseup(function (e) 
-			 {
-			     var 	attributes= $(".attributes");
-			     if (!$('.attributes').is(e.target) && !attributes.is(e.target) && attributes.has(e.target).length == 0) 
-			     {
-			       	attributes.hide();
-			     }
-
-			     $('.criteria').on('click', function(){
-        			attributes.toggle();
-        		});
-			 });
-    */
+	  
 	    
 	 // Get the <datalist> and <input> elements.
 		var dataList = document.getElementById('json-datalist');
@@ -754,35 +733,7 @@ $('input').keyup(function(){
     }).show();
 });
 
-/*function addSubsection(whose)
-{
-	//alert("fggd");
-	
-	if(whose.attr("data-callAjax") == "yes"){
-		    var url = whose.attr("data-url");
-			$.get(url, function(data, status){
-			
-			 var $data = $(data);
-			 
-			 var parentSectionBar = whose.parent();
-			 $data.insertAfter(parentSectionBar); 
-			  
-			  
-			}).done(function() {
-	           
-	            whose.attr("data-callAjax","no");
-	        })
-  }
- else
-	{
-		showHideDownSibling(whose);
-		 
-	}
-	
-
-}
-
-*/
+ 
 
 
 function addSubsection(whose)
@@ -790,6 +741,7 @@ function addSubsection(whose)
 	//alert("fggd");
 	
 	if(whose.attr("data-callAjax") == "yes"){
+			showHideProgress();
 		    var url = whose.attr("data-url");
 			$.get(url, function(data, status){
 			
@@ -805,9 +757,7 @@ function addSubsection(whose)
 	        })
   }
  else
-	{
-		 
-		//alert("jkkkkkk");
+	{ 
 	 	toogleContentSection(whose);
 	}
 	
