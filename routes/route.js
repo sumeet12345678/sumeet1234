@@ -96,6 +96,11 @@ router.get('/searchBySkills', function(req, res, next) {
 router.get('/searchByLikes', function(req, res, next) {
 	res.render('people/search/ajax/searchByLikes.ejs');   
 });
+
+router.get('/searchByPhysical', function(req, res, next) {
+	res.render('people/search/ajax/searchByPhysical.ejs');   
+	});
+
 /*
  * People Search Criteria  
  */
@@ -117,6 +122,7 @@ router.get('/people/search/basic', function(req, res, next) {
 	  res.render('people/search/lifestyle.ejs');     
 	});
 
+ 
  
  
 module.exports = router   
