@@ -99,7 +99,19 @@ router.get('/searchByLikes', function(req, res, next) {
 
 router.get('/searchByPhysical', function(req, res, next) {
 	res.render('people/search/ajax/searchByPhysical.ejs');   
-	});
+});
+
+router.get('/searchByFamilyDetails', function(req, res, next) {
+	res.render('people/search/ajax/searchByFamilyDetails.ejs');   
+});
+
+router.get('/lifeStyle', function(req, res, next) {
+	res.render('people/search/ajax/lifeStyle.ejs');   
+});
+
+router.get('/searchByPersonality', function(req, res, next) {
+	res.render('people/search/ajax/searchByPersonality.ejs');   
+});
 
 /*
  * People Search Criteria  

@@ -1,0 +1,163 @@
+<style>
+				select {
+				   margin-top: 5px;
+				   padding: 5px 8px;
+				   width: 60px;
+				   height: 30px;
+				   border-radius: 4px;
+				   border-color: #95B3D7;
+
+				  /* box-shadow: none;
+				   background: transparent;
+				   background-image: none;
+				   -webkit-appearance: none;*/
+				}
+
+				select:focus {
+				   outline: none;
+				}
+
+				
+
+				@media screen and (max-width: 760px) 
+			 		{ 
+
+						.family-options-form {
+					 			width: 20%;
+					 			height: 30px;
+					 			margin-bottom: 10px;
+					 			display: inline-block;
+					 		}
+
+					 	.select-options-form {
+							margin-top: 6px;
+						    padding: 5px 8px;
+						    width: 120px;
+						    height: 30px;
+						    border-radius: 4px;
+						    border-color: #95B3D7;
+						    background-color: #ffffff;
+						}
+
+						.family-location-form {
+							width: 87%;
+							height: 40px;
+							margin-bottom: 10px;
+							margin-top: 8px;
+						}
+
+						.family-income{
+							width: 100%;
+							height: 35px;
+							margin-top: 8px;
+						}
+
+						.option-form {
+							background-color: #ffffff;
+							margin-left: 8px;
+						}
+			 		}
+
+				@media screen and (min-width: 761px) 
+			 		{ 
+			 			.family-options-form {
+					 			width: 8%;
+					 			height: 30px;
+					 			margin-top: 5px;
+					 			margin-bottom: 8px;
+					 			display: inline-block;
+					 		}
+
+			 			.select-options-form {
+							margin-top: 5px;
+						    padding: 5px 8px;
+						    width: 130px;
+						    height: 30px;
+						    border-radius: 4px;
+						    border-color: #95B3D7;
+						    background-color: #ffffff;
+						}
+
+						.family-location-form {
+							width: 32%;
+							height: 40px;
+							margin-bottom: 10px;
+							margin-top: 8px;
+						}
+
+						.family-income {
+							width: 100%;
+							height: 35px;
+							margin-top: 8px;
+						}
+
+						.option-form {
+							width: 100%;
+							margin-left: 15px;
+							background-color: #ffffff;
+						}
+			 		}
+
+</style>
+
+<div class = "family-details-form people-search-form-bg"> 
+	<form>
+		<div class = "family-options-form">
+			<select class = "select-options-form">
+				<option>Type</option>
+				<option>Newclear</option>
+				<option>Joint</option>
+			</select>
+		</div>
+
+		<div class = "family-options-form">
+			<select class = "select-options-form" style = "margin-left: 70px;">
+				<option>Status</option>
+				<option>LMC</option>
+				<option>MC</option>
+				<option>UPC</option>
+				<option>Fameous</option>
+				<option>Royal</option>
+			</select>
+		</div><br>
+
+		<div class = "family-options-form">
+			<select class = "select-options-form">
+				<option>Body Type</option>
+				<option>Slim</option>
+				<option>Athletic</option>
+				<option>Healthy</option>
+			</select>
+		</div>
+
+		<div class = "family-options-form">
+			<select class = "select-options-form" style = "margin-left: 70px;">
+				<option>Members</option>
+				<option>2</option>
+				<option>2 - 3</option>
+				<option>4 - 6</option>
+				<option>7 - 10</option>
+				<option>More than 10</option>
+			</select>
+		</div><br>
+
+		<div style = "display:inline-block;">
+		<input type="text" placeholder="Income" class="commoninput family-income">
+		</div>
+
+		<div style = "display:inline-block;">
+			<select class = "option-form">
+				<option>Rs.</option>
+				<option>$</option>
+				<option>$</option>
+				<option>$</option>
+			</select>
+		</div>
+
+		<div class = "">
+		<input type="text" placeholder="Based Out Of..." style="display:inline-block;" class="commoninput family-location-form">
+		</div>
+
+	</form>
+</div>
+

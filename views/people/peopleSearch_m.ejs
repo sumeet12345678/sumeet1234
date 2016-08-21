@@ -5,38 +5,55 @@
     		 'bg'	: '#fff',
     		 'col'	: '#fff',
     		 'url'  : '/searchByEducation'
-    		},
-    		{'id' : 'SKILLS',
-    		 'text' : 'Skills',
-    		 'bg'	: '#fff',
-    		 'col'	: '#fff',
-    		 'url'  : '/searchBySkills'
-    		},
+    		},    		
     		{'id' : 'EXPERIENCE',
     		 'text' : 'Experience',
     		 'bg'	: '#fff',
     		 'col'	: '#fff',
     		 'url'  : '/peopleExperience'
     		},
-    		{'id' : 'SOCIAL',
-    		 'text' : 'Social',
-    		 'bg'	: '#fff',
-    		 'col'	: '#fff',
-    		 'url'  : '/searchBySocial'
-    		},
+    		{'id'   : 'FAMILY_DETAILS', 
+          		 'text' : 'Family Details',
+          		 'bg'	: '#BFCFE3',
+          		 'col'	: '#fff',
+          		 'url'  : '/searchByFamilyDetails'
+          	},
     		{'id' : 'LIKES',
     		 'text' : 'Likes',
     		 'bg'	: '#fff',
     		 'col'	: '#fff',
     		 'url'  : '/searchByLikes'
     		},
-    		
-			{'id' : 'PHYSICAL', 
-    		 'text' : 'Physical, Looks',
-    		 'bg'	: '#BFCFE3',
-    		 'col'	: '#fff',
-    		 'url'  : '/searchByPhysical' 
-    		}
+       		{'id' : 'LIFESTYLE', 
+       		 'text' : 'Life Style',
+       		 'bg'	: '#BFCFE3',
+       		 'col'	: '#fff',
+       		 'url'  : '/lifeStyle'
+       		},	
+       		{'id' : 'PERSONALITY', 
+       		 'text' : 'Personality - 5F',
+       		 'bg'	: '#BFCFE3',
+       		 'col'	: '#fff',
+       		 'url'  : '/searchByPersonality'
+       		},
+       		{'id' : 'PHYSICAL', 
+          		 'text' : 'Physical, Appearance',
+          		 'bg'	: '#BFCFE3',
+          		 'col'	: '#fff',
+          		 'url'  : '/searchByPhysical' 
+          	},
+       		{'id' : 'SKILLS',
+       		 'text' : 'Skills',
+       		 'bg'	: '#fff',
+       		 'col'	: '#fff',
+       		 'url'  : '/searchBySkills'
+       		},
+       		{'id' : 'SOCIAL',
+       		 'text' : 'Social',
+       		 'bg'	: '#fff',
+       		 'col'	: '#fff',
+       		 'url'  : '/searchBySocial'
+       		}
 
     	];
 
@@ -625,6 +642,8 @@
         		var obj = peopleSearchCriteria[i];
         		if(obj.id == id){
         			url = obj.url;
+        			alert(obj);
+        			alert(obj.url);
         			text_text = obj.text;
         			break;
         		} 
@@ -818,7 +837,7 @@ $('.attributes').on('change', function() {
 	var selectedItem = $(".attributes option:selected").last();
 	// alert("SelectedItem Value: " + selectedItem.val());
 	if(selectedItem.index() != 0){
-	 	addCriteria(selectedItem)
+	 	addCriteria(selectedItem);
 	}
 	
 });
