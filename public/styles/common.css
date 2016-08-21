@@ -270,6 +270,16 @@ a:visited {
 	padding: 6px 5px 0px 3px; 
 	color: #FFF;
 }
+
+.green-gradient-bg {	  
+	background: -webkit-linear-gradient(#344C15,#698A25 ); 
+	background: -o-linear-gradient(#344C15,#698A25 ); 
+	background: -moz-linear-gradient(#344C15,#698A25 );   
+	background: linear-gradient(#344C15,#698A25 ); 
+	min-height: 43px; 
+	line-height: 43px;
+	color: #fff;
+} 
  
 .toggle-bar-menu {  
 	background-color: #95B3D7;

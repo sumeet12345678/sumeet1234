@@ -318,13 +318,13 @@
 		-->
 		
          <div style = "height:100%;">
-				<!-- 
-				<div   id = "PPL_SEARCHES" class= "toggle-bar-menu" >  
+				  
+				<div   id = "PPL_SEARCHES" class= "peopleSearch_section_bar" >  
 		         	<span class="expandIcon2" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>    						
-					<img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/>
-					<span class="barTitle">People Finder</span>
+					<!-- <img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/> -->
+					<span class="barTitle">Basic Criteria</span>
 				</div>      
-				-->
+				 
 				<div class = "people-search-form-bg" style = "margin-top: 2px;">
 				   <div>
 		        		   <form>
@@ -404,7 +404,7 @@
 		  						<td colspan="3" style=" width:100%;">
 		  							
 		  							<div class="genderContainer" style="display:inline-block;">
-		  								<font color="#3F3F3F"><label class="genderMale" style="display:inline-block;">Male</label></font>
+		  								<font color="#3F3F3F"><label class="genderMale ppl-search-frmFildLabel" style="display:inline-block;">Male</label></font>
 		  								<div title=".squaredFour" style="display:inline-block;">
 									    <!-- .squaredFour -->
 									    	<div class="squaredFour">
@@ -427,7 +427,7 @@
 										  	<!--  </section>-->
 										  	<!-- radio html end -->
 										  	
-										  	<label class="genderFemale" style="display:inline-block;"><font color="#3F3F3F">Female</font></label>
+										  	<label class="genderFemale ppl-search-frmFildLabel" style="display:inline-block;">Female</label>
 			  								<div title=".squaredFour selectFemale" style="display:inline-block;">
 										    <!-- .squaredFour -->
 										    	<div class="squaredFour">
@@ -444,7 +444,7 @@
 										    <option value="mercedes">Mercedes</option>
 										    <option value="audi">Audi</option>
 										</select>-->
-										<label class="genderOthers" style="display:inline-block;"><font color="#3F3F3F">Others</font></label>
+										<label class="genderOthers ppl-search-frmFildLabel" style="display:inline-block;">Others</label>
 			  								<div title=".squaredFour selectOthers" style="display:inline-block;">
 										    <!-- .squaredFour -->
 										    	<div class="squaredFour">
@@ -613,7 +613,7 @@
         	// alert(url);
         	var element = $('<div><div class = "peopleSearch_section_bar" data-index ="' + dataValue +  '"></div></div>');
 
-        	element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="<%=imgUrl%>/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this));"/>');
+        	//element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="<%=imgUrl%>/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this));"/>');
         	element.find('div:first-child').append(text_text);
         	
         	//var htmlString = 

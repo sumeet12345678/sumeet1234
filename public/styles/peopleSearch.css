@@ -10,7 +10,7 @@
 	 background-color: #565656;
 	 
 	 height: 48px;
-	 font-size: 14px;
+	 font-size: 16px;
 	 font-weight: 700;
 	 
 	 color: #fff;
@@ -30,3 +30,8 @@
 			border-collapse: collapse;
 			 border-spacing111: 0px;
 }  
+
+.ppl-search-frmFildLabel {
+	color: #fff;
+	font-weight: bold;
+}
