@@ -635,15 +635,13 @@
         	
         	var url;
         	var text_text;
-        	
+        	var obj = null;
         	var id = selectedItem.val();
         	
         	for(var i = 0; i < peopleSearchCriteria.length; i++) {
-        		var obj = peopleSearchCriteria[i];
+        	    obj = peopleSearchCriteria[i];
         		if(obj.id == id){
-        			url = obj.url;
-        			alert(obj);
-        			alert(obj.url);
+        			url = obj.url;        			
         			text_text = obj.text;
         			break;
         		} 
