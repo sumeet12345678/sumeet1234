@@ -1,4 +1,4 @@
-       <%
+      <script>
     	var peopleSearchCriteria = [
     		{'id' : 'EDUCATION',
     		 'text' : 'Education',
@@ -41,8 +41,7 @@
     	];
 
 
-    %>
-
+   </script>
 
            <link href="<%=urls.PEOPLE_URL%>/styles/peopleSearch.css" rel="stylesheet" />
 
@@ -320,203 +319,206 @@
 		-->
 		
          <div style = "height:100%;">
-				  
-				<div   id = "PPL_SEARCHES" class= "peopleSearch_section_bar" >  
-		         	<span class="expandIcon2" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/arrow-Down-lines.png"/></span>    						
-					<!-- <img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/> -->
-					<span class="barTitle">Basic Criteria</span>
-				</div>      
-				 
-				<div class = "people-search-form-bg" style = "margin-top: 2px;">
-				   <div>
-		        		   <form>
-		  					<table width="100%">
-		  					 
-		  					<tr>
-		  						<td colspan="3">
-		  							<input type="text" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:" class="commoninput">
-		  						</td>
-		  					</tr> 
-		  					<tr>
-		  						<td colspan="3">
-		  							<!--  <div class="content-box">
-	
-										<div class="multi-selector-contentbox commoninput" contenteditable="true" style="background-color: #fff;cursor: pointer;">
-											<font color="grey" style="display: inline-block; margin-top: 8px; font-size:14px;">Locations,Cities,Areas...</font>
-										</div>
-									 	<div class="multi-list">
-	
-											<div id="ITEM_JAVA" class="list-item" style="text-align:center; border:1px solid ; height: 25px;" data-item-attr="ITEM_JAVA">
-												<span class="item-text">Bangalore</span>
-												
-											</div>
-											<div id="ITEM_C" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C">
-												<span class="item-text">Kochi</span>
-												
-											</div>
-											<div id="ITEM_C++" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C++">
-												<span class="item-text">Mumbai</span>
-											</div>
-	
-										</div>
-									
-									</div>-->
-									<input type="text" name="keyword" id="keywords" placeholder="Locations,Cities,Areas..." class="commoninput">
-									<!--  <ul style="text-align:center;">
-									    <li>Bangalore</li>
-									    <li>Cochin</li>
-									    <li>Chennai</li>
-									    <li>Mumbai</li>
-									</ul>-->
-		  						</td>
-		  					</tr>	
-	
-	
-		  					 
-		  					<tr>
-		  						<td colspan="3">
-		  							<input type="text" name="keyword" id="keywords" placeholder="Pincode or sublocation:" class="commoninput">
-		  						</td>
-		  					</tr>
-	
-	 
-		  					<tr>
-		  						<td width="45%">
-		  							<!-- <div class="age" contentEditable = "true"> -->
-		  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
-		  								<input type="text" placeholder="Age From:" style="width: 100%; " class="commoninput">
-		  							<!-- </div> -->
-		  						</td>
-	
-		  						<td>
-		  							
-		  						</td>
-		  						
-		  						<td width="45%">
-		  							<!-- <div class="age"> --> 
-		  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
-		  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
-		  								<input type="text" placeholder="To:" style="padding-left: 3px; width: 100%;" class="commoninput"> 
-		  							<!-- </div> -->
-		  						</td>
-		  					</tr>
-	
-		  					 
-		  					<tr>
-		  						<td colspan="3" style=" width:100%;">
-		  							
-		  							<div class="genderContainer" style="display:inline-block;">
-		  								<font color="#3F3F3F"><label class="genderMale ppl-search-frmFildLabel" style="display:inline-block;">Male</label></font>
-		  								<div title=".squaredFour" style="display:inline-block;">
-									    <!-- .squaredFour -->
-									    	<div class="squaredFour">
-									      		<input type="checkbox" value="squaredFour1" id="squaredFour1" name="check" checked />
-									      		<label for="squaredFour1"></label>
-									    	</div>
-									    <!-- end .squaredFour -->
-									  	</div>
-		  							</div>
-		  							<div class="genderContainer" style="display:inline-block;">
-		  							<!-- radio html -->
-		  									<!--  <label style="margin-right:1%; display:inline-block;">F</label>
-		  								 	<section title=".roundedOne" style="display:inline-block;">-->
-										    <!-- .roundedOne -->
-										    	<!--  <div class="roundedOne">
-										     	 	<input type="checkbox" value="None" id="roundedOne" name="check" checked />
-										      		<label for="roundedOne"></label>
-										    	</div>-->
-										    <!-- end .roundedOne -->
-										  	<!--  </section>-->
-										  	<!-- radio html end -->
-										  	
-										  	<label class="genderFemale ppl-search-frmFildLabel" style="display:inline-block;">Female</label>
-			  								<div title=".squaredFour selectFemale" style="display:inline-block;">
-										    <!-- .squaredFour -->
-										    	<div class="squaredFour">
-										      		<input type="checkbox" value="squaredFour2" id="squaredFour2" name="check" checked />
-										      		<label for="squaredFour2"></label>
-										    	</div>
-										    <!-- end .squaredFour -->
-										  	</div>
-		  							</div>
-		  							<div class="genderContainer" style="display:inline-block;">
-		  								<!--  <select>
-										    <option value="volvo">Volvo</option>
-										    <option value="saab">Saab</option>
-										    <option value="mercedes">Mercedes</option>
-										    <option value="audi">Audi</option>
-										</select>-->
-										<label class="genderOthers ppl-search-frmFildLabel" style="display:inline-block;">Others</label>
-			  								<div title=".squaredFour selectOthers" style="display:inline-block;">
-										    <!-- .squaredFour -->
-										    	<div class="squaredFour">
-										      		<input type="checkbox" value="squaredFour3" id="squaredFour3" name="check" checked />
-										      		<label for="squaredFour3"></label>
-										    	</div>
-										    <!-- end .squaredFour -->
-										  	</div>
-		  							</div>
-		  						</td>
-		  					</tr>
-		  					
-		  					
-	
-		  					</table>
-		  				</form>
-	  				</div>
-	  				
-	  				
-	  				<!--  <div class = "showAttr" style="display:none; border:1px solid; position:relative;"> 
-	  					<form>
-	  						<div style="margin-top:5px;">
-		  						<input type="text" style="display:inline-block;" class="commoninput">
-		  						<input type="text" style="display:inline-block;" class="commoninput">
-	  						</div>
-	  						<div style="margin-top:5px;">
-	  							<input type="text" placeholder="Profession" style="width:100%;" class="commoninput">
-	  						</div>
-	  						<div style="margin-top:5px; margin-bottom:5px;">
-	  							<input type="text" style="width:100%;" class="commoninput">
-	  						</div>
-	  					</form>
-	  				</div>-->
-
+				
+				<div>  
+						<div   id = "PPL_SEARCHES" class= "peopleSearch_section_bar" onClick = "addSubsection($(this));" >  
+				        <!-- 	<span class="expandIcon2" style="float: right;">	<img  width="28" height="28" src="/media/images/icons/3dots_vert_white.png"/></span> -->    						
+							<!-- <img  width="28" height="28" src="http://ekpplcommon.herokuapp.com/media/images/icons/search-gls-white.png"/> -->
+							<span class="barTitle">Basic Criteria</span>
+						</div>      
+						 
+						<div class = "people-search-form-bg" style = "margin-top: 0px;">
+						   <div>
+				        		   <form>
+				  					<table width="100%">
+				  					 
+				  					<tr>
+				  						<td colspan="3">
+				  							<input type="text" name="keyword" id="keywords" list="json-datalist" placeholder="Keywords:" class="commoninput">
+				  						</td>
+				  					</tr> 
+				  					<tr>
+				  						<td colspan="3">
+				  							<!--  <div class="content-box">
+			
+												<div class="multi-selector-contentbox commoninput" contenteditable="true" style="background-color: #fff;cursor: pointer;">
+													<font color="grey" style="display: inline-block; margin-top: 8px; font-size:14px;">Locations,Cities,Areas...</font>
+												</div>
+											 	<div class="multi-list">
+			
+													<div id="ITEM_JAVA" class="list-item" style="text-align:center; border:1px solid ; height: 25px;" data-item-attr="ITEM_JAVA">
+														<span class="item-text">Bangalore</span>
+														
+													</div>
+													<div id="ITEM_C" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C">
+														<span class="item-text">Kochi</span>
+														
+													</div>
+													<div id="ITEM_C++" class="list-item" style="text-align:center; border:1px solid grey; height: 25px;" data-item-attr="ITEM_C++">
+														<span class="item-text">Mumbai</span>
+													</div>
+			
+												</div>
+											
+											</div>-->
+											<input type="text" name="keyword" id="keywords" placeholder="Locations,Cities,Areas..." class="commoninput">
+											<!--  <ul style="text-align:center;">
+											    <li>Bangalore</li>
+											    <li>Cochin</li>
+											    <li>Chennai</li>
+											    <li>Mumbai</li>
+											</ul>-->
+				  						</td>
+				  					</tr>	
+			
+			
+				  					 
+				  					<tr>
+				  						<td colspan="3">
+				  							<input type="text" name="keyword" id="keywords" placeholder="Pincode or sublocation:" class="commoninput">
+				  						</td>
+				  					</tr>
+			
+			 
+				  					<tr>
+				  						<td width="45%">
+				  							<!-- <div class="age" contentEditable = "true"> -->
+				  								<!-- <label><font color="grey" style="background-color: #fff;">Age From:</font></label><input type="text" id="age-content1" name="age from"> -->
+				  								<input type="text" placeholder="Age From:" style="width: 100%; " class="commoninput">
+				  							<!-- </div> -->
+				  						</td>
+			
+				  						<td>
+				  							
+				  						</td>
+				  						
+				  						<td width="45%">
+				  							<!-- <div class="age"> --> 
+				  								<!-- <label><font color="grey">To:</font></label><input type="text" id="age-content2" name="age"> -->
+				  								<!-- <input type="text" placeholder="To:" style="border: 0px; margin-top: 10px;"> -->
+				  								<input type="text" placeholder="To:" style="padding-left: 3px; width: 100%;" class="commoninput"> 
+				  							<!-- </div> -->
+				  						</td>
+				  					</tr>
+			
+				  					 
+				  					<tr>
+				  						<td colspan="3" style=" width:100%;">
+				  							
+				  							<div class="genderContainer" style="display:inline-block;">
+				  								<font color="#3F3F3F"><label class="genderMale ppl-search-frmFildLabel" style="display:inline-block;">Male</label></font>
+				  								<div title=".squaredFour" style="display:inline-block;">
+											    <!-- .squaredFour -->
+											    	<div class="squaredFour">
+											      		<input type="checkbox" value="squaredFour1" id="squaredFour1" name="check" checked />
+											      		<label for="squaredFour1"></label>
+											    	</div>
+											    <!-- end .squaredFour -->
+											  	</div>
+				  							</div>
+				  							<div class="genderContainer" style="display:inline-block;">
+				  							<!-- radio html -->
+				  									<!--  <label style="margin-right:1%; display:inline-block;">F</label>
+				  								 	<section title=".roundedOne" style="display:inline-block;">-->
+												    <!-- .roundedOne -->
+												    	<!--  <div class="roundedOne">
+												     	 	<input type="checkbox" value="None" id="roundedOne" name="check" checked />
+												      		<label for="roundedOne"></label>
+												    	</div>-->
+												    <!-- end .roundedOne -->
+												  	<!--  </section>-->
+												  	<!-- radio html end -->
+												  	
+												  	<label class="genderFemale ppl-search-frmFildLabel" style="display:inline-block;">Female</label>
+					  								<div title=".squaredFour selectFemale" style="display:inline-block;">
+												    <!-- .squaredFour -->
+												    	<div class="squaredFour">
+												      		<input type="checkbox" value="squaredFour2" id="squaredFour2" name="check" checked />
+												      		<label for="squaredFour2"></label>
+												    	</div>
+												    <!-- end .squaredFour -->
+												  	</div>
+				  							</div>
+				  							<div class="genderContainer" style="display:inline-block;">
+				  								<!--  <select>
+												    <option value="volvo">Volvo</option>
+												    <option value="saab">Saab</option>
+												    <option value="mercedes">Mercedes</option>
+												    <option value="audi">Audi</option>
+												</select>-->
+												<label class="genderOthers ppl-search-frmFildLabel" style="display:inline-block;">Others</label>
+					  								<div title=".squaredFour selectOthers" style="display:inline-block;">
+												    <!-- .squaredFour -->
+												    	<div class="squaredFour">
+												      		<input type="checkbox" value="squaredFour3" id="squaredFour3" name="check" checked />
+												      		<label for="squaredFour3"></label>
+												    	</div>
+												    <!-- end .squaredFour -->
+												  	</div>
+				  							</div>
+				  						</td>
+				  					</tr>
+				  					
+				  					
+			
+				  					</table>
+				  				</form>
+			  				</div>
+			  				
+			  				
+			  				<!--  <div class = "showAttr" style="display:none; border:1px solid; position:relative;"> 
+			  					<form>
+			  						<div style="margin-top:5px;">
+				  						<input type="text" style="display:inline-block;" class="commoninput">
+				  						<input type="text" style="display:inline-block;" class="commoninput">
+			  						</div>
+			  						<div style="margin-top:5px;">
+			  							<input type="text" placeholder="Profession" style="width:100%;" class="commoninput">
+			  						</div>
+			  						<div style="margin-top:5px; margin-bottom:5px;">
+			  							<input type="text" style="width:100%;" class="commoninput">
+			  						</div>
+			  					</form>
+			  				</div>-->
+		
+			       		</div>
 	       		</div>
 	       		
-	       		<div class = "attach-attributes" style="padding-bottom: 10px; display: block; margin-bottom: 2px;">
-	  				
-	  			</div>
 	       		
-	       		<div class = "attrib-popup" style = "position: relative; top: 0px;">
+	       		
+	       		<div class = "attach-attributes" style=" display: block; margin-bottom: 2px;">
 	  				
-	  				<div class = "attributes" style=" border: 1px solid #dcdcdc; position: absolute; bottom: 45px; width: 100%; display: none; margin-bottom: 0px;  z-index:1053;">
-
-	  					<%
-					 		for(var i = 0; i < peopleSearchCriteria.length; i++) { 
-					 	  		var obj  = peopleSearchCriteria[i];		 		  
-			 			%>		
-	  					<div> 
-	  						<div id= <%= obj.id %>  data-index = <%= obj.id %>  data-url = <%= obj.url %>  class = "attribute-item item-on-popup " style = "border-bottom: 1px solid #dcdcdc; padding-left: 3px; height: 40px; line-height: 40px; background-color: <%= obj.bg%>">
-	  							
-								  	 <span class = "attrib-text" style=""><%= obj.text%></span> 
-								  	 <hr>  
-	  						</div>
-	  						
-	  					</div>
-
-	  					<% } %>
-	  						  						
-	  				</div>
-
-	  				<div class="criteria commoninput" style = "width: 100%; margin-top: 0px; position: relative; background-color: #fff;  cursor: pointer;">
-	  					<font color="grey" style="display: inline-block; margin-top: 8px;">More criteria, attributes..</font>
-	  					<div class="popup" style="display: inline-block; margin-top: 2px; margin-right: 5px; float: right;">
-	  						<span style = "font-size: 30px; font-weight: bold;">+</span>
-	  					</div>
-	  					
-	  				</div>
-
 	  			</div>
+	  			
+	  			
+	       		
+	       		
+	       		
+	       		
+	       		
+	       	 
+	  			
+	  			 
+	  				
+  				<select class = "attributes" style = "width: 100%;">
+					<option>Add more criteria...</option>
+  						  						
+  				</select>
+
+	  		 
+	  			
+	  			
+	  		 
+	  			
+	  			
+	  			
+	  			
+	  			
+	  			
+	  			
+	  			
+	  			
+	  			
 	  			<div style="position: relative; font-size: 15px; bottom: -30px; height: 42px; width: 100%; color: #fff; padding-top: 7px; margin-bottom:0;">
 	  			
 	  				<div class="earth-gradient-bg" style="float: right; width: 100px; text-align: center; display: inline-block; cursor: pointer;   height: 30px;">
@@ -603,6 +605,7 @@
 
          
 		$('.attribute-item').on('click', function() {
+			alert("ddfds");
 	        $('.attributes').hide();
            	addCriteria($(this));
 
@@ -610,16 +613,33 @@
 
         function addCriteria(selectedItem) {
         	var dataValue = selectedItem.attr('data-index');
-        	var url = selectedItem.attr('data-url');
-        	var text_text =  selectedItem.children('.attrib-text').text();
+        	//var url = selectedItem.attr('data-url');
+        	//var text_text =  selectedItem.children('.attrib-text').text();
+        	
+        	var url;
+        	var text_text;
+        	
+        	var id = selectedItem.val();
+        	
+        	for(var i = 0; i < peopleSearchCriteria.length; i++) {
+        		var obj = peopleSearchCriteria[i];
+        		if(obj.id == id){
+        			url = obj.url;
+        			text_text = obj.text;
+        			break;
+        		} 
+        	}
+        	
+        	
         	// alert(url);
-        	var element = $('<div><div class = "peopleSearch_section_bar" data-index ="' + dataValue +  '"></div></div>');
+        	var element = $('<div><div class = "peopleSearch_section_bar" data-callAjax="yes" data-url="'+ url +'" onClick = " addSubsection($(this));"></div></div>');
 
         	//element.find('div:first-child').append('<img class = "close-button" style = "vertical-align:middle; margin-top: -2px; margin-right: 8px;" width = "24" height = "24" src="<%=imgUrl%>/media/images/icons/close_icon.png" onclick = "closeAttribItem($(this));"/>');
         	element.find('div:first-child').append(text_text);
         	
         	//var htmlString = 
-        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/arrow-Down-Lines.png" data-callAjax="yes" data-url="'+ url +'" onClick = " addSubsection($(this));"/>');  /* addSubsection("'+ url +'",$(this));"/>'); onClick = "showHideDownSibling($(this))"/>'); */ 
+        //	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/3dots_vert_white.png" data-callAjax="yes" data-url="'+ url +'" onClick = " addSubsection($(this));"/>');  /* addSubsection("'+ url +'",$(this));"/>'); onClick = "showHideDownSibling($(this))"/>'); */ 
+        	element.find('div:first-child').append('<img class = "showHideSiblingIcon" style = "float: right; margin-top: -4px; " width = "30" height = "30" src="/media/images/icons/3dots_vert_white.png"/>'); 
         	element.append('<div style = "display: none; "></div>');
         	element.appendTo('.attach-attributes');
 
@@ -651,7 +671,8 @@
 	   }*/
 	
 
-	    $(document).mouseup(function (e) 
+	  /*
+	  $(document).mouseup(function (e) 
 			 {
 			     var 	attributes= $(".attributes");
 			     if (!$('.attributes').is(e.target) && !attributes.is(e.target) && attributes.has(e.target).length == 0) 
@@ -663,7 +684,7 @@
         			attributes.toggle();
         		});
 			 });
-    
+    */
 	    
 	 // Get the <datalist> and <input> elements.
 		var dataList = document.getElementById('json-datalist');
@@ -716,7 +737,7 @@ $('input').keyup(function(){
     }).show();
 });
 
-function addSubsection(whose)
+/*function addSubsection(whose)
 {
 	//alert("fggd");
 	
@@ -738,11 +759,70 @@ function addSubsection(whose)
  else
 	{
 		showHideDownSibling(whose);
+		 
 	}
 	
 
 }
-		  
+
+*/
+
+
+function addSubsection(whose)
+{
+	//alert("fggd");
+	
+	if(whose.attr("data-callAjax") == "yes"){
+		    var url = whose.attr("data-url");
+			$.get(url, function(data, status){
+			
+			 var $data = $(data);
+			 
+			// var parentSectionBar = whose.parent();
+			 $data.insertAfter(whose); 
+			  
+			  
+			}).done(function() {
+	           
+	            whose.attr("data-callAjax","no");
+	        })
+  }
+ else
+	{
+		 
+		//alert("jkkkkkk");
+	 	toogleContentSection(whose);
+	}
+	
+
+}
+
+function toogleContentSection(whose) {
+	whose.siblings().toggle();
+}
+	
+
+for(var i = 0; i < peopleSearchCriteria.length; i++) { 
+	var obj  = peopleSearchCriteria[i];		 		  
+		
+
+	var optionString = '<option id=' + obj.id +  ' value = ' + obj.id +  ' class = "attribute-item item-on-popup">' + obj.text + '</option>';
+	
+	$('.attributes').append(optionString);
+
+
+} 
+	
+$('.attributes').on('change', function() {
+	//alert("changed");
+	var selectedItem = $(".attributes option:selected").last();
+	// alert("SelectedItem Value: " + selectedItem.val());
+	if(selectedItem.index() != 0){
+	 	addCriteria(selectedItem)
+	}
+	
+});
+	
 	</script>
 		
 	 
