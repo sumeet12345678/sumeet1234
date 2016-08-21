@@ -22,6 +22,11 @@
 .people-search-form-bg {
 	background-color: #95B3D7;  
 	padding-left555555: 2px; 
-	padding-right: 2px;
+	padding: 2px;
 	border-radius: 4px;
 }
+
+.people-search-form-bg table {
+			border-collapse: collapse;
+			 border-spacing111: 0px;
+}  
